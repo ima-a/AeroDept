@@ -1,0 +1,35 @@
+from __future__ import annotations
+
+from typing import Any
+import torch
+import torch.nn.functional as F
+
+
+def _masked_mean(values: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
+    if not torch.any(mask):
+        # Do not derive zero from values: an invalid neighborhood may contain
+        # NaN/Inf, and NaN * 0 remains NaN.
+        return values.new_zeros(())
+    return values[mask].mean()
+
+
+def depth_loss(pred: torch.Tensor, target: torch.Tensor, valid: torch.Tensor, config: dict[str, Any]) -> tuple[torch.Tensor, dict[str, torch.Tensor]]:
+    valid = valid.bool() & torch.isfinite(pred) & torch.isfinite(target) & (target > 0)
+    l1 = _masked_mean(torch.abs(pred - target), valid)
+    eps = 1e-6
+    log = _masked_mean(torch.abs(torch.log(pred.clamp_min(eps)) - torch.log(target.clamp_min(eps))), valid)
+    dx_valid = valid[..., :, 1:] & valid[..., :, :-1]
+    dy_valid = valid[..., 1:, :] & valid[..., :-1, :]
+    pred_dx, target_dx = pred[..., :, 1:] - pred[..., :, :-1], target[..., :, 1:] - target[..., :, :-1]
+    pred_dy, target_dy = pred[..., 1:, :] - pred[..., :-1, :], target[..., 1:, :] - target[..., :-1, :]
+    gradient = _masked_mean(torch.abs(pred_dx - target_dx), dx_valid) + _masked_mean(torch.abs(pred_dy - target_dy), dy_valid)
+    near_mask = valid & (target < float(config.get("near_threshold", 10.0)))
+    near = _masked_mean(torch.abs(pred - target), near_mask)
+    components = {"l1": l1, "log": log, "gradient": gradient, "near": near}
+    total = (
+        float(config.get("l1_weight", 1.0)) * l1
+        + float(config.get("log_weight", 0.0)) * log
+        + float(config.get("gradient_weight", 0.0)) * gradient
+        + float(config.get("near_weight", 0.0)) * near
+    )
+    return total, components
