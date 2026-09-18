@@ -10,7 +10,7 @@ Frame skipping is not itself novel. AeroDepth-Lite combines normalized navigatio
 
 ## Current status
 
-The complete software path is implemented and covered by a deterministic synthetic fixture. **No real MidAir files were available on this machine**, so there is no legitimate MidAir checkpoint, validation metric, tuned scheduler result, or local depth-file verification yet. Synthetic smoke metrics are software diagnostics only and must not be cited as research results. See [MVP_STATUS.md](MVP_STATUS.md).
+The complete software path is implemented and covered by a deterministic synthetic fixture. A two-trajectory real MidAir pilot (4,409 synchronized frames) passed discovery, decoding, synchronization, navigation-resampling, and visual-plausibility checks. A deliberately limited one-trajectory-train/one-trajectory-validation run also completed, including validation-only scheduler tuning and all four replay policies. These are **pilot preliminary validation results**, not a meaningful benchmark: there is no test trajectory and the final test split remains untouched. See [MVP_STATUS.md](MVP_STATUS.md) and the small tracked [pilot evidence bundle](evidence/real_midair_pilot/README.md).
 
 ## Architecture
 
@@ -28,7 +28,9 @@ Download MidAir through the [official download page](https://midair.ulg.ac.be/do
 
 The official [data-organization documentation](https://midair.ulg.ac.be/data_organization.html) specifies 25 Hz visual streams and HDF5 positioning/IMU records. The [official FAQ](https://midair.ulg.ac.be/faq.html) states that depth is **Euclidean distance from the camera focal point**, not camera-axis/projective z-depth. The [official example loader](https://github.com/montefiore-institute/midair-dataset/blob/master/hdf5-depth_viewer.py) reads each PNG as `uint16`, reinterprets its bits as `float16`, and treats the result as metres. AeroDepth-Lite implements that exact decoding with `depth_encoding: midair_float16_bits`.
 
-Before a real run, `inspect` still checks actual dimensions, finite/range statistics, corrupt files, synchronization, navigation presence, and produces a visual. This local inspection is required even though the documented convention is known.
+Before a real run, `inspect` checks every pair's dimensions and decodability, reports finite/range statistics and invalid-pixel causes, cross-checks HDF5 camera paths and navigation resampling, and creates 10 deterministic synchronized visuals by default. This local inspection is required even though the documented convention is known.
+
+The validated local pilot is under ignored `datasets/midair_pilot`. It contains Kite/foggy training trajectories `trajectory_2003` (2,205 frames) and `trajectory_2021` (2,204 frames), plus their `sensor_records.hdf5`. The full inspection evidence is under ignored `artifacts/real_midair_pilot/inspection`. The two-trajectory manifest may be used only for software/pilot validation; it cannot form the required train/validation/test research split.
 
 Typical extracted layout (other nesting is accepted):
 
@@ -64,7 +66,10 @@ export DATASET_ROOT=/path/to/MidAir
 .venv/bin/aerodepth inspect \
   --config configs/preliminary.yaml \
   --dataset-root "$DATASET_ROOT" \
-  --output artifacts/inspection
+  --output artifacts/inspection \
+  --sample-count 10 \
+  --stats-sample-count 32 \
+  --seed 42
 
 .venv/bin/aerodepth split \
   --dataset-root "$DATASET_ROOT" \
@@ -109,7 +114,7 @@ It creates a visibly labelled synthetic fixture in `/tmp`; it is not MidAir evid
 
 ## Configuration and reproducibility
 
-`configs/smoke.yaml` is intentionally tiny; `configs/preliminary.yaml` is the real-data starting point. Configuration controls image/depth processing, architecture width, optimization, loss weights, scheduler thresholds, visual-score resolution, `MAX_SKIP`, and critical-event thresholds.
+`configs/smoke.yaml` is intentionally tiny; `configs/preliminary.yaml` is the real-data starting point. `configs/preliminary_pilot_frozen.yaml` records the scheduler setting selected only on the single pilot validation trajectory and must not be presented as a final benchmark configuration. Configuration controls image/depth processing, architecture width, optimization, loss weights, scheduler thresholds, visual-score resolution, `MAX_SKIP`, and critical-event thresholds.
 
 Seed 42 is applied to Python, NumPy, PyTorch CPU/CUDA, and DataLoader workers. Manifests contain relative paths, seed, trajectory/frame counts, split method, and dataset fingerprint. Runs record the full configuration, Git commit, Python/PyTorch/NumPy versions, device, manifest SHA-256, duration, checkpoint, parameter count, checkpoint size, losses, and validation metrics. CUDA deterministic algorithms are requested with warnings for operations that cannot guarantee determinism.
 
@@ -133,12 +138,19 @@ The provisional critical event is a 10th-percentile valid ground-truth depth ent
 .venv/bin/python -m pytest -q
 ```
 
-Fast tests do not require MidAir. They cover discovery/path pairing, float16 depth decoding, HDF5 navigation, deterministic splitting/leakage, masks/alignment, hand-calculated metrics, finite losses, model shape/size, checkpoints, scheduler signals/constraints/reset, logging schema, fixed/adaptive accounting, honest reused-frame evaluation, and smoke training.
+Fast tests do not require MidAir. They cover discovery/path pairing, float16 depth decoding, HDF5 navigation, HDF5 path/resampling validation, deterministic splitting/leakage, masks/alignment, hand-calculated metrics, finite losses, model shape/size, checkpoints, scheduler signals/constraints/reset, logging schema, fixed/adaptive accounting, honest reused-frame evaluation, and smoke training. The opt-in real-data integration check is:
+
+```bash
+MIDAIR_ROOT=datasets/midair_pilot .venv/bin/python -m pytest -q -m integration
+```
 
 ## Limitations and next work
 
-- Real MidAir acquisition, local depth inspection, training, validation replay, and validation-only threshold tuning remain blocked by dataset absence.
-- HDF5 navigation support reads common MidAir vector fields and resamples using `sampling_frequency`; it must be checked against the downloaded release's exact paths and camera-path ordering.
+- The real-data inspection gate and a CPU pilot experiment passed on two trajectories, but this is only one training trajectory and one validation trajectory. It is not a meaningful trajectory-disjoint train/validation/test experiment, and no test result exists.
+- The pilot best checkpoint used 109,153 parameters and achieved validation AbsRel 0.375082, RMSE 155.280 m, δ1/δ2/δ3 0.3882/0.6356/0.7348, near AbsRel 0.2207, and near RMSE 2.5316 m on `trajectory_2021`. Treat these as preliminary diagnostics because the split is too small.
+- The validation-selected adaptive scheduler made 1,481 calls over 2,204 frames (32.80% fewer than every-frame), with AbsRel 0.374984 and all 4 provisional critical events updated on time. This is inference-call reduction, not measured energy or battery saving.
+- Expansion remains blocked by the official download form requiring a fresh email/agreement/reCAPTCHA token. The largest currently storage-safe plan adds complete left RGB and depth for trajectories `2000`, `2001`, and `2022` (about 3.166 GiB compressed) to `datasets/midair_pilot`, yielding five trajectories. A 10–12 trajectory study also needs more free storage; only about 12 GiB is currently available.
+- HDF5 navigation support reads common MidAir vector fields and resamples using `sampling_frequency`; the pilot matched all 4,409 camera-path entries and sampled resampled values exactly.
 - No pretrained encoder, FLOP measurement, quantization, edge-device latency, power, or battery test is claimed.
-- The tiny smoke model is a pipeline baseline, not a converged accuracy result. The wider preliminary config also requires real validation before any performance claim.
+- Both the tiny smoke model and the two-trajectory pilot are pipeline baselines, not converged or publication-grade accuracy results.
 - A future hardware study should record wall power/energy, device utilization, temperature, latency distribution, and joules per full trajectory for FP32/FP16/INT8 under controlled repeats.

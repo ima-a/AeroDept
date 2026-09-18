@@ -16,6 +16,15 @@ from .model import build_model, load_checkpoint, model_stats, save_checkpoint
 from .repro import run_metadata, seed_everything, seed_worker
 
 
+def _write_history(path: Path, history: list[dict[str, Any]]) -> None:
+    if not history:
+        return
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(history[0]))
+        writer.writeheader()
+        writer.writerows(history)
+
+
 def _loader(root: str | Path, manifest: str | Path, split: str, config: dict[str, Any], training: bool) -> DataLoader:
     records, _ = load_manifest(manifest, split)
     dataset = MidAirDataset(root, records, config["data"], training=training)
@@ -80,12 +89,29 @@ def train_model(config: dict[str, Any], dataset_root: str | Path, manifest: str 
     amp = bool(config["train"].get("amp", True)) and device.type == "cuda"
     scaler = torch.amp.GradScaler(device.type, enabled=amp)
     start_epoch = 0
+    history: list[dict[str, Any]] = []
+    prior_duration = 0.0
+    best_absrel = float("inf")
     if resume:
-        start_epoch = int(load_checkpoint(resume, model, optimizer, device)["epoch"]) + 1
+        checkpoint = load_checkpoint(resume, model, optimizer, device)
+        start_epoch = int(checkpoint["epoch"]) + 1
+        extra = checkpoint.get("extra", {})
+        if "scheduler" in extra:
+            scheduler.load_state_dict(extra["scheduler"])
+        else:
+            # Compatibility with checkpoints written before scheduler state was
+            # persisted. The optimizer contains the LR used for the saved epoch.
+            scheduler.last_epoch = int(checkpoint["epoch"])
+            scheduler.step()
+        if isinstance(extra.get("history"), list):
+            history = list(extra["history"])
+            prior_duration = float(extra.get("duration_seconds", 0.0))
+            best_absrel = float(extra.get("best_validation_absrel", float("inf")))
+        elif "epoch" in extra:
+            history = [extra]
+            best_absrel = float(extra.get("val_absrel", float("inf")))
     train_loader = _loader(dataset_root, manifest, "train", config, True)
     val_loader = _loader(dataset_root, manifest, "val", config, False)
-    history: list[dict[str, Any]] = []
-    best_absrel = float("inf")
     started = perf_counter()
     max_train = config["train"].get("max_train_batches")
     max_val = config["train"].get("max_val_batches")
@@ -101,16 +127,24 @@ def train_model(config: dict[str, Any], dataset_root: str | Path, manifest: str 
             "learning_rate": optimizer.param_groups[0]["lr"],
         }
         history.append(row)
-        save_checkpoint(output / "last.pt", model, optimizer, epoch, row)
-        if float(val_metrics["absrel"]) < best_absrel:
+        improved = float(val_metrics["absrel"]) < best_absrel
+        if improved:
             best_absrel = float(val_metrics["absrel"])
-            save_checkpoint(output / "best.pt", model, optimizer, epoch, row)
         scheduler.step()
-    duration = perf_counter() - started
-    with (output / "history.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(history[0]))
-        writer.writeheader()
-        writer.writerows(history)
+        duration = prior_duration + perf_counter() - started
+        checkpoint_extra = {
+            "history": history,
+            "scheduler": scheduler.state_dict(),
+            "duration_seconds": duration,
+            "best_validation_absrel": best_absrel,
+        }
+        save_checkpoint(output / "last.pt", model, optimizer, epoch, checkpoint_extra)
+        if improved:
+            save_checkpoint(output / "best.pt", model, optimizer, epoch, checkpoint_extra)
+        _write_history(output / "history.csv", history)
+    if not history:
+        raise ValueError("No epochs available for training")
+    duration = prior_duration + perf_counter() - started
     summary = {
         **run_metadata(config, Path(manifest)),
         "duration_seconds": duration,

@@ -1,0 +1,42 @@
+{
+  "scope": "real MidAir two-trajectory pilot; preliminary validation only",
+  "seed": 42,
+  "dataset": {
+    "trajectory_count": 2,
+    "frame_count": 4409,
+    "train_trajectory": "Kite_training/foggy/trajectory_2003",
+    "train_frames": 2205,
+    "validation_trajectory": "Kite_training/foggy/trajectory_2021",
+    "validation_frames": 2204,
+    "test_trajectories": 0,
+    "test_frames": 0,
+    "dataset_fingerprint": "807899ab603aa29c9b4d4ea57b2df23ae8da97546c8e4050b709839bfd6ffdf6",
+    "manifest_sha256": "18a949025871a98ce5604e8010e1d8007359a41fe48060010980e0114ac3cb43"
+  },
+  "inspection": {
+    "paired_frames": 4409,
+    "invalid_or_misaligned_pairs": 0,
+    "hdf5_path_mismatches": 0,
+    "maximum_navigation_resampling_error": 0.0,
+    "inspection_sha256": "970530212b9825ff9e21f19e7b9a2b5a72b5bfc7db74d8117ba0db50e07b9194"
+  },
+  "run": {
+    "source_git_commit": "c0564013492004a2ab7767fdf35193074161e9d6",
+    "python": "3.14.7",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.5.3",
+    "device": "cpu",
+    "duration_seconds": 5018.949830534,
+    "epochs_completed": 20,
+    "parameters": 109153,
+    "fp32_weights_mb": 0.436612,
+    "checkpoint_size_mb": 1.384608,
+    "run_metadata_sha256": "bf7a9ae6f61fb58241e88374a314e9f947996fa51ef076cd120c9167a26815e5",
+    "checkpoint_sha256": "1f06c45358b3ef06ed973795ecdd8960c64f4a0f77fbcd77fc7d8e4a77bfd7c8"
+  },
+  "frozen_config": {
+    "path": "configs/preliminary_pilot_frozen.yaml",
+    "sha256": "26aac7591ea9bd59649a06cac7f3e7fd368788b49744e31e18c5aafb290460dd"
+  },
+  "frozen_replay_results_sha256": "399cc137e9300bc5e40d0e17d600bbe6706d8f1e8d0384e29234cf23d3da798e"
+}

@@ -1,0 +1,71 @@
+{
+  "status": "pilot_preliminary_validation_only",
+  "split": "validation",
+  "trajectory": "Kite_training/foggy/trajectory_2021",
+  "total_frames": 2204,
+  "valid_pixels": 89276771,
+  "policies": [
+    {
+      "policy": "every",
+      "inference_calls": 2204,
+      "inference_call_reduction": 0.0,
+      "maximum_prediction_age": 0,
+      "absrel": 0.37508164865548166,
+      "rmse_metres": 155.27963984195634,
+      "delta1": 0.3881636803374083,
+      "delta2": 0.6356019529424961,
+      "delta3": 0.734799705065498,
+      "near_absrel": 0.22072499515036093,
+      "near_rmse_metres": 2.5315633896741843,
+      "critical_events": 4,
+      "critical_events_inferred_on_time": 4
+    },
+    {
+      "policy": "fixed2",
+      "inference_calls": 1102,
+      "inference_call_reduction": 0.5,
+      "maximum_prediction_age": 1,
+      "absrel": 0.37545658223076034,
+      "rmse_metres": 155.23814875092017,
+      "delta1": 0.3878957046956817,
+      "delta2": 0.6353575444613695,
+      "delta3": 0.7342855623664973,
+      "near_absrel": 0.22129360231763506,
+      "near_rmse_metres": 2.5457976159308555,
+      "critical_events": 4,
+      "critical_events_inferred_on_time": 2
+    },
+    {
+      "policy": "fixed5",
+      "inference_calls": 441,
+      "inference_call_reduction": 0.7999092558983666,
+      "maximum_prediction_age": 4,
+      "absrel": 0.3752256272115521,
+      "rmse_metres": 155.2789063817076,
+      "delta1": 0.3888702135071619,
+      "delta2": 0.634851365760081,
+      "delta3": 0.7343245310697897,
+      "near_absrel": 0.21932482233759415,
+      "near_rmse_metres": 2.4975185218310294,
+      "critical_events": 4,
+      "critical_events_inferred_on_time": 0
+    },
+    {
+      "policy": "adaptive",
+      "inference_calls": 1481,
+      "inference_call_reduction": 0.32803992740471866,
+      "maximum_prediction_age": 4,
+      "absrel": 0.3749839026940441,
+      "rmse_metres": 155.25906992247647,
+      "delta1": 0.38843653966830854,
+      "delta2": 0.6353142857283671,
+      "delta3": 0.7348589590006566,
+      "near_absrel": 0.2208954397811085,
+      "near_rmse_metres": 2.5312038424706227,
+      "critical_events": 4,
+      "critical_events_inferred_on_time": 4
+    }
+  ],
+  "source": "artifacts/real_midair_pilot/preliminary_pilot_v2/replay_frozen/results.json",
+  "source_sha256": "399cc137e9300bc5e40d0e17d600bbe6706d8f1e8d0384e29234cf23d3da798e"
+}

@@ -51,3 +51,22 @@ def test_smoke_training_and_evaluation(fixture_dataset, smoke_config, tmp_path):
     assert result["epochs_completed"] == 1
     assert result["best_validation_absrel"] >= 0
     assert result["model"]["parameters"] > 0
+
+
+def test_training_resume_preserves_history_and_scheduler(fixture_dataset, smoke_config, tmp_path):
+    root, manifest = fixture_dataset
+    output = tmp_path / "resumed"
+    first_config = json.loads(json.dumps(smoke_config))
+    first_config["train"]["epochs"] = 1
+    train_model(first_config, root, manifest, output)
+    resumed_config = json.loads(json.dumps(smoke_config))
+    resumed_config["train"]["epochs"] = 2
+    summary = train_model(resumed_config, root, manifest, output, output / "last.pt")
+    with (output / "history.csv").open(encoding="utf-8") as handle:
+        history = list(csv.DictReader(handle))
+    checkpoint = torch.load(output / "last.pt", map_location="cpu", weights_only=False)
+    assert [int(row["epoch"]) for row in history] == [0, 1]
+    assert summary["epochs_completed"] == 2
+    assert checkpoint["epoch"] == 1
+    assert len(checkpoint["extra"]["history"]) == 2
+    assert "scheduler" in checkpoint["extra"]

@@ -7,6 +7,7 @@ import numpy as np
 from PIL import Image
 import pytest
 
+from aerodepth_lite.cli import _validate_hdf5_sync
 from aerodepth_lite.data import MidAirDataset, assert_no_leakage, discover_midair, load_depth, load_manifest, split_trajectories, write_manifest
 
 
@@ -65,6 +66,42 @@ def test_hdf5_navigation_is_attached_when_available(fixture_dataset):
     assert selected[0].navigation["vx"] == 3.0
     assert selected[0].navigation["wy"] == 0.2
     assert report["navigation_frames"] == 4
+
+
+def test_hdf5_paths_and_navigation_resampling_are_validated(tmp_path):
+    root = tmp_path / "MidAir"
+    rgb_dir = root / "Kite_training" / "foggy" / "color_left" / "trajectory_2003"
+    depth_dir = root / "Kite_training" / "foggy" / "depth" / "trajectory_2003"
+    rgb_dir.mkdir(parents=True)
+    depth_dir.mkdir(parents=True)
+    rgb_paths, depth_paths = [], []
+    for frame in range(3):
+        rgb_path = rgb_dir / f"{frame:06d}.JPEG"
+        depth_path = depth_dir / f"{frame:06d}.PNG"
+        Image.fromarray(np.zeros((4, 6, 3), dtype=np.uint8)).save(rgb_path)
+        Image.fromarray(np.full((4, 6), 5.0, dtype=np.float16).view(np.uint16)).save(depth_path)
+        rgb_paths.append(rgb_path.relative_to(root).as_posix())
+        depth_paths.append(depth_path.relative_to(root).as_posix())
+    with h5py.File(root / "Kite_training" / "foggy" / "sensor_records.hdf5", "w") as handle:
+        group = handle.create_group("trajectory_2003")
+        camera = group.create_group("camera_data")
+        string_type = h5py.string_dtype(encoding="utf-8")
+        color = camera.create_dataset("color_left", data=rgb_paths, dtype=string_type)
+        depth = camera.create_dataset("depth", data=depth_paths, dtype=string_type)
+        color.attrs["local_position"] = [0.0, 0.0, 0.0]
+        depth.attrs["local_position"] = [0.0, 0.0, 0.0]
+        for name in ("groundtruth/velocity", "imu/accelerometer", "imu/gyroscope"):
+            dataset = group.create_dataset(name, data=np.arange(36, dtype=np.float64).reshape(12, 3))
+            dataset.attrs["sampling_frequency"] = 100.0
+            dataset.attrs["axis_ordering"] = "xyz"
+    records, _ = discover_midair(root)
+    result = _validate_hdf5_sync(root, records)
+    assert result["available"]
+    assert result["total_path_mismatches"] == 0
+    assert result["maximum_navigation_resampling_error"] == 0.0
+    assert result["validation_errors"] == []
+    assert result["trajectories"][0]["navigation_values_checked"] == 27
+    assert result["trajectories"][0]["camera_metadata"]["camera_data/color_left"]["local_position"] == [0.0, 0.0, 0.0]
 
 
 def test_midair_float16_bit_decoding(tmp_path):
