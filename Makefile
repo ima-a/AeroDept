@@ -1,7 +1,10 @@
 .PHONY: install test smoke inspect split replay report
 
+PYTHON ?= python3
+
 install:
-	python -m venv --system-site-packages .venv
+	$(PYTHON) -m venv .venv
+	.venv/bin/python -m pip install --upgrade pip
 	.venv/bin/python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 	.venv/bin/python -m pip install -e '.[dev,midair]'
 
