@@ -1,0 +1,59 @@
+{
+  "warning": "Existing score takes maximum of differently dimensioned velocity, acceleration and angular-velocity norms; acceleration includes gravity. Scaling is empirical, not a physically calibrated motion estimate.",
+  "per_trajectory": {
+    "Kite_training/foggy/trajectory_2003": {
+      "norm_quantiles_0_50_90_100": {
+        "velocity_m_per_s": [
+          7.294065770134211,
+          13.680900452943126,
+          19.88260565204216,
+          22.76523881576982
+        ],
+        "acceleration_m_per_s2": [
+          7.649907574639921,
+          10.16653594572385,
+          12.427000734277899,
+          15.310036482012608
+        ],
+        "angular_velocity_rad_per_s": [
+          0.0058888818313448275,
+          0.23374165166099933,
+          0.5751754162355295,
+          1.0993944026610971
+        ]
+      },
+      "dominant_group_counts": {
+        "velocity_m_per_s": 1888,
+        "acceleration_m_per_s2": 317,
+        "angular_velocity_rad_per_s": 0
+      }
+    },
+    "PLE_training/spring/trajectory_5000": {
+      "norm_quantiles_0_50_90_100": {
+        "velocity_m_per_s": [
+          4.135948572169974,
+          10.755432158627636,
+          15.654710591093203,
+          17.560130850066745
+        ],
+        "acceleration_m_per_s2": [
+          4.737224148265631,
+          10.448038131006802,
+          12.214725981833457,
+          15.755928083664534
+        ],
+        "angular_velocity_rad_per_s": [
+          0.010063695910655231,
+          0.2714405573729117,
+          0.6481417181931735,
+          1.2475003287418507
+        ]
+      },
+      "dominant_group_counts": {
+        "velocity_m_per_s": 1198,
+        "acceleration_m_per_s2": 1007,
+        "angular_velocity_rad_per_s": 0
+      }
+    }
+  }
+}

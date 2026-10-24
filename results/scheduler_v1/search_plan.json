@@ -1,0 +1,272 @@
+{
+  "declared_at_unix": 1792830479.6692555,
+  "configurations": [
+    {
+      "id": "candidate_00",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 1,
+        "decision_threshold": 0.7,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "motion_scale": 20,
+        "visual_scale": 0.15,
+        "near_threshold": 10.0,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.95,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_01",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 2,
+        "decision_threshold": 0.7,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "motion_scale": 20,
+        "visual_scale": 0.15,
+        "near_threshold": 10.0,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.95,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_02",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 4,
+        "decision_threshold": 0.7,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "motion_scale": 20,
+        "visual_scale": 0.15,
+        "near_threshold": 10.0,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.95,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_03",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 1,
+        "decision_threshold": 0.7,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "motion_scale": 40,
+        "visual_scale": 0.15,
+        "near_threshold": 10.0,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.99,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_04",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 2,
+        "decision_threshold": 0.7,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "motion_scale": 40,
+        "visual_scale": 0.15,
+        "near_threshold": 10.0,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.99,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_05",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 4,
+        "decision_threshold": 0.7,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "motion_scale": 40,
+        "visual_scale": 0.15,
+        "near_threshold": 10.0,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.99,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_06",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 2,
+        "decision_threshold": 0.6,
+        "motion_weight": 0.2,
+        "visual_weight": 0.4,
+        "risk_weight": 0.3,
+        "age_weight": 0.1,
+        "motion_scale": 40,
+        "visual_scale": 0.05,
+        "near_threshold": 10.0,
+        "critical_risk": 0.8,
+        "extreme_motion": 0.99,
+        "extreme_visual": 0.9,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_07",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 4,
+        "decision_threshold": 0.6,
+        "motion_weight": 0.2,
+        "visual_weight": 0.4,
+        "risk_weight": 0.3,
+        "age_weight": 0.1,
+        "motion_scale": 40,
+        "visual_scale": 0.05,
+        "near_threshold": 10.0,
+        "critical_risk": 0.8,
+        "extreme_motion": 0.99,
+        "extreme_visual": 0.9,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_08",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 2,
+        "decision_threshold": 0.85,
+        "motion_weight": 0.15,
+        "visual_weight": 0.2,
+        "risk_weight": 0.4,
+        "age_weight": 0.25,
+        "motion_scale": 40,
+        "visual_scale": 0.3,
+        "near_threshold": 10.0,
+        "critical_risk": 0.98,
+        "extreme_motion": 0.99,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_09",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 4,
+        "decision_threshold": 0.85,
+        "motion_weight": 0.15,
+        "visual_weight": 0.2,
+        "risk_weight": 0.4,
+        "age_weight": 0.25,
+        "motion_scale": 40,
+        "visual_scale": 0.3,
+        "near_threshold": 10.0,
+        "critical_risk": 0.98,
+        "extreme_motion": 0.99,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_10",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 2,
+        "decision_threshold": 0.8,
+        "motion_weight": 0.35,
+        "visual_weight": 0.35,
+        "risk_weight": 0.15,
+        "age_weight": 0.15,
+        "motion_scale": 20,
+        "visual_scale": 0.05,
+        "near_threshold": 10.0,
+        "critical_risk": 0.98,
+        "extreme_motion": 0.95,
+        "extreme_visual": 0.9,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    },
+    {
+      "id": "candidate_11",
+      "config": {
+        "status": "provisional_requires_validation_review",
+        "max_skip": 4,
+        "decision_threshold": 0.6,
+        "motion_weight": 0.15,
+        "visual_weight": 0.2,
+        "risk_weight": 0.4,
+        "age_weight": 0.25,
+        "motion_scale": 40,
+        "visual_scale": 0.3,
+        "near_threshold": 10.0,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.99,
+        "extreme_visual": 0.99,
+        "visual_size": [
+          36,
+          64
+        ]
+      }
+    }
+  ],
+  "selection_rule": "Eligibility on EACH trajectory: AbsRel and RMSE <=1.05x every; near AbsRel and RMSE <=1.10x every; no right-censored events; observed max update delay <=2 frames (zero-event case has no safety evidence). Among eligible minimize worst trajectory inference-call fraction, then worst normalized error across 4 metrics and both trajectories, then mean observed event delay (no-event trajectories omitted), then config id. If none eligible, select least constraint violation for diagnostic timing only and label infeasible.",
+  "compute_matching": "Per trajectory choose K equal selected adaptive calls, N validation frames; deterministic uniform fixed-rate positions ceil(k*N/K), k=0..K-1. Exact matched call count; chosen using validation counts only, no GT/event alignment.",
+  "interpretation": "All tuned results exploratory validation selection, not independent generalization. Cached search times exclude real inference and cannot represent runtime."
+}

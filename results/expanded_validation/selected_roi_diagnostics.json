@@ -1,0 +1,50 @@
+[
+  {
+    "trajectory": "Kite_training/foggy/trajectory_2003",
+    "frame_index": 1321,
+    "selection": "typical_median_absrel",
+    "roi": "lower two-thirds, central half width; inspected only, scheduler not executed",
+    "roi_pixels": 20480,
+    "roi_gt_valid_pixels": 20480,
+    "roi_floor_valid_pixels": 0,
+    "roi_floor_invalid_pixels": 0,
+    "roi_pred_p10_all_positive": 15.451051712036133,
+    "roi_gt_p10_valid": 17.296875
+  },
+  {
+    "trajectory": "Kite_training/foggy/trajectory_2003",
+    "frame_index": 1388,
+    "selection": "worst_absrel",
+    "roi": "lower two-thirds, central half width; inspected only, scheduler not executed",
+    "roi_pixels": 20480,
+    "roi_gt_valid_pixels": 20480,
+    "roi_floor_valid_pixels": 0,
+    "roi_floor_invalid_pixels": 0,
+    "roi_pred_p10_all_positive": 13.651911735534668,
+    "roi_gt_p10_valid": 24.9375
+  },
+  {
+    "trajectory": "PLE_training/spring/trajectory_5000",
+    "frame_index": 145,
+    "selection": "typical_median_absrel",
+    "roi": "lower two-thirds, central half width; inspected only, scheduler not executed",
+    "roi_pixels": 20480,
+    "roi_gt_valid_pixels": 18654,
+    "roi_floor_valid_pixels": 0,
+    "roi_floor_invalid_pixels": 0,
+    "roi_pred_p10_all_positive": 7.116347312927246,
+    "roi_gt_p10_valid": 7.30078125
+  },
+  {
+    "trajectory": "PLE_training/spring/trajectory_5000",
+    "frame_index": 1590,
+    "selection": "worst_absrel",
+    "roi": "lower two-thirds, central half width; inspected only, scheduler not executed",
+    "roi_pixels": 20480,
+    "roi_gt_valid_pixels": 18919,
+    "roi_floor_valid_pixels": 4,
+    "roi_floor_invalid_pixels": 9,
+    "roi_pred_p10_all_positive": 9.479110717773438,
+    "roi_gt_p10_valid": 8.140625
+  }
+]

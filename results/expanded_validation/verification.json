@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "epochs_completed": 50,
+  "history_rows": 50,
+  "all_history_values_finite": true,
+  "logged_epochs_complete": true,
+  "tracebacks": [],
+  "training_duration_seconds": 59281.158372199,
+  "device": "NVIDIA GeForce GTX 1650",
+  "training_software": {
+    "python": "3.13.12",
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "cuda_build": "13.0",
+    "cudnn": 92400
+  },
+  "best_epoch": 4,
+  "selection_metric": "minimum full-validation AbsRel recorded during AMP validation; unchanged after FP32 reevaluation",
+  "selected_recorded_absrel": 0.30312900253193636,
+  "checkpoints": {
+    "best.pt": {
+      "sha256": "c1d4279cdaf594d1c15bce1f4f1b6ae322c7ec3ef28349df1dd47d975818ebd8",
+      "epoch_zero_based": 3,
+      "epoch_human": 4,
+      "global_step": 17636,
+      "history_rows": 4,
+      "finite_state": true,
+      "strict_model_optimizer_load": true,
+      "inference_shape": [
+        1,
+        1,
+        192,
+        320
+      ],
+      "model_stats": {
+        "parameters": 1027489,
+        "trainable_parameters": 1027489,
+        "fp32_size_mb": 4.109956,
+        "encoder_parameters": 927008,
+        "decoder_parameters": 100481
+      }
+    },
+    "last.pt": {
+      "sha256": "b59f4a4a84becf5a974185117550794e8c26cb73db563b365cc8bb7d82c5cef2",
+      "epoch_zero_based": 49,
+      "epoch_human": 50,
+      "global_step": 220450,
+      "history_rows": 50,
+      "finite_state": true,
+      "strict_model_optimizer_load": true,
+      "inference_shape": [
+        1,
+        1,
+        192,
+        320
+      ],
+      "model_stats": {
+        "parameters": 1027489,
+        "trainable_parameters": 1027489,
+        "fp32_size_mb": 4.109956,
+        "encoder_parameters": 927008,
+        "decoder_parameters": 100481
+      }
+    }
+  },
+  "config_sha256": "bbc9537c32971ad0ad9a0bc6567095b7ad2431c3d3c2506ae9b1722577995754",
+  "manifest_sha256": "e7b093be69f1942f281a09563bd63efa479d4352de97da722fb0504208c1fbf5",
+  "metadata_sha256": "174f9c13ca34a3358700098055d7f2d62f27357ed29650c5a70ecba0361f7823",
+  "runtime_source_hashes_match": true,
+  "validation_inventory": {
+    "Kite_training/foggy/trajectory_2003": 2205,
+    "PLE_training/spring/trajectory_5000": 2205
+  },
+  "validation_hdf5": [
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "frames": 2205,
+      "hdf5_sha256": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+      "camera_paths_match": true
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "frames": 2205,
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "camera_paths_match": true
+    }
+  ],
+  "model_contract": {
+    "architecture": "mobilenet_v3_small_depth",
+    "model_options": {
+      "name": "mobilenet_v3_small_depth"
+    },
+    "preprocessing": {
+      "input": "RGB float32 [0,1]",
+      "image_size": [
+        192,
+        320
+      ],
+      "rgb_resize": "bilinear align_corners=False",
+      "depth_resize": "nearest",
+      "crop": null,
+      "paired_training_horizontal_flip": true,
+      "normalization_location": "model",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "depth_encoding": "midair_float16_bits",
+      "depth_scale": 1.0,
+      "valid_depth_metres": [
+        0.1,
+        1000.0
+      ],
+      "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+    },
+    "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+  },
+  "test_image_or_depth_access": false,
+  "git_commands_executed": false
+}

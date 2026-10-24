@@ -1,0 +1,166 @@
+{
+  "declared_at_unix": 1792832118.567762,
+  "configurations": [
+    {
+      "id": "v2_00",
+      "config": {
+        "max_skip": 1,
+        "accel_change_scale": 2.0,
+        "gyro_scale": 0.5,
+        "visual_scale": 0.08,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.9,
+        "extreme_visual": 0.9,
+        "decision_threshold": 0.65,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "gps_speed_scale": 20.0
+      }
+    },
+    {
+      "id": "v2_01",
+      "config": {
+        "max_skip": 2,
+        "accel_change_scale": 2.0,
+        "gyro_scale": 0.5,
+        "visual_scale": 0.08,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.9,
+        "extreme_visual": 0.9,
+        "decision_threshold": 0.65,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "gps_speed_scale": 20.0
+      }
+    },
+    {
+      "id": "v2_02",
+      "config": {
+        "max_skip": 4,
+        "accel_change_scale": 2.0,
+        "gyro_scale": 0.5,
+        "visual_scale": 0.08,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.9,
+        "extreme_visual": 0.9,
+        "decision_threshold": 0.65,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "gps_speed_scale": 20.0
+      }
+    },
+    {
+      "id": "v2_03",
+      "config": {
+        "max_skip": 2,
+        "accel_change_scale": 1.0,
+        "gyro_scale": 0.25,
+        "visual_scale": 0.04,
+        "critical_risk": 0.8,
+        "extreme_motion": 0.9,
+        "extreme_visual": 0.9,
+        "decision_threshold": 0.55,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "gps_speed_scale": 20.0
+      }
+    },
+    {
+      "id": "v2_04",
+      "config": {
+        "max_skip": 4,
+        "accel_change_scale": 1.0,
+        "gyro_scale": 0.25,
+        "visual_scale": 0.04,
+        "critical_risk": 0.8,
+        "extreme_motion": 0.9,
+        "extreme_visual": 0.9,
+        "decision_threshold": 0.55,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "gps_speed_scale": 20.0
+      }
+    },
+    {
+      "id": "v2_05",
+      "config": {
+        "max_skip": 2,
+        "accel_change_scale": 4.0,
+        "gyro_scale": 1.0,
+        "visual_scale": 0.15,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.9,
+        "extreme_visual": 0.9,
+        "decision_threshold": 0.7,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "gps_speed_scale": 20.0
+      }
+    },
+    {
+      "id": "v2_06",
+      "config": {
+        "max_skip": 4,
+        "accel_change_scale": 4.0,
+        "gyro_scale": 1.0,
+        "visual_scale": 0.15,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.9,
+        "extreme_visual": 0.9,
+        "decision_threshold": 0.7,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "gps_speed_scale": 20.0
+      }
+    },
+    {
+      "id": "v2_07",
+      "config": {
+        "max_skip": 2,
+        "accel_change_scale": 1.0,
+        "gyro_scale": 0.5,
+        "visual_scale": 0.04,
+        "critical_risk": 0.9,
+        "extreme_motion": 0.9,
+        "extreme_visual": 0.9,
+        "decision_threshold": 0.55,
+        "motion_weight": 0.25,
+        "visual_weight": 0.3,
+        "risk_weight": 0.3,
+        "age_weight": 0.15,
+        "gps_speed_scale": 20.0
+      }
+    }
+  ],
+  "selection_rule": "Eligibility on EACH trajectory: AbsRel and RMSE <=1.05x every; near AbsRel and RMSE <=1.10x every; no right-censored events; observed max update delay <=2 frames (zero-event case has no safety evidence). Among eligible minimize worst trajectory inference-call fraction, then worst normalized error across 4 metrics and both trajectories, then mean observed event delay (no-event trajectories omitted), then config id. If none eligible, select least constraint violation for diagnostic timing only and label infeasible.",
+  "matching": "ceil(k*N/K), exactly K calls per trajectory, K chosen from selected adaptive validation calls; no GT-aligned phases",
+  "contract": "Unchanged epoch4 FP32, preprocessing, valid GT[.1,1000]m, near<10m, GTevent<8m/drop2. Only validation. Eight configurations, no subsequent extensions. Original v1 preserved.",
+  "inputs": "Current RGB vs last inferred RGB; zero-order-held simulated GPS velocity normalized separately (20m/s), consecutive simulated IMU accelerometer change (m/s2 proxy) and current gyro norm (rad/s proxy), previous predicted risk and age. No privileged GT velocity, GT depth/mask, future inputs. Ideal sensor availability assumed.",
+  "precision_tolerance": {
+    "absrel": 1e-05,
+    "rmse": 0.001,
+    "delta1": 1e-05,
+    "delta2": 1e-05,
+    "delta3": 1e-05,
+    "near_absrel": 1e-05,
+    "near_rmse": 0.001,
+    "valid_pixels": 0,
+    "near_valid_pixels": 0
+  },
+  "GPS_revision_before_search": "User preferred causal GPS when available. Added the SAME GPS scale to all eight configurations before any search. Initial proposal preserved; no configurations added.",
+  "design_changes": "Motion fix: separately normalized causal GPS/IMU proxies, removes privileged GT velocity and unchanging acceleration/gravity norm. Separate intentional RGB design change: current thumbnail compared to last inferred frame, whereas original compares immediately previous frame. Joint evaluation does not identify individual causal contributions."
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "trajectory": "Kite_training/foggy/trajectory_2003",
+    "dataset": "gps/velocity",
+    "frequency_hz": 1.0,
+    "samples": 89,
+    "alignment": "floor(camera ordinal * GPS frequency /25); zero-order hold; no future samples; ideal availability and common time origin assumed; no physical sensor latency established"
+  },
+  {
+    "trajectory": "PLE_training/spring/trajectory_5000",
+    "dataset": "gps/velocity",
+    "frequency_hz": 1.0,
+    "samples": 89,
+    "alignment": "floor(camera ordinal * GPS frequency /25); zero-order hold; no future samples; ideal availability and common time origin assumed; no physical sensor latency established"
+  }
+]

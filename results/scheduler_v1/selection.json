@@ -1,0 +1,30 @@
+{
+  "id": "candidate_03",
+  "eligible": true,
+  "config": {
+    "status": "provisional_requires_validation_review",
+    "max_skip": 1,
+    "decision_threshold": 0.7,
+    "motion_weight": 0.25,
+    "visual_weight": 0.3,
+    "risk_weight": 0.3,
+    "age_weight": 0.15,
+    "motion_scale": 40,
+    "visual_scale": 0.15,
+    "near_threshold": 10.0,
+    "critical_risk": 0.9,
+    "extreme_motion": 0.99,
+    "extreme_visual": 0.99,
+    "visual_size": [
+      36,
+      64
+    ]
+  },
+  "selection_rank": [
+    0.5002267573696145,
+    1.083729020538143,
+    0.45454545454545453,
+    "candidate_03"
+  ],
+  "exploratory_validation_only": true
+}

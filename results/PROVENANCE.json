@@ -1,0 +1,254 @@
+{
+  "expanded_validation/validation_metrics.json": {
+    "original_local_evidence_sha256": "19b796843fb85591867f76b020c231b947e69f0fc47ec4fc8e7702f90f739ee2",
+    "source_name": "evaluation_main_20261020/validation_metrics.json",
+    "published_sha256": "19b796843fb85591867f76b020c231b947e69f0fc47ec4fc8e7702f90f739ee2",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "expanded_validation/verification.json": {
+    "original_local_evidence_sha256": "fc32adf4f8eb1e0744601d241e1fff8b953fa12b488555dc6f1ac92243d81d59",
+    "source_name": "evaluation_main_20261020/verification.json",
+    "published_sha256": "fc32adf4f8eb1e0744601d241e1fff8b953fa12b488555dc6f1ac92243d81d59",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "expanded_validation/diagnostics.json": {
+    "original_local_evidence_sha256": "b208ad919fac5878c906413587a483e4f261f9cbd5bc6e0be94d7eae342a3642",
+    "source_name": "evaluation_main_20261020/diagnostics.json",
+    "published_sha256": "b208ad919fac5878c906413587a483e4f261f9cbd5bc6e0be94d7eae342a3642",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "expanded_validation/per_trajectory.csv": {
+    "original_local_evidence_sha256": "7bdeadc8063c1e60ca1a5c2237fa0787ff41c9cd66518773a9f3e5ac682d47bd",
+    "source_name": "evaluation_main_20261020/per_trajectory.csv",
+    "published_sha256": "bb4052aadeca320d3e5bbb9e60ece5bfbdd1fbad0687e8820a8a49368fb29502",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "expanded_validation/training_validation_curves.png": {
+    "original_local_evidence_sha256": "e21fb3e6e56201c31897e3b83e4577c9272da5ed808a994209b78b3e0f9adf07",
+    "source_name": "evaluation_main_20261020/training_validation_curves.png",
+    "published_sha256": "e21fb3e6e56201c31897e3b83e4577c9272da5ed808a994209b78b3e0f9adf07",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "expanded_validation/near_metrics_and_frame_errors.png": {
+    "original_local_evidence_sha256": "bcbaa1db966a7e775372440b67a8e6fae961d859b2cbb8c65b1798771dae0aea",
+    "source_name": "evaluation_main_20261020/near_metrics_and_frame_errors.png",
+    "published_sha256": "bcbaa1db966a7e775372440b67a8e6fae961d859b2cbb8c65b1798771dae0aea",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "expanded_validation/prediction_contact_sheet.png": {
+    "original_local_evidence_sha256": "1caff4c28eea7a59fd5f63228e52602be13949ddabd90b338a0c70afe6d7cc96",
+    "source_name": "evaluation_main_20261020/prediction_contact_sheet.png",
+    "published_sha256": "1caff4c28eea7a59fd5f63228e52602be13949ddabd90b338a0c70afe6d7cc96",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "expanded_validation/prediction_selection.json": {
+    "original_local_evidence_sha256": "85e480d614831833f490cb068077babcca9cc27d657325a4feb37b69ce314d5c",
+    "source_name": "evaluation_main_20261020/prediction_selection.json",
+    "published_sha256": "85e480d614831833f490cb068077babcca9cc27d657325a4feb37b69ce314d5c",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "expanded_validation/selected_roi_diagnostics.json": {
+    "original_local_evidence_sha256": "730f496eb6510e43ea7ff73899ec92c9236a8d63680b9abe9391d5f11b4029f7",
+    "source_name": "evaluation_main_20261020/selected_roi_diagnostics.json",
+    "published_sha256": "730f496eb6510e43ea7ff73899ec92c9236a8d63680b9abe9391d5f11b4029f7",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/REPORT.md": {
+    "original_local_evidence_sha256": "e81e75fe9e3d1c7612c5b9a8c40b8f510b893c9ee76a1688580d1a3e13f4e9c4",
+    "source_name": "scheduler_validation_20261024/REPORT.md",
+    "published_sha256": "7ee2611ab88be8bc503e373f958a517255476b6ba8a68f9da5b355c08b9d879f",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/comparison.csv": {
+    "original_local_evidence_sha256": "120ec157eaa6d574cf3bd844fa3a6c4e78a1c56da9d452efbe8a43d7da13514b",
+    "source_name": "scheduler_validation_20261024/comparison.csv",
+    "published_sha256": "f26231e316e17fdddeff65927b9f2e8bc3591efd852ec6d1a7dc45f305ae2b54",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/baseline_comparison.csv": {
+    "original_local_evidence_sha256": "c7c7817f2619643f0a06b7f35378b0c7615e9465bcc4a3ca28e543ad9731e879",
+    "source_name": "scheduler_validation_20261024/baseline_comparison.csv",
+    "published_sha256": "7333b395238132d4a22a92aaaf96ecd5cc5ab3fa1e9b30fa40373da760148ff6",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/tuned_comparison.csv": {
+    "original_local_evidence_sha256": "43e0e04253b73ccba027647f27295d23de59701dc97991bb9d8d4cf3313c4ec5",
+    "source_name": "scheduler_validation_20261024/tuned_comparison.csv",
+    "published_sha256": "aed9af947f709b689d3f866219b3d411dddd94e03310babfd525f55adf8e7cae",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/search_plan.json": {
+    "original_local_evidence_sha256": "722de2afe8a7f04d005aba9692ed79d481d540d231a065b955787aba4c6cfb92",
+    "source_name": "scheduler_validation_20261024/search_plan.json",
+    "published_sha256": "722de2afe8a7f04d005aba9692ed79d481d540d231a065b955787aba4c6cfb92",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/search_results.json": {
+    "original_local_evidence_sha256": "c1f3b704fd60289b0969ac7dd49453ff3a5c8b736ab8e63b68330e10b1969a78",
+    "source_name": "scheduler_validation_20261024/search_results.json",
+    "published_sha256": "c1f3b704fd60289b0969ac7dd49453ff3a5c8b736ab8e63b68330e10b1969a78",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/search_comparison.csv": {
+    "original_local_evidence_sha256": "bd1c5e3990231f28c0105d37985c6cf579409aca3d19bb55a00518aa102b1d50",
+    "source_name": "scheduler_validation_20261024/search_comparison.csv",
+    "published_sha256": "39547d0c8de7fc2545c18caeb5045a86dd2b2dbc9af0792ae2af53b83d1f6e7e",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/selection.json": {
+    "original_local_evidence_sha256": "a1e4269386f39ab2dad9ec1d6419607a172f4baea47565ba4cd52abf776afba4",
+    "source_name": "scheduler_validation_20261024/selection.json",
+    "published_sha256": "a1e4269386f39ab2dad9ec1d6419607a172f4baea47565ba4cd52abf776afba4",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/quality_vs_inference.png": {
+    "original_local_evidence_sha256": "afc5de9bc77444de521261e10cb259b913f1423057edd3a07d1bf9e0c6798a3e",
+    "source_name": "scheduler_validation_20261024/quality_vs_inference.png",
+    "published_sha256": "afc5de9bc77444de521261e10cb259b913f1423057edd3a07d1bf9e0c6798a3e",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/scheduler_timelines.png": {
+    "original_local_evidence_sha256": "f5000a03ad4143f7b6402f749b7bfe8d71d4e28c1853707d92cfed95c5267896",
+    "source_name": "scheduler_validation_20261024/scheduler_timelines.png",
+    "published_sha256": "f5000a03ad4143f7b6402f749b7bfe8d71d4e28c1853707d92cfed95c5267896",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/floor_risk_diagnostics.png": {
+    "original_local_evidence_sha256": "8c5485a74cbb2f32d2245123e1febe909ac7cec3b594c5369449984b5d4a188e",
+    "source_name": "scheduler_validation_20261024/floor_risk_diagnostics.png",
+    "published_sha256": "8c5485a74cbb2f32d2245123e1febe909ac7cec3b594c5369449984b5d4a188e",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/floor_risk_diagnostics.json": {
+    "original_local_evidence_sha256": "39fe362eea6ec9f2a66ebc270a516a6e120909880e45beafef5f011874a23791",
+    "source_name": "scheduler_validation_20261024/floor_risk_diagnostics.json",
+    "published_sha256": "39fe362eea6ec9f2a66ebc270a516a6e120909880e45beafef5f011874a23791",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/reason_counts.csv": {
+    "original_local_evidence_sha256": "08f62f0bea372f221c1ff8014733283ff94cda00c2c7620a027299647e44c551",
+    "source_name": "scheduler_validation_20261024/reason_counts.csv",
+    "published_sha256": "0b0e981d12113f00b043c691762a410338b32faba5b75a5dda40b3c377d11f9f",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/reason_counts.png": {
+    "original_local_evidence_sha256": "8bc187dfc68dd9979d0f743d2a06451351a40b07b1e88b726ab8aa1364e0fdb2",
+    "source_name": "scheduler_validation_20261024/reason_counts.png",
+    "published_sha256": "8bc187dfc68dd9979d0f743d2a06451351a40b07b1e88b726ab8aa1364e0fdb2",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/motion_provenance.json": {
+    "original_local_evidence_sha256": "b2c61a4ada1040f9a07eb1057ad1858624fa2a5ad09a69bc79a1e2902f98411d",
+    "source_name": "scheduler_validation_20261024/motion_provenance.json",
+    "published_sha256": "b2c61a4ada1040f9a07eb1057ad1858624fa2a5ad09a69bc79a1e2902f98411d",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/motion_diagnostics.json": {
+    "original_local_evidence_sha256": "5d488b71628906719c68e419ff372851e308d1377327ae2220104f9778c1327d",
+    "source_name": "scheduler_validation_20261024/motion_diagnostics.json",
+    "published_sha256": "5d488b71628906719c68e419ff372851e308d1377327ae2220104f9778c1327d",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/actual_latency_distributions.csv": {
+    "original_local_evidence_sha256": "1e038267034427664b203cea78d848fa41d4cda4ebe199549e59e86febd67424",
+    "source_name": "scheduler_validation_20261024/actual_latency_distributions.csv",
+    "published_sha256": "69dea984ee94088ef8de06b0c9807a1662ab8328d6689c0f7a7d73fd0ae18352",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/critical_event_details.csv": {
+    "original_local_evidence_sha256": "d1ea5d4cecc8466bc4d29206a171c967a5e0abe1889e979b4cb06a0b0c0b0649",
+    "source_name": "scheduler_validation_20261024/critical_event_details.csv",
+    "published_sha256": "849c5bf9446a85832190cb12ef73c42a32c6471a0b07a7e25ac82fec8d8468a0",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/reference_agreement.json": {
+    "original_local_evidence_sha256": "284fc32a0a77fcb67de1b254be8e1a982b110c40c0e73793f456639153da0dbf",
+    "source_name": "scheduler_validation_20261024/reference_agreement.json",
+    "published_sha256": "284fc32a0a77fcb67de1b254be8e1a982b110c40c0e73793f456639153da0dbf",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/policy_equivalence.json": {
+    "original_local_evidence_sha256": "eb099458a3fb3858bfa332b5fc0619237a523fd4cee96532eb74501ad8a4f6ee",
+    "source_name": "scheduler_validation_20261024/policy_equivalence.json",
+    "published_sha256": "eb099458a3fb3858bfa332b5fc0619237a523fd4cee96532eb74501ad8a4f6ee",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v1/verification_checks.json": {
+    "original_local_evidence_sha256": "5837b6a0612c3d331ed5785d45252febe0f0d4c2cf86a135a49640883678950d",
+    "source_name": "scheduler_validation_20261024/verification_checks.json",
+    "published_sha256": "5837b6a0612c3d331ed5785d45252febe0f0d4c2cf86a135a49640883678950d",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/REPORT.md": {
+    "original_local_evidence_sha256": "aac3bc5c149ac3ea5801be505bba11bb000ca274b9e8c8e7e4dc42ef6594d52c",
+    "source_name": "scheduler_v2_20261024/REPORT.md",
+    "published_sha256": "6375410199f64f96d02cd6e9e24b69bcb42f1d47e4a0533a7aa9b0610fd22ff1",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/plan.json": {
+    "original_local_evidence_sha256": "af38a32068a90bb9620e31f7aca9f63b72472e87260b7c0274588a5cb5b16164",
+    "source_name": "scheduler_v2_20261024/plan.json",
+    "published_sha256": "af38a32068a90bb9620e31f7aca9f63b72472e87260b7c0274588a5cb5b16164",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/results.json": {
+    "original_local_evidence_sha256": "64d8bf5590d75d6d08aa38ad1113e7e08909d13024efc9a3dbb7b84e9e6c6896",
+    "source_name": "scheduler_v2_20261024/results.json",
+    "published_sha256": "64d8bf5590d75d6d08aa38ad1113e7e08909d13024efc9a3dbb7b84e9e6c6896",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/comparison.csv": {
+    "original_local_evidence_sha256": "7926ad3ce30aef220876c628487ba9d697bce6b6e95222bf5a6d61b1d660f5f8",
+    "source_name": "scheduler_v2_20261024/comparison.csv",
+    "published_sha256": "1091c5cc52bd388b03046831d6d913f899449d6fb786fde4c6d3f1474f326bd2",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/search_comparison.csv": {
+    "original_local_evidence_sha256": "d6a5c0d7cfd3366bdb216508e3a8b5f9e888bc39bb951cb429c3c0d5f3ece119",
+    "source_name": "scheduler_v2_20261024/search_comparison.csv",
+    "published_sha256": "476e00e0e6a17e2baf38d178ce3e614e0917d31c2ab3f11f2e1afe300bd79bae",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/selection.json": {
+    "original_local_evidence_sha256": "d473fe3e35fc4cce1eaa9b3d32eb50d374c54bf20e0ed4772e64f00539f9293d",
+    "source_name": "scheduler_v2_20261024/selection.json",
+    "published_sha256": "d473fe3e35fc4cce1eaa9b3d32eb50d374c54bf20e0ed4772e64f00539f9293d",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/quality_vs_inference.png": {
+    "original_local_evidence_sha256": "f2b8480ca12b2ce11279f92cbd2826c3cb670ed19d5fc2c5832fa10cb34790da",
+    "source_name": "scheduler_v2_20261024/quality_vs_inference.png",
+    "published_sha256": "f2b8480ca12b2ce11279f92cbd2826c3cb670ed19d5fc2c5832fa10cb34790da",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/timelines.png": {
+    "original_local_evidence_sha256": "f9314a12f3f04b2f7843164d86c7312c5a185237956ce819778746805a77c51f",
+    "source_name": "scheduler_v2_20261024/timelines.png",
+    "published_sha256": "f9314a12f3f04b2f7843164d86c7312c5a185237956ce819778746805a77c51f",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/gps_provenance.json": {
+    "original_local_evidence_sha256": "e33ed1b5fa70137ad344c83839eda5fb2dbbbb9e0b840d82bfc34a347bb4cc80",
+    "source_name": "scheduler_v2_20261024/gps_provenance.json",
+    "published_sha256": "e33ed1b5fa70137ad344c83839eda5fb2dbbbb9e0b840d82bfc34a347bb4cc80",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/cached_actual_agreement.json": {
+    "original_local_evidence_sha256": "923bf348aefc47841a5739b938ac3b51185b4bf5178585f3703ea8eeeb45117a",
+    "source_name": "scheduler_v2_20261024/cached_actual_agreement.json",
+    "published_sha256": "923bf348aefc47841a5739b938ac3b51185b4bf5178585f3703ea8eeeb45117a",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/original_v1_preservation.json": {
+    "original_local_evidence_sha256": "fc0bbf40523bf1d7494c43c8ffe13ac665aba4c6cb67b7a7138e1c3428ed968f",
+    "source_name": "scheduler_v2_20261024/original_v1_preservation.json",
+    "published_sha256": "fc0bbf40523bf1d7494c43c8ffe13ac665aba4c6cb67b7a7138e1c3428ed968f",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  },
+  "scheduler_v2/preservation.json": {
+    "original_local_evidence_sha256": "3241f3b93b1241a61c089032189b8e988775c2988088e5c3a92e5af984678688",
+    "source_name": "scheduler_v2_20261024/preservation.json",
+    "published_sha256": "3241f3b93b1241a61c089032189b8e988775c2988088e5c3a92e5af984678688",
+    "note": "Scientific source measurement retained; public report text may annotate portable reproduction paths."
+  }
+}

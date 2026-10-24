@@ -1,0 +1,11 @@
+# Tested research/CPU verification versions. Install torch/vision from the
+# appropriate official CPU or CUDA index first; local +cpu/+cu130 tags satisfy these.
+torch==2.14.1
+torchvision==0.29.1
+numpy==2.5.3
+Pillow==12.3.0
+PyYAML==6.0.3
+matplotlib==3.11.2
+h5py==3.16.0
+pytest==9.1.1
+pytest-cov==7.1.0

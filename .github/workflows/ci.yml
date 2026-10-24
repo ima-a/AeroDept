@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: "3.13"
       - name: Install CPU dependencies
-        run: make install
+        run: make install-cpu
       - name: Run tests
         run: make test
       - name: Run synthetic end-to-end workflow

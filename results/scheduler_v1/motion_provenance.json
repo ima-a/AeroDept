@@ -1,0 +1,176 @@
+{
+  "source": "MidAir simulated navigation: privileged groundtruth velocity plus simulated IMU acceleration/angular velocity. Not measured physical IMU/GPS. No GPS velocity estimate used.",
+  "alignment": "sample=floor(camera ordinal * frequency /25), clamped at last sample; no future index or interpolation; camera25Hz; all 4410 manifest navigation vectors independently checked against selected validation HDF5 groups only. Assumes dataset common time origin and ideal availability; sensor latency not modeled.",
+  "trajectories": [
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "hdf5_sha256": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+      "fields": [
+        {
+          "dataset": "gps/velocity",
+          "frequency_hz": 1.0,
+          "shape": [
+            89,
+            3
+          ],
+          "keys": [
+            "vx",
+            "vy",
+            "vz"
+          ]
+        },
+        {
+          "dataset": "groundtruth/acceleration",
+          "frequency_hz": 100.0,
+          "shape": [
+            8817,
+            3
+          ],
+          "keys": [
+            "ax",
+            "ay",
+            "az"
+          ]
+        },
+        {
+          "dataset": "groundtruth/angular_velocity",
+          "frequency_hz": 100.0,
+          "shape": [
+            8817,
+            3
+          ],
+          "keys": [
+            "wx",
+            "wy",
+            "wz"
+          ]
+        },
+        {
+          "dataset": "groundtruth/velocity",
+          "frequency_hz": 100.0,
+          "shape": [
+            8817,
+            3
+          ],
+          "keys": [
+            "vx",
+            "vy",
+            "vz"
+          ]
+        },
+        {
+          "dataset": "imu/accelerometer",
+          "frequency_hz": 100.0,
+          "shape": [
+            8817,
+            3
+          ],
+          "keys": [
+            "ax",
+            "ay",
+            "az"
+          ]
+        },
+        {
+          "dataset": "imu/gyroscope",
+          "frequency_hz": 100.0,
+          "shape": [
+            8817,
+            3
+          ],
+          "keys": [
+            "wx",
+            "wy",
+            "wz"
+          ]
+        }
+      ],
+      "all_manifest_navigation_matches": true
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "fields": [
+        {
+          "dataset": "gps/velocity",
+          "frequency_hz": 1.0,
+          "shape": [
+            89,
+            3
+          ],
+          "keys": [
+            "vx",
+            "vy",
+            "vz"
+          ]
+        },
+        {
+          "dataset": "groundtruth/acceleration",
+          "frequency_hz": 100.0,
+          "shape": [
+            8820,
+            3
+          ],
+          "keys": [
+            "ax",
+            "ay",
+            "az"
+          ]
+        },
+        {
+          "dataset": "groundtruth/angular_velocity",
+          "frequency_hz": 100.0,
+          "shape": [
+            8820,
+            3
+          ],
+          "keys": [
+            "wx",
+            "wy",
+            "wz"
+          ]
+        },
+        {
+          "dataset": "groundtruth/velocity",
+          "frequency_hz": 100.0,
+          "shape": [
+            8820,
+            3
+          ],
+          "keys": [
+            "vx",
+            "vy",
+            "vz"
+          ]
+        },
+        {
+          "dataset": "imu/accelerometer",
+          "frequency_hz": 100.0,
+          "shape": [
+            8820,
+            3
+          ],
+          "keys": [
+            "ax",
+            "ay",
+            "az"
+          ]
+        },
+        {
+          "dataset": "imu/gyroscope",
+          "frequency_hz": 100.0,
+          "shape": [
+            8820,
+            3
+          ],
+          "keys": [
+            "wx",
+            "wy",
+            "wz"
+          ]
+        }
+      ],
+      "all_manifest_navigation_matches": true
+    }
+  ]
+}

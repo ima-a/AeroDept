@@ -1,0 +1,53 @@
+# Candidate full-training settings. Review depth range and all thresholds first.
+seed: 42
+data:
+  image_size: [192, 320]  # H,W; both modalities resized over the full field of view
+  min_depth: 0.1         # PROVISIONAL valid range in metres
+  max_depth: 1000.0      # PROVISIONAL; not an output clamp
+  depth_encoding: midair_float16_bits
+  depth_scale: 1.0
+  workers: 2
+model:
+  name: mobilenet_v3_small_depth
+  pretrained: true       # torchvision IMAGENET1K_V1; encoder fine-tuned throughout
+train:
+  epochs: 50             # Candidate budget; revise after measured GPU throughput
+  batch_size: 16         # Reduce if GPU memory requires it
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  amp: true
+  lr_schedule:           # PROVISIONAL optimization schedule, distinct from replay
+    name: cosine
+    t_max: 50
+    eta_min: 0.000003
+loss:
+  l1_weight: 1.0
+  log_weight: 0.2
+  gradient_weight: 0.1
+  near_weight: 0.0       # No pilot-tuned near-field weighting in the candidate run
+  near_threshold: 10.0  # PROVISIONAL reporting threshold
+scheduler:               # PROVISIONAL placeholders; not tuned or used in training
+  status: provisional_requires_validation_review
+  max_skip: 2
+  decision_threshold: 0.9
+  motion_weight: 0.25
+  visual_weight: 0.30
+  risk_weight: 0.30
+  age_weight: 0.15
+  motion_scale: 5.0
+  visual_scale: 0.15
+  near_threshold: 10.0
+  critical_risk: 0.9
+  extreme_motion: 0.9
+  extreme_visual: 0.9
+  visual_size: [36, 64]
+replay:
+  status: provisional_requires_validation_review
+  policies: [every]
+  critical_near_threshold: 8.0
+  critical_change_threshold: 2.0
+review:
+  depth_range_approved: false
+  training_budget_approved: false
+  replay_thresholds_approved: false

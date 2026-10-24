@@ -26,6 +26,13 @@ def _json_value(value: object) -> object:
     return array.item() if array.ndim == 0 else array.tolist()
 
 
+def _camera_path_matches(expected: str, actual: str) -> bool:
+    expected_parts = Path(expected).parts
+    actual_parts = Path(actual).parts
+    length = min(len(expected_parts), len(actual_parts))
+    return length >= 3 and expected_parts[-length:] == actual_parts[-length:]
+
+
 def _validate_hdf5_sync(root: Path, records: list) -> dict:
     """Cross-check discovered frames and resampled navigation against MidAir HDF5."""
     try:
@@ -48,6 +55,9 @@ def _validate_hdf5_sync(root: Path, records: list) -> dict:
     for h5_path in sorted((*root.rglob("*.hdf5"), *root.rglob("*.h5"))):
         with h5py.File(h5_path, "r") as handle:
             for trajectory, trajectory_records in by_trajectory.items():
+                parent = h5_path.parent.relative_to(root).as_posix()
+                if parent != "." and not trajectory.startswith(parent + "/"):
+                    continue
                 group_name = trajectory.split("/")[-1]
                 if group_name not in handle:
                     continue
@@ -64,8 +74,8 @@ def _validate_hdf5_sync(root: Path, records: list) -> dict:
                     continue
                 rgb_paths = [_decode_hdf5_path(value) for value in group["camera_data/color_left"]]
                 depth_paths = [_decode_hdf5_path(value) for value in group["camera_data/depth"]]
-                rgb_matches = sum(Path(expected).name == Path(record.rgb_path).name for expected, record in zip(rgb_paths, trajectory_records))
-                depth_matches = sum(Path(expected).name == Path(record.depth_path).name for expected, record in zip(depth_paths, trajectory_records))
+                rgb_matches = sum(_camera_path_matches(expected, record.rgb_path) for expected, record in zip(rgb_paths, trajectory_records))
+                depth_matches = sum(_camera_path_matches(expected, record.depth_path) for expected, record in zip(depth_paths, trajectory_records))
                 path_mismatches = (
                     abs(len(rgb_paths) - len(trajectory_records))
                     + abs(len(depth_paths) - len(trajectory_records))
@@ -81,7 +91,10 @@ def _validate_hdf5_sync(root: Path, records: list) -> dict:
                     for dataset_name, keys in field_sources.items():
                         dataset = group[dataset_name]
                         frequency = float(dataset.attrs["sampling_frequency"])
-                        sensor_index = min(int(frame_ordinal * frequency / 25.0), dataset.shape[0] - 1)
+                        sensor_index = int(frame_ordinal * frequency / 25.0)
+                        if sensor_index >= dataset.shape[0]:
+                            validation_errors.append({"trajectory": trajectory, "dataset": dataset_name, "reason": "navigation shorter than camera sequence"})
+                            continue
                         expected = np.asarray(dataset[sensor_index]).reshape(-1)
                         for key, expected_value in zip(keys, expected[:3]):
                             error = abs(float(record.navigation[key]) - float(expected_value))
@@ -271,6 +284,13 @@ def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(prog="aerodepth")
     sub = parser.add_subparsers(dest="command", required=True)
 
+    inference = sub.add_parser("infer", help="offline inference with published trained weights; no dataset required")
+    inference.add_argument("--weights", type=Path, default=Path("models/mobilenet_v3_small_epoch4.state_dict.pt"))
+    inference.add_argument("--metadata", type=Path, default=Path("models/mobilenet_v3_small_epoch4.json"))
+    inference.add_argument("--image", type=Path, required=True)
+    inference.add_argument("--output", type=Path, required=True)
+    inference.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
+
     fixture = sub.add_parser("make-fixture", help="create a clearly labelled synthetic test fixture")
     fixture.add_argument("--output", type=Path, required=True)
     fixture.add_argument("--trajectories", type=int, default=6)
@@ -318,7 +338,10 @@ def main(argv: list[str] | None = None) -> None:
     report.add_argument("--output", type=Path, required=True)
 
     args = parser.parse_args(argv)
-    if args.command == "make-fixture":
+    if args.command == "infer":
+        from .inference import infer_image
+        print(json.dumps(infer_image(args.weights, args.metadata, args.image, args.output, args.device), indent=2))
+    elif args.command == "make-fixture":
         make_fixture(args.output, args.trajectories, args.frames)
         print(json.dumps({"fixture": str(args.output), "synthetic": True}))
     elif args.command == "inspect":
@@ -336,7 +359,7 @@ def main(argv: list[str] | None = None) -> None:
         config = _config_from_args(args)
         summary = train_model(config, args.dataset_root, args.manifest, args.output, args.resume)
         plot_history(args.output / "history.csv", args.output / "loss_curve.png")
-        model = build_model(config["model"] | {"min_depth": config["data"].get("min_depth", 0.1)})
+        model = build_model(config["model"] | {"min_depth": config["data"].get("min_depth", 0.1), "pretrained": False})
         load_checkpoint(args.output / "best.pt", model)
         records, _ = load_manifest(args.manifest, "val")
         dataset = MidAirDataset(args.dataset_root, records, config["data"])
@@ -350,7 +373,7 @@ def main(argv: list[str] | None = None) -> None:
         records, _ = load_manifest(args.manifest, args.split)
         dataset = MidAirDataset(args.dataset_root, records, config["data"])
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        model = build_model(config["model"] | {"min_depth": config["data"].get("min_depth", 0.1)}).to(device)
+        model = build_model(config["model"] | {"min_depth": config["data"].get("min_depth", 0.1), "pretrained": False}).to(device)
         load_checkpoint(args.checkpoint, model, map_location=device)
         args.output.mkdir(parents=True, exist_ok=True)
         policies = args.policies or config["replay"].get("policies", ["every", "fixed2", "fixed5", "adaptive"])

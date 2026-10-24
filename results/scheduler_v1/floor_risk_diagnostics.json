@@ -1,0 +1,82 @@
+{
+  "Kite_training/foggy/trajectory_2003": {
+    "frames": 2205,
+    "floor_pixel_count_all": 20148494,
+    "total_predicted_pixels": 135475200,
+    "floor_fraction_all": 0.1487245928622833,
+    "floor_fraction_ROI": 8.990575388905987e-06,
+    "frames_with_any_floor": 2205,
+    "fresh_risk_quantiles_0_10_50_90_95_99_100": [
+      0.0,
+      0.0,
+      0.0,
+      0.009486328437924397,
+      0.06370860487222589,
+      0.19057723462581636,
+      0.24768762290477753
+    ],
+    "fresh_risk_ge_0.8": 0,
+    "fresh_risk_ge_0.9": 0,
+    "fresh_risk_ge_0.98": 0,
+    "frozen_motion_saturated_frames": 2205,
+    "existing_previous_risk_ge_threshold": 0,
+    "existing_critical_risk_reason": 0,
+    "selected_previous_risk_ge_threshold": 0,
+    "selected_critical_risk_reason": 0,
+    "exact_pixel_counts_offline": {
+      "floor_all": 20148494,
+      "floor_valid_GT": 5104001,
+      "floor_invalid_GT": 15044493,
+      "valid_GT": 114412073,
+      "ROI_floor": 406,
+      "ROI_pixels": 45158400
+    },
+    "fresh_risk_ge_0.8_frequency": 0.0,
+    "fresh_risk_ge_0.9_frequency": 0.0,
+    "fresh_risk_ge_0.98_frequency": 0.0,
+    "existing_previous_risk_ge_threshold_frequency": 0.0,
+    "selected_previous_risk_ge_threshold_frequency": 0.0,
+    "existing_critical_risk_reason_frequency": 0.0,
+    "selected_critical_risk_reason_frequency": 0.0
+  },
+  "PLE_training/spring/trajectory_5000": {
+    "frames": 2205,
+    "floor_pixel_count_all": 13694321,
+    "total_predicted_pixels": 135475200,
+    "floor_fraction_all": 0.10108360042516544,
+    "floor_fraction_ROI": 0.0011529194980085897,
+    "frames_with_any_floor": 2165,
+    "fresh_risk_quantiles_0_10_50_90_95_99_100": [
+      0.0,
+      0.011150391027331353,
+      0.3494706451892853,
+      0.6180626869201661,
+      0.6804482102394103,
+      0.756762330532074,
+      0.8004167079925537
+    ],
+    "fresh_risk_ge_0.8": 1,
+    "fresh_risk_ge_0.9": 0,
+    "fresh_risk_ge_0.98": 0,
+    "frozen_motion_saturated_frames": 2205,
+    "existing_previous_risk_ge_threshold": 0,
+    "existing_critical_risk_reason": 0,
+    "selected_previous_risk_ge_threshold": 0,
+    "selected_critical_risk_reason": 0,
+    "exact_pixel_counts_offline": {
+      "floor_all": 13694321,
+      "floor_valid_GT": 4331,
+      "floor_invalid_GT": 13689990,
+      "valid_GT": 98491741,
+      "ROI_floor": 52064,
+      "ROI_pixels": 45158400
+    },
+    "fresh_risk_ge_0.8_frequency": 0.00045351473922902497,
+    "fresh_risk_ge_0.9_frequency": 0.0,
+    "fresh_risk_ge_0.98_frequency": 0.0,
+    "existing_previous_risk_ge_threshold_frequency": 0.0,
+    "selected_previous_risk_ge_threshold_frequency": 0.0,
+    "existing_critical_risk_reason_frequency": 0.0,
+    "selected_critical_risk_reason_frequency": 0.0
+  }
+}

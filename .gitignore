@@ -16,3 +16,22 @@ artifacts/
 *.egg-info/
 .idea/
 .vscode/
+
+# Private tooling, credentials and disposable build products
+.ai
+.ai/
+**/.ai*
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+*.pem
+*.key
+*.log
+*.jsonl
+build/
+dist/
+.venv*/
+# Explicitly publish only the compact inference export, never full checkpoints.
+!models/mobilenet_v3_small_epoch4.state_dict.pt

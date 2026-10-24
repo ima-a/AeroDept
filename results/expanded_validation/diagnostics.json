@@ -1,0 +1,53 @@
+{
+  "counts_at_resized_resolution": {
+    "pixels": 270950400,
+    "valid": 212903814,
+    "invalid": 58046586,
+    "near_floor_valid": 5108332,
+    "near_floor_all": 33842814,
+    "above_max_all": 36341,
+    "above_max_valid": 34247,
+    "near_upper_limit_valid": 891,
+    "constant_valid_frames": 0,
+    "frames_without_near_pixels": 2243
+  },
+  "valid_depth_metres": [
+    0.1,
+    1000
+  ],
+  "near_gt_threshold_metres": 10,
+  "nonfinite_predictions": 0,
+  "spatial_and_mask_contract_checked_on_every_validation_batch": true,
+  "normalization_checked_against_encoder_input": true,
+  "minimum_per_frame_prediction_std_valid": 10.102656364440918,
+  "maximum_predicted_depth_all_pixels": 1091.0330810546875,
+  "minimum_predicted_depth_all_pixels": 0.10000000149011612,
+  "prediction_percentiles_stratified_sample": [
+    0.10000000149011612,
+    0.10000000149011612,
+    5.205435872077942,
+    22.960859298706055,
+    444.21329956054547,
+    799.7468902587882,
+    1087.22607421875
+  ],
+  "gt_percentiles_same_sample": [
+    1.7265625,
+    3.98201171875,
+    6.23046875,
+    29.4375,
+    419.25,
+    802.5,
+    1000.0
+  ],
+  "sampling_note": "up to 128 evenly spaced valid pixels per frame for these percentiles; all masks/counts/metrics above use every valid resized pixel",
+  "per_frame_absrel_quantiles": [
+    0.10649870449463701,
+    0.20084060292503697,
+    0.2591413791857017,
+    0.36912406615160975,
+    0.5159824132009375,
+    0.5418493084325904,
+    0.6834011533719493
+  ]
+}

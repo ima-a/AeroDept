@@ -1,0 +1,19 @@
+{
+  "split": "val",
+  "frames": 4410,
+  "precision": "FP32 eval, autocast off, batch 1, unchanged preprocessing, near GT<10m, valid-pixel pooled metrics",
+  "audit_tolerances_absolute": {
+    "absrel": 1e-05,
+    "rmse": 0.001,
+    "delta1": 1e-05,
+    "delta2": 1e-05,
+    "delta3": 1e-05,
+    "near_absrel": 1e-05,
+    "near_rmse": 0.001,
+    "valid_pixels": 0,
+    "near_valid_pixels": 0
+  },
+  "timing": "10 warm-up inferences excluded before every actual policy; CUDA synchronize before/after each inference; latency includes H2D, model, D2H. CPU scheduler timer includes previous-prediction risk and RGB features. Wall time includes loading, scoring and instrumentation and is not inference throughput. Sequential offline replay has no 25Hz wall-clock guarantee. No energy measurement. Cached search is not a runtime benchmark.",
+  "critical_event": "Full-frame valid GT p10<8m and (previous p10>=8m or previous-current p10>=2m), reset per trajectory. Offline scoring only. First frame can be an event. Missed-update rate means no fresh inference on event frame, not missed hazard detection. Unresolved terminal updates right-censored; no events => undefined rates.",
+  "causality": "Decisions accept current raw RGB, current manifest navigation, previous inferred prediction and state/age only. Risk uses predicted positive finite ROI; never GT or GT validity. Visual change uses preceding RGB even when skipped. No future motion. Offline scoring is separate."
+}

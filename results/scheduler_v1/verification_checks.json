@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "full_frame_log_rows_checked": 79380,
+  "configurations_match_predeclared_plan": true,
+  "selection_matches_predeclared_rank": true,
+  "no_source_from_future_or_other_trajectory": true,
+  "all_trajectory_first_frames_are_fresh": true,
+  "actual_vs_feature_only_replay": {
+    "adaptive_existing": "All 4410 actual decisions, sources, ages, scores, motion, visual and risk agree with causal feature-only replay.",
+    "adaptive_selected": "All 4410 actual decisions, sources, ages, scores, motion, visual and risk agree with causal feature-only replay."
+  },
+  "test_images_or_depth_loaded": false,
+  "training_or_Git_operations": false
+}

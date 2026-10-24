@@ -24,13 +24,19 @@ def visualize_sample(dataset: MidAirDataset, output: str | Path, index: int = 0,
     axes[0].imshow(rgb)
     axes[0].set_title("RGB")
     depth_plot = np.where(valid, depth, np.nan)
-    im = axes[1].imshow(depth_plot, cmap="magma")
+    limits = {}
+    if prediction is not None:
+        pred = prediction.detach().cpu().squeeze().numpy()
+        finite_pred = pred[np.isfinite(pred)]
+        maximum = max(float(depth[valid].max()) if valid.any() else dataset.min_depth,
+                      float(finite_pred.max()) if finite_pred.size else dataset.min_depth)
+        limits = {"vmin": 0.0, "vmax": maximum}
+    im = axes[1].imshow(depth_plot, cmap="magma", **limits)
     axes[1].set_title("Ground-truth metric depth")
     fig.colorbar(im, ax=axes[1], fraction=0.046)
     if prediction is not None:
-        pred = prediction.detach().cpu().squeeze().numpy()
-        axes[2].imshow(pred, cmap="magma")
-        axes[2].set_title("Predicted depth")
+        axes[2].imshow(pred, cmap="magma", **limits)
+        axes[2].set_title("Predicted depth (same scale as GT)")
         axes[3].imshow(np.where(valid, np.abs(pred - depth), np.nan), cmap="inferno")
         axes[3].set_title("Absolute error")
     for axis in axes:

@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "absolute_differences": {
+    "overall": {
+      "absrel": 4.320506730159934e-10,
+      "rmse": 2.4392321051891486e-07,
+      "delta1": 1.4090870192884353e-08,
+      "delta2": 3.287869698720414e-08,
+      "delta3": 1.8787826849830935e-08,
+      "near_absrel": 2.233979584653767e-09,
+      "near_rmse": 1.5897306981926818e-07,
+      "valid_pixels": 0,
+      "near_valid_pixels": 0
+    },
+    "Kite_training/foggy/trajectory_2003": {
+      "absrel": 6.92332524643291e-10,
+      "rmse": 3.3625437367845734e-07,
+      "delta1": 8.740336343571187e-09,
+      "delta2": 3.496134537428475e-08,
+      "delta3": 3.496134537428475e-08,
+      "near_absrel": 2.0167927439196376e-08,
+      "near_rmse": 2.075052476513406e-07,
+      "valid_pixels": 0,
+      "near_valid_pixels": 0
+    },
+    "PLE_training/spring/trajectory_5000": {
+      "absrel": 1.296975304931891e-10,
+      "rmse": 4.518322782587347e-08,
+      "delta1": 4.061254232912148e-08,
+      "delta2": 3.0459406663574384e-08,
+      "delta3": 0.0,
+      "near_absrel": 1.7227815007903047e-09,
+      "near_rmse": 1.5737046288322176e-07,
+      "valid_pixels": 0,
+      "near_valid_pixels": 0
+    }
+  },
+  "tolerances": {
+    "absrel": 1e-05,
+    "rmse": 0.001,
+    "delta1": 1e-05,
+    "delta2": 1e-05,
+    "delta3": 1e-05,
+    "near_absrel": 1e-05,
+    "near_rmse": 0.001,
+    "valid_pixels": 0,
+    "near_valid_pixels": 0
+  },
+  "audit_batch_size": 4,
+  "replay_batch_size": 1
+}
