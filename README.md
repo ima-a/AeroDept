@@ -7,9 +7,8 @@ A reproducible research checkpoint for monocular drone-camera range prediction a
 Run from a fresh clone with Python 3.13. CPU installation:
 
 ```bash
-git clone https://github.com/ima-a/AeroDept.git
+git clone --branch research/mobilenet-validation-checkpoint https://github.com/ima-a/AeroDept.git
 cd AeroDept
-# Check out the published research feature branch (see docs/publication.md).
 python3.13 -m venv .venv
 . .venv/bin/activate
 python -m pip install --upgrade pip
