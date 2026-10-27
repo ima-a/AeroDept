@@ -1,0 +1,14 @@
+{
+  "observed_utc": "2026-10-27T15:02:26.079648+00:00",
+  "source_bundle": "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T114024_recovery",
+  "historical_source_commit": "8f32f71ad9ad77b0a4e123ba9dd4e5fcb88deb84",
+  "workflow_source_commit": "21a73a2bceb72d73da1e36fcbc163d9cf052367d",
+  "freeze_sha256": "d49ab655ff5b1a94e7809e24bad60eac1cdba26bd7c9ce44853e924918e89d90",
+  "manifest_uncompressed_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "service": [
+    "ActiveState=active",
+    "SubState=running",
+    "MainPID=170160"
+  ],
+  "scope": "Read existing TRAIN/VAL metrics and metadata only; no images, model calls, evaluation, training or checkpoints loaded."
+}

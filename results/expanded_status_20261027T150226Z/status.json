@@ -1,0 +1,55 @@
+{
+  "supervisor_pid": 170165,
+  "stage": "B_teacher",
+  "status": "running",
+  "manual_resume": false,
+  "freeze_sha256": "d49ab655ff5b1a94e7809e24bad60eac1cdba26bd7c9ce44853e924918e89d90",
+  "systemd_unit": "aerodepth-expanded-20261026t114024-recovery",
+  "child_pid": 192379,
+  "updated_utc": "2026-10-27T15:01:47.214372+00:00",
+  "command": [
+    "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+    "-u",
+    "-B",
+    "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T114024_recovery/frozen/scripts/expanded_training.py",
+    "train",
+    "--config",
+    "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T114024_recovery/frozen/configs/expanded_teacher.yaml",
+    "--dataset-root",
+    "/run/media/Ima/Low storage/AeroDepth/MidAir",
+    "--manifest",
+    "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T114024_recovery/frozen/results/expanded_preparation_20261026/manifest_train_val.json.gz",
+    "--reservations",
+    "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T114024_recovery/frozen/results/expanded_preparation_20261026/reservations.json",
+    "--device",
+    "cuda",
+    "--output",
+    "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T114024_recovery/runs/B_teacher",
+    "--confirm-full-training"
+  ],
+  "log": "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T114024_recovery/logs/B_teacher.log",
+  "progress": {
+    "epoch": 14,
+    "batches": 5000,
+    "global_step": 291637,
+    "loss": 8.1978120803833,
+    "amp_scale": 2048.0,
+    "overflow_retries_total": 118
+  },
+  "finite_checks_completed_through_reported_batch": true,
+  "child_exit_code": 0,
+  "checkpoints": {
+    "last.pt": {
+      "sha256": "2a7fdc23f7ec4b0403f684574d017e06964684ddf7608189f93a405110bfd6b4",
+      "epoch_completed": 10,
+      "global_step": 220490,
+      "validation_absrel": 0.26942766814195807
+    },
+    "best.pt": {
+      "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+      "epoch_completed": 9,
+      "global_step": 198441,
+      "validation_absrel": 0.265831084981294
+    }
+  }
+}

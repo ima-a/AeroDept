@@ -2,14 +2,20 @@
 
 A reproducible research checkpoint for monocular drone-camera range prediction and causal inference scheduling. The repository includes the actual trained **epoch-4 MobileNetV3-Small depth weights**, a CPU inference path, frozen relative split manifest, validation results, original negative scheduler study, and bounded scheduler-v2 results. A [frozen final-test study](results/final_test/REPORT.md) now reports all five policies on 4,436 held-out frames, after repeated validation timing and split-isolation checks. This is simulation research, not a flight-safety system.
 
-The final result is mixed: against the fixed validation-budget rule, V2 improves pooled near RMSE by 1.89%, but uses 14.86% more model calls and 26.53% more CPU compute; maximum event-update delay rises from 1 to 4 frames. PLE near RMSE regresses. Model depth errors remain substantial. [Protocol, guarded runner and reproduction](docs/final_study.md). Published training/validation/V1/V2/pilot evidence remains unchanged; no retraining or additional policy search was performed.
+The original final result is mixed: against the fixed validation-budget rule, V2 improves pooled near RMSE by 1.89%, but uses 14.86% more model calls and 26.53% more CPU compute; maximum event-update delay rises from 1 to 4 frames. PLE near RMSE regresses. Model depth errors remain substantial. [Protocol, guarded runner and reproduction](docs/final_study.md). Published training/validation/V1/V2/pilot evidence remains unchanged; that final study performed no retraining or additional policy search.
+
+## Expanded teacher/student experiment — ongoing
+
+A separate expanded-data experiment is authorized and running: supervised MobileNetV3-Small (10 epochs) → ResNet-50 range teacher (20 epochs) → frozen validation gate → distilled MobileNet (10 epochs only if the gate passes). Both student arms independently start from the identical published epoch-4 weights and BatchNorm buffers. The supervised arm has finished; teacher training is ongoing at the [dated progress snapshot](results/expanded_status_20261027T150226Z/REPORT.md). KD and the teacher acceptance gate are pending at that observation. This is not a completed distillation result or a new test evaluation.
+
+Start with the [expanded reproduction guide](docs/expanded_reproduction.md): exact dataset layout, approved configurations, numerical-recovery policy, guarded commands, checkpoint/resume requirements and historical source versions. Code, manifests, protocols and compact evidence are included. MidAir inputs and private full-run checkpoints must be acquired or generated separately.
 
 ## Install
 
 Run from a fresh clone with Python 3.13. CPU installation:
 
 ```bash
-git clone --branch research/mobilenet-validation-checkpoint https://github.com/ima-a/AeroDept.git
+git clone --branch main https://github.com/ima-a/AeroDept.git
 cd AeroDept
 python3.13 -m venv .venv
 . .venv/bin/activate
@@ -91,7 +97,7 @@ scripts/            export, reproduction and synthetic workflow entry points
 tests/              automated checks
 notebooks/          optional maintained Kaggle runner
 models/             trained inference weights, frozen config and metadata
-results/            compact training/validation/v1/v2 evidence and split manifest
+results/            historical studies, expanded manifests/protocols and dated evidence
 docs/               installation, dataset, methodology and publication record
 evidence/           distinct historical pilot
 # datasets/, runs/, artifacts/, environments and private tooling stay local/ignored

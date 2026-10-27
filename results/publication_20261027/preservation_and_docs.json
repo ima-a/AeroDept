@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "preserved_baseline_files": 239,
+  "documentation_changes": [
+    ".gitattributes",
+    "NOTICE.md",
+    "README.md",
+    "docs/expanded_numerical_recovery.md",
+    "docs/expanded_training.md",
+    "docs/final_study.md",
+    "docs/publication.md"
+  ],
+  "core_source_files_matching_active_freeze": 7,
+  "approved_configs_matching_active_freeze": 3,
+  "published_initialization_sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+  "local_markdown_targets_checked": 51,
+  "bash_blocks_syntax_checked_not_executed": 13,
+  "focused_tests": {
+    "passed": 30,
+    "scope": "CPU only; dataset-free tests/test_expanded.py and tests/test_final_study.py from committed clean snapshot; reused existing environment"
+  },
+  "historical_saved_verifier": {
+    "passed": true,
+    "source_commit": "8f32f71",
+    "study_dir": "results/final_test",
+    "image_or_model_calls": 0
+  },
+  "limitations": [
+    "No fresh dependency installation or GPU workload was launched.",
+    "Independent acquisition/extraction and private resumable training states are not distributed.",
+    "Expanded teacher/gate/KD experiment remains incomplete at dated snapshot."
+  ]
+}

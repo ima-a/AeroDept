@@ -1,6 +1,6 @@
 # Expanded workflow numerical recovery — 26 October 2026
 
-Status: implemented and verified with bounded existing TRAIN inputs. **Full training remains stopped.** This amendment changes numerical handling and checkpoint identity; it does not change epochs, batch size, learning rates, schedules, loss coefficients, input groups, preprocessing, metrics or validation selection. The failed frozen bundle and its original stop policy remain unchanged.
+Current status, 27 October: this correction was frozen and used for the separately authorized 26 October relaunch. Supervised MobileNet has completed; teacher training is ongoing at the [dated snapshot](../results/expanded_status_20261027T150226Z/REPORT.md). See [current reproduction](expanded_reproduction.md). The diagnosis and verification below describe the earlier bounded task; its full training remained stopped until that later authorization. This amendment changes numerical handling and checkpoint identity; it does not change epochs, batch size, learning rates, schedules, loss coefficients, input groups, preprocessing, metrics or validation selection. The failed frozen bundle and its original stop policy remain unchanged.
 
 ## Confirmed failure
 

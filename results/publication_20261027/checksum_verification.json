@@ -1,0 +1,37 @@
+[
+  {
+    "index": "results/expanded_launch_20261026T104420/SHA256SUMS",
+    "files": 12,
+    "passed": true
+  },
+  {
+    "index": "results/expanded_numerics_20261026T110550/SHA256SUMS",
+    "files": 10,
+    "passed": true
+  },
+  {
+    "index": "results/expanded_preparation_20261026/SHA256SUMS",
+    "files": 15,
+    "passed": true
+  },
+  {
+    "index": "results/expanded_relaunch_20261026T114024/SHA256SUMS",
+    "files": 10,
+    "passed": true
+  },
+  {
+    "index": "results/expanded_status_20261027T150226Z/SHA256SUMS",
+    "files": 6,
+    "passed": true
+  },
+  {
+    "index": "results/expanded_workflow_20261026/SHA256SUMS",
+    "files": 9,
+    "passed": true
+  },
+  {
+    "index": "results/final_test/SHA256SUMS",
+    "files": 49,
+    "passed": true
+  }
+]

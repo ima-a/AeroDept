@@ -1,8 +1,8 @@
 # Expanded teacher/student workflow — 26 October 2026
 
-Numerical amendment, 26 October: the first frozen full-run attempt stopped during epoch 1. A bounded replay confirmed AMP loss-scale overflow. [Same-batch numerical recovery](expanded_numerical_recovery.md) now supersedes the immediate-abort gradient policy described in this proposal. The original proposal/configs and failed frozen bundle are preserved. Full training remains stopped; a future launch needs a fresh freeze of the amended code and fresh outputs.
+Current status, 27 October: full training was authorized and relaunched on 26 October with a new frozen bundle and the verified [same-batch numerical recovery](expanded_numerical_recovery.md). Supervised MobileNet completed 10 epochs; ResNet-50 teacher training is ongoing at the [dated snapshot](../results/expanded_status_20261027T150226Z/REPORT.md). The gate and KD are pending at that observation. Use the [current reproduction guide](expanded_reproduction.md) for portable paths, approved configurations and commands.
 
-Status: implemented and checked with bounded existing TRAIN inputs. **All full-run settings below are proposals pending review. No full training has started.** Run order is supervised student A → teacher B → recorded validation quality gate → KD student C. A smoke teacher is software-check material and cannot authorize full KD. The original training, validation, scheduler and completed final-test study remain separate.
+The first frozen full-run attempt failed during epoch 1 before saving a checkpoint. Its history remains unchanged. The original prelaunch wording of this document and numerical amendment is preserved at commit `21a73a2`; the recovery relaunch protocol and hashes are in [the launch receipt](../results/expanded_relaunch_20261026T114024/protocol.json). The approved budgets, rates, schedules, batch sizes, losses and gate were retained. Run order is supervised student A → teacher B → recorded validation quality gate → KD student C. A smoke teacher cannot authorize full KD. The original training, validation, scheduler and completed final-test study remain separate.
 
 ## Inputs and protection
 
@@ -33,7 +33,7 @@ Let V be the valid TRAIN GT pixels and S/T be student/teacher range on the **sam
 
 Near-loss weight is zero. A uses lambda_KD=0; C uses a fixed proposed 0.2. No feature KD, temperature, output cache or coefficient search. Supervised and KD losses are reduced in FP32. Teacher inference is online FP32, eval/no_grad, with parameters outside the optimizer and no BatchNorm updates. Nonfinite/nonpositive predictions anywhere are fatal; they are never removed from the mask to improve loss. Empty masks produce a differentiable zero. Parameter/BatchNorm/gradient freezing is checked against a teacher state digest at checkpoints.
 
-## Proposed fixed protocol
+## Approved fixed protocol
 
 | Setting | A supervised student | B teacher | C KD student |
 |---|---|---|---|
@@ -43,7 +43,7 @@ Near-loss weight is zero. A uses lambda_KD=0; C uses a fixed proposed 0.2. No fe
 | Weight decay / clip norm | 1e-4 / 1 | 1e-4 / 1 | 1e-4 / 1 |
 | Physical/effective batch | 2 / 2 | 2 / 2 | 2 / 2 |
 | Accumulation | None | None | None |
-| Proposed epochs | 10 | 20 | 10 |
+| Epochs | 10 | 20 | 10 |
 | Updates/epoch | 22,049 | 22,049 | 22,049 |
 | Total updates | 220,490 | 440,980 | 220,490 |
 | Cosine horizon / minimum LR | 10 / 1e-6 | 20 / 1e-6 | 10 / 1e-6 |
@@ -151,6 +151,6 @@ Bounded verification can be repeated with `smoke` or `benchmark` instead of `tra
 
 Original runners, configs, published weights, original best/last checkpoints, manifests and all historical study evidence are unchanged. New code extends only model registration/contracts and adds a separate loss/runner. Original MobileNet state keys and preprocessing remain compatible. The earlier plan's student initialization is corrected with its old text retained in local provenance.
 
-The historical final-test verifier intentionally hashes historical source files. It will reject the evolved current `model.py`/`losses.py`; its historical hashes were not rewritten. A pre-change exact source snapshot lives under `artifacts/expanded_workflow_20261026T095357/historical_source`, and saved-result verification passed from that snapshot with explicit `results/final_test` inputs, without image reads or model calls. Public historical reproduction should use its matching checkout/source snapshot. New full checkpoints use their own source identities.
+The historical final-test verifier intentionally hashes historical source files. It will reject the evolved current `model.py`/`losses.py`; its historical hashes were not rewritten. Public commit `8f32f71` contains all matching historical source and byte-identical final-study evidence. Use the separate-checkout saved-result instructions in [final study](final_study.md). A private snapshot also remains under `artifacts/expanded_workflow_20261026T095357/historical_source`. New full checkpoints use their own source identities.
 
-Before full training: review/freeze these rates, budgets, cosine horizons, no-early-stopping rule, batch/BatchNorm policy, KD coefficient and conservative gate; accept the multi-day rough laptop estimate and operational power/storage plan. Teacher quality remains unknown until B's permitted validation. New reserved test inputs are still unacquired; acquire them separately without previews before a later frozen final-evaluation protocol, never during this workflow's discovery. No accuracy or test-generalization claim is authorized by these software checks.
+The launch freeze and operational checks are complete for the current laptop run; see the recovery relaunch receipt and dated snapshot. The commands above retain their original prelaunch example paths and proposal configurations; independent reproduction should use the approved configurations and portable commands in [the current guide](expanded_reproduction.md). Teacher acceptance is decided only after B finishes. New reserved test inputs remain unacquired at the snapshot and are unnecessary for this TRAIN/VAL workflow. A new test evaluation requires a separate frozen protocol; it is not authorized by these software checks or the current training run.

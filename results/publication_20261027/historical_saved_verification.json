@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "protocol_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+  "actual_measured_calls": 12849,
+  "excluded_warmup_calls": 50,
+  "policies": {
+    "every": {
+      "frames": 4436,
+      "calls": 4436,
+      "valid_pixels": 187182008,
+      "near_valid_pixels": 48016063,
+      "passed": true
+    },
+    "fixed2": {
+      "frames": 4436,
+      "calls": 2218,
+      "valid_pixels": 187182008,
+      "near_valid_pixels": 48016063,
+      "passed": true
+    },
+    "fixed5": {
+      "frames": 4436,
+      "calls": 888,
+      "valid_pixels": 187182008,
+      "near_valid_pixels": 48016063,
+      "passed": true
+    },
+    "v2_selected": {
+      "frames": 4436,
+      "calls": 2837,
+      "valid_pixels": 187182008,
+      "near_valid_pixels": 48016063,
+      "passed": true
+    },
+    "fixed_validation_budget": {
+      "frames": 4436,
+      "calls": 2470,
+      "valid_pixels": 187182008,
+      "near_valid_pixels": 48016063,
+      "passed": true
+    }
+  },
+  "checks": "Model/source identity; frame coverage; independent fixed cadence; call/source/age accounting; GT event definition and within-trajectory delays/censoring; component timings; equal pixel counts; pooled metrics. No image/depth reads or model calls."
+}

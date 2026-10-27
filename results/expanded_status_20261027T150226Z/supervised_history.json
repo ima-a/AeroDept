@@ -1,0 +1,482 @@
+[
+  {
+    "epoch": 1,
+    "global_step": 22049,
+    "train_mean_loss": 14.694094708871017,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 12,
+    "seconds": 4941.326140666992,
+    "validation": {
+      "overall": {
+        "absrel": 0.2935678417966583,
+        "rmse": 122.65005349582414,
+        "delta1": 0.5768211132187608,
+        "delta2": 0.8418361072667303,
+        "delta3": 0.9116229782525174,
+        "near_absrel": 0.2521784246114815,
+        "near_rmse": 3.9868943222099738,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.30977849818927394,
+          "rmse": 159.0183684085825,
+          "delta1": 0.5574248095303719,
+          "delta2": 0.8279220935014436,
+          "delta3": 0.88595197466617,
+          "near_absrel": 0.38807864030204386,
+          "near_rmse": 3.720119359711348,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.2747368740044471,
+          "rmse": 56.06610175341698,
+          "delta1": 0.5993526604428691,
+          "delta2": 0.8579992001562852,
+          "delta3": 0.9414434759560195,
+          "near_absrel": 0.24830465882571684,
+          "near_rmse": 3.994237430456534,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 182.83624610799598,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 2,
+    "global_step": 44098,
+    "train_mean_loss": 13.12688635398949,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 8,
+    "seconds": 3151.781794747003,
+    "validation": {
+      "overall": {
+        "absrel": 0.28993964959441887,
+        "rmse": 122.53310243538746,
+        "delta1": 0.5531059251009942,
+        "delta2": 0.8240077418246721,
+        "delta3": 0.9136084757974322,
+        "near_absrel": 0.21413200306153532,
+        "near_rmse": 3.829138723679234,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.32155681001068226,
+          "rmse": 159.22394162886053,
+          "delta1": 0.5348602153201087,
+          "delta2": 0.7975471085118788,
+          "delta3": 0.8876658497394764,
+          "near_absrel": 0.2915761829929575,
+          "near_rmse": 2.9117185659954674,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.253211850604672,
+          "rmse": 54.821774189373635,
+          "delta1": 0.5743008949349367,
+          "delta2": 0.8547455060216673,
+          "delta3": 0.9437445013790547,
+          "near_absrel": 0.2119244965244744,
+          "near_rmse": 3.8520878443047613,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 152.7492472199956,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 3,
+    "global_step": 66147,
+    "train_mean_loss": 12.489899759373918,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 9,
+    "seconds": 3563.5600837510137,
+    "validation": {
+      "overall": {
+        "absrel": 0.2758973638029746,
+        "rmse": 118.99770417337128,
+        "delta1": 0.591870242399697,
+        "delta2": 0.8517664037714233,
+        "delta3": 0.9192384547887902,
+        "near_absrel": 0.21471414703870903,
+        "near_rmse": 4.201541037276309,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.297001140691718,
+          "rmse": 154.92701868879422,
+          "delta1": 0.5640757946934499,
+          "delta2": 0.8320332418065706,
+          "delta3": 0.8951665179600408,
+          "near_absrel": 0.378811632593678,
+          "near_rmse": 3.710280238984519,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.2513823452089723,
+          "rmse": 52.22704494414779,
+          "delta1": 0.6241574204683822,
+          "delta2": 0.8746892594781119,
+          "delta3": 0.94720141052233,
+          "near_absrel": 0.21003663257088614,
+          "near_rmse": 4.214704900856758,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 140.25848303799285,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 4,
+    "global_step": 88196,
+    "train_mean_loss": 12.038675044657632,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 9,
+    "seconds": 3023.472364478992,
+    "validation": {
+      "overall": {
+        "absrel": 0.2884285323547041,
+        "rmse": 122.30655859056856,
+        "delta1": 0.5855562127224269,
+        "delta2": 0.8497436875414548,
+        "delta3": 0.9166875235029843,
+        "near_absrel": 0.24203293329322678,
+        "near_rmse": 4.201660314701141,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.3143869878112238,
+          "rmse": 159.2565021484758,
+          "delta1": 0.562297739330359,
+          "delta2": 0.8279909323905005,
+          "delta3": 0.8904803866284287,
+          "near_absrel": 0.6861120579841701,
+          "near_rmse": 6.116438115567352,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.25827411869012595,
+          "rmse": 53.60486222196761,
+          "delta1": 0.6125742157405868,
+          "delta2": 0.8750125860806949,
+          "delta3": 0.947130815770634,
+          "near_absrel": 0.22937468613255327,
+          "near_rmse": 4.13410088124928,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 137.52717771900643,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 5,
+    "global_step": 110245,
+    "train_mean_loss": 11.725589524624251,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 10,
+    "seconds": 3310.063349205011,
+    "validation": {
+      "overall": {
+        "absrel": 0.313158034393919,
+        "rmse": 124.48974508753338,
+        "delta1": 0.5712247174679548,
+        "delta2": 0.8319937330948896,
+        "delta3": 0.9109241697285893,
+        "near_absrel": 0.2721801048936611,
+        "near_rmse": 4.172163981590532,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.35097184398103487,
+          "rmse": 162.0844385244225,
+          "delta1": 0.5329251398145718,
+          "delta2": 0.805608373165304,
+          "delta3": 0.8830245126316346,
+          "near_absrel": 0.8470598160751935,
+          "near_rmse": 7.539546234256738,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.26923195187204385,
+          "rmse": 54.61280410744582,
+          "delta1": 0.6157150882326266,
+          "delta2": 0.8626440566219659,
+          "delta3": 0.9433335633695418,
+          "near_absrel": 0.25579345425599176,
+          "near_rmse": 4.03519490581859,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 152.09821202099556,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 6,
+    "global_step": 132294,
+    "train_mean_loss": 11.463036378012033,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 8,
+    "seconds": 2963.8735336089885,
+    "validation": {
+      "overall": {
+        "absrel": 0.27295400244978796,
+        "rmse": 121.17479443703928,
+        "delta1": 0.5832698234330362,
+        "delta2": 0.8501956052323234,
+        "delta3": 0.9215086301835814,
+        "near_absrel": 0.20938889798401794,
+        "near_rmse": 3.877761225858886,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.2947313315961664,
+          "rmse": 157.72524989118392,
+          "delta1": 0.5769684550685485,
+          "delta2": 0.833957627880757,
+          "delta3": 0.8993615385327386,
+          "near_absrel": 0.23246105337439602,
+          "near_rmse": 2.6197046486626965,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.24765655774282036,
+          "rmse": 53.3071120894868,
+          "delta1": 0.590589753104273,
+          "delta2": 0.8690583101785154,
+          "delta3": 0.9472356062829674,
+          "near_absrel": 0.208731238055364,
+          "near_rmse": 3.907688948009401,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 138.20851805199345,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 7,
+    "global_step": 154343,
+    "train_mean_loss": 11.281986432160059,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 9,
+    "seconds": 2838.375399384997,
+    "validation": {
+      "overall": {
+        "absrel": 0.2708407041497833,
+        "rmse": 121.56701843735144,
+        "delta1": 0.6039588374870541,
+        "delta2": 0.8548009384181346,
+        "delta3": 0.9194619406865111,
+        "near_absrel": 0.2154460884043817,
+        "near_rmse": 4.005537826950461,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.29101872652494293,
+          "rmse": 158.22528909916744,
+          "delta1": 0.6019038218108328,
+          "delta2": 0.8427870369939019,
+          "delta3": 0.8966274826608552,
+          "near_absrel": 0.3544707347032902,
+          "near_rmse": 3.438484244621182,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.2474010802225104,
+          "rmse": 53.51571054718343,
+          "delta1": 0.6063460285466982,
+          "delta2": 0.8687567823580253,
+          "delta3": 0.9459873899477521,
+          "near_absrel": 0.2114832623303084,
+          "near_rmse": 4.0205292265263886,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 140.5974354489881,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 8,
+    "global_step": 176392,
+    "train_mean_loss": 11.155689436679276,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 7,
+    "seconds": 3502.8472886689997,
+    "validation": {
+      "overall": {
+        "absrel": 0.27113465747024484,
+        "rmse": 120.88342105247295,
+        "delta1": 0.6248928682884,
+        "delta2": 0.8618302770282922,
+        "delta3": 0.9202995724632721,
+        "near_absrel": 0.21279428854486643,
+        "near_rmse": 3.909990424968431,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.2982925826930552,
+          "rmse": 157.0888750837709,
+          "delta1": 0.610584085824579,
+          "delta2": 0.8473256576690119,
+          "delta3": 0.8974646670373676,
+          "near_absrel": 0.5188191343833878,
+          "near_rmse": 4.747198530172316,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.23958689019988103,
+          "rmse": 54.05471361527969,
+          "delta1": 0.6415145407978929,
+          "delta2": 0.8786794417615178,
+          "delta3": 0.9468255414431145,
+          "near_absrel": 0.20407120763304257,
+          "near_rmse": 3.8834814728827927,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 147.87419098100509,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 9,
+    "global_step": 198441,
+    "train_mean_loss": 11.058111904170152,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 10,
+    "seconds": 4120.239625331989,
+    "validation": {
+      "overall": {
+        "absrel": 0.265831084981294,
+        "rmse": 119.94414418182203,
+        "delta1": 0.6261890639497891,
+        "delta2": 0.863269114568328,
+        "delta3": 0.9226672425887119,
+        "near_absrel": 0.20189875726584022,
+        "near_rmse": 3.9060721349821064,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.29063583867114173,
+          "rmse": 155.9637030876337,
+          "delta1": 0.6122158978799379,
+          "delta2": 0.8486302577526063,
+          "delta3": 0.9014620074229404,
+          "near_absrel": 0.5043361095320411,
+          "near_rmse": 4.6951762329605415,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.23701685892441146,
+          "rmse": 53.31148910369891,
+          "delta1": 0.642420870598683,
+          "delta2": 0.8802742150735258,
+          "delta3": 0.9473001193064503,
+          "near_absrel": 0.19327793601406526,
+          "near_rmse": 3.8812281029190814,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 150.00777191200177,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  },
+  {
+    "epoch": 10,
+    "global_step": 220490,
+    "train_mean_loss": 11.023499821431459,
+    "teacher_compute_seconds": 0.0,
+    "overflow_retries": 9,
+    "seconds": 4494.860157815987,
+    "validation": {
+      "overall": {
+        "absrel": 0.26942766814195807,
+        "rmse": 120.15464820069718,
+        "delta1": 0.6077342982686069,
+        "delta2": 0.8596145064831953,
+        "delta3": 0.9216263922824792,
+        "near_absrel": 0.2076412551564302,
+        "near_rmse": 3.901507499995211,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      },
+      "per_trajectory": {
+        "Kite_training/foggy/trajectory_2003": {
+          "absrel": 0.2927938278179077,
+          "rmse": 156.32582778927224,
+          "delta1": 0.6046695963633139,
+          "delta2": 0.8477236314038292,
+          "delta3": 0.8993614948310569,
+          "near_absrel": 0.4676527308033563,
+          "near_rmse": 4.4357485003554205,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        },
+        "PLE_training/spring/trajectory_5000": {
+          "absrel": 0.24228457229015146,
+          "rmse": 53.10367806324132,
+          "delta1": 0.6112943825411716,
+          "delta2": 0.8734274379412178,
+          "delta3": 0.9474902164639368,
+          "near_absrel": 0.2002297617077326,
+          "near_rmse": 3.8852025466031135,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      },
+      "seconds": 156.15010065500974,
+      "examples": 4410,
+      "precision": "FP32"
+    }
+  }
+]

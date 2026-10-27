@@ -2,6 +2,24 @@
 
 This study continues published commit `e27ed7e289b9af6ea30a35ff234dfbcd8dfe168a`. Model training, scheduler development and parameter search have ended. The original checkpoint, validation, V1, V2 and pilot evidence are preserved. The historical reports describe their original scope and are not rewritten.
 
+## Source version and saved-result verification
+
+Commit `8f32f71` publishes the exact historical source identities recorded by this study, including the original model/loss code and byte-identical evidence. Current `main` also contains the separate expanded experiment; its evolved source intentionally fails this study's strict historical source check. Verify the recorded results in a separate checkout without accessing MidAir or running model inference:
+
+```bash
+git clone https://github.com/ima-a/AeroDept.git AeroDept-final-study
+cd AeroDept-final-study
+git checkout --detach 8f32f71
+mkdir -p artifacts
+python3 scripts/verify_final_study.py --study-dir results/final_test \
+  --protocol results/final_test/protocol.json \
+  --output artifacts/saved_final_verification.json
+```
+
+This verifier uses only the standard library and saved metrics/accounting/source/weight hashes. It does not reevaluate test inputs. The execution and exposure records remain unchanged. The training-completion statements below refer to the original study, not the ongoing expanded experiment. Use this historical checkout for any independently authorized reproduction of the historical runner as well.
+
+## Recorded protocol and independent reproduction
+
 The machine-readable [protocol](../results/final_test/protocol.json) was saved before test image/depth access, with SHA-256 `f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f`. It freezes the exact published model, `v2_02`, preprocessing/masks, metrics, sensor provenance, event/freshness definitions, comparisons, outcomes, aggregation and selection limitations. No test performance can alter these choices.
 
 The independent fixed-budget primary comparator uses the pooled validation fraction **2455/4410 for both test trajectories**. For length N, choose K=ceil(N×2455/4410), with calls at ceil(kN/K) for k=0…K−1. This rule needs sequence length but no observed test V2 calls, predictions or event labels. Fixed-2, fixed-5 and every-frame are additional frozen comparisons. Retrospective exact test-call matching is omitted. The validation timing comparator retains the original validation budgets, 905 and 1550 calls, for an equal-call timing check.
@@ -15,6 +33,7 @@ Install the published dependencies and set the dataset root as in [reproduction]
 ```bash
 export MIDAIR_ROOT='/path/to/MidAir'
 export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
+export PYTHONPATH="$PWD/src"
 python scripts/final_study.py --stage validation-timing \
   --dataset-root "$MIDAIR_ROOT" --output artifacts/final_study/validation_timing
 python scripts/final_study.py --stage audit \

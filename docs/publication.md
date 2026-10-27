@@ -1,5 +1,7 @@
 # Research checkpoint publication
 
+Current publication, 27 October 2026: `main` now includes the completed frozen final study and the implemented expanded teacher/student workflow. See [expanded reproduction](expanded_reproduction.md) for the ongoing experiment, approved settings and dated progress, and [final study](final_study.md) for its exact historical source checkout and dataset-free saved-result verification. The record below describes the earlier validation-checkpoint publication and its checks; those historical statements are not the current experiment status. Current publication does not rerun the historical full-validation or final-test evaluations.
+
 This is a research checkpoint with completed training, validation audit, original scheduler study and exactly eight scheduler-v2 configurations. It is not final-test evaluation or completion of the entire project. Feature branch: `research/mobilenet-validation-checkpoint`. The final response records the exact committed/pushed SHA and clean-clone checks; the commit itself cannot contain its own SHA.
 
 Packaging retains original full checkpoints, training history, original audit, rejected configurations, datasets/archives, environment and unrelated local files under ignored local folders. Public folders add compact inference weights/metadata and scientific summaries/figures/manifests. No broad source rearrangement or model retraining is required. Only identified bytecode/pytest caches are disposable; no scientific evidence is deleted.
