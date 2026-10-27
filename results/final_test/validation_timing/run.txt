@@ -1,0 +1,14 @@
+Validation RGB preparation 500/4410
+Validation RGB preparation 1000/4410
+Validation RGB preparation 1500/4410
+Validation RGB preparation 2000/4410
+Validation RGB preparation 2500/4410
+Validation RGB preparation 3000/4410
+Validation RGB preparation 3500/4410
+Validation RGB preparation 4000/4410
+Validation repetition 1 v2_selected: 40.491s compute
+Validation repetition 1 fixed_validation_matched: 36.100s compute
+Validation repetition 2 fixed_validation_matched: 36.343s compute
+Validation repetition 2 v2_selected: 40.926s compute
+Validation repetition 3 v2_selected: 41.758s compute
+Validation repetition 3 fixed_validation_matched: 36.686s compute

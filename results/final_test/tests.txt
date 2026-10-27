@@ -1,0 +1,8 @@
+.............................................s.............              [100%]
+=============================== warnings summary ===============================
+tests/test_kaggle.py::test_bundle_setup_and_notebook_syntax
+  /home/Ima/work/Projects/DL-projects/AeroDept/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:1174: UserWarning: Can't initialize NVML
+    raw_cnt = _raw_device_count_nvml()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+58 passed, 1 skipped, 1 warning in 7.93s

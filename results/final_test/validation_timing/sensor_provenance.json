@@ -1,0 +1,22 @@
+[
+  {
+    "trajectory": "Kite_training/foggy/trajectory_2003",
+    "sensor_file": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/foggy/sensor_records.hdf5",
+    "sensor_sha256": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+    "gps_hz": 1.0,
+    "gps_samples": 89,
+    "imu_hz": 100,
+    "imu_manifest_exact_match": true,
+    "alignment": "floor(camera ordinal * sensor frequency/25), past-only zero-order hold; ideal availability"
+  },
+  {
+    "trajectory": "PLE_training/spring/trajectory_5000",
+    "sensor_file": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/spring/sensor_records.hdf5",
+    "sensor_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+    "gps_hz": 1.0,
+    "gps_samples": 89,
+    "imu_hz": 100,
+    "imu_manifest_exact_match": true,
+    "alignment": "floor(camera ordinal * sensor frequency/25), past-only zero-order hold; ideal availability"
+  }
+]

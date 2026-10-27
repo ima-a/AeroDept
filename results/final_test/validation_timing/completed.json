@@ -1,0 +1,211 @@
+{
+  "passed": true,
+  "protocol_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+  "environment": {
+    "python": "3.13.12",
+    "torch": "2.14.1+cu130",
+    "numpy": "2.5.3",
+    "torchvision": "0.29.1+cu130",
+    "device": "cpu",
+    "precision": "FP32",
+    "threads": 2,
+    "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+    "cpu": "Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz",
+    "cuda_available": false,
+    "time_utc": "2026-10-24T10:36:16.779767+00:00"
+  },
+  "repetitions_per_policy": 3,
+  "actual_measured_calls": 14730,
+  "excluded_warmup_calls": 60,
+  "individual_results_sha256": "53b347b0d5fd98b0e5dfdce89f69b6075808d55ae517dd8caf2dcebdbd401bcc",
+  "frame_logs_sha256": {
+    "rep1_fixed_validation_matched_frames.csv": "bfee89dcb04eb9e2c1430f6b04c33677faf989d76b06f8039a032c93cd463649",
+    "rep1_v2_selected_frames.csv": "61983e9506de37277d7fe979cf23574651e982794e78f567b8d0548136d85ebe",
+    "rep2_fixed_validation_matched_frames.csv": "4358901dfdaaf49ea2e3e5bdf06679d9f659a79c52dad9c53c6e904f57bc3b0f",
+    "rep2_v2_selected_frames.csv": "9ea04fd8c1c003d1cf2c8e2b69ecde6ce209eaf22e3747a74e1ee3c2cc243ac4",
+    "rep3_fixed_validation_matched_frames.csv": "b18277e1718153cd1c785101cc8e63738bb136363c4fee2848022f8b76f52dd2",
+    "rep3_v2_selected_frames.csv": "88445204c4d561494659211b66da19bd114e40ef2e859920e19c6a09b1b8a6c0"
+  },
+  "summary": [
+    {
+      "policy": "v2_selected",
+      "scope": "Overall",
+      "metric": "scheduler_seconds",
+      "repetitions": 3,
+      "median": 4.75907206201191,
+      "min": 4.74394356900666,
+      "max": 4.851666476019091,
+      "spread_max_minus_min": 0.10772290701243037
+    },
+    {
+      "policy": "v2_selected",
+      "scope": "Overall",
+      "metric": "inference_seconds",
+      "repetitions": 3,
+      "median": 36.16705623605958,
+      "min": 35.74664931102052,
+      "max": 36.90617444498457,
+      "spread_max_minus_min": 1.1595251339640527
+    },
+    {
+      "policy": "v2_selected",
+      "scope": "Overall",
+      "metric": "compute_seconds",
+      "repetitions": 3,
+      "median": 40.92612829807149,
+      "min": 40.49059288002718,
+      "max": 41.75784092100366,
+      "spread_max_minus_min": 1.267248040976483
+    },
+    {
+      "policy": "v2_selected",
+      "scope": "Kite_training/foggy/trajectory_2003",
+      "metric": "scheduler_seconds",
+      "repetitions": 3,
+      "median": 2.3503783850028412,
+      "min": 2.315172123033335,
+      "max": 2.3516940210247412,
+      "spread_max_minus_min": 0.03652189799140615
+    },
+    {
+      "policy": "v2_selected",
+      "scope": "Kite_training/foggy/trajectory_2003",
+      "metric": "inference_seconds",
+      "repetitions": 3,
+      "median": 13.482172680000076,
+      "min": 13.310958546020629,
+      "max": 13.54394287899413,
+      "spread_max_minus_min": 0.2329843329735013
+    },
+    {
+      "policy": "v2_selected",
+      "scope": "Kite_training/foggy/trajectory_2003",
+      "metric": "compute_seconds",
+      "repetitions": 3,
+      "median": 15.832551065002917,
+      "min": 15.626130669053964,
+      "max": 15.895636900018872,
+      "spread_max_minus_min": 0.26950623096490745
+    },
+    {
+      "policy": "v2_selected",
+      "scope": "PLE_training/spring/trajectory_5000",
+      "metric": "scheduler_seconds",
+      "repetitions": 3,
+      "median": 2.443899938978575,
+      "min": 2.393565184003819,
+      "max": 2.4999724549943494,
+      "spread_max_minus_min": 0.10640727099053038
+    },
+    {
+      "policy": "v2_selected",
+      "scope": "PLE_training/spring/trajectory_5000",
+      "metric": "inference_seconds",
+      "repetitions": 3,
+      "median": 22.85609769003895,
+      "min": 22.264476631020443,
+      "max": 23.36223156599044,
+      "spread_max_minus_min": 1.0977549349699984
+    },
+    {
+      "policy": "v2_selected",
+      "scope": "PLE_training/spring/trajectory_5000",
+      "metric": "compute_seconds",
+      "repetitions": 3,
+      "median": 25.299997629017525,
+      "min": 24.658041815024262,
+      "max": 25.86220402098479,
+      "spread_max_minus_min": 1.2041622059605288
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "Overall",
+      "metric": "scheduler_seconds",
+      "repetitions": 3,
+      "median": 0.009293732999140047,
+      "min": 0.009162832022411749,
+      "max": 0.009298084063630085,
+      "spread_max_minus_min": 0.00013525204121833667
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "Overall",
+      "metric": "inference_seconds",
+      "repetitions": 3,
+      "median": 36.3338889830502,
+      "min": 36.09059839796464,
+      "max": 36.67665640700943,
+      "spread_max_minus_min": 0.5860580090447911
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "Overall",
+      "metric": "compute_seconds",
+      "repetitions": 3,
+      "median": 36.34318706711383,
+      "min": 36.09989213096378,
+      "max": 36.685819239031844,
+      "spread_max_minus_min": 0.5859271080680628
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "Kite_training/foggy/trajectory_2003",
+      "metric": "scheduler_seconds",
+      "repetitions": 3,
+      "median": 0.004416091031089309,
+      "min": 0.004333749086072203,
+      "max": 0.004642272026103456,
+      "spread_max_minus_min": 0.0003085229400312528
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "Kite_training/foggy/trajectory_2003",
+      "metric": "inference_seconds",
+      "repetitions": 3,
+      "median": 13.584593944962762,
+      "min": 13.427992073009591,
+      "max": 13.675026984023134,
+      "spread_max_minus_min": 0.24703491101354302
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "Kite_training/foggy/trajectory_2003",
+      "metric": "compute_seconds",
+      "repetitions": 3,
+      "median": 13.589236216988866,
+      "min": 13.432325822095663,
+      "max": 13.679443075054223,
+      "spread_max_minus_min": 0.24711725295856013
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "PLE_training/spring/trajectory_5000",
+      "metric": "scheduler_seconds",
+      "repetitions": 3,
+      "median": 0.00474674099132244,
+      "min": 0.004651460973036592,
+      "max": 0.004964334977557883,
+      "spread_max_minus_min": 0.00031287400452129077
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "PLE_training/spring/trajectory_5000",
+      "metric": "inference_seconds",
+      "repetitions": 3,
+      "median": 22.90589691004061,
+      "min": 22.50600445300188,
+      "max": 23.001629422986298,
+      "spread_max_minus_min": 0.4956249699844193
+    },
+    {
+      "policy": "fixed_validation_matched",
+      "scope": "PLE_training/spring/trajectory_5000",
+      "metric": "compute_seconds",
+      "repetitions": 3,
+      "median": 22.910861245018168,
+      "min": 22.510655913974915,
+      "max": 23.00637616397762,
+      "spread_max_minus_min": 0.49572025000270514
+    }
+  ]
+}

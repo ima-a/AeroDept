@@ -1,0 +1,16 @@
+{
+  "protocol_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+  "environment": {
+    "python": "3.13.12",
+    "torch": "2.14.1+cu130",
+    "numpy": "2.5.3",
+    "torchvision": "0.29.1+cu130",
+    "device": "cpu",
+    "precision": "FP32",
+    "threads": 2,
+    "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+    "cpu": "Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz",
+    "cuda_available": false,
+    "time_utc": "2026-10-24T10:26:37.745308+00:00"
+  }
+}

@@ -1,0 +1,1970 @@
+{
+  "passed": true,
+  "split_path_groups": {
+    "train": [
+      "Kite/trajectory_0000",
+      "Kite/trajectory_0001",
+      "Kite/trajectory_0002",
+      "Kite/trajectory_0021",
+      "PLE/trajectory_0001",
+      "PLE/trajectory_0002",
+      "PLE/trajectory_0004",
+      "PLE/trajectory_0005"
+    ],
+    "val": [
+      "Kite/trajectory_0003",
+      "PLE/trajectory_0000"
+    ],
+    "test": [
+      "Kite/trajectory_0004",
+      "PLE/trajectory_0003"
+    ]
+  },
+  "pilot_exclusions_verified": [
+    "Kite/trajectory_0003",
+    "Kite/trajectory_0021"
+  ],
+  "trajectory_frame_counts": {
+    "Kite_training/cloudy/trajectory_3002": 2202,
+    "Kite_training/foggy/trajectory_2021": 2204,
+    "Kite_training/sunny/trajectory_0000": 2205,
+    "Kite_training/sunset/trajectory_1001": 2205,
+    "PLE_training/fall/trajectory_4001": 2204,
+    "PLE_training/fall/trajectory_4004": 2204,
+    "PLE_training/winter/trajectory_6002": 2205,
+    "PLE_training/winter/trajectory_6005": 2206,
+    "Kite_training/foggy/trajectory_2003": 2205,
+    "PLE_training/spring/trajectory_5000": 2205,
+    "Kite_training/sunny/trajectory_0004": 2232,
+    "PLE_training/spring/trajectory_5003": 2204
+  },
+  "problems": [],
+  "method": "Recomputed environment plus ID modulo1000 for every manifest record/split, including every climate variant. Original pilot metadata independently checked. No RGB/depth reads.",
+  "sensor_path_audit": {
+    "passed": true,
+    "position_streams": [
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3000",
+        "path_group": "Kite/trajectory_0000",
+        "split": "train",
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "4e47f2b51b0d9d2cc7e778af9d9d353fee686e50c19f256287d9bfa6c1e9cc94"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3001",
+        "path_group": "Kite/trajectory_0001",
+        "split": "train",
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "e61fb8af5f0eb3356d4fbbfd46c84a1f4ffe47f689c68e758bf85d63ba6408ca"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3002",
+        "path_group": "Kite/trajectory_0002",
+        "split": "train",
+        "position_shape": [
+          8805,
+          3
+        ],
+        "position_sha256": "9f887ff414607e4bc93d49c6f4017f2d507546232b774c11717678896d21634e"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3003",
+        "path_group": "Kite/trajectory_0003",
+        "split": "val",
+        "position_shape": [
+          8817,
+          3
+        ],
+        "position_sha256": "cdd2ff78fb33838ad95daed7a2bc8d2b387535925e92cd73428e98be63d7e935"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3004",
+        "path_group": "Kite/trajectory_0004",
+        "split": "test",
+        "position_shape": [
+          8928,
+          3
+        ],
+        "position_sha256": "678d57e77d79606980bbe36cf426598313ed52c60abf74f43d7f3b8f17b714d7"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3005",
+        "path_group": "Kite/trajectory_0005",
+        "split": null,
+        "position_shape": [
+          8821,
+          3
+        ],
+        "position_sha256": "ddbc770035ed004883cdb2b3190eff8ade61f13aa7bff0c89802d431012460c1"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3006",
+        "path_group": "Kite/trajectory_0006",
+        "split": null,
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "37bd3c9510ea65eace3627b3f01e16d972fd5459a56f535781a2a430e8aa3fe0"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3007",
+        "path_group": "Kite/trajectory_0007",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "ec01ee4268ff23a63c282197d2584ddcac079cc3086b33828dc62a15d4b068b2"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3008",
+        "path_group": "Kite/trajectory_0008",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "bc3cf9129415645d9d78b27438df58cc5ab733380ae7f61704abd0f40c565ee0"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3009",
+        "path_group": "Kite/trajectory_0009",
+        "split": null,
+        "position_shape": [
+          8833,
+          3
+        ],
+        "position_sha256": "320c774750f800add93c6047f4844fc1138b335b868760d500e450b197d46543"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3010",
+        "path_group": "Kite/trajectory_0010",
+        "split": null,
+        "position_shape": [
+          8828,
+          3
+        ],
+        "position_sha256": "0b197485683828df33ff6796bba4bbcdf32b5630ce1c9756ce77ad0d53014d1c"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3011",
+        "path_group": "Kite/trajectory_0011",
+        "split": null,
+        "position_shape": [
+          8834,
+          3
+        ],
+        "position_sha256": "f9e0d433fd8466c0a71d0d23225b2bf6472fc2e289429c5a3aee740f6a3a49b3"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3012",
+        "path_group": "Kite/trajectory_0012",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "21d9c8e07640e6dbb0aa5dd88825b978176c12667fafc9b077d5a36f99e28d02"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3013",
+        "path_group": "Kite/trajectory_0013",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "f759989f7bb0bc25b9ef50f07c6489a40e87b4aaca6b7f3d13d762bf68e5971d"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3014",
+        "path_group": "Kite/trajectory_0014",
+        "split": null,
+        "position_shape": [
+          8843,
+          3
+        ],
+        "position_sha256": "63e33a8cbdf0bbc9274444f93a2cdf6afbefe8c2b661a9f24c10ab2bcddf9ee4"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3015",
+        "path_group": "Kite/trajectory_0015",
+        "split": null,
+        "position_shape": [
+          8798,
+          3
+        ],
+        "position_sha256": "a78c13838dde7f9bfd04667226e40535f12c7514e18f2e961da202d4a3d37553"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3016",
+        "path_group": "Kite/trajectory_0016",
+        "split": null,
+        "position_shape": [
+          8798,
+          3
+        ],
+        "position_sha256": "df716d2fb4e9ea5309d37bd3dbca5e5f3a810f7ef11b9acd7e1e1c42b6e5e49a"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3017",
+        "path_group": "Kite/trajectory_0017",
+        "split": null,
+        "position_shape": [
+          8808,
+          3
+        ],
+        "position_sha256": "392a979185aa7689df2da42d0faedfd33b8cd1b7ac0a76acce16a8c5ee0956bf"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3018",
+        "path_group": "Kite/trajectory_0018",
+        "split": null,
+        "position_shape": [
+          8828,
+          3
+        ],
+        "position_sha256": "ae38a3d2c7c6bad00c6f4f72cc262817c4089fb5b0faa60473002d24cd57dcd9"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3019",
+        "path_group": "Kite/trajectory_0019",
+        "split": null,
+        "position_shape": [
+          8824,
+          3
+        ],
+        "position_sha256": "4e6c45d847116697235625ffcefff5a404bcf5b9b1e4b0ebf28329bd04b12389"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3020",
+        "path_group": "Kite/trajectory_0020",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "e05d0dc8b16ca024c7fde67604f3c3809f7dea5586c1c7a228f9cd2ccf8068a5"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3021",
+        "path_group": "Kite/trajectory_0021",
+        "split": "train",
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "18a15f851b2b85d6bce3c2c7b94adfb6d2068db42940768544ed97217b10e207"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3022",
+        "path_group": "Kite/trajectory_0022",
+        "split": null,
+        "position_shape": [
+          8811,
+          3
+        ],
+        "position_sha256": "e1f83f0ffa268c3a1026f01b4c39ece49a1f14f3d1412f5f41018e7bd53b58a5"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3023",
+        "path_group": "Kite/trajectory_0023",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "4c9cef3ed8763aeded3a9f5c23c45b5cbe246ec16da7d1756a6a39f18f41ce1d"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3024",
+        "path_group": "Kite/trajectory_0024",
+        "split": null,
+        "position_shape": [
+          9022,
+          3
+        ],
+        "position_sha256": "e840c187890badc0576fe602aa7821517dc27d6ebdf3a6c76311ae260e70150d"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3025",
+        "path_group": "Kite/trajectory_0025",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "5fde8d6ff70e7545e44af80d50648f3ea0500bfb64e780f00b45e8309ecf2820"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3026",
+        "path_group": "Kite/trajectory_0026",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "fb13da59e011e27775281cd94b8976c31f18606b40ab2d2ea2122025bd7007db"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3027",
+        "path_group": "Kite/trajectory_0027",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "64b2d66c23f34486660558ed341944760df524dfc741385d7be39a02c7bf72b8"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3028",
+        "path_group": "Kite/trajectory_0028",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "e4848446e03bd77415ca0b3c1dc221c87b5d11e0c1d7bba3942912ff1d0793e6"
+      },
+      {
+        "trajectory": "Kite_training/cloudy/trajectory_3029",
+        "path_group": "Kite/trajectory_0029",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "0970b862ed5da7858ef8020ab9565be28b660d1e71867fadf2661979cf956dbf"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2000",
+        "path_group": "Kite/trajectory_0000",
+        "split": "train",
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "4e47f2b51b0d9d2cc7e778af9d9d353fee686e50c19f256287d9bfa6c1e9cc94"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2001",
+        "path_group": "Kite/trajectory_0001",
+        "split": "train",
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "e61fb8af5f0eb3356d4fbbfd46c84a1f4ffe47f689c68e758bf85d63ba6408ca"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2002",
+        "path_group": "Kite/trajectory_0002",
+        "split": "train",
+        "position_shape": [
+          8805,
+          3
+        ],
+        "position_sha256": "9f887ff414607e4bc93d49c6f4017f2d507546232b774c11717678896d21634e"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2003",
+        "path_group": "Kite/trajectory_0003",
+        "split": "val",
+        "position_shape": [
+          8817,
+          3
+        ],
+        "position_sha256": "cdd2ff78fb33838ad95daed7a2bc8d2b387535925e92cd73428e98be63d7e935"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2004",
+        "path_group": "Kite/trajectory_0004",
+        "split": "test",
+        "position_shape": [
+          8928,
+          3
+        ],
+        "position_sha256": "678d57e77d79606980bbe36cf426598313ed52c60abf74f43d7f3b8f17b714d7"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2005",
+        "path_group": "Kite/trajectory_0005",
+        "split": null,
+        "position_shape": [
+          8821,
+          3
+        ],
+        "position_sha256": "ddbc770035ed004883cdb2b3190eff8ade61f13aa7bff0c89802d431012460c1"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2006",
+        "path_group": "Kite/trajectory_0006",
+        "split": null,
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "37bd3c9510ea65eace3627b3f01e16d972fd5459a56f535781a2a430e8aa3fe0"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2007",
+        "path_group": "Kite/trajectory_0007",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "ec01ee4268ff23a63c282197d2584ddcac079cc3086b33828dc62a15d4b068b2"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2008",
+        "path_group": "Kite/trajectory_0008",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "bc3cf9129415645d9d78b27438df58cc5ab733380ae7f61704abd0f40c565ee0"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2009",
+        "path_group": "Kite/trajectory_0009",
+        "split": null,
+        "position_shape": [
+          8833,
+          3
+        ],
+        "position_sha256": "320c774750f800add93c6047f4844fc1138b335b868760d500e450b197d46543"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2010",
+        "path_group": "Kite/trajectory_0010",
+        "split": null,
+        "position_shape": [
+          8828,
+          3
+        ],
+        "position_sha256": "0b197485683828df33ff6796bba4bbcdf32b5630ce1c9756ce77ad0d53014d1c"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2011",
+        "path_group": "Kite/trajectory_0011",
+        "split": null,
+        "position_shape": [
+          8834,
+          3
+        ],
+        "position_sha256": "f9e0d433fd8466c0a71d0d23225b2bf6472fc2e289429c5a3aee740f6a3a49b3"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2012",
+        "path_group": "Kite/trajectory_0012",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "21d9c8e07640e6dbb0aa5dd88825b978176c12667fafc9b077d5a36f99e28d02"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2013",
+        "path_group": "Kite/trajectory_0013",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "f759989f7bb0bc25b9ef50f07c6489a40e87b4aaca6b7f3d13d762bf68e5971d"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2014",
+        "path_group": "Kite/trajectory_0014",
+        "split": null,
+        "position_shape": [
+          8843,
+          3
+        ],
+        "position_sha256": "63e33a8cbdf0bbc9274444f93a2cdf6afbefe8c2b661a9f24c10ab2bcddf9ee4"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2015",
+        "path_group": "Kite/trajectory_0015",
+        "split": null,
+        "position_shape": [
+          8798,
+          3
+        ],
+        "position_sha256": "a78c13838dde7f9bfd04667226e40535f12c7514e18f2e961da202d4a3d37553"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2016",
+        "path_group": "Kite/trajectory_0016",
+        "split": null,
+        "position_shape": [
+          8798,
+          3
+        ],
+        "position_sha256": "df716d2fb4e9ea5309d37bd3dbca5e5f3a810f7ef11b9acd7e1e1c42b6e5e49a"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2017",
+        "path_group": "Kite/trajectory_0017",
+        "split": null,
+        "position_shape": [
+          8808,
+          3
+        ],
+        "position_sha256": "392a979185aa7689df2da42d0faedfd33b8cd1b7ac0a76acce16a8c5ee0956bf"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2018",
+        "path_group": "Kite/trajectory_0018",
+        "split": null,
+        "position_shape": [
+          8828,
+          3
+        ],
+        "position_sha256": "ae38a3d2c7c6bad00c6f4f72cc262817c4089fb5b0faa60473002d24cd57dcd9"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2019",
+        "path_group": "Kite/trajectory_0019",
+        "split": null,
+        "position_shape": [
+          8824,
+          3
+        ],
+        "position_sha256": "4e6c45d847116697235625ffcefff5a404bcf5b9b1e4b0ebf28329bd04b12389"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2020",
+        "path_group": "Kite/trajectory_0020",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "e05d0dc8b16ca024c7fde67604f3c3809f7dea5586c1c7a228f9cd2ccf8068a5"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2021",
+        "path_group": "Kite/trajectory_0021",
+        "split": "train",
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "18a15f851b2b85d6bce3c2c7b94adfb6d2068db42940768544ed97217b10e207"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2022",
+        "path_group": "Kite/trajectory_0022",
+        "split": null,
+        "position_shape": [
+          8811,
+          3
+        ],
+        "position_sha256": "e1f83f0ffa268c3a1026f01b4c39ece49a1f14f3d1412f5f41018e7bd53b58a5"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2023",
+        "path_group": "Kite/trajectory_0023",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "4c9cef3ed8763aeded3a9f5c23c45b5cbe246ec16da7d1756a6a39f18f41ce1d"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2024",
+        "path_group": "Kite/trajectory_0024",
+        "split": null,
+        "position_shape": [
+          9022,
+          3
+        ],
+        "position_sha256": "e840c187890badc0576fe602aa7821517dc27d6ebdf3a6c76311ae260e70150d"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2025",
+        "path_group": "Kite/trajectory_0025",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "5fde8d6ff70e7545e44af80d50648f3ea0500bfb64e780f00b45e8309ecf2820"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2026",
+        "path_group": "Kite/trajectory_0026",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "fb13da59e011e27775281cd94b8976c31f18606b40ab2d2ea2122025bd7007db"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2027",
+        "path_group": "Kite/trajectory_0027",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "64b2d66c23f34486660558ed341944760df524dfc741385d7be39a02c7bf72b8"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2028",
+        "path_group": "Kite/trajectory_0028",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "e4848446e03bd77415ca0b3c1dc221c87b5d11e0c1d7bba3942912ff1d0793e6"
+      },
+      {
+        "trajectory": "Kite_training/foggy/trajectory_2029",
+        "path_group": "Kite/trajectory_0029",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "0970b862ed5da7858ef8020ab9565be28b660d1e71867fadf2661979cf956dbf"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0000",
+        "path_group": "Kite/trajectory_0000",
+        "split": "train",
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "4e47f2b51b0d9d2cc7e778af9d9d353fee686e50c19f256287d9bfa6c1e9cc94"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0001",
+        "path_group": "Kite/trajectory_0001",
+        "split": "train",
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "e61fb8af5f0eb3356d4fbbfd46c84a1f4ffe47f689c68e758bf85d63ba6408ca"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0002",
+        "path_group": "Kite/trajectory_0002",
+        "split": "train",
+        "position_shape": [
+          8805,
+          3
+        ],
+        "position_sha256": "9f887ff414607e4bc93d49c6f4017f2d507546232b774c11717678896d21634e"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0003",
+        "path_group": "Kite/trajectory_0003",
+        "split": "val",
+        "position_shape": [
+          8817,
+          3
+        ],
+        "position_sha256": "cdd2ff78fb33838ad95daed7a2bc8d2b387535925e92cd73428e98be63d7e935"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0004",
+        "path_group": "Kite/trajectory_0004",
+        "split": "test",
+        "position_shape": [
+          8928,
+          3
+        ],
+        "position_sha256": "678d57e77d79606980bbe36cf426598313ed52c60abf74f43d7f3b8f17b714d7"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0005",
+        "path_group": "Kite/trajectory_0005",
+        "split": null,
+        "position_shape": [
+          8821,
+          3
+        ],
+        "position_sha256": "ddbc770035ed004883cdb2b3190eff8ade61f13aa7bff0c89802d431012460c1"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0006",
+        "path_group": "Kite/trajectory_0006",
+        "split": null,
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "37bd3c9510ea65eace3627b3f01e16d972fd5459a56f535781a2a430e8aa3fe0"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0007",
+        "path_group": "Kite/trajectory_0007",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "ec01ee4268ff23a63c282197d2584ddcac079cc3086b33828dc62a15d4b068b2"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0008",
+        "path_group": "Kite/trajectory_0008",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "bc3cf9129415645d9d78b27438df58cc5ab733380ae7f61704abd0f40c565ee0"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0009",
+        "path_group": "Kite/trajectory_0009",
+        "split": null,
+        "position_shape": [
+          8833,
+          3
+        ],
+        "position_sha256": "320c774750f800add93c6047f4844fc1138b335b868760d500e450b197d46543"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0010",
+        "path_group": "Kite/trajectory_0010",
+        "split": null,
+        "position_shape": [
+          8828,
+          3
+        ],
+        "position_sha256": "0b197485683828df33ff6796bba4bbcdf32b5630ce1c9756ce77ad0d53014d1c"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0011",
+        "path_group": "Kite/trajectory_0011",
+        "split": null,
+        "position_shape": [
+          8834,
+          3
+        ],
+        "position_sha256": "f9e0d433fd8466c0a71d0d23225b2bf6472fc2e289429c5a3aee740f6a3a49b3"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0012",
+        "path_group": "Kite/trajectory_0012",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "21d9c8e07640e6dbb0aa5dd88825b978176c12667fafc9b077d5a36f99e28d02"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0013",
+        "path_group": "Kite/trajectory_0013",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "f759989f7bb0bc25b9ef50f07c6489a40e87b4aaca6b7f3d13d762bf68e5971d"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0014",
+        "path_group": "Kite/trajectory_0014",
+        "split": null,
+        "position_shape": [
+          8843,
+          3
+        ],
+        "position_sha256": "63e33a8cbdf0bbc9274444f93a2cdf6afbefe8c2b661a9f24c10ab2bcddf9ee4"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0015",
+        "path_group": "Kite/trajectory_0015",
+        "split": null,
+        "position_shape": [
+          8798,
+          3
+        ],
+        "position_sha256": "a78c13838dde7f9bfd04667226e40535f12c7514e18f2e961da202d4a3d37553"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0016",
+        "path_group": "Kite/trajectory_0016",
+        "split": null,
+        "position_shape": [
+          8798,
+          3
+        ],
+        "position_sha256": "df716d2fb4e9ea5309d37bd3dbca5e5f3a810f7ef11b9acd7e1e1c42b6e5e49a"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0017",
+        "path_group": "Kite/trajectory_0017",
+        "split": null,
+        "position_shape": [
+          8808,
+          3
+        ],
+        "position_sha256": "392a979185aa7689df2da42d0faedfd33b8cd1b7ac0a76acce16a8c5ee0956bf"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0018",
+        "path_group": "Kite/trajectory_0018",
+        "split": null,
+        "position_shape": [
+          8828,
+          3
+        ],
+        "position_sha256": "ae38a3d2c7c6bad00c6f4f72cc262817c4089fb5b0faa60473002d24cd57dcd9"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0019",
+        "path_group": "Kite/trajectory_0019",
+        "split": null,
+        "position_shape": [
+          8824,
+          3
+        ],
+        "position_sha256": "4e6c45d847116697235625ffcefff5a404bcf5b9b1e4b0ebf28329bd04b12389"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0020",
+        "path_group": "Kite/trajectory_0020",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "e05d0dc8b16ca024c7fde67604f3c3809f7dea5586c1c7a228f9cd2ccf8068a5"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0021",
+        "path_group": "Kite/trajectory_0021",
+        "split": "train",
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "18a15f851b2b85d6bce3c2c7b94adfb6d2068db42940768544ed97217b10e207"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0022",
+        "path_group": "Kite/trajectory_0022",
+        "split": null,
+        "position_shape": [
+          8811,
+          3
+        ],
+        "position_sha256": "e1f83f0ffa268c3a1026f01b4c39ece49a1f14f3d1412f5f41018e7bd53b58a5"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0023",
+        "path_group": "Kite/trajectory_0023",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "4c9cef3ed8763aeded3a9f5c23c45b5cbe246ec16da7d1756a6a39f18f41ce1d"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0024",
+        "path_group": "Kite/trajectory_0024",
+        "split": null,
+        "position_shape": [
+          9022,
+          3
+        ],
+        "position_sha256": "e840c187890badc0576fe602aa7821517dc27d6ebdf3a6c76311ae260e70150d"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0025",
+        "path_group": "Kite/trajectory_0025",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "5fde8d6ff70e7545e44af80d50648f3ea0500bfb64e780f00b45e8309ecf2820"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0026",
+        "path_group": "Kite/trajectory_0026",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "fb13da59e011e27775281cd94b8976c31f18606b40ab2d2ea2122025bd7007db"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0027",
+        "path_group": "Kite/trajectory_0027",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "64b2d66c23f34486660558ed341944760df524dfc741385d7be39a02c7bf72b8"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0028",
+        "path_group": "Kite/trajectory_0028",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "e4848446e03bd77415ca0b3c1dc221c87b5d11e0c1d7bba3942912ff1d0793e6"
+      },
+      {
+        "trajectory": "Kite_training/sunny/trajectory_0029",
+        "path_group": "Kite/trajectory_0029",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "0970b862ed5da7858ef8020ab9565be28b660d1e71867fadf2661979cf956dbf"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1000",
+        "path_group": "Kite/trajectory_0000",
+        "split": "train",
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "4e47f2b51b0d9d2cc7e778af9d9d353fee686e50c19f256287d9bfa6c1e9cc94"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1001",
+        "path_group": "Kite/trajectory_0001",
+        "split": "train",
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "e61fb8af5f0eb3356d4fbbfd46c84a1f4ffe47f689c68e758bf85d63ba6408ca"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1002",
+        "path_group": "Kite/trajectory_0002",
+        "split": "train",
+        "position_shape": [
+          8805,
+          3
+        ],
+        "position_sha256": "9f887ff414607e4bc93d49c6f4017f2d507546232b774c11717678896d21634e"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1003",
+        "path_group": "Kite/trajectory_0003",
+        "split": "val",
+        "position_shape": [
+          8817,
+          3
+        ],
+        "position_sha256": "cdd2ff78fb33838ad95daed7a2bc8d2b387535925e92cd73428e98be63d7e935"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1004",
+        "path_group": "Kite/trajectory_0004",
+        "split": "test",
+        "position_shape": [
+          8928,
+          3
+        ],
+        "position_sha256": "678d57e77d79606980bbe36cf426598313ed52c60abf74f43d7f3b8f17b714d7"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1005",
+        "path_group": "Kite/trajectory_0005",
+        "split": null,
+        "position_shape": [
+          8821,
+          3
+        ],
+        "position_sha256": "ddbc770035ed004883cdb2b3190eff8ade61f13aa7bff0c89802d431012460c1"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1006",
+        "path_group": "Kite/trajectory_0006",
+        "split": null,
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "37bd3c9510ea65eace3627b3f01e16d972fd5459a56f535781a2a430e8aa3fe0"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1007",
+        "path_group": "Kite/trajectory_0007",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "ec01ee4268ff23a63c282197d2584ddcac079cc3086b33828dc62a15d4b068b2"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1008",
+        "path_group": "Kite/trajectory_0008",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "bc3cf9129415645d9d78b27438df58cc5ab733380ae7f61704abd0f40c565ee0"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1009",
+        "path_group": "Kite/trajectory_0009",
+        "split": null,
+        "position_shape": [
+          8833,
+          3
+        ],
+        "position_sha256": "320c774750f800add93c6047f4844fc1138b335b868760d500e450b197d46543"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1010",
+        "path_group": "Kite/trajectory_0010",
+        "split": null,
+        "position_shape": [
+          8828,
+          3
+        ],
+        "position_sha256": "0b197485683828df33ff6796bba4bbcdf32b5630ce1c9756ce77ad0d53014d1c"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1011",
+        "path_group": "Kite/trajectory_0011",
+        "split": null,
+        "position_shape": [
+          8834,
+          3
+        ],
+        "position_sha256": "f9e0d433fd8466c0a71d0d23225b2bf6472fc2e289429c5a3aee740f6a3a49b3"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1012",
+        "path_group": "Kite/trajectory_0012",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "21d9c8e07640e6dbb0aa5dd88825b978176c12667fafc9b077d5a36f99e28d02"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1013",
+        "path_group": "Kite/trajectory_0013",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "f759989f7bb0bc25b9ef50f07c6489a40e87b4aaca6b7f3d13d762bf68e5971d"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1014",
+        "path_group": "Kite/trajectory_0014",
+        "split": null,
+        "position_shape": [
+          8843,
+          3
+        ],
+        "position_sha256": "63e33a8cbdf0bbc9274444f93a2cdf6afbefe8c2b661a9f24c10ab2bcddf9ee4"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1015",
+        "path_group": "Kite/trajectory_0015",
+        "split": null,
+        "position_shape": [
+          8798,
+          3
+        ],
+        "position_sha256": "a78c13838dde7f9bfd04667226e40535f12c7514e18f2e961da202d4a3d37553"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1016",
+        "path_group": "Kite/trajectory_0016",
+        "split": null,
+        "position_shape": [
+          8798,
+          3
+        ],
+        "position_sha256": "df716d2fb4e9ea5309d37bd3dbca5e5f3a810f7ef11b9acd7e1e1c42b6e5e49a"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1017",
+        "path_group": "Kite/trajectory_0017",
+        "split": null,
+        "position_shape": [
+          8808,
+          3
+        ],
+        "position_sha256": "392a979185aa7689df2da42d0faedfd33b8cd1b7ac0a76acce16a8c5ee0956bf"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1018",
+        "path_group": "Kite/trajectory_0018",
+        "split": null,
+        "position_shape": [
+          8828,
+          3
+        ],
+        "position_sha256": "ae38a3d2c7c6bad00c6f4f72cc262817c4089fb5b0faa60473002d24cd57dcd9"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1019",
+        "path_group": "Kite/trajectory_0019",
+        "split": null,
+        "position_shape": [
+          8824,
+          3
+        ],
+        "position_sha256": "4e6c45d847116697235625ffcefff5a404bcf5b9b1e4b0ebf28329bd04b12389"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1020",
+        "path_group": "Kite/trajectory_0020",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "e05d0dc8b16ca024c7fde67604f3c3809f7dea5586c1c7a228f9cd2ccf8068a5"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1021",
+        "path_group": "Kite/trajectory_0021",
+        "split": "train",
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "18a15f851b2b85d6bce3c2c7b94adfb6d2068db42940768544ed97217b10e207"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1022",
+        "path_group": "Kite/trajectory_0022",
+        "split": null,
+        "position_shape": [
+          8811,
+          3
+        ],
+        "position_sha256": "e1f83f0ffa268c3a1026f01b4c39ece49a1f14f3d1412f5f41018e7bd53b58a5"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1023",
+        "path_group": "Kite/trajectory_0023",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "4c9cef3ed8763aeded3a9f5c23c45b5cbe246ec16da7d1756a6a39f18f41ce1d"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1024",
+        "path_group": "Kite/trajectory_0024",
+        "split": null,
+        "position_shape": [
+          9022,
+          3
+        ],
+        "position_sha256": "e840c187890badc0576fe602aa7821517dc27d6ebdf3a6c76311ae260e70150d"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1025",
+        "path_group": "Kite/trajectory_0025",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "5fde8d6ff70e7545e44af80d50648f3ea0500bfb64e780f00b45e8309ecf2820"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1026",
+        "path_group": "Kite/trajectory_0026",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "fb13da59e011e27775281cd94b8976c31f18606b40ab2d2ea2122025bd7007db"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1027",
+        "path_group": "Kite/trajectory_0027",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "64b2d66c23f34486660558ed341944760df524dfc741385d7be39a02c7bf72b8"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1028",
+        "path_group": "Kite/trajectory_0028",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "e4848446e03bd77415ca0b3c1dc221c87b5d11e0c1d7bba3942912ff1d0793e6"
+      },
+      {
+        "trajectory": "Kite_training/sunset/trajectory_1029",
+        "path_group": "Kite/trajectory_0029",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "0970b862ed5da7858ef8020ab9565be28b660d1e71867fadf2661979cf956dbf"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4000",
+        "path_group": "PLE/trajectory_0000",
+        "split": "val",
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "8e80e4debb396f21aacda3120c4daa272049235fb8ebb3467d3cdd3d8a4a5446"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4001",
+        "path_group": "PLE/trajectory_0001",
+        "split": "train",
+        "position_shape": [
+          8815,
+          3
+        ],
+        "position_sha256": "9aac1e63f1501d7676d88488a6149b7026390e52835c27edc6d31b16ad9a6dce"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4002",
+        "path_group": "PLE/trajectory_0002",
+        "split": "train",
+        "position_shape": [
+          8817,
+          3
+        ],
+        "position_sha256": "926f8eda37ba5f3e391bda52c705a01f9bd212e5d4187457dbc24dc8caebb978"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4003",
+        "path_group": "PLE/trajectory_0003",
+        "split": "test",
+        "position_shape": [
+          8816,
+          3
+        ],
+        "position_sha256": "32fc4c2489a7ab01bc69dc882f3564b94074c23a5d0bac56bab1f61b5057ea50"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4004",
+        "path_group": "PLE/trajectory_0004",
+        "split": "train",
+        "position_shape": [
+          8815,
+          3
+        ],
+        "position_sha256": "9abf17071d4a26277f1419bd21527ae3f8ff1dce531d531e025327ce24dc2f1f"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4005",
+        "path_group": "PLE/trajectory_0005",
+        "split": "train",
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "bf1fcc75041c4d5f3ceca1d840544f90372608127fa0c73965adc10d0e499221"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4006",
+        "path_group": "PLE/trajectory_0006",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "908c9312a56896866754e0b9dcdf7a4fd2a4965fe54f40898167b03e959904e8"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4007",
+        "path_group": "PLE/trajectory_0007",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "51afd2be5d5acc3e74425113e2a7e7f55c8af95e948ae4d3aba189ec2efd240e"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4008",
+        "path_group": "PLE/trajectory_0008",
+        "split": null,
+        "position_shape": [
+          8821,
+          3
+        ],
+        "position_sha256": "8d3dcba81bf497056afb4446deeecb971522101c1d4fd7a0739f91eb3c2af5f5"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4009",
+        "path_group": "PLE/trajectory_0009",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "35a5139b060d5a82c2ee197d80b9ab320c60674853dfcdbaa427d93da2979164"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4010",
+        "path_group": "PLE/trajectory_0010",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "6d28d364b62e48ce017650a72057f3c61be6ddd3a9a7e5349fc7ffdf14caf18e"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4011",
+        "path_group": "PLE/trajectory_0011",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "277ad6bbeb4e968c91c7ffdf7926f103c4871f544b562adc83146b2f55c9fe88"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4012",
+        "path_group": "PLE/trajectory_0012",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "1c32f6993bda087764af2c95d51c4c0be38d38a91c66fa25916f894b893034d8"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4013",
+        "path_group": "PLE/trajectory_0013",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "d822ca06b6ca0268cb5b9d045d0f6505d9b8f1e9982d8cc0d4e38600f2398ecd"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4014",
+        "path_group": "PLE/trajectory_0014",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "9475e158232ca1201c1445baf97e358e70c97e4c01d14f7da11c9636fcb228f2"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4015",
+        "path_group": "PLE/trajectory_0015",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "37fdff87a5a7d83a7ef2fe5bcaa4630748615ca565ca0d6e79fe4512ba97b2e9"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4016",
+        "path_group": "PLE/trajectory_0016",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "8ab4ceef5b6630c7daba45357c20ef4c81779614baf082a4fe53fefaaee98827"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4017",
+        "path_group": "PLE/trajectory_0017",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "ca2ee991b9759b1ca667a137c8450741383520f04b1bda6fec8c4679aa63479a"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4018",
+        "path_group": "PLE/trajectory_0018",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "2c5d876476370ba48e8bbd590223a942f2939f332c6dce7449f31179955e73af"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4019",
+        "path_group": "PLE/trajectory_0019",
+        "split": null,
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "aaf3d948578a2302c8eb98c7bf16466012c3bbb9e8a7534652fb90cc638b5399"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4020",
+        "path_group": "PLE/trajectory_0020",
+        "split": null,
+        "position_shape": [
+          8816,
+          3
+        ],
+        "position_sha256": "6cb66ce78d06dd794ddbbd69dc46c3caa0ba4c5ab06c8b3f0501b134d476d675"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4021",
+        "path_group": "PLE/trajectory_0021",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "fb10e62072166e76edaeac82a13d420ee1e7e9262d60e27b29a21358056a668d"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4022",
+        "path_group": "PLE/trajectory_0022",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "0df906bd1159cf3a130d6022f7130c314d646d901d496577b2363e1b094c8a30"
+      },
+      {
+        "trajectory": "PLE_training/fall/trajectory_4023",
+        "path_group": "PLE/trajectory_0023",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "d515d808fb16445d96523c426b459738a386902352685329b9db22b08098a6f7"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5000",
+        "path_group": "PLE/trajectory_0000",
+        "split": "val",
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "8e80e4debb396f21aacda3120c4daa272049235fb8ebb3467d3cdd3d8a4a5446"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5001",
+        "path_group": "PLE/trajectory_0001",
+        "split": "train",
+        "position_shape": [
+          8815,
+          3
+        ],
+        "position_sha256": "9aac1e63f1501d7676d88488a6149b7026390e52835c27edc6d31b16ad9a6dce"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5002",
+        "path_group": "PLE/trajectory_0002",
+        "split": "train",
+        "position_shape": [
+          8817,
+          3
+        ],
+        "position_sha256": "926f8eda37ba5f3e391bda52c705a01f9bd212e5d4187457dbc24dc8caebb978"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5003",
+        "path_group": "PLE/trajectory_0003",
+        "split": "test",
+        "position_shape": [
+          8816,
+          3
+        ],
+        "position_sha256": "32fc4c2489a7ab01bc69dc882f3564b94074c23a5d0bac56bab1f61b5057ea50"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5004",
+        "path_group": "PLE/trajectory_0004",
+        "split": "train",
+        "position_shape": [
+          8815,
+          3
+        ],
+        "position_sha256": "9abf17071d4a26277f1419bd21527ae3f8ff1dce531d531e025327ce24dc2f1f"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5005",
+        "path_group": "PLE/trajectory_0005",
+        "split": "train",
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "bf1fcc75041c4d5f3ceca1d840544f90372608127fa0c73965adc10d0e499221"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5006",
+        "path_group": "PLE/trajectory_0006",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "908c9312a56896866754e0b9dcdf7a4fd2a4965fe54f40898167b03e959904e8"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5007",
+        "path_group": "PLE/trajectory_0007",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "51afd2be5d5acc3e74425113e2a7e7f55c8af95e948ae4d3aba189ec2efd240e"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5008",
+        "path_group": "PLE/trajectory_0008",
+        "split": null,
+        "position_shape": [
+          8821,
+          3
+        ],
+        "position_sha256": "8d3dcba81bf497056afb4446deeecb971522101c1d4fd7a0739f91eb3c2af5f5"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5009",
+        "path_group": "PLE/trajectory_0009",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "35a5139b060d5a82c2ee197d80b9ab320c60674853dfcdbaa427d93da2979164"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5010",
+        "path_group": "PLE/trajectory_0010",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "6d28d364b62e48ce017650a72057f3c61be6ddd3a9a7e5349fc7ffdf14caf18e"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5011",
+        "path_group": "PLE/trajectory_0011",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "277ad6bbeb4e968c91c7ffdf7926f103c4871f544b562adc83146b2f55c9fe88"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5012",
+        "path_group": "PLE/trajectory_0012",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "1c32f6993bda087764af2c95d51c4c0be38d38a91c66fa25916f894b893034d8"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5013",
+        "path_group": "PLE/trajectory_0013",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "d822ca06b6ca0268cb5b9d045d0f6505d9b8f1e9982d8cc0d4e38600f2398ecd"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5014",
+        "path_group": "PLE/trajectory_0014",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "9475e158232ca1201c1445baf97e358e70c97e4c01d14f7da11c9636fcb228f2"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5015",
+        "path_group": "PLE/trajectory_0015",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "37fdff87a5a7d83a7ef2fe5bcaa4630748615ca565ca0d6e79fe4512ba97b2e9"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5016",
+        "path_group": "PLE/trajectory_0016",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "8ab4ceef5b6630c7daba45357c20ef4c81779614baf082a4fe53fefaaee98827"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5017",
+        "path_group": "PLE/trajectory_0017",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "ca2ee991b9759b1ca667a137c8450741383520f04b1bda6fec8c4679aa63479a"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5018",
+        "path_group": "PLE/trajectory_0018",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "2c5d876476370ba48e8bbd590223a942f2939f332c6dce7449f31179955e73af"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5019",
+        "path_group": "PLE/trajectory_0019",
+        "split": null,
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "aaf3d948578a2302c8eb98c7bf16466012c3bbb9e8a7534652fb90cc638b5399"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5020",
+        "path_group": "PLE/trajectory_0020",
+        "split": null,
+        "position_shape": [
+          8816,
+          3
+        ],
+        "position_sha256": "6cb66ce78d06dd794ddbbd69dc46c3caa0ba4c5ab06c8b3f0501b134d476d675"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5021",
+        "path_group": "PLE/trajectory_0021",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "fb10e62072166e76edaeac82a13d420ee1e7e9262d60e27b29a21358056a668d"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5022",
+        "path_group": "PLE/trajectory_0022",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "0df906bd1159cf3a130d6022f7130c314d646d901d496577b2363e1b094c8a30"
+      },
+      {
+        "trajectory": "PLE_training/spring/trajectory_5023",
+        "path_group": "PLE/trajectory_0023",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "d515d808fb16445d96523c426b459738a386902352685329b9db22b08098a6f7"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6000",
+        "path_group": "PLE/trajectory_0000",
+        "split": "val",
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "8e80e4debb396f21aacda3120c4daa272049235fb8ebb3467d3cdd3d8a4a5446"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6001",
+        "path_group": "PLE/trajectory_0001",
+        "split": "train",
+        "position_shape": [
+          8815,
+          3
+        ],
+        "position_sha256": "9aac1e63f1501d7676d88488a6149b7026390e52835c27edc6d31b16ad9a6dce"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6002",
+        "path_group": "PLE/trajectory_0002",
+        "split": "train",
+        "position_shape": [
+          8817,
+          3
+        ],
+        "position_sha256": "926f8eda37ba5f3e391bda52c705a01f9bd212e5d4187457dbc24dc8caebb978"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6003",
+        "path_group": "PLE/trajectory_0003",
+        "split": "test",
+        "position_shape": [
+          8816,
+          3
+        ],
+        "position_sha256": "32fc4c2489a7ab01bc69dc882f3564b94074c23a5d0bac56bab1f61b5057ea50"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6004",
+        "path_group": "PLE/trajectory_0004",
+        "split": "train",
+        "position_shape": [
+          8815,
+          3
+        ],
+        "position_sha256": "9abf17071d4a26277f1419bd21527ae3f8ff1dce531d531e025327ce24dc2f1f"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6005",
+        "path_group": "PLE/trajectory_0005",
+        "split": "train",
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "bf1fcc75041c4d5f3ceca1d840544f90372608127fa0c73965adc10d0e499221"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6006",
+        "path_group": "PLE/trajectory_0006",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "908c9312a56896866754e0b9dcdf7a4fd2a4965fe54f40898167b03e959904e8"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6007",
+        "path_group": "PLE/trajectory_0007",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "51afd2be5d5acc3e74425113e2a7e7f55c8af95e948ae4d3aba189ec2efd240e"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6008",
+        "path_group": "PLE/trajectory_0008",
+        "split": null,
+        "position_shape": [
+          8821,
+          3
+        ],
+        "position_sha256": "8d3dcba81bf497056afb4446deeecb971522101c1d4fd7a0739f91eb3c2af5f5"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6009",
+        "path_group": "PLE/trajectory_0009",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "35a5139b060d5a82c2ee197d80b9ab320c60674853dfcdbaa427d93da2979164"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6010",
+        "path_group": "PLE/trajectory_0010",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "6d28d364b62e48ce017650a72057f3c61be6ddd3a9a7e5349fc7ffdf14caf18e"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6011",
+        "path_group": "PLE/trajectory_0011",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "277ad6bbeb4e968c91c7ffdf7926f103c4871f544b562adc83146b2f55c9fe88"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6012",
+        "path_group": "PLE/trajectory_0012",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "1c32f6993bda087764af2c95d51c4c0be38d38a91c66fa25916f894b893034d8"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6013",
+        "path_group": "PLE/trajectory_0013",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "d822ca06b6ca0268cb5b9d045d0f6505d9b8f1e9982d8cc0d4e38600f2398ecd"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6014",
+        "path_group": "PLE/trajectory_0014",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "9475e158232ca1201c1445baf97e358e70c97e4c01d14f7da11c9636fcb228f2"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6015",
+        "path_group": "PLE/trajectory_0015",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "37fdff87a5a7d83a7ef2fe5bcaa4630748615ca565ca0d6e79fe4512ba97b2e9"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6016",
+        "path_group": "PLE/trajectory_0016",
+        "split": null,
+        "position_shape": [
+          8823,
+          3
+        ],
+        "position_sha256": "8ab4ceef5b6630c7daba45357c20ef4c81779614baf082a4fe53fefaaee98827"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6017",
+        "path_group": "PLE/trajectory_0017",
+        "split": null,
+        "position_shape": [
+          8818,
+          3
+        ],
+        "position_sha256": "ca2ee991b9759b1ca667a137c8450741383520f04b1bda6fec8c4679aa63479a"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6018",
+        "path_group": "PLE/trajectory_0018",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "2c5d876476370ba48e8bbd590223a942f2939f332c6dce7449f31179955e73af"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6019",
+        "path_group": "PLE/trajectory_0019",
+        "split": null,
+        "position_shape": [
+          8822,
+          3
+        ],
+        "position_sha256": "aaf3d948578a2302c8eb98c7bf16466012c3bbb9e8a7534652fb90cc638b5399"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6020",
+        "path_group": "PLE/trajectory_0020",
+        "split": null,
+        "position_shape": [
+          8816,
+          3
+        ],
+        "position_sha256": "6cb66ce78d06dd794ddbbd69dc46c3caa0ba4c5ab06c8b3f0501b134d476d675"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6021",
+        "path_group": "PLE/trajectory_0021",
+        "split": null,
+        "position_shape": [
+          8813,
+          3
+        ],
+        "position_sha256": "fb10e62072166e76edaeac82a13d420ee1e7e9262d60e27b29a21358056a668d"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6022",
+        "path_group": "PLE/trajectory_0022",
+        "split": null,
+        "position_shape": [
+          8819,
+          3
+        ],
+        "position_sha256": "0df906bd1159cf3a130d6022f7130c314d646d901d496577b2363e1b094c8a30"
+      },
+      {
+        "trajectory": "PLE_training/winter/trajectory_6023",
+        "path_group": "PLE/trajectory_0023",
+        "split": null,
+        "position_shape": [
+          8820,
+          3
+        ],
+        "position_sha256": "d515d808fb16445d96523c426b459738a386902352685329b9db22b08098a6f7"
+      }
+    ],
+    "problems": [],
+    "method": "Canonical weather-group exclusion plus independent exact float64 position-stream SHA-256 across all available climates; sensors only, no images/depth. Exact stream hashes do not prove geographic scene independence."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "published_commit": "e27ed7e289b9af6ea30a35ff234dfbcd8dfe168a",
+  "protocol_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+  "final_test_studies_executed": 1,
+  "test_frames": 4436,
+  "policies": 5,
+  "validation_measured_repetitions_per_policy": 3,
+  "cuda_available": false,
+  "device": "CPU, FP32, 2 torch threads",
+  "tests": "58 passed, 1 optional real-data integration skipped; one NVML warning because CUDA unavailable",
+  "pre_exposure_unit_fixture_issue": "Initial synthetic gate test failed because its temporary ledger parent was absent. Parent creation fixed before final-test exposure. Initial/fixed logs retained under artifacts/. All 58 tests then passed before exposure.",
+  "preservation": "84 published files and 426 original local evidence/checkpoint files match their before hashes; counts overlap for pilot evidence",
+  "operations": "No real-data retraining, scheduler/model edits, hyperparameter search, merge or push. No second test evaluation. Saved-result verification reads CSV/JSON only.",
+  "source_sha256": {
+    "scripts/final_study.py": "8f95186f4da2a13ed3db0ad03281e67ff0224579d40763c6fe9bb199b1a64d1d",
+    "scripts/verify_final_study.py": "6d7b7b7a66cb6cdbf707169ad5b70159daca0d7a35604efcb960d986a2681da4",
+    "src/aerodepth_lite/final_study.py": "b1254445bef7e34c0e62b3179bf71ffa3e286257545e0e982ee4a56f6e710687",
+    "tests/test_final_study.py": "e7395bd90caaf84c9bb998634179ee72083f6422afabf39931ff1d5f16099eb9"
+  }
+}

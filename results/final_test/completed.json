@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "protocol_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+  "frames": 4436,
+  "policies": [
+    "every",
+    "fixed2",
+    "fixed5",
+    "v2_selected",
+    "fixed_validation_budget"
+  ],
+  "wall_seconds_including_IO_scoring_instrumentation": 470.71726243600096,
+  "excluded_warmup_calls": 50,
+  "actual_measured_model_calls": 12849
+}

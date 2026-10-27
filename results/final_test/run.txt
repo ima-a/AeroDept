@@ -1,0 +1,17 @@
+Final test 250/4436 current frames scored for all policies; wall 24.2s
+Final test 500/4436 current frames scored for all policies; wall 48.6s
+Final test 750/4436 current frames scored for all policies; wall 71.3s
+Final test 1000/4436 current frames scored for all policies; wall 94.5s
+Final test 1250/4436 current frames scored for all policies; wall 122.6s
+Final test 1500/4436 current frames scored for all policies; wall 145.7s
+Final test 1750/4436 current frames scored for all policies; wall 171.9s
+Final test 2000/4436 current frames scored for all policies; wall 199.4s
+Final test 2250/4436 current frames scored for all policies; wall 224.1s
+Final test 2500/4436 current frames scored for all policies; wall 250.3s
+Final test 2750/4436 current frames scored for all policies; wall 278.9s
+Final test 3000/4436 current frames scored for all policies; wall 307.2s
+Final test 3250/4436 current frames scored for all policies; wall 337.5s
+Final test 3500/4436 current frames scored for all policies; wall 363.1s
+Final test 3750/4436 current frames scored for all policies; wall 390.3s
+Final test 4000/4436 current frames scored for all policies; wall 419.8s
+Final test 4250/4436 current frames scored for all policies; wall 447.7s

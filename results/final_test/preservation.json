@@ -1,0 +1,12 @@
+{
+  "published": {
+    "checked_files": 84,
+    "passed": true,
+    "changed": {}
+  },
+  "private": {
+    "checked_files": 426,
+    "passed": true,
+    "changed": {}
+  }
+}

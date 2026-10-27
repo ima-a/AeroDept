@@ -1,0 +1,6 @@
+{
+  "protocol_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+  "output": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/final_study/test",
+  "started_utc": "2026-10-24T10:37:31.249956+00:00",
+  "state": "Exposure authorized; any failure/partial output must be retained. No automatic retry."
+}

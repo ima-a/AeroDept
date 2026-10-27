@@ -1,0 +1,36 @@
+{
+  "protocol_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+  "timing_completion_sha256": "dfd98ac5ff602b601e74c62d129eb47d30c7fa745792e478d3f72e443c15177e",
+  "environment": {
+    "python": "3.13.12",
+    "torch": "2.14.1+cu130",
+    "numpy": "2.5.3",
+    "torchvision": "0.29.1+cu130",
+    "device": "cpu",
+    "precision": "FP32",
+    "threads": 2,
+    "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+    "cpu": "Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz",
+    "cuda_available": false,
+    "time_utc": "2026-10-24T10:37:31.250802+00:00"
+  },
+  "source_hashes": {
+    "src/aerodepth_lite/__init__.py": "160e4df2f66f5e602b27e875a1c3ef5e944ffa6e697463c1f8382eea6687743e",
+    "src/aerodepth_lite/artifacts.py": "c4d53d74d4d0cf27e107ccd59ed6620b75ec32d70c6ba7b34ccf159f13b109f4",
+    "src/aerodepth_lite/cli.py": "e3a2ec777973ce58ee7667d1010904869a77b08101bea29eb017507846f180d8",
+    "src/aerodepth_lite/config.py": "4bb2ab56926d0c35924f7cd8f964e2785f8cf231fa2bee41e939adb2f12d10a6",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/final_study.py": "b1254445bef7e34c0e62b3179bf71ffa3e286257545e0e982ee4a56f6e710687",
+    "src/aerodepth_lite/inference.py": "993995d53d9b6ca85ce6ad4f2304360c7c5372d36131703582ab15b8adbe1df7",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0",
+    "src/aerodepth_lite/losses.py": "98ccd32235b803adfacbf311f89a1438878fb333e91656a21a89f628c9e54adb",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/model.py": "444a36fb5f804dbe589fad5da0ced0f6635f31c5ed80adf8c95fbd9d276ee8d1",
+    "src/aerodepth_lite/replay.py": "150f6973d3a53c68f66015ce0d8e213a142c5bc12fef66a8cec0b9536c8d17e7",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/research.py": "4b88e8602e11cc1000d913039db086ea773894a935ae4e0c00b29e505b81f90c",
+    "src/aerodepth_lite/scheduler.py": "7287389c65969a7ee8c9256205685422095dfb6fd0f77d61ecc22c2d51ed9038",
+    "src/aerodepth_lite/scheduler_v2.py": "82389f5fb9bf1c80634fef602c754282924c3208c06e971ea0abd952bc52e154",
+    "src/aerodepth_lite/train.py": "5b7d9a00924f6f14bc94903972e40a5160131d308acd551e6716de39f90faf35"
+  }
+}

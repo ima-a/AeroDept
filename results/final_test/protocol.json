@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "frozen_at_utc": "2026-10-24T10:23:38.636234+00:00",
+  "published_commit": "e27ed7e289b9af6ea30a35ff234dfbcd8dfe168a",
+  "status": "Frozen before any final-test image/depth access in this task; no performance-driven amendments permitted",
+  "model": {
+    "architecture": "mobilenet_v3_small_depth",
+    "parameters": 1027489,
+    "weights": "models/mobilenet_v3_small_epoch4.state_dict.pt",
+    "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+    "original_checkpoint_sha256": "c1d4279cdaf594d1c15bce1f4f1b6ae322c7ec3ef28349df1dd47d975818ebd8",
+    "metadata_sha256": "1f99776c4717f91abb035675560d9521ba0a11d7abe0212961e5facc63fb190f"
+  },
+  "manifest": {
+    "path": "results/expanded_validation/manifest.json.gz",
+    "uncompressed_sha256": "e7b093be69f1942f281a09563bd63efa479d4352de97da722fb0504208c1fbf5",
+    "test_groups": [
+      "Kite_training/sunny/trajectory_0004",
+      "PLE_training/spring/trajectory_5003"
+    ],
+    "test_frames": 4436,
+    "pilot_exclusions": [
+      "Kite/trajectory_0003",
+      "Kite/trajectory_0021"
+    ],
+    "grouping": "environment + numeric trajectory ID modulo 1000, all climates grouped; validate manifest and original pilot metadata before reading test imagery"
+  },
+  "preprocessing": {
+    "input": "RGB float32 [0,1], full frame bilinear align_corners=False resize 192x320; no augmentation/crop",
+    "normalization": "inside model once; mean [.485,.456,.406], std [.229,.224,.225]",
+    "target": "MidAir uint16 PNG reinterpreted float16 metres Euclidean camera range",
+    "mask": "finite GT in inclusive [0.1,1000]m before nearest depth/mask resize",
+    "prediction": "FP32 eval batch1, floor .1m, no upper clamp or fitted scaling"
+  },
+  "metrics": {
+    "overall": [
+      "absrel",
+      "rmse",
+      "delta1",
+      "delta2",
+      "delta3",
+      "valid_pixels"
+    ],
+    "near": [
+      "near_absrel",
+      "near_rmse",
+      "near_valid_pixels"
+    ],
+    "near_definition": "valid GT <10m",
+    "deltas": "strict ratio <1.25**k",
+    "aggregation": "pool additive valid-pixel sums/counts over every current frame including unwarped reused predictions; overall and every trajectory; RMSE sqrt pooled squared errors; events pooled counts, ages frame weighted; no averaging trajectory RMSE"
+  },
+  "v2": {
+    "id": "v2_02",
+    "config": {
+      "max_skip": 4,
+      "accel_change_scale": 2.0,
+      "gyro_scale": 0.5,
+      "visual_scale": 0.08,
+      "critical_risk": 0.9,
+      "extreme_motion": 0.9,
+      "extreme_visual": 0.9,
+      "decision_threshold": 0.65,
+      "motion_weight": 0.25,
+      "visual_weight": 0.3,
+      "risk_weight": 0.3,
+      "age_weight": 0.15,
+      "gps_speed_scale": 20.0
+    },
+    "selection_sha256": "d473fe3e35fc4cce1eaa9b3d32eb50d374c54bf20e0ed4772e64f00539f9293d",
+    "sensor_provenance": "simulated manifest IMU acceleration/gyro at camera ordinal floor(ordinal*100/25); simulated HDF5 gps/velocity floor(ordinal*frequency/25) zero-order hold (published validation frequency 1Hz). No privileged groundtruth velocity. Ideal common time origin and availability; no measured physical latency. Read only selected split GPS groups; reject insufficient/nonfinite samples. RGB thumbnail 36x64 compared to last inferred frame; risk previous prediction only, no GT mask."
+  },
+  "events": {
+    "definition": "valid-GT full-frame p10 <8m and (previous p10 >=8m or previous p10-current p10 >=2m), reset per trajectory; invalid/no-valid p10 infinity",
+    "rates": "missed-update = no fresh inference on event frame; not obstacle-detection correctness. Zero-event rates null/undefined. Delay to next inference same trajectory; unresolved right censored. Offline predicted p10 on GT-valid mask reported separately."
+  },
+  "freshness": {
+    "camera_hz": 25,
+    "v2_max_age_frames": 4,
+    "fixed2_max_age_frames": 1,
+    "fixed5_max_age_frames": 4,
+    "fixed_budget": "approximately uniform positions ceil(k*N/K), includes first frame; report realized max age; age excludes queuing and sensor latency",
+    "validation_selection_delay_limit_frames": 2,
+    "selection_limit_scope": "validation eligibility only; test violations retained, never used to tune"
+  },
+  "policies": [
+    "every",
+    "fixed2",
+    "fixed5",
+    "v2_selected",
+    "fixed_validation_budget"
+  ],
+  "fixed_budget": {
+    "numerator": 2455,
+    "denominator": 4410,
+    "source": "pooled frozen selected V2 validation calls; same fraction for all unseen trajectories",
+    "calls_rule": "K=ceil(N*2455/4410); infer at ceil(k*N/K), k=0..K-1",
+    "independent_of_test_predictions": true
+  },
+  "comparisons": {
+    "primary": "frozen V2 versus fixed_validation_budget",
+    "secondary": "all policies versus every-frame; V2 versus fixed2 and fixed5; all pairwise tabulation permitted, no new policy",
+    "retrospective": "omitted; no test-call-matched policy"
+  },
+  "primary_outcomes": [
+    "near_rmse and near_absrel with near pixel counts",
+    "overall absrel and rmse",
+    "actual model calls and scheduler+inference compute seconds",
+    "event missed-update rate, delay distribution, censoring and prediction ages"
+  ],
+  "timing": {
+    "device": "CPU (CUDA device nodes unavailable in current runtime); same hardware/software/FP32/two torch threads for all measurements",
+    "validation_repetitions": 3,
+    "validation_order": [
+      [
+        "v2_selected",
+        "fixed_validation_matched"
+      ],
+      [
+        "fixed_validation_matched",
+        "v2_selected"
+      ],
+      [
+        "v2_selected",
+        "fixed_validation_matched"
+      ]
+    ],
+    "validation_matched_calls": {
+      "Kite_training/foggy/trajectory_2003": 905,
+      "PLE_training/spring/trajectory_5000": 1550
+    },
+    "warmup": "10 excluded actual forward calls on first validation RGB before EACH measured policy repetition; test 10 identical first-test-frame forward calls per policy, excluded",
+    "boundaries": "scheduler CPU perf_counter includes thumbnail, motion/risk and decision; inference perf_counter covers host-to-device, actual forward and device-to-host, synchronized for CUDA if supported. Compute=sum scheduler+inference; preprocessing/I/O/scoring/logging excluded, wall separately reported. Preprocessed validation RGB cache allowed; cache generation excluded. Warmups counted separately. Single chronological test traversal with all five policies independently maintaining state; policy execution order cycles by frame to distribute order effects.",
+    "summary": "individual totals plus median,min,max and max-min spread per policy and per trajectory; no tuning from timing"
+  },
+  "study_control": "require completed three-repeat validation timing, isolation PASS, explicit --allow-final-test and hash-checked protocol; exclusive exposure ledger before first test pixel read. One study, no retries after exposure without explicit report; preserve partial failures. Existing validation runner stays validation-only.",
+  "limitations": [
+    "epoch4 chosen from 50 epochs by AMP validation AbsRel; FP32 audit did not reselect",
+    "eight V2 configs plus prior V1 selection on only two validation trajectories; exploratory selection bias; no isolated motion/RGB ablation",
+    "custom grouped simulation test with only two paths, not official benchmark; scene/domain overlap possible despite path separation",
+    "simulated sensors, ideal latency, reused unwarped estimates; floor saturation and far-depth errors; no measured energy, battery, correct obstacle detection or flight-safety improvement"
+  ],
+  "preservation": "all published weights/V1/V2/evidence immutable; no retraining, search, merge or push; regressions retained"
+}

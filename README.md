@@ -1,6 +1,8 @@
 # AeroDepth-Lite
 
-A reproducible research checkpoint for monocular drone-camera range prediction and causal inference scheduling. The repository includes the actual trained **epoch-4 MobileNetV3-Small depth weights**, a CPU inference path, frozen relative split manifest, validation results, original negative scheduler study, and bounded scheduler-v2 results. **Final-test evaluation remains undone.** This is simulation research, not a flight-safety system.
+A reproducible research checkpoint for monocular drone-camera range prediction and causal inference scheduling. The repository includes the actual trained **epoch-4 MobileNetV3-Small depth weights**, a CPU inference path, frozen relative split manifest, validation results, original negative scheduler study, and bounded scheduler-v2 results. A [frozen final-test study](results/final_test/REPORT.md) now reports all five policies on 4,436 held-out frames, after repeated validation timing and split-isolation checks. This is simulation research, not a flight-safety system.
+
+The final result is mixed: against the fixed validation-budget rule, V2 improves pooled near RMSE by 1.89%, but uses 14.86% more model calls and 26.53% more CPU compute; maximum event-update delay rises from 1 to 4 frames. PLE near RMSE regresses. Model depth errors remain substantial. [Protocol, guarded runner and reproduction](docs/final_study.md). Published training/validation/V1/V2/pilot evidence remains unchanged; no retraining or additional policy search was performed.
 
 ## Install
 
@@ -95,4 +97,4 @@ evidence/           distinct historical pilot
 # datasets/, runs/, artifacts/, environments and private tooling stay local/ignored
 ```
 
-See [NOTICE.md](NOTICE.md) for dataset attribution and upstream source/weight terms. Remaining work includes a frozen final protocol and one untouched final-test evaluation, broader independent trajectories, and any actual deployment/energy investigation; none is claimed complete here.
+See [NOTICE.md](NOTICE.md) for dataset attribution and upstream source/weight terms. Broader independent trajectories and actual deployment/energy investigation remain future work. The completed final study supports no measured energy, battery or flight-safety improvement.

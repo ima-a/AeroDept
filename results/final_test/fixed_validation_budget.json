@@ -1,0 +1,236 @@
+{
+  "overall": {
+    "frames": 4436,
+    "inference_calls": 2470,
+    "skip_rate": 0.4431920649233544,
+    "mean_prediction_age": 0.4431920649233544,
+    "max_prediction_age": 1,
+    "inference_reasons": {
+      "first_frame": 2,
+      "fixed_refresh": 2468
+    },
+    "all_reasons": {
+      "first_frame": 2,
+      "fixed_skip": 1966,
+      "fixed_refresh": 2468
+    },
+    "scheduler_seconds": 0.008006971069335123,
+    "inference_seconds": 36.814151128904996,
+    "critical_events": {
+      "count": 24,
+      "fresh_on_event": 13,
+      "missed_update_rate": 0.4583333333333333,
+      "observed_delays_frames": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "mean_observed_delay_frames": 0.4583333333333333,
+      "max_observed_delay_frames": 1,
+      "right_censored_count": 0,
+      "offline_near_estimated_on_event": 7,
+      "offline_near_estimation_rate": 0.2916666666666667,
+      "observed_delays_seconds": [
+        0.0,
+        0.0,
+        0.0,
+        0.04,
+        0.04,
+        0.04,
+        0.0,
+        0.0,
+        0.04,
+        0.04,
+        0.04,
+        0.0,
+        0.04,
+        0.04,
+        0.0,
+        0.0,
+        0.04,
+        0.0,
+        0.04,
+        0.0,
+        0.0,
+        0.04,
+        0.0,
+        0.0
+      ]
+    },
+    "metrics": {
+      "absrel": 0.47390578741652084,
+      "rmse": 108.58059130603054,
+      "delta1": 0.3695575698707111,
+      "delta2": 0.6293867250318204,
+      "delta3": 0.7711159824719905,
+      "near_absrel": 0.8047533881445098,
+      "near_rmse": 6.045131475754911,
+      "valid_pixels": 187182008,
+      "near_valid_pixels": 48016063
+    },
+    "compute_seconds": 36.82215809997433
+  },
+  "per_trajectory": {
+    "Kite_training/sunny/trajectory_0004": {
+      "frames": 2232,
+      "inference_calls": 1243,
+      "skip_rate": 0.44310035842293904,
+      "mean_prediction_age": 0.44310035842293904,
+      "max_prediction_age": 1,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_refresh": 1242
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_skip": 989,
+        "fixed_refresh": 1242
+      },
+      "scheduler_seconds": 0.003946720018575434,
+      "inference_seconds": 18.62386314300784,
+      "critical_events": {
+        "count": 7,
+        "fresh_on_event": 4,
+        "missed_update_rate": 0.42857142857142855,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "mean_observed_delay_frames": 0.42857142857142855,
+        "max_observed_delay_frames": 1,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 2,
+        "offline_near_estimation_rate": 0.2857142857142857,
+        "observed_delays_seconds": [
+          0.0,
+          0.0,
+          0.0,
+          0.04,
+          0.04,
+          0.04,
+          0.0
+        ]
+      },
+      "metrics": {
+        "absrel": 0.49730450884828753,
+        "rmse": 157.33418854455587,
+        "delta1": 0.252730398092645,
+        "delta2": 0.4963625147884556,
+        "delta3": 0.6610205942260877,
+        "near_absrel": 1.3912321919302646,
+        "near_rmse": 10.206384461378015,
+        "valid_pixels": 85971621,
+        "near_valid_pixels": 6789662
+      },
+      "compute_seconds": 18.627809863026414
+    },
+    "PLE_training/spring/trajectory_5003": {
+      "frames": 2204,
+      "inference_calls": 1227,
+      "skip_rate": 0.4432849364791288,
+      "mean_prediction_age": 0.44328493647912887,
+      "max_prediction_age": 1,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_refresh": 1226
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_skip": 977,
+        "fixed_refresh": 1226
+      },
+      "scheduler_seconds": 0.004060251050759689,
+      "inference_seconds": 18.190287985897157,
+      "critical_events": {
+        "count": 17,
+        "fresh_on_event": 9,
+        "missed_update_rate": 0.47058823529411764,
+        "observed_delays_frames": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.47058823529411764,
+        "max_observed_delay_frames": 1,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.29411764705882354,
+        "observed_delays_seconds": [
+          0.0,
+          0.04,
+          0.04,
+          0.04,
+          0.0,
+          0.04,
+          0.04,
+          0.0,
+          0.0,
+          0.04,
+          0.0,
+          0.04,
+          0.0,
+          0.0,
+          0.04,
+          0.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "absrel": 0.4540301000444686,
+        "rmse": 27.882179946465715,
+        "delta1": 0.46879463073291083,
+        "delta2": 0.7423821134089725,
+        "delta3": 0.8646348323912644,
+        "near_absrel": 0.7081649702549735,
+        "near_rmse": 5.040440189360351,
+        "valid_pixels": 101210387,
+        "near_valid_pixels": 41226401
+      },
+      "compute_seconds": 18.194348236947917
+    }
+  },
+  "mode": "actual FP32 calls; every current frame scored",
+  "warmup_calls_excluded": 10
+}
