@@ -1,0 +1,81 @@
+{
+  "at_utc": "2026-10-26T06:12:32.594608+00:00",
+  "power": [
+    {
+      "name": "BAT1",
+      "type": "Battery",
+      "status": "Not charging",
+      "capacity": "100"
+    },
+    {
+      "name": "ucsi-source-psy-USBC000:001",
+      "type": "USB",
+      "online": "0",
+      "status": "Not charging"
+    },
+    {
+      "name": "ACAD",
+      "type": "Mains",
+      "online": "1"
+    }
+  ],
+  "gpu": {
+    "name": "NVIDIA GeForce GTX 1650",
+    "total_memory_bytes": 3911581696,
+    "torch": "2.14.1+cu130",
+    "cuda_build": "13.0"
+  },
+  "competing_gpu_processes": [
+    "780, /usr/bin/kwin_wayland, 5 MiB"
+  ],
+  "disk": {
+    "/home/Ima/work/Projects/DL-projects/AeroDept": {
+      "total": 87625433088,
+      "used": 74278768640,
+      "free": 8848486400
+    },
+    "/run/media/Ima/Low storage": {
+      "total": 2000153473024,
+      "used": 1266093707264,
+      "free": 734059765760
+    }
+  },
+  "unit": "aerodepth-expanded-20261026t114024-recovery.service",
+  "freeze_sha256": "d49ab655ff5b1a94e7809e24bad60eac1cdba26bd7c9ce44853e924918e89d90",
+  "manifest_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "initialization_sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+  "numerical_recovery_integration": "Inspected shared Experiment.step/save/restore and verified unchanged source hashes against existing 43 tests, exact recovery/resume, persistent failure and all-arm smoke/KD evidence. No diagnosis/tests repeated.",
+  "fresh_training_state": true,
+  "current_sampled_image_files": 132,
+  "working_tree_head": "e27ed7e289b9af6ea30a35ff234dfbcd8dfe168a",
+  "working_tree_status": [
+    " M README.md",
+    " M src/aerodepth_lite/losses.py",
+    " M src/aerodepth_lite/model.py",
+    "?? configs/expanded_kd.yaml",
+    "?? configs/expanded_supervised.yaml",
+    "?? configs/expanded_teacher.yaml",
+    "?? docs/archive_locations.md",
+    "?? docs/expanded_experiment_20261025/",
+    "?? docs/expanded_numerical_recovery.md",
+    "?? docs/expanded_training.md",
+    "?? docs/final_study.md",
+    "?? results/expanded_launch_20261026T104420/",
+    "?? results/expanded_numerics_20261026T110550/",
+    "?? results/expanded_preparation_20261026/",
+    "?? results/expanded_workflow_20261026/",
+    "?? results/final_test/",
+    "?? scripts/expanded_sequence.py",
+    "?? scripts/expanded_training.py",
+    "?? scripts/final_study.py",
+    "?? scripts/verify_final_study.py",
+    "?? src/aerodepth_lite/expanded.py",
+    "?? src/aerodepth_lite/final_study.py",
+    "?? tests/test_expanded.py",
+    "?? tests/test_final_study.py"
+  ],
+  "user_service_persistence": [
+    "State=active",
+    "Linger=no"
+  ]
+}

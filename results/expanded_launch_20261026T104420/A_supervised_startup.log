@@ -1,0 +1,16 @@
+
+{"launch_utc": "2026-10-26T05:24:23.312178+00:00", "argv": ["/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python", "-u", "-B", "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/scripts/expanded_training.py", "train", "--config", "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/configs/expanded_supervised.yaml", "--dataset-root", "/run/media/Ima/Low storage/AeroDepth/MidAir", "--manifest", "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/results/expanded_preparation_20261026/manifest_train_val.json.gz", "--reservations", "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/results/expanded_preparation_20261026/reservations.json", "--device", "cuda", "--output", "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/runs/A_supervised", "--confirm-full-training", "--initialize", "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/models/mobilenet_v3_small_epoch4.state_dict.pt"]}
+Traceback (most recent call last):
+  File "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/scripts/expanded_training.py", line 5, in <module>
+    main()
+    ~~~~^^
+  File "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/src/aerodepth_lite/expanded.py", line 760, in main
+    full_training(resumed_engine or factory(), out)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/src/aerodepth_lite/expanded.py", line 647, in full_training
+    rows = engine.train_epoch()
+  File "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/src/aerodepth_lite/expanded.py", line 475, in train_epoch
+    row = self.step(batch, trace)
+  File "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420/frozen/src/aerodepth_lite/expanded.py", line 453, in step
+    raise FloatingPointError('Nonfinite unscaled gradients')
+FloatingPointError: Nonfinite unscaled gradients

@@ -1,0 +1,11 @@
+{
+  "frozen_bundle_hashes_unchanged": true,
+  "protocol_freeze_sha256": "2b53a27cd4491843e92a7218a883158cbff6a6842ede83f966620497e7131de9",
+  "original_model_sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+  "original_best_sha256": "c1d4279cdaf594d1c15bce1f4f1b6ae322c7ec3ef28349df1dd47d975818ebd8",
+  "original_last_sha256": "b59f4a4a84becf5a974185117550794e8c26cb73db563b365cc8bb7d82c5cef2",
+  "later_stages_not_started": true,
+  "test_inputs_not_accessed": true,
+  "first_epoch_checkpoint_absent": true,
+  "no_settings_changed_or_retry_after_failure": true
+}

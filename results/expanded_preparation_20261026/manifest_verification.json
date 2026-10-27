@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "manifest_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "loader_counts": {
+    "train": 44098,
+    "val": 4410,
+    "test": 0
+  },
+  "contract_samples_checked": 12,
+  "validation_records_unchanged": true,
+  "test_records_withheld": true,
+  "reservations_sha256": "a525347120e77deadfefaeb96d72266ece05d16941c4356b421729f6c9e819a3"
+}

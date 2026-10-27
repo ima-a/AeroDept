@@ -1,0 +1,68 @@
+{
+  "exception": "Nonfinite unscaled gradients",
+  "batch_number": 39,
+  "successful_updates": 38,
+  "scale": 1024.0,
+  "frames": [
+    {
+      "trajectory_id": "Kite_training/foggy/trajectory_2005",
+      "frame_index": 1686,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2005/001686.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2005/001686.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 13.905489847229546,
+        "vy": -2.722820183851127,
+        "vz": 1.5014154559338522,
+        "ax": -1.546733827134585,
+        "ay": 0.029366339978241597,
+        "az": -8.94895189885256,
+        "wx": 0.005598860692095574,
+        "wy": 0.012998932843004848,
+        "wz": -0.04243331246262066
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    {
+      "trajectory_id": "PLE_training/fall/trajectory_4006",
+      "frame_index": 597,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/color_left/trajectory_4006/000597.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/depth/trajectory_4006/000597.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 8.340948826787553,
+        "vy": -12.443300760156006,
+        "vz": 2.1011311126905685,
+        "ax": -1.3226487901798023,
+        "ay": 0.05540015988484556,
+        "az": -9.899258936320033,
+        "wx": 0.01098665207310575,
+        "wy": 0.033595603300658194,
+        "wz": -0.004511329824787015
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    }
+  ],
+  "gradients": {
+    "finite": false,
+    "bad_parameters": [
+      {
+        "parameter": "encoder.1.block.1.fc2.weight",
+        "nan": 8,
+        "inf": 0,
+        "elements": 128
+      },
+      {
+        "parameter": "encoder.1.block.1.fc2.bias",
+        "nan": 1,
+        "inf": 0,
+        "elements": 16
+      }
+    ],
+    "largest_finite_absolute_gradient": 15.147881507873535
+  }
+}

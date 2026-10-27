@@ -1,0 +1,73 @@
+[
+  {
+    "argv": [
+      "systemd-inhibit",
+      "--what=sleep",
+      "--mode=block",
+      "--why=Bounded numerical-fix smoke supervised",
+      "--",
+      "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+      "-u",
+      "-B",
+      "scripts/expanded_training.py",
+      "smoke",
+      "--config",
+      "configs/expanded_supervised.yaml",
+      "--dataset-root",
+      "/run/media/Ima/Low storage/AeroDepth/MidAir",
+      "--output",
+      "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_numerics_20261026T110550/smoke_supervised",
+      "--initialize",
+      "models/mobilenet_v3_small_epoch4.state_dict.pt"
+    ],
+    "returncode": 0
+  },
+  {
+    "argv": [
+      "systemd-inhibit",
+      "--what=sleep",
+      "--mode=block",
+      "--why=Bounded numerical-fix smoke teacher",
+      "--",
+      "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+      "-u",
+      "-B",
+      "scripts/expanded_training.py",
+      "smoke",
+      "--config",
+      "configs/expanded_teacher.yaml",
+      "--dataset-root",
+      "/run/media/Ima/Low storage/AeroDepth/MidAir",
+      "--output",
+      "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_numerics_20261026T110550/smoke_teacher"
+    ],
+    "returncode": 0
+  },
+  {
+    "argv": [
+      "systemd-inhibit",
+      "--what=sleep",
+      "--mode=block",
+      "--why=Bounded numerical-fix smoke kd",
+      "--",
+      "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+      "-u",
+      "-B",
+      "scripts/expanded_training.py",
+      "smoke",
+      "--config",
+      "configs/expanded_kd.yaml",
+      "--dataset-root",
+      "/run/media/Ima/Low storage/AeroDepth/MidAir",
+      "--output",
+      "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_numerics_20261026T110550/smoke_kd",
+      "--initialize",
+      "models/mobilenet_v3_small_epoch4.state_dict.pt",
+      "--teacher",
+      "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_numerics_20261026T110550/smoke_teacher/last.pt",
+      "--teacher-sha256",
+      "177f5087c6ff57d1b55ffd8c790e829aa36d50dc4f866d3c7980ed24da39b7b7"
+    ],
+    "returncode": 0
+  }
+]

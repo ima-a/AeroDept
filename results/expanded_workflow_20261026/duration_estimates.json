@@ -1,0 +1,37 @@
+{
+  "status": "short-sample extrapolations, proposals pending review",
+  "common_student_validation_proxy_hours": 0.24080321216802075,
+  "arms": {
+    "supervised": {
+      "train_epoch_hours": 1.6522457891778626,
+      "validation_proxy_hours": 0.24080321216802075,
+      "checkpoint_hours_per_epoch": 0.0003793396925054064,
+      "epoch_including_overheads_hours": 1.8934283410383888,
+      "epochs": 10,
+      "budget_hours": 18.934283410383888,
+      "budget_hours_plus_20_percent": 22.721140092460665
+    },
+    "teacher": {
+      "train_epoch_hours": 3.481523180026777,
+      "validation_proxy_hours": 0.16246073326988153,
+      "checkpoint_hours_per_epoch": 0.004705167101662179,
+      "epoch_including_overheads_hours": 3.648689080398321,
+      "epochs": 20,
+      "budget_hours": 72.97378160796642,
+      "budget_hours_plus_20_percent": 87.5685379295597
+    },
+    "kd": {
+      "train_epoch_hours": 1.823589754840631,
+      "validation_proxy_hours": 0.24080321216802075,
+      "checkpoint_hours_per_epoch": 0.00014188076722752561,
+      "epoch_including_overheads_hours": 2.064534847775879,
+      "epochs": 10,
+      "budget_hours": 20.645348477758787,
+      "budget_hours_plus_20_percent": 24.774418173310544
+    }
+  },
+  "sequential_total_hours": 112.55341349610909,
+  "sequential_total_hours_plus_20_percent": 135.0640961953309,
+  "online_teacher_seconds_per_kd_example": 0.05320789450161101,
+  "caveat": "Two warm-up/eight measured batches per arm; OS cache uncontrolled. Validation proxy uses eight TRAIN inference frames, not validation images. Common maximum student proxy reduces spurious A/C overhead differences. 20% is a planning allowance, not a confidence interval."
+}

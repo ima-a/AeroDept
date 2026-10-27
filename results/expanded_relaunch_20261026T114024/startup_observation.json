@@ -1,0 +1,99 @@
+{
+  "observed_utc": "2026-10-26T06:17:27.613851+00:00",
+  "stage": "A_supervised",
+  "status": "running",
+  "progress": {
+    "epoch": 1,
+    "batches": 750,
+    "global_step": 750,
+    "loss": 13.105461120605469,
+    "amp_scale": 128.0,
+    "overflow_retries_total": 3
+  },
+  "supervisor_pid": 170165,
+  "trainer_pid": 170179,
+  "unit": "aerodepth-expanded-20261026t114024-recovery.service",
+  "service": [
+    "ActiveState=active",
+    "SubState=running",
+    "Restart=no",
+    "MainPID=170160",
+    "ControlGroup=/user.slice/user-1000.slice/user@1000.service/app.slice/aerodepth-expanded-20261026t114024-recovery.service",
+    "KillMode=control-group"
+  ],
+  "inhibitors": [
+    "WHO                UID  USER PID    COMM            WHAT                                                                       WHY                                            MODE",
+    "NetworkManager     0    root 522    NetworkManager  sleep                                                                      NetworkManager needs to turn off networks      delay",
+    "Realtime Kit       0    root 859    rtkit-daemon    sleep                                                                      Demote realtime scheduling and stop canary.    delay",
+    "UPower             0    root 950    upowerd         sleep                                                                      Pause device polling                           delay",
+    "AeroDepth-expanded 1000 Ima  170160 systemd-inhibit sleep:handle-lid-switch                                                    Authorized expanded teacher student experiment block",
+    "Google Chrome      1000 Ima  169312 chrome          shutdown                                                                   Saving browser state                           delay",
+    "PowerDevil         1000 Ima  903    org_kde_powerde handle-power-key:handle-suspend-key:handle-hibernate-key:handle-lid-switch KDE handles power events                       block",
+    "code               1000 Ima  158586 code            shutdown                                                                   Ensure a clean shutdown                        delay",
+    "code               1000 Ima  158586 code            sleep                                                                      Application cleanup before suspend             delay",
+    "",
+    "8 inhibitors listed."
+  ],
+  "cuda_processes": [
+    "pid, process_name, used_gpu_memory [MiB]",
+    "780, /usr/bin/kwin_wayland, 5 MiB",
+    "170179, /home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python, 220 MiB"
+  ],
+  "first_100_plus_startup_proof": {
+    "observed_utc": "2026-10-26T06:15:10.290720+00:00",
+    "status": "running",
+    "stage": "A_supervised",
+    "supervisor_pid": 170165,
+    "child_pid": 170179,
+    "progress": {
+      "epoch": 1,
+      "batches": 250,
+      "global_step": 250,
+      "loss": 12.761478424072266,
+      "amp_scale": 128.0,
+      "overflow_retries_total": 3
+    },
+    "retry_events_seen": 3,
+    "log_bytes": 2285,
+    "finite_loss_and_gradient_checks_passed": true,
+    "successful_updates_match_batch_count": true,
+    "service": [
+      "ActiveState=active",
+      "SubState=running",
+      "Restart=no",
+      "MainPID=170160",
+      "ControlGroup=/user.slice/user-1000.slice/user@1000.service/app.slice/aerodepth-expanded-20261026t114024-recovery.service",
+      "KillMode=control-group"
+    ],
+    "inhibitors": [
+      "WHO                UID  USER PID    COMM            WHAT                                                                       WHY                                            MODE",
+      "NetworkManager     0    root 522    NetworkManager  sleep                                                                      NetworkManager needs to turn off networks      delay",
+      "Realtime Kit       0    root 859    rtkit-daemon    sleep                                                                      Demote realtime scheduling and stop canary.    delay",
+      "UPower             0    root 950    upowerd         sleep                                                                      Pause device polling                           delay",
+      "AeroDepth-expanded 1000 Ima  170160 systemd-inhibit sleep:handle-lid-switch                                                    Authorized expanded teacher student experiment block",
+      "Google Chrome      1000 Ima  169312 chrome          shutdown                                                                   Saving browser state                           delay",
+      "PowerDevil         1000 Ima  903    org_kde_powerde handle-power-key:handle-suspend-key:handle-hibernate-key:handle-lid-switch KDE handles power events                       block",
+      "code               1000 Ima  158586 code            shutdown                                                                   Ensure a clean shutdown                        delay",
+      "code               1000 Ima  158586 code            sleep                                                                      Application cleanup before suspend             delay",
+      "",
+      "8 inhibitors listed."
+    ],
+    "cuda_processes": [
+      "pid, process_name, used_gpu_memory [MiB]",
+      "780, /usr/bin/kwin_wayland, 5 MiB",
+      "170179, /home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python, 220 MiB"
+    ]
+  },
+  "log_bytes": 2536,
+  "log_path": "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T114024_recovery/logs/A_supervised.log",
+  "freeze_sha256": "d49ab655ff5b1a94e7809e24bad60eac1cdba26bd7c9ce44853e924918e89d90",
+  "old_failed_bundle_index_unchanged": true,
+  "original_checkpoints_unchanged": {
+    "models/mobilenet_v3_small_epoch4.state_dict.pt": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+    "runs/local_mobilenet/main/best.pt": "c1d4279cdaf594d1c15bce1f4f1b6ae322c7ec3ef28349df1dd47d975818ebd8",
+    "runs/local_mobilenet/main/last.pt": "b59f4a4a84becf5a974185117550794e8c26cb73db563b365cc8bb7d82c5cef2"
+  },
+  "settings_unchanged": true,
+  "no_tests_or_diagnosis_repeated": true,
+  "no_test_input_access": true
+}

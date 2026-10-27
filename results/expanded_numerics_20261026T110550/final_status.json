@@ -1,0 +1,39 @@
+{
+  "old_unit": [
+    "ActiveState=failed",
+    "MainPID=0",
+    "ExecMainStatus=1"
+  ],
+  "gpu_processes": [
+    "pid, process_name, used_gpu_memory [MiB]",
+    "780, /usr/bin/kwin_wayland, 5 MiB"
+  ],
+  "no_full_training_restart": true,
+  "no_validation_or_test_image_reads": true,
+  "working_tree_status": [
+    " M README.md",
+    " M src/aerodepth_lite/losses.py",
+    " M src/aerodepth_lite/model.py",
+    "?? configs/expanded_kd.yaml",
+    "?? configs/expanded_supervised.yaml",
+    "?? configs/expanded_teacher.yaml",
+    "?? docs/archive_locations.md",
+    "?? docs/expanded_experiment_20261025/",
+    "?? docs/expanded_numerical_recovery.md",
+    "?? docs/expanded_training.md",
+    "?? docs/final_study.md",
+    "?? results/expanded_launch_20261026T104420/",
+    "?? results/expanded_numerics_20261026T110550/",
+    "?? results/expanded_preparation_20261026/",
+    "?? results/expanded_workflow_20261026/",
+    "?? results/final_test/",
+    "?? scripts/expanded_sequence.py",
+    "?? scripts/expanded_training.py",
+    "?? scripts/final_study.py",
+    "?? scripts/verify_final_study.py",
+    "?? src/aerodepth_lite/expanded.py",
+    "?? src/aerodepth_lite/final_study.py",
+    "?? tests/test_expanded.py",
+    "?? tests/test_final_study.py"
+  ]
+}

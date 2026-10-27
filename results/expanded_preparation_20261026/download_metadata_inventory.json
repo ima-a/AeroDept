@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "method": "Filename/stat metadata only under download root, symlinks not followed; audit hook rejected all dataset payload opens. No ZIP/image contents inspected.",
+  "regular_files": [
+    {
+      "path": "Kite_training/foggy/sensor_records.zip",
+      "bytes": 46316161
+    },
+    {
+      "path": "Kite_training/foggy/color_left/trajectory_2005/frames.zip",
+      "bytes": 294755292
+    },
+    {
+      "path": "Kite_training/foggy/color_left/trajectory_2006/frames.zip",
+      "bytes": 378929802
+    },
+    {
+      "path": "Kite_training/foggy/depth/trajectory_2005/frames.zip",
+      "bytes": 1825685408
+    },
+    {
+      "path": "Kite_training/foggy/depth/trajectory_2006/frames.zip",
+      "bytes": 1834844408
+    },
+    {
+      "path": "Kite_training/foggy/depth/trajectory_2006/frames.zip.partial-preserved.1792942629009141787",
+      "bytes": 1030683665
+    },
+    {
+      "path": "Kite_training/sunny/sensor_records.zip",
+      "bytes": 46324096
+    },
+    {
+      "path": "Kite_training/sunny/color_left/trajectory_0005/frames.zip",
+      "bytes": 705558723
+    },
+    {
+      "path": "Kite_training/sunny/depth/trajectory_0005/frames.zip",
+      "bytes": 1825773810
+    },
+    {
+      "path": "Kite_training/sunset/sensor_records.zip",
+      "bytes": 46311589
+    },
+    {
+      "path": "Kite_training/sunset/color_left/trajectory_1006/frames.zip",
+      "bytes": 546368011
+    },
+    {
+      "path": "Kite_training/sunset/depth/trajectory_1006/frames.zip",
+      "bytes": 1834666474
+    },
+    {
+      "path": "PLE_training/fall/sensor_records.zip",
+      "bytes": 37457984
+    },
+    {
+      "path": "PLE_training/fall/color_left/trajectory_4006/frames.zip",
+      "bytes": 176678885
+    },
+    {
+      "path": "PLE_training/fall/depth/trajectory_4006/frames.zip",
+      "bytes": 1184768704
+    },
+    {
+      "path": "PLE_training/spring/sensor_records.zip",
+      "bytes": 37455812
+    },
+    {
+      "path": "PLE_training/spring/color_left/trajectory_5001/frames.zip",
+      "bytes": 422160178
+    },
+    {
+      "path": "PLE_training/spring/color_left/trajectory_5002/frames.zip",
+      "bytes": 453069577
+    },
+    {
+      "path": "PLE_training/spring/color_left/trajectory_5004/frames.zip",
+      "bytes": 181625430
+    },
+    {
+      "path": "PLE_training/spring/color_left/trajectory_5005/frames.zip",
+      "bytes": 224308068
+    },
+    {
+      "path": "PLE_training/spring/color_left/trajectory_5006/frames.zip",
+      "bytes": 177762071
+    },
+    {
+      "path": "PLE_training/spring/color_left/trajectory_5007/frames.zip",
+      "bytes": 161029246
+    },
+    {
+      "path": "PLE_training/spring/depth/trajectory_5001/frames.zip",
+      "bytes": 1006938303
+    },
+    {
+      "path": "PLE_training/spring/depth/trajectory_5002/frames.zip",
+      "bytes": 1257152745
+    },
+    {
+      "path": "PLE_training/spring/depth/trajectory_5004/frames.zip",
+      "bytes": 1450247150
+    },
+    {
+      "path": "PLE_training/spring/depth/trajectory_5005/frames.zip",
+      "bytes": 1753119118
+    },
+    {
+      "path": "PLE_training/spring/depth/trajectory_5006/frames.zip",
+      "bytes": 1171052042
+    },
+    {
+      "path": "PLE_training/spring/depth/trajectory_5007/frames.zip",
+      "bytes": 1346362621
+    },
+    {
+      "path": "PLE_training/winter/sensor_records.zip",
+      "bytes": 37457536
+    },
+    {
+      "path": "PLE_training/winter/color_left/trajectory_6007/frames.zip",
+      "bytes": 158180704
+    },
+    {
+      "path": "PLE_training/winter/depth/trajectory_6007/frames.zip",
+      "bytes": 1030882954
+    }
+  ],
+  "symlinks": [],
+  "unexpected": [],
+  "expected_complete_archives": 30,
+  "preserved_partials": 1,
+  "scope": "Actual expansion download root only; staging and original dataset excluded."
+}

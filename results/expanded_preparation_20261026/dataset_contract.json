@@ -1,0 +1,25 @@
+{
+  "quantity": "Euclidean camera range in metres",
+  "input": "full-frame RGB [0,1]",
+  "image_size": [
+    192,
+    320
+  ],
+  "rgb_resize": "bilinear align_corners=False",
+  "target_and_mask_resize": "nearest",
+  "depth_encoding": "uint16 PNG bits reinterpreted float16",
+  "finite_valid_range_metres": [
+    0.1,
+    1000.0
+  ],
+  "near_range_metres": "<10",
+  "invalid_handling": "mask before resize, invalid depth replaced with zero",
+  "normalization": "ImageNet once inside model",
+  "supervised_loss_weights": [
+    1.0,
+    0.2,
+    0.1
+  ],
+  "contract_changed": false,
+  "model_or_training_code_changed": false
+}

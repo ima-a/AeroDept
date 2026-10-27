@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "recorded_source_hashes_match": true,
+  "result_receipts_match_sha256sums": true,
+  "documentation_local_links_exist": true,
+  "documented_bash_commands_syntax_checked_without_execution": true,
+  "changed_historical_modules": [
+    "losses.py",
+    "model.py"
+  ],
+  "active_expanded_training_processes": [],
+  "full_training_launched": false,
+  "test_rgb_depth_access": false,
+  "git_status_receipt": "artifacts/expanded_workflow_20261026T095357/final_git_status.txt"
+}

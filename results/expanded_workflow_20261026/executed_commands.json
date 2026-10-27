@@ -1,0 +1,161 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "systemd-inhibit",
+        "--what=sleep",
+        "--mode=block",
+        "--why=Bounded smoke supervised source identity check",
+        "--",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+        "-B",
+        "scripts/expanded_training.py",
+        "smoke",
+        "--config",
+        "configs/expanded_supervised.yaml",
+        "--dataset-root",
+        "/run/media/Ima/Low storage/AeroDepth/MidAir",
+        "--output",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/smoke_supervised",
+        "--initialize",
+        "models/mobilenet_v3_small_epoch4.state_dict.pt"
+      ],
+      "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/smoke_supervised.log",
+      "returncode": 0,
+      "elapsed_seconds": 12.317683219909668
+    },
+    {
+      "argv": [
+        "systemd-inhibit",
+        "--what=sleep",
+        "--mode=block",
+        "--why=Bounded smoke teacher source identity check",
+        "--",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+        "-B",
+        "scripts/expanded_training.py",
+        "smoke",
+        "--config",
+        "configs/expanded_teacher.yaml",
+        "--dataset-root",
+        "/run/media/Ima/Low storage/AeroDepth/MidAir",
+        "--output",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/smoke_teacher"
+      ],
+      "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/smoke_teacher.log",
+      "returncode": 0,
+      "elapsed_seconds": 24.097496032714844
+    },
+    {
+      "argv": [
+        "systemd-inhibit",
+        "--what=sleep",
+        "--mode=block",
+        "--why=Bounded smoke kd source identity check",
+        "--",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+        "-B",
+        "scripts/expanded_training.py",
+        "smoke",
+        "--config",
+        "configs/expanded_kd.yaml",
+        "--dataset-root",
+        "/run/media/Ima/Low storage/AeroDepth/MidAir",
+        "--output",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/smoke_kd",
+        "--initialize",
+        "models/mobilenet_v3_small_epoch4.state_dict.pt",
+        "--teacher",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/smoke_teacher/last.pt",
+        "--teacher-sha256",
+        "65c9ffd8b07abbc8ca128e16940f42c16e84852173baecf1555828e76c70a320"
+      ],
+      "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/smoke_kd.log",
+      "returncode": 0,
+      "elapsed_seconds": 21.013907432556152
+    },
+    {
+      "argv": [
+        "systemd-inhibit",
+        "--what=sleep",
+        "--mode=block",
+        "--why=Bounded benchmark supervised source identity check",
+        "--",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+        "-B",
+        "scripts/expanded_training.py",
+        "benchmark",
+        "--config",
+        "configs/expanded_supervised.yaml",
+        "--dataset-root",
+        "/run/media/Ima/Low storage/AeroDepth/MidAir",
+        "--output",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/benchmark_supervised",
+        "--initialize",
+        "models/mobilenet_v3_small_epoch4.state_dict.pt"
+      ],
+      "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/benchmark_supervised.log",
+      "returncode": 0,
+      "elapsed_seconds": 16.711573123931885
+    },
+    {
+      "argv": [
+        "systemd-inhibit",
+        "--what=sleep",
+        "--mode=block",
+        "--why=Bounded benchmark teacher source identity check",
+        "--",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+        "-B",
+        "scripts/expanded_training.py",
+        "benchmark",
+        "--config",
+        "configs/expanded_teacher.yaml",
+        "--dataset-root",
+        "/run/media/Ima/Low storage/AeroDepth/MidAir",
+        "--output",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/benchmark_teacher"
+      ],
+      "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/benchmark_teacher.log",
+      "returncode": 0,
+      "elapsed_seconds": 27.895416498184204
+    },
+    {
+      "argv": [
+        "systemd-inhibit",
+        "--what=sleep",
+        "--mode=block",
+        "--why=Bounded benchmark kd source identity check",
+        "--",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+        "-B",
+        "scripts/expanded_training.py",
+        "benchmark",
+        "--config",
+        "configs/expanded_kd.yaml",
+        "--dataset-root",
+        "/run/media/Ima/Low storage/AeroDepth/MidAir",
+        "--output",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/benchmark_kd",
+        "--initialize",
+        "models/mobilenet_v3_small_epoch4.state_dict.pt",
+        "--teacher",
+        "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/smoke_teacher/last.pt",
+        "--teacher-sha256",
+        "65c9ffd8b07abbc8ca128e16940f42c16e84852173baecf1555828e76c70a320"
+      ],
+      "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification/benchmark_kd.log",
+      "returncode": 0,
+      "elapsed_seconds": 18.40762495994568
+    }
+  ],
+  "environment": {
+    "TORCH_HOME": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/local/torch-cache",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2"
+  },
+  "regression_command": "env -u MIDAIR_ROOT OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -B -m pytest -q -m 'not integration' -p no:cacheprovider",
+  "regression_log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/regression_source_lock.log",
+  "earlier_checks": "Other smoke/benchmark verification folders are retained as earlier source revisions; verification contains the definitive checks.",
+  "full_training_executed": false
+}

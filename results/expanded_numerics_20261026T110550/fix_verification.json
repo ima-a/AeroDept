@@ -1,0 +1,2539 @@
+{
+  "passed": true,
+  "captured_batch": {
+    "loss": 33.769989013671875,
+    "supervised_loss": 33.769989013671875,
+    "kd_loss": 0.0,
+    "examples": 2,
+    "compute_seconds": 3.7679777029989054,
+    "teacher_seconds": 0.0,
+    "overflow_retries": 1,
+    "overflow_events": [
+      {
+        "event": "amp_gradient_overflow_retry",
+        "global_step": 38,
+        "retry": 1,
+        "scale_before": 1024.0,
+        "scale_after": 512.0,
+        "bad_parameters": [
+          "encoder.1.block.1.fc2.weight",
+          "encoder.1.block.1.fc2.bias"
+        ],
+        "frames": [
+          [
+            "Kite_training/foggy/trajectory_2005",
+            1686
+          ],
+          [
+            "PLE_training/fall/trajectory_4006",
+            597
+          ]
+        ]
+      }
+    ],
+    "amp_scale_start": 1024.0,
+    "amp_scale_end": 512.0,
+    "rgb_sha256": "e9450008b29f7ea7ebf2896efa57759395833e762a3c6abd5a107a38702d3ac9",
+    "frames": [
+      [
+        "Kite_training/foggy/trajectory_2005",
+        1686
+      ],
+      [
+        "PLE_training/fall/trajectory_4006",
+        597
+      ]
+    ]
+  },
+  "single_pass_reference_model_optimizer_rng_equal": true,
+  "batchnorm_counters_advance_once": true,
+  "recovered_checkpoint_continuation_exact": true,
+  "persistent_fault_stops_with_zero_updates_and_restored_buffers_rng": true,
+  "gradient_policy": {
+    "name": "same_batch_amp_backoff_v1",
+    "max_overflow_retries": 8,
+    "restore_before_retry": "all model buffers and training/data RNG",
+    "optimizer_updates": "one finite update per batch; no skipped batches",
+    "nonfinite_prediction_or_loss": "fatal",
+    "persistent_nonfinite_gradients": "fatal"
+  },
+  "source_sha256": {
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+  },
+  "train_only_prefix_batches": 100,
+  "prefix_rows": [
+    {
+      "loss": 11.9514741897583,
+      "supervised_loss": 11.9514741897583,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.12200964300427586,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "4163b58c7a37a69d3dcd3644ed38aa823ac2ca6c6bd369260828042b677f3a79",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5005",
+          1700
+        ],
+        [
+          "Kite_training/sunny/trajectory_0000",
+          595
+        ]
+      ],
+      "batch_number": 1
+    },
+    {
+      "loss": 13.519621849060059,
+      "supervised_loss": 13.519621849060059,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09473607900144998,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "ef50a2e72640cfea9d52c69bdf10a472a80888df4700ab518cdd27508e63b92a",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          1768
+        ],
+        [
+          "PLE_training/winter/trajectory_6005",
+          1066
+        ]
+      ],
+      "batch_number": 2
+    },
+    {
+      "loss": 12.971927642822266,
+      "supervised_loss": 12.971927642822266,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09206577300210483,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "8117a3fe55bf496ca55ccc16a5c39c6388f63ce9cdbe97053c65e5bc1f789a2b",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0000",
+          478
+        ],
+        [
+          "Kite_training/sunset/trajectory_1006",
+          1754
+        ]
+      ],
+      "batch_number": 3
+    },
+    {
+      "loss": 15.079020500183105,
+      "supervised_loss": 15.079020500183105,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09495774599781726,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "19f1fbb1ddba5ba0e581198fa835173f085d734dbd21716859e512ef373c211e",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5004",
+          170
+        ],
+        [
+          "Kite_training/sunny/trajectory_0000",
+          263
+        ]
+      ],
+      "batch_number": 4
+    },
+    {
+      "loss": 24.03697395324707,
+      "supervised_loss": 24.03697395324707,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09516822900332045,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "826f1e32e40b8a4eedc20f37d3c1a1c3efc2ae66fb9631072d164e414a47e5f3",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6007",
+          1943
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          1844
+        ]
+      ],
+      "batch_number": 5
+    },
+    {
+      "loss": 29.36733055114746,
+      "supervised_loss": 29.36733055114746,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09676720999414101,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "d27c6ca26a4c3026e9eaa8c06cf8e67985443a95f237858ca41d8f4ad4418751",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1006",
+          1882
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          2177
+        ]
+      ],
+      "batch_number": 6
+    },
+    {
+      "loss": 17.61650276184082,
+      "supervised_loss": 17.61650276184082,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09193170900107361,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "99cfd18f3880c2f588332381518cd8820057d8bc2b9136f2451cc94dd992b1dd",
+      "frames": [
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          1133
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          306
+        ]
+      ],
+      "batch_number": 7
+    },
+    {
+      "loss": 13.943370819091797,
+      "supervised_loss": 13.943370819091797,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09220624899899121,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "e2d98fbbb70ff0c452231ffdb981b4d6212733a9915354b4749e7257ef125128",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5006",
+          881
+        ],
+        [
+          "Kite_training/sunset/trajectory_1006",
+          1599
+        ]
+      ],
+      "batch_number": 8
+    },
+    {
+      "loss": 16.64914894104004,
+      "supervised_loss": 16.64914894104004,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0957631330093136,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "80b985171b386af4ebc9b87c0703a6090f05960cde3cd7f748b87de7494238ec",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4001",
+          1927
+        ],
+        [
+          "Kite_training/sunset/trajectory_1006",
+          431
+        ]
+      ],
+      "batch_number": 9
+    },
+    {
+      "loss": 10.711827278137207,
+      "supervised_loss": 10.711827278137207,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09497778899094556,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "7291b6f64821fdd41afd3dd3420e5c0cdd709c0fd7b3cec050ae03ee0c551e3d",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5004",
+          705
+        ],
+        [
+          "PLE_training/spring/trajectory_5002",
+          1254
+        ]
+      ],
+      "batch_number": 10
+    },
+    {
+      "loss": 25.337203979492188,
+      "supervised_loss": 25.337203979492188,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09328913800709415,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "57ee43a3c1144397392f99cfa028b8796d11f19354cb240dca45368118111164",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2021",
+          855
+        ],
+        [
+          "Kite_training/sunny/trajectory_0005",
+          928
+        ]
+      ],
+      "batch_number": 11
+    },
+    {
+      "loss": 19.056499481201172,
+      "supervised_loss": 19.056499481201172,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09153690699895378,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "82416883d690cfd5827e768acf32ee06f783d6bb00a14befd7a87ebdc1a66ec6",
+      "frames": [
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          1029
+        ],
+        [
+          "PLE_training/winter/trajectory_6005",
+          2199
+        ]
+      ],
+      "batch_number": 12
+    },
+    {
+      "loss": 8.498390197753906,
+      "supervised_loss": 8.498390197753906,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0951624089939287,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "9e05c0fa07aed9c6afcefe53d21dae0a20d010ad2963a8145bf888e4d0e5946b",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0000",
+          1539
+        ],
+        [
+          "PLE_training/winter/trajectory_6002",
+          1837
+        ]
+      ],
+      "batch_number": 13
+    },
+    {
+      "loss": 10.413867950439453,
+      "supervised_loss": 10.413867950439453,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09951088301022537,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "a0ce1075d27ab4c0121a17cd30752259e0a61b5cbd2f1ef8080cd768c7a07efe",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          701
+        ],
+        [
+          "PLE_training/spring/trajectory_5002",
+          373
+        ]
+      ],
+      "batch_number": 14
+    },
+    {
+      "loss": 8.392756462097168,
+      "supervised_loss": 8.392756462097168,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10182273600366898,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "cbf2f0bd80d5e2982af5a7a0898e7c3ea8e17d863f1a64ab280dab29276772e1",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0000",
+          402
+        ],
+        [
+          "PLE_training/spring/trajectory_5006",
+          1486
+        ]
+      ],
+      "batch_number": 15
+    },
+    {
+      "loss": 13.220121383666992,
+      "supervised_loss": 13.220121383666992,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0928214159939671,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "fde2912d103745d4eb1b6896101849a6048de746f417c8b794885274be13f74d",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2006",
+          1761
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          378
+        ]
+      ],
+      "batch_number": 16
+    },
+    {
+      "loss": 22.679397583007812,
+      "supervised_loss": 22.679397583007812,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0986798230005661,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "e143b3bea0502a1a210dfb0d9f4e46e9409007b49631f7b4ce7e51f00e8b1634",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0005",
+          1106
+        ],
+        [
+          "PLE_training/spring/trajectory_5005",
+          2011
+        ]
+      ],
+      "batch_number": 17
+    },
+    {
+      "loss": 20.737770080566406,
+      "supervised_loss": 20.737770080566406,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09339576899947133,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "acd959e50d37ff3de5647700486388384fd92b578a30312ca679e6ce9b7b89ac",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2021",
+          631
+        ],
+        [
+          "PLE_training/winter/trajectory_6007",
+          957
+        ]
+      ],
+      "batch_number": 18
+    },
+    {
+      "loss": 15.503575325012207,
+      "supervised_loss": 15.503575325012207,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09212232498975936,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "b9bc9c79102a462ab1d9d1eac2ffc7f8a565046e9e9fd15c7dd8514d42ea288c",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5005",
+          808
+        ],
+        [
+          "PLE_training/winter/trajectory_6002",
+          232
+        ]
+      ],
+      "batch_number": 19
+    },
+    {
+      "loss": 13.658812522888184,
+      "supervised_loss": 13.658812522888184,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09413962099642958,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "763b6173ec7b59e4974829a1ad3705668a576df1b79f6279bc69c59d18fed43b",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4001",
+          4
+        ],
+        [
+          "Kite_training/sunset/trajectory_1001",
+          871
+        ]
+      ],
+      "batch_number": 20
+    },
+    {
+      "loss": 12.3371000289917,
+      "supervised_loss": 12.3371000289917,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09629618100007065,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "960a37f0fee349bda8fbd22edd848fc843b26c1c230a0e9f5001c45621ce0b82",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          1089
+        ],
+        [
+          "Kite_training/sunny/trajectory_0005",
+          1244
+        ]
+      ],
+      "batch_number": 21
+    },
+    {
+      "loss": 16.66480827331543,
+      "supervised_loss": 16.66480827331543,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09408875099325087,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "1c92d75cc8e8b1978dcdee22f30cadf68163524b3b5585ad75ccccdf95d7cb40",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5007",
+          1592
+        ],
+        [
+          "PLE_training/fall/trajectory_4001",
+          1266
+        ]
+      ],
+      "batch_number": 22
+    },
+    {
+      "loss": 25.52909278869629,
+      "supervised_loss": 25.52909278869629,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09259369398932904,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "723545ce50a1c15125f270646658c7ba0c245fc6f951c87168c54ac602604aa3",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5007",
+          192
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          2149
+        ]
+      ],
+      "batch_number": 23
+    },
+    {
+      "loss": 13.15932846069336,
+      "supervised_loss": 13.15932846069336,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09832090500276536,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "84b323d1e194b5cfe291056cf456ca2596a5e59e859bff641b2086a5c48cf55b",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5006",
+          487
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          782
+        ]
+      ],
+      "batch_number": 24
+    },
+    {
+      "loss": 41.7318229675293,
+      "supervised_loss": 41.7318229675293,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09272262999729719,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "a902aa96bba2b74b392f1331d044658d779424f3e435f3708916c7c9752ac331",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1001",
+          89
+        ],
+        [
+          "Kite_training/sunset/trajectory_1001",
+          74
+        ]
+      ],
+      "batch_number": 25
+    },
+    {
+      "loss": 13.937994956970215,
+      "supervised_loss": 13.937994956970215,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09521522499562707,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "c0741e57a9d3330839f5f35a7bea8eadcf8d401844961f5e94b6c2ee7529ee4a",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          2064
+        ],
+        [
+          "Kite_training/sunset/trajectory_1006",
+          1585
+        ]
+      ],
+      "batch_number": 26
+    },
+    {
+      "loss": 15.193575859069824,
+      "supervised_loss": 15.193575859069824,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09620199899654835,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "7aa2988166d49c6638bdac9c7319b80c9b63d18c72d4e7207969f932d4482cd3",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          1716
+        ],
+        [
+          "PLE_training/winter/trajectory_6007",
+          194
+        ]
+      ],
+      "batch_number": 27
+    },
+    {
+      "loss": 9.477127075195312,
+      "supervised_loss": 9.477127075195312,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09694729899638332,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "f57688a610c1f5b91817d597de168bac7eabad806dd919977c344483b052dd97",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4006",
+          1385
+        ],
+        [
+          "PLE_training/spring/trajectory_5001",
+          1955
+        ]
+      ],
+      "batch_number": 28
+    },
+    {
+      "loss": 21.402130126953125,
+      "supervised_loss": 21.402130126953125,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10449795999738853,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "326d8977b1edded26f3881aeed7cff66aea06380a6072e9febb8c5ba669c9159",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5007",
+          1539
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          1174
+        ]
+      ],
+      "batch_number": 29
+    },
+    {
+      "loss": 20.58451271057129,
+      "supervised_loss": 20.58451271057129,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09350762599206064,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "e29b09ef7b9bf78d1cd7aad47038b59ba6385f069e477da81c19f9a3787ddfb2",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1001",
+          2095
+        ],
+        [
+          "PLE_training/winter/trajectory_6007",
+          1263
+        ]
+      ],
+      "batch_number": 30
+    },
+    {
+      "loss": 22.731107711791992,
+      "supervised_loss": 22.731107711791992,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09398876500199549,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "07be606fb3bbb7a9d1d41f4457c0700497dc3d06538c35ce057a1e8a1cc27bef",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6007",
+          1767
+        ],
+        [
+          "PLE_training/spring/trajectory_5001",
+          1699
+        ]
+      ],
+      "batch_number": 31
+    },
+    {
+      "loss": 10.594199180603027,
+      "supervised_loss": 10.594199180603027,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09440549700229894,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "eed59a4db42958346bd0741cef3dc1c500ea698643d95f0dc97db3295c89cbb2",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5004",
+          1486
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          92
+        ]
+      ],
+      "batch_number": 32
+    },
+    {
+      "loss": 13.813947677612305,
+      "supervised_loss": 13.813947677612305,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09848514500481542,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "64564317e4c2dba3256288196bda1d5659d0cccc810d3c4a52d8e9fd1e016f2a",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6005",
+          1966
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          611
+        ]
+      ],
+      "batch_number": 33
+    },
+    {
+      "loss": 6.241816520690918,
+      "supervised_loss": 6.241816520690918,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10131548299978022,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "ef38c9c6a51aa2ba04850c6b5cae6822fc3bcf2ae50a35f2b1a0769682255049",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5002",
+          1572
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          1389
+        ]
+      ],
+      "batch_number": 34
+    },
+    {
+      "loss": 17.800294876098633,
+      "supervised_loss": 17.800294876098633,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09652664900931995,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "0b4a93c11223e96faded47620f70e0890ba6d77ab62a37999906b50d029bf439",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0000",
+          1747
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          1797
+        ]
+      ],
+      "batch_number": 35
+    },
+    {
+      "loss": 15.020660400390625,
+      "supervised_loss": 15.020660400390625,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09844891598913819,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "4334491280312fc4eda2aceeeb8a0a0c0eb8d97163990b33d0521d1d184b4e6e",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1001",
+          1005
+        ],
+        [
+          "PLE_training/spring/trajectory_5001",
+          332
+        ]
+      ],
+      "batch_number": 36
+    },
+    {
+      "loss": 17.417186737060547,
+      "supervised_loss": 17.417186737060547,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09878364000178408,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "14ccb7d781fd67147f16053443cbe8ef8aebe38e906618e0190eb0eb7438da3d",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4001",
+          1252
+        ],
+        [
+          "PLE_training/fall/trajectory_4001",
+          717
+        ]
+      ],
+      "batch_number": 37
+    },
+    {
+      "loss": 12.205134391784668,
+      "supervised_loss": 12.205134391784668,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10030892500071786,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 1024.0,
+      "rgb_sha256": "7586b9e6506932b8579a33b6ca8bb6fecf36cdd1ab8366e2d36f3de8fc563be1",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5001",
+          232
+        ],
+        [
+          "PLE_training/winter/trajectory_6005",
+          73
+        ]
+      ],
+      "batch_number": 38
+    },
+    {
+      "loss": 33.769989013671875,
+      "supervised_loss": 33.769989013671875,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.18588853100663982,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 1,
+      "overflow_events": [
+        {
+          "event": "amp_gradient_overflow_retry",
+          "global_step": 38,
+          "retry": 1,
+          "scale_before": 1024.0,
+          "scale_after": 512.0,
+          "bad_parameters": [
+            "encoder.1.block.1.fc2.weight",
+            "encoder.1.block.1.fc2.bias"
+          ],
+          "frames": [
+            [
+              "Kite_training/foggy/trajectory_2005",
+              1686
+            ],
+            [
+              "PLE_training/fall/trajectory_4006",
+              597
+            ]
+          ]
+        }
+      ],
+      "amp_scale_start": 1024.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "e9450008b29f7ea7ebf2896efa57759395833e762a3c6abd5a107a38702d3ac9",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2005",
+          1686
+        ],
+        [
+          "PLE_training/fall/trajectory_4006",
+          597
+        ]
+      ],
+      "batch_number": 39
+    },
+    {
+      "loss": 22.55877685546875,
+      "supervised_loss": 22.55877685546875,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10002647999499459,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "f6ae6f212e0cb05b88f9ef2f85f1d8cc79f4f161588437900063fd05195bf307",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2005",
+          1950
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          1670
+        ]
+      ],
+      "batch_number": 40
+    },
+    {
+      "loss": 9.172754287719727,
+      "supervised_loss": 9.172754287719727,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09448078600689769,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "8d0e2217638310ac1a78cd2ac7667efea1126666aed41bc1535c864b9885493e",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6002",
+          1564
+        ],
+        [
+          "Kite_training/foggy/trajectory_2021",
+          287
+        ]
+      ],
+      "batch_number": 41
+    },
+    {
+      "loss": 13.893569946289062,
+      "supervised_loss": 13.893569946289062,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0959932719997596,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "c047c2954e90fffab83d602dba409f92bc2d33b1aa0b0aba1966313d5a38d8e4",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4006",
+          1936
+        ],
+        [
+          "PLE_training/winter/trajectory_6002",
+          351
+        ]
+      ],
+      "batch_number": 42
+    },
+    {
+      "loss": 20.18115997314453,
+      "supervised_loss": 20.18115997314453,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09938258200418204,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "26cac88b5f4b144a8d9b38c2f76c4df55feb70b211a84b86dedde20cf174f218",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2021",
+          597
+        ],
+        [
+          "Kite_training/sunny/trajectory_0005",
+          1497
+        ]
+      ],
+      "batch_number": 43
+    },
+    {
+      "loss": 31.264434814453125,
+      "supervised_loss": 31.264434814453125,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09779526900092606,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "d667acf4a42b98b6e794c9bf6f298248ec2318699531744be5fe8a47dab82c40",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1006",
+          1171
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          2088
+        ]
+      ],
+      "batch_number": 44
+    },
+    {
+      "loss": 10.460766792297363,
+      "supervised_loss": 10.460766792297363,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09166341798845679,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "fcf7d64fc59c19a0ba7a9cc103032cc9a1b7d7d53b7d79a396d001b9ea5c9bb7",
+      "frames": [
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          1055
+        ],
+        [
+          "PLE_training/winter/trajectory_6005",
+          1496
+        ]
+      ],
+      "batch_number": 45
+    },
+    {
+      "loss": 19.615734100341797,
+      "supervised_loss": 19.615734100341797,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09262339099950623,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "dca14cb0df5b9bdb837e6c7f28de1797743a55f98befe3817bf36a10d63b6d3e",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          1743
+        ],
+        [
+          "Kite_training/foggy/trajectory_2005",
+          2020
+        ]
+      ],
+      "batch_number": 46
+    },
+    {
+      "loss": 8.841504096984863,
+      "supervised_loss": 8.841504096984863,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10350756799743976,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "230795f6df2b536a91c43403e56cc3e37e42f40bfde4c4e0082177296589bc58",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4001",
+          1045
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          1419
+        ]
+      ],
+      "batch_number": 47
+    },
+    {
+      "loss": 36.678565979003906,
+      "supervised_loss": 36.678565979003906,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.1073203959967941,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "b62a9bf2945c832241b4d124a8584d53efbaa104cd57bd537a27f73b6bcd16c7",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2006",
+          1003
+        ],
+        [
+          "Kite_training/foggy/trajectory_2005",
+          1999
+        ]
+      ],
+      "batch_number": 48
+    },
+    {
+      "loss": 17.34967613220215,
+      "supervised_loss": 17.34967613220215,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09611855700495653,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "5f26b94bea22f2ece687ea50458a9b382d651473f445aed5f218c4760bf52bd6",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1006",
+          437
+        ],
+        [
+          "PLE_training/fall/trajectory_4006",
+          557
+        ]
+      ],
+      "batch_number": 49
+    },
+    {
+      "loss": 18.96590805053711,
+      "supervised_loss": 18.96590805053711,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09422285499749705,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "0d362d49826beffb52d7d505c5ba606a364c8e45eeae75f6111c1ddf52f24c6d",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6007",
+          475
+        ],
+        [
+          "PLE_training/spring/trajectory_5005",
+          1005
+        ]
+      ],
+      "batch_number": 50
+    },
+    {
+      "loss": 26.792802810668945,
+      "supervised_loss": 26.792802810668945,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09647282300284132,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "45ee65133be4ad624a1be6c8f4f8377ad5ce40af8e0f3e3c8ce1de0c3be00579",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1006",
+          2135
+        ],
+        [
+          "PLE_training/spring/trajectory_5006",
+          2016
+        ]
+      ],
+      "batch_number": 51
+    },
+    {
+      "loss": 14.612024307250977,
+      "supervised_loss": 14.612024307250977,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0962964250065852,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "05fe8292dfd636b07cffebb0cfb76412954ddcbcb39d8c2006c416e7cb55604c",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4006",
+          2131
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          1896
+        ]
+      ],
+      "batch_number": 52
+    },
+    {
+      "loss": 9.291529655456543,
+      "supervised_loss": 9.291529655456543,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0988534689968219,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "259cf766ae5646c3c011813ad332838a5bce1f29ec10e8b33969439dd276adf5",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5002",
+          0
+        ],
+        [
+          "Kite_training/sunny/trajectory_0000",
+          2070
+        ]
+      ],
+      "batch_number": 53
+    },
+    {
+      "loss": 24.191654205322266,
+      "supervised_loss": 24.191654205322266,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0975198759988416,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "4c7bdcdc1f6497111aa1750817e58db00b2e2c52bda26ffcd5a06955cdb91d99",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1006",
+          501
+        ],
+        [
+          "PLE_training/spring/trajectory_5002",
+          2133
+        ]
+      ],
+      "batch_number": 54
+    },
+    {
+      "loss": 31.691341400146484,
+      "supervised_loss": 31.691341400146484,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09608006999769714,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "426b47bb38fb85aa13c2e7644208b75f7e365b64d4729b762ebd5edb31dcc3ec",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0005",
+          850
+        ],
+        [
+          "PLE_training/spring/trajectory_5001",
+          492
+        ]
+      ],
+      "batch_number": 55
+    },
+    {
+      "loss": 30.302854537963867,
+      "supervised_loss": 30.302854537963867,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09881798000424169,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "27ca611a8eb89eaf2a4240e7526e88facc3c96adf0439b84fb8f8c503e0d9c7b",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1006",
+          747
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          2011
+        ]
+      ],
+      "batch_number": 56
+    },
+    {
+      "loss": 9.705159187316895,
+      "supervised_loss": 9.705159187316895,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09731574499164708,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "a043b2b3bdd41964aadff394fc20ad2f5f8c92a5cfa1f45d3bf0853501d588b2",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4006",
+          1958
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          1263
+        ]
+      ],
+      "batch_number": 57
+    },
+    {
+      "loss": 40.05070495605469,
+      "supervised_loss": 40.05070495605469,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09603919000073802,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "2f3581778073a997b874931a1a0f6717a8ae056a13f193a8d5625c0c24109a59",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1006",
+          1056
+        ],
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          2147
+        ]
+      ],
+      "batch_number": 58
+    },
+    {
+      "loss": 14.847887992858887,
+      "supervised_loss": 14.847887992858887,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09405731099832337,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "4640c53643cdd1ad32c4049ef49d5b0238cdf356f23047878fd6a8d7dd3addec",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4001",
+          1429
+        ],
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          372
+        ]
+      ],
+      "batch_number": 59
+    },
+    {
+      "loss": 14.76506519317627,
+      "supervised_loss": 14.76506519317627,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09561695699812844,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "891b43b7b96ca2b4177d74aa9b5f6d63868800654fa60b70511322883cd05706",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2021",
+          883
+        ],
+        [
+          "PLE_training/winter/trajectory_6005",
+          490
+        ]
+      ],
+      "batch_number": 60
+    },
+    {
+      "loss": 16.37989044189453,
+      "supervised_loss": 16.37989044189453,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0925768940069247,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "ad5de6f5ba3bdc2c4bcde82e145cc33d2902b391284d7db6864fc7a81d26620d",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4001",
+          697
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          607
+        ]
+      ],
+      "batch_number": 61
+    },
+    {
+      "loss": 10.569775581359863,
+      "supervised_loss": 10.569775581359863,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09333616199728567,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "5a36ff8599b959a1d67411d50e5f7da512387efe978eedf06446b0cf73298821",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5002",
+          701
+        ],
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          1877
+        ]
+      ],
+      "batch_number": 62
+    },
+    {
+      "loss": 16.032583236694336,
+      "supervised_loss": 16.032583236694336,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09177823500067461,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "de3013c76f200f6a60834ace4a050833b14d7ea5381ce902c9e7aea958ac1ad8",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1001",
+          704
+        ],
+        [
+          "Kite_training/sunny/trajectory_0000",
+          832
+        ]
+      ],
+      "batch_number": 63
+    },
+    {
+      "loss": 15.985697746276855,
+      "supervised_loss": 15.985697746276855,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09333388699451461,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "8176a79109bb61884d1d060dc1f4da953837bc650f5af58cb9b35b429e358f74",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0005",
+          1962
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          31
+        ]
+      ],
+      "batch_number": 64
+    },
+    {
+      "loss": 14.48949146270752,
+      "supervised_loss": 14.48949146270752,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09259120999195147,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "3f44aaa37de456a56ada3cae39cf91187bac480d1d1d70b6a39f8b8ff755058e",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0005",
+          1352
+        ],
+        [
+          "Kite_training/foggy/trajectory_2005",
+          1155
+        ]
+      ],
+      "batch_number": 65
+    },
+    {
+      "loss": 23.612655639648438,
+      "supervised_loss": 23.612655639648438,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09101847499550786,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "747217490a5c3a0b4013b1d2b3ebee06d6718ab45f58106033b279be9b3d1de8",
+      "frames": [
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          1578
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          927
+        ]
+      ],
+      "batch_number": 66
+    },
+    {
+      "loss": 15.676350593566895,
+      "supervised_loss": 15.676350593566895,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0940351649915101,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 512.0,
+      "rgb_sha256": "f9a1adac72bda5b291b27f9793763b7746b4aeae1635edbe3bf67b4fa4d0056d",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1001",
+          1119
+        ],
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          1316
+        ]
+      ],
+      "batch_number": 67
+    },
+    {
+      "loss": 43.114192962646484,
+      "supervised_loss": 43.114192962646484,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.27658556000096723,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 2,
+      "overflow_events": [
+        {
+          "event": "amp_gradient_overflow_retry",
+          "global_step": 67,
+          "retry": 1,
+          "scale_before": 512.0,
+          "scale_after": 256.0,
+          "bad_parameters": [
+            "encoder.1.block.1.fc2.weight",
+            "encoder.1.block.1.fc2.bias"
+          ],
+          "frames": [
+            [
+              "Kite_training/foggy/trajectory_2005",
+              696
+            ],
+            [
+              "PLE_training/spring/trajectory_5002",
+              25
+            ]
+          ]
+        },
+        {
+          "event": "amp_gradient_overflow_retry",
+          "global_step": 67,
+          "retry": 2,
+          "scale_before": 256.0,
+          "scale_after": 128.0,
+          "bad_parameters": [
+            "encoder.1.block.1.fc2.weight",
+            "encoder.1.block.1.fc2.bias"
+          ],
+          "frames": [
+            [
+              "Kite_training/foggy/trajectory_2005",
+              696
+            ],
+            [
+              "PLE_training/spring/trajectory_5002",
+              25
+            ]
+          ]
+        }
+      ],
+      "amp_scale_start": 512.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "209c946f43c578e3ac48cd28cb03317a3924b517f465537d2c7da71aee69b68a",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2005",
+          696
+        ],
+        [
+          "PLE_training/spring/trajectory_5002",
+          25
+        ]
+      ],
+      "batch_number": 68
+    },
+    {
+      "loss": 11.456893920898438,
+      "supervised_loss": 11.456893920898438,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09988042899931315,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "e8e0766b3738aa1fad5ceffdef0d34cc478fa6f23886e9729e67123fdd3bb8de",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2021",
+          440
+        ],
+        [
+          "Kite_training/foggy/trajectory_2006",
+          499
+        ]
+      ],
+      "batch_number": 69
+    },
+    {
+      "loss": 8.740389823913574,
+      "supervised_loss": 8.740389823913574,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0987141349905869,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "86c504c3b3c14c63e37c470b99e6bcd790deee4b9c09648f793a96825abb2e77",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5002",
+          1680
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          1316
+        ]
+      ],
+      "batch_number": 70
+    },
+    {
+      "loss": 59.554630279541016,
+      "supervised_loss": 59.554630279541016,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09842580299300607,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "f6129359c515059755f54db07ecba1bcc3ce4f1709e7f0c85635ec9bbca32183",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5005",
+          2059
+        ],
+        [
+          "Kite_training/sunny/trajectory_0005",
+          305
+        ]
+      ],
+      "batch_number": 71
+    },
+    {
+      "loss": 9.083038330078125,
+      "supervised_loss": 9.083038330078125,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09389662698959,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "41ab34cf9315eaf031b76c57c6879d2fbb42e2bc43a3411144cdda18d2e1ad49",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5001",
+          940
+        ],
+        [
+          "PLE_training/spring/trajectory_5006",
+          1328
+        ]
+      ],
+      "batch_number": 72
+    },
+    {
+      "loss": 13.960983276367188,
+      "supervised_loss": 13.960983276367188,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0985651030059671,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "6158b1ea171585f7c23c84b7055328bfffc982daabc3b832ac407c07a60453bf",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6002",
+          204
+        ],
+        [
+          "Kite_training/sunset/trajectory_1001",
+          1744
+        ]
+      ],
+      "batch_number": 73
+    },
+    {
+      "loss": 21.35660171508789,
+      "supervised_loss": 21.35660171508789,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09415149099368136,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "b31551dab0e78c415f9757e844ab1392be5b975d6418b3bdf37658dc11d30691",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5005",
+          1952
+        ],
+        [
+          "PLE_training/spring/trajectory_5001",
+          438
+        ]
+      ],
+      "batch_number": 74
+    },
+    {
+      "loss": 24.779626846313477,
+      "supervised_loss": 24.779626846313477,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.0933023990073707,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "7d36e0176dce605e0458b03542d338c8e45834f894841d2e23db9a66ca1208f4",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          276
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          1174
+        ]
+      ],
+      "batch_number": 75
+    },
+    {
+      "loss": 22.71137809753418,
+      "supervised_loss": 22.71137809753418,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09563496700138785,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "660be432e2768eddc3ce93e8e143d2a344e3d27891b1eec368eb668db4c5309f",
+      "frames": [
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          546
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          1832
+        ]
+      ],
+      "batch_number": 76
+    },
+    {
+      "loss": 8.569218635559082,
+      "supervised_loss": 8.569218635559082,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09407275800185744,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "0ba91ada32c776477c1143c39321109625d8306032f48da00c0d4bc22070d9cd",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5001",
+          1975
+        ],
+        [
+          "Kite_training/foggy/trajectory_2005",
+          1188
+        ]
+      ],
+      "batch_number": 77
+    },
+    {
+      "loss": 17.463598251342773,
+      "supervised_loss": 17.463598251342773,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09391714099911042,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "9645493229584400a6a9a017c196dd646921607fafd202af62a60e2ac6d31507",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          836
+        ],
+        [
+          "PLE_training/winter/trajectory_6007",
+          10
+        ]
+      ],
+      "batch_number": 78
+    },
+    {
+      "loss": 11.215530395507812,
+      "supervised_loss": 11.215530395507812,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09354919800534844,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "d478efb29a74eaf923bcd26426e133f68a400bc70db8d8262d7a789a740c82f8",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0000",
+          1988
+        ],
+        [
+          "PLE_training/spring/trajectory_5006",
+          1397
+        ]
+      ],
+      "batch_number": 79
+    },
+    {
+      "loss": 27.656570434570312,
+      "supervised_loss": 27.656570434570312,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09218061799765565,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "fd66aca34004a518b1c76ec212e2c7f56d5822fb264a94078202eb2335bae757",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2005",
+          822
+        ],
+        [
+          "PLE_training/winter/trajectory_6005",
+          781
+        ]
+      ],
+      "batch_number": 80
+    },
+    {
+      "loss": 20.70872688293457,
+      "supervised_loss": 20.70872688293457,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09715981400222518,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "82280187f5a772caf8f39ef069665cbcfa01575aa1b1ec4d0f2c3e289b283263",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5006",
+          1625
+        ],
+        [
+          "Kite_training/foggy/trajectory_2005",
+          1811
+        ]
+      ],
+      "batch_number": 81
+    },
+    {
+      "loss": 34.43164825439453,
+      "supervised_loss": 34.43164825439453,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10015323100378737,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "db7a0239d860d1be1415b0a8730b1e2aff13a2d23ec8b4fc2376d6c95938c9ba",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6007",
+          606
+        ],
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          1746
+        ]
+      ],
+      "batch_number": 82
+    },
+    {
+      "loss": 16.884889602661133,
+      "supervised_loss": 16.884889602661133,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10048480199475307,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "1ca0af2d81b7e96b88d6e3e41e4730d7fc4d53e0d7bbfb13391f199fd622d46e",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4001",
+          1621
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          1983
+        ]
+      ],
+      "batch_number": 83
+    },
+    {
+      "loss": 17.071094512939453,
+      "supervised_loss": 17.071094512939453,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10532704299839679,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "bc7366884053b640af59f6142815c2b112a733dcf622462910a306fc390df040",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6002",
+          922
+        ],
+        [
+          "Kite_training/foggy/trajectory_2005",
+          1200
+        ]
+      ],
+      "batch_number": 84
+    },
+    {
+      "loss": 20.42792510986328,
+      "supervised_loss": 20.42792510986328,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.095715959003428,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "0e095608b8202bfff660c2f1f7cde2d68e4bdc58bdbd4bf4d039dec402c02e9b",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5004",
+          681
+        ],
+        [
+          "PLE_training/spring/trajectory_5004",
+          828
+        ]
+      ],
+      "batch_number": 85
+    },
+    {
+      "loss": 8.12227725982666,
+      "supervised_loss": 8.12227725982666,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09343401000660378,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "0f5f408045350f7ad6e062fa6bba48331de2e3d4cb8e0139213c554bc3521518",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5005",
+          82
+        ],
+        [
+          "Kite_training/sunny/trajectory_0000",
+          426
+        ]
+      ],
+      "batch_number": 86
+    },
+    {
+      "loss": 11.769596099853516,
+      "supervised_loss": 11.769596099853516,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09343914900091477,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "d7249e8516900dbbf587f9fc284e656edeae02a98c24d953360a9499d6dccd24",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5004",
+          1009
+        ],
+        [
+          "Kite_training/foggy/trajectory_2021",
+          1318
+        ]
+      ],
+      "batch_number": 87
+    },
+    {
+      "loss": 36.88593673706055,
+      "supervised_loss": 36.88593673706055,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09463700800552033,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "8d57caf1daa2b02f78024873442138df0ce5adbad6c3cf30fd21194a4950ce48",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0005",
+          101
+        ],
+        [
+          "PLE_training/spring/trajectory_5002",
+          1624
+        ]
+      ],
+      "batch_number": 88
+    },
+    {
+      "loss": 17.540271759033203,
+      "supervised_loss": 17.540271759033203,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09546011500060558,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "83ad38675da799358aa58b71295f56747cd9ffeee7629b3b43bcba86337e47d9",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2006",
+          1144
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          1457
+        ]
+      ],
+      "batch_number": 89
+    },
+    {
+      "loss": 10.047507286071777,
+      "supervised_loss": 10.047507286071777,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09279883799899835,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "15b602e256f5091b050725a36d564f76f8b3c53a2b626f41b222f6bc8abdaaa2",
+      "frames": [
+        [
+          "Kite_training/sunny/trajectory_0000",
+          308
+        ],
+        [
+          "PLE_training/spring/trajectory_5001",
+          694
+        ]
+      ],
+      "batch_number": 90
+    },
+    {
+      "loss": 11.96422290802002,
+      "supervised_loss": 11.96422290802002,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.10114125999098178,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "b14928689b5b940c3daf68e9dfe97a8b28c7509071a77f54e3f94aaf4d8eacba",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6002",
+          1301
+        ],
+        [
+          "PLE_training/fall/trajectory_4006",
+          1966
+        ]
+      ],
+      "batch_number": 91
+    },
+    {
+      "loss": 14.533427238464355,
+      "supervised_loss": 14.533427238464355,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09616155899129808,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "45701a39e8609734f38b5fff343804af3b77e04f7f076829ce6f469b69dc663e",
+      "frames": [
+        [
+          "PLE_training/fall/trajectory_4004",
+          1154
+        ],
+        [
+          "PLE_training/fall/trajectory_4004",
+          825
+        ]
+      ],
+      "batch_number": 92
+    },
+    {
+      "loss": 19.861448287963867,
+      "supervised_loss": 19.861448287963867,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09252995598944835,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "9bd443a2d6f3e298be5c6fb9b91b3ef1e97b7769add7bdb218e4660de958f5fa",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2021",
+          1765
+        ],
+        [
+          "PLE_training/spring/trajectory_5007",
+          378
+        ]
+      ],
+      "batch_number": 93
+    },
+    {
+      "loss": 10.830401420593262,
+      "supervised_loss": 10.830401420593262,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09273770099389367,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "e58687e5ff3ac7bf9e59568220772c54c164df0e83e047c90d6bcbbb1324329c",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2021",
+          234
+        ],
+        [
+          "Kite_training/sunny/trajectory_0000",
+          1532
+        ]
+      ],
+      "batch_number": 94
+    },
+    {
+      "loss": 11.484344482421875,
+      "supervised_loss": 11.484344482421875,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09354517099563964,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "0e3f391c8cf3fe522e3f2b230190b9c76b634f3d5ff1e81d6f11be6066b18372",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5002",
+          583
+        ],
+        [
+          "Kite_training/cloudy/trajectory_3002",
+          1048
+        ]
+      ],
+      "batch_number": 95
+    },
+    {
+      "loss": 21.82622528076172,
+      "supervised_loss": 21.82622528076172,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.094639543996891,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "71c28978247c6096200353248f07c85ac37e13cb6be63636d3fd82f4682ebe84",
+      "frames": [
+        [
+          "Kite_training/sunset/trajectory_1006",
+          1292
+        ],
+        [
+          "PLE_training/spring/trajectory_5006",
+          1977
+        ]
+      ],
+      "batch_number": 96
+    },
+    {
+      "loss": 18.891986846923828,
+      "supervised_loss": 18.891986846923828,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09279527800390497,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "ed8e652ec245fcf9ae2626fb326ae15cc44caf6ae936bf6c07b4cdec480129a5",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6002",
+          680
+        ],
+        [
+          "PLE_training/spring/trajectory_5006",
+          2059
+        ]
+      ],
+      "batch_number": 97
+    },
+    {
+      "loss": 17.678438186645508,
+      "supervised_loss": 17.678438186645508,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09247751299699303,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "25d0000ab7d50c49f1a0f9acc80bd5684b9b316f2dad48def5ac7b2ec0d78455",
+      "frames": [
+        [
+          "PLE_training/spring/trajectory_5004",
+          501
+        ],
+        [
+          "PLE_training/spring/trajectory_5004",
+          427
+        ]
+      ],
+      "batch_number": 98
+    },
+    {
+      "loss": 13.213627815246582,
+      "supervised_loss": 13.213627815246582,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09223836199089419,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "975b424c4a53373d8cadd114f12b4e903fe1f07406804cd2e2beac09aa5e3aef",
+      "frames": [
+        [
+          "Kite_training/foggy/trajectory_2006",
+          334
+        ],
+        [
+          "PLE_training/spring/trajectory_5006",
+          2185
+        ]
+      ],
+      "batch_number": 99
+    },
+    {
+      "loss": 33.29964828491211,
+      "supervised_loss": 33.29964828491211,
+      "kd_loss": 0.0,
+      "examples": 2,
+      "compute_seconds": 0.09118974598823115,
+      "teacher_seconds": 0.0,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0,
+      "rgb_sha256": "70f5fc5a8e7d6ba195c004ad16558fe725cbfa01ec3360e02db2ff74711307bd",
+      "frames": [
+        [
+          "PLE_training/winter/trajectory_6002",
+          1442
+        ],
+        [
+          "Kite_training/sunny/trajectory_0005",
+          74
+        ]
+      ],
+      "batch_number": 100
+    }
+  ],
+  "no_validation_or_test_reads": true,
+  "full_training_launched": false
+}

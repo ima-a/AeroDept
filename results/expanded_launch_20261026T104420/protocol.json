@@ -1,0 +1,68 @@
+{
+  "status": "frozen_authorized",
+  "authorized_by": "User request in this session on 2026-10-26",
+  "timezone": "Asia/Kolkata",
+  "frozen_at": "2026-10-26T10:52:25.584266+05:30",
+  "sequence": [
+    "A_supervised",
+    "B_teacher",
+    "C_teacher_gate",
+    "D_kd_only_if_gate_passes"
+  ],
+  "epochs": {
+    "supervised": 10,
+    "teacher": 20,
+    "kd": 10
+  },
+  "updates_per_epoch": 22049,
+  "batch_size": 2,
+  "effective_batch_size": 2,
+  "accumulation_steps": 1,
+  "student_lr": 0.0001,
+  "teacher_encoder_lr": 1e-05,
+  "teacher_decoder_lr": 0.0001,
+  "schedules": {
+    "supervised": {
+      "name": "cosine",
+      "t_max": 10,
+      "eta_min": 1e-06
+    },
+    "teacher": {
+      "name": "cosine",
+      "t_max": 20,
+      "eta_min": 1e-06
+    },
+    "kd": {
+      "name": "cosine",
+      "t_max": 10,
+      "eta_min": 1e-06
+    }
+  },
+  "early_stopping": false,
+  "kd_weight": 0.2,
+  "teacher_precision": "FP32 eval/no_grad",
+  "validation_selection": "Every epoch FP32 minimum pooled AbsRel; exact unchanged validation pixel counts",
+  "teacher_gate": {
+    "pooled_validation_absrel": "teacher strictly less than expanded supervised baseline",
+    "each_validation_trajectory": [
+      "finite overall AbsRel <= baseline",
+      "finite overall RMSE <= baseline",
+      "finite near AbsRel <= baseline",
+      "finite near RMSE <= baseline",
+      "equal valid/near pixel counts"
+    ],
+    "tolerance": 0,
+    "on_failure": "Stop; no KD, retries, changes or tuning"
+  },
+  "student_initialization": "Both independently from frozen published epoch4 state dict including BatchNorm; fresh optimizer/scheduler/scaler/history/counters; RNG reset after construction",
+  "test_access": "No test records or image/depth access; all original/new reserved climate equivalents excluded",
+  "history": "Original proposal documents/configs remain unchanged; byte copies retained under frozen/proposal_history. Active config changes only protocol_status metadata.",
+  "checkpoint_policy": "Atomic best/last/previous_best, exact identity resume; incomplete epoch replays from prior epoch boundary. No checkpoint before first epoch finishes.",
+  "operational_limits": [
+    "No service auto-restart",
+    "Linger=no: terminal disconnection survives; full user logout can stop the user manager",
+    "Logind sleep/handle-lid-switch inhibitors must be observed after launch; KDE also owns lid handling, physical lid behavior not tested; keep lid open",
+    "Shutdown, forced sleep, power loss, unplugged HDD and reboot are not prevented",
+    "No new test inputs acquired"
+  ]
+}

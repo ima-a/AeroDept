@@ -1,0 +1,71 @@
+{
+  "at_utc": "2026-10-26T05:24:21.831090+00:00",
+  "power": [
+    {
+      "name": "BAT1",
+      "type": "Battery",
+      "status": "Full",
+      "capacity": "100"
+    },
+    {
+      "name": "ucsi-source-psy-USBC000:001",
+      "type": "USB",
+      "online": "0",
+      "status": "Not charging"
+    },
+    {
+      "name": "ACAD",
+      "type": "Mains",
+      "online": "1"
+    }
+  ],
+  "gpu": {
+    "name": "NVIDIA GeForce GTX 1650",
+    "total_memory_bytes": 3911581696,
+    "torch": "2.14.1+cu130",
+    "cuda_build": "13.0"
+  },
+  "gpu_processes_before_launch": [
+    "780, /usr/bin/kwin_wayland, 5 MiB"
+  ],
+  "disk": {
+    "/home/Ima/work/Projects/DL-projects/AeroDept": {
+      "total": 87625433088,
+      "used": 73873932288,
+      "free": 9253322752
+    },
+    "/run/media/Ima/Low storage": {
+      "total": 2000153473024,
+      "used": 1265981153280,
+      "free": 734172319744
+    }
+  },
+  "unit": "aerodepth-expanded-20261026t104420.service",
+  "freeze_sha256": "2b53a27cd4491843e92a7218a883158cbff6a6842ede83f966620497e7131de9",
+  "working_tree_head": "e27ed7e289b9af6ea30a35ff234dfbcd8dfe168a",
+  "working_tree_status": [
+    " M README.md",
+    " M src/aerodepth_lite/losses.py",
+    " M src/aerodepth_lite/model.py",
+    "?? configs/expanded_kd.yaml",
+    "?? configs/expanded_supervised.yaml",
+    "?? configs/expanded_teacher.yaml",
+    "?? docs/archive_locations.md",
+    "?? docs/expanded_experiment_20261025/",
+    "?? docs/expanded_training.md",
+    "?? docs/final_study.md",
+    "?? results/expanded_preparation_20261026/",
+    "?? results/expanded_workflow_20261026/",
+    "?? results/final_test/",
+    "?? scripts/expanded_sequence.py",
+    "?? scripts/expanded_training.py",
+    "?? scripts/final_study.py",
+    "?? scripts/verify_final_study.py",
+    "?? src/aerodepth_lite/expanded.py",
+    "?? src/aerodepth_lite/final_study.py",
+    "?? tests/test_expanded.py",
+    "?? tests/test_final_study.py"
+  ],
+  "persistence": "Transient user service independent of terminal; Linger=no, full logout may end user manager",
+  "lid_limit": "sleep and handle-lid-switch blockers requested; registration must be checked after launch. KDE also owns lid events; physical lid behavior not tested. Keep lid open."
+}

@@ -1,0 +1,83 @@
+{
+  "status": "frozen_authorized_recovery",
+  "authorized_by": "Explicit user relaunch authorization in this session, 26 October 2026",
+  "timezone": "Asia/Kolkata",
+  "frozen_at": "2026-10-26T11:42:32.337058+05:30",
+  "sequence": [
+    "A_supervised",
+    "B_teacher",
+    "C_teacher_gate",
+    "D_kd_only_if_gate_passes"
+  ],
+  "epochs": {
+    "supervised": 10,
+    "teacher": 20,
+    "kd": 10
+  },
+  "updates_per_epoch": 22049,
+  "batch_size": 2,
+  "effective_batch_size": 2,
+  "accumulation_steps": 1,
+  "student_lr": 0.0001,
+  "teacher_encoder_lr": 1e-05,
+  "teacher_decoder_lr": 0.0001,
+  "schedules": {
+    "supervised": {
+      "name": "cosine",
+      "t_max": 10,
+      "eta_min": 1e-06
+    },
+    "teacher": {
+      "name": "cosine",
+      "t_max": 20,
+      "eta_min": 1e-06
+    },
+    "kd": {
+      "name": "cosine",
+      "t_max": 10,
+      "eta_min": 1e-06
+    }
+  },
+  "early_stopping": false,
+  "kd_weight": 0.2,
+  "teacher_precision": "FP32 eval/no_grad",
+  "validation_selection": "Every epoch FP32 minimum pooled AbsRel; exact unchanged validation pixel counts",
+  "teacher_gate": {
+    "pooled_validation_absrel": "teacher strictly less than expanded supervised baseline",
+    "each_validation_trajectory": [
+      "finite overall AbsRel <= baseline",
+      "finite overall RMSE <= baseline",
+      "finite near AbsRel <= baseline",
+      "finite near RMSE <= baseline",
+      "equal valid/near pixel counts"
+    ],
+    "tolerance": 0,
+    "on_failure": "Stop; no KD, retries, changes or tuning"
+  },
+  "student_initialization": "Both independently from frozen published epoch4 state dict including BatchNorm; fresh optimizer/scheduler/scaler/history/counters; RNG reset after construction",
+  "test_access": "No test records or image/depth access; all original/new reserved climate equivalents excluded",
+  "history": "Original proposal and failed freeze preserved. This launch changes only verified numerical recovery/source identity; all approved scientific settings and numerical gate remain unchanged.",
+  "checkpoint_policy": "Atomic best/last/previous_best, exact identity resume; incomplete epoch replays from prior epoch boundary. No checkpoint before first epoch finishes.",
+  "operational_limits": [
+    "No service auto-restart",
+    "Linger=no: terminal disconnection survives; full user logout can stop the user manager",
+    "Logind sleep/handle-lid-switch inhibitors must be observed after launch; KDE also owns lid handling, physical lid behavior not tested; keep lid open",
+    "Shutdown, forced sleep, power loss, unplugged HDD and reboot are not prevented",
+    "No new test inputs acquired"
+  ],
+  "supersedes_failed_bundle": "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420",
+  "gradient_policy": {
+    "name": "same_batch_amp_backoff_v1",
+    "max_overflow_retries": 8,
+    "restore_before_retry": "all model buffers and training/data RNG",
+    "optimizer_updates": "one finite update per batch; no skipped batches",
+    "nonfinite_prediction_or_loss": "fatal",
+    "persistent_nonfinite_gradients": "fatal"
+  },
+  "numerical_amendment": "frozen/docs/expanded_numerical_recovery.md",
+  "numerical_amendment_sha256": "ca1e2a0086442609ad6c7a234c5b168d7c08d19d2e7a9211e7b2b8535b65ddd4",
+  "gate_implementation_sha256": {
+    "teacher_gate": "8c04cce4d6cb436c37d0838f2d1a415e09707b1419aee1af8c2872bdb07c24e0",
+    "make_gate": "91e934461c799a3f7c7917f03f0987fea568d33e51894f6e63bcfbee098009bb"
+  }
+}

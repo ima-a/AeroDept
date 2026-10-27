@@ -113,15 +113,56 @@ class MobileNetV3SmallDepth(nn.Module):
         return F.softplus(self.head(x)) + self.min_depth
 
 
-MODEL_REGISTRY = {"aerodepth_tiny": AeroDepthTiny, "mobilenet_v3_small_depth": MobileNetV3SmallDepth}
+class ResNet50Depth(nn.Module):
+    """ResNet-50 V1.5 encoder with projected skips and a compact range decoder.
+
+    ImageNet1K_V2 initializes the encoder only. Classification pooling/crops/FC
+    are discarded. Skip projections at /2,/4,/8,/16 use 16/32/64/128 channels;
+    the /32 bottleneck uses 128. Decoder widths are 128/64/32/16. Every resize
+    targets an actual skip/input shape, including odd image dimensions.
+    """
+    def __init__(self, pretrained: bool = True, min_depth: float = .1):
+        super().__init__()
+        from torchvision.models import resnet50, ResNet50_Weights
+        base = resnet50(weights=ResNet50_Weights.IMAGENET1K_V2 if pretrained else None)
+        self.encoder = nn.ModuleDict({k: getattr(base, k) for k in
+            ('conv1', 'bn1', 'relu', 'maxpool', 'layer1', 'layer2', 'layer3', 'layer4')})
+        self.min_depth = min_depth
+        self.register_buffer('rgb_mean', torch.tensor([.485, .456, .406]).view(1, 3, 1, 1))
+        self.register_buffer('rgb_std', torch.tensor([.229, .224, .225]).view(1, 3, 1, 1))
+        self.projections = nn.ModuleList([nn.Conv2d(a, b, 1) for a, b in
+            [(64, 16), (256, 32), (512, 64), (1024, 128), (2048, 128)]])
+        self.up4 = UpBlock(128, 128, 128)
+        self.up3 = UpBlock(128, 64, 64)
+        self.up2 = UpBlock(64, 32, 32)
+        self.up1 = UpBlock(32, 16, 16)
+        self.head = nn.Conv2d(16, 1, 3, padding=1)
+
+    def forward(self, rgb):
+        size = rgb.shape[-2:]
+        e = self.encoder
+        x = (rgb - self.rgb_mean) / self.rgb_std
+        s1 = e['relu'](e['bn1'](e['conv1'](x)))
+        s2 = e['layer1'](e['maxpool'](s1))
+        s3 = e['layer2'](s2)
+        s4 = e['layer3'](s3)
+        x = e['layer4'](s4)
+        s1, s2, s3, s4, x = [p(v) for p, v in zip(self.projections, (s1, s2, s3, s4, x))]
+        x = self.up1(self.up2(self.up3(self.up4(x, s4), s3), s2), s1)
+        x = F.interpolate(x, size=size, mode='bilinear', align_corners=False)
+        return F.softplus(self.head(x)) + self.min_depth
+
+
+MODEL_REGISTRY = {"aerodepth_tiny": AeroDepthTiny, "mobilenet_v3_small_depth": MobileNetV3SmallDepth,
+                  "resnet50_depth": ResNet50Depth}
 
 
 def build_model(config: dict[str, Any]) -> nn.Module:
     name = config.get("name", "aerodepth_tiny")
     if name not in MODEL_REGISTRY:
         raise ValueError(f"Unknown model {name!r}; choices: {sorted(MODEL_REGISTRY)}")
-    if name == "mobilenet_v3_small_depth":
-        return MobileNetV3SmallDepth(pretrained=bool(config.get("pretrained", True)),
+    if name in ("mobilenet_v3_small_depth", "resnet50_depth"):
+        return MODEL_REGISTRY[name](pretrained=bool(config.get("pretrained", True)),
                                     min_depth=float(config.get("min_depth", 0.1)))
     return MODEL_REGISTRY[name](
         base_channels=int(config.get("base_channels", 24)),
@@ -131,7 +172,7 @@ def build_model(config: dict[str, Any]) -> nn.Module:
 
 def model_contract(config: dict[str, Any]) -> dict[str, Any]:
     """Serializable inference contract, independent of weight initialization."""
-    mobile = config["model"].get("name", "aerodepth_tiny") == "mobilenet_v3_small_depth"
+    normalized = config["model"].get("name", "aerodepth_tiny") in ("mobilenet_v3_small_depth", "resnet50_depth")
     return {
         "architecture": config["model"].get("name", "aerodepth_tiny"),
         "model_options": {k: v for k, v in config["model"].items() if k != "pretrained"},
@@ -139,9 +180,9 @@ def model_contract(config: dict[str, Any]) -> dict[str, Any]:
             "input": "RGB float32 [0,1]", "image_size": config["data"].get("image_size", [192, 320]),
             "rgb_resize": "bilinear align_corners=False", "depth_resize": "nearest",
             "crop": None, "paired_training_horizontal_flip": True,
-            "normalization_location": "model" if mobile else None,
-            "mean": [0.485, 0.456, 0.406] if mobile else None,
-            "std": [0.229, 0.224, 0.225] if mobile else None,
+            "normalization_location": "model" if normalized else None,
+            "mean": [0.485, 0.456, 0.406] if normalized else None,
+            "std": [0.229, 0.224, 0.225] if normalized else None,
             "depth_encoding": config["data"].get("depth_encoding", "midair_float16_bits"),
             "depth_scale": config["data"].get("depth_scale", 1.0),
             "valid_depth_metres": [config["data"].get("min_depth", 0.1), config["data"].get("max_depth", 1000.0)],
@@ -155,7 +196,7 @@ def model_stats(model: nn.Module) -> dict[str, int | float]:
     parameters = sum(p.numel() for p in model.parameters())
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     stats = {"parameters": parameters, "trainable_parameters": trainable, "fp32_size_mb": parameters * 4 / 1_000_000}
-    if isinstance(model, MobileNetV3SmallDepth):
+    if isinstance(model, (MobileNetV3SmallDepth, ResNet50Depth)):
         encoder_parameters = sum(p.numel() for p in model.encoder.parameters())
         stats.update(encoder_parameters=encoder_parameters, decoder_parameters=parameters - encoder_parameters)
     return stats

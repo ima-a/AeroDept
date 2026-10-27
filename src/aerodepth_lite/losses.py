@@ -33,3 +33,20 @@ def depth_loss(pred: torch.Tensor, target: torch.Tensor, valid: torch.Tensor, co
         + float(config.get("near_weight", 0.0)) * near
     )
     return total, components
+
+
+def masked_log_range_consistency(student: torch.Tensor, teacher: torch.Tensor,
+                                 valid: torch.Tensor) -> torch.Tensor:
+    """Mean |log(S)-log(stop_gradient(T))| on valid training-GT pixels.
+
+    Reject bad predictions globally, even outside the GT mask. Empty masks have
+    a differentiable zero so an all-invalid batch can safely call backward().
+    """
+    if student.shape != teacher.shape or student.shape != valid.shape:
+        raise ValueError('Student, teacher and mask shapes must match')
+    for name, value in [('student', student), ('teacher', teacher)]:
+        if not torch.isfinite(value).all() or not (value > 0).all():
+            raise FloatingPointError(f'Nonfinite/nonpositive {name} prediction')
+    error = (student.float().log() - teacher.detach().float().log()).abs()
+    mask = valid.bool()
+    return error[mask].mean() if mask.any() else student.float().sum() * 0.

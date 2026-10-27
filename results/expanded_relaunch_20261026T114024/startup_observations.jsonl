@@ -1,0 +1,1 @@
+{"observed_utc": "2026-10-26T06:15:10.290720+00:00", "status": "running", "stage": "A_supervised", "supervisor_pid": 170165, "child_pid": 170179, "progress": {"epoch": 1, "batches": 250, "global_step": 250, "loss": 12.761478424072266, "amp_scale": 128.0, "overflow_retries_total": 3}, "retry_events_seen": 3, "log_bytes": 2285}

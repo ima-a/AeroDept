@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "bundle": "/run/media/Ima/Low storage/AeroDepth/expanded-experiments/20261026T104420",
+  "unit": "aerodepth-expanded-20261026t104420",
+  "manifest": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "initial_weights": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+  "counts": {
+    "train": 88196,
+    "val": 8820
+  },
+  "freeze_sha256": "2b53a27cd4491843e92a7218a883158cbff6a6842ede83f966620497e7131de9",
+  "current_configs_unchanged": true,
+  "compiled_launcher": true,
+  "shell_syntax_checked": true
+}

@@ -1,0 +1,817 @@
+{
+  "passed": true,
+  "trajectory_identity": [
+    {
+      "trajectory": "Kite_training/cloudy/trajectory_3002",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/cloudy/sensor_records.hdf5",
+      "hdf5_sha256": "574a254ab64ce2c5465b4649dfa4df867a0a85488893b52f228df024808a037c",
+      "frames": 2202,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19818,
+      "position_shape": [
+        8805,
+        3
+      ],
+      "position_sha256": "9f887ff414607e4bc93d49c6f4017f2d507546232b774c11717678896d21634e",
+      "official_page_id": "0002",
+      "internal_id": "3002",
+      "path_group": "Kite/0002"
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2005",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/sensor_records.hdf5",
+      "hdf5_sha256": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+      "frames": 2206,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19854,
+      "position_shape": [
+        8821,
+        3
+      ],
+      "position_sha256": "ddbc770035ed004883cdb2b3190eff8ade61f13aa7bff0c89802d431012460c1",
+      "official_page_id": "0005",
+      "internal_id": "2005",
+      "path_group": "Kite/0005"
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2006",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/sensor_records.hdf5",
+      "hdf5_sha256": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+      "frames": 2206,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19854,
+      "position_shape": [
+        8822,
+        3
+      ],
+      "position_sha256": "37bd3c9510ea65eace3627b3f01e16d972fd5459a56f535781a2a430e8aa3fe0",
+      "official_page_id": "0006",
+      "internal_id": "2006",
+      "path_group": "Kite/0006"
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2021",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/foggy/sensor_records.hdf5",
+      "hdf5_sha256": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+      "frames": 2204,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19836,
+      "position_shape": [
+        8813,
+        3
+      ],
+      "position_sha256": "18a15f851b2b85d6bce3c2c7b94adfb6d2068db42940768544ed97217b10e207",
+      "official_page_id": "0021",
+      "internal_id": "2021",
+      "path_group": "Kite/0021"
+    },
+    {
+      "trajectory": "Kite_training/sunny/trajectory_0000",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/sunny/sensor_records.hdf5",
+      "hdf5_sha256": "0a8b514c94304a8861db209244aabdf1ee38652fd842ff38123db27cb0008202",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8818,
+        3
+      ],
+      "position_sha256": "4e47f2b51b0d9d2cc7e778af9d9d353fee686e50c19f256287d9bfa6c1e9cc94",
+      "official_page_id": "0000",
+      "internal_id": "0000",
+      "path_group": "Kite/0000"
+    },
+    {
+      "trajectory": "Kite_training/sunny/trajectory_0005",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/sensor_records.hdf5",
+      "hdf5_sha256": "0a8b514c94304a8861db209244aabdf1ee38652fd842ff38123db27cb0008202",
+      "frames": 2206,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19854,
+      "position_shape": [
+        8821,
+        3
+      ],
+      "position_sha256": "ddbc770035ed004883cdb2b3190eff8ade61f13aa7bff0c89802d431012460c1",
+      "official_page_id": "0005",
+      "internal_id": "0005",
+      "path_group": "Kite/0005"
+    },
+    {
+      "trajectory": "Kite_training/sunset/trajectory_1001",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/sunset/sensor_records.hdf5",
+      "hdf5_sha256": "86b90cafce4c9daffc45941f5496fd69d4000c01a6da4a6b382fd2943c79f9ee",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8820,
+        3
+      ],
+      "position_sha256": "e61fb8af5f0eb3356d4fbbfd46c84a1f4ffe47f689c68e758bf85d63ba6408ca",
+      "official_page_id": "0001",
+      "internal_id": "1001",
+      "path_group": "Kite/0001"
+    },
+    {
+      "trajectory": "Kite_training/sunset/trajectory_1006",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/sensor_records.hdf5",
+      "hdf5_sha256": "86b90cafce4c9daffc45941f5496fd69d4000c01a6da4a6b382fd2943c79f9ee",
+      "frames": 2206,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19854,
+      "position_shape": [
+        8822,
+        3
+      ],
+      "position_sha256": "37bd3c9510ea65eace3627b3f01e16d972fd5459a56f535781a2a430e8aa3fe0",
+      "official_page_id": "0006",
+      "internal_id": "1006",
+      "path_group": "Kite/0006"
+    },
+    {
+      "trajectory": "PLE_training/fall/trajectory_4001",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/fall/sensor_records.hdf5",
+      "hdf5_sha256": "0465bc4924f602725f3fcc858d7ff0541f465eff488081d4406930d9f328e800",
+      "frames": 2204,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19836,
+      "position_shape": [
+        8815,
+        3
+      ],
+      "position_sha256": "9aac1e63f1501d7676d88488a6149b7026390e52835c27edc6d31b16ad9a6dce",
+      "official_page_id": "4001",
+      "internal_id": "4001",
+      "path_group": "PLE/0001"
+    },
+    {
+      "trajectory": "PLE_training/fall/trajectory_4004",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/fall/sensor_records.hdf5",
+      "hdf5_sha256": "0465bc4924f602725f3fcc858d7ff0541f465eff488081d4406930d9f328e800",
+      "frames": 2204,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19836,
+      "position_shape": [
+        8815,
+        3
+      ],
+      "position_sha256": "9abf17071d4a26277f1419bd21527ae3f8ff1dce531d531e025327ce24dc2f1f",
+      "official_page_id": "4004",
+      "internal_id": "4004",
+      "path_group": "PLE/0004"
+    },
+    {
+      "trajectory": "PLE_training/fall/trajectory_4006",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/sensor_records.hdf5",
+      "hdf5_sha256": "0465bc4924f602725f3fcc858d7ff0541f465eff488081d4406930d9f328e800",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8819,
+        3
+      ],
+      "position_sha256": "908c9312a56896866754e0b9dcdf7a4fd2a4965fe54f40898167b03e959904e8",
+      "official_page_id": "4006",
+      "internal_id": "4006",
+      "path_group": "PLE/0006"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5001",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/sensor_records.hdf5",
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "frames": 2204,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19836,
+      "position_shape": [
+        8815,
+        3
+      ],
+      "position_sha256": "9aac1e63f1501d7676d88488a6149b7026390e52835c27edc6d31b16ad9a6dce",
+      "official_page_id": "4001",
+      "internal_id": "5001",
+      "path_group": "PLE/0001"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5002",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/sensor_records.hdf5",
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8817,
+        3
+      ],
+      "position_sha256": "926f8eda37ba5f3e391bda52c705a01f9bd212e5d4187457dbc24dc8caebb978",
+      "official_page_id": "4002",
+      "internal_id": "5002",
+      "path_group": "PLE/0002"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5004",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/sensor_records.hdf5",
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "frames": 2204,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19836,
+      "position_shape": [
+        8815,
+        3
+      ],
+      "position_sha256": "9abf17071d4a26277f1419bd21527ae3f8ff1dce531d531e025327ce24dc2f1f",
+      "official_page_id": "4004",
+      "internal_id": "5004",
+      "path_group": "PLE/0004"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5005",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/sensor_records.hdf5",
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "frames": 2206,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19854,
+      "position_shape": [
+        8822,
+        3
+      ],
+      "position_sha256": "bf1fcc75041c4d5f3ceca1d840544f90372608127fa0c73965adc10d0e499221",
+      "official_page_id": "4005",
+      "internal_id": "5005",
+      "path_group": "PLE/0005"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5006",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/sensor_records.hdf5",
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8819,
+        3
+      ],
+      "position_sha256": "908c9312a56896866754e0b9dcdf7a4fd2a4965fe54f40898167b03e959904e8",
+      "official_page_id": "4006",
+      "internal_id": "5006",
+      "path_group": "PLE/0006"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5007",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/sensor_records.hdf5",
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8819,
+        3
+      ],
+      "position_sha256": "51afd2be5d5acc3e74425113e2a7e7f55c8af95e948ae4d3aba189ec2efd240e",
+      "official_page_id": "4007",
+      "internal_id": "5007",
+      "path_group": "PLE/0007"
+    },
+    {
+      "trajectory": "PLE_training/winter/trajectory_6002",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/winter/sensor_records.hdf5",
+      "hdf5_sha256": "9e2f38450cf84efef2f46a0de2b05db422f7da296e1f419e7d8c35938f9620f7",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8817,
+        3
+      ],
+      "position_sha256": "926f8eda37ba5f3e391bda52c705a01f9bd212e5d4187457dbc24dc8caebb978",
+      "official_page_id": "4002",
+      "internal_id": "6002",
+      "path_group": "PLE/0002"
+    },
+    {
+      "trajectory": "PLE_training/winter/trajectory_6005",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/winter/sensor_records.hdf5",
+      "hdf5_sha256": "9e2f38450cf84efef2f46a0de2b05db422f7da296e1f419e7d8c35938f9620f7",
+      "frames": 2206,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19854,
+      "position_shape": [
+        8822,
+        3
+      ],
+      "position_sha256": "bf1fcc75041c4d5f3ceca1d840544f90372608127fa0c73965adc10d0e499221",
+      "official_page_id": "4005",
+      "internal_id": "6005",
+      "path_group": "PLE/0005"
+    },
+    {
+      "trajectory": "PLE_training/winter/trajectory_6007",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/sensor_records.hdf5",
+      "hdf5_sha256": "9e2f38450cf84efef2f46a0de2b05db422f7da296e1f419e7d8c35938f9620f7",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8819,
+        3
+      ],
+      "position_sha256": "51afd2be5d5acc3e74425113e2a7e7f55c8af95e948ae4d3aba189ec2efd240e",
+      "official_page_id": "4007",
+      "internal_id": "6007",
+      "path_group": "PLE/0007"
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/foggy/sensor_records.hdf5",
+      "hdf5_sha256": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8817,
+        3
+      ],
+      "position_sha256": "cdd2ff78fb33838ad95daed7a2bc8d2b387535925e92cd73428e98be63d7e935",
+      "official_page_id": "0003",
+      "internal_id": "2003",
+      "path_group": "Kite/0003"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "hdf5": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/spring/sensor_records.hdf5",
+      "hdf5_sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+      "frames": 2205,
+      "rgb_depth_paths_match": true,
+      "navigation_values_checked": 19845,
+      "position_shape": [
+        8820,
+        3
+      ],
+      "position_sha256": "8e80e4debb396f21aacda3120c4daa272049235fb8ebb3467d3cdd3d8a4a5446",
+      "official_page_id": "4000",
+      "internal_id": "5000",
+      "path_group": "PLE/0000"
+    }
+  ],
+  "fully_decoded_trajectories": [
+    "Kite_training/foggy/trajectory_2005",
+    "Kite_training/foggy/trajectory_2006",
+    "Kite_training/sunny/trajectory_0005",
+    "Kite_training/sunset/trajectory_1006",
+    "PLE_training/fall/trajectory_4006",
+    "PLE_training/spring/trajectory_5001",
+    "PLE_training/spring/trajectory_5002",
+    "PLE_training/spring/trajectory_5004",
+    "PLE_training/spring/trajectory_5005",
+    "PLE_training/spring/trajectory_5006",
+    "PLE_training/spring/trajectory_5007",
+    "PLE_training/winter/trajectory_6007",
+    "Kite_training/foggy/trajectory_2003",
+    "PLE_training/spring/trajectory_5000"
+  ],
+  "pixel_statistics": [
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2005",
+      "split": "train",
+      "decoded_pairs": 2206,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 53.40192028399906,
+      "finite_min": 0.36083984375,
+      "finite_max": 65504.0,
+      "pixels": 2313158656,
+      "finite": 2313158656,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 591546193,
+      "valid": 1721612463,
+      "near_valid": 177538243,
+      "resized_pixels": 135536640,
+      "resized_valid": 100583560,
+      "resized_near_valid": 10315797
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2006",
+      "split": "train",
+      "decoded_pairs": 2206,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 56.56816471199272,
+      "finite_min": 1.130859375,
+      "finite_max": 65504.0,
+      "pixels": 2313158656,
+      "finite": 2313158656,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 443060918,
+      "valid": 1870097738,
+      "near_valid": 601631963,
+      "resized_pixels": 135536640,
+      "resized_valid": 109341816,
+      "resized_near_valid": 35016923
+    },
+    {
+      "trajectory": "Kite_training/sunny/trajectory_0005",
+      "split": "train",
+      "decoded_pairs": 2206,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 65.29374429098971,
+      "finite_min": 0.40869140625,
+      "finite_max": 65504.0,
+      "pixels": 2313158656,
+      "finite": 2313158656,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 591614703,
+      "valid": 1721543953,
+      "near_valid": 177447802,
+      "resized_pixels": 135536640,
+      "resized_valid": 100579962,
+      "resized_near_valid": 10311802
+    },
+    {
+      "trajectory": "Kite_training/sunset/trajectory_1006",
+      "split": "train",
+      "decoded_pairs": 2206,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 72.42248557800485,
+      "finite_min": 1.0947265625,
+      "finite_max": 65504.0,
+      "pixels": 2313158656,
+      "finite": 2313158656,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 443119714,
+      "valid": 1870038942,
+      "near_valid": 601853617,
+      "resized_pixels": 135536640,
+      "resized_valid": 109338996,
+      "resized_near_valid": 35030531
+    },
+    {
+      "trajectory": "PLE_training/fall/trajectory_4006",
+      "split": "train",
+      "decoded_pairs": 2205,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 40.09609203301079,
+      "finite_min": 1.0712890625,
+      "finite_max": 18240.0,
+      "pixels": 2312110080,
+      "finite": 2312110080,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 720052961,
+      "valid": 1592057119,
+      "near_valid": 746221523,
+      "resized_pixels": 135475200,
+      "resized_valid": 92962579,
+      "resized_near_valid": 43397026
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5001",
+      "split": "train",
+      "decoded_pairs": 2204,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 39.29412198498903,
+      "finite_min": 0.80224609375,
+      "finite_max": 65504.0,
+      "pixels": 2311061504,
+      "finite": 2311061504,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 738216993,
+      "valid": 1572844511,
+      "near_valid": 725406960,
+      "resized_pixels": 135413760,
+      "resized_valid": 91838375,
+      "resized_near_valid": 42187700
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5002",
+      "split": "train",
+      "decoded_pairs": 2205,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 43.8553186019999,
+      "finite_min": 1.4501953125,
+      "finite_max": 65504.0,
+      "pixels": 2312110080,
+      "finite": 2312110080,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 634984356,
+      "valid": 1677125724,
+      "near_valid": 805694442,
+      "resized_pixels": 135475200,
+      "resized_valid": 97982472,
+      "resized_near_valid": 46921233
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5004",
+      "split": "train",
+      "decoded_pairs": 2204,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 41.27363798499573,
+      "finite_min": 1.443359375,
+      "finite_max": 16880.0,
+      "pixels": 2311061504,
+      "finite": 2311061504,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 450673208,
+      "valid": 1860388296,
+      "near_valid": 650482607,
+      "resized_pixels": 135413760,
+      "resized_valid": 108735370,
+      "resized_near_valid": 37845644
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5005",
+      "split": "train",
+      "decoded_pairs": 2206,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 48.26693246301147,
+      "finite_min": 0.34765625,
+      "finite_max": 17584.0,
+      "pixels": 2313158656,
+      "finite": 2313158656,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 570067283,
+      "valid": 1743091373,
+      "near_valid": 778346839,
+      "resized_pixels": 135536640,
+      "resized_valid": 101859858,
+      "resized_near_valid": 45317447
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5006",
+      "split": "train",
+      "decoded_pairs": 2205,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 37.569096735998755,
+      "finite_min": 1.064453125,
+      "finite_max": 18240.0,
+      "pixels": 2312110080,
+      "finite": 2312110080,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 720032968,
+      "valid": 1592077112,
+      "near_valid": 746324246,
+      "resized_pixels": 135475200,
+      "resized_valid": 92964016,
+      "resized_near_valid": 43404135
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5007",
+      "split": "train",
+      "decoded_pairs": 2205,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 43.67528738900728,
+      "finite_min": 1.439453125,
+      "finite_max": 17040.0,
+      "pixels": 2312110080,
+      "finite": 2312110080,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 778012627,
+      "valid": 1534097453,
+      "near_valid": 582837649,
+      "resized_pixels": 135475200,
+      "resized_valid": 89564228,
+      "resized_near_valid": 33841955
+    },
+    {
+      "trajectory": "PLE_training/winter/trajectory_6007",
+      "split": "train",
+      "decoded_pairs": 2205,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 34.7318903060077,
+      "finite_min": 1.439453125,
+      "finite_max": 17040.0,
+      "pixels": 2312110080,
+      "finite": 2312110080,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 787842293,
+      "valid": 1524267787,
+      "near_valid": 565274300,
+      "resized_pixels": 135475200,
+      "resized_valid": 88988964,
+      "resized_near_valid": 32816842
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "split": "val",
+      "decoded_pairs": 2205,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 35.79661721599405,
+      "finite_min": 6.69921875,
+      "finite_max": 65504.0,
+      "pixels": 2312110080,
+      "finite": 2312110080,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 355302136,
+      "valid": 1956807944,
+      "near_valid": 15454167,
+      "resized_pixels": 135475200,
+      "resized_valid": 114412073,
+      "resized_near_valid": 894287
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "split": "val",
+      "decoded_pairs": 2205,
+      "dimensions": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "seconds": 80.66691310900205,
+      "finite_min": 1.4658203125,
+      "finite_max": 65504.0,
+      "pixels": 2312110080,
+      "finite": 2312110080,
+      "nonfinite": 0,
+      "below_0_1": 0,
+      "above_1000": 625880552,
+      "valid": 1686229528,
+      "near_valid": 539791433,
+      "resized_pixels": 135475200,
+      "resized_valid": 98491741,
+      "resized_near_valid": 31373553
+    }
+  ],
+  "read_guard_probes": [
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/Kite_training/foggy/color_left/trajectory_2007/000000.JPEG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/Kite_training/foggy/depth/trajectory_2007/000000.PNG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/Kite_training/foggy/color_left/trajectory_2007/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/Kite_training/foggy/depth/trajectory_2007/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/Kite_training/sunny/color_left/trajectory_0008/000000.JPEG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/Kite_training/sunny/depth/trajectory_0008/000000.PNG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/Kite_training/sunny/color_left/trajectory_0008/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/Kite_training/sunny/depth/trajectory_0008/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/PLE_training/spring/color_left/trajectory_5008/000000.JPEG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/PLE_training/spring/depth/trajectory_5008/000000.PNG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/PLE_training/spring/color_left/trajectory_5008/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/PLE_training/spring/depth/trajectory_5008/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/PLE_training/winter/color_left/trajectory_6009/000000.JPEG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/PLE_training/winter/depth/trajectory_6009/000000.PNG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/PLE_training/winter/color_left/trajectory_6009/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/MidAir/PLE_training/winter/depth/trajectory_6009/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/sunny/color_left/trajectory_0004/000000.JPEG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/sunny/depth/trajectory_0004/000000.PNG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/sunny/color_left/trajectory_0004/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/Kite_training/sunny/depth/trajectory_0004/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/spring/color_left/trajectory_5003/000000.JPEG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/spring/depth/trajectory_5003/000000.PNG",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/spring/color_left/trajectory_5003/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir/PLE_training/spring/depth/trajectory_5003/frames.zip",
+      "rejected_before_io": true
+    },
+    {
+      "path": "/run/media/Ima/Low storage/AeroDepth/MidAir",
+      "broad_discovery_rejected": true
+    }
+  ],
+  "validation_mask_counts_equal_frozen_audit": true,
+  "original_training_scope": "17635 existing training pairs checked for filenames, HDF5 correspondence and all 9 navigation values per frame; prior original decode/header evidence retained, not re-decoded here.",
+  "navigation_note": "100Hz groundtruth velocity and simulated IMU sampled at floor(camera_ordinal*frequency/25); every value finite and original records unchanged. Not a claim of deployable navigation.",
+  "unexpected_guard_rejections": []
+}

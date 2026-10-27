@@ -1,0 +1,705 @@
+{
+  "supervised": {
+    "scope": "bounded real TRAIN-only timing, no model quality claim",
+    "identity": {
+      "format": 1,
+      "arm": "supervised",
+      "scope": "benchmark",
+      "manifest_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+      "reservations_sha256": "a525347120e77deadfefaeb96d72266ece05d16941c4356b421729f6c9e819a3",
+      "starting_weights": {
+        "kind": "published_MobileNet_epoch4",
+        "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6"
+      },
+      "teacher": null,
+      "gate_sha256": null,
+      "config": {
+        "protocol_status": "proposal_pending_review",
+        "seed": 42,
+        "arm": "supervised",
+        "data": {
+          "image_size": [
+            192,
+            320
+          ],
+          "min_depth": 0.1,
+          "max_depth": 1000.0,
+          "depth_encoding": "midair_float16_bits",
+          "depth_scale": 1.0,
+          "workers": 2
+        },
+        "model": {
+          "name": "mobilenet_v3_small_depth",
+          "pretrained": false
+        },
+        "train": {
+          "epochs": 10,
+          "batch_size": 2,
+          "effective_batch_size": 2,
+          "accumulation_steps": 1,
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "grad_clip": 1.0,
+          "amp": true,
+          "amp_initial_scale": 1024.0,
+          "lr_schedule": {
+            "name": "cosine",
+            "t_max": 10,
+            "eta_min": 1e-06
+          }
+        },
+        "loss": {
+          "l1_weight": 1.0,
+          "log_weight": 0.2,
+          "gradient_weight": 0.1,
+          "near_weight": 0.0,
+          "near_threshold": 10.0
+        },
+        "kd_weight": 0.0,
+        "device": "cuda"
+      },
+      "model_contract": {
+        "architecture": "mobilenet_v3_small_depth",
+        "model_options": {
+          "name": "mobilenet_v3_small_depth"
+        },
+        "preprocessing": {
+          "input": "RGB float32 [0,1]",
+          "image_size": [
+            192,
+            320
+          ],
+          "rgb_resize": "bilinear align_corners=False",
+          "depth_resize": "nearest",
+          "crop": null,
+          "paired_training_horizontal_flip": true,
+          "normalization_location": "model",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "depth_encoding": "midair_float16_bits",
+          "depth_scale": 1.0,
+          "valid_depth_metres": [
+            0.1,
+            1000.0
+          ],
+          "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+        },
+        "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+      },
+      "source_sha256": {
+        "src/aerodepth_lite/expanded.py": "c6e41b0d566acc0cfa5ab56a31e97b647271ef84be8215ef8794ed1f6d709ec9",
+        "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+        "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+        "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+        "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+        "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+        "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+      }
+    },
+    "hardware": "NVIDIA GeForce GTX 1650",
+    "model": {
+      "parameters": 1027489,
+      "trainable_parameters": 1027489,
+      "fp32_size_mb": 4.109956,
+      "encoder_parameters": 927008,
+      "decoder_parameters": 100481
+    },
+    "warmup_batches_excluded": 2,
+    "measured_batches": 8,
+    "physical_batch_size": 2,
+    "effective_batch_size": 2,
+    "amp": true,
+    "teacher_precision": null,
+    "examples": 16,
+    "wall_seconds": 2.158133190998342,
+    "examples_per_second": 7.413814896474706,
+    "teacher_compute_seconds": 0.0,
+    "compute_seconds": 1.4941634950228035,
+    "loader_wait_seconds": 0.6564768479875056,
+    "peak_gpu": {
+      "allocated_bytes": 113550336,
+      "reserved_bytes": 157286400
+    },
+    "checkpoint_write_seconds_measured": 0.2978848570055561,
+    "checkpoint_recovery_overhead_seconds_measured": 0.7698531790083507,
+    "fp32_train_input_eval_proxy": {
+      "examples": 8,
+      "seconds": 1.5725924059952376
+    },
+    "extrapolation": {
+      "train_epoch_hours": 1.6522457891778626,
+      "validation_proxy_hours": 0.24080321216802075,
+      "two_checkpoint_writes_hours": 0.00016549158722530897,
+      "checkpoint_recovery_hours": 0.00021384810528009743,
+      "epoch_total_hours": 1.8934283410383888,
+      "candidate_epochs": 10,
+      "candidate_total_hours": 18.934283410383884,
+      "candidate_total_hours_plus_20_percent": 22.72114009246066
+    },
+    "conditions": "Two loader workers; external HDD; OS cache uncontrolled; same fixed 64 TRAIN frames. Short timing is not full-dataset I/O measurement. CUDA synchronized per step. Validation overhead extrapolates FP32 TRAIN inference, not validation performance. Two full checkpoint writes and one atomic prior-best recovery copy plus hash checks per epoch are conservatively assumed.",
+    "batches": [
+      {
+        "loss": 16.943363189697266,
+        "supervised_loss": 16.943363189697266,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.18915934099641163,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00017659500008448958
+      },
+      {
+        "loss": 14.885749816894531,
+        "supervised_loss": 14.885749816894531,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.18817657200270332,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.0001628869940759614
+      },
+      {
+        "loss": 9.274771690368652,
+        "supervised_loss": 9.274771690368652,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.18817657299223356,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00018517499847803265
+      },
+      {
+        "loss": 31.738996505737305,
+        "supervised_loss": 31.738996505737305,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.18523979900055565,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00025997799821197987
+      },
+      {
+        "loss": 14.311047554016113,
+        "supervised_loss": 14.311047554016113,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.1830535890039755,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00016210500325541943
+      },
+      {
+        "loss": 16.602397918701172,
+        "supervised_loss": 16.602397918701172,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.1862856570078293,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.31301783400704153
+      },
+      {
+        "loss": 19.99020004272461,
+        "supervised_loss": 19.99020004272461,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.18554733401106205,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 7.423399074468762e-05
+      },
+      {
+        "loss": 15.55677604675293,
+        "supervised_loss": 15.55677604675293,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.18852463000803255,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.3424380399956135
+      }
+    ]
+  },
+  "teacher": {
+    "scope": "bounded real TRAIN-only timing, no model quality claim",
+    "identity": {
+      "format": 1,
+      "arm": "teacher",
+      "scope": "benchmark",
+      "manifest_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+      "reservations_sha256": "a525347120e77deadfefaeb96d72266ece05d16941c4356b421729f6c9e819a3",
+      "starting_weights": {
+        "kind": "ResNet50_Weights.IMAGENET1K_V2",
+        "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca"
+      },
+      "teacher": null,
+      "gate_sha256": null,
+      "config": {
+        "protocol_status": "proposal_pending_review",
+        "seed": 42,
+        "arm": "teacher",
+        "data": {
+          "image_size": [
+            192,
+            320
+          ],
+          "min_depth": 0.1,
+          "max_depth": 1000.0,
+          "depth_encoding": "midair_float16_bits",
+          "depth_scale": 1.0,
+          "workers": 2
+        },
+        "model": {
+          "name": "resnet50_depth",
+          "pretrained": true
+        },
+        "train": {
+          "epochs": 20,
+          "batch_size": 2,
+          "effective_batch_size": 2,
+          "accumulation_steps": 1,
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "grad_clip": 1.0,
+          "amp": true,
+          "amp_initial_scale": 1024.0,
+          "lr_schedule": {
+            "name": "cosine",
+            "t_max": 20,
+            "eta_min": 1e-06
+          },
+          "encoder_learning_rate": 1e-05
+        },
+        "loss": {
+          "l1_weight": 1.0,
+          "log_weight": 0.2,
+          "gradient_weight": 0.1,
+          "near_weight": 0.0,
+          "near_threshold": 10.0
+        },
+        "kd_weight": 0.0,
+        "device": "cuda"
+      },
+      "model_contract": {
+        "architecture": "resnet50_depth",
+        "model_options": {
+          "name": "resnet50_depth"
+        },
+        "preprocessing": {
+          "input": "RGB float32 [0,1]",
+          "image_size": [
+            192,
+            320
+          ],
+          "rgb_resize": "bilinear align_corners=False",
+          "depth_resize": "nearest",
+          "crop": null,
+          "paired_training_horizontal_flip": true,
+          "normalization_location": "model",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "depth_encoding": "midair_float16_bits",
+          "depth_scale": 1.0,
+          "valid_depth_metres": [
+            0.1,
+            1000.0
+          ],
+          "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+        },
+        "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+      },
+      "source_sha256": {
+        "src/aerodepth_lite/expanded.py": "c6e41b0d566acc0cfa5ab56a31e97b647271ef84be8215ef8794ed1f6d709ec9",
+        "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+        "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+        "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+        "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+        "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+        "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+      }
+    },
+    "hardware": "NVIDIA GeForce GTX 1650",
+    "model": {
+      "parameters": 23999633,
+      "trainable_parameters": 23999633,
+      "fp32_size_mb": 95.998532,
+      "encoder_parameters": 23508032,
+      "decoder_parameters": 491601
+    },
+    "warmup_batches_excluded": 2,
+    "measured_batches": 8,
+    "physical_batch_size": 2,
+    "effective_batch_size": 2,
+    "amp": true,
+    "teacher_precision": null,
+    "examples": 16,
+    "wall_seconds": 4.5475018179859035,
+    "examples_per_second": 3.5184153058978715,
+    "teacher_compute_seconds": 0.0,
+    "compute_seconds": 4.5393954049941385,
+    "loader_wait_seconds": 0.001341174021945335,
+    "peak_gpu": {
+      "allocated_bytes": 539447296,
+      "reserved_bytes": 580911104
+    },
+    "checkpoint_write_seconds_measured": 5.456298174991389,
+    "checkpoint_recovery_overhead_seconds_measured": 6.026005216001067,
+    "fp32_train_input_eval_proxy": {
+      "examples": 8,
+      "seconds": 1.0609680540073896
+    },
+    "extrapolation": {
+      "train_epoch_hours": 3.481523180026777,
+      "validation_proxy_hours": 0.16246073326988153,
+      "two_checkpoint_writes_hours": 0.0030312767638841047,
+      "checkpoint_recovery_hours": 0.0016738903377780743,
+      "epoch_total_hours": 3.648689080398321,
+      "candidate_epochs": 20,
+      "candidate_total_hours": 72.97378160796643,
+      "candidate_total_hours_plus_20_percent": 87.56853792955971
+    },
+    "conditions": "Two loader workers; external HDD; OS cache uncontrolled; same fixed 64 TRAIN frames. Short timing is not full-dataset I/O measurement. CUDA synchronized per step. Validation overhead extrapolates FP32 TRAIN inference, not validation performance. Two full checkpoint writes and one atomic prior-best recovery copy plus hash checks per epoch are conservatively assumed.",
+    "batches": [
+      {
+        "loss": 95.30885314941406,
+        "supervised_loss": 95.30885314941406,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.5665394999959972,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00015164900105446577
+      },
+      {
+        "loss": 29.837575912475586,
+        "supervised_loss": 29.837575912475586,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.5669303239992587,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.0002248579985462129
+      },
+      {
+        "loss": 42.592552185058594,
+        "supervised_loss": 42.592552185058594,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.5644470099941827,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00021783400734420866
+      },
+      {
+        "loss": 80.86922454833984,
+        "supervised_loss": 80.86922454833984,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.5672747250064276,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.0001273870002478361
+      },
+      {
+        "loss": 39.45825958251953,
+        "supervised_loss": 39.45825958251953,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.5674158320034621,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00019357599376235157
+      },
+      {
+        "loss": 37.518821716308594,
+        "supervised_loss": 37.518821716308594,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.5701215919980314,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00018422500579617918
+      },
+      {
+        "loss": 45.46963119506836,
+        "supervised_loss": 45.46963119506836,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.5688773599977139,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00011884501145686954
+      },
+      {
+        "loss": 44.524452209472656,
+        "supervised_loss": 44.524452209472656,
+        "kd_loss": 0.0,
+        "examples": 2,
+        "compute_seconds": 0.5677890619990649,
+        "teacher_seconds": 0.0,
+        "loader_wait_seconds": 0.00012280000373721123
+      }
+    ]
+  },
+  "kd": {
+    "scope": "bounded real TRAIN-only timing, no model quality claim",
+    "identity": {
+      "format": 1,
+      "arm": "kd",
+      "scope": "benchmark",
+      "manifest_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+      "reservations_sha256": "a525347120e77deadfefaeb96d72266ece05d16941c4356b421729f6c9e819a3",
+      "starting_weights": {
+        "kind": "published_MobileNet_epoch4",
+        "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6"
+      },
+      "teacher": {
+        "sha256": "65c9ffd8b07abbc8ca128e16940f42c16e84852173baecf1555828e76c70a320",
+        "model_contract": {
+          "architecture": "resnet50_depth",
+          "model_options": {
+            "name": "resnet50_depth"
+          },
+          "preprocessing": {
+            "input": "RGB float32 [0,1]",
+            "image_size": [
+              192,
+              320
+            ],
+            "rgb_resize": "bilinear align_corners=False",
+            "depth_resize": "nearest",
+            "crop": null,
+            "paired_training_horizontal_flip": true,
+            "normalization_location": "model",
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ],
+            "depth_encoding": "midair_float16_bits",
+            "depth_scale": 1.0,
+            "valid_depth_metres": [
+              0.1,
+              1000.0
+            ],
+            "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+          },
+          "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+        },
+        "precision": "FP32"
+      },
+      "gate_sha256": null,
+      "config": {
+        "protocol_status": "proposal_pending_review",
+        "seed": 42,
+        "arm": "kd",
+        "data": {
+          "image_size": [
+            192,
+            320
+          ],
+          "min_depth": 0.1,
+          "max_depth": 1000.0,
+          "depth_encoding": "midair_float16_bits",
+          "depth_scale": 1.0,
+          "workers": 2
+        },
+        "model": {
+          "name": "mobilenet_v3_small_depth",
+          "pretrained": false
+        },
+        "train": {
+          "epochs": 10,
+          "batch_size": 2,
+          "effective_batch_size": 2,
+          "accumulation_steps": 1,
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "grad_clip": 1.0,
+          "amp": true,
+          "amp_initial_scale": 1024.0,
+          "lr_schedule": {
+            "name": "cosine",
+            "t_max": 10,
+            "eta_min": 1e-06
+          }
+        },
+        "loss": {
+          "l1_weight": 1.0,
+          "log_weight": 0.2,
+          "gradient_weight": 0.1,
+          "near_weight": 0.0,
+          "near_threshold": 10.0
+        },
+        "kd_weight": 0.2,
+        "device": "cuda"
+      },
+      "model_contract": {
+        "architecture": "mobilenet_v3_small_depth",
+        "model_options": {
+          "name": "mobilenet_v3_small_depth"
+        },
+        "preprocessing": {
+          "input": "RGB float32 [0,1]",
+          "image_size": [
+            192,
+            320
+          ],
+          "rgb_resize": "bilinear align_corners=False",
+          "depth_resize": "nearest",
+          "crop": null,
+          "paired_training_horizontal_flip": true,
+          "normalization_location": "model",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "depth_encoding": "midair_float16_bits",
+          "depth_scale": 1.0,
+          "valid_depth_metres": [
+            0.1,
+            1000.0
+          ],
+          "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+        },
+        "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+      },
+      "source_sha256": {
+        "src/aerodepth_lite/expanded.py": "c6e41b0d566acc0cfa5ab56a31e97b647271ef84be8215ef8794ed1f6d709ec9",
+        "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+        "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+        "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+        "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+        "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+        "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+      }
+    },
+    "hardware": "NVIDIA GeForce GTX 1650",
+    "model": {
+      "parameters": 1027489,
+      "trainable_parameters": 1027489,
+      "fp32_size_mb": 4.109956,
+      "encoder_parameters": 927008,
+      "decoder_parameters": 100481
+    },
+    "warmup_batches_excluded": 2,
+    "measured_batches": 8,
+    "physical_batch_size": 2,
+    "effective_batch_size": 2,
+    "amp": true,
+    "teacher_precision": "FP32",
+    "examples": 16,
+    "wall_seconds": 2.3819395409955177,
+    "examples_per_second": 6.717214994177767,
+    "teacher_compute_seconds": 0.8513263120257761,
+    "compute_seconds": 2.369767849027994,
+    "loader_wait_seconds": 0.0010941829823423177,
+    "peak_gpu": {
+      "allocated_bytes": 212357120,
+      "reserved_bytes": 239075328
+    },
+    "checkpoint_write_seconds_measured": 0.16045241900428664,
+    "checkpoint_recovery_overhead_seconds_measured": 0.18986592401051894,
+    "fp32_train_input_eval_proxy": {
+      "examples": 8,
+      "seconds": 0.6117141199938487
+    },
+    "extrapolation": {
+      "train_epoch_hours": 1.823589754840631,
+      "validation_proxy_hours": 0.09366872462405809,
+      "two_checkpoint_writes_hours": 8.914023278015925e-05,
+      "checkpoint_recovery_hours": 5.2740534447366374e-05,
+      "epoch_total_hours": 1.9174003602319165,
+      "candidate_epochs": 10,
+      "candidate_total_hours": 19.174003602319168,
+      "candidate_total_hours_plus_20_percent": 23.008804322783
+    },
+    "conditions": "Two loader workers; external HDD; OS cache uncontrolled; same fixed 64 TRAIN frames. Short timing is not full-dataset I/O measurement. CUDA synchronized per step. Validation overhead extrapolates FP32 TRAIN inference, not validation performance. Two full checkpoint writes and one atomic prior-best recovery copy plus hash checks per epoch are conservatively assumed.",
+    "batches": [
+      {
+        "loss": 17.790206909179688,
+        "supervised_loss": 16.94899559020996,
+        "kd_loss": 4.2060546875,
+        "examples": 2,
+        "compute_seconds": 0.2961101840046467,
+        "teacher_seconds": 0.10653853201074526,
+        "loader_wait_seconds": 0.00013388700608629733
+      },
+      {
+        "loss": 15.49793815612793,
+        "supervised_loss": 14.867669105529785,
+        "kd_loss": 3.1513442993164062,
+        "examples": 2,
+        "compute_seconds": 0.298391784002888,
+        "teacher_seconds": 0.10667863700655289,
+        "loader_wait_seconds": 8.244600030593574e-05
+      },
+      {
+        "loss": 9.978154182434082,
+        "supervised_loss": 9.283553123474121,
+        "kd_loss": 3.4730052947998047,
+        "examples": 2,
+        "compute_seconds": 0.2961559630057309,
+        "teacher_seconds": 0.10631120699690655,
+        "loader_wait_seconds": 0.0001922959927469492
+      },
+      {
+        "loss": 32.52532958984375,
+        "supervised_loss": 31.743900299072266,
+        "kd_loss": 3.907149314880371,
+        "examples": 2,
+        "compute_seconds": 0.2978990529954899,
+        "teacher_seconds": 0.1063695550110424,
+        "loader_wait_seconds": 0.00021647399989888072
+      },
+      {
+        "loss": 14.960914611816406,
+        "supervised_loss": 14.304472923278809,
+        "kd_loss": 3.282208204269409,
+        "examples": 2,
+        "compute_seconds": 0.29419671700452454,
+        "teacher_seconds": 0.10635329299839213,
+        "loader_wait_seconds": 0.0002199000009568408
+      },
+      {
+        "loss": 17.24306869506836,
+        "supervised_loss": 16.617496490478516,
+        "kd_loss": 3.1278629302978516,
+        "examples": 2,
+        "compute_seconds": 0.29683151601057034,
+        "teacher_seconds": 0.10643528599757701,
+        "loader_wait_seconds": 7.994499173946679e-05
+      },
+      {
+        "loss": 20.652868270874023,
+        "supervised_loss": 19.99457550048828,
+        "kd_loss": 3.2914626598358154,
+        "examples": 2,
+        "compute_seconds": 0.29688549699494615,
+        "teacher_seconds": 0.10637046200281475,
+        "loader_wait_seconds": 7.974899199325591e-05
+      },
+      {
+        "loss": 16.242969512939453,
+        "supervised_loss": 15.560884475708008,
+        "kd_loss": 3.4104223251342773,
+        "examples": 2,
+        "compute_seconds": 0.2932971350091975,
+        "teacher_seconds": 0.10626934000174515,
+        "loader_wait_seconds": 8.94859986146912e-05
+      }
+    ]
+  }
+}

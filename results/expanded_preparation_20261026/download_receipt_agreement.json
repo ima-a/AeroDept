@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "recovery_archive_identities_matched": 20,
+  "paths": [
+    "Kite_training/foggy/depth/trajectory_2006/frames.zip",
+    "PLE_training/spring/sensor_records.zip",
+    "PLE_training/spring/color_left/trajectory_5001/frames.zip",
+    "PLE_training/spring/depth/trajectory_5001/frames.zip",
+    "PLE_training/spring/color_left/trajectory_5002/frames.zip",
+    "PLE_training/spring/depth/trajectory_5002/frames.zip",
+    "PLE_training/spring/color_left/trajectory_5004/frames.zip",
+    "PLE_training/spring/depth/trajectory_5004/frames.zip",
+    "PLE_training/spring/color_left/trajectory_5005/frames.zip",
+    "PLE_training/spring/depth/trajectory_5005/frames.zip",
+    "PLE_training/spring/color_left/trajectory_5006/frames.zip",
+    "PLE_training/spring/depth/trajectory_5006/frames.zip",
+    "PLE_training/spring/color_left/trajectory_5007/frames.zip",
+    "PLE_training/spring/depth/trajectory_5007/frames.zip",
+    "PLE_training/fall/sensor_records.zip",
+    "PLE_training/fall/color_left/trajectory_4006/frames.zip",
+    "PLE_training/fall/depth/trajectory_4006/frames.zip",
+    "PLE_training/winter/sensor_records.zip",
+    "PLE_training/winter/color_left/trajectory_6007/frames.zip",
+    "PLE_training/winter/depth/trajectory_6007/frames.zip"
+  ],
+  "configuration_hash_matches_recovery_session": true,
+  "first_ten_archives": "Independently SHA-256 hashed and CRC verified in this preparation; no historical download SHA receipt claimed."
+}

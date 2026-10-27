@@ -1,0 +1,15 @@
+{
+  "observed_utc": "2026-10-26T06:19:21.060358+00:00",
+  "stage": "A_supervised",
+  "status": "running",
+  "progress": {
+    "epoch": 1,
+    "batches": 1250,
+    "global_step": 1250,
+    "loss": 11.521622657775879,
+    "amp_scale": 128.0,
+    "overflow_retries_total": 3
+  },
+  "supervisor_pid": 170165,
+  "trainer_pid": 170179
+}

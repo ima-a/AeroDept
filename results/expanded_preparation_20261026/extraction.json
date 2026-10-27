@@ -1,0 +1,218 @@
+{
+  "passed": true,
+  "stage_root": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir",
+  "archives": [
+    {
+      "archive": "Kite_training/foggy/sensor_records.zip",
+      "archive_sha256": "143d9c2274653c52e1449df59641fb1b0e0ba49c8b871497e868cbef2f36cc96",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy",
+      "files": 1,
+      "bytes": 86191620
+    },
+    {
+      "archive": "Kite_training/foggy/color_left/trajectory_2005/frames.zip",
+      "archive_sha256": "52df299ed4124d127b0dc16dd43214fd14c0a470c5eaf05fa1e563c6ee69bf42",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2005",
+      "files": 2206,
+      "bytes": 302181853
+    },
+    {
+      "archive": "Kite_training/foggy/depth/trajectory_2005/frames.zip",
+      "archive_sha256": "876ecfdd86fc570416c77cc7148cd2393735b2d7436405cce74a7060c2a1228f",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2005",
+      "files": 2206,
+      "bytes": 1869309557
+    },
+    {
+      "archive": "Kite_training/foggy/color_left/trajectory_2006/frames.zip",
+      "archive_sha256": "88af241ffbf2d2f97974158311d7f9d6249e28e52217707b567b925747f2e19b",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2006",
+      "files": 2206,
+      "bytes": 383273789
+    },
+    {
+      "archive": "Kite_training/foggy/depth/trajectory_2006/frames.zip",
+      "archive_sha256": "8da4b03e3d6d69b641f13665d81cb67f777bf5d7bebb197090dd8f4e32013971",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2006",
+      "files": 2206,
+      "bytes": 1890577623
+    },
+    {
+      "archive": "Kite_training/sunny/sensor_records.zip",
+      "archive_sha256": "088574d817a08f4ef7ca8a607422e2449b0012f8d09a7a089f743218e5be092e",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny",
+      "files": 1,
+      "bytes": 86191620
+    },
+    {
+      "archive": "Kite_training/sunny/color_left/trajectory_0005/frames.zip",
+      "archive_sha256": "3c5aa21246a8de573a5a002e3aaeed0b2ca3917e039b2503f779e11ab568732c",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/color_left/trajectory_0005",
+      "files": 2206,
+      "bytes": 706411558
+    },
+    {
+      "archive": "Kite_training/sunny/depth/trajectory_0005/frames.zip",
+      "archive_sha256": "d0d22347ebb717b489be446769190d597c5a3f9c0dc24b977399e5833cfc2052",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/depth/trajectory_0005",
+      "files": 2206,
+      "bytes": 1869369016
+    },
+    {
+      "archive": "Kite_training/sunset/sensor_records.zip",
+      "archive_sha256": "cd8f187f6982bc1256b8950dbf22b44c06389076d7b6e2663ca0719346c287ac",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset",
+      "files": 1,
+      "bytes": 86139132
+    },
+    {
+      "archive": "Kite_training/sunset/color_left/trajectory_1006/frames.zip",
+      "archive_sha256": "dde554d8d8c8814513c0d3ef572a236dd51b1fd8b2f4d3d6d2bd8dba73bb906f",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/color_left/trajectory_1006",
+      "files": 2206,
+      "bytes": 547657583
+    },
+    {
+      "archive": "Kite_training/sunset/depth/trajectory_1006/frames.zip",
+      "archive_sha256": "8551a23c157655cb2afed3c5d0cae06edac0b39d28c1de0655bc986d0f895623",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/depth/trajectory_1006",
+      "files": 2206,
+      "bytes": 1890438535
+    },
+    {
+      "archive": "PLE_training/spring/sensor_records.zip",
+      "archive_sha256": "c08095e19dc69eb4acd9d813b807d08848039964410e321f11076b9c1f2d77a4",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring",
+      "files": 1,
+      "bytes": 68894264
+    },
+    {
+      "archive": "PLE_training/spring/color_left/trajectory_5001/frames.zip",
+      "archive_sha256": "5efc912401afc077e51ca114827b2d2dbdc1e416d0181b608364ab9cb460f14e",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5001",
+      "files": 2204,
+      "bytes": 425005643
+    },
+    {
+      "archive": "PLE_training/spring/depth/trajectory_5001/frames.zip",
+      "archive_sha256": "d9b57385fdc2a6a76fe9e732b722f21237c2b746f749789e9204a2510fe3203f",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5001",
+      "files": 2204,
+      "bytes": 1244927821
+    },
+    {
+      "archive": "PLE_training/spring/color_left/trajectory_5002/frames.zip",
+      "archive_sha256": "5b62d12805fee70864d8a5d12afe5c2bef59f6fb68787c611b19e48e0be20a6c",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5002",
+      "files": 2205,
+      "bytes": 455623293
+    },
+    {
+      "archive": "PLE_training/spring/depth/trajectory_5002/frames.zip",
+      "archive_sha256": "3f1bb806188a5285fe07b92f4b528a8ab7a46a0bef884b32fce81597875a21ad",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5002",
+      "files": 2205,
+      "bytes": 1427572680
+    },
+    {
+      "archive": "PLE_training/spring/color_left/trajectory_5004/frames.zip",
+      "archive_sha256": "28cdb760f976a1182172a2af0f78a9955050ac8de7e846943adcec4f81603e03",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5004",
+      "files": 2204,
+      "bytes": 184367682
+    },
+    {
+      "archive": "PLE_training/spring/depth/trajectory_5004/frames.zip",
+      "archive_sha256": "5ba083b62d673baf00639ed1b7d2b37054e2d8633510f0a76ade661cf4aaa565",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5004",
+      "files": 2204,
+      "bytes": 1745137259
+    },
+    {
+      "archive": "PLE_training/spring/color_left/trajectory_5005/frames.zip",
+      "archive_sha256": "2ac04df2bb3b57b7cb7b53e3e57b2ca4c0b6d673cca11211b664f1364e777bad",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5005",
+      "files": 2206,
+      "bytes": 227161908
+    },
+    {
+      "archive": "PLE_training/spring/depth/trajectory_5005/frames.zip",
+      "archive_sha256": "a36673f94888d946fe0547db62ca9f9c83e63105c6b1005530841adb9d8179dc",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5005",
+      "files": 2206,
+      "bytes": 1937529790
+    },
+    {
+      "archive": "PLE_training/spring/color_left/trajectory_5006/frames.zip",
+      "archive_sha256": "43a5ad7fb835ec0cf74e1ef1d91d3865835f0aad835beae7aaa56ba2e73b101c",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5006",
+      "files": 2205,
+      "bytes": 182354076
+    },
+    {
+      "archive": "PLE_training/spring/depth/trajectory_5006/frames.zip",
+      "archive_sha256": "07f3f671a6f6b6b59a47f2b4c3158af3cf08196ecf37e208531e36e8faf7f591",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5006",
+      "files": 2205,
+      "bytes": 1511685236
+    },
+    {
+      "archive": "PLE_training/spring/color_left/trajectory_5007/frames.zip",
+      "archive_sha256": "550bc2dba779294d2a366f4cf2943bf97aa416a95f437643f657ac3799e43105",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5007",
+      "files": 2205,
+      "bytes": 165750801
+    },
+    {
+      "archive": "PLE_training/spring/depth/trajectory_5007/frames.zip",
+      "archive_sha256": "2e67b7c4b519957c8836d3ebaca9b4e204a30ec37d8f6b7b9f27edd7e1a9dd7e",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5007",
+      "files": 2205,
+      "bytes": 1632202272
+    },
+    {
+      "archive": "PLE_training/fall/sensor_records.zip",
+      "archive_sha256": "db111b5c712720d3eaa64cac347219f13ae7e08fef8d8593c40ed240359a6b5b",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall",
+      "files": 1,
+      "bytes": 68894264
+    },
+    {
+      "archive": "PLE_training/fall/color_left/trajectory_4006/frames.zip",
+      "archive_sha256": "ee95f837c58cffb939798f8d908f2b23d29da9fcf766f5b7f0a1790eb7bbdaae",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/color_left/trajectory_4006",
+      "files": 2205,
+      "bytes": 181268165
+    },
+    {
+      "archive": "PLE_training/fall/depth/trajectory_4006/frames.zip",
+      "archive_sha256": "9fb70eb896aaa0c4cf31643570e1be4ccf22894c7aa44bb0a48f0c10134eb5f0",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/depth/trajectory_4006",
+      "files": 2205,
+      "bytes": 1524646781
+    },
+    {
+      "archive": "PLE_training/winter/sensor_records.zip",
+      "archive_sha256": "fa72578d1ed81dc3ad6ef0cfcc8afd5f0f8bc0d63b4884ad9a3b12a71b4dfdef",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter",
+      "files": 1,
+      "bytes": 68894264
+    },
+    {
+      "archive": "PLE_training/winter/color_left/trajectory_6007/frames.zip",
+      "archive_sha256": "cfa72ca183d5b27c7e33c4f5fd31684b724e69544e36a79301c93fa1c0400100",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/color_left/trajectory_6007",
+      "files": 2205,
+      "bytes": 162603313
+    },
+    {
+      "archive": "PLE_training/winter/depth/trajectory_6007/frames.zip",
+      "archive_sha256": "c41d9fff6472924517940a42c3023099548884058fa90cfe79132742d9913133",
+      "destination": "/run/media/Ima/Low storage/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/depth/trajectory_6007",
+      "files": 2205,
+      "bytes": 1423320190
+    }
+  ],
+  "member_index_sha256": "69e9e0a8b4fb8676b026205fcadf8aa354f4d72b6cf40b20e9d6bdb69fe3d33c",
+  "total_bytes": 24355581588
+}

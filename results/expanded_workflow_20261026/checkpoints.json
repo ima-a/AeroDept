@@ -1,0 +1,38 @@
+{
+  "supervised_smoke": {
+    "path": "artifacts/expanded_workflow_20261026T095357/verification/smoke_supervised/last.pt",
+    "bytes": 12656541,
+    "sha256": "f63c8df78d224d236652e92d56cc45f72d1b442de0959bd4284a6981631d04a6",
+    "scope": "bounded; cannot resume as full training"
+  },
+  "supervised_benchmark": {
+    "path": "artifacts/expanded_workflow_20261026T095357/verification/benchmark_supervised/benchmark.pt",
+    "bytes": 12656477,
+    "sha256": "12037b8fa8c2c17b5a5b3ad33bc8ebec6df5d778f28c810817d1d101094b6657",
+    "scope": "bounded; cannot resume as full training"
+  },
+  "teacher_smoke": {
+    "path": "artifacts/expanded_workflow_20261026T095357/verification/smoke_teacher/last.pt",
+    "bytes": 288532335,
+    "sha256": "65c9ffd8b07abbc8ca128e16940f42c16e84852173baecf1555828e76c70a320",
+    "scope": "bounded; cannot resume as full training"
+  },
+  "teacher_benchmark": {
+    "path": "artifacts/expanded_workflow_20261026T095357/verification/benchmark_teacher/benchmark.pt",
+    "bytes": 288532271,
+    "sha256": "b4a9d1b53b8759728ed9d5b13a94baa3c5f9d5680a4f4719c77631ce2f6757e2",
+    "scope": "bounded; cannot resume as full training"
+  },
+  "kd_smoke": {
+    "path": "artifacts/expanded_workflow_20261026T095357/verification/smoke_kd/last.pt",
+    "bytes": 12657501,
+    "sha256": "eda1ab4651776c5dfe3d453fae8031140ea5cd072481b181032f74d720985e2e",
+    "scope": "bounded; cannot resume as full training"
+  },
+  "kd_benchmark": {
+    "path": "artifacts/expanded_workflow_20261026T095357/verification/benchmark_kd/benchmark.pt",
+    "bytes": 12657437,
+    "sha256": "7c4690bb3b630b8b6999c38f3656d4ae0d0a4f031da7eed8ae77c24506566866",
+    "scope": "bounded; cannot resume as full training"
+  }
+}

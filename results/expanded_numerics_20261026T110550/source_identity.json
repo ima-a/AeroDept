@@ -1,0 +1,43 @@
+{
+  "current": {
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "tests/test_expanded.py": "11b58a1dd980bdfdf02baafddb4efcaf0a03034bfb5eb9c1bb3adf2dc106f3cd",
+    "docs/expanded_training.md": "b8bc1ca8dda766eed07592f1d2a7821b19c037b0f67ed801d2e01889c02a2bf8",
+    "docs/expanded_numerical_recovery.md": "ca1e2a0086442609ad6c7a234c5b168d7c08d19d2e7a9211e7b2b8535b65ddd4"
+  },
+  "core_source_sha256": {
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+  },
+  "gradient_policy": {
+    "name": "same_batch_amp_backoff_v1",
+    "max_overflow_retries": 8,
+    "restore_before_retry": "all model buffers and training/data RNG",
+    "optimizer_updates": "one finite update per batch; no skipped batches",
+    "nonfinite_prediction_or_loss": "fatal",
+    "persistent_nonfinite_gradients": "fatal"
+  },
+  "old_expanded_source_sha256": "c6e41b0d566acc0cfa5ab56a31e97b647271ef84be8215ef8794ed1f6d709ec9",
+  "old_current_protocol_sha256": "9e6ce9e286c2861857e0f0b5c264690746f80ca807b9186271812f60ea56b110",
+  "scripts": {
+    "artifacts/expanded_numerics_20261026T110550/verify_fix.py": "ed4c344905da6a03f10f2872c8e8f291d84dabe8a6fa1d23cf3c4e2cbbfe870c",
+    "artifacts/expanded_numerics_20261026T110550/verify_kd_overflow.py": "6160583d2ae12ac7bfebce68ec986e588e7191204ce9050a7e65d37cfa5fa15c",
+    "artifacts/expanded_numerics_20261026T110550/expanded.before.py": "c6e41b0d566acc0cfa5ab56a31e97b647271ef84be8215ef8794ed1f6d709ec9",
+    "artifacts/expanded_numerics_20261026T110550/save_report.py": "c50ad26464d939718875db7aad452798b6a6c0762c7e9b4e0d6ec05c400d7dd9",
+    "artifacts/expanded_numerics_20261026T110550/verify_fix.first.py": "3df44b36632de5094a4124a31b71de674c1a25a6aca8a941c07b21b98bd01410",
+    "artifacts/expanded_numerics_20261026T110550/reproduce.py": "42e1fcf5e358460292ee2ff48a8181684a50077a2525382ca1724f4e68c6458a"
+  },
+  "final_verification_logs": {
+    "artifacts/expanded_numerics_20261026T110550/reproduction.log": "1964b7af25a4f288fad41b2dd39662123a5e59f83b9b64bb75fa1b645baba72f",
+    "artifacts/expanded_numerics_20261026T110550/fix_verification_v2.log": "82fea1ff35899ce898c26a8013d91ca85c60b621d50d868f402eaacaa87da46d",
+    "artifacts/expanded_numerics_20261026T110550/kd_overflow_verification.log": "cd7b437df687c06f6ee7360b3736c2760e8856c386ead1362e30484084732c18",
+    "artifacts/expanded_numerics_20261026T110550/focused_tests_final.log": "e13eabf6a4cafe2cd370a96e0b12ad17cf96cd1f021e089a131580941f15b098"
+  },
+  "raw_artifact_root": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_numerics_20261026T110550",
+  "full_training_restarted": false
+}

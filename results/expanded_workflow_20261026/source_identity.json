@@ -1,0 +1,64 @@
+{
+  "current_sources": {
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+    "src/aerodepth_lite/expanded.py": "c6e41b0d566acc0cfa5ab56a31e97b647271ef84be8215ef8794ed1f6d709ec9",
+    "scripts/expanded_training.py": "551add4262b0acd18a04f13b3ecd6c74aa1be59e023c779ea18961fd291f7d82",
+    "tests/test_expanded.py": "ed412f537651387f9f6681093e9ff014242596645738c8c5018d5130f8f436ad",
+    "configs/expanded_supervised.yaml": "1ec82c5e3e7e85aecb9b77488f86e271952e98925fc0ac08082837ac4c7b2ba3",
+    "configs/expanded_teacher.yaml": "1b26707a8caa06af7e734a6c03cdf9bad6a8fcb4903b51ec24b392c67d4dfb94",
+    "configs/expanded_kd.yaml": "c0f13fdd1e343037277c04205fe292b99e26deb17a8c5bc9b7541c1c96cdea8e",
+    "docs/expanded_training.md": "9e6ce9e286c2861857e0f0b5c264690746f80ca807b9186271812f60ea56b110",
+    "docs/expanded_experiment_20261025/PLAN.md": "c4af5de91c4f034792c529525ffa7b9f6103f171d7fcadf6641917add7d1cc9b"
+  },
+  "pre_implementation_plan_sha256": "0d37b2095080e7232a8054bffee35a409ef37cf3dc510e74969580966e31d5a0",
+  "historical_source_snapshot": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/historical_source",
+  "historical_saved_result_verification": {
+    "passed": true,
+    "protocol_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+    "actual_measured_calls": 12849,
+    "excluded_warmup_calls": 50,
+    "policies": {
+      "every": {
+        "frames": 4436,
+        "calls": 4436,
+        "valid_pixels": 187182008,
+        "near_valid_pixels": 48016063,
+        "passed": true
+      },
+      "fixed2": {
+        "frames": 4436,
+        "calls": 2218,
+        "valid_pixels": 187182008,
+        "near_valid_pixels": 48016063,
+        "passed": true
+      },
+      "fixed5": {
+        "frames": 4436,
+        "calls": 888,
+        "valid_pixels": 187182008,
+        "near_valid_pixels": 48016063,
+        "passed": true
+      },
+      "v2_selected": {
+        "frames": 4436,
+        "calls": 2837,
+        "valid_pixels": 187182008,
+        "near_valid_pixels": 48016063,
+        "passed": true
+      },
+      "fixed_validation_budget": {
+        "frames": 4436,
+        "calls": 2470,
+        "valid_pixels": 187182008,
+        "near_valid_pixels": 48016063,
+        "passed": true
+      }
+    },
+    "checks": "Model/source identity; frame coverage; independent fixed cadence; call/source/age accounting; GT event definition and within-trajectory delays/censoring; component timings; equal pixel counts; pooled metrics. No image/depth reads or model calls."
+  },
+  "local_evidence_root": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357",
+  "definitive_evidence_root": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_workflow_20261026T095357/verification",
+  "regression_log_sha256": "1c75f6f240ef0764a905151526db9024b8b19079d21e655fe059fa62063c149a",
+  "regression_result": "79 passed, 1 real-data integration test deselected, one sandbox NVML warning"
+}
