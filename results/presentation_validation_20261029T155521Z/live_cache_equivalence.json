@@ -1,0 +1,32 @@
+{
+  "v2": {
+    "passed": true,
+    "frames": 4410,
+    "compared": "all Decision fields including reasons/scores, source indices, ages; uncached full-prediction risk recomputation",
+    "risk_updates": 2456
+  },
+  "v2_no_motion": {
+    "passed": true,
+    "frames": 4410,
+    "compared": "all Decision fields including reasons/scores, source indices, ages; uncached full-prediction risk recomputation",
+    "risk_updates": 1900
+  },
+  "v2_no_visual": {
+    "passed": true,
+    "frames": 4410,
+    "compared": "all Decision fields including reasons/scores, source indices, ages; uncached full-prediction risk recomputation",
+    "risk_updates": 1789
+  },
+  "v2_no_risk": {
+    "passed": true,
+    "frames": 4410,
+    "compared": "all Decision fields including reasons/scores, source indices, ages; uncached full-prediction risk recomputation",
+    "risk_updates": 0
+  },
+  "v2_no_age": {
+    "passed": true,
+    "frames": 4410,
+    "compared": "all Decision fields including reasons/scores, source indices, ages; uncached full-prediction risk recomputation",
+    "risk_updates": 2454
+  }
+}

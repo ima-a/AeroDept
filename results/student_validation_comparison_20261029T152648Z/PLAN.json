@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-10-29T15:26:48.689709+00:00",
+  "dataset_root": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir",
+  "KD_bundle": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher",
+  "checkpoints": {
+    "epoch4": {
+      "path": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.state_dict.pt",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+      "selected_epoch": 4
+    },
+    "student_A": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/baseline_A_selected_epoch9.pt",
+      "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+      "selected_epoch": 9
+    },
+    "exploratory_KD": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/run/best.pt",
+      "sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+      "selected_epoch": 9
+    }
+  },
+  "reuse_root": "/home/Ima/work/Projects/DL-projects/AeroDept/results/expanded_validation_diagnostic_20261028T172239Z",
+  "reuse_sha256": {
+    "metrics.json": "a72bfa75faf1903f66672d40bebe8970b29de2c9eba0c5c53637b5f2348d691c",
+    "pooled_supplementary.json": "e7a3e74167749a80334a510c8296301ec1602140086cecca7490ae1a03a6fc32",
+    "identities.json": "fb727834a688bff4ad398eaced1cd66aee0c909dda95e7a876932c4f42606916",
+    "runtime.json": "91b7bd8ef37a13331c12ca1ce0a4d944ef5b0c31afc6fb0819017d600e6fd3b8",
+    "contract_checks.json": "69e383ab662b2f8bc0b89833e6314d7add13e8dc65f28183dee790aca5177741",
+    "evaluation_completion.json": "68e1a845fa03aeec5a82038c4ca0ab7e61b9667ba541fd7ea24766b74a55502f",
+    "example_selection.json": "0432555de47ee10baec965cd9f3d1dec67d231a6502d3b221420fcbb096e309a",
+    "per_frame.csv": "e37ce39c2a28232311e9ed9779edcbb66b6bca8eacfe773285be8f7291e0b6ca",
+    "REPORT.md": "fac3e6ee8912b845d2281e44e4468a991e5cba36dfebc101a8e13b51750a8cbd"
+  },
+  "parent_sources": {
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+  },
+  "manifest": "results/expanded_preparation_20261026/manifest_train_val.json.gz",
+  "reservations": "results/expanded_preparation_20261026/reservations.json",
+  "manifest_uncompressed_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "source_reused_stats": {
+    "file": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_validation_diagnostic_20261028T172239Z/audit.py",
+    "sha256": "186e13cc53d19a59863692fb932306fb7bcf69d56c15f35fd8ccc7413937d0a9",
+    "class_sha256": "1f55ae77a26122d7236f7c73236ba69281da3c2176590a820bb3d31e5a024761"
+  },
+  "new_computation": "Only KD full4410 FP32 forward pass for missing supplementary/band statistics, cross-check standard scores against selected saved record. Original/A: only six original two-frame batches to render same historical examples and verify per-frame scores. Teacher: no inference.",
+  "contract": {
+    "batch_size": 2,
+    "precision": "FP32 model/input; no autocast or TF32; FP64 metric summation",
+    "image_size": [
+      192,
+      320
+    ],
+    "GT_valid_metres": [
+      0.1,
+      1000
+    ],
+    "near": "valid GT<10m",
+    "floor": "prediction<=0.101m on valid GT",
+    "depth_bands": [
+      [
+        "0.1-10m",
+        0.1,
+        10
+      ],
+      [
+        "10-50m",
+        10,
+        50
+      ],
+      [
+        "50-100m",
+        50,
+        100
+      ],
+      [
+        "100-300m",
+        100,
+        300
+      ],
+      [
+        "300-1000m",
+        300,
+        1000
+      ]
+    ],
+    "aggregation": "pooled valid pixels; RMSE from pooled SSE, not mean per-frame/path RMSE; strict ratio<1.25**k",
+    "undefined": null
+  },
+  "numerical_reference_check": "Counts exact; existing metric fields reproduce selected saved FP32 metrics within abs1e-8. Stop and investigate if not. No omitted mismatches or relaxed checks.",
+  "selection_sha256": "fc2114f2693cd1e8c64330b1a8bb1d2b2bc64e0d55d0ea015f48f493f668bec6",
+  "forbidden": [
+    "training",
+    "optimizer/backward",
+    "test RGB/depth",
+    "test evaluation",
+    "checkpoint selection changes",
+    "published weight promotion",
+    "teacher reevaluation",
+    "HDD mounting/reads",
+    "Git publication"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-29T04:28:21.729202+00:00",
+  "service": "aerodepth-exploratory-kd-20261029t042103z.service",
+  "bundle": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher",
+  "freeze_sha256": "a46adf2a3b576fada2503c4ccea231c920f9eee80f3efa882d126deca898ff2c",
+  "authorization_sha256": "ee35d009610b8478eb7634f882b5946e467cde5449583346f29d01259bc49fbf",
+  "prelaunch_competing_cuda_apps": "780, /usr/bin/kwin_wayland, 5 MiB",
+  "AC_online": true,
+  "inhibitor_acquisition_preflight": true,
+  "start_stdout": "",
+  "start_stderr": "Running as unit: aerodepth-exploratory-kd-20261029t042103z.service; invocation ID: 3f1cca12ad454818a5eb1ecafff97874\n",
+  "automatic_restart": false,
+  "launch_attempts": 1
+}

@@ -1,0 +1,50 @@
+{
+  ".gitignore": {
+    "sha256": "3b2a04901e990e11189bdb6196eb2dbc3cfcaec5e8dc51bfdd1e0d080c482f0f",
+    "bytes": 653
+  },
+  "README.md": {
+    "sha256": "bc8c3c9d680087c6b29f9a6f8345f6f285e40386a2eacf85a5276ba2f26402c6",
+    "bytes": 11690
+  },
+  "pyproject.toml": {
+    "sha256": "7664811e53646e1de69ae1c175fff10b025dad2f5e67e8ed46187cd5dcf58289",
+    "bytes": 778
+  },
+  "MANIFEST.in": {
+    "sha256": "2c3569dce0014a00622ce70ac84b47ace3735f85442eee879b4b22785a5a2af8",
+    "bytes": 814
+  },
+  "configs/presentation.json": {
+    "sha256": "d21149eb22295080598f3489d8c49c0cdf16023fcc39a882e10e9455ef3fa62b",
+    "bytes": 2010
+  },
+  "configs/presentation_local.json": {
+    "sha256": "c3d8b16bc4a9fe6df2a1352c6a29ae5fdcf150db6788692e9d4102b14568de40",
+    "bytes": 2864
+  },
+  "scripts/dashboard.py": {
+    "sha256": "2b4692818f26ec3e318bf86604e3346b7d3cdeb46985006a88ce531f6a5728a5",
+    "bytes": 23510
+  },
+  "src/aerodepth_lite/presentation_ui.py": {
+    "sha256": "a540929a878325d84e1e8116bda4723343c1335351558d589554101b224b8368",
+    "bytes": 5108
+  },
+  "tests/test_dashboard.py": {
+    "sha256": "ed6634368a8d6bbc4f94ebe712ff14e65488735fe0d782d0c322abe098162acb",
+    "bytes": 3658
+  },
+  "docs/FINAL_REPORT.md": {
+    "sha256": "277bdc3b6703384bd8e8caf1b677605c53892902699a7421eba4addf61b5b97c",
+    "bytes": 19565
+  },
+  "docs/presentation_dashboard.md": {
+    "sha256": "da905c8e3a4ffcc859690182b655ee69a21cc8c4341ac2a5bfab466d66c88eb0",
+    "bytes": 12785
+  },
+  "docs/GIT_READY_CHECKLIST.md": {
+    "bytes": 3197,
+    "sha256": "45dc387fbda4f8799f1fb337a7192e4aabb363d7244a821c62e92e5ecf7a0683"
+  }
+}

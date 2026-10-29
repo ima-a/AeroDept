@@ -1,0 +1,134 @@
+[
+  {
+    "batch_index": 0,
+    "comparison": "current_components",
+    "block": "encoder",
+    "FP32_max_abs_error": 7.092952728271484e-06,
+    "FP32_relative_L2_error": 9.98899724841171e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 2.2865804638616538e-08,
+    "FP64_max_abs_error": 3.1086244689504383e-15,
+    "FP64_relative_L2_error": 1.084889335697152e-15
+  },
+  {
+    "batch_index": 0,
+    "comparison": "current_components",
+    "block": "decoder",
+    "FP32_max_abs_error": 2.86102294921875e-06,
+    "FP32_relative_L2_error": 3.289942912911787e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 1.8456364214713972e-08,
+    "FP64_max_abs_error": 2.3092638912203256e-14,
+    "FP64_relative_L2_error": 1.7365175722184034e-15
+  },
+  {
+    "batch_index": 0,
+    "comparison": "current_components",
+    "block": "output_head",
+    "FP32_max_abs_error": 5.21540641784668e-08,
+    "FP32_relative_L2_error": 1.762857105745438e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 1.2851521152823508e-08,
+    "FP64_max_abs_error": 1.3877787807814457e-16,
+    "FP64_relative_L2_error": 3.8951324335211527e-16
+  },
+  {
+    "batch_index": 0,
+    "comparison": "candidate_components",
+    "block": "encoder",
+    "FP32_max_abs_error": 3.3974647521972656e-06,
+    "FP32_relative_L2_error": 7.079096203969653e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 4.106174728013556e-08,
+    "FP64_max_abs_error": 2.6645352591003757e-15,
+    "FP64_relative_L2_error": 8.017595426986637e-16
+  },
+  {
+    "batch_index": 0,
+    "comparison": "candidate_components",
+    "block": "decoder",
+    "FP32_max_abs_error": 4.291534423828125e-06,
+    "FP32_relative_L2_error": 2.3394274697539213e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 1.2845782715320553e-08,
+    "FP64_max_abs_error": 1.865174681370263e-14,
+    "FP64_relative_L2_error": 1.299333827561239e-15
+  },
+  {
+    "batch_index": 0,
+    "comparison": "candidate_components",
+    "block": "output_head",
+    "FP32_max_abs_error": 4.470348358154297e-08,
+    "FP32_relative_L2_error": 1.8649426174066098e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 9.09599695564367e-09,
+    "FP64_max_abs_error": 1.1102230246251565e-16,
+    "FP64_relative_L2_error": 3.9139862274838145e-16
+  },
+  {
+    "batch_index": 1,
+    "comparison": "current_components",
+    "block": "encoder",
+    "FP32_max_abs_error": 3.2901763916015625e-05,
+    "FP32_relative_L2_error": 1.448281367316903e-06,
+    "original_failing_elements": 35,
+    "FP32_cosine_reconstruction_effect": 2.8155834885801312e-08,
+    "FP64_max_abs_error": 3.730349362740526e-14,
+    "FP64_relative_L2_error": 1.7431377778054065e-15
+  },
+  {
+    "batch_index": 1,
+    "comparison": "current_components",
+    "block": "decoder",
+    "FP32_max_abs_error": 1.3113021850585938e-05,
+    "FP32_relative_L2_error": 4.541060364080839e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 4.069736103673449e-09,
+    "FP64_max_abs_error": 4.618527782440651e-14,
+    "FP64_relative_L2_error": 1.6787979499428006e-15
+  },
+  {
+    "batch_index": 1,
+    "comparison": "current_components",
+    "block": "output_head",
+    "FP32_max_abs_error": 1.1920928955078125e-07,
+    "FP32_relative_L2_error": 2.1421951976706748e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 2.1590759458067765e-08,
+    "FP64_max_abs_error": 3.0531133177191805e-16,
+    "FP64_relative_L2_error": 4.1864090542751017e-16
+  },
+  {
+    "batch_index": 1,
+    "comparison": "candidate_components",
+    "block": "encoder",
+    "FP32_max_abs_error": 2.956390380859375e-05,
+    "FP32_relative_L2_error": 1.1035533777881443e-06,
+    "original_failing_elements": 13,
+    "FP32_cosine_reconstruction_effect": 5.43851835232978e-08,
+    "FP64_max_abs_error": 2.398081733190338e-14,
+    "FP64_relative_L2_error": 1.297457591345802e-15
+  },
+  {
+    "batch_index": 1,
+    "comparison": "candidate_components",
+    "block": "decoder",
+    "FP32_max_abs_error": 3.814697265625e-06,
+    "FP32_relative_L2_error": 9.337790595129744e-08,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 1.5826709276467454e-08,
+    "FP64_max_abs_error": 7.105427357601002e-15,
+    "FP64_relative_L2_error": 2.447666159428151e-16
+  },
+  {
+    "batch_index": 1,
+    "comparison": "candidate_components",
+    "block": "output_head",
+    "FP32_max_abs_error": 4.76837158203125e-07,
+    "FP32_relative_L2_error": 3.0373295187232307e-07,
+    "original_failing_elements": 0,
+    "FP32_cosine_reconstruction_effect": 1.0201228461959033e-07,
+    "FP64_max_abs_error": 4.440892098500626e-16,
+    "FP64_relative_L2_error": 4.3645848584602933e-16
+  }
+]

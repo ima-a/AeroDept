@@ -1,0 +1,170 @@
+{
+  "planned_frames": 64,
+  "planned_batches": 32,
+  "planned_realizations": 20,
+  "planned_path_groups": 12,
+  "completed_valid_batches": 1,
+  "completed_valid_frames": 2,
+  "failed_batch_index_zero_based": 1,
+  "failed_batch_records": [
+    {
+      "sample_index": 2,
+      "batch_index": 1,
+      "slot": 0,
+      "record": {
+        "trajectory_id": "Kite_training/foggy/trajectory_2006",
+        "frame_index": 1102,
+        "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2006/001102.JPEG",
+        "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2006/001102.PNG",
+        "timestamp": null,
+        "navigation": {
+          "vx": 9.875746991318124,
+          "vy": 4.472685770848628,
+          "vz": 3.8004571731342196,
+          "ax": -0.7224034383764211,
+          "ay": -0.015885774178090305,
+          "az": -9.343578389216182,
+          "wx": -0.006096653671372113,
+          "wy": -0.012317251592663263,
+          "wz": -0.0024082538098468102
+        },
+        "metadata": {
+          "environment": "Kite_training"
+        }
+      },
+      "environment": "Kite_training",
+      "condition": "foggy",
+      "path_group": "Kite/0006",
+      "fraction_pass": 0.5,
+      "ordinal_in_realization": 1102,
+      "realization_frames": 2206,
+      "normalized_ordinal": 0.4997732426303855
+    },
+    {
+      "sample_index": 3,
+      "batch_index": 1,
+      "slot": 1,
+      "record": {
+        "trajectory_id": "Kite_training/foggy/trajectory_2021",
+        "frame_index": 1101,
+        "rgb_path": "Kite_training/foggy/color_left/trajectory_2021/001101.JPEG",
+        "depth_path": "Kite_training/foggy/depth/trajectory_2021/001101.PNG",
+        "timestamp": null,
+        "navigation": {
+          "vx": 6.681627222404529,
+          "vy": -5.153496586916617,
+          "vz": 2.6600610081708,
+          "ax": -0.44860143732628754,
+          "ay": -0.017799934571865277,
+          "az": -10.406822702308421,
+          "wx": 0.13303951330817118,
+          "wy": 0.04961820061810674,
+          "wz": 0.03205058252531425
+        },
+        "metadata": {
+          "environment": "Kite_training"
+        }
+      },
+      "environment": "Kite_training",
+      "condition": "foggy",
+      "path_group": "Kite/0021",
+      "fraction_pass": 0.5,
+      "ordinal_in_realization": 1101,
+      "realization_frames": 2204,
+      "normalized_ordinal": 0.4997730367680436
+    }
+  ],
+  "completed_batch_records": [
+    {
+      "sample_index": 0,
+      "batch_index": 0,
+      "slot": 0,
+      "record": {
+        "trajectory_id": "Kite_training/cloudy/trajectory_3002",
+        "frame_index": 1100,
+        "rgb_path": "Kite_training/cloudy/color_left/trajectory_3002/001100.JPEG",
+        "depth_path": "Kite_training/cloudy/depth/trajectory_3002/001100.PNG",
+        "timestamp": null,
+        "navigation": {
+          "vx": 7.8428510634296345,
+          "vy": 1.397238674978496,
+          "vz": 1.6358323930878882,
+          "ax": -0.4261493393218631,
+          "ay": -0.006354638851554917,
+          "az": -10.690654430508918,
+          "wx": -0.006351337193996446,
+          "wy": -0.0026697433581505544,
+          "wz": -0.001910805161355389
+        },
+        "metadata": {
+          "environment": "Kite_training"
+        }
+      },
+      "environment": "Kite_training",
+      "condition": "cloudy",
+      "path_group": "Kite/0002",
+      "fraction_pass": 0.5,
+      "ordinal_in_realization": 1100,
+      "realization_frames": 2202,
+      "normalized_ordinal": 0.49977283053157656
+    },
+    {
+      "sample_index": 1,
+      "batch_index": 0,
+      "slot": 1,
+      "record": {
+        "trajectory_id": "Kite_training/foggy/trajectory_2005",
+        "frame_index": 1102,
+        "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2005/001102.JPEG",
+        "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2005/001102.PNG",
+        "timestamp": null,
+        "navigation": {
+          "vx": 16.023338624682992,
+          "vy": 1.4827582167185938,
+          "vz": -0.6891706886591464,
+          "ax": -1.8249953071876188,
+          "ay": 0.050075139810836715,
+          "az": -9.063927916049417,
+          "wx": -0.0635324050002032,
+          "wy": 0.013169819511831722,
+          "wz": -0.007699825895533675
+        },
+        "metadata": {
+          "environment": "Kite_training"
+        }
+      },
+      "environment": "Kite_training",
+      "condition": "foggy",
+      "path_group": "Kite/0005",
+      "fraction_pass": 0.5,
+      "ordinal_in_realization": 1102,
+      "realization_frames": 2206,
+      "normalized_ordinal": 0.4997732426303855
+    }
+  ],
+  "completed_batch_counts": {
+    "valid_pixels": 88934,
+    "near_pixels": 19445,
+    "near_fraction": 0.21864528751658532,
+    "valid_horizontal_edges": 87660,
+    "valid_vertical_edges": 87315,
+    "near_incident_horizontal_edges": 20674,
+    "near_incident_vertical_edges": 21154,
+    "near_far_boundary_horizontal_edges": 2869,
+    "near_far_boundary_vertical_edges": 4141
+  },
+  "full_64_frame_near_counts_available": false,
+  "reason_missing_counts": "Hard stop in second-batch reconstruction; no further target reads or retries. Per-frame coverage lived in the aborted process and was not persisted. Do not allocate aggregate near count to individual trajectories.",
+  "read_guard": {
+    "allowed_unique_image_paths": 128,
+    "actual_unique_image_paths": 128,
+    "total_read_opens": 152,
+    "all_paths_frozen_TRAIN_sample": true,
+    "opens_by_pid": {
+      "293939": 128,
+      "293972": 12,
+      "293974": 12
+    },
+    "note": "128 parent raw SHA checks precede loader PIL opens. Worker prefetch opens are not completed gradient observations."
+  }
+}

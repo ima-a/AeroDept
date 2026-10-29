@@ -1,0 +1,9 @@
+{
+  "kind": "export",
+  "weights": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+  "metadata": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json",
+  "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+  "metadata_sha256": "e9fed71377da6baa94b0a44ecdbf0ae6b1df44cc1ef1b4718a3d53a65e7faa12",
+  "selected_epoch": 9,
+  "label": "Supervised A \u00b7 epoch 9"
+}

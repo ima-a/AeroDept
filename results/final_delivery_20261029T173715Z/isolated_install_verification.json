@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "interpreter": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/final_delivery_20261029T173715Z/isolated_venv/bin/python",
+  "installed_package": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/final_delivery_20261029T173715Z/isolated_venv/lib/python3.13/site-packages/aerodepth_lite/__init__.py",
+  "source_distribution": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/final_delivery_20261029T173715Z/source_install/aerodepth_lite-0.1.0",
+  "isolation": "Fresh venv and non-editable wheel installed with --no-deps/--no-index. Existing recorded third-party dependencies exposed read-only through explicit .pth; not a fresh dependency-resolution test. Working environment unchanged.",
+  "exports": [
+    {
+      "weights": "models/mobilenet_v3_small_epoch4.state_dict.pt",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+      "parameters": 1027489,
+      "output_shape": [
+        1,
+        1,
+        192,
+        320
+      ],
+      "FP32_finite": true,
+      "unchanged_state_and_BN": true
+    },
+    {
+      "weights": "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+      "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+      "parameters": 1027489,
+      "output_shape": [
+        1,
+        1,
+        192,
+        320
+      ],
+      "FP32_finite": true,
+      "unchanged_state_and_BN": true
+    }
+  ],
+  "synthetic_image_inference": {
+    "output": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/final_delivery_20261029T173715Z/synthetic_package_prediction.npy",
+    "shape": [
+      192,
+      320
+    ],
+    "units": "metres, Euclidean camera range",
+    "min": 0.23334991931915283,
+    "max": 17.59096336364746,
+    "device": "cpu",
+    "weights_sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+    "note": "Research depth estimate; no upper output clamp. Inference needs no MidAir download."
+  },
+  "portable_dashboard_without_USB": {
+    "tabs": 5,
+    "exceptions": 0,
+    "missing_external_inputs": "unavailable",
+    "artifacts_loaded": true
+  },
+  "no_test_or_training_inputs": true
+}

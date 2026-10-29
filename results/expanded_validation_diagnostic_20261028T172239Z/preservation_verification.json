@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "existing_protected_files_unchanged": 135,
+  "selected_checkpoint_sha256_unchanged": {
+    "epoch4": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+    "student_A": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+    "teacher_B": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660"
+  },
+  "expanded_best_last_receipts_unchanged": true,
+  "original_main_and_export_identities_unchanged": true,
+  "no_tracked_source_config_or_document_changes": true,
+  "relative_report_links_checked": 31,
+  "no_commit_or_push": true,
+  "no_protocol_or_gate_amendment": true,
+  "no_alternate_checkpoint_promotion": true
+}

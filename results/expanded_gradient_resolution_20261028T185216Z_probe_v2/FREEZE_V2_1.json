@@ -1,0 +1,15 @@
+{
+  "files_sha256": {
+    "results/expanded_gradient_resolution_20261028T185216Z_probe_v2/PLAN.json": "6b92eb489321bcdec1aec1045061e7b1ed95fa0616b0b9de6fb8a62391eb0a86",
+    "results/expanded_gradient_resolution_20261028T185216Z_probe_v2/sampling.json": "19e63ba525534654abc1c88a3db165b4c012113edcf328abc21862e1e5c5ef32",
+    "results/expanded_gradient_resolution_20261028T185216Z_probe_v2/NUMERICAL_AMENDMENT_V2.json": "977189bff1e667dbd5b333c45fdc58b943c5e523baa5f66432b151b611391616",
+    "artifacts/expanded_gradient_resolution_20261028T185216Z_probe_v2/probe.py": "5b4dc8cd756503f4c3118b85e0c1d7355162dbb0634a799f9017c9889b4d3a25",
+    "artifacts/expanded_gradient_resolution_20261028T185216Z_probe_v2/summarize.py": "0b24269254e487863d1b8c714ae4d1bcfc77a1a22eabd049f91c3551cb4414f8",
+    "artifacts/expanded_gradient_resolution_20261028T185216Z/diagnose.py": "33669d17c6e518c43b912c4b93bc0bc3e827ded56039281966a82d46c079ecea",
+    "results/expanded_gradient_resolution_20261028T185216Z/DIAGNOSTIC_PLAN.json": "c4d7cde1b753131cd48033e7fa4e0a905ebc98e36a0d5fe464d6bced4ecaf186",
+    "results/expanded_gradient_resolution_20261028T185216Z/DIAGNOSTIC_FREEZE.json": "d6d4d156de736e31828752a02fca72e832ed690f9fb0662ea29955e997eac7b4",
+    "artifacts/expanded_gradient_resolution_20261028T185216Z_probe_v2/probe_verified.py": "7266768e4dcc97aa0a80c758a82f048ceb8784787c961b46a97f9c54716a06c4"
+  },
+  "numerical_amendment_version": 2,
+  "prelaunch_implementation_note": "Explicit exact-zero-vector enforcement added before any rerun; numerical contract unchanged. Original prelaunch script and seal preserved."
+}

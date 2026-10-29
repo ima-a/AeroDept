@@ -1,0 +1,66 @@
+{
+  "protected_original_files": {
+    "passed": true,
+    "files": 156,
+    "bytes": 18176891
+  },
+  "frozen_protocol_and_sources": {
+    "passed": true,
+    "source_files": 10,
+    "sha256": "771bc3e9201238d11b170bfad3177bd437bbee74583cd41f2cb00d891822e813"
+  },
+  "selected_model_bytes_unchanged": {
+    "passed": true,
+    "models": {
+      "Original": {
+        "path": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.state_dict.pt",
+        "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+        "bytes": 4267069
+      },
+      "A": {
+        "path": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+        "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+        "bytes": 4265209
+      },
+      "KD": {
+        "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/run/best.pt",
+        "sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+        "bytes": 12664669
+      },
+      "A_selected_checkpoint": {
+        "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/baseline_A_selected_epoch9.pt",
+        "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+        "bytes": 12662685
+      }
+    }
+  },
+  "rejected_teacher_gate_unchanged": {
+    "passed": true,
+    "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/original_failed_teacher_gate.json",
+    "sha256": "10e749c38271d360c2c0dc50cde6ec5416f410532b8f6817166f6ac6d3e36b1f"
+  },
+  "new_validation_cache_integrity": {
+    "passed": true,
+    "files": [
+      "valid.npy",
+      "targets.npy",
+      "display_RGB_uint8.npy",
+      "predictions.npy",
+      "gray.npy",
+      "features.json"
+    ],
+    "bytes": 3294584826,
+    "location": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/presentation-artifacts/presentation_validation_20261029T155521Z"
+  },
+  "verification": {
+    "passed": true,
+    "focused_tests": 15,
+    "browser_full_flows": true,
+    "browser_CUDA_and_figure_export": true,
+    "risk_equivalence_policies": 5,
+    "risk_equivalence_frames_per_policy": 4410,
+    "actual_live_equivalence_runs": 6,
+    "cache_check_execution_caveat": "Complete passing receipt written before original shell returned143; defensive checker refused overwrite. No clean exit claimed for that command."
+  },
+  "UTC": "2026-10-29T17:09:49.719410+00:00"
+}

@@ -1,0 +1,4 @@
+{
+  "scope": "Spacing-only correction to separate attribution from shared colour-bar labels; same data, frame order, masks, colours and fixed scales. No model inference.",
+  "source_sha256": "9829997bdf5e31a3a25ef659a3145e2df4a8681facca63070db45a7407edda37"
+}

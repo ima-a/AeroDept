@@ -1,0 +1,1467 @@
+{
+  "all_validity_checks_passed": true,
+  "supports_one_teacher_pilot_review": false,
+  "rules_unchanged": true,
+  "rules": {
+    "encoder": {
+      "primary": true,
+      "informative_batches": 26,
+      "conflict_batches": [
+        0
+      ],
+      "required_conflict_count": 7,
+      "conflict_candidate_effect_count": 1,
+      "conflict_breadth": {
+        "path_groups": [
+          "Kite/0002",
+          "Kite/0005"
+        ],
+        "fraction_passes": [
+          0.5
+        ],
+        "foggy_realizations": [
+          "Kite_training/foggy/trajectory_2005"
+        ],
+        "passed": false
+      },
+      "conflict_signal_passed": false,
+      "weak_batches": [
+        1,
+        11,
+        13,
+        20,
+        21
+      ],
+      "required_weak_count": 13,
+      "weak_candidate_effect_count": 3,
+      "weak_breadth": {
+        "path_groups": [
+          "Kite/0001",
+          "Kite/0002",
+          "Kite/0005",
+          "Kite/0006",
+          "Kite/0021"
+        ],
+        "fraction_passes": [
+          0.0,
+          0.5,
+          1.0
+        ],
+        "foggy_realizations": [
+          "Kite_training/foggy/trajectory_2005",
+          "Kite_training/foggy/trajectory_2006",
+          "Kite_training/foggy/trajectory_2021"
+        ],
+        "passed": true
+      },
+      "weak_signal_passed": false,
+      "supports_pilot_review": false
+    },
+    "decoder": {
+      "primary": true,
+      "informative_batches": 26,
+      "conflict_batches": [
+        0,
+        21,
+        23,
+        31
+      ],
+      "required_conflict_count": 7,
+      "conflict_candidate_effect_count": 4,
+      "conflict_breadth": {
+        "path_groups": [
+          "Kite/0001",
+          "Kite/0002",
+          "Kite/0005",
+          "Kite/0006",
+          "Kite/0021"
+        ],
+        "fraction_passes": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "foggy_realizations": [
+          "Kite_training/foggy/trajectory_2005",
+          "Kite_training/foggy/trajectory_2006",
+          "Kite_training/foggy/trajectory_2021"
+        ],
+        "passed": true
+      },
+      "conflict_signal_passed": false,
+      "weak_batches": [
+        1,
+        11,
+        13,
+        21
+      ],
+      "required_weak_count": 13,
+      "weak_candidate_effect_count": 3,
+      "weak_breadth": {
+        "path_groups": [
+          "Kite/0001",
+          "Kite/0006",
+          "Kite/0021"
+        ],
+        "fraction_passes": [
+          0.0,
+          0.5,
+          1.0
+        ],
+        "foggy_realizations": [
+          "Kite_training/foggy/trajectory_2006",
+          "Kite_training/foggy/trajectory_2021"
+        ],
+        "passed": false
+      },
+      "weak_signal_passed": false,
+      "supports_pilot_review": false
+    },
+    "output_head": {
+      "primary": false,
+      "informative_batches": 26,
+      "conflict_batches": [
+        0,
+        11,
+        13,
+        21,
+        31
+      ],
+      "required_conflict_count": 7,
+      "conflict_candidate_effect_count": 5,
+      "conflict_breadth": {
+        "path_groups": [
+          "Kite/0001",
+          "Kite/0002",
+          "Kite/0005",
+          "Kite/0006",
+          "Kite/0021"
+        ],
+        "fraction_passes": [
+          0.0,
+          0.25,
+          0.5,
+          1.0
+        ],
+        "foggy_realizations": [
+          "Kite_training/foggy/trajectory_2005",
+          "Kite_training/foggy/trajectory_2006",
+          "Kite_training/foggy/trajectory_2021"
+        ],
+        "passed": true
+      },
+      "conflict_signal_passed": false,
+      "weak_batches": [
+        1,
+        13
+      ],
+      "required_weak_count": 13,
+      "weak_candidate_effect_count": 1,
+      "weak_breadth": {
+        "path_groups": [
+          "Kite/0001",
+          "Kite/0006",
+          "Kite/0021"
+        ],
+        "fraction_passes": [
+          0.0,
+          0.5
+        ],
+        "foggy_realizations": [
+          "Kite_training/foggy/trajectory_2006",
+          "Kite_training/foggy/trajectory_2021"
+        ],
+        "passed": false
+      },
+      "weak_signal_passed": false,
+      "supports_pilot_review": false
+    }
+  },
+  "gradient_statistics": {
+    "encoder": {
+      "parameters": 23508032,
+      "norms": {
+        "L1": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            56.29404133432145,
+            90.63348680412538,
+            145.20756336987452,
+            187.43655294179808,
+            1611.6060486912904
+          ]
+        },
+        "log": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            2.4277580188676406,
+            3.9877043080212653,
+            4.725149917244949,
+            5.948514277403135,
+            8.536573699460844
+          ]
+        },
+        "gradient": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            6.9017898236099215,
+            11.382528968491549,
+            18.740829181516716,
+            31.24228224675139,
+            182.5702789274691
+          ]
+        },
+        "near_MAE": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            45.9228419106567,
+            83.33145005263512,
+            114.71308451638323,
+            195.47155842985708
+          ]
+        },
+        "current": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            56.78542269525739,
+            90.84173532142388,
+            145.4725191682205,
+            187.77822817126017,
+            1629.7994682525357
+          ]
+        },
+        "current_near": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            2.4758095295205007,
+            22.868807632395193,
+            31.32343958993383,
+            56.20312793335074
+          ]
+        },
+        "current_far": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            44.5661992183323,
+            71.82098294156127,
+            134.69373805281873,
+            178.77403253821927,
+            1629.7994682525357
+          ]
+        },
+        "near_L1_global": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            2.4177913013770223,
+            22.272418026489902,
+            30.574990471623114,
+            54.968042728534925
+          ]
+        },
+        "candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            62.859392017051995,
+            102.81495598149056,
+            153.08139156540096,
+            190.08540240311552,
+            1629.7994682525357
+          ]
+        }
+      },
+      "RMS": {
+        "L1": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.01161059004778147,
+            0.01869306652962111,
+            0.029948915554175573,
+            0.038658602661907064,
+            0.33239214500081266
+          ]
+        },
+        "log": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0005007226772880624,
+            0.000822460048253437,
+            0.0009745574718578861,
+            0.001226875154656816,
+            0.0017606598369530227
+          ]
+        },
+        "gradient": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0014234872881480022,
+            0.002347635281242067,
+            0.003865277383264162,
+            0.006443689646828654,
+            0.03765493848535596
+          ]
+        },
+        "near_MAE": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.009471540479518486,
+            0.01718702871059357,
+            0.02365945961360935,
+            0.04031581455400566
+          ]
+        },
+        "current": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.011711936964856862,
+            0.018736017579236673,
+            0.03000356242411884,
+            0.0387290728382301,
+            0.3361445196942266
+          ]
+        },
+        "current_near": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.0005106332535789641,
+            0.0047166688339967105,
+            0.006460428268159148,
+            0.011591839249233332
+          ]
+        },
+        "current_far": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.009191734273239,
+            0.014813006314662477,
+            0.027780449537224403,
+            0.03687196644246804,
+            0.3361445196942266
+          ]
+        },
+        "near_L1_global": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.0004986670517162833,
+            0.004593664070814029,
+            0.00630606138174712,
+            0.011337104153878688
+          ]
+        },
+        "candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.012964687097669982,
+            0.021205482434496693,
+            0.03157288478996011,
+            0.039204925229352455,
+            0.3361445196942266
+          ]
+        }
+      },
+      "cosines": {
+        "current__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.07899317126313994,
+            0.19766854882534654,
+            0.5125722824479728,
+            0.6366238401303688,
+            0.8975001177963534
+          ]
+        },
+        "candidate__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            0.010042932966475905,
+            0.3559051040190683,
+            0.611796462191299,
+            0.7375268047611816,
+            0.9318717480392351
+          ]
+        },
+        "current_near__current_far": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.4399947926330984,
+            0.11182734829492444,
+            0.24871152869207203,
+            0.340948400965534,
+            0.686548523375731
+          ]
+        },
+        "L1__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.08312151341881482,
+            0.19541406456665222,
+            0.5069939391439704,
+            0.6362645914987097,
+            0.8955097404314734
+          ]
+        },
+        "log__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            0.008562794438892832,
+            0.6180600640788838,
+            0.9221328712327106,
+            0.9605516914504971,
+            0.9898225729977731
+          ]
+        },
+        "gradient__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.16842354679535854,
+            0.007999607990600646,
+            0.08310931625920068,
+            0.10602714815344295,
+            0.3353996900593838
+          ]
+        },
+        "current__candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.9361291670967509,
+            0.9917082867505881,
+            0.9946918368145676,
+            0.99756700450802,
+            0.9999999999999969
+          ]
+        },
+        "current__current_near": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.079725295427283,
+            0.1977131191654473,
+            0.5125879418160726,
+            0.6365024239321365,
+            0.8974199786762737
+          ]
+        }
+      },
+      "near_partition_ratio": {
+        "count": 32,
+        "min_q25_median_q75_max": [
+          0.0,
+          0.017889461751831235,
+          0.18864327659062644,
+          0.323044014849711,
+          0.5381862743778327
+        ]
+      },
+      "weighted_bonus_ratio": {
+        "count": 32,
+        "min_q25_median_q75_max": [
+          0.0,
+          0.07943129029196906,
+          0.13281835245547635,
+          0.1955740046334632,
+          0.36593427096338327
+        ]
+      },
+      "zero_near_gradient_with_near_gt_batches": []
+    },
+    "decoder": {
+      "parameters": 491601,
+      "norms": {
+        "L1": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            43.49233484365509,
+            71.97278025992654,
+            102.13863754225102,
+            154.75911009993078,
+            808.3418196670901
+          ]
+        },
+        "log": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            1.598648651919396,
+            3.4952769120946674,
+            5.695282640380736,
+            7.611402507322981,
+            14.765602716249681
+          ]
+        },
+        "gradient": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            6.731819379037491,
+            14.52957503811317,
+            20.151005786713043,
+            25.17912164265071,
+            39.423315621646076
+          ]
+        },
+        "near_MAE": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            69.12547183994693,
+            122.23822525368689,
+            147.512039356234,
+            267.4517886004457
+          ]
+        },
+        "current": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            43.96500589239969,
+            72.74703661295891,
+            101.8289935495885,
+            154.9185201950017,
+            806.6340827045613
+          ]
+        },
+        "current_near": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            3.5009426166772744,
+            29.046445219558816,
+            40.06135965108308,
+            93.78991848389929
+          ]
+        },
+        "current_far": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            19.956813086819103,
+            46.916377222378415,
+            72.65357482479378,
+            154.91835296621096,
+            806.1169470784545
+          ]
+        },
+        "near_L1_global": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            3.4298152006004883,
+            28.438519603913633,
+            39.08618271727536,
+            90.89038991865024
+          ]
+        },
+        "candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            47.58829834566254,
+            87.76271525301836,
+            122.9843484952176,
+            161.78406925891284,
+            814.2371817054463
+          ]
+        }
+      },
+      "RMS": {
+        "L1": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0620306517309935,
+            0.10265069655293838,
+            0.14567454877823932,
+            0.22072414588263384,
+            1.1528921147971392
+          ]
+        },
+        "log": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.00228006194939661,
+            0.004985115322433806,
+            0.008122858780633372,
+            0.010855711927478667,
+            0.021059342134250016
+          ]
+        },
+        "gradient": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.009601212372665856,
+            0.02072270923666032,
+            0.02874023725049992,
+            0.035911553866265766,
+            0.05622724027574528
+          ]
+        },
+        "near_MAE": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.09858974195932112,
+            0.17434145134271556,
+            0.2103880596966859,
+            0.38145132500114143
+          ]
+        },
+        "current": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.06270479565344325,
+            0.10375497449888238,
+            0.14523292110434027,
+            0.2209515034647295,
+            1.1504564663742258
+          ]
+        },
+        "current_near": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.004993195995707333,
+            0.04142729825645786,
+            0.05713724630603363,
+            0.13376724405040233
+          ]
+        },
+        "current_far": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.028463271210871912,
+            0.06691416927656245,
+            0.10362167524850487,
+            0.22095126495578502,
+            1.1497189051456544
+          ]
+        },
+        "near_L1_global": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.004891750994167521,
+            0.04056024841243373,
+            0.05574640672534488,
+            0.1296318108237985
+          ]
+        },
+        "candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.06787249228540905,
+            0.12517098574717084,
+            0.17540560462651067,
+            0.23074344690617593,
+            1.1613003354811742
+          ]
+        }
+      },
+      "cosines": {
+        "current__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.42990624175351233,
+            0.2863526365662272,
+            0.7553691042496551,
+            0.9074942721080159,
+            0.9561023473157377
+          ]
+        },
+        "candidate__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.34219626135653586,
+            0.558689119895956,
+            0.8219390634186121,
+            0.9405848283381741,
+            0.9765039799437164
+          ]
+        },
+        "current_near__current_far": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.5055112607109068,
+            0.03323809531460236,
+            0.4354156217810824,
+            0.6142219970728999,
+            0.7348318843189495
+          ]
+        },
+        "L1__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.4317575892459225,
+            0.29434191353384964,
+            0.7556582926012798,
+            0.902873781349691,
+            0.9571908906340121
+          ]
+        },
+        "log__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.5482461183387052,
+            0.7489728088565593,
+            0.9478641748603249,
+            0.9869429948469867,
+            0.9979777936820773
+          ]
+        },
+        "gradient__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.44865070051966305,
+            -0.4230080313155963,
+            -0.39105655659675786,
+            -0.2898125588149966,
+            0.012093392188638145
+          ]
+        },
+        "current__candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.7722794668365921,
+            0.9871683500507313,
+            0.9952809680132959,
+            0.9978110417886249,
+            0.9999999999999967
+          ]
+        },
+        "current__current_near": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.4294050268794234,
+            0.28648653277501007,
+            0.7550558492129718,
+            0.9072452119861326,
+            0.9560129616956832
+          ]
+        }
+      },
+      "near_partition_ratio": {
+        "count": 32,
+        "min_q25_median_q75_max": [
+          0.0,
+          0.06602098764559015,
+          0.37669613781696526,
+          0.4918985852193245,
+          1.003764149720436
+        ]
+      },
+      "weighted_bonus_ratio": {
+        "count": 32,
+        "min_q25_median_q75_max": [
+          0.0,
+          0.1398076713065114,
+          0.23729393608371868,
+          0.3168690580415097,
+          1.0863190455059524
+        ]
+      },
+      "zero_near_gradient_with_near_gt_batches": []
+    },
+    "output_head": {
+      "parameters": 145,
+      "norms": {
+        "L1": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.18167862285002334,
+            1.2787324693491846,
+            1.7211482158162794,
+            2.3645215237277144,
+            7.850496561849169
+          ]
+        },
+        "log": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.015870936245144223,
+            0.07046829940121001,
+            0.10819751454989485,
+            0.1657406317711464,
+            0.3811865200133149
+          ]
+        },
+        "gradient": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.05990329142347164,
+            0.12200487771296986,
+            0.164518773853353,
+            0.19575148788401395,
+            0.3674453293685854
+          ]
+        },
+        "near_MAE": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            1.5315890232386458,
+            2.7945475522065912,
+            3.415178110836185,
+            4.052928084451381
+          ]
+        },
+        "current": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.1795582847236209,
+            1.2925415134771558,
+            1.7287695663162794,
+            2.3735167244207416,
+            7.842682531827598
+          ]
+        },
+        "current_near": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.058314943861648115,
+            0.6038916611183653,
+            1.0069181052588303,
+            2.3457073794645145
+          ]
+        },
+        "current_far": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.11138994314360129,
+            0.6282525103747656,
+            0.9657816217885768,
+            1.5822567107434349,
+            7.848532672204721
+          ]
+        },
+        "near_L1_global": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.05706768515676745,
+            0.5906910202360993,
+            0.982013410425292,
+            2.2706742348047246
+          ]
+        },
+        "candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.49737421763835066,
+            1.6268883140865813,
+            2.2774082614311575,
+            2.8523737244763763,
+            7.785829217092687
+          ]
+        }
+      },
+      "RMS": {
+        "L1": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.015087588413746834,
+            0.10619295152166086,
+            0.14293357948187133,
+            0.19636282456246443,
+            0.6519482540689
+          ]
+        },
+        "log": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.001318009516206116,
+            0.005852073738250502,
+            0.008985314514778029,
+            0.013764010296696872,
+            0.031655817468282985
+          ]
+        },
+        "gradient": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.004974697581080628,
+            0.010131953614170446,
+            0.01366254051960063,
+            0.016256276243411503,
+            0.030514673697429707
+          ]
+        },
+        "near_MAE": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.12719154537357422,
+            0.2320745424470908,
+            0.2836151050003801,
+            0.336577357585964
+          ]
+        },
+        "current": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.014911503916587564,
+            0.1073397302175897,
+            0.14356649819127737,
+            0.19710983532039758,
+            0.6512993341961671
+          ]
+        },
+        "current_near": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.004842792495634476,
+            0.05015047277724677,
+            0.0836199972246382,
+            0.19480039492408951
+          ]
+        },
+        "current_far": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.00925043127924118,
+            0.05217353119338915,
+            0.08020379821535557,
+            0.1313992677954888,
+            0.651785161910997
+          ]
+        },
+        "near_L1_global": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.0,
+            0.004739213297985907,
+            0.04905421922080209,
+            0.08155177489157607,
+            0.18856923142088217
+          ]
+        },
+        "candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.041304680570655325,
+            0.13510572071176216,
+            0.18912846189342214,
+            0.23687674467134015,
+            0.6465779233927307
+          ]
+        }
+      },
+      "cosines": {
+        "current__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.8547409601874297,
+            0.4065789589142204,
+            0.8958833324474864,
+            0.9849889290062955,
+            0.999419203620356
+          ]
+        },
+        "candidate__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.742718292748314,
+            0.8556563457515065,
+            0.9585706105919385,
+            0.9915858800638051,
+            0.9996912410585294
+          ]
+        },
+        "current_near__current_far": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.9084864790654764,
+            -0.03661990646200314,
+            0.7175122582509468,
+            0.871248921174179,
+            0.9467015547450108
+          ]
+        },
+        "L1__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.8551488061413429,
+            0.4047469711114444,
+            0.8973325142232185,
+            0.9845046170424607,
+            0.999513057164485
+          ]
+        },
+        "log__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.9017158484040858,
+            0.8039234599500944,
+            0.9808480351847442,
+            0.996210793659016,
+            0.9996871982599392
+          ]
+        },
+        "gradient__near_MAE": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.309027230074439,
+            -0.18105076071632903,
+            -0.08649931815537637,
+            -0.01445719115991979,
+            0.06007147527744382
+          ]
+        },
+        "current__candidate": {
+          "count": 32,
+          "min_q25_median_q75_max": [
+            0.04668775381047987,
+            0.9912881430244794,
+            0.9982346133053956,
+            0.9996807116746658,
+            1.0
+          ]
+        },
+        "current__current_near": {
+          "count": 26,
+          "min_q25_median_q75_max": [
+            -0.8542276784129119,
+            0.396016501569338,
+            0.8964177761298469,
+            0.9849177933107549,
+            0.9994219981233939
+          ]
+        }
+      },
+      "near_partition_ratio": {
+        "count": 32,
+        "min_q25_median_q75_max": [
+          0.0,
+          0.20827579073340247,
+          0.45735140297144006,
+          0.6267693805626571,
+          1.2776014433870246
+        ]
+      },
+      "weighted_bonus_ratio": {
+        "count": 32,
+        "min_q25_median_q75_max": [
+          0.0,
+          0.2017146311383678,
+          0.31293982118511077,
+          0.366608900858676,
+          4.452926673981426
+        ]
+      },
+      "zero_near_gradient_with_near_gt_batches": []
+    }
+  },
+  "sampled_realizations": [
+    {
+      "trajectory": "Kite_training/cloudy/trajectory_3002",
+      "condition": "cloudy",
+      "path_group": "Kite/0002",
+      "sample_frames": 4,
+      "frame_indices": [
+        1100,
+        0,
+        2201,
+        550
+      ],
+      "ordinal_fractions": [
+        0.49977283053157656,
+        0.0,
+        1.0,
+        0.24988641526578828
+      ],
+      "valid_pixel_occurrences": 171215,
+      "near_pixel_occurrences": 32248,
+      "near_fraction": 0.18834798352948048
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2005",
+      "condition": "foggy",
+      "path_group": "Kite/0005",
+      "sample_frames": 4,
+      "frame_indices": [
+        1102,
+        0,
+        2205,
+        551
+      ],
+      "ordinal_fractions": [
+        0.4997732426303855,
+        0.0,
+        1.0,
+        0.24988662131519274
+      ],
+      "valid_pixel_occurrences": 180321,
+      "near_pixel_occurrences": 0,
+      "near_fraction": 0.0
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2006",
+      "condition": "foggy",
+      "path_group": "Kite/0006",
+      "sample_frames": 4,
+      "frame_indices": [
+        1102,
+        0,
+        2205,
+        551
+      ],
+      "ordinal_fractions": [
+        0.4997732426303855,
+        0.0,
+        1.0,
+        0.24988662131519274
+      ],
+      "valid_pixel_occurrences": 203324,
+      "near_pixel_occurrences": 32785,
+      "near_fraction": 0.1612451063327497
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2021",
+      "condition": "foggy",
+      "path_group": "Kite/0021",
+      "sample_frames": 4,
+      "frame_indices": [
+        1101,
+        0,
+        2203,
+        550
+      ],
+      "ordinal_fractions": [
+        0.4997730367680436,
+        0.0,
+        1.0,
+        0.24965955515206537
+      ],
+      "valid_pixel_occurrences": 155945,
+      "near_pixel_occurrences": 0,
+      "near_fraction": 0.0
+    },
+    {
+      "trajectory": "Kite_training/sunny/trajectory_0000",
+      "condition": "sunny",
+      "path_group": "Kite/0000",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2204
+      ],
+      "ordinal_fractions": [
+        0.5,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 119948,
+      "near_pixel_occurrences": 0,
+      "near_fraction": 0.0
+    },
+    {
+      "trajectory": "Kite_training/sunny/trajectory_0005",
+      "condition": "sunny",
+      "path_group": "Kite/0005",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2205
+      ],
+      "ordinal_fractions": [
+        0.4997732426303855,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 134386,
+      "near_pixel_occurrences": 0,
+      "near_fraction": 0.0
+    },
+    {
+      "trajectory": "Kite_training/sunset/trajectory_1001",
+      "condition": "sunset",
+      "path_group": "Kite/0001",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2204
+      ],
+      "ordinal_fractions": [
+        0.5,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 136281,
+      "near_pixel_occurrences": 0,
+      "near_fraction": 0.0
+    },
+    {
+      "trajectory": "Kite_training/sunset/trajectory_1006",
+      "condition": "sunset",
+      "path_group": "Kite/0006",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2205
+      ],
+      "ordinal_fractions": [
+        0.4997732426303855,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 146117,
+      "near_pixel_occurrences": 17699,
+      "near_fraction": 0.12112895830053998
+    },
+    {
+      "trajectory": "PLE_training/fall/trajectory_4001",
+      "condition": "fall",
+      "path_group": "PLE/0001",
+      "sample_frames": 3,
+      "frame_indices": [
+        1101,
+        0,
+        2203
+      ],
+      "ordinal_fractions": [
+        0.4997730367680436,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 118209,
+      "near_pixel_occurrences": 36188,
+      "near_fraction": 0.30613574262535004
+    },
+    {
+      "trajectory": "PLE_training/fall/trajectory_4004",
+      "condition": "fall",
+      "path_group": "PLE/0004",
+      "sample_frames": 3,
+      "frame_indices": [
+        1101,
+        0,
+        2203
+      ],
+      "ordinal_fractions": [
+        0.4997730367680436,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 150718,
+      "near_pixel_occurrences": 56151,
+      "near_fraction": 0.37255669528523466
+    },
+    {
+      "trajectory": "PLE_training/fall/trajectory_4006",
+      "condition": "fall",
+      "path_group": "PLE/0006",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2204
+      ],
+      "ordinal_fractions": [
+        0.5,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 132730,
+      "near_pixel_occurrences": 49790,
+      "near_fraction": 0.3751224289911851
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5001",
+      "condition": "spring",
+      "path_group": "PLE/0001",
+      "sample_frames": 3,
+      "frame_indices": [
+        1101,
+        0,
+        2203
+      ],
+      "ordinal_fractions": [
+        0.4997730367680436,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 118206,
+      "near_pixel_occurrences": 36043,
+      "near_fraction": 0.30491684009271947
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5002",
+      "condition": "spring",
+      "path_group": "PLE/0002",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2204
+      ],
+      "ordinal_fractions": [
+        0.5,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 127217,
+      "near_pixel_occurrences": 62589,
+      "near_fraction": 0.4919861339286416
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5004",
+      "condition": "spring",
+      "path_group": "PLE/0004",
+      "sample_frames": 3,
+      "frame_indices": [
+        1101,
+        0,
+        2203
+      ],
+      "ordinal_fractions": [
+        0.4997730367680436,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 146143,
+      "near_pixel_occurrences": 55652,
+      "near_fraction": 0.3808051018522954
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5005",
+      "condition": "spring",
+      "path_group": "PLE/0005",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2205
+      ],
+      "ordinal_fractions": [
+        0.4997732426303855,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 129734,
+      "near_pixel_occurrences": 32828,
+      "near_fraction": 0.2530408374057687
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5006",
+      "condition": "spring",
+      "path_group": "PLE/0006",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2204
+      ],
+      "ordinal_fractions": [
+        0.5,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 132750,
+      "near_pixel_occurrences": 49443,
+      "near_fraction": 0.37245197740112995
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5007",
+      "condition": "spring",
+      "path_group": "PLE/0007",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2204
+      ],
+      "ordinal_fractions": [
+        0.5,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 122920,
+      "near_pixel_occurrences": 60232,
+      "near_fraction": 0.4900097624471201
+    },
+    {
+      "trajectory": "PLE_training/winter/trajectory_6002",
+      "condition": "winter",
+      "path_group": "PLE/0002",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2204
+      ],
+      "ordinal_fractions": [
+        0.5,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 127005,
+      "near_pixel_occurrences": 60347,
+      "near_fraction": 0.47515452147553244
+    },
+    {
+      "trajectory": "PLE_training/winter/trajectory_6005",
+      "condition": "winter",
+      "path_group": "PLE/0005",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2205
+      ],
+      "ordinal_fractions": [
+        0.4997732426303855,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 129435,
+      "near_pixel_occurrences": 31823,
+      "near_fraction": 0.2458608568007108
+    },
+    {
+      "trajectory": "PLE_training/winter/trajectory_6007",
+      "condition": "winter",
+      "path_group": "PLE/0007",
+      "sample_frames": 3,
+      "frame_indices": [
+        1102,
+        0,
+        2204
+      ],
+      "ordinal_fractions": [
+        0.5,
+        0.0,
+        1.0
+      ],
+      "valid_pixel_occurrences": 121828,
+      "near_pixel_occurrences": 58403,
+      "near_fraction": 0.479388974619956
+    }
+  ],
+  "underlying_path_groups": [
+    "Kite/0000",
+    "Kite/0001",
+    "Kite/0002",
+    "Kite/0005",
+    "Kite/0006",
+    "Kite/0021",
+    "PLE/0001",
+    "PLE/0002",
+    "PLE/0004",
+    "PLE/0005",
+    "PLE/0006",
+    "PLE/0007"
+  ],
+  "total_valid_pixel_occurrences": 2804432,
+  "total_near_pixel_occurrences": 672221,
+  "batches_without_near_gt": [
+    2,
+    3,
+    10,
+    12,
+    22,
+    30
+  ],
+  "independence": "64 sparse frames from 20 correlated weather realizations / 12 path groups, not 64 independent flights or 32 independent statistical trials. Mixed batches cannot localize gradient causes to a trajectory."
+}

@@ -1,0 +1,12 @@
+{
+  "stage": "complete",
+  "utc": "2026-10-28T17:53:49.606630+00:00",
+  "validation_frames": 4410,
+  "models": 3,
+  "deterministic_examples": 6,
+  "teacher_gate_amended": false,
+  "checkpoint_selection_changed": false,
+  "training_or_kd_launched": false,
+  "reserved_test_rgb_depth_reads": 0,
+  "raw_near_cache_bytes": 516285696
+}

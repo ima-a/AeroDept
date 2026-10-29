@@ -1,0 +1,42 @@
+{
+  "frozen_at_utc": "2026-10-28T17:22:39.738659+00:00",
+  "scope": "Validation-only diagnostic audit; no optimization, gate amendment, selection change or test reads",
+  "dataset_root": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir",
+  "bundle": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery",
+  "manifest": "results/expanded_preparation_20261026/manifest_train_val.json.gz",
+  "expected_val_frames": 4410,
+  "expected_val_trajectories": [
+    "Kite_training/foggy/trajectory_2003",
+    "PLE_training/spring/trajectory_5000"
+  ],
+  "models": [
+    "original_epoch4",
+    "supervised_A_selected_best",
+    "teacher_B_selected_best"
+  ],
+  "precision": "FP32, autocast disabled; eval/no_grad; batch 2 for all; common unaugmented tensors",
+  "metrics": "Existing DepthMetricAccumulator, pooled and per-path; GT finite inclusive [.1,1000]; near GT<10; original depth bands [.1,10),[10,50),[50,100),[100,300),[300,1000]",
+  "floor_threshold_metres": 0.101,
+  "supplementary": [
+    "Near signed bias/MAE/signed-relative bias and exact per-path error quantiles",
+    "Near predicted>=10m, overestimate>=2m and underestimate<=-2m rates",
+    "Near-error spatial maps and fixed 3x3 regional metrics",
+    "Per-frame SSE/AbsRel and top-frame concentration",
+    "Saved A/B history only for epoch persistence; no other checkpoint promotion"
+  ],
+  "example_selection": "Per path, eligible frames have >=64 valid near pixels; typical is nearest median teacher near AbsRel; poor is maximum teacher near AbsRel; regression is maximum teacher-minus-A near SSE; ties earliest frame; deterministic dedup. All validation frames remain in metrics.",
+  "metric_reproduction_tolerances": {
+    "absrel": 1e-05,
+    "rmse": 0.001,
+    "delta1": 1e-05,
+    "delta2": 1e-05,
+    "delta3": 1e-05,
+    "near_absrel": 1e-05,
+    "near_rmse": 0.001,
+    "valid_pixels": 0,
+    "near_valid_pixels": 0
+  },
+  "guards": "ImageReadGuard allowlist contains VAL only, installed before any image operation; no discovery; explicit path checks; failing HDD path denied; checkpoints/source buffers hashed before and after",
+  "protocol_changes": false,
+  "next_experiment": "Proposal only after observations; never launched"
+}

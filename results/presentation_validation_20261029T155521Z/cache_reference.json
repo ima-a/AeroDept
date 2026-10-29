@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "differences": {
+    "pooled": {
+      "absrel": 4.598665892530107e-10,
+      "rmse": 8.592434141974081e-08,
+      "delta1": 3.757565369966187e-08,
+      "delta2": -4.2272610412119604e-08,
+      "delta3": 1.4090870137373201e-08,
+      "near_absrel": 5.663025298696667e-09,
+      "near_rmse": 2.1889394297147646e-07,
+      "valid_pixels": 0,
+      "near_valid_pixels": 0
+    },
+    "Kite_training/foggy/trajectory_2003": {
+      "absrel": -4.0014114244257826e-10,
+      "rmse": 6.137125296845625e-08,
+      "delta1": 4.3701681717855934e-08,
+      "delta2": -3.496134537428475e-08,
+      "delta3": 8.740336343571187e-09,
+      "near_absrel": -7.741485896772815e-09,
+      "near_rmse": -2.4579084456632927e-07,
+      "valid_pixels": 0,
+      "near_valid_pixels": 0
+    },
+    "PLE_training/spring/trajectory_5000": {
+      "absrel": 1.4588868724185744e-09,
+      "rmse": 2.093221738164175e-07,
+      "delta1": 3.0459406663574384e-08,
+      "delta2": -5.0765677883646276e-08,
+      "delta3": 2.030627110904959e-08,
+      "near_absrel": 6.045114075980962e-09,
+      "near_rmse": 2.3504992396894409e-07,
+      "valid_pixels": 0,
+      "near_valid_pixels": 0
+    }
+  },
+  "frame_count": 4410,
+  "batch_size": 1,
+  "model_state_before_and_after": "24f042a26047ea97e79119a69e4e4954d452b45102be8564bbaa08a66f81e031",
+  "seconds_including_IO_scoring_cache": 377.95235668402165,
+  "display_RGB_quantized_only_for_playback": true,
+  "recorded_playback_is_not_live_inference": true
+}

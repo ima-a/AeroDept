@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "UTC": "2026-10-29T17:52:03.532230+00:00",
+  "protected_files_unchanged": 413,
+  "protected_bytes": 78316925,
+  "original_frozen_numerical_sources_unchanged": 10,
+  "official_selected_exports": {
+    "Original": {
+      "path": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.state_dict.pt",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6"
+    },
+    "A": {
+      "path": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+      "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20"
+    },
+    "KD": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/run/best.pt",
+      "sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45"
+    }
+  },
+  "parent_checkpoints_gate_protocol": {
+    "teacher_B_selected_epoch3.pt": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660",
+    "baseline_A_selected_epoch9.pt": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+    "original_failed_teacher_gate.json": "10e749c38271d360c2c0dc50cde6ec5416f410532b8f6817166f6ac6d3e36b1f",
+    "original_protocol.json": "47d0955748d58ac8f4f752a550c2669d3e223293657420154e076bf14b10dd52"
+  },
+  "final_report_relative_links": true,
+  "no_new_test_exposure_or_evaluation": true,
+  "no_training_search_or_git_publication": true
+}

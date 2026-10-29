@@ -1,0 +1,1450 @@
+{
+  "every": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 4410,
+      "skip_rate": 0.0,
+      "mean_prediction_age": 0.0,
+      "max_prediction_age": 0,
+      "inference_reasons": {
+        "first_frame": 2,
+        "fixed_interval": 4408
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "fixed_interval": 4408
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 11,
+        "missed_update_rate": 0.0,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.0,
+        "max_observed_delay_frames": 0,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.2658310854411606,
+        "rmse": 119.9441442677464,
+        "delta1": 0.6261891015254428,
+        "delta2": 0.8632690722957176,
+        "delta3": 0.922667256679582,
+        "near_absrel": 0.20189876292886552,
+        "near_rmse": 3.9060723538760493,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 2205,
+        "skip_rate": 0.0,
+        "mean_prediction_age": 0.0,
+        "max_prediction_age": 0,
+        "inference_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 2204
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 2204
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 1,
+          "missed_update_rate": 0.0,
+          "observed_delays_frames": [
+            0
+          ],
+          "mean_observed_delay_frames": 0.0,
+          "max_observed_delay_frames": 0,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.2906358382710006,
+          "rmse": 155.96370314900494,
+          "delta1": 0.6122159415816196,
+          "delta2": 0.8486302227912609,
+          "delta3": 0.9014620161632767,
+          "near_absrel": 0.5043361017905552,
+          "near_rmse": 4.695175987169696,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 2205,
+        "skip_rate": 0.0,
+        "mean_prediction_age": 0.0,
+        "max_prediction_age": 0,
+        "inference_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 2204
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 2204
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 10,
+          "missed_update_rate": 0.0,
+          "observed_delays_frames": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean_observed_delay_frames": 0.0,
+          "max_observed_delay_frames": 0,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.23701686038329833,
+          "rmse": 53.311489313021085,
+          "delta1": 0.6424209010580897,
+          "delta2": 0.8802741643078479,
+          "delta3": 0.9473001396127214,
+          "near_absrel": 0.19327794205917934,
+          "near_rmse": 3.881228337969005,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "every",
+    "removed": [],
+    "surviving_weights_renormalized": false
+  },
+  "fixed2": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 2206,
+      "skip_rate": 0.4997732426303855,
+      "mean_prediction_age": 0.4997732426303855,
+      "max_prediction_age": 1,
+      "inference_reasons": {
+        "first_frame": 2,
+        "fixed_interval": 2204
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "fixed_skip": 2204,
+        "fixed_interval": 2204
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 6,
+        "missed_update_rate": 0.45454545454545453,
+        "observed_delays_frames": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "mean_observed_delay_frames": 0.45454545454545453,
+        "max_observed_delay_frames": 1,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.2677083790517104,
+        "rmse": 119.96633028937188,
+        "delta1": 0.6259555265646861,
+        "delta2": 0.8622176632307771,
+        "delta3": 0.9219412668671121,
+        "near_absrel": 0.20327308938383568,
+        "near_rmse": 4.162988821364299,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 1103,
+        "skip_rate": 0.4997732426303855,
+        "mean_prediction_age": 0.4997732426303855,
+        "max_prediction_age": 1,
+        "inference_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 1102
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "fixed_skip": 1102,
+          "fixed_interval": 1102
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 1,
+          "missed_update_rate": 0.0,
+          "observed_delays_frames": [
+            0
+          ],
+          "mean_observed_delay_frames": 0.0,
+          "max_observed_delay_frames": 0,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.2905449490584787,
+          "rmse": 155.77753219927936,
+          "delta1": 0.6126246659301419,
+          "delta2": 0.8485253999374699,
+          "delta3": 0.9014555220933721,
+          "near_absrel": 0.5087169879278762,
+          "near_rmse": 4.7232251877972535,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 1103,
+        "skip_rate": 0.4997732426303855,
+        "mean_prediction_age": 0.4997732426303855,
+        "max_prediction_age": 1,
+        "inference_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 1102
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "fixed_skip": 1102,
+          "fixed_interval": 1102
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 5,
+          "missed_update_rate": 0.5,
+          "observed_delays_frames": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "mean_observed_delay_frames": 0.5,
+          "max_observed_delay_frames": 1,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.24118047642600562,
+          "rmse": 54.04663667340898,
+          "delta1": 0.64144120469959,
+          "delta2": 0.8781231616161603,
+          "delta3": 0.9457383538382167,
+          "near_absrel": 0.19456656807599218,
+          "near_rmse": 4.145910003495656,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "fixed2",
+    "removed": [],
+    "surviving_weights_renormalized": false
+  },
+  "fixed5": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 882,
+      "skip_rate": 0.8,
+      "mean_prediction_age": 2.0,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 2,
+        "fixed_interval": 880
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "fixed_skip": 3528,
+        "fixed_interval": 880
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 4,
+        "missed_update_rate": 0.6363636363636364,
+        "observed_delays_frames": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          4,
+          0,
+          4,
+          1
+        ],
+        "mean_observed_delay_frames": 1.1818181818181819,
+        "max_observed_delay_frames": 4,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.28252793723709896,
+        "rmse": 120.93011104165716,
+        "delta1": 0.6206483224391649,
+        "delta2": 0.8563690221162501,
+        "delta3": 0.9171203527617405,
+        "near_absrel": 0.21136648957528334,
+        "near_rmse": 6.585716061681945,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 441,
+        "skip_rate": 0.8,
+        "mean_prediction_age": 2.0,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 440
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "fixed_skip": 1764,
+          "fixed_interval": 440
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 0,
+          "missed_update_rate": 1.0,
+          "observed_delays_frames": [
+            1
+          ],
+          "mean_observed_delay_frames": 1.0,
+          "max_observed_delay_frames": 1,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.29415240549434396,
+          "rmse": 155.98218394939965,
+          "delta1": 0.6128337347755249,
+          "delta2": 0.8475890389644456,
+          "delta3": 0.8998874445706442,
+          "near_absrel": 0.5079540831149659,
+          "near_rmse": 4.727721618506697,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 441,
+        "skip_rate": 0.8,
+        "mean_prediction_age": 2.0,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 440
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "fixed_skip": 1764,
+          "fixed_interval": 440
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 4,
+          "missed_update_rate": 0.6,
+          "observed_delays_frames": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            4,
+            0,
+            4,
+            1
+          ],
+          "mean_observed_delay_frames": 1.2,
+          "max_observed_delay_frames": 4,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.2690244749434003,
+          "rmse": 57.86877294985265,
+          "delta1": 0.6297260701280527,
+          "delta2": 0.8665682130646873,
+          "delta3": 0.937138810451122,
+          "near_absrel": 0.2029124126888106,
+          "near_rmse": 6.631050370374437,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "fixed5",
+    "removed": [],
+    "surviving_weights_renormalized": false
+  },
+  "budget_fixed": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 2456,
+      "skip_rate": 0.44308390022675737,
+      "mean_prediction_age": 0.44308390022675737,
+      "max_prediction_age": 1,
+      "inference_reasons": {
+        "first_frame": 2,
+        "fixed_interval": 2454
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "fixed_skip": 1954,
+        "fixed_interval": 2454
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 5,
+        "missed_update_rate": 0.5454545454545454,
+        "observed_delays_frames": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "mean_observed_delay_frames": 0.5454545454545454,
+        "max_observed_delay_frames": 1,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.26781009289256014,
+        "rmse": 120.13409414003095,
+        "delta1": 0.6255088318896908,
+        "delta2": 0.8625868956955369,
+        "delta3": 0.9218609019376234,
+        "near_absrel": 0.20268275625016507,
+        "near_rmse": 4.160714833052704,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 1228,
+        "skip_rate": 0.44308390022675737,
+        "mean_prediction_age": 0.44308390022675737,
+        "max_prediction_age": 1,
+        "inference_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 1227
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "fixed_skip": 977,
+          "fixed_interval": 1227
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 1,
+          "missed_update_rate": 0.0,
+          "observed_delays_frames": [
+            0
+          ],
+          "mean_observed_delay_frames": 0.0,
+          "max_observed_delay_frames": 0,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.29100743643694116,
+          "rmse": 156.03936937788373,
+          "delta1": 0.6121916521869156,
+          "delta2": 0.84865555228599,
+          "delta3": 0.9012358512200019,
+          "near_absrel": 0.5035579522922701,
+          "near_rmse": 4.689438307298489,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 1228,
+        "skip_rate": 0.44308390022675737,
+        "mean_prediction_age": 0.44308390022675737,
+        "max_prediction_age": 1,
+        "inference_reasons": {
+          "first_frame": 1,
+          "fixed_interval": 1227
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "fixed_skip": 977,
+          "fixed_interval": 1227
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 4,
+          "missed_update_rate": 0.6,
+          "observed_delays_frames": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mean_observed_delay_frames": 0.6,
+          "max_observed_delay_frames": 1,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.24086310082948034,
+          "rmse": 53.974695141505265,
+          "delta1": 0.6409786176893756,
+          "delta2": 0.8787701194153934,
+          "delta3": 0.9458198124449846,
+          "near_absrel": 0.19410646345849739,
+          "near_rmse": 4.144655274585533,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "budget_fixed",
+    "removed": [],
+    "surviving_weights_renormalized": false
+  },
+  "v2": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 2456,
+      "skip_rate": 0.44308390022675737,
+      "mean_prediction_age": 0.9507936507936507,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 2,
+        "max_skip": 344,
+        "extreme_motion": 1162,
+        "extreme_visual": 927,
+        "combined_score": 21
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "stable": 1954,
+        "max_skip": 344,
+        "extreme_motion": 1162,
+        "extreme_visual": 927,
+        "combined_score": 21
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 10,
+        "missed_update_rate": 0.09090909090909091,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.18181818181818182,
+        "max_observed_delay_frames": 2,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.26808770215774863,
+        "rmse": 120.28278979846874,
+        "delta1": 0.6262140188808454,
+        "delta2": 0.8621911817887865,
+        "delta3": 0.9215531244545953,
+        "near_absrel": 0.20065846699774725,
+        "near_rmse": 3.7804002339653775,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 905,
+        "skip_rate": 0.5895691609977325,
+        "mean_prediction_age": 1.4675736961451247,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 322,
+          "extreme_motion": 582
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 1300,
+          "max_skip": 322,
+          "extreme_motion": 582
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 1,
+          "missed_update_rate": 0.0,
+          "observed_delays_frames": [
+            0
+          ],
+          "mean_observed_delay_frames": 0.0,
+          "max_observed_delay_frames": 0,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.29320448760612283,
+          "rmse": 156.32540100658295,
+          "delta1": 0.6118751733481833,
+          "delta2": 0.8473939896185606,
+          "delta3": 0.900119098445144,
+          "near_absrel": 0.5043361017905552,
+          "near_rmse": 4.695175987169696,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 1551,
+        "skip_rate": 0.29659863945578235,
+        "mean_prediction_age": 0.4340136054421769,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 22,
+          "extreme_visual": 927,
+          "extreme_motion": 580,
+          "combined_score": 21
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 654,
+          "max_skip": 22,
+          "extreme_visual": 927,
+          "extreme_motion": 580,
+          "combined_score": 21
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 9,
+          "missed_update_rate": 0.1,
+          "observed_delays_frames": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean_observed_delay_frames": 0.2,
+          "max_observed_delay_frames": 2,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.23891100712659052,
+          "rmse": 53.72853874395008,
+          "delta1": 0.6428706138923872,
+          "delta2": 0.8793802111793313,
+          "delta3": 0.9464517740629643,
+          "near_absrel": 0.19200229213014605,
+          "near_rmse": 3.751056314856299,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "v2",
+    "removed": [],
+    "surviving_weights_renormalized": false
+  },
+  "v2_no_motion": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 1900,
+      "skip_rate": 0.5691609977324263,
+      "mean_prediction_age": 1.2412698412698413,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 2,
+        "max_skip": 463,
+        "extreme_visual": 1435
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "stable": 2510,
+        "max_skip": 463,
+        "extreme_visual": 1435
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 8,
+        "missed_update_rate": 0.2727272727272727,
+        "observed_delays_frames": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.36363636363636365,
+        "max_observed_delay_frames": 2,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.2689426109751444,
+        "rmse": 120.07029321475049,
+        "delta1": 0.6264633474344429,
+        "delta2": 0.8621121601889199,
+        "delta3": 0.9212553749741655,
+        "near_absrel": 0.20113392576901898,
+        "near_rmse": 3.8738791719374355,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 441,
+        "skip_rate": 0.8,
+        "mean_prediction_age": 2.0,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 440
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 1764,
+          "max_skip": 440
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 0,
+          "missed_update_rate": 1.0,
+          "observed_delays_frames": [
+            1
+          ],
+          "mean_observed_delay_frames": 1.0,
+          "max_observed_delay_frames": 1,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.29415240549434396,
+          "rmse": 155.98218394939965,
+          "delta1": 0.6128337347755249,
+          "delta2": 0.8475890389644456,
+          "delta3": 0.8998874445706442,
+          "near_absrel": 0.5079540831149659,
+          "near_rmse": 4.727721618506697,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 1459,
+        "skip_rate": 0.33832199546485264,
+        "mean_prediction_age": 0.48253968253968255,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 23,
+          "extreme_visual": 1435
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 746,
+          "max_skip": 23,
+          "extreme_visual": 1435
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 8,
+          "missed_update_rate": 0.2,
+          "observed_delays_frames": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "mean_observed_delay_frames": 0.3,
+          "max_observed_delay_frames": 2,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.23965787276703732,
+          "rmse": 53.85969979334019,
+          "delta1": 0.6422960682561191,
+          "delta2": 0.8789828174526837,
+          "delta3": 0.9460772451976456,
+          "near_absrel": 0.19238817491152346,
+          "near_rmse": 3.8467637247643713,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "v2_no_motion",
+    "removed": [
+      "motion"
+    ],
+    "surviving_weights_renormalized": false
+  },
+  "v2_no_visual": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 1789,
+      "skip_rate": 0.5943310657596372,
+      "mean_prediction_age": 1.4653061224489796,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 2,
+        "max_skip": 633,
+        "extreme_motion": 1154
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "stable": 2621,
+        "max_skip": 633,
+        "extreme_motion": 1154
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 9,
+        "missed_update_rate": 0.18181818181818182,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "mean_observed_delay_frames": 0.5454545454545454,
+        "max_observed_delay_frames": 4,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.2747586548318431,
+        "rmse": 120.6573408722574,
+        "delta1": 0.62385457782358,
+        "delta2": 0.8599506160091618,
+        "delta3": 0.9197969605185184,
+        "near_absrel": 0.2057700836616451,
+        "near_rmse": 5.528999435348208,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 905,
+        "skip_rate": 0.5895691609977325,
+        "mean_prediction_age": 1.4675736961451247,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 322,
+          "extreme_motion": 582
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 1300,
+          "max_skip": 322,
+          "extreme_motion": 582
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 1,
+          "missed_update_rate": 0.0,
+          "observed_delays_frames": [
+            0
+          ],
+          "mean_observed_delay_frames": 0.0,
+          "max_observed_delay_frames": 0,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.29320448760612283,
+          "rmse": 156.32540100658295,
+          "delta1": 0.6118751733481833,
+          "delta2": 0.8473939896185606,
+          "delta3": 0.900119098445144,
+          "near_absrel": 0.5043361017905552,
+          "near_rmse": 4.695175987169696,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 884,
+        "skip_rate": 0.599092970521542,
+        "mean_prediction_age": 1.4630385487528346,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 311,
+          "extreme_motion": 572
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 1321,
+          "max_skip": 311,
+          "extreme_motion": 572
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 8,
+          "missed_update_rate": 0.2,
+          "observed_delays_frames": [
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mean_observed_delay_frames": 0.6,
+          "max_observed_delay_frames": 4,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.25333121386583535,
+          "rmse": 55.51424919397943,
+          "delta1": 0.637770348683348,
+          "delta2": 0.8745369116787163,
+          "delta3": 0.9426555775879726,
+          "near_absrel": 0.1972596127993094,
+          "near_rmse": 5.550931451538691,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "v2_no_visual",
+    "removed": [
+      "visual"
+    ],
+    "surviving_weights_renormalized": false
+  },
+  "v2_no_risk": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 2446,
+      "skip_rate": 0.44535147392290253,
+      "mean_prediction_age": 0.95578231292517,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 2,
+        "max_skip": 345,
+        "extreme_motion": 1162,
+        "extreme_visual": 937
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "stable": 1964,
+        "max_skip": 345,
+        "extreme_motion": 1162,
+        "extreme_visual": 937
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 10,
+        "missed_update_rate": 0.09090909090909091,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.18181818181818182,
+        "max_observed_delay_frames": 2,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.2681669273037584,
+        "rmse": 120.289886166563,
+        "delta1": 0.6261205964116735,
+        "delta2": 0.8621433385876309,
+        "delta3": 0.921527596494819,
+        "near_absrel": 0.2007240894652779,
+        "near_rmse": 3.7698689024789926,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 905,
+        "skip_rate": 0.5895691609977325,
+        "mean_prediction_age": 1.4675736961451247,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 322,
+          "extreme_motion": 582
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 1300,
+          "max_skip": 322,
+          "extreme_motion": 582
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 1,
+          "missed_update_rate": 0.0,
+          "observed_delays_frames": [
+            0
+          ],
+          "mean_observed_delay_frames": 0.0,
+          "max_observed_delay_frames": 0,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.29320448760612283,
+          "rmse": 156.32540100658295,
+          "delta1": 0.6118751733481833,
+          "delta2": 0.8473939896185606,
+          "delta3": 0.900119098445144,
+          "near_absrel": 0.5043361017905552,
+          "near_rmse": 4.695175987169696,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 1541,
+        "skip_rate": 0.30113378684807257,
+        "mean_prediction_age": 0.4439909297052154,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 23,
+          "extreme_visual": 937,
+          "extreme_motion": 580
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 664,
+          "max_skip": 23,
+          "extreme_visual": 937,
+          "extreme_motion": 580
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 9,
+          "missed_update_rate": 0.1,
+          "observed_delays_frames": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean_observed_delay_frames": 0.2,
+          "max_observed_delay_frames": 2,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.23908226347335565,
+          "rmse": 53.762870206514954,
+          "delta1": 0.6426686680256773,
+          "delta2": 0.8792767913403013,
+          "delta3": 0.9463965917710806,
+          "near_absrel": 0.19206978513237907,
+          "near_rmse": 3.740139378874562,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "v2_no_risk",
+    "removed": [
+      "risk"
+    ],
+    "surviving_weights_renormalized": false
+  },
+  "v2_no_age": {
+    "overall": {
+      "frames": 4410,
+      "inference_calls": 2454,
+      "skip_rate": 0.4435374149659864,
+      "mean_prediction_age": 0.9528344671201814,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 2,
+        "max_skip": 345,
+        "extreme_motion": 1162,
+        "extreme_visual": 930,
+        "combined_score": 15
+      },
+      "all_reasons": {
+        "first_frame": 2,
+        "stable": 1956,
+        "max_skip": 345,
+        "extreme_motion": 1162,
+        "extreme_visual": 930,
+        "combined_score": 15
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 11,
+        "fresh_on_event": 10,
+        "missed_update_rate": 0.09090909090909091,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.18181818181818182,
+        "max_observed_delay_frames": 2,
+        "right_censored_count": 0,
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.45454545454545453
+      },
+      "metrics": {
+        "absrel": 0.26810816359421985,
+        "rmse": 120.28506910355426,
+        "delta1": 0.6261648323500677,
+        "delta2": 0.8621734601710799,
+        "delta3": 0.9215407808523336,
+        "near_absrel": 0.20065337901486308,
+        "near_rmse": 3.7791697569412857,
+        "valid_pixels": 212903814,
+        "near_valid_pixels": 32267840
+      }
+    },
+    "per_trajectory": {
+      "Kite_training/foggy/trajectory_2003": {
+        "frames": 2205,
+        "inference_calls": 905,
+        "skip_rate": 0.5895691609977325,
+        "mean_prediction_age": 1.4675736961451247,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 322,
+          "extreme_motion": 582
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 1300,
+          "max_skip": 322,
+          "extreme_motion": 582
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 1,
+          "fresh_on_event": 1,
+          "missed_update_rate": 0.0,
+          "observed_delays_frames": [
+            0
+          ],
+          "mean_observed_delay_frames": 0.0,
+          "max_observed_delay_frames": 0,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 0,
+          "offline_near_estimation_rate": 0.0
+        },
+        "metrics": {
+          "absrel": 0.29320448760612283,
+          "rmse": 156.32540100658295,
+          "delta1": 0.6118751733481833,
+          "delta2": 0.8473939896185606,
+          "delta3": 0.900119098445144,
+          "near_absrel": 0.5043361017905552,
+          "near_rmse": 4.695175987169696,
+          "valid_pixels": 114412073,
+          "near_valid_pixels": 894287
+        }
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "frames": 2205,
+        "inference_calls": 1549,
+        "skip_rate": 0.29750566893424035,
+        "mean_prediction_age": 0.4380952380952381,
+        "max_prediction_age": 4,
+        "inference_reasons": {
+          "first_frame": 1,
+          "max_skip": 23,
+          "extreme_visual": 930,
+          "extreme_motion": 580,
+          "combined_score": 15
+        },
+        "all_reasons": {
+          "first_frame": 1,
+          "stable": 656,
+          "max_skip": 23,
+          "extreme_visual": 930,
+          "extreme_motion": 580,
+          "combined_score": 15
+        },
+        "scheduler_seconds": 0.0,
+        "inference_seconds": 0.0,
+        "critical_events": {
+          "count": 10,
+          "fresh_on_event": 9,
+          "missed_update_rate": 0.1,
+          "observed_delays_frames": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean_observed_delay_frames": 0.2,
+          "max_observed_delay_frames": 2,
+          "right_censored_count": 0,
+          "censored": [],
+          "offline_near_estimated_on_event": 5,
+          "offline_near_estimation_rate": 0.5
+        },
+        "metrics": {
+          "absrel": 0.23895523741250504,
+          "rmse": 53.739567945972254,
+          "delta1": 0.642764290256581,
+          "delta2": 0.8793419033987835,
+          "delta3": 0.946425091622657,
+          "near_absrel": 0.19199705911692538,
+          "near_rmse": 3.749780854238037,
+          "valid_pixels": 98491741,
+          "near_valid_pixels": 31373553
+        }
+      }
+    },
+    "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+    "policy": "v2_no_age",
+    "removed": [
+      "age"
+    ],
+    "surviving_weights_renormalized": false
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "status": "proposed_blocked_acquisition_and_manifest",
+  "version": "independent_expanded_final_test_specification_v2",
+  "model": {
+    "kind": "export",
+    "weights": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+    "metadata": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json",
+    "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+    "metadata_sha256": "e9fed71377da6baa94b0a44ecdbf0ae6b1df44cc1ef1b4718a3d53a65e7faa12",
+    "selected_epoch": 9,
+    "label": "Supervised A \u00b7 epoch 9"
+  },
+  "test_realizations": [
+    "Kite_training/foggy/trajectory_2007",
+    "Kite_training/sunny/trajectory_0008",
+    "PLE_training/spring/trajectory_5008",
+    "PLE_training/winter/trajectory_6009"
+  ],
+  "dataset_root": null,
+  "test_manifest_sha256": null,
+  "sensor_sha256": {},
+  "device": "cuda",
+  "policies": [
+    "every",
+    "fixed2",
+    "fixed5",
+    "budget_fixed",
+    "v2"
+  ],
+  "v2": {
+    "max_skip": 4,
+    "accel_change_scale": 2.0,
+    "gyro_scale": 0.5,
+    "visual_scale": 0.08,
+    "critical_risk": 0.9,
+    "extreme_motion": 0.9,
+    "extreme_visual": 0.9,
+    "decision_threshold": 0.65,
+    "motion_weight": 0.25,
+    "visual_weight": 0.3,
+    "risk_weight": 0.3,
+    "age_weight": 0.15,
+    "gps_speed_scale": 20.0
+  },
+  "budget_fraction": {
+    "numerator": 2455,
+    "denominator": 4410
+  },
+  "primary_comparison": "Full frozen V2 versus independent frozen budget-fixed; selected A only",
+  "secondary_comparisons": "Each policy versus every-frame; V2 versus fixed2/fixed5; no retuning/selection after exposure",
+  "metrics": "Pooled and every trajectory AbsRel/RMSE/delta1/2/3, GT<10 near AbsRel/RMSE/counts; calls, ages, reasons, critical event delays with zero-event nulls and right censoring. Score every current frame with unwarped stale predictions.",
+  "source_sha256": {
+    "src/aerodepth_lite/presentation.py": "3f5c1a361ef32dcd6067321896ba9abbe89169db1aac043f0d1f0c02e0612cca",
+    "src/aerodepth_lite/presentation_scheduler.py": "81252097d33952b9bd92fb80978121087575857e55a36f71ea5d5cc8fb3a4d00",
+    "src/aerodepth_lite/scheduler_v2.py": "82389f5fb9bf1c80634fef602c754282924c3208c06e971ea0abd952bc52e154",
+    "src/aerodepth_lite/scheduler.py": "7287389c65969a7ee8c9256205685422095dfb6fd0f77d61ecc22c2d51ed9038",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/inference.py": "993995d53d9b6ca85ce6ad4f2304360c7c5372d36131703582ab15b8adbe1df7",
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/research.py": "4b88e8602e11cc1000d913039db086ea773894a935ae4e0c00b29e505b81f90c",
+    "scripts/presentation_final_test.py": "9c5528cfe62aada198cb480aab3380cdc4fe5ec73a832ace3d98bfa983e27e4b"
+  },
+  "prerequisites": [
+    "Healthy reserved acquisition and metadata-verified explicit manifest for exactly the four reserved realizations",
+    "Verify counts and pin manifest/HDF5 checksums/root; no pilot/development/legacy test equivalents",
+    "Review validation outcomes/limitations and separately freeze ready protocol with supplied manifest identities before any pixels",
+    "Explicit opt-in command and fresh output/exclusive EXPOSURE ledger; no retry/resume/overwrite"
+  ],
+  "known_limits": [
+    "A was selected on two familiar validation paths and nearRMSE regressed16.18% versus original",
+    "V2 parameters were selected on historical validation, retained for A without tuning; new A ablations alter call budgets",
+    "Teacher rejected; KD exploratory negative result is not promoted",
+    "Original final test is already exposed and remains historical; no reuse as untouched selection",
+    "Flight-path independence is not geographic isolation; no energy/battery/flight-safety claims"
+  ],
+  "verified_frame_counts": {},
+  "validation_protocol": "/home/Ima/work/Projects/DL-projects/AeroDept/results/presentation_validation_20261029T155521Z/PROTOCOL.json",
+  "validation_protocol_sha256": "771bc3e9201238d11b170bfad3177bd437bbee74583cd41f2cb00d891822e813",
+  "parent_proposal": "results/presentation_validation_20261029T155521Z/FINAL_TEST_PROPOSAL.json",
+  "parent_proposal_sha256": "1d5ce4c3ee007d6898a2b37196dabf2d1dbd869e96e2fe21901ada7f6e5e600b",
+  "authorization": "User attachment2517b171: ONE independent study authorized; no further confirmation required once genuine prerequisites pass. No training/search.",
+  "secondary_models_every_frame": {
+    "Original": {
+      "kind": "export",
+      "weights": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.state_dict.pt",
+      "metadata": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.json",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+      "metadata_sha256": "1f99776c4717f91abb035675560d9521ba0a11d7abe0212961e5facc63fb190f",
+      "selected_epoch": 4,
+      "label": "Original \u00b7 epoch 4 \u00b7 near-field reference"
+    },
+    "KD": {
+      "kind": "checkpoint",
+      "weights": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/run/best.pt",
+      "sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+      "selected_epoch": 9,
+      "label": "Exploratory KD \u00b7 epoch 9 \u00b7 rejected teacher"
+    }
+  },
+  "secondary_analysis_predeclared": "Original epoch4 and exploratory KD epoch9 every-frame comparisons to A; report every outcome, no model/policy promotion or selection after exposure.",
+  "completion_status": "NOT RUN",
+  "exposure_status": "NOT STARTED",
+  "remaining_prerequisites": [
+    "Eight official reserved RGB/depth archives with authorized access, healthy capacity and CRC/path/file identities. Existing climate HDF5 files must be retained and hash-checked.",
+    "Explicit metadata-verified manifest with disjoint grouped assignments, pilot exclusions and legacy-test quarantine. No pixel preview or GT distribution inspection before freeze.",
+    "Freeze actual dataset root, verified counts, manifest/sensor/archive/model/source hashes and numerical/aggregation/timing boundaries before first test decoder read.",
+    "Existing primary opt-in runner implements A five-policy scoring. A separate versioned extension is still required for newly authorized Original/KD secondary outputs, complete supplementary metrics and actual stage timing; freeze and guard-check that source before exposure. No blocked protocol may be forced through."
+  ],
+  "ready_protocol_created": false
+}

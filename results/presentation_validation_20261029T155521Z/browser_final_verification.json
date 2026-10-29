@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "actual_A_CUDA_inference": true,
+  "model_and_BN_unchanged": true,
+  "latest_scope_caption_verified": true,
+  "figure_download_exact_bytes": true,
+  "javascript_errors": [],
+  "prior_full_flow_receipt": "browser_verification.json"
+}

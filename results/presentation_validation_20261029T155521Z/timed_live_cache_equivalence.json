@@ -1,0 +1,38 @@
+[
+  {
+    "device": "cpu",
+    "rep": 1,
+    "passed": true,
+    "frames": 256
+  },
+  {
+    "device": "cpu",
+    "rep": 2,
+    "passed": true,
+    "frames": 256
+  },
+  {
+    "device": "cpu",
+    "rep": 3,
+    "passed": true,
+    "frames": 256
+  },
+  {
+    "device": "cuda",
+    "rep": 1,
+    "passed": true,
+    "frames": 256
+  },
+  {
+    "device": "cuda",
+    "rep": 2,
+    "passed": true,
+    "frames": 256
+  },
+  {
+    "device": "cuda",
+    "rep": 3,
+    "passed": true,
+    "frames": 256
+  }
+]

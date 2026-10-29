@@ -1,0 +1,67 @@
+{
+  "attempts": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -u -B artifacts/student_validation_comparison_20261029T152648Z/evaluate.py",
+      "exit_code": 1,
+      "outcome": "Full KD forwards finished but reporting ref.overall key failed before aggregates persisted; no accepted metrics. Failed evidence in attempt_1_failed."
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -u -B artifacts/student_validation_comparison_20261029T152648Z/evaluate_v2.py",
+      "exit_code": 1,
+      "outcome": "Full KD aggregates saved; exact counts and saved metrics passed; full KD model state unchanged. Main-process example tensor hash mismatched worker RGB so contact phase stopped; no scores mixed. Preserved attempt_2_visual_stop."
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -u -B artifacts/student_validation_comparison_20261029T152648Z/visual_replay.py",
+      "exit_code": 1,
+      "outcome": "Only12 example frames; common worker tensors, all three model/per-frame reference checks passed unchanged tolerance, six caches and completion saved, all state digests unchanged. Final status timestamp-only NameError then finalized from verified outputs without new inference."
+    }
+  ],
+  "full_KD_passes_including_reporting_failure": 2,
+  "new_original_A_full_passes": 0,
+  "teacher_forward_calls": 0,
+  "training_or_optimizer_steps": 0,
+  "test_image_reads": 0,
+  "input_context_difference": {
+    "frames": [
+      [
+        "Kite_training/foggy/trajectory_2003",
+        1534
+      ],
+      [
+        "Kite_training/foggy/trajectory_2003",
+        1535
+      ]
+    ],
+    "worker_RGB_sha256": "3608c57580aaf9f71990dd89dc98d80249bc152851f3f3d816159107b0dc98ea",
+    "main_RGB_sha256": "154edb77ade6e23bcc87fef695894919898b37b8413f23db224468742e5fb28a",
+    "RGB_max_abs_difference": 1.1920928955078125e-07,
+    "RGB_numeric_unequal_elements": 102311,
+    "GT_max_abs_difference": 0.0,
+    "mask_unequal_elements": 0,
+    "worker_torch_threads": 1,
+    "main_torch_threads": 2,
+    "final_figures": "All three predictions use the identical worker-produced tensor and original two-frame partners; full-metric reference tolerances unchanged."
+  },
+  "no_tolerance_or_scientific_contract_changes": true,
+  "accepted_sample_frames": 4410,
+  "total_KD_full_pass_frames_processed_including_failed_recording": 8820,
+  "original_student_forward_frames_including_aborted_direct_example": 14,
+  "supervised_A_forward_frames_including_aborted_direct_example": 14,
+  "KD_extra_visual_forward_frames": 12,
+  "original_A_accepted_contact_frames": 12,
+  "analysis_commands": [
+    {
+      "command": ".venv/bin/python -B artifacts/student_validation_comparison_20261029T152648Z/analyze.py",
+      "exit_code": 0,
+      "raw_dataset_or_checkpoint_reads": false,
+      "validation_cache_arrays_read": true
+    },
+    {
+      "command": ".venv/bin/python -B artifacts/student_validation_comparison_20261029T152648Z/analyze_layout_v2.py",
+      "exit_code": 0,
+      "raw_dataset_or_checkpoint_reads": false,
+      "validation_cache_arrays_read": true
+    }
+  ],
+  "finalization": "All scientific outputs and identities checked from saved results; metadata-only timestamp failure finalized separately. No third KD full pass and no further inference."
+}

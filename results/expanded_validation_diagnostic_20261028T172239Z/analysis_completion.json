@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "exact_near_pixels": 32267840,
+  "deterministic_examples": 6,
+  "source": "Existing validation predictions/cache and saved histories only",
+  "planning_or_training_launched": false
+}

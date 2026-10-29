@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "UTC": "2026-10-29T15:34:05.068706+00:00",
+  "failure": "Report lookup used overall, but the existing validation reference stores pooled scores in metrics. KD aggregate was in memory only; process exited before persisting it. First pass reached4410, but no completed results accepted.",
+  "correction": "Use ref.metrics and assert known reference counts before pixel reads; persist aggregate/model digest before subsequent reference checks. Separate image-open log. No inference, masks, metrics, tolerances, selected checkpoints or frame-selection change.",
+  "scope": "One replacement KD-only missing-statistics pass; original/A/teacher full audits still reused. First failed script/log/status/runtime remain in attempt_1_failed and original frozen script.",
+  "old_script_sha256": "72a58611759c496b25abceacdbdfb311fdd73e609f6d185029d9697435e76781",
+  "new_script_sha256": "663d48091c7b963e9db67299da6749838adadc908c75742b03ffb3e7f8724320"
+}

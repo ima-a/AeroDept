@@ -1,0 +1,6 @@
+{
+  "stage": "failed",
+  "utc": "2026-10-28T18:32:40.157530+00:00",
+  "seconds": 14.39490322599886,
+  "error": "AssertionError(('current_components', ['encoder.conv1.weight', 'encoder.layer1.0.conv1.weight', 'encoder.layer1.0.conv2.weight', 'encoder.layer1.0.conv3.weight', 'encoder.layer1.0.downsample.0.weight', 'encoder.layer1.1.conv2.weight', 'encoder.layer1.2.conv2.weight', 'encoder.layer1.2.conv3.weight'], 2.7679383754730225))"
+}

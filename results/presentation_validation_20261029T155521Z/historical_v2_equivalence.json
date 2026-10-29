@@ -1,0 +1,29 @@
+{
+  "every": {
+    "historical_v2_feature_decisions_equal": null
+  },
+  "fixed2": {
+    "historical_v2_feature_decisions_equal": null
+  },
+  "fixed5": {
+    "historical_v2_feature_decisions_equal": null
+  },
+  "budget_fixed": {
+    "historical_v2_feature_decisions_equal": null
+  },
+  "v2": {
+    "historical_v2_feature_decisions_equal": 4410
+  },
+  "v2_no_motion": {
+    "historical_v2_feature_decisions_equal": null
+  },
+  "v2_no_visual": {
+    "historical_v2_feature_decisions_equal": null
+  },
+  "v2_no_risk": {
+    "historical_v2_feature_decisions_equal": null
+  },
+  "v2_no_age": {
+    "historical_v2_feature_decisions_equal": null
+  }
+}

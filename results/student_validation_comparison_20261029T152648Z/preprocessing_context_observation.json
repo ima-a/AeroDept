@@ -1,0 +1,21 @@
+{
+  "frames": [
+    [
+      "Kite_training/foggy/trajectory_2003",
+      1534
+    ],
+    [
+      "Kite_training/foggy/trajectory_2003",
+      1535
+    ]
+  ],
+  "worker_RGB_sha256": "3608c57580aaf9f71990dd89dc98d80249bc152851f3f3d816159107b0dc98ea",
+  "main_RGB_sha256": "154edb77ade6e23bcc87fef695894919898b37b8413f23db224468742e5fb28a",
+  "RGB_max_abs_difference": 1.1920928955078125e-07,
+  "RGB_numeric_unequal_elements": 102311,
+  "GT_max_abs_difference": 0.0,
+  "mask_unequal_elements": 0,
+  "worker_torch_threads": 1,
+  "main_torch_threads": 2,
+  "final_figures": "All three predictions use the identical worker-produced tensor and original two-frame partners; full-metric reference tolerances unchanged."
+}

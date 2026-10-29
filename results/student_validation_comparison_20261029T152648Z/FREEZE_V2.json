@@ -1,0 +1,12 @@
+{
+  "files_sha256": {
+    "artifacts/student_validation_comparison_20261029T152648Z/evaluate.py": "72a58611759c496b25abceacdbdfb311fdd73e609f6d185029d9697435e76781",
+    "artifacts/student_validation_comparison_20261029T152648Z/reused_statistics.py": "78673eb978737f3a4bdece8ca5599daf99756ce819e1a0e5448a82141321dfe8",
+    "artifacts/student_validation_comparison_20261029T152648Z/protected_before.json": "f0a004f788e8adf9c7f062116b6bc696a5d7219c5673fd28b823f25bc9132b37",
+    "results/student_validation_comparison_20261029T152648Z/PLAN.json": "243a6865631be9b4222b25a76d812454b5dc21fd20718733f61b33bb26e04b61",
+    "results/student_validation_comparison_20261029T152648Z/frame_selection.json": "fc2114f2693cd1e8c64330b1a8bb1d2b2bc64e0d55d0ea015f48f493f668bec6",
+    "results/student_validation_comparison_20261029T152648Z/source_inputs.json": "f460e3c0e11716d0e4131a7f6b489c0f53af5a5f45de5a9d3ec895052d4a3749",
+    "artifacts/student_validation_comparison_20261029T152648Z/evaluate_v2.py": "663d48091c7b963e9db67299da6749838adadc908c75742b03ffb3e7f8724320",
+    "results/student_validation_comparison_20261029T152648Z/REPORTING_CORRECTION_V2.json": "df8a8105c283f3aaf7bb5cceccc23c9174bee6306bf9a5629129a4ff357172f0"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "epoch4": {
+    "path": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.state_dict.pt",
+    "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+    "selected_epoch": 4,
+    "state_digest_before": "e8dcc30b6b4149f0c07b68a26b97db0baafa426a90901eb22ab9e6885ebb643f",
+    "contract": {
+      "architecture": "mobilenet_v3_small_depth",
+      "model_options": {
+        "name": "mobilenet_v3_small_depth"
+      },
+      "preprocessing": {
+        "input": "RGB float32 [0,1]",
+        "image_size": [
+          192,
+          320
+        ],
+        "rgb_resize": "bilinear align_corners=False",
+        "depth_resize": "nearest",
+        "crop": null,
+        "paired_training_horizontal_flip": true,
+        "normalization_location": "model",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "depth_encoding": "midair_float16_bits",
+        "depth_scale": 1.0,
+        "valid_depth_metres": [
+          0.1,
+          1000.0
+        ],
+        "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+      },
+      "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+    },
+    "state_digest_after": "e8dcc30b6b4149f0c07b68a26b97db0baafa426a90901eb22ab9e6885ebb643f"
+  },
+  "student_A": {
+    "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/baseline_A_selected_epoch9.pt",
+    "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+    "selected_epoch": 9,
+    "state_digest_before": "24f042a26047ea97e79119a69e4e4954d452b45102be8564bbaa08a66f81e031",
+    "contract": {
+      "architecture": "mobilenet_v3_small_depth",
+      "model_options": {
+        "name": "mobilenet_v3_small_depth"
+      },
+      "preprocessing": {
+        "input": "RGB float32 [0,1]",
+        "image_size": [
+          192,
+          320
+        ],
+        "rgb_resize": "bilinear align_corners=False",
+        "depth_resize": "nearest",
+        "crop": null,
+        "paired_training_horizontal_flip": true,
+        "normalization_location": "model",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "depth_encoding": "midair_float16_bits",
+        "depth_scale": 1.0,
+        "valid_depth_metres": [
+          0.1,
+          1000.0
+        ],
+        "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+      },
+      "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+    },
+    "state_digest_after": "24f042a26047ea97e79119a69e4e4954d452b45102be8564bbaa08a66f81e031"
+  },
+  "exploratory_KD": {
+    "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/run/best.pt",
+    "sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+    "selected_epoch": 9,
+    "state_digest_before": "1b4d5236d14ab7c20e180b5adf4adf64de25ee5a56d0c73a543b44d1053f33b3",
+    "contract": {
+      "architecture": "mobilenet_v3_small_depth",
+      "model_options": {
+        "name": "mobilenet_v3_small_depth"
+      },
+      "preprocessing": {
+        "input": "RGB float32 [0,1]",
+        "image_size": [
+          192,
+          320
+        ],
+        "rgb_resize": "bilinear align_corners=False",
+        "depth_resize": "nearest",
+        "crop": null,
+        "paired_training_horizontal_flip": true,
+        "normalization_location": "model",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "depth_encoding": "midair_float16_bits",
+        "depth_scale": 1.0,
+        "valid_depth_metres": [
+          0.1,
+          1000.0
+        ],
+        "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+      },
+      "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+    },
+    "state_digest_after": "1b4d5236d14ab7c20e180b5adf4adf64de25ee5a56d0c73a543b44d1053f33b3"
+  }
+}

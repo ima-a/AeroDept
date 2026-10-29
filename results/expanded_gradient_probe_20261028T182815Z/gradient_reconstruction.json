@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "batches": [
+    {
+      "batch_index": 0,
+      "checks": [
+        {
+          "comparison": "current_components",
+          "passed": true,
+          "max_abs_difference": 7.092952728271484e-06,
+          "max_fraction_of_allowed_tolerance": 0.9141628742218018,
+          "parameters_checked": 195
+        },
+        {
+          "comparison": "candidate_components",
+          "passed": true,
+          "max_abs_difference": 4.291534423828125e-06,
+          "max_fraction_of_allowed_tolerance": 0.7300349473953247,
+          "parameters_checked": 195
+        },
+        {
+          "comparison": "near_far_partition",
+          "passed": true,
+          "max_abs_difference": 3.337860107421875e-06,
+          "max_fraction_of_allowed_tolerance": 0.4170238673686981,
+          "parameters_checked": 195
+        },
+        {
+          "comparison": "near_L1_normalization",
+          "passed": true,
+          "max_abs_difference": 1.430511474609375e-06,
+          "max_fraction_of_allowed_tolerance": 0.36916616559028625,
+          "parameters_checked": 195
+        }
+      ]
+    }
+  ]
+}

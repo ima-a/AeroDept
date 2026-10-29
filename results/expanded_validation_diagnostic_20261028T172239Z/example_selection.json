@@ -1,0 +1,83 @@
+{
+  "predeclared_rule": "PLAN.json; no frame omitted from metrics; >=64 near pixels applies only to illustrations",
+  "examples": [
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "reason": "typical",
+      "frame_index": 1567,
+      "near_pixels": 16667,
+      "teacher_sse": 559384.2808701118,
+      "student_sse": 253376.78194059635,
+      "original_sse": 516775.0429685515,
+      "excess_sse": 306007.4989295154,
+      "teacher_near_absrel": 0.6879281662379516,
+      "teacher_bias": 5.626321911389836,
+      "student_bias": 3.7303487237902946
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "reason": "poor",
+      "frame_index": 1534,
+      "near_pixels": 6909,
+      "teacher_sse": 873758.7086594735,
+      "student_sse": 655184.946134377,
+      "original_sse": 467708.8441077339,
+      "excess_sse": 218573.76252509642,
+      "teacher_near_absrel": 1.3248561355807578,
+      "teacher_bias": 10.925211284315557,
+      "student_bias": 9.478058146505594
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "reason": "regression",
+      "frame_index": 1577,
+      "near_pixels": 19280,
+      "teacher_sse": 1124203.9736817032,
+      "student_sse": 262169.28266200545,
+      "original_sse": 381968.5596096457,
+      "excess_sse": 862034.6910196978,
+      "teacher_near_absrel": 0.9110445190041295,
+      "teacher_bias": 7.511617721858361,
+      "student_bias": 3.618918838441619
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "reason": "typical",
+      "frame_index": 445,
+      "near_pixels": 13503,
+      "teacher_sse": 26773.8238144509,
+      "student_sse": 17285.854656935764,
+      "original_sse": 5144.100450072447,
+      "excess_sse": 9487.969157515137,
+      "teacher_near_absrel": 0.14327616826938655,
+      "teacher_bias": 0.7396159097899916,
+      "student_bias": 0.9143784178775001
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "reason": "poor",
+      "frame_index": 1691,
+      "near_pixels": 273,
+      "teacher_sse": 199167.4069974778,
+      "student_sse": 310183.26936575345,
+      "original_sse": 121758.66259241635,
+      "excess_sse": -111015.86236827564,
+      "teacher_near_absrel": 3.1371545339832196,
+      "teacher_bias": 26.061636550959214,
+      "student_bias": 32.11946097573081
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "reason": "regression",
+      "frame_index": 1928,
+      "near_pixels": 30473,
+      "teacher_sse": 27688939.550639495,
+      "student_sse": 12827419.544230726,
+      "original_sse": 6178882.0632440895,
+      "excess_sse": 14861520.00640877,
+      "teacher_near_absrel": 0.42891706832219934,
+      "teacher_bias": 3.260565385109477,
+      "student_bias": 4.1354543262272285
+    }
+  ]
+}

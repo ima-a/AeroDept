@@ -1,0 +1,161 @@
+{
+  "overall": {
+    "frames": 4410,
+    "inference_calls": 1900,
+    "skip_rate": 0.5691609977324263,
+    "mean_prediction_age": 1.2412698412698413,
+    "max_prediction_age": 4,
+    "inference_reasons": {
+      "first_frame": 2,
+      "max_skip": 463,
+      "extreme_visual": 1435
+    },
+    "all_reasons": {
+      "first_frame": 2,
+      "stable": 2510,
+      "max_skip": 463,
+      "extreme_visual": 1435
+    },
+    "scheduler_seconds": 0.0,
+    "inference_seconds": 0.0,
+    "critical_events": {
+      "count": 11,
+      "fresh_on_event": 8,
+      "missed_update_rate": 0.2727272727272727,
+      "observed_delays_frames": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "mean_observed_delay_frames": 0.36363636363636365,
+      "max_observed_delay_frames": 2,
+      "right_censored_count": 0,
+      "offline_near_estimated_on_event": 5,
+      "offline_near_estimation_rate": 0.45454545454545453
+    },
+    "metrics": {
+      "absrel": 0.2689426109751444,
+      "rmse": 120.07029321475049,
+      "delta1": 0.6264633474344429,
+      "delta2": 0.8621121601889199,
+      "delta3": 0.9212553749741655,
+      "near_absrel": 0.20113392576901898,
+      "near_rmse": 3.8738791719374355,
+      "valid_pixels": 212903814,
+      "near_valid_pixels": 32267840
+    }
+  },
+  "per_trajectory": {
+    "Kite_training/foggy/trajectory_2003": {
+      "frames": 2205,
+      "inference_calls": 441,
+      "skip_rate": 0.8,
+      "mean_prediction_age": 2.0,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 1,
+        "max_skip": 440
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "stable": 1764,
+        "max_skip": 440
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 1,
+        "fresh_on_event": 0,
+        "missed_update_rate": 1.0,
+        "observed_delays_frames": [
+          1
+        ],
+        "mean_observed_delay_frames": 1.0,
+        "max_observed_delay_frames": 1,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 0,
+        "offline_near_estimation_rate": 0.0
+      },
+      "metrics": {
+        "absrel": 0.29415240549434396,
+        "rmse": 155.98218394939965,
+        "delta1": 0.6128337347755249,
+        "delta2": 0.8475890389644456,
+        "delta3": 0.8998874445706442,
+        "near_absrel": 0.5079540831149659,
+        "near_rmse": 4.727721618506697,
+        "valid_pixels": 114412073,
+        "near_valid_pixels": 894287
+      }
+    },
+    "PLE_training/spring/trajectory_5000": {
+      "frames": 2205,
+      "inference_calls": 1459,
+      "skip_rate": 0.33832199546485264,
+      "mean_prediction_age": 0.48253968253968255,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 1,
+        "max_skip": 23,
+        "extreme_visual": 1435
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "stable": 746,
+        "max_skip": 23,
+        "extreme_visual": 1435
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 10,
+        "fresh_on_event": 8,
+        "missed_update_rate": 0.2,
+        "observed_delays_frames": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.3,
+        "max_observed_delay_frames": 2,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.5
+      },
+      "metrics": {
+        "absrel": 0.23965787276703732,
+        "rmse": 53.85969979334019,
+        "delta1": 0.6422960682561191,
+        "delta2": 0.8789828174526837,
+        "delta3": 0.9460772451976456,
+        "near_absrel": 0.19238817491152346,
+        "near_rmse": 3.8467637247643713,
+        "valid_pixels": 98491741,
+        "near_valid_pixels": 31373553
+      }
+    }
+  },
+  "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+  "policy": "v2_no_motion",
+  "removed": [
+    "motion"
+  ],
+  "surviving_weights_renormalized": false
+}

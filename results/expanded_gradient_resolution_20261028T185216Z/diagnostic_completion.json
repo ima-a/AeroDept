@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "numerical_seconds": 38.590516244992614,
+  "batches": 2,
+  "unique_TRAIN_frames": 4,
+  "optimizer_instances": 0,
+  "optimizer_steps": 0,
+  "FP32_state_and_BN_unchanged": true,
+  "FP64_state_and_BN_unchanged": true,
+  "all_RNG_checks_passed": true,
+  "persistent_checkpoint_gate_protocol_source_unchanged": true,
+  "peak_cuda_allocated_bytes": 1022768128
+}

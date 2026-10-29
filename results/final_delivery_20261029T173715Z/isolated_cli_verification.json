@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "shape": [
+    192,
+    320
+  ],
+  "dtype": "float32",
+  "finite": true,
+  "installed_CLI_and_library_exact_parity": true,
+  "image": "synthetic_package_input.png",
+  "no_dataset_inputs": true
+}

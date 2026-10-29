@@ -1,0 +1,21 @@
+{
+  "preservation_passed": true,
+  "probe_validity_passed": false,
+  "existing_files_unchanged": 151,
+  "frozen_plan_sampling_code_and_rules_unchanged": true,
+  "selected_teacher_checkpoint_gate_protocol_and_prior_audit_unchanged": true,
+  "first_batch_in_memory_state_and_rng_unchanged": true,
+  "failed_second_batch_final_in_memory_digest_available": false,
+  "persistent_model_state_unchanged": true,
+  "optimizer_instances": 0,
+  "optimizer_updates": 0,
+  "no_new_checkpoint_saved": true,
+  "no_additional_input_or_gradient_calculation_after_failure": true,
+  "validation_test_evaluations": 0,
+  "service": {
+    "name": "aerodepth-gradient-probe-20261028t182815.service",
+    "MainPID": 0,
+    "ExecMainStatus": 1
+  },
+  "reported_utc": "2026-10-28T18:42:24.093258+00:00"
+}

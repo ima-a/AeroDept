@@ -1,0 +1,24 @@
+{
+  "source_manifest": "/home/Ima/work/Projects/DL-projects/AeroDept/results/expanded_preparation_20261026/manifest_train_val.json.gz",
+  "manifest_sha256_uncompressed": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "rows": [
+    {
+      "Assignment": "Expanded training",
+      "Independent paths": 12,
+      "Realizations": 20,
+      "Frames": "44098"
+    },
+    {
+      "Assignment": "Unchanged validation",
+      "Independent paths": 2,
+      "Realizations": 2,
+      "Frames": "4410"
+    },
+    {
+      "Assignment": "Reserved new test",
+      "Independent paths": 4,
+      "Realizations": "4 reserved, not acquired in rescue index",
+      "Frames": "8,820 expected from planning metadata; unverified acquisition"
+    }
+  ]
+}

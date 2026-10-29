@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "five_tabs": true,
+  "portable_report_fallback_download_exact_bytes": true,
+  "javascript_errors": [],
+  "prior_actual_inference_replay_and_selector_checks_reused": true,
+  "new_actual_model_calls": 0,
+  "no_test_inputs": true
+}

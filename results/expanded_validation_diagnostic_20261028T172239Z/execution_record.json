@@ -1,0 +1,37 @@
+{
+  "evaluation": {
+    "unit": "aerodepth-val-audit-20261028t172239.service",
+    "command": [
+      "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+      "-u",
+      "-B",
+      "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_validation_diagnostic_20261028T172239Z/audit.py"
+    ],
+    "launcher": "systemd-run --user, Type=exec, Restart=no, KillMode=control-group, TimeoutStopSec=30",
+    "inhibitor": "systemd-inhibit --what=sleep:handle-lid-switch --mode=block --who=AeroDepth-validation-audit",
+    "environment": {
+      "OMP_NUM_THREADS": "2",
+      "MKL_NUM_THREADS": "2",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_validation_diagnostic_20261028T172239Z/audit.log"
+  },
+  "analysis": "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python -u -B /home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_validation_diagnostic_20261028T172239Z/analyze.py",
+  "examples": "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python -u -B /home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_validation_diagnostic_20261028T172239Z/examples.py",
+  "other_checks": "Saved-history, initial BN buffers, exact validation-record equality, original floor count and preservation were verified by read-only inline Python commands; no broad test suite or model training was executed.",
+  "scripts_sha256": {
+    "audit.py": "186e13cc53d19a59863692fb932306fb7bcf69d56c15f35fd8ccc7413937d0a9",
+    "analyze.py": "19b0f8a768ad213dd5dd21d471494ff1cc0d5f3957d30102f653f85994689397",
+    "examples.py": "700e034d5b77cb798001647968a5a75cd2ef030f4ce1d8c7d293a751ba034dbe"
+  },
+  "training_service_final": {
+    "MainPID": 0,
+    "ExecMainStatus": 2,
+    "state": "failed because teacher rejected"
+  },
+  "audit_service_final": {
+    "MainPID": 0,
+    "ExecMainStatus": 0,
+    "state": "inactive successfully"
+  }
+}

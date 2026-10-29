@@ -1,0 +1,7 @@
+{
+  "files_sha256": {
+    "artifacts/expanded_gradient_resolution_20261028T185216Z/diagnose.py": "33669d17c6e518c43b912c4b93bc0bc3e827ded56039281966a82d46c079ecea",
+    "results/expanded_gradient_resolution_20261028T185216Z/DIAGNOSTIC_PLAN.json": "c4d7cde1b753131cd48033e7fa4e0a905ebc98e36a0d5fe464d6bced4ecaf186",
+    "artifacts/expanded_gradient_resolution_20261028T185216Z/protected_before.json": "6e3b2291890223e89bfa4787d84f0a40420d89d1490106a1b6ee36021f588800"
+  }
+}

@@ -1,0 +1,9 @@
+# Exact historical diagnostic and verification sources
+
+These small source snapshots fill the provenance gap left when local `artifacts/` execution folders were kept private. Each file is byte-identical to its recorded original; SOURCE_IDENTITIES.json binds both paths and SHA-256. They contain no dataset inputs, checkpoints, downloads or credentials. Historical scientific protocols, sources and failures remain unchanged.
+
+These are **reference sources**, not new automatic experiment commands. Some scripts have hardcoded historical roots, exclusive output/read-ledger creation and strict source/checkpoint seals. Do not import/run them against the completed local results or weaken those guards. Browser scripts target only localhost; no script here needs account access. This publication does not run them.
+
+For historical byte-identity investigation, use the matching saved PLAN/FREEZE/amendment/checkpoint records in results and the original relative `artifacts/<timestamp>/` location in a separate checkout. Numerical reproduction on another machine needs acquired inputs, exact trusted checkpoint artifacts, a separately versioned path/config/protocol freeze and fresh outputs. Do not overwrite historical records. Full private teacher/KD checkpoints and raw MidAir data are deliberately not distributed; their exact identities and methods are recorded. These sources make the implemented computations auditable, not an assertion that unavailable private artifacts were reproduced.
+
+The supported portable current workflow is `scripts/presentation.py` with a fresh absolute-path configuration and frozen protocol, and `scripts/dashboard.py` with `configs/presentation.json`. Dataset-free original/A inference uses the packaged exports and public CLI. See docs/presentation_dashboard.md, docs/expanded_reproduction.md and docs/FINAL_REPORT.md for scopes and limits. No test evaluation is authorized by running a dashboard.

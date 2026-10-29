@@ -1,0 +1,18 @@
+{
+  "authorized_scope": "One bounded first-two-batch diagnostic and at most one original 64-frame rerun after frozen numerical amendment",
+  "diagnostic_session_id": 72059,
+  "diagnostic_exit_code": 0,
+  "diagnostic_seconds": 38.610110334993806,
+  "rerun_session_id": 9403,
+  "rerun_hard_timeout_seconds": 1760,
+  "total_hard_execution_budget_seconds": 1800,
+  "rerun_attempts": 1,
+  "training_optimizer_KD_instances": 0,
+  "launch_command": "PYTHONDONTWRITEBYTECODE=1 timeout --signal=TERM --kill-after=10s 1760s .venv/bin/python -u artifacts/expanded_gradient_resolution_20261028T185216Z_probe_v2/probe_verified.py",
+  "notes": "No training service launched or modified. Prelaunch exact-zero enforcement corrected in new probe_verified.py with separate FREEZE_V2_1.json; prelaunch script/seal retained. Numerical amendment and scientific criteria unchanged.",
+  "rerun_exit_code": 0,
+  "rerun_seconds": 277.81835438899,
+  "total_measured_diagnostic_and_probe_seconds": 316.4284647239838,
+  "under_30_minute_cap": true,
+  "completion_identity": "a08443bdde28f31a7f89a5c06d83197848999a4c72f61784c7387f540192dc4e"
+}

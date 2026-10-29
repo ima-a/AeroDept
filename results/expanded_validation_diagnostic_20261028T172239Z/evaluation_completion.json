@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "frames": 4410,
+  "models": [
+    "epoch4",
+    "student_A",
+    "teacher_B"
+  ],
+  "seconds": 236.16249463596614,
+  "selected_checkpoints_unchanged": true,
+  "near_arrays": {
+    "Kite_training/foggy/trajectory_2003": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_validation_diagnostic_20261028T172239Z/near_arrays/Kite_training__foggy__trajectory_2003.npy",
+    "PLE_training/spring/trajectory_5000": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_validation_diagnostic_20261028T172239Z/near_arrays/PLE_training__spring__trajectory_5000.npy"
+  },
+  "scope": "FP32 validation only; no optimizer/training, no test inputs, no alternate checkpoint selection"
+}

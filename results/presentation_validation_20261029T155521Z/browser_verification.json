@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "browser": "local cached Chrome155 via Playwright1.64; GPU acceleration disabled",
+  "url": "http://127.0.0.1:8501",
+  "checks": [
+    {
+      "flow": "five tabs render",
+      "passed": true
+    },
+    {
+      "flow": "actual FP32 CPU inference A",
+      "passed": true,
+      "frame": 1567,
+      "trajectory": "Kite_training/foggy/trajectory_2003"
+    },
+    {
+      "flow": "actual FP32 CPU inference Original",
+      "passed": true,
+      "frame": 1567,
+      "trajectory": "Kite_training/foggy/trajectory_2003"
+    },
+    {
+      "flow": "actual FP32 CPU inference KD",
+      "passed": true,
+      "frame": 1567,
+      "trajectory": "Kite_training/foggy/trajectory_2003"
+    },
+    {
+      "flow": "missing recorded prediction is unavailable",
+      "passed": true
+    },
+    {
+      "flow": "recorded sequence advances, separately labelled from inference performance",
+      "passed": true,
+      "before": [
+        "Recorded RGB \u00b7 frame 0"
+      ],
+      "after": [
+        "Recorded RGB \u00b7 frame 5"
+      ]
+    },
+    {
+      "flow": "untimed ablation shows unavailable",
+      "passed": true
+    },
+    {
+      "flow": "historical study separate from A",
+      "passed": true
+    },
+    {
+      "flow": "per-trajectory comparison selector and charts",
+      "passed": true
+    },
+    {
+      "flow": "CSV export downloads exact saved bytes",
+      "passed": true
+    }
+  ],
+  "javascript_errors": [],
+  "cloud_deployment": false
+}

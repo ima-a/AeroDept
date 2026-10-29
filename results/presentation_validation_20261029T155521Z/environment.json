@@ -1,0 +1,13 @@
+{
+  "Python": "3.13.12",
+  "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "streamlit": "1.66.1",
+    "playwright": "1.64.1",
+    "numpy": "2.5.3",
+    "pandas": "3.1.0"
+  },
+  "no_energy_battery_safety_claims": true
+}

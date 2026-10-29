@@ -1,0 +1,36 @@
+{
+  "student_A": {
+    "epochs": 10,
+    "selected_epoch": 9,
+    "recorded_epoch_total_hours": 9.97511103823888,
+    "mean_epoch_hours": 0.9975111038238881,
+    "total_overflow_retries": 91,
+    "Kite_near_absrel_regression_epochs": 3,
+    "Kite_near_rmse_regression_epochs": 3,
+    "Kite_near_rmse_min_max": [
+      2.6197046486626965,
+      7.539546234256738
+    ],
+    "Kite_near_absrel_min_max": [
+      0.23246105337439602,
+      0.8470598160751935
+    ]
+  },
+  "teacher_B": {
+    "epochs": 20,
+    "selected_epoch": 3,
+    "recorded_epoch_total_hours": 40.47703150800528,
+    "mean_epoch_hours": 2.023851575400264,
+    "total_overflow_retries": 175,
+    "Kite_near_absrel_regression_epochs": 18,
+    "Kite_near_rmse_regression_epochs": 17,
+    "Kite_near_rmse_min_max": [
+      3.5530043395834756,
+      8.248005315567845
+    ],
+    "Kite_near_absrel_min_max": [
+      0.37240018306263883,
+      0.9499834043854907
+    ]
+  }
+}

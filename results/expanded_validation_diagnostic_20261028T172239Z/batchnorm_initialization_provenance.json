@@ -1,0 +1,14 @@
+{
+  "MobileNet_ImageNet_V1": {
+    "sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+    "batchnorm_initial_counter_values": [
+      699033
+    ]
+  },
+  "ResNet50_ImageNet_V2": {
+    "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+    "batchnorm_initial_counter_values": [
+      673830
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "overall": {
+    "frames": 4410,
+    "inference_calls": 4410,
+    "skip_rate": 0.0,
+    "mean_prediction_age": 0.0,
+    "max_prediction_age": 0,
+    "inference_reasons": {
+      "first_frame": 2,
+      "fixed_interval": 4408
+    },
+    "all_reasons": {
+      "first_frame": 2,
+      "fixed_interval": 4408
+    },
+    "scheduler_seconds": 0.0,
+    "inference_seconds": 0.0,
+    "critical_events": {
+      "count": 11,
+      "fresh_on_event": 11,
+      "missed_update_rate": 0.0,
+      "observed_delays_frames": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mean_observed_delay_frames": 0.0,
+      "max_observed_delay_frames": 0,
+      "right_censored_count": 0,
+      "offline_near_estimated_on_event": 5,
+      "offline_near_estimation_rate": 0.45454545454545453
+    },
+    "metrics": {
+      "absrel": 0.2658310854411606,
+      "rmse": 119.9441442677464,
+      "delta1": 0.6261891015254428,
+      "delta2": 0.8632690722957176,
+      "delta3": 0.922667256679582,
+      "near_absrel": 0.20189876292886552,
+      "near_rmse": 3.9060723538760493,
+      "valid_pixels": 212903814,
+      "near_valid_pixels": 32267840
+    }
+  },
+  "per_trajectory": {
+    "Kite_training/foggy/trajectory_2003": {
+      "frames": 2205,
+      "inference_calls": 2205,
+      "skip_rate": 0.0,
+      "mean_prediction_age": 0.0,
+      "max_prediction_age": 0,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2204
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2204
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 1,
+        "fresh_on_event": 1,
+        "missed_update_rate": 0.0,
+        "observed_delays_frames": [
+          0
+        ],
+        "mean_observed_delay_frames": 0.0,
+        "max_observed_delay_frames": 0,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 0,
+        "offline_near_estimation_rate": 0.0
+      },
+      "metrics": {
+        "absrel": 0.2906358382710006,
+        "rmse": 155.96370314900494,
+        "delta1": 0.6122159415816196,
+        "delta2": 0.8486302227912609,
+        "delta3": 0.9014620161632767,
+        "near_absrel": 0.5043361017905552,
+        "near_rmse": 4.695175987169696,
+        "valid_pixels": 114412073,
+        "near_valid_pixels": 894287
+      }
+    },
+    "PLE_training/spring/trajectory_5000": {
+      "frames": 2205,
+      "inference_calls": 2205,
+      "skip_rate": 0.0,
+      "mean_prediction_age": 0.0,
+      "max_prediction_age": 0,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2204
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2204
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 10,
+        "fresh_on_event": 10,
+        "missed_update_rate": 0.0,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.0,
+        "max_observed_delay_frames": 0,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.5
+      },
+      "metrics": {
+        "absrel": 0.23701686038329833,
+        "rmse": 53.311489313021085,
+        "delta1": 0.6424209010580897,
+        "delta2": 0.8802741643078479,
+        "delta3": 0.9473001396127214,
+        "near_absrel": 0.19327794205917934,
+        "near_rmse": 3.881228337969005,
+        "valid_pixels": 98491741,
+        "near_valid_pixels": 31373553
+      }
+    }
+  },
+  "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+  "policy": "every",
+  "removed": [],
+  "surviving_weights_renormalized": false
+}

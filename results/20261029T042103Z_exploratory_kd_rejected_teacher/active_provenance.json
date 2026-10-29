@@ -1,0 +1,185 @@
+{
+  "authorization_sha256": "ee35d009610b8478eb7634f882b5946e467cde5449583346f29d01259bc49fbf",
+  "identity": {
+    "format": 2,
+    "arm": "exploratory_kd_rejected_teacher_v1",
+    "scope": "exploratory_full_rejected_teacher_v1",
+    "manifest_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+    "reservations_sha256": "a525347120e77deadfefaeb96d72266ece05d16941c4356b421729f6c9e819a3",
+    "starting_weights": {
+      "kind": "published_MobileNet_epoch4",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6"
+    },
+    "teacher": {
+      "sha256": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660",
+      "model_contract": {
+        "architecture": "resnet50_depth",
+        "model_options": {
+          "name": "resnet50_depth"
+        },
+        "preprocessing": {
+          "input": "RGB float32 [0,1]",
+          "image_size": [
+            192,
+            320
+          ],
+          "rgb_resize": "bilinear align_corners=False",
+          "depth_resize": "nearest",
+          "crop": null,
+          "paired_training_horizontal_flip": true,
+          "normalization_location": "model",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "depth_encoding": "midair_float16_bits",
+          "depth_scale": 1.0,
+          "valid_depth_metres": [
+            0.1,
+            1000.0
+          ],
+          "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+        },
+        "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+      },
+      "precision": "FP32"
+    },
+    "gate_sha256": null,
+    "config": {
+      "protocol_status": "frozen_authorized_exploratory_rejected_teacher",
+      "seed": 42,
+      "arm": "kd",
+      "data": {
+        "image_size": [
+          192,
+          320
+        ],
+        "min_depth": 0.1,
+        "max_depth": 1000.0,
+        "depth_encoding": "midair_float16_bits",
+        "depth_scale": 1.0,
+        "workers": 2
+      },
+      "model": {
+        "name": "mobilenet_v3_small_depth",
+        "pretrained": false
+      },
+      "train": {
+        "epochs": 10,
+        "batch_size": 2,
+        "effective_batch_size": 2,
+        "accumulation_steps": 1,
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "grad_clip": 1.0,
+        "amp": true,
+        "amp_initial_scale": 1024.0,
+        "lr_schedule": {
+          "name": "cosine",
+          "t_max": 10,
+          "eta_min": 1e-06
+        }
+      },
+      "loss": {
+        "l1_weight": 1.0,
+        "log_weight": 0.2,
+        "gradient_weight": 0.1,
+        "near_weight": 0.0,
+        "near_threshold": 10.0
+      },
+      "kd_weight": 0.2,
+      "device": "cuda",
+      "exploratory_arm": "exploratory_kd_rejected_teacher_v1"
+    },
+    "model_contract": {
+      "architecture": "mobilenet_v3_small_depth",
+      "model_options": {
+        "name": "mobilenet_v3_small_depth"
+      },
+      "preprocessing": {
+        "input": "RGB float32 [0,1]",
+        "image_size": [
+          192,
+          320
+        ],
+        "rgb_resize": "bilinear align_corners=False",
+        "depth_resize": "nearest",
+        "crop": null,
+        "paired_training_horizontal_flip": true,
+        "normalization_location": "model",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "depth_encoding": "midair_float16_bits",
+        "depth_scale": 1.0,
+        "valid_depth_metres": [
+          0.1,
+          1000.0
+        ],
+        "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+      },
+      "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+    },
+    "source_sha256": {
+      "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+      "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+      "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+      "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+      "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+      "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+      "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+    },
+    "gradient_policy": {
+      "name": "same_batch_amp_backoff_v1",
+      "max_overflow_retries": 8,
+      "restore_before_retry": "all model buffers and training/data RNG",
+      "optimizer_updates": "one finite update per batch; no skipped batches",
+      "nonfinite_prediction_or_loss": "fatal",
+      "persistent_nonfinite_gradients": "fatal"
+    },
+    "experiment_id": "20261029T042103Z_exploratory_kd_rejected_teacher",
+    "exploratory_authorization_sha256": "ee35d009610b8478eb7634f882b5946e467cde5449583346f29d01259bc49fbf",
+    "exploratory_source_sha256": {
+      "src/aerodepth_lite/exploratory_kd.py": "b8abafb3d7ba47bec555ac721bdf5ea4d41b5f7d0ac9c1ffb6f106bedb62f0da",
+      "scripts/exploratory_kd_training.py": "11e40ccbdbce048617b8f8537423e5e6d35b2055b4a540e716bb6088d742800a"
+    },
+    "rejected_gate_sha256": "10e749c38271d360c2c0dc50cde6ec5416f410532b8f6817166f6ac6d3e36b1f",
+    "original_gate_passed": false,
+    "parent_baseline_sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+    "parent_freeze_sha256": "d49ab655ff5b1a94e7809e24bad60eac1cdba26bd7c9ce44853e924918e89d90",
+    "dataset_root": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir"
+  },
+  "initial_student_state_sha256": "e8dcc30b6b4149f0c07b68a26b97db0baafa426a90901eb22ab9e6885ebb643f",
+  "teacher_state_sha256": "dbdc6b27563761a82a9d9a06679e565407ad4862423b810f682b9eb141883a1e",
+  "fresh_optimizer_on_new_run": true,
+  "initialization_is_original_epoch4": true,
+  "initialization_is_completed_A": false,
+  "cuda": "13.0",
+  "torch": "2.14.1+cu130",
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "lineage": {
+    "original_gate_still_rejected": true,
+    "gate_sha256": "10e749c38271d360c2c0dc50cde6ec5416f410532b8f6817166f6ac6d3e36b1f",
+    "baseline_path_relocation_only": true,
+    "checks": {
+      "Kite_training/foggy/trajectory_2003": false,
+      "PLE_training/spring/trajectory_5000": true,
+      "pooled_absrel_strictly_better": true
+    }
+  },
+  "train_frames": 44098,
+  "val_frames": 4410
+}

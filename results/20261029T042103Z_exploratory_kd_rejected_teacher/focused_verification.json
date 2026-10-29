@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks_passed": 13,
+  "training_optimizer_steps": 0,
+  "validation_test_image_reads": 0,
+  "command": "pytest -q tests/test_exploratory_kd.py -p no:cacheprovider",
+  "log_sha256": "cdbd705ee640967b8892772689f66a84886e1d60105f6f4d1a800d15fc223b25",
+  "checks": [
+    "original full gated KD rejects real selected B and failed gate",
+    "explicit scoped authorization/hash/config guards fail closed",
+    "selected A/B lineage and original rejection reproduce from metadata",
+    "full original epoch4 student parameters and BN match; fresh state",
+    "teacher eval/FP32/no-grad and outside student optimizer",
+    "checkpoint serialization fields, zero-update fixture rejected as incomplete resume boundary",
+    "eight resume identity substitutions rejected before restoration",
+    "epoch math AST matches unchanged original loop except progress reporting"
+  ],
+  "new_scope": "exploratory_full_rejected_teacher_v1",
+  "existing_verified_recovery_reused": "results/expanded_numerics_20261026T110550/REPORT.md"
+}

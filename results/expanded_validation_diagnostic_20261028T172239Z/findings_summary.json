@@ -1,0 +1,14 @@
+{
+  "no_audited_contract_defect_found": true,
+  "saved_metrics_max_absolute_difference": 2.842170943040401e-14,
+  "foggy_near_frame_interval": [
+    1526,
+    1608
+  ],
+  "foggy_frames_with_near": 83,
+  "foggy_near_share_of_pooled_near": 0.027714498398405348,
+  "foggy_near_fraction_of_valid": 0.007816369169362049,
+  "foggy_bottom_third_near_pixel_share": 0.9554237062598472,
+  "foggy_bottom_third_teacher_near_sse_share": 0.8984706233248904,
+  "scope_limit": "One familiar validation path/83 consecutive near frames; no causal architecture/weather/BN attribution or test generalization."
+}

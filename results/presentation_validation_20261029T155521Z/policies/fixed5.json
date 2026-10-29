@@ -1,0 +1,155 @@
+{
+  "overall": {
+    "frames": 4410,
+    "inference_calls": 882,
+    "skip_rate": 0.8,
+    "mean_prediction_age": 2.0,
+    "max_prediction_age": 4,
+    "inference_reasons": {
+      "first_frame": 2,
+      "fixed_interval": 880
+    },
+    "all_reasons": {
+      "first_frame": 2,
+      "fixed_skip": 3528,
+      "fixed_interval": 880
+    },
+    "scheduler_seconds": 0.0,
+    "inference_seconds": 0.0,
+    "critical_events": {
+      "count": 11,
+      "fresh_on_event": 4,
+      "missed_update_rate": 0.6363636363636364,
+      "observed_delays_frames": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        4,
+        0,
+        4,
+        1
+      ],
+      "mean_observed_delay_frames": 1.1818181818181819,
+      "max_observed_delay_frames": 4,
+      "right_censored_count": 0,
+      "offline_near_estimated_on_event": 5,
+      "offline_near_estimation_rate": 0.45454545454545453
+    },
+    "metrics": {
+      "absrel": 0.28252793723709896,
+      "rmse": 120.93011104165716,
+      "delta1": 0.6206483224391649,
+      "delta2": 0.8563690221162501,
+      "delta3": 0.9171203527617405,
+      "near_absrel": 0.21136648957528334,
+      "near_rmse": 6.585716061681945,
+      "valid_pixels": 212903814,
+      "near_valid_pixels": 32267840
+    }
+  },
+  "per_trajectory": {
+    "Kite_training/foggy/trajectory_2003": {
+      "frames": 2205,
+      "inference_calls": 441,
+      "skip_rate": 0.8,
+      "mean_prediction_age": 2.0,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 440
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_skip": 1764,
+        "fixed_interval": 440
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 1,
+        "fresh_on_event": 0,
+        "missed_update_rate": 1.0,
+        "observed_delays_frames": [
+          1
+        ],
+        "mean_observed_delay_frames": 1.0,
+        "max_observed_delay_frames": 1,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 0,
+        "offline_near_estimation_rate": 0.0
+      },
+      "metrics": {
+        "absrel": 0.29415240549434396,
+        "rmse": 155.98218394939965,
+        "delta1": 0.6128337347755249,
+        "delta2": 0.8475890389644456,
+        "delta3": 0.8998874445706442,
+        "near_absrel": 0.5079540831149659,
+        "near_rmse": 4.727721618506697,
+        "valid_pixels": 114412073,
+        "near_valid_pixels": 894287
+      }
+    },
+    "PLE_training/spring/trajectory_5000": {
+      "frames": 2205,
+      "inference_calls": 441,
+      "skip_rate": 0.8,
+      "mean_prediction_age": 2.0,
+      "max_prediction_age": 4,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 440
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_skip": 1764,
+        "fixed_interval": 440
+      },
+      "scheduler_seconds": 0.0,
+      "inference_seconds": 0.0,
+      "critical_events": {
+        "count": 10,
+        "fresh_on_event": 4,
+        "missed_update_rate": 0.6,
+        "observed_delays_frames": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          4,
+          0,
+          4,
+          1
+        ],
+        "mean_observed_delay_frames": 1.2,
+        "max_observed_delay_frames": 4,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 5,
+        "offline_near_estimation_rate": 0.5
+      },
+      "metrics": {
+        "absrel": 0.2690244749434003,
+        "rmse": 57.86877294985265,
+        "delta1": 0.6297260701280527,
+        "delta2": 0.8665682130646873,
+        "delta3": 0.937138810451122,
+        "near_absrel": 0.2029124126888106,
+        "near_rmse": 6.631050370374437,
+        "valid_pixels": 98491741,
+        "near_valid_pixels": 31373553
+      }
+    }
+  },
+  "scope": "A validation; counterfactual frozen per-frame prediction cache, NOT live timing",
+  "policy": "fixed5",
+  "removed": [],
+  "surviving_weights_renormalized": false
+}

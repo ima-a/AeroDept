@@ -1,0 +1,23 @@
+{
+  "status": "NOT RUN \u2014 eight reserved RGB/depth streams absent in bounded HDD/USB inventory",
+  "human_action": "No download/evaluation was performed. The completed30-link configuration excludes all four reserved realizations. Exact missing streams: left RGB and depth for Kite foggy official0007/internal2007, sunny0008/internal0008; PLE spring official4008/internal5008, winter4009/internal6009. Existing climate HDF5 records are present; do not download duplicate sensor records. HDD was inspected read-only and unmounted; recorded hardware failure is unresolved. Sizes of missing archives are unknown.",
+  "requested": [
+    {
+      "realization": "Kite_training/foggy/trajectory_2007",
+      "official_page_ID": "0007"
+    },
+    {
+      "realization": "Kite_training/sunny/trajectory_0008",
+      "official_page_ID": "0008"
+    },
+    {
+      "realization": "PLE_training/spring/trajectory_5008",
+      "official_page_ID": "4008"
+    },
+    {
+      "realization": "PLE_training/winter/trajectory_6009",
+      "official_page_ID": "4009"
+    }
+  ],
+  "detailed_inventory": "reserved_acquisition_inventory.json"
+}

@@ -1,0 +1,35 @@
+{
+  "overall": {
+    "absrel": 0.0,
+    "rmse": 1.4210854715202004e-14,
+    "delta1": 0.0,
+    "delta2": 0.0,
+    "delta3": 0.0,
+    "near_absrel": 0.0,
+    "near_rmse": 0.0,
+    "valid_pixels": 0,
+    "near_valid_pixels": 0
+  },
+  "Kite_training/foggy/trajectory_2003": {
+    "absrel": 0.0,
+    "rmse": 0.0,
+    "delta1": 0.0,
+    "delta2": 0.0,
+    "delta3": 0.0,
+    "near_absrel": -1.1102230246251565e-16,
+    "near_rmse": -8.881784197001252e-16,
+    "valid_pixels": 0,
+    "near_valid_pixels": 0
+  },
+  "PLE_training/spring/trajectory_5000": {
+    "absrel": 0.0,
+    "rmse": 0.0,
+    "delta1": 0.0,
+    "delta2": 0.0,
+    "delta3": 0.0,
+    "near_absrel": 0.0,
+    "near_rmse": 0.0,
+    "valid_pixels": 0,
+    "near_valid_pixels": 0
+  }
+}

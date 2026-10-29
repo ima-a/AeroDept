@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-29T04:30:50.854461+00:00",
+  "status": {
+    "arm": "exploratory_kd_rejected_teacher_v1",
+    "scope": "exploratory_full_rejected_teacher_v1",
+    "trainer_pid": 313979,
+    "unit": "aerodepth-exploratory-kd-20261029t042103z.service",
+    "original_gate_passed": false,
+    "status": "running",
+    "manual_resume": false,
+    "epoch": 1,
+    "global_step": 750,
+    "initial_state_verified": true,
+    "updated_utc": "2026-10-29T04:30:06.352999+00:00",
+    "total_updates": 220490,
+    "completed_epochs": 0,
+    "progress": {
+      "loss": 13.066455841064453,
+      "supervised_loss": 13.020057678222656,
+      "kd_loss": 0.231989324092865,
+      "examples": 2,
+      "compute_seconds": 0.11557122896192595,
+      "teacher_seconds": 0.02235757204471156,
+      "overflow_retries": 0,
+      "overflow_events": [],
+      "amp_scale_start": 128.0,
+      "amp_scale_end": 128.0
+    },
+    "overflow_retries_total": 3,
+    "amp_scale": 128.0,
+    "cuda_device": "cuda",
+    "input_contract_verified": true
+  },
+  "service": "ActiveState=active\nSubState=running\nRestart=no\nMainPID=313976\nResult=success\n",
+  "inhibitors": "WHO                      UID  USER PID    COMM            WHAT                                                                       WHY                                                     MODE\nNetworkManager           0    root 522    NetworkManager  sleep                                                                      NetworkManager needs to turn off networks               delay\nRealtime Kit             0    root 859    rtkit-daemon    sleep                                                                      Demote realtime scheduling and stop canary.             delay\nUPower                   0    root 950    upowerd         sleep                                                                      Pause device polling                                    delay\nAeroDepth-exploratory-KD 1000 Ima  313976 systemd-inhibit sleep:handle-lid-switch                                                    Authorized single exploratory KD using rejected teacher block\nPowerDevil               1000 Ima  903    org_kde_powerde handle-power-key:handle-suspend-key:handle-hibernate-key:handle-lid-switch KDE handles power events                                block\ncode                     1000 Ima  274073 code            shutdown                                                                   Ensure a clean shutdown                                 delay\ncode                     1000 Ima  274073 code            sleep                                                                      Application cleanup before suspend                      delay\n\n7 inhibitors listed.\n",
+  "cuda_processes": "780, /usr/bin/kwin_wayland, 5 MiB\n313979, /home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python, 300 MiB\n",
+  "linger": "Linger=no\n",
+  "free_external_bytes": 13463490560,
+  "protected_existing_files_verified": 136,
+  "no_teacher_gate_change": true,
+  "launch_attempts": 1,
+  "configuration_and_source_frozen": true,
+  "best_last_exist": {
+    "best.pt": false,
+    "last.pt": false
+  }
+}

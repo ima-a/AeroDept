@@ -1,0 +1,4 @@
+{
+  "source_sha256": "56303d26eedfe5d0f899c592dfc004cf37e12483ce5f46f422fc0fea44c076d2",
+  "scope": "Only original fixed 12 validation frames; reuse accepted KD metrics, preserve all report stops. Identical worker tensors across three models, same original batch partners and unchanged1e-8 per-frame reference check. No third full pass."
+}

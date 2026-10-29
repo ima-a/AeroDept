@@ -1,0 +1,24 @@
+{
+  "scope": "Previously saved preparation statistics only; no TRAIN images opened by this audit",
+  "available_new_foggy_paths": [
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2005",
+      "cached_source": "artifacts/expanded_preparation_20261026T000911/stats_Kite_training_foggy_trajectory_2005.json",
+      "source_sha256": "ef3193938eb3cd85c7b14e405e00b60390563bd9b30003ea35b1f5c17a0bb4df",
+      "decoded_frames_in_original_preparation": 2206,
+      "resized_valid_pixels": 100583560,
+      "resized_near_pixels": 10315797,
+      "near_fraction_of_valid": 0.10255947393391127
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2006",
+      "cached_source": "artifacts/expanded_preparation_20261026T000911/stats_Kite_training_foggy_trajectory_2006.json",
+      "source_sha256": "42e612896bb22d2072fac3ec668cea610871f79b1013a077114f194ed2c4fced",
+      "decoded_frames_in_original_preparation": 2206,
+      "resized_valid_pixels": 109341816,
+      "resized_near_pixels": 35016923,
+      "near_fraction_of_valid": 0.3202518878962098
+    }
+  ],
+  "limitations": "Does not describe all training paths, scene semantics or water/shoreline coverage; original foggy path 2021 not re-decoded."
+}

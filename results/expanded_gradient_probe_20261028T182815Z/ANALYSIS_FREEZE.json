@@ -1,0 +1,7 @@
+{
+  "frozen_utc": "2026-10-28T18:32:03.335872+00:00",
+  "before_probe_execution": true,
+  "analysis_script_sha256": "0b24269254e487863d1b8c714ae4d1bcfc77a1a22eabd049f91c3551cb4414f8",
+  "plan_sha256": "6b92eb489321bcdec1aec1045061e7b1ed95fa0616b0b9de6fb8a62391eb0a86",
+  "decision_rules": "Exactly PLAN.json; no post-result cutoff changes"
+}

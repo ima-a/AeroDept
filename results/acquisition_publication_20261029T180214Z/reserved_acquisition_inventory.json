@@ -1,0 +1,308 @@
+{
+  "created_UTC": "2026-10-29T18:06:12.278071+00:00",
+  "scope": "Bounded metadata only: exact four reserved realizations in documented original/download/staging roots; central ZIP directory only if archive found. No test member bytes, image headers or decoding. No Gmail/accounts or downloads.",
+  "mount": {
+    "root": "/tmp/aerodepth-hdd-readonly",
+    "read_only": true,
+    "kernel_partition_write_protection": true,
+    "repair_performed": false,
+    "hardware_health": "Previously recorded SMART FAILED; no self-test/surface scan/repair attempted",
+    "finally_unmounted_after_inventory": true
+  },
+  "roots": [
+    {
+      "storage": "HDD",
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir",
+      "exists": true
+    },
+    {
+      "storage": "HDD",
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir/MidAir-expansion/MidAir",
+      "exists": true
+    },
+    {
+      "storage": "HDD",
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir/MidAir-expansion/reserved-tests-downloads",
+      "exists": true
+    },
+    {
+      "storage": "HDD",
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir/MidAir-expansion/reserved-tests-downloads/MidAir",
+      "exists": false
+    },
+    {
+      "storage": "HDD",
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir/MidAir-expansion/training-downloads",
+      "exists": true
+    },
+    {
+      "storage": "HDD",
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir/MidAir-expansion/training-downloads/MidAir",
+      "exists": false
+    },
+    {
+      "storage": "HDD",
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir",
+      "exists": true
+    },
+    {
+      "storage": "USB",
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir",
+      "exists": true
+    },
+    {
+      "storage": "USB",
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/MidAir-expansion/MidAir",
+      "exists": false
+    },
+    {
+      "storage": "USB",
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/MidAir-expansion/reserved-tests-downloads",
+      "exists": false
+    },
+    {
+      "storage": "USB",
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/MidAir-expansion/reserved-tests-downloads/MidAir",
+      "exists": false
+    },
+    {
+      "storage": "USB",
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/MidAir-expansion/training-downloads",
+      "exists": false
+    },
+    {
+      "storage": "USB",
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/MidAir-expansion/training-downloads/MidAir",
+      "exists": false
+    },
+    {
+      "storage": "USB",
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/MidAir-expansion/training_staging_20261026T000911/MidAir",
+      "exists": true
+    }
+  ],
+  "realizations": {
+    "Kite_training/foggy/trajectory_2007": {
+      "official_page_ID": "0007",
+      "expected_internal_realization": "Kite_training/foggy/trajectory_2007",
+      "expected_frames_from_HDF5_metadata": 2204,
+      "RGB": {
+        "archives": [],
+        "extracted": [],
+        "status": "ABSENT in all successfully checked documented HDD/USB locations"
+      },
+      "depth": {
+        "archives": [],
+        "extracted": [],
+        "status": "ABSENT in all successfully checked documented HDD/USB locations"
+      },
+      "errors": [],
+      "included_in_any_located_original_configuration": false,
+      "configuration_matches": [],
+      "previous_completeness_verified": false
+    },
+    "Kite_training/sunny/trajectory_0008": {
+      "official_page_ID": "0008",
+      "expected_internal_realization": "Kite_training/sunny/trajectory_0008",
+      "expected_frames_from_HDF5_metadata": 2205,
+      "RGB": {
+        "archives": [],
+        "extracted": [],
+        "status": "ABSENT in all successfully checked documented HDD/USB locations"
+      },
+      "depth": {
+        "archives": [],
+        "extracted": [],
+        "status": "ABSENT in all successfully checked documented HDD/USB locations"
+      },
+      "errors": [],
+      "included_in_any_located_original_configuration": false,
+      "configuration_matches": [],
+      "previous_completeness_verified": false
+    },
+    "PLE_training/spring/trajectory_5008": {
+      "official_page_ID": "4008",
+      "expected_internal_realization": "PLE_training/spring/trajectory_5008",
+      "expected_frames_from_HDF5_metadata": 2206,
+      "RGB": {
+        "archives": [],
+        "extracted": [],
+        "status": "ABSENT in all successfully checked documented HDD/USB locations"
+      },
+      "depth": {
+        "archives": [],
+        "extracted": [],
+        "status": "ABSENT in all successfully checked documented HDD/USB locations"
+      },
+      "errors": [],
+      "included_in_any_located_original_configuration": false,
+      "configuration_matches": [],
+      "previous_completeness_verified": false
+    },
+    "PLE_training/winter/trajectory_6009": {
+      "official_page_ID": "4009",
+      "expected_internal_realization": "PLE_training/winter/trajectory_6009",
+      "expected_frames_from_HDF5_metadata": 2205,
+      "RGB": {
+        "archives": [],
+        "extracted": [],
+        "status": "ABSENT in all successfully checked documented HDD/USB locations"
+      },
+      "depth": {
+        "archives": [],
+        "extracted": [],
+        "status": "ABSENT in all successfully checked documented HDD/USB locations"
+      },
+      "errors": [],
+      "included_in_any_located_original_configuration": false,
+      "configuration_matches": [],
+      "previous_completeness_verified": false
+    }
+  },
+  "configuration_records": [
+    {
+      "path": "/home/Ima/Downloads/download_config(1).txt",
+      "sha256": "2330a5e127a6981ce61aa6d3d09da2ba07ff13dd327a711ccef884943ea88e4d",
+      "archive_targets": [
+        "Kite_training/sunny/sensor_records.zip",
+        "Kite_training/sunny/color_left/trajectory_0005/frames.zip",
+        "Kite_training/sunny/depth/trajectory_0005/frames.zip",
+        "Kite_training/foggy/sensor_records.zip",
+        "Kite_training/foggy/color_left/trajectory_2005/frames.zip",
+        "Kite_training/foggy/depth/trajectory_2005/frames.zip",
+        "Kite_training/sunset/sensor_records.zip",
+        "Kite_training/sunset/color_left/trajectory_1006/frames.zip",
+        "Kite_training/sunset/depth/trajectory_1006/frames.zip",
+        "Kite_training/foggy/color_left/trajectory_2006/frames.zip",
+        "Kite_training/foggy/depth/trajectory_2006/frames.zip",
+        "PLE_training/spring/sensor_records.zip",
+        "PLE_training/spring/color_left/trajectory_5001/frames.zip",
+        "PLE_training/spring/depth/trajectory_5001/frames.zip",
+        "PLE_training/spring/color_left/trajectory_5002/frames.zip",
+        "PLE_training/spring/depth/trajectory_5002/frames.zip",
+        "PLE_training/spring/color_left/trajectory_5004/frames.zip",
+        "PLE_training/spring/depth/trajectory_5004/frames.zip",
+        "PLE_training/spring/color_left/trajectory_5005/frames.zip",
+        "PLE_training/spring/depth/trajectory_5005/frames.zip",
+        "PLE_training/fall/sensor_records.zip",
+        "PLE_training/fall/color_left/trajectory_4006/frames.zip",
+        "PLE_training/fall/depth/trajectory_4006/frames.zip",
+        "PLE_training/spring/color_left/trajectory_5006/frames.zip",
+        "PLE_training/spring/depth/trajectory_5006/frames.zip",
+        "PLE_training/spring/color_left/trajectory_5007/frames.zip",
+        "PLE_training/spring/depth/trajectory_5007/frames.zip",
+        "PLE_training/winter/sensor_records.zip",
+        "PLE_training/winter/color_left/trajectory_6007/frames.zip",
+        "PLE_training/winter/depth/trajectory_6007/frames.zip"
+      ]
+    },
+    {
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir/download_status.json",
+      "sha256": "5be9b3e1caeab8eb29762033a88bab3c6fec55eec8041fd8cba2f8ae9da8a9ac",
+      "archive_targets": [],
+      "credentials_never_reported": true
+    }
+  ],
+  "extra_archive_filename_candidates": [],
+  "inventory_complete_within_scope": true,
+  "missing_streams": [
+    {
+      "realization": "Kite_training/foggy/trajectory_2007",
+      "stream": "RGB"
+    },
+    {
+      "realization": "Kite_training/foggy/trajectory_2007",
+      "stream": "depth"
+    },
+    {
+      "realization": "Kite_training/sunny/trajectory_0008",
+      "stream": "RGB"
+    },
+    {
+      "realization": "Kite_training/sunny/trajectory_0008",
+      "stream": "depth"
+    },
+    {
+      "realization": "PLE_training/spring/trajectory_5008",
+      "stream": "RGB"
+    },
+    {
+      "realization": "PLE_training/spring/trajectory_5008",
+      "stream": "depth"
+    },
+    {
+      "realization": "PLE_training/winter/trajectory_6009",
+      "stream": "RGB"
+    },
+    {
+      "realization": "PLE_training/winter/trajectory_6009",
+      "stream": "depth"
+    }
+  ],
+  "additional_project_folder_metadata": [
+    {
+      "folder": "/tmp/aerodepth-hdd-readonly/AeroDepth",
+      "entries": [
+        {
+          "name": "expanded-experiments",
+          "kind": "directory",
+          "bytes": null
+        },
+        {
+          "name": "Kaggle",
+          "kind": "directory",
+          "bytes": null
+        },
+        {
+          "name": "MidAir",
+          "kind": "directory",
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "folder": "/tmp/aerodepth-hdd-readonly/AeroDepth/MidAir/MidAir-expansion",
+      "entries": [
+        {
+          "name": "MidAir",
+          "kind": "directory",
+          "bytes": null
+        },
+        {
+          "name": "reserved-tests-downloads",
+          "kind": "directory",
+          "bytes": null
+        },
+        {
+          "name": "training-downloads",
+          "kind": "directory",
+          "bytes": null
+        },
+        {
+          "name": "training_staging_20261026T000911",
+          "kind": "directory",
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "folder": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/MidAir-expansion",
+      "entries": [
+        {
+          "name": "training_staging_20261026T000911",
+          "kind": "directory",
+          "bytes": null
+        }
+      ]
+    }
+  ],
+  "documented_Kaggle_package_listing": [
+    {
+      "path": "/tmp/aerodepth-hdd-readonly/AeroDepth/Kaggle/MidAir-12-trajectories-20261012-012525/midair_12_trajectories_kaggle.zip",
+      "bytes": 21338566906,
+      "inspection": "ZIP central-directory filenames only; no payload/CRC/decoding",
+      "members": 52970,
+      "reserved_matches": []
+    }
+  ]
+}

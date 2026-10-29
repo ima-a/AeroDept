@@ -1,0 +1,8 @@
+{
+  "stage": "complete_verified_outputs",
+  "utc": "2026-10-29T15:40:36.636245+00:00",
+  "KD_frames": 4410,
+  "visualization_examples": 6,
+  "metadata_finalization": "Visual script completed all inference, metric/identity checks and completion receipt, then failed only on an unimported datetime in final status-writing line. No inference rerun; this status is finalized separately.",
+  "visual_script_exit_code": 1
+}

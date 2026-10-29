@@ -4,9 +4,22 @@ A reproducible research checkpoint for monocular drone-camera range prediction a
 
 The original final result is mixed: against the fixed validation-budget rule, V2 improves pooled near RMSE by 1.89%, but uses 14.86% more model calls and 26.53% more CPU compute; maximum event-update delay rises from 1 to 4 frames. PLE near RMSE regresses. Model depth errors remain substantial. [Protocol, guarded runner and reproduction](docs/final_study.md). Published training/validation/V1/V2/pilot evidence remains unchanged; that final study performed no retraining or additional policy search.
 
-## Expanded teacher/student experiment — ongoing
+## Local presentation dashboard
 
-A separate expanded-data experiment is authorized and running: supervised MobileNetV3-Small (10 epochs) → ResNet-50 range teacher (20 epochs) → frozen validation gate → distilled MobileNet (10 epochs only if the gate passes). Both student arms independently start from the identical published epoch-4 weights and BatchNorm buffers. The supervised arm has finished; teacher training is ongoing at the [dated progress snapshot](results/expanded_status_20261027T150226Z/REPORT.md). KD and the teacher acceptance gate are pending at that observation. This is not a completed distillation result or a new test evaluation.
+The expanded supervised A and teacher B runs, plus the separately authorized exploratory KD run, are complete. Teacher B failed its original gate; that rejection is preserved. The validation presentation defaults to **supervised A epoch9**, offers **original epoch4** as the near-field reference and **exploratory KD epoch9** as a negative-result comparison. A improves pooled AbsRel11.84% but worsens pooled near RMSE16.18% versus original; it is not a near-field safety upgrade. Published original weights and normal CLI defaults remain unchanged.
+
+```bash
+python -m pip install -e '.[dashboard]'
+python -m streamlit run scripts/dashboard.py
+```
+
+Localhost only, optional Python3.11+ UI; no cloud deployment or automatic training/tuning/test evaluation. [Dashboard, artifacts, guarded validation reproduction and limits](docs/presentation_dashboard.md). Earlier progress snapshots remain dated historical records; the presentation results give the completed status.
+
+The [consolidated final report](docs/FINAL_REPORT.md) brings together the model comparison, negative teacher/KD findings, scheduler ablations and actual timing. Independent reserved final testing is **NOT RUN** pending its eight RGB/depth archives and a verified manifest. The improved dashboard keeps this status explicit. A relocated checkout uses `configs/presentation.json`; local datasets/caches/private KD weights are opt-in environment locations. The two compact inference exports are included in source delivery; private training states remain excluded.
+
+## Expanded teacher/student experiment — completed training
+
+The expanded supervised A and teacher B runs and the separately authorized exploratory KD run are complete. Teacher B failed the original acceptance gate, which remains unchanged. Supervised A epoch9 is the general-depth presentation default; original epoch4 remains the near-field reference; exploratory KD epoch9 retains its negative validation result. [Final student comparison](results/student_validation_comparison_20261029T152648Z/REPORT.md) and [completed presentation validation](results/presentation_validation_20261029T155521Z/REPORT.md). The [27 October progress snapshot](results/expanded_status_20261027T150226Z/REPORT.md) records the earlier teacher-running observation and remains historical.
 
 Start with the [expanded reproduction guide](docs/expanded_reproduction.md): exact dataset layout, approved configurations, numerical-recovery policy, guarded commands, checkpoint/resume requirements and historical source versions. Code, manifests, protocols and compact evidence are included. MidAir inputs and private full-run checkpoints must be acquired or generated separately.
 
@@ -104,3 +117,5 @@ evidence/           distinct historical pilot
 ```
 
 See [NOTICE.md](NOTICE.md) for dataset attribution and upstream source/weight terms. Broader independent trajectories and actual deployment/energy investigation remain future work. The completed final study supports no measured energy, battery or flight-safety improvement.
+
+The [bounded HDD/USB acquisition inventory](results/acquisition_publication_20261029T180214Z/REPORT.md) now checks the formerly unmounted HDD read-only as well. All8 reserved RGB/depth streams are absent in the documented locations and original Kaggle package; the HDD hardware failure remains unresolved. No new-test evaluation was run.

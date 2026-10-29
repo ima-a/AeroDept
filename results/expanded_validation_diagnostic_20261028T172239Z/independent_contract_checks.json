@@ -1,0 +1,52 @@
+{
+  "epoch4": {
+    "rgb_mean": [
+      0.48500001430511475,
+      0.4560000002384186,
+      0.4059999883174896
+    ],
+    "rgb_std": [
+      0.2290000021457672,
+      0.2240000069141388,
+      0.22499999403953552
+    ],
+    "matches_fixed_ImageNet_contract": true
+  },
+  "student_A": {
+    "rgb_mean": [
+      0.48500001430511475,
+      0.4560000002384186,
+      0.4059999883174896
+    ],
+    "rgb_std": [
+      0.2290000021457672,
+      0.2240000069141388,
+      0.22499999403953552
+    ],
+    "matches_fixed_ImageNet_contract": true
+  },
+  "teacher_B": {
+    "rgb_mean": [
+      0.48500001430511475,
+      0.4560000002384186,
+      0.4059999883174896
+    ],
+    "rgb_std": [
+      0.2290000021457672,
+      0.2240000069141388,
+      0.22499999403953552
+    ],
+    "matches_fixed_ImageNet_contract": true
+  },
+  "unchanged_validation_records": {
+    "passed": true,
+    "count": 4410,
+    "canonical_sha256": "0ae5b1320bffc306453b68ba013897e1b79bcca1e0039736cee0554e81d9ed76",
+    "full_records_identical_including_order_navigation_and_paths": true
+  },
+  "original_floor_count_reproduced": {
+    "count": 5108332,
+    "threshold": 0.101,
+    "passed": true
+  }
+}

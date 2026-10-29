@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "frozen_utc": "2026-10-28T18:56:19.619168+00:00",
+  "scope": "Numerical validity contract only; prior failed result stays failed. Scientific sampling, .2 near coefficient, loss reductions, model mode and descriptive decision rules are byte-identical in copied PLAN/sampling.",
+  "diagnostic_evidence": "results/expanded_gradient_resolution_20261028T185216Z",
+  "evidence_hashes": {
+    "diagnostic_completion.json": "e6423653b6de0e01df3f7688fbe190482bfc5e96957e00d2dbe59754322ed06c",
+    "diagnostic_batches.json": "bd0f9a6274d9ace8a5d085096ba02de622c574c7ac9adcadb90a7e43d925ed93",
+    "full_FP64_reference.json": "46a2e5fb059a9e99ead8c633abfe0f0226da0b2f4b753403c92ff7e223206f74",
+    "DIAGNOSTIC_FREEZE.json": "d6d4d156de736e31828752a02fca72e832ed690f9fb0662ea29955e997eac7b4"
+  },
+  "diagnosis": "Same-graph repeat is bitwise identical; output loss derivatives differ at FP32 rounding scale; full-network reconstruction differences are deterministic finite-precision backward non-distributivity. Full genuinely double forward/loss/backward reconstructs at about 1e-15 relative L2. FP64 aggregation of already computed FP32 component gradients does not fix it. No objective/ordering/accumulation/mutation defect found.",
+  "old_elementwise_rule": {
+    "atol": 1e-06,
+    "rtol": 0.0001,
+    "treatment": "Record every failure and maximum allowance ratio; never relabel original attempt as passing. Unsuitable as sole high-dimensional directional validity criterion near cancellation; failure not solely at exact zeros."
+  },
+  "new_joint_checks": {
+    "relative_L2_max": 1e-05,
+    "relative_L2_definition": "norm64(actual-reconstructed)/norm64(actual) for encoder, decoder (includes head), head; exact-zero actual requires exact-zero reconstruction",
+    "max_abs_error_guard": "max(abs(actual-reconstructed)) <= 1e-6 + 1e-4*max(abs(actual)) per block",
+    "cosine_absolute_effect_max": 1e-05,
+    "cosine_reference": "Compare cos(actual,near_MAE) and cos(reconstructed,near_MAE); both undefined only when norms <=1e-12",
+    "classification_stability": "Direct and reconstructed current/candidate gradients must agree on original conflict<-0.05, candidate improvement>=0.05, near-partition/current<=0.10 and weighted-near/current>=0.10 classifications. Scientific cutoffs/counts/breadth remain unchanged.",
+    "on_failure": "Stop this sole rerun. No new amendment, resampling, precision change, threshold relaxation, or further probe."
+  },
+  "justification": "1e-5 relative L2 is a declared 0.001% vector error ceiling, tighter than original 1e-4 relative coefficient, paired with a maximum-element outlier safeguard and independently checked directional/classification effects. It is a change of error metric, not a larger pointwise tolerance. For nonzero vectors relative perturbation delta gives directional cosine error bounded by about 2*delta/(1-delta), far smaller than the 0.05 scientific effect. Observed FP32 reconstruction errors were <=1.45e-6, cosine changes <=1.1e-7; genuine FP64 reconstruction <=1.8e-15. This is empirically reference-supported, not a formal bound for every network/batch. Full-forward FP32 vs FP64 cosine shift reached 2.30e-4, showing piecewise-network precision sensitivity beyond reconstruction; no sampled first-two scientific classifications changed. This limitation remains explicit.",
+  "authorization": "Current user permits a reference-supported revised numerical check, frozen before remaining batches. At most one original 64-frame rerun, within combined 1800-second numerical budget.",
+  "unchanged_science_sha256": {
+    "original_PLAN": "6b92eb489321bcdec1aec1045061e7b1ed95fa0616b0b9de6fb8a62391eb0a86",
+    "original_sampling": "19e63ba525534654abc1c88a3db165b4c012113edcf328abc21862e1e5c5ef32",
+    "original_analysis_script": "0b24269254e487863d1b8c714ae4d1bcfc77a1a22eabd049f91c3551cb4414f8"
+  }
+}

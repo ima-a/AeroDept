@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "normalization": {
+    "epoch4": {
+      "exact_encoder_input_match": true,
+      "max_absolute_difference": 0.0,
+      "input_dtype": "torch.float32"
+    },
+    "student_A": {
+      "exact_encoder_input_match": true,
+      "max_absolute_difference": 0.0,
+      "input_dtype": "torch.float32"
+    },
+    "teacher_B": {
+      "exact_encoder_input_match": true,
+      "max_absolute_difference": 0.0,
+      "input_dtype": "torch.float32"
+    }
+  },
+  "teacher_first_batch_projection_shapes": [
+    {
+      "input": [
+        2,
+        64,
+        96,
+        160
+      ],
+      "output": [
+        2,
+        16,
+        96,
+        160
+      ]
+    },
+    {
+      "input": [
+        2,
+        256,
+        48,
+        80
+      ],
+      "output": [
+        2,
+        32,
+        48,
+        80
+      ]
+    },
+    {
+      "input": [
+        2,
+        512,
+        24,
+        40
+      ],
+      "output": [
+        2,
+        64,
+        24,
+        40
+      ]
+    },
+    {
+      "input": [
+        2,
+        1024,
+        12,
+        20
+      ],
+      "output": [
+        2,
+        128,
+        12,
+        20
+      ]
+    },
+    {
+      "input": [
+        2,
+        2048,
+        6,
+        10
+      ],
+      "output": [
+        2,
+        128,
+        6,
+        10
+      ]
+    }
+  ],
+  "rgb_range": [
+    0.0,
+    1.0
+  ],
+  "all_outputs_finite_positive_fp32_aligned": true,
+  "all_models_eval": true,
+  "all_model_and_bn_buffers_unchanged": true,
+  "no_augmentation": true,
+  "output_units": "Euclidean range metres; no upper clamp or fitted scale",
+  "mask": "GT finite inclusive [.1,1000] before nearest resize; near GT<10",
+  "floor_definition": "Prediction <=0.101 m on VALID GT pixels",
+  "guard_distinct_image_paths": 8820,
+  "guard_allowed_image_paths": 8820,
+  "guard_total_image_opens": 8820,
+  "unexpected_dataset_opens": [],
+  "blocked_test_probes_before_io": 2,
+  "failing_hdd_reads": 0
+}

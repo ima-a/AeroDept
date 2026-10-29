@@ -1,0 +1,20 @@
+include README.md NOTICE.md requirements-tested.txt
+include .streamlit/config.toml
+recursive-include configs *.yaml *.json
+exclude configs/presentation_local.json
+recursive-include docs *.md *.json *.csv
+recursive-include scripts *.py
+recursive-include evidence/reproduction_sources *.py *.json *.md
+recursive-include tests *.py
+include models/README.md models/SHA256SUMS models/training_config.yaml
+include models/mobilenet_v3_small_epoch4.json models/mobilenet_v3_small_epoch4.state_dict.pt
+recursive-include models/presentation_A_epoch9_20261029T155521Z *.md *.json *.pt SHA256SUMS
+recursive-include results *.md *.json *.csv *.png *.svg *.gz *.txt *.sha256 SHA256SUMS
+# Raw datasets, private checkpoints, caches, environments and download access are excluded.
+global-exclude *.py[cod] *.log *.jsonl
+prune artifacts
+prune runs
+prune datasets
+prune data
+prune .venv
+prune .git

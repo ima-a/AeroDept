@@ -1,0 +1,10 @@
+# NOT RUN: missing reserved image acquisition/manifest.
+# Existing primary-only opt-in interface; NOT the complete new secondary-analysis study.
+# A versioned extended runner and genuine READY protocol must be verified/frozen first.
+python scripts/presentation_final_test.py \
+  --protocol /path/to/frozen_ready_protocol.json \
+  --protocol-sha256 EXACT_READY_PROTOCOL_SHA256 \
+  --manifest /path/to/verified_reserved_test_manifest.json \
+  --dataset-root /path/to/healthy/reserved/MidAir \
+  --output /path/to/fresh/independent_test_exposure \
+  --confirm-new-test-exposure

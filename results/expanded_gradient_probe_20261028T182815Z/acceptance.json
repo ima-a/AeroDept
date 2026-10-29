@@ -1,0 +1,16 @@
+{
+  "validity_passed": false,
+  "full_sampling_completed": false,
+  "gradient_reconstruction_failed": true,
+  "tolerances_unchanged": {
+    "atol": 1e-06,
+    "rtol": 0.0001
+  },
+  "maximum_failed_error_divided_by_allowed_bound": 2.7679383754730225,
+  "decision_rules_run_on_full_probe": false,
+  "supports_teacher_repair_training": false,
+  "interpretation": "Incomplete/invalid probe, not a negative result about near weighting. Partial evidence cannot meet validity, minimum count or breadth requirements.",
+  "no_retries_or_settings_changes": true,
+  "no_optimizer_or_weight_updates": true,
+  "no_validation_or_test_evaluation": true
+}

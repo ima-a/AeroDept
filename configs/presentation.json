@@ -1,0 +1,44 @@
+{
+  "version": "presentation_validation_v1",
+  "dataset_root": "${MIDAIR_ROOT}",
+  "manifest": "results/expanded_preparation_20261026/manifest_train_val.json.gz",
+  "reservations": "results/expanded_preparation_20261026/reservations.json",
+  "comparison": "results/student_validation_comparison_20261029T152648Z",
+  "results": "results/presentation_validation_20261029T155521Z",
+  "cache": "${AERODEPTH_PRESENTATION_CACHE}",
+  "source_A": {
+    "path": "${AERODEPTH_A_SELECTED_CHECKPOINT}",
+    "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8"
+  },
+  "export_directory": "models/presentation_A_epoch9_20261029T155521Z",
+  "models": {
+    "Original": {
+      "kind": "export",
+      "weights": "models/mobilenet_v3_small_epoch4.state_dict.pt",
+      "metadata": "models/mobilenet_v3_small_epoch4.json",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+      "metadata_sha256": "1f99776c4717f91abb035675560d9521ba0a11d7abe0212961e5facc63fb190f",
+      "selected_epoch": 4,
+      "label": "Original \u00b7 epoch 4 \u00b7 near-field reference"
+    },
+    "A": {
+      "kind": "export",
+      "weights": "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+      "metadata": "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json",
+      "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+      "metadata_sha256": "e9fed71377da6baa94b0a44ecdbf0ae6b1df44cc1ef1b4718a3d53a65e7faa12",
+      "selected_epoch": 9,
+      "label": "Supervised A \u00b7 epoch 9"
+    },
+    "KD": {
+      "kind": "checkpoint",
+      "weights": "${AERODEPTH_KD_CHECKPOINT}",
+      "sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+      "selected_epoch": 9,
+      "label": "Exploratory KD \u00b7 epoch 9 \u00b7 rejected teacher"
+    }
+  },
+  "default_model": "A",
+  "comparison_cache": "${AERODEPTH_COMPARISON_CACHE}",
+  "delivery": "results/acquisition_publication_20261029T180214Z"
+}

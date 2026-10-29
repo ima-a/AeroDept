@@ -1,0 +1,29 @@
+{
+  "students": [
+    {
+      "Student": "Original \u00b7 epoch 4 \u00b7 near-field reference",
+      "Selected epoch": 4,
+      "Architecture": "mobilenet_v3_small_depth",
+      "Parameters": 1027489,
+      "Weights SHA256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+      "Selected checkpoint SHA256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6"
+    },
+    {
+      "Student": "Supervised A \u00b7 epoch 9",
+      "Selected epoch": 9,
+      "Architecture": "mobilenet_v3_small_depth",
+      "Parameters": 1027489,
+      "Weights SHA256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+      "Selected checkpoint SHA256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8"
+    },
+    {
+      "Student": "Exploratory KD \u00b7 epoch 9 \u00b7 rejected teacher",
+      "Selected epoch": 9,
+      "Architecture": "mobilenet_v3_small_depth",
+      "Parameters": 1027489,
+      "Weights SHA256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+      "Selected checkpoint SHA256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45"
+    }
+  ],
+  "source": "Strictly matching MobileNetV3-Small architecture; parameter count from verified A inference export metadata; all three selected config contracts matched in final validation comparison."
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "source_distribution": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/final_delivery_20261029T173715Z/dist_final/aerodepth_lite-0.1.0.tar.gz",
+  "source_distribution_sha256": "8f07d9f96c84fdf77b83b3f5ae7a32940e293acaa111cc859511de42f8ddaa7c",
+  "source_members": 556,
+  "inference_exports": [
+    "models/mobilenet_v3_small_epoch4.state_dict.pt",
+    "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt"
+  ],
+  "private_config_data_states_caches_excluded": true,
+  "portable_sources_match_current_files": true,
+  "signed_access_matches": [],
+  "verified_wheel": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/final_delivery_20261029T173715Z/dist/aerodepth_lite-0.1.0-py3-none-any.whl",
+  "verified_wheel_sha256": "ef017dd1d352be609913fe3ccb21cf9c182cefef36849dfe524f17d1d9d769c3",
+  "dependency_isolation_limitation": "Recorded dependencies reused read-only; wheel itself non-editable in fresh venv.",
+  "final_source_reassembly": "Documentation/report link fix and verification records added after initial source-install check; library/UI code identical to tested wheel/source. No scientific experiments repeated."
+}

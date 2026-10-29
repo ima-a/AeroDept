@@ -1,0 +1,165 @@
+{
+  "epoch4": {
+    "checkpoint": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.state_dict.pt",
+    "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+    "selection_receipt": {
+      "epoch_completed": 4,
+      "validation_absrel": 0.3015399584766882
+    },
+    "contract": {
+      "architecture": "mobilenet_v3_small_depth",
+      "model_options": {
+        "name": "mobilenet_v3_small_depth"
+      },
+      "preprocessing": {
+        "input": "RGB float32 [0,1]",
+        "image_size": [
+          192,
+          320
+        ],
+        "rgb_resize": "bilinear align_corners=False",
+        "depth_resize": "nearest",
+        "crop": null,
+        "paired_training_horizontal_flip": true,
+        "normalization_location": "model",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "depth_encoding": "midair_float16_bits",
+        "depth_scale": 1.0,
+        "valid_depth_metres": [
+          0.1,
+          1000.0
+        ],
+        "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+      },
+      "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+    },
+    "state_digest_before": "e8dcc30b6b4149f0c07b68a26b97db0baafa426a90901eb22ab9e6885ebb643f",
+    "batchnorm_counter_values": [
+      17636,
+      716669
+    ],
+    "batchnorm_running_variance_min": 7.006492321624085e-44,
+    "batchnorm_running_variance_max": 100.63005065917969,
+    "model_tensors_finite": true,
+    "state_digest_after": "e8dcc30b6b4149f0c07b68a26b97db0baafa426a90901eb22ab9e6885ebb643f"
+  },
+  "student_A": {
+    "checkpoint": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/runs/A_supervised/best.pt",
+    "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+    "selection_receipt": {
+      "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+      "epoch_completed": 9,
+      "global_step": 198441,
+      "validation_absrel": 0.265831084981294
+    },
+    "contract": {
+      "architecture": "mobilenet_v3_small_depth",
+      "model_options": {
+        "name": "mobilenet_v3_small_depth"
+      },
+      "preprocessing": {
+        "input": "RGB float32 [0,1]",
+        "image_size": [
+          192,
+          320
+        ],
+        "rgb_resize": "bilinear align_corners=False",
+        "depth_resize": "nearest",
+        "crop": null,
+        "paired_training_horizontal_flip": true,
+        "normalization_location": "model",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "depth_encoding": "midair_float16_bits",
+        "depth_scale": 1.0,
+        "valid_depth_metres": [
+          0.1,
+          1000.0
+        ],
+        "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+      },
+      "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+    },
+    "state_digest_before": "24f042a26047ea97e79119a69e4e4954d452b45102be8564bbaa08a66f81e031",
+    "batchnorm_counter_values": [
+      216077,
+      915110
+    ],
+    "batchnorm_running_variance_min": 7.006492321624085e-44,
+    "batchnorm_running_variance_max": 119.55558776855469,
+    "model_tensors_finite": true,
+    "state_digest_after": "24f042a26047ea97e79119a69e4e4954d452b45102be8564bbaa08a66f81e031"
+  },
+  "teacher_B": {
+    "checkpoint": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/runs/B_teacher/best.pt",
+    "sha256": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660",
+    "selection_receipt": {
+      "sha256": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660",
+      "epoch_completed": 3,
+      "global_step": 66147,
+      "validation_absrel": 0.2403297888456962
+    },
+    "contract": {
+      "architecture": "resnet50_depth",
+      "model_options": {
+        "name": "resnet50_depth"
+      },
+      "preprocessing": {
+        "input": "RGB float32 [0,1]",
+        "image_size": [
+          192,
+          320
+        ],
+        "rgb_resize": "bilinear align_corners=False",
+        "depth_resize": "nearest",
+        "crop": null,
+        "paired_training_horizontal_flip": true,
+        "normalization_location": "model",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "depth_encoding": "midair_float16_bits",
+        "depth_scale": 1.0,
+        "valid_depth_metres": [
+          0.1,
+          1000.0
+        ],
+        "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+      },
+      "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+    },
+    "state_digest_before": "dbdc6b27563761a82a9d9a06679e565407ad4862423b810f682b9eb141883a1e",
+    "batchnorm_counter_values": [
+      66147,
+      739977
+    ],
+    "batchnorm_running_variance_min": 5.605193857299268e-45,
+    "batchnorm_running_variance_max": 597.9488525390625,
+    "model_tensors_finite": true,
+    "state_digest_after": "dbdc6b27563761a82a9d9a06679e565407ad4862423b810f682b9eb141883a1e"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "flow": "explicit FP32 CPU inference A",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "explicit FP32 CPU inference Original",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "explicit FP32 CPU inference KD",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "fixed-frame preset",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "missing KD recording unavailable",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "A recorded playback advances",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "untimed ablation unavailable",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "historical study distinct",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "per-trajectory charts",
+      "passed": true,
+      "evidence": "browser_delivery_attempt1.log and screenshots; locator-only failure happened afterwards"
+    },
+    {
+      "flow": "overview and sidebar show truthful NOT RUN status",
+      "passed": true
+    },
+    {
+      "flow": "final Markdown report download byte parity",
+      "passed": true
+    },
+    {
+      "flow": "CSV and PNG exports byte parity",
+      "passed": true
+    },
+    {
+      "flow": "390px mobile overview without horizontal page overflow",
+      "passed": true
+    }
+  ],
+  "javascript_errors": [],
+  "automation_caveat": "First attempt used delivery directory name instead of unchanged measurement directory name for CSV locator. No app failure. Followup corrected only locator and completed exports/mobile checks; no repeated model inference.",
+  "no_test_pixels": true
+}

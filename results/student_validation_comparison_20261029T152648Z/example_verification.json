@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "examples": [
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "frame_index": 1534,
+      "arrays": "Kite_training__foggy__trajectory_2003__001534.npz",
+      "old_per_frame_differences": {
+        "epoch4": {
+          "absrel": -5.551115123125783e-17,
+          "rmse": 0.0,
+          "near_absrel": 1.1102230246251565e-16,
+          "near_rmse": 0.0
+        },
+        "student_A": {
+          "absrel": 0.0,
+          "rmse": -2.842170943040401e-14,
+          "near_absrel": -2.220446049250313e-16,
+          "near_rmse": 1.7763568394002505e-15
+        },
+        "exploratory_KD": {
+          "absrel": 0.0,
+          "rmse": 2.842170943040401e-14,
+          "near_absrel": -2.220446049250313e-16,
+          "near_rmse": 0.0
+        }
+      },
+      "batch_partner_indices": [
+        1534,
+        1535
+      ],
+      "input_sha256": "1b090dfa6f6ef08f8eb401857ccac15101ee4cb544f7aa1d617d23d290f66b7d"
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "frame_index": 1567,
+      "arrays": "Kite_training__foggy__trajectory_2003__001567.npz",
+      "old_per_frame_differences": {
+        "epoch4": {
+          "absrel": 0.0,
+          "rmse": 0.0,
+          "near_absrel": -1.1102230246251565e-16,
+          "near_rmse": 0.0
+        },
+        "student_A": {
+          "absrel": 0.0,
+          "rmse": 0.0,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        },
+        "exploratory_KD": {
+          "absrel": 0.0,
+          "rmse": 0.0,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        }
+      },
+      "batch_partner_indices": [
+        1566,
+        1567
+      ],
+      "input_sha256": "5db1fe5f7842049c1d2634c04835c51353da1693779b94efec64e526b528de93"
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "frame_index": 1577,
+      "arrays": "Kite_training__foggy__trajectory_2003__001577.npz",
+      "old_per_frame_differences": {
+        "epoch4": {
+          "absrel": 5.551115123125783e-17,
+          "rmse": 0.0,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        },
+        "student_A": {
+          "absrel": 0.0,
+          "rmse": 0.0,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        },
+        "exploratory_KD": {
+          "absrel": 0.0,
+          "rmse": 0.0,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        }
+      },
+      "batch_partner_indices": [
+        1576,
+        1577
+      ],
+      "input_sha256": "fc9d9a5a7e2e3f0a6d953a2d70d3c61138d0ee808a45c142f94ac4c2652aba46"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "frame_index": 445,
+      "arrays": "PLE_training__spring__trajectory_5000__000445.npz",
+      "old_per_frame_differences": {
+        "epoch4": {
+          "absrel": 0.0,
+          "rmse": 7.105427357601002e-15,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        },
+        "student_A": {
+          "absrel": 2.7755575615628914e-17,
+          "rmse": 0.0,
+          "near_absrel": -2.7755575615628914e-17,
+          "near_rmse": 0.0
+        },
+        "exploratory_KD": {
+          "absrel": 2.7755575615628914e-17,
+          "rmse": 0.0,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        }
+      },
+      "batch_partner_indices": [
+        2650,
+        2651
+      ],
+      "input_sha256": "41dbd09eb5539a6b778f4481098c7292d82feece203eede5a7d68eea1f831e22"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "frame_index": 1691,
+      "arrays": "PLE_training__spring__trajectory_5000__001691.npz",
+      "old_per_frame_differences": {
+        "epoch4": {
+          "absrel": 0.0,
+          "rmse": 0.0,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        },
+        "student_A": {
+          "absrel": 0.0,
+          "rmse": 0.0,
+          "near_absrel": -1.7763568394002505e-15,
+          "near_rmse": 0.0
+        },
+        "exploratory_KD": {
+          "absrel": 0.0,
+          "rmse": -7.105427357601002e-15,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        }
+      },
+      "batch_partner_indices": [
+        3896,
+        3897
+      ],
+      "input_sha256": "6bba0669677a15e53cb95ac349340621266a64e420eb992b53abdbd67ff331e6"
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "frame_index": 1928,
+      "arrays": "PLE_training__spring__trajectory_5000__001928.npz",
+      "old_per_frame_differences": {
+        "epoch4": {
+          "absrel": 5.551115123125783e-17,
+          "rmse": 1.4210854715202004e-14,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        },
+        "student_A": {
+          "absrel": -5.551115123125783e-17,
+          "rmse": -7.105427357601002e-15,
+          "near_absrel": 0.0,
+          "near_rmse": 0.0
+        },
+        "exploratory_KD": {
+          "absrel": 0.0,
+          "rmse": 0.0,
+          "near_absrel": 0.0,
+          "near_rmse": -3.552713678800501e-15
+        }
+      },
+      "batch_partner_indices": [
+        4132,
+        4133
+      ],
+      "input_sha256": "5ac06edf6cdacce3788f25320ced84d8af8057457b97eca6095a5e44266cc9f8"
+    }
+  ],
+  "original_A_replayed_batches": 6,
+  "KD_visual_replayed_frames": 12,
+  "new_KD_selection": false,
+  "all_three_input_tensors_identical": true
+}

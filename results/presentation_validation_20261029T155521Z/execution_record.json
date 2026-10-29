@@ -1,0 +1,38 @@
+{
+  "UTC": "2026-10-29T17:10:01.782836+00:00",
+  "working_directory": "/home/Ima/work/Projects/DL-projects/AeroDept",
+  "canonical_reproduction_commands": [
+    "python scripts/presentation.py export --config /path/to/fresh_config.json",
+    "python scripts/presentation.py cache --config /path/to/fresh_config.json",
+    "python scripts/presentation.py quality --config /path/to/fresh_config.json",
+    "python scripts/presentation.py cache-check --config /path/to/fresh_config.json",
+    "python scripts/presentation.py timing --config /path/to/fresh_config.json"
+  ],
+  "reproduction_requires": "Fresh config/output/export/cache as applicable; matching frozen protocol before scoring. Do not rerun completed local outputs.",
+  "executed_stages": {
+    "export": "strict parity receipt in A export metadata; 4 FP32 CPU inputs/state including BN",
+    "cache": "completed full4410 validation, cache_reference.json and private completion.json",
+    "quality": "completed nine4410-frame policies; quality.log",
+    "cache-check": "complete five-policy passing receipt; original session reported143 after receipt, no assertion failure. Defensive followup exited FileExistsError without overwrite; both logs retained.",
+    "timing": "persistent timing service completed exit0,30 runs; timing_activity.json, timing.log",
+    "focused_tests": ".venv/bin/python -m pytest tests/test_presentation.py tests/test_dashboard.py; final_tests.log:15 passed",
+    "browser": "artifacts browser_flows_v4.py passed full10 flows; browser_final.py passed final A CUDA and figure export. Earlier automation-locator failures retained and corrected; no scientific changes.",
+    "syntax_and_cli": "git diff --check; compileall new modules/scripts; presentation_final_test.py --help. No real final test invocation."
+  },
+  "dashboard": {
+    "url": "http://127.0.0.1:8501",
+    "user_service": "aerodepth-dashboard-20261029t155521z.service",
+    "observed_MainPID": 350385,
+    "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/presentation_validation_20261029T155521Z/dashboard.log",
+    "launch": "python -m streamlit run scripts/dashboard.py",
+    "stop": "systemctl --user stop aerodepth-dashboard-20261029t155521z.service",
+    "limitations": "Localhost only; rescue USB and current paths required; user service may stop at full logout, no linger claim. Terminal disconnection does not stop user service."
+  },
+  "runtime_differences": {
+    "A_cache": "FP32 CUDA batch1 vs prior batch2; tiny numerical differences documented, all counts exact.",
+    "timing": "FP32 batch1 CPU2 threads or synchronized CUDA;3 repetitions; bounded windows",
+    "UI": "Optional Streamlit1.66.1/Playwright1.64.1; local cached Chrome155 extracted in/tmp after Playwright browser download failed. No global browser installation.",
+    "browser_GPU_flag": "Browser graphics acceleration disabled; actual A inference explicitly executed CUDA independently."
+  },
+  "forbidden_actions_performed": false
+}

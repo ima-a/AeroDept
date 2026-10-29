@@ -1,0 +1,21 @@
+trajectory,condition,path_group,sample_frames,frame_indices,ordinal_fractions,valid_pixel_occurrences,near_pixel_occurrences,near_fraction
+Kite_training/cloudy/trajectory_3002,cloudy,Kite/0002,4,"[1100, 0, 2201, 550]","[0.49977283053157656, 0.0, 1.0, 0.24988641526578828]",171215,32248,0.18834798352948048
+Kite_training/foggy/trajectory_2005,foggy,Kite/0005,4,"[1102, 0, 2205, 551]","[0.4997732426303855, 0.0, 1.0, 0.24988662131519274]",180321,0,0.0
+Kite_training/foggy/trajectory_2006,foggy,Kite/0006,4,"[1102, 0, 2205, 551]","[0.4997732426303855, 0.0, 1.0, 0.24988662131519274]",203324,32785,0.1612451063327497
+Kite_training/foggy/trajectory_2021,foggy,Kite/0021,4,"[1101, 0, 2203, 550]","[0.4997730367680436, 0.0, 1.0, 0.24965955515206537]",155945,0,0.0
+Kite_training/sunny/trajectory_0000,sunny,Kite/0000,3,"[1102, 0, 2204]","[0.5, 0.0, 1.0]",119948,0,0.0
+Kite_training/sunny/trajectory_0005,sunny,Kite/0005,3,"[1102, 0, 2205]","[0.4997732426303855, 0.0, 1.0]",134386,0,0.0
+Kite_training/sunset/trajectory_1001,sunset,Kite/0001,3,"[1102, 0, 2204]","[0.5, 0.0, 1.0]",136281,0,0.0
+Kite_training/sunset/trajectory_1006,sunset,Kite/0006,3,"[1102, 0, 2205]","[0.4997732426303855, 0.0, 1.0]",146117,17699,0.12112895830053998
+PLE_training/fall/trajectory_4001,fall,PLE/0001,3,"[1101, 0, 2203]","[0.4997730367680436, 0.0, 1.0]",118209,36188,0.30613574262535004
+PLE_training/fall/trajectory_4004,fall,PLE/0004,3,"[1101, 0, 2203]","[0.4997730367680436, 0.0, 1.0]",150718,56151,0.37255669528523466
+PLE_training/fall/trajectory_4006,fall,PLE/0006,3,"[1102, 0, 2204]","[0.5, 0.0, 1.0]",132730,49790,0.3751224289911851
+PLE_training/spring/trajectory_5001,spring,PLE/0001,3,"[1101, 0, 2203]","[0.4997730367680436, 0.0, 1.0]",118206,36043,0.30491684009271947
+PLE_training/spring/trajectory_5002,spring,PLE/0002,3,"[1102, 0, 2204]","[0.5, 0.0, 1.0]",127217,62589,0.4919861339286416
+PLE_training/spring/trajectory_5004,spring,PLE/0004,3,"[1101, 0, 2203]","[0.4997730367680436, 0.0, 1.0]",146143,55652,0.3808051018522954
+PLE_training/spring/trajectory_5005,spring,PLE/0005,3,"[1102, 0, 2205]","[0.4997732426303855, 0.0, 1.0]",129734,32828,0.2530408374057687
+PLE_training/spring/trajectory_5006,spring,PLE/0006,3,"[1102, 0, 2204]","[0.5, 0.0, 1.0]",132750,49443,0.37245197740112995
+PLE_training/spring/trajectory_5007,spring,PLE/0007,3,"[1102, 0, 2204]","[0.5, 0.0, 1.0]",122920,60232,0.4900097624471201
+PLE_training/winter/trajectory_6002,winter,PLE/0002,3,"[1102, 0, 2204]","[0.5, 0.0, 1.0]",127005,60347,0.47515452147553244
+PLE_training/winter/trajectory_6005,winter,PLE/0005,3,"[1102, 0, 2205]","[0.4997732426303855, 0.0, 1.0]",129435,31823,0.2458608568007108
+PLE_training/winter/trajectory_6007,winter,PLE/0007,3,"[1102, 0, 2204]","[0.5, 0.0, 1.0]",121828,58403,0.479388974619956

@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/home/Ima/work/Projects/DL-projects/AeroDept/.venv/bin/python",
+    "-u",
+    "-B",
+    "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_gradient_probe_20261028T182815Z/probe.py"
+  ],
+  "mode": "eval, FP32 with gradients enabled; autograd.grad; no optimizer or updates",
+  "freeze_sha256": "f187c97fac75fe0a7eb73a32734aaf18d0bb961f6c72f756444943c3a2af13d9",
+  "analysis_code_sha256": "0b24269254e487863d1b8c714ae4d1bcfc77a1a22eabd049f91c3551cb4414f8",
+  "analysis_code_executed": false,
+  "failure": "batch index1 current_components reconstruction",
+  "retained_partial_batch_count": 1,
+  "outcome": "stopped invalid/incomplete as preregistered; no repeat or settings change",
+  "launcher": {
+    "kind": "systemd-run --user",
+    "unit": "aerodepth-gradient-probe-20261028t182815.service",
+    "Type": "exec",
+    "Restart": "no",
+    "KillMode": "control-group",
+    "TimeoutStopSec": 30,
+    "sleep_inhibitor": "sleep:handle-lid-switch block",
+    "environment": {
+      "OMP_NUM_THREADS": "2",
+      "MKL_NUM_THREADS": "2",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "log": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/expanded_gradient_probe_20261028T182815Z/probe.log"
+  }
+}

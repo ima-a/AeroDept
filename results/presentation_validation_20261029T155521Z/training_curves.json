@@ -1,0 +1,495 @@
+{
+  "rows": [
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 1,
+      "validation_absrel": 0.30581416085799107,
+      "train_loss": 31.315490607151126,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 2,
+      "validation_absrel": 0.3435774157523982,
+      "train_loss": 15.692332498771476,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 3,
+      "validation_absrel": 0.31347094769834,
+      "train_loss": 13.501580370178187,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 4,
+      "validation_absrel": 0.30312900253193636,
+      "train_loss": 12.535350461264645,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 5,
+      "validation_absrel": 0.3231651646691897,
+      "train_loss": 11.88897769417074,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 6,
+      "validation_absrel": 0.320011702353068,
+      "train_loss": 11.431731571386557,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 7,
+      "validation_absrel": 0.3284587453871355,
+      "train_loss": 11.078641384306017,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 8,
+      "validation_absrel": 0.304875716723318,
+      "train_loss": 10.786779878901418,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 9,
+      "validation_absrel": 0.31535359607133834,
+      "train_loss": 10.564396282960887,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 10,
+      "validation_absrel": 0.3148241811286529,
+      "train_loss": 10.34518631787818,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 11,
+      "validation_absrel": 0.32952294374839597,
+      "train_loss": 10.166129647482277,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 12,
+      "validation_absrel": 0.32825235921922347,
+      "train_loss": 10.026124904690537,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 13,
+      "validation_absrel": 0.3033795165364,
+      "train_loss": 9.859876818115085,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 14,
+      "validation_absrel": 0.319434300452686,
+      "train_loss": 9.739823268475947,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 15,
+      "validation_absrel": 0.30480646257255406,
+      "train_loss": 9.637075630978787,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 16,
+      "validation_absrel": 0.3212886686878108,
+      "train_loss": 9.536447122216522,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 17,
+      "validation_absrel": 0.31036576780753294,
+      "train_loss": 9.4126992166164,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 18,
+      "validation_absrel": 0.3238861508932904,
+      "train_loss": 9.332485258187207,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 19,
+      "validation_absrel": 0.3110752881172101,
+      "train_loss": 9.24200385496659,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 20,
+      "validation_absrel": 0.3098878361966201,
+      "train_loss": 9.16493901532641,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 21,
+      "validation_absrel": 0.31652718120665313,
+      "train_loss": 9.085531481162954,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 22,
+      "validation_absrel": 0.3125810447949526,
+      "train_loss": 9.02071338560771,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 23,
+      "validation_absrel": 0.30658731480056733,
+      "train_loss": 8.955165987843205,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 24,
+      "validation_absrel": 0.31313416044156406,
+      "train_loss": 8.88757007055527,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 25,
+      "validation_absrel": 0.3199327922513272,
+      "train_loss": 8.837129116166501,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 26,
+      "validation_absrel": 0.3177860869902817,
+      "train_loss": 8.775306033233743,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 27,
+      "validation_absrel": 0.325797858082686,
+      "train_loss": 8.726504968499132,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 28,
+      "validation_absrel": 0.3236230139593133,
+      "train_loss": 8.669506637383328,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 29,
+      "validation_absrel": 0.31188089951142217,
+      "train_loss": 8.62292329068356,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 30,
+      "validation_absrel": 0.3216243192091277,
+      "train_loss": 8.578665207616053,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 31,
+      "validation_absrel": 0.3144749111399005,
+      "train_loss": 8.538917606772953,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 32,
+      "validation_absrel": 0.32386773471490293,
+      "train_loss": 8.512064616299995,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 33,
+      "validation_absrel": 0.32367695060026275,
+      "train_loss": 8.47187239427798,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 34,
+      "validation_absrel": 0.3230015156209089,
+      "train_loss": 8.432250097890808,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 35,
+      "validation_absrel": 0.3191076324181741,
+      "train_loss": 8.398745218137678,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 36,
+      "validation_absrel": 0.3185618916432433,
+      "train_loss": 8.377207308514206,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 37,
+      "validation_absrel": 0.3188845423639323,
+      "train_loss": 8.357625003735963,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 38,
+      "validation_absrel": 0.320293534666621,
+      "train_loss": 8.332800509032545,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 39,
+      "validation_absrel": 0.31992988535990896,
+      "train_loss": 8.301695365812751,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 40,
+      "validation_absrel": 0.3227204257875555,
+      "train_loss": 8.291763853502262,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 41,
+      "validation_absrel": 0.32438194476956417,
+      "train_loss": 8.27481314886668,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 42,
+      "validation_absrel": 0.3194036141979108,
+      "train_loss": 8.26423925584502,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 43,
+      "validation_absrel": 0.3236483234103481,
+      "train_loss": 8.244617591993315,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 44,
+      "validation_absrel": 0.3198224756391963,
+      "train_loss": 8.237434013708024,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 45,
+      "validation_absrel": 0.3189377526118245,
+      "train_loss": 8.221737838543092,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 46,
+      "validation_absrel": 0.32323008517617696,
+      "train_loss": 8.2161422732953,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 47,
+      "validation_absrel": 0.31943810064396094,
+      "train_loss": 8.216256460815796,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 48,
+      "validation_absrel": 0.31946191728608664,
+      "train_loss": 8.208779184259669,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 49,
+      "validation_absrel": 0.3226740938370702,
+      "train_loss": 8.20128445480383,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Original (recorded AMP validation)",
+      "epoch": 50,
+      "validation_absrel": 0.3226853439443778,
+      "train_loss": 8.197386658091641,
+      "precision": "recorded AMP"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 1,
+      "validation_absrel": 0.2935678417966583,
+      "train_loss": 14.694094708871017,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 2,
+      "validation_absrel": 0.28993964959441887,
+      "train_loss": 13.12688635398949,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 3,
+      "validation_absrel": 0.2758973638029746,
+      "train_loss": 12.489899759373918,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 4,
+      "validation_absrel": 0.2884285323547041,
+      "train_loss": 12.038675044657632,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 5,
+      "validation_absrel": 0.313158034393919,
+      "train_loss": 11.725589524624251,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 6,
+      "validation_absrel": 0.27295400244978796,
+      "train_loss": 11.463036378012033,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 7,
+      "validation_absrel": 0.2708407041497833,
+      "train_loss": 11.281986432160059,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 8,
+      "validation_absrel": 0.27113465747024484,
+      "train_loss": 11.155689436679276,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 9,
+      "validation_absrel": 0.265831084981294,
+      "train_loss": 11.058111904170152,
+      "precision": "FP32"
+    },
+    {
+      "model": "Supervised A (FP32 validation)",
+      "epoch": 10,
+      "validation_absrel": 0.26942766814195807,
+      "train_loss": 11.023499821431459,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 1,
+      "validation_absrel": 0.2915331380907594,
+      "train_loss": 14.73989218204458,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 2,
+      "validation_absrel": 0.28449110786931225,
+      "train_loss": 13.168705436549622,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 3,
+      "validation_absrel": 0.2748143886026778,
+      "train_loss": 12.534238684858085,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 4,
+      "validation_absrel": 0.2882681398835693,
+      "train_loss": 12.08059698697677,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 5,
+      "validation_absrel": 0.3123272560396516,
+      "train_loss": 11.766037294829944,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 6,
+      "validation_absrel": 0.27630840129852924,
+      "train_loss": 11.503319621351043,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 7,
+      "validation_absrel": 0.273899177677004,
+      "train_loss": 11.322134722376136,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 8,
+      "validation_absrel": 0.27530944597229207,
+      "train_loss": 11.193715072823272,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 9,
+      "validation_absrel": 0.27004897339948863,
+      "train_loss": 11.096814957815123,
+      "precision": "FP32"
+    },
+    {
+      "model": "Exploratory KD (FP32 validation)",
+      "epoch": 10,
+      "validation_absrel": 0.2731668134091356,
+      "train_loss": 11.063952800351599,
+      "precision": "FP32"
+    }
+  ],
+  "precision_note": "Original50-epoch history records AMP validation; A/KD each10 epochs use FP32 validation. Original epoch4 audited FP32 scores are in the comparison table. Curve precision and training objectives differ; these are recorded histories, not a matched learning-curve experiment."
+}

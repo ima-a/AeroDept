@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "student_models": [
+    "epoch4",
+    "student_A",
+    "exploratory_KD"
+  ],
+  "scopes": [
+    "pooled",
+    "Kite_training/foggy/trajectory_2003",
+    "PLE_training/spring/trajectory_5000"
+  ],
+  "full_KD_frames": 4410,
+  "cached_original_A_teacher_metrics_reused": true,
+  "figures": 3,
+  "selection_changes": 0,
+  "demonstration_recommendation": "supervised_A_epoch9_with_original_epoch4_near_reference",
+  "promotion_performed": false
+}

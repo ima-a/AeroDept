@@ -1,0 +1,15 @@
+{
+  "method": "Metadata-only rescue dataset index and frozen reservation inventory. No reserved image/header/archive opened; no filesystem discovery. Failed HDD remains unmounted; cannot establish whether reserved archives exist there.",
+  "rescue_index": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/recovery/dataset_index.jsonl",
+  "reserved_image_records_in_rescue_index": [],
+  "expanded_manifest_test_records": 0,
+  "status": "not available in verified healthy-rescue inventory; independent reserved test manifest missing",
+  "expected_realizations": [
+    "Kite_training/foggy/trajectory_2007",
+    "Kite_training/sunny/trajectory_0008",
+    "PLE_training/spring/trajectory_5008",
+    "PLE_training/winter/trajectory_6009"
+  ],
+  "expected_frames_from_planning_metadata": 8820,
+  "expected_counts_are_not_forced": true
+}

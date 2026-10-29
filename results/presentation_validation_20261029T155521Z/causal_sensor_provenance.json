@@ -1,0 +1,16 @@
+{
+  "Kite_training/foggy/trajectory_2003": {
+    "sensor": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/Kite_training/foggy/sensor_records.hdf5",
+    "sha256": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+    "gps_frequency_Hz": 1.0,
+    "image_frequency_Hz": 25.0,
+    "mapping": "floor(ordinal*GPS_Hz/25), held causal sample; no future interpolation"
+  },
+  "PLE_training/spring/trajectory_5000": {
+    "sensor": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/PLE_training/spring/sensor_records.hdf5",
+    "sha256": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+    "gps_frequency_Hz": 1.0,
+    "image_frequency_Hz": 25.0,
+    "mapping": "floor(ordinal*GPS_Hz/25), held causal sample; no future interpolation"
+  }
+}

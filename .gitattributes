@@ -5,4 +5,6 @@
 
 # Research receipts are hashed byte-for-byte; preserve original line endings.
 results/** -text
-*.csv -text
+*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Matplotlib's frozen vector figures retain generated path whitespace and hashes.
+results/**/*.svg -whitespace

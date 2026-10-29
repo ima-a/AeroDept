@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "examples": [
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "frame_index": 1534,
+      "reason": "poor",
+      "figure": "examples/Kite_training__foggy__trajectory_2003__001534__poor.png",
+      "metric_differences": {
+        "epoch4": {
+          "absrel": -4.86643547847887e-07,
+          "rmse": -0.00015357111624325626,
+          "near_absrel": -5.828530874607551e-07,
+          "near_rmse": -4.892099671138794e-06
+        },
+        "student_A": {
+          "absrel": 6.29779374206052e-08,
+          "rmse": 9.374505657433474e-05,
+          "near_absrel": -4.897717893470599e-07,
+          "near_rmse": -3.1906886288624037e-06
+        },
+        "teacher_B": {
+          "absrel": -3.2915703862546053e-07,
+          "rmse": -0.0001188251332564505,
+          "near_absrel": -2.2272954480762053e-07,
+          "near_rmse": -1.394866563586561e-06
+        }
+      },
+      "batch_partner_frames": [
+        [
+          "Kite_training/foggy/trajectory_2003",
+          1534
+        ],
+        [
+          "Kite_training/foggy/trajectory_2003",
+          1535
+        ]
+      ]
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "frame_index": 1567,
+      "reason": "typical",
+      "figure": "examples/Kite_training__foggy__trajectory_2003__001567__typical.png",
+      "metric_differences": {
+        "epoch4": {
+          "absrel": 1.2273317750999269e-08,
+          "rmse": 4.512893829655695e-05,
+          "near_absrel": 1.4174320550619512e-07,
+          "near_rmse": 1.3995395251598097e-06
+        },
+        "student_A": {
+          "absrel": 4.7146886772431174e-07,
+          "rmse": 0.00028569853989779403,
+          "near_absrel": 1.0834271080284452e-07,
+          "near_rmse": 5.206313846706223e-07
+        },
+        "teacher_B": {
+          "absrel": -1.301917692542176e-07,
+          "rmse": 0.0001140774171517478,
+          "near_absrel": 8.350557734182473e-08,
+          "near_rmse": 1.4389449187746095e-07
+        }
+      },
+      "batch_partner_frames": [
+        [
+          "Kite_training/foggy/trajectory_2003",
+          1566
+        ],
+        [
+          "Kite_training/foggy/trajectory_2003",
+          1567
+        ]
+      ]
+    },
+    {
+      "trajectory": "Kite_training/foggy/trajectory_2003",
+      "frame_index": 1577,
+      "reason": "regression",
+      "figure": "examples/Kite_training__foggy__trajectory_2003__001577__regression.png",
+      "metric_differences": {
+        "epoch4": {
+          "absrel": -2.1000308814134172e-07,
+          "rmse": -1.334403853547883e-05,
+          "near_absrel": -4.455776680956092e-08,
+          "near_rmse": -3.705950977206385e-07
+        },
+        "student_A": {
+          "absrel": 2.1756324058985754e-07,
+          "rmse": 9.08601935805109e-05,
+          "near_absrel": -8.032426812576432e-08,
+          "near_rmse": -6.521167885686907e-07
+        },
+        "teacher_B": {
+          "absrel": -2.2953679046366915e-07,
+          "rmse": -4.1604953793239474e-05,
+          "near_absrel": -2.5988500973461726e-07,
+          "near_rmse": -2.0556741278099366e-06
+        }
+      },
+      "batch_partner_frames": [
+        [
+          "Kite_training/foggy/trajectory_2003",
+          1576
+        ],
+        [
+          "Kite_training/foggy/trajectory_2003",
+          1577
+        ]
+      ]
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "frame_index": 445,
+      "reason": "typical",
+      "figure": "examples/PLE_training__spring__trajectory_5000__000445__typical.png",
+      "metric_differences": {
+        "epoch4": {
+          "absrel": 9.170554648996188e-09,
+          "rmse": 1.2692645974254901e-05,
+          "near_absrel": 4.821943032362608e-08,
+          "near_rmse": 4.593272425745809e-07
+        },
+        "student_A": {
+          "absrel": -5.1380621979291163e-11,
+          "rmse": -4.11265652644488e-07,
+          "near_absrel": -4.7168675659792214e-08,
+          "near_rmse": -3.0631744740716726e-07
+        },
+        "teacher_B": {
+          "absrel": -4.1367370251510494e-08,
+          "rmse": 8.491823614065197e-06,
+          "near_absrel": -9.958634256124199e-08,
+          "near_rmse": -8.587641100454846e-07
+        }
+      },
+      "batch_partner_frames": [
+        [
+          "PLE_training/spring/trajectory_5000",
+          445
+        ],
+        [
+          "PLE_training/spring/trajectory_5000",
+          446
+        ]
+      ]
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "frame_index": 1691,
+      "reason": "poor",
+      "figure": "examples/PLE_training__spring__trajectory_5000__001691__poor.png",
+      "metric_differences": {
+        "epoch4": {
+          "absrel": -2.3456393272169862e-08,
+          "rmse": -1.409145539810197e-06,
+          "near_absrel": -1.2126656407929204e-06,
+          "near_rmse": -1.215252834185776e-05
+        },
+        "student_A": {
+          "absrel": 6.236308142115732e-08,
+          "rmse": -2.643989091666299e-06,
+          "near_absrel": 1.8429794068630656e-06,
+          "near_rmse": 2.1361829382726683e-05
+        },
+        "teacher_B": {
+          "absrel": 6.232413085616173e-08,
+          "rmse": 5.43946283215746e-06,
+          "near_absrel": -1.435769944269083e-06,
+          "near_rmse": -1.4056220514646611e-05
+        }
+      },
+      "batch_partner_frames": [
+        [
+          "PLE_training/spring/trajectory_5000",
+          1691
+        ],
+        [
+          "PLE_training/spring/trajectory_5000",
+          1692
+        ]
+      ]
+    },
+    {
+      "trajectory": "PLE_training/spring/trajectory_5000",
+      "frame_index": 1928,
+      "reason": "regression",
+      "figure": "examples/PLE_training__spring__trajectory_5000__001928__regression.png",
+      "metric_differences": {
+        "epoch4": {
+          "absrel": -2.1080105327975218e-08,
+          "rmse": -2.8489908530104913e-06,
+          "near_absrel": -2.597368092827068e-08,
+          "near_rmse": -2.8725527574380294e-06
+        },
+        "student_A": {
+          "absrel": -5.368611988298966e-08,
+          "rmse": -6.872418225611909e-07,
+          "near_absrel": -9.698445380124099e-08,
+          "near_rmse": 7.078136899707488e-06
+        },
+        "teacher_B": {
+          "absrel": 2.2294348145379672e-08,
+          "rmse": 4.050184500670184e-06,
+          "near_absrel": 3.2231758206879846e-08,
+          "near_rmse": 5.716540840694506e-08
+        }
+      },
+      "batch_partner_frames": [
+        [
+          "PLE_training/spring/trajectory_5000",
+          1927
+        ],
+        [
+          "PLE_training/spring/trajectory_5000",
+          1928
+        ]
+      ]
+    }
+  ],
+  "permitted_val_frames": 12,
+  "training_or_test_reads": 0,
+  "all_model_buffers_unchanged": true
+}

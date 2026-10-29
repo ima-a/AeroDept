@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "KD_validation_frames": 4410,
+  "original_A_visualization_frames_only": 12,
+  "KD_visualization_frames_only": 12,
+  "teacher_forward_calls": 0,
+  "unique_validation_image_paths": 8820,
+  "total_image_opens": 8852,
+  "test_image_opens": 0,
+  "failed_HDD_reads": 0,
+  "all_models_and_BN_unchanged": true,
+  "normalization_first_batch": "passed in completed KD full pass",
+  "saved_KD_metrics_reproduced": true,
+  "expected_pixel_counts_exact": true,
+  "optimizer_instances": 0,
+  "seconds_visual_replay": 4.542915353027638,
+  "full_pass_reporting_stops_preserved": true
+}

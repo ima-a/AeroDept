@@ -1,0 +1,2114 @@
+[
+  {
+    "sample_index": 0,
+    "batch_index": 0,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/cloudy/trajectory_3002",
+      "frame_index": 1100,
+      "rgb_path": "Kite_training/cloudy/color_left/trajectory_3002/001100.JPEG",
+      "depth_path": "Kite_training/cloudy/depth/trajectory_3002/001100.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 7.8428510634296345,
+        "vy": 1.397238674978496,
+        "vz": 1.6358323930878882,
+        "ax": -0.4261493393218631,
+        "ay": -0.006354638851554917,
+        "az": -10.690654430508918,
+        "wx": -0.006351337193996446,
+        "wy": -0.0026697433581505544,
+        "wz": -0.001910805161355389
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "cloudy",
+    "path_group": "Kite/0002",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1100,
+    "realization_frames": 2202,
+    "normalized_ordinal": 0.49977283053157656
+  },
+  {
+    "sample_index": 1,
+    "batch_index": 0,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2005",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2005/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2005/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 16.023338624682992,
+        "vy": 1.4827582167185938,
+        "vz": -0.6891706886591464,
+        "ax": -1.8249953071876188,
+        "ay": 0.050075139810836715,
+        "az": -9.063927916049417,
+        "wx": -0.0635324050002032,
+        "wy": 0.013169819511831722,
+        "wz": -0.007699825895533675
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0005",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.4997732426303855
+  },
+  {
+    "sample_index": 2,
+    "batch_index": 1,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2006",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2006/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2006/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 9.875746991318124,
+        "vy": 4.472685770848628,
+        "vz": 3.8004571731342196,
+        "ax": -0.7224034383764211,
+        "ay": -0.015885774178090305,
+        "az": -9.343578389216182,
+        "wx": -0.006096653671372113,
+        "wy": -0.012317251592663263,
+        "wz": -0.0024082538098468102
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0006",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.4997732426303855
+  },
+  {
+    "sample_index": 3,
+    "batch_index": 1,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2021",
+      "frame_index": 1101,
+      "rgb_path": "Kite_training/foggy/color_left/trajectory_2021/001101.JPEG",
+      "depth_path": "Kite_training/foggy/depth/trajectory_2021/001101.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 6.681627222404529,
+        "vy": -5.153496586916617,
+        "vz": 2.6600610081708,
+        "ax": -0.44860143732628754,
+        "ay": -0.017799934571865277,
+        "az": -10.406822702308421,
+        "wx": 0.13303951330817118,
+        "wy": 0.04961820061810674,
+        "wz": 0.03205058252531425
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0021",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1101,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.4997730367680436
+  },
+  {
+    "sample_index": 4,
+    "batch_index": 2,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/sunny/trajectory_0000",
+      "frame_index": 1102,
+      "rgb_path": "Kite_training/sunny/color_left/trajectory_0000/001102.JPEG",
+      "depth_path": "Kite_training/sunny/depth/trajectory_0000/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 10.342764662777881,
+        "vy": -6.605828114106771,
+        "vz": 0.30744124455051036,
+        "ax": -0.6707611141910393,
+        "ay": -0.31568627032928803,
+        "az": -10.962272930297866,
+        "wx": 0.07195356502278785,
+        "wy": -0.1317707499693166,
+        "wz": 0.02492812190331011
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunny",
+    "path_group": "Kite/0000",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.5
+  },
+  {
+    "sample_index": 5,
+    "batch_index": 2,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/sunny/trajectory_0005",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/color_left/trajectory_0005/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/depth/trajectory_0005/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 16.023338624682992,
+        "vy": 1.4827582167185938,
+        "vz": -0.6891706886591464,
+        "ax": -1.783201812051541,
+        "ay": -0.11925828253326003,
+        "az": -9.026520141672643,
+        "wx": -0.06136877579658871,
+        "wy": 0.012625146257603557,
+        "wz": -0.0054903737571884445
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunny",
+    "path_group": "Kite/0005",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.4997732426303855
+  },
+  {
+    "sample_index": 6,
+    "batch_index": 3,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/sunset/trajectory_1001",
+      "frame_index": 1102,
+      "rgb_path": "Kite_training/sunset/color_left/trajectory_1001/001102.JPEG",
+      "depth_path": "Kite_training/sunset/depth/trajectory_1001/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 11.331582526304373,
+        "vy": 3.141253710995784,
+        "vz": 0.5375615094432185,
+        "ax": -0.5893302564312238,
+        "ay": -0.31127873112169197,
+        "az": -5.772978104099771,
+        "wx": 0.038435281229284975,
+        "wy": -0.00941444548288443,
+        "wz": 0.034380664706091225
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunset",
+    "path_group": "Kite/0001",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.5
+  },
+  {
+    "sample_index": 7,
+    "batch_index": 3,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/sunset/trajectory_1006",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/color_left/trajectory_1006/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/depth/trajectory_1006/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 9.875746991318124,
+        "vy": 4.472685770848628,
+        "vz": 3.8004571731342196,
+        "ax": -1.0276105090738477,
+        "ay": 0.06532879258143548,
+        "az": -9.360586001524508,
+        "wx": 0.03516787098188508,
+        "wy": -0.006906167018893217,
+        "wz": 0.07038870699466444
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunset",
+    "path_group": "Kite/0006",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.4997732426303855
+  },
+  {
+    "sample_index": 8,
+    "batch_index": 4,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4001",
+      "frame_index": 1101,
+      "rgb_path": "PLE_training/fall/color_left/trajectory_4001/001101.JPEG",
+      "depth_path": "PLE_training/fall/depth/trajectory_4001/001101.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 10.071790021504512,
+        "vy": 4.820834920985817,
+        "vz": 1.6071860012303318,
+        "ax": -0.6444195407506202,
+        "ay": -0.11807934977204507,
+        "az": -9.399165648530772,
+        "wx": 0.078823311089365,
+        "wy": 0.019898300578432837,
+        "wz": -0.05212915051933829
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0001",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1101,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.4997730367680436
+  },
+  {
+    "sample_index": 9,
+    "batch_index": 4,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4004",
+      "frame_index": 1101,
+      "rgb_path": "PLE_training/fall/color_left/trajectory_4004/001101.JPEG",
+      "depth_path": "PLE_training/fall/depth/trajectory_4004/001101.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -16.423045622912014,
+        "vy": 7.540974828081204,
+        "vz": -0.6517519522430848,
+        "ax": -1.43507562545676,
+        "ay": -0.05768644231161338,
+        "az": -9.618228629437867,
+        "wx": 0.002615833996743172,
+        "wy": -0.04647089937124378,
+        "wz": -0.027394381607013712
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0004",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1101,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.4997730367680436
+  },
+  {
+    "sample_index": 10,
+    "batch_index": 5,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4006",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/color_left/trajectory_4006/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/depth/trajectory_4006/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 9.056197436555635,
+        "vy": -9.329544258037004,
+        "vz": 1.7932848016258163,
+        "ax": -1.169220034300064,
+        "ay": 0.08559296909137191,
+        "az": -11.41414564884352,
+        "wx": 0.12049712915821147,
+        "wy": -0.061895138466496975,
+        "wz": -0.0009949648435459155
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0006",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.5
+  },
+  {
+    "sample_index": 11,
+    "batch_index": 5,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5001",
+      "frame_index": 1101,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5001/001101.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5001/001101.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 10.071790021504512,
+        "vy": 4.820834920985817,
+        "vz": 1.6071860012303318,
+        "ax": -0.5592974852808195,
+        "ay": -0.1536433601344669,
+        "az": -9.32733595082848,
+        "wx": -0.1118402159158427,
+        "wy": -0.0033855312510046535,
+        "wz": 0.0068789321233101355
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0001",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1101,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.4997730367680436
+  },
+  {
+    "sample_index": 12,
+    "batch_index": 6,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5002",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5002/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5002/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -9.339667551713204,
+        "vy": 3.491538371867975,
+        "vz": -1.0293387315343239,
+        "ax": -0.8842830942253442,
+        "ay": 1.0257027255427846,
+        "az": -14.004474346325432,
+        "wx": -0.14572467425383512,
+        "wy": 0.04057795120542412,
+        "wz": 0.9972153566667075
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0002",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.5
+  },
+  {
+    "sample_index": 13,
+    "batch_index": 6,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5004",
+      "frame_index": 1101,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5004/001101.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5004/001101.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -16.423045622912014,
+        "vy": 7.540974828081204,
+        "vz": -0.6517519522430848,
+        "ax": -1.733064240306811,
+        "ay": 0.16902907338260426,
+        "az": -9.574376286467738,
+        "wx": 0.12611464178335488,
+        "wy": -0.05156933687902404,
+        "wz": -0.10880682138242874
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0004",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1101,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.4997730367680436
+  },
+  {
+    "sample_index": 14,
+    "batch_index": 7,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5005",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5005/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5005/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -7.799532495007,
+        "vy": 0.4255002455295198,
+        "vz": -1.4615639242610083,
+        "ax": -0.34833829210052,
+        "ay": 0.047313160933907236,
+        "az": -10.310782260610496,
+        "wx": 0.04618740134173077,
+        "wy": -0.08444125680162858,
+        "wz": 0.33487569485682467
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0005",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.4997732426303855
+  },
+  {
+    "sample_index": 15,
+    "batch_index": 7,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5006",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5006/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5006/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 9.056197436555635,
+        "vy": -9.329544258037004,
+        "vz": 1.7932848016258163,
+        "ax": -1.0626110325534004,
+        "ay": 0.13894554151163982,
+        "az": -11.385420459432945,
+        "wx": 0.12639368786978822,
+        "wy": -0.061498392737357736,
+        "wz": -0.011073058116616647
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0006",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.5
+  },
+  {
+    "sample_index": 16,
+    "batch_index": 8,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5007",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5007/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5007/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 7.257363352366042,
+        "vy": 1.974520474081487,
+        "vz": -0.49177579351447065,
+        "ax": -0.35273360114286123,
+        "ay": -0.22004265131783843,
+        "az": -12.794868316372176,
+        "wx": 0.06497488488773402,
+        "wy": 0.017040409778578784,
+        "wz": 0.07756573125479176
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0007",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.5
+  },
+  {
+    "sample_index": 17,
+    "batch_index": 8,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6002",
+      "frame_index": 1102,
+      "rgb_path": "PLE_training/winter/color_left/trajectory_6002/001102.JPEG",
+      "depth_path": "PLE_training/winter/depth/trajectory_6002/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -9.339667551713204,
+        "vy": 3.491538371867975,
+        "vz": -1.0293387315343239,
+        "ax": -0.8893403279258261,
+        "ay": 0.9906009903775662,
+        "az": -14.01757569524133,
+        "wx": -0.14778545493179632,
+        "wy": 0.03986120707870823,
+        "wz": 1.056824391884621
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0002",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.5
+  },
+  {
+    "sample_index": 18,
+    "batch_index": 9,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6005",
+      "frame_index": 1102,
+      "rgb_path": "PLE_training/winter/color_left/trajectory_6005/001102.JPEG",
+      "depth_path": "PLE_training/winter/depth/trajectory_6005/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -7.799532495007,
+        "vy": 0.4255002455295198,
+        "vz": -1.4615639242610083,
+        "ax": -0.35275015788954567,
+        "ay": -0.10125584703897862,
+        "az": -10.116736125182767,
+        "wx": -0.08581160431551048,
+        "wy": -0.07988866055444566,
+        "wz": 0.2769178614011386
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0005",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.4997732426303855
+  },
+  {
+    "sample_index": 19,
+    "batch_index": 9,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6007",
+      "frame_index": 1102,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/color_left/trajectory_6007/001102.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/depth/trajectory_6007/001102.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 7.257363352366042,
+        "vy": 1.974520474081487,
+        "vz": -0.49177579351447065,
+        "ax": -0.3823107391986067,
+        "ay": -0.11551369732342975,
+        "az": -12.86890663930191,
+        "wx": 0.05933270258121463,
+        "wy": -0.01238836887588962,
+        "wz": 0.05261332243253898
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0007",
+    "fraction_pass": 0.5,
+    "ordinal_in_realization": 1102,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.5
+  },
+  {
+    "sample_index": 20,
+    "batch_index": 10,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/cloudy/trajectory_3002",
+      "frame_index": 0,
+      "rgb_path": "Kite_training/cloudy/color_left/trajectory_3002/000000.JPEG",
+      "depth_path": "Kite_training/cloudy/depth/trajectory_3002/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 10.680706370510862,
+        "vy": 0.8866223761863523,
+        "vz": -0.04110622680508769,
+        "ax": -0.8927084249507325,
+        "ay": -0.005607161103962261,
+        "az": -9.810117111784031,
+        "wx": -0.05961197768008162,
+        "wy": 0.05525808420983732,
+        "wz": -0.13439767539106023
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "cloudy",
+    "path_group": "Kite/0002",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2202,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 21,
+    "batch_index": 10,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2005",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2005/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2005/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 19.344421206034212,
+        "vy": 4.188872237051555,
+        "vz": -1.601473634714523,
+        "ax": -2.302536842361741,
+        "ay": -0.13285681716672718,
+        "az": -10.04003761968632,
+        "wx": 0.0023297860351006484,
+        "wy": 0.01765192981600875,
+        "wz": 0.0010012242452545254
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0005",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 22,
+    "batch_index": 11,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2006",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2006/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2006/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 5.147086916599619,
+        "vy": 3.6590124950059533,
+        "vz": -2.0203370132675147,
+        "ax": -0.03502391564754691,
+        "ay": 0.04328466472318322,
+        "az": -11.29299240049616,
+        "wx": 0.020546994985602102,
+        "wy": -0.044157967113529276,
+        "wz": -0.17596444417446108
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0006",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 23,
+    "batch_index": 11,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2021",
+      "frame_index": 0,
+      "rgb_path": "Kite_training/foggy/color_left/trajectory_2021/000000.JPEG",
+      "depth_path": "Kite_training/foggy/depth/trajectory_2021/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 4.577428746751977,
+        "vy": 6.033211228319146,
+        "vz": -0.028780354878676917,
+        "ax": -0.2744248327513442,
+        "ay": -0.05512626574027442,
+        "az": -11.272179737444935,
+        "wx": -0.06525983945289818,
+        "wy": 0.0026535214757284482,
+        "wz": -0.15066916981190437
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0021",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 24,
+    "batch_index": 12,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/sunny/trajectory_0000",
+      "frame_index": 0,
+      "rgb_path": "Kite_training/sunny/color_left/trajectory_0000/000000.JPEG",
+      "depth_path": "Kite_training/sunny/depth/trajectory_0000/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 15.587560543599466,
+        "vy": 2.8643642330848706,
+        "vz": 2.0254154843184935,
+        "ax": -1.8384010494240706,
+        "ay": -0.1548848888223114,
+        "az": -9.558298854888822,
+        "wx": 0.05181105567835016,
+        "wy": 0.0006103283854747964,
+        "wz": 0.011629396825358016
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunny",
+    "path_group": "Kite/0000",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 25,
+    "batch_index": 12,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/sunny/trajectory_0005",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/color_left/trajectory_0005/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/depth/trajectory_0005/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 19.344421206034212,
+        "vy": 4.188872237051555,
+        "vz": -1.601473634714523,
+        "ax": -2.164988824085539,
+        "ay": 0.24982284621507103,
+        "az": -9.923962649706773,
+        "wx": 0.0011833612539338331,
+        "wy": 0.026266762305737223,
+        "wz": 0.0016913384456269593
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunny",
+    "path_group": "Kite/0005",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 26,
+    "batch_index": 13,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/sunset/trajectory_1001",
+      "frame_index": 0,
+      "rgb_path": "Kite_training/sunset/color_left/trajectory_1001/000000.JPEG",
+      "depth_path": "Kite_training/sunset/depth/trajectory_1001/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 17.36048132330552,
+        "vy": 2.823116590752761,
+        "vz": 2.7706103605966703,
+        "ax": -2.256494069312704,
+        "ay": -0.1373917928016421,
+        "az": -9.106818020753837,
+        "wx": 0.04645498139188302,
+        "wy": 0.005936859057892709,
+        "wz": 0.018313561326871508
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunset",
+    "path_group": "Kite/0001",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 27,
+    "batch_index": 13,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/sunset/trajectory_1006",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/color_left/trajectory_1006/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/depth/trajectory_1006/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 5.147086916599619,
+        "vy": 3.6590124950059533,
+        "vz": -2.0203370132675147,
+        "ax": -0.1488216399941744,
+        "ay": 0.030467414742518902,
+        "az": -11.288375309152187,
+        "wx": 0.011305347132604318,
+        "wy": -0.04537273309829995,
+        "wz": -0.289948412327264
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunset",
+    "path_group": "Kite/0006",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 28,
+    "batch_index": 14,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4001",
+      "frame_index": 0,
+      "rgb_path": "PLE_training/fall/color_left/trajectory_4001/000000.JPEG",
+      "depth_path": "PLE_training/fall/depth/trajectory_4001/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 4.493416644544368,
+        "vy": -2.7457510082111725,
+        "vz": 3.5597546178834705,
+        "ax": -0.10786676998590994,
+        "ay": -0.1381628017223493,
+        "az": -9.018438513063538,
+        "wx": -0.09882568928935008,
+        "wy": 0.149235911056654,
+        "wz": 0.23101531329194694
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0001",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 29,
+    "batch_index": 14,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4004",
+      "frame_index": 0,
+      "rgb_path": "PLE_training/fall/color_left/trajectory_4004/000000.JPEG",
+      "depth_path": "PLE_training/fall/depth/trajectory_4004/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 8.282472134194308,
+        "vy": -1.3760492839494987,
+        "vz": -2.0699647188587633,
+        "ax": -0.3802838164793413,
+        "ay": -0.20271913325916155,
+        "az": -10.274311103849293,
+        "wx": -0.0054716393990192486,
+        "wy": 0.06593214810489971,
+        "wz": 0.07534413661826997
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0004",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 30,
+    "batch_index": 15,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4006",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/color_left/trajectory_4006/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/depth/trajectory_4006/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 5.277212618628635,
+        "vy": 0.15590126344131872,
+        "vz": 1.7816592214706883,
+        "ax": -0.2084878993427584,
+        "ay": 0.001943308870889629,
+        "az": -8.192844738724295,
+        "wx": -0.006912653425112847,
+        "wy": -0.007261821224829199,
+        "wz": 0.0179507428464885
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0006",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 31,
+    "batch_index": 15,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5001",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5001/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5001/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 4.493416644544368,
+        "vy": -2.7457510082111725,
+        "vz": 3.5597546178834705,
+        "ax": -0.11683210071351474,
+        "ay": -0.3737659505851808,
+        "az": -8.975664189950665,
+        "wx": 0.008175354557076105,
+        "wy": 0.10709903669989114,
+        "wz": 0.07649326711067038
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0001",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 32,
+    "batch_index": 16,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5002",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5002/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5002/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 7.124485002690406,
+        "vy": -0.4193201040508132,
+        "vz": -0.78311171302341,
+        "ax": -0.8743057838084676,
+        "ay": 0.2662608730738139,
+        "az": -8.96811212837955,
+        "wx": 0.1726637182442593,
+        "wy": -0.024618915523794905,
+        "wz": 0.7716945153389886
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0002",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 33,
+    "batch_index": 16,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5004",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5004/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5004/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 8.282472134194308,
+        "vy": -1.3760492839494987,
+        "vz": -2.0699647188587633,
+        "ax": -0.4096729300918062,
+        "ay": -0.2570341487788691,
+        "az": -10.32241965357215,
+        "wx": -0.3438264435682479,
+        "wy": 0.06148213736610135,
+        "wz": 0.11826636702139035
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0004",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 34,
+    "batch_index": 17,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5005",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5005/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5005/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 6.889365114962498,
+        "vy": -1.706483945855275,
+        "vz": 0.825894655234638,
+        "ax": -0.3213240203887227,
+        "ay": -0.22869122666533767,
+        "az": -9.231899825720525,
+        "wx": -0.016966772680706788,
+        "wy": -0.009379726457865632,
+        "wz": 0.052766899195703085
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0005",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 35,
+    "batch_index": 17,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5006",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5006/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5006/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 5.277212618628635,
+        "vy": 0.15590126344131872,
+        "vz": 1.7816592214706883,
+        "ax": -0.1778205898562241,
+        "ay": -0.06377858199262003,
+        "az": -8.204742317762495,
+        "wx": -0.018695501491408036,
+        "wy": -0.012204882538055819,
+        "wz": 0.03402972075609801
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0006",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 36,
+    "batch_index": 18,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5007",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5007/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5007/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 4.547327584694827,
+        "vy": 2.2950136822381673,
+        "vz": -0.8295153538761979,
+        "ax": -0.11019900977886743,
+        "ay": -0.2665958122713445,
+        "az": -9.300130797842414,
+        "wx": -0.00036378399408654866,
+        "wy": -0.0155569680026396,
+        "wz": -0.2703180393208563
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0007",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 37,
+    "batch_index": 18,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6002",
+      "frame_index": 0,
+      "rgb_path": "PLE_training/winter/color_left/trajectory_6002/000000.JPEG",
+      "depth_path": "PLE_training/winter/depth/trajectory_6002/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 7.124485002690406,
+        "vy": -0.4193201040508132,
+        "vz": -0.78311171302341,
+        "ax": -0.7603716959995414,
+        "ay": 0.2561819569551647,
+        "az": -8.969981106894572,
+        "wx": 0.17384033959333586,
+        "wy": -0.02933086295968862,
+        "wz": 0.6768000673542143
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0002",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 38,
+    "batch_index": 19,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6005",
+      "frame_index": 0,
+      "rgb_path": "PLE_training/winter/color_left/trajectory_6005/000000.JPEG",
+      "depth_path": "PLE_training/winter/depth/trajectory_6005/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 6.889365114962498,
+        "vy": -1.706483945855275,
+        "vz": 0.825894655234638,
+        "ax": -0.32889852232469724,
+        "ay": -0.024093986759828084,
+        "az": -9.232396218058815,
+        "wx": 0.06508126240353121,
+        "wy": -0.007420926432533149,
+        "wz": -0.1312843935350937
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0005",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 39,
+    "batch_index": 19,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6007",
+      "frame_index": 0,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/color_left/trajectory_6007/000000.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/depth/trajectory_6007/000000.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 4.547327584694827,
+        "vy": 2.2950136822381673,
+        "vz": -0.8295153538761979,
+        "ax": -0.127800348536262,
+        "ay": -0.2658520130514201,
+        "az": -9.39089676461008,
+        "wx": -0.04634862908018351,
+        "wy": -0.12960906261820407,
+        "wz": -0.1618626225656725
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0007",
+    "fraction_pass": 0.0,
+    "ordinal_in_realization": 0,
+    "realization_frames": 2205,
+    "normalized_ordinal": 0.0
+  },
+  {
+    "sample_index": 40,
+    "batch_index": 20,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/cloudy/trajectory_3002",
+      "frame_index": 2201,
+      "rgb_path": "Kite_training/cloudy/color_left/trajectory_3002/002201.JPEG",
+      "depth_path": "Kite_training/cloudy/depth/trajectory_3002/002201.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 7.396152897814545,
+        "vy": 1.895034678912566,
+        "vz": -1.0840023269539145,
+        "ax": -0.11481461428514445,
+        "ay": 0.7987396085587762,
+        "az": -11.409296781111147,
+        "wx": -0.6028179627298658,
+        "wy": 0.16927927696309164,
+        "wz": 0.009443981590973871
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "cloudy",
+    "path_group": "Kite/0002",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2201,
+    "realization_frames": 2202,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 41,
+    "batch_index": 20,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2005",
+      "frame_index": 2205,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2005/002205.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2005/002205.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 6.375204805038948,
+        "vy": 0.06900734605892467,
+        "vz": 3.905915670473803,
+        "ax": -0.2320661600280823,
+        "ay": -0.20014356307351694,
+        "az": -7.966136988811335,
+        "wx": -0.1475081406459941,
+        "wy": -0.11845204859803105,
+        "wz": 0.10012018936179025
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0005",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2205,
+    "realization_frames": 2206,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 42,
+    "batch_index": 21,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2006",
+      "frame_index": 2205,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2006/002205.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2006/002205.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -1.0864678802562366,
+        "vy": -3.874165271687957,
+        "vz": -0.24640923261713965,
+        "ax": -0.15247893894187206,
+        "ay": -0.11445708464673576,
+        "az": -12.874953290021665,
+        "wx": -0.06442987751337534,
+        "wy": -0.0625960873511116,
+        "wz": -0.017017303668955187
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0006",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2205,
+    "realization_frames": 2206,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 43,
+    "batch_index": 21,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2021",
+      "frame_index": 2203,
+      "rgb_path": "Kite_training/foggy/color_left/trajectory_2021/002203.JPEG",
+      "depth_path": "Kite_training/foggy/depth/trajectory_2021/002203.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 7.943577489930931,
+        "vy": 12.979266343657514,
+        "vz": -3.536681909440631,
+        "ax": -1.0250466398037708,
+        "ay": -0.2256345104417029,
+        "az": -9.6911355235409,
+        "wx": -0.09261352204258207,
+        "wy": -0.024705556002191216,
+        "wz": -0.15781627742078957
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0021",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2203,
+    "realization_frames": 2204,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 44,
+    "batch_index": 22,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/sunny/trajectory_0000",
+      "frame_index": 2204,
+      "rgb_path": "Kite_training/sunny/color_left/trajectory_0000/002204.JPEG",
+      "depth_path": "Kite_training/sunny/depth/trajectory_0000/002204.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -7.499200832671704,
+        "vy": -17.021873837074963,
+        "vz": 3.0528460722027972,
+        "ax": -2.1110487025379157,
+        "ay": -0.0634437562748449,
+        "az": -9.369775788613214,
+        "wx": 0.0641145097188949,
+        "wy": -0.03165561833290492,
+        "wz": 0.23156649594804046
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunny",
+    "path_group": "Kite/0000",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2204,
+    "realization_frames": 2205,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 45,
+    "batch_index": 22,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/sunny/trajectory_0005",
+      "frame_index": 2205,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/color_left/trajectory_0005/002205.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunny/depth/trajectory_0005/002205.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 6.375204805038948,
+        "vy": 0.06900734605892467,
+        "vz": 3.905915670473803,
+        "ax": -0.25109742254612233,
+        "ay": -0.511661191231681,
+        "az": -7.925753360001523,
+        "wx": -0.14188836511625458,
+        "wy": -0.13369920587617753,
+        "wz": 0.10093122505391972
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunny",
+    "path_group": "Kite/0005",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2205,
+    "realization_frames": 2206,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 46,
+    "batch_index": 23,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/sunset/trajectory_1001",
+      "frame_index": 2204,
+      "rgb_path": "Kite_training/sunset/color_left/trajectory_1001/002204.JPEG",
+      "depth_path": "Kite_training/sunset/depth/trajectory_1001/002204.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 6.478765651770146,
+        "vy": 5.812616745615173,
+        "vz": 1.214793928885527,
+        "ax": -0.17718527246737892,
+        "ay": -0.6840720841265474,
+        "az": -5.485093933627883,
+        "wx": 0.08087459706542685,
+        "wy": -0.031269368026061714,
+        "wz": -0.10470116279158538
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunset",
+    "path_group": "Kite/0001",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2204,
+    "realization_frames": 2205,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 47,
+    "batch_index": 23,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/sunset/trajectory_1006",
+      "frame_index": 2205,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/color_left/trajectory_1006/002205.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/sunset/depth/trajectory_1006/002205.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -1.0864678802562366,
+        "vy": -3.874165271687957,
+        "vz": -0.24640923261713965,
+        "ax": -0.1924083855256604,
+        "ay": -0.16357663656280755,
+        "az": -12.88217660525975,
+        "wx": 0.028154629404612386,
+        "wy": -0.053606932549196754,
+        "wz": 0.0687164281709271
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "sunset",
+    "path_group": "Kite/0006",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2205,
+    "realization_frames": 2206,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 48,
+    "batch_index": 24,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4001",
+      "frame_index": 2203,
+      "rgb_path": "PLE_training/fall/color_left/trajectory_4001/002203.JPEG",
+      "depth_path": "PLE_training/fall/depth/trajectory_4001/002203.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 11.015596273603023,
+        "vy": -3.5682163798753663,
+        "vz": 3.835298661894626,
+        "ax": -0.750059338255528,
+        "ay": -0.1541133134371646,
+        "az": -9.399902955938733,
+        "wx": 0.07690763980681087,
+        "wy": 0.034052645168084816,
+        "wz": -0.49077116066275195
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0001",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2203,
+    "realization_frames": 2204,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 49,
+    "batch_index": 24,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4004",
+      "frame_index": 2203,
+      "rgb_path": "PLE_training/fall/color_left/trajectory_4004/002203.JPEG",
+      "depth_path": "PLE_training/fall/depth/trajectory_4004/002203.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 4.790239450534273,
+        "vy": 18.522041816824242,
+        "vz": -0.29771972480965303,
+        "ax": -2.163628275454465,
+        "ay": -0.33002224612360953,
+        "az": -7.1085009721408206,
+        "wx": -0.049989714835128755,
+        "wy": -0.16926796547126804,
+        "wz": -0.08859327803757795
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0004",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2203,
+    "realization_frames": 2204,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 50,
+    "batch_index": 25,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/fall/trajectory_4006",
+      "frame_index": 2204,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/color_left/trajectory_4006/002204.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/fall/depth/trajectory_4006/002204.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 12.847531504007748,
+        "vy": -8.270926778385501,
+        "vz": -0.35341052600443845,
+        "ax": -1.3149241884561835,
+        "ay": 0.5056238664108786,
+        "az": -12.739555541017177,
+        "wx": -0.028577661267340154,
+        "wy": 0.1162172350754869,
+        "wz": -0.025501230059770143
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "fall",
+    "path_group": "PLE/0006",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2204,
+    "realization_frames": 2205,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 51,
+    "batch_index": 25,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5001",
+      "frame_index": 2203,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5001/002203.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5001/002203.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 11.015596273603023,
+        "vy": -3.5682163798753663,
+        "vz": 3.835298661894626,
+        "ax": -0.716940303906538,
+        "ay": -0.30766592407780224,
+        "az": -9.33844341122582,
+        "wx": 0.02136546622713713,
+        "wy": 0.061931238306121655,
+        "wz": -0.41668038547031905
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0001",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2203,
+    "realization_frames": 2204,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 52,
+    "batch_index": 26,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5002",
+      "frame_index": 2204,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5002/002204.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5002/002204.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -1.6736344074871567,
+        "vy": 12.245159667509142,
+        "vz": -1.5033234606677048,
+        "ax": -0.5032612796892176,
+        "ay": 0.7935049189423382,
+        "az": -12.87363294099612,
+        "wx": 0.0366945161660845,
+        "wy": 0.1257946554790977,
+        "wz": 0.018417775337236042
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0002",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2204,
+    "realization_frames": 2205,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 53,
+    "batch_index": 26,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5004",
+      "frame_index": 2203,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5004/002203.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5004/002203.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 4.790239450534273,
+        "vy": 18.522041816824242,
+        "vz": -0.29771972480965303,
+        "ax": -2.0530536411044404,
+        "ay": -0.11658508874135406,
+        "az": -7.020170673481036,
+        "wx": -0.07854273314357975,
+        "wy": -0.17244460978230242,
+        "wz": -0.18284015139807008
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0004",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2203,
+    "realization_frames": 2204,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 54,
+    "batch_index": 27,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5005",
+      "frame_index": 2205,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5005/002205.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5005/002205.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 2.1331621790309896,
+        "vy": 5.039379010796097,
+        "vz": -0.1826252516696769,
+        "ax": -0.5413524119495673,
+        "ay": -0.004879013275212292,
+        "az": -11.406110876789764,
+        "wx": -0.14888672705836858,
+        "wy": -0.22065893940122844,
+        "wz": 0.04085780802523779
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0005",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2205,
+    "realization_frames": 2206,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 55,
+    "batch_index": 27,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5006",
+      "frame_index": 2204,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5006/002204.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5006/002204.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 12.847531504007748,
+        "vy": -8.270926778385501,
+        "vz": -0.35341052600443845,
+        "ax": -1.3317119991322675,
+        "ay": 0.3146520902492066,
+        "az": -12.703452444549225,
+        "wx": -0.04772006980013807,
+        "wy": 0.11181258131674336,
+        "wz": -0.02969268537701677
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0006",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2204,
+    "realization_frames": 2205,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 56,
+    "batch_index": 28,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/spring/trajectory_5007",
+      "frame_index": 2204,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/color_left/trajectory_5007/002204.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/spring/depth/trajectory_5007/002204.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 6.620694604873734,
+        "vy": 0.42508284731930246,
+        "vz": -0.009264690928567632,
+        "ax": -0.3225061341272322,
+        "ay": -0.3008205794474075,
+        "az": -7.862937247953037,
+        "wx": 0.10335378008177021,
+        "wy": 0.04746657834755383,
+        "wz": -0.24924189631224974
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "spring",
+    "path_group": "PLE/0007",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2204,
+    "realization_frames": 2205,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 57,
+    "batch_index": 28,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6002",
+      "frame_index": 2204,
+      "rgb_path": "PLE_training/winter/color_left/trajectory_6002/002204.JPEG",
+      "depth_path": "PLE_training/winter/depth/trajectory_6002/002204.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -1.6736344074871567,
+        "vy": 12.245159667509142,
+        "vz": -1.5033234606677048,
+        "ax": -0.7549232688718097,
+        "ay": 0.6844280518130236,
+        "az": -12.896507838635273,
+        "wx": 0.02816512699032782,
+        "wy": 0.12798954484303873,
+        "wz": -0.02423636693710098
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0002",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2204,
+    "realization_frames": 2205,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 58,
+    "batch_index": 29,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6005",
+      "frame_index": 2205,
+      "rgb_path": "PLE_training/winter/color_left/trajectory_6005/002205.JPEG",
+      "depth_path": "PLE_training/winter/depth/trajectory_6005/002205.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 2.1331621790309896,
+        "vy": 5.039379010796097,
+        "vz": -0.1826252516696769,
+        "ax": -0.5424088721517192,
+        "ay": -0.09709123572786486,
+        "az": -11.426617269365721,
+        "wx": -0.16467717557132985,
+        "wy": -0.2207313649507229,
+        "wz": 0.054643233484233215
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0005",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2205,
+    "realization_frames": 2206,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 59,
+    "batch_index": 29,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "PLE_training/winter/trajectory_6007",
+      "frame_index": 2204,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/color_left/trajectory_6007/002204.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/PLE_training/winter/depth/trajectory_6007/002204.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 6.620694604873734,
+        "vy": 0.42508284731930246,
+        "vz": -0.009264690928567632,
+        "ax": -0.18277707715793093,
+        "ay": -0.304602041878698,
+        "az": -8.06393934158323,
+        "wx": 0.03015709936435931,
+        "wy": 0.010053067896940722,
+        "wz": -0.21395338533127442
+      },
+      "metadata": {
+        "environment": "PLE_training"
+      }
+    },
+    "environment": "PLE_training",
+    "condition": "winter",
+    "path_group": "PLE/0007",
+    "fraction_pass": 1.0,
+    "ordinal_in_realization": 2204,
+    "realization_frames": 2205,
+    "normalized_ordinal": 1.0
+  },
+  {
+    "sample_index": 60,
+    "batch_index": 30,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/cloudy/trajectory_3002",
+      "frame_index": 550,
+      "rgb_path": "Kite_training/cloudy/color_left/trajectory_3002/000550.JPEG",
+      "depth_path": "Kite_training/cloudy/depth/trajectory_3002/000550.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 7.705670492873651,
+        "vy": 8.308253626302786,
+        "vz": 3.586312554621074,
+        "ax": -0.800172689198676,
+        "ay": -0.285653319683808,
+        "az": -9.348821223494253,
+        "wx": -0.08309648004822133,
+        "wy": -0.013105608595168267,
+        "wz": -0.06438798266438923
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "cloudy",
+    "path_group": "Kite/0002",
+    "fraction_pass": 0.25,
+    "ordinal_in_realization": 550,
+    "realization_frames": 2202,
+    "normalized_ordinal": 0.24988641526578828
+  },
+  {
+    "sample_index": 61,
+    "batch_index": 30,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2005",
+      "frame_index": 551,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2005/000551.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2005/000551.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": 16.503076251015745,
+        "vy": 15.83158798774491,
+        "vz": 5.968453408415542,
+        "ax": -3.243270406946732,
+        "ay": -0.7712210746473023,
+        "az": -8.527964668501912,
+        "wx": -0.048724865103679176,
+        "wy": -0.007969475408840795,
+        "wz": -0.01729607075559463
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0005",
+    "fraction_pass": 0.25,
+    "ordinal_in_realization": 551,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.24988662131519274
+  },
+  {
+    "sample_index": 62,
+    "batch_index": 31,
+    "slot": 0,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2006",
+      "frame_index": 551,
+      "rgb_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/color_left/trajectory_2006/000551.JPEG",
+      "depth_path": "MidAir-expansion/training_staging_20261026T000911/MidAir/Kite_training/foggy/depth/trajectory_2006/000551.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -2.5531614143794457,
+        "vy": -3.123472257410498,
+        "vz": 1.2850615613869465,
+        "ax": -0.13802849839523235,
+        "ay": 0.050195242769093484,
+        "az": -9.371414301558362,
+        "wx": 0.029206306978823975,
+        "wy": -0.04327695843314009,
+        "wz": -0.004781571485487985
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0006",
+    "fraction_pass": 0.25,
+    "ordinal_in_realization": 551,
+    "realization_frames": 2206,
+    "normalized_ordinal": 0.24988662131519274
+  },
+  {
+    "sample_index": 63,
+    "batch_index": 31,
+    "slot": 1,
+    "record": {
+      "trajectory_id": "Kite_training/foggy/trajectory_2021",
+      "frame_index": 550,
+      "rgb_path": "Kite_training/foggy/color_left/trajectory_2021/000550.JPEG",
+      "depth_path": "Kite_training/foggy/depth/trajectory_2021/000550.PNG",
+      "timestamp": null,
+      "navigation": {
+        "vx": -2.434343104081904,
+        "vy": -11.022053244869312,
+        "vz": -1.8154305792087655,
+        "ax": -0.8727463174615593,
+        "ay": -0.4068556785053545,
+        "az": -9.931643570840656,
+        "wx": 0.038581280410307506,
+        "wy": -0.056714536821411164,
+        "wz": -0.14444107832277803
+      },
+      "metadata": {
+        "environment": "Kite_training"
+      }
+    },
+    "environment": "Kite_training",
+    "condition": "foggy",
+    "path_group": "Kite/0021",
+    "fraction_pass": 0.25,
+    "ordinal_in_realization": 550,
+    "realization_frames": 2204,
+    "normalized_ordinal": 0.24965955515206537
+  }
+]

@@ -1,0 +1,1012 @@
+{
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "precision": "FP32 forward/loss/gradients; FP64 summary dot/norm accumulation",
+  "mode": "eval with gradients enabled",
+  "group_offsets": {
+    "encoder": [
+      0,
+      23508032
+    ],
+    "decoder": [
+      23508032,
+      23999633
+    ],
+    "output_head": [
+      23999488,
+      23999633
+    ]
+  },
+  "parameter_layout": [
+    {
+      "name": "encoder.conv1.weight",
+      "start": 0,
+      "end": 9408
+    },
+    {
+      "name": "encoder.bn1.weight",
+      "start": 9408,
+      "end": 9472
+    },
+    {
+      "name": "encoder.bn1.bias",
+      "start": 9472,
+      "end": 9536
+    },
+    {
+      "name": "encoder.layer1.0.conv1.weight",
+      "start": 9536,
+      "end": 13632
+    },
+    {
+      "name": "encoder.layer1.0.bn1.weight",
+      "start": 13632,
+      "end": 13696
+    },
+    {
+      "name": "encoder.layer1.0.bn1.bias",
+      "start": 13696,
+      "end": 13760
+    },
+    {
+      "name": "encoder.layer1.0.conv2.weight",
+      "start": 13760,
+      "end": 50624
+    },
+    {
+      "name": "encoder.layer1.0.bn2.weight",
+      "start": 50624,
+      "end": 50688
+    },
+    {
+      "name": "encoder.layer1.0.bn2.bias",
+      "start": 50688,
+      "end": 50752
+    },
+    {
+      "name": "encoder.layer1.0.conv3.weight",
+      "start": 50752,
+      "end": 67136
+    },
+    {
+      "name": "encoder.layer1.0.bn3.weight",
+      "start": 67136,
+      "end": 67392
+    },
+    {
+      "name": "encoder.layer1.0.bn3.bias",
+      "start": 67392,
+      "end": 67648
+    },
+    {
+      "name": "encoder.layer1.0.downsample.0.weight",
+      "start": 67648,
+      "end": 84032
+    },
+    {
+      "name": "encoder.layer1.0.downsample.1.weight",
+      "start": 84032,
+      "end": 84288
+    },
+    {
+      "name": "encoder.layer1.0.downsample.1.bias",
+      "start": 84288,
+      "end": 84544
+    },
+    {
+      "name": "encoder.layer1.1.conv1.weight",
+      "start": 84544,
+      "end": 100928
+    },
+    {
+      "name": "encoder.layer1.1.bn1.weight",
+      "start": 100928,
+      "end": 100992
+    },
+    {
+      "name": "encoder.layer1.1.bn1.bias",
+      "start": 100992,
+      "end": 101056
+    },
+    {
+      "name": "encoder.layer1.1.conv2.weight",
+      "start": 101056,
+      "end": 137920
+    },
+    {
+      "name": "encoder.layer1.1.bn2.weight",
+      "start": 137920,
+      "end": 137984
+    },
+    {
+      "name": "encoder.layer1.1.bn2.bias",
+      "start": 137984,
+      "end": 138048
+    },
+    {
+      "name": "encoder.layer1.1.conv3.weight",
+      "start": 138048,
+      "end": 154432
+    },
+    {
+      "name": "encoder.layer1.1.bn3.weight",
+      "start": 154432,
+      "end": 154688
+    },
+    {
+      "name": "encoder.layer1.1.bn3.bias",
+      "start": 154688,
+      "end": 154944
+    },
+    {
+      "name": "encoder.layer1.2.conv1.weight",
+      "start": 154944,
+      "end": 171328
+    },
+    {
+      "name": "encoder.layer1.2.bn1.weight",
+      "start": 171328,
+      "end": 171392
+    },
+    {
+      "name": "encoder.layer1.2.bn1.bias",
+      "start": 171392,
+      "end": 171456
+    },
+    {
+      "name": "encoder.layer1.2.conv2.weight",
+      "start": 171456,
+      "end": 208320
+    },
+    {
+      "name": "encoder.layer1.2.bn2.weight",
+      "start": 208320,
+      "end": 208384
+    },
+    {
+      "name": "encoder.layer1.2.bn2.bias",
+      "start": 208384,
+      "end": 208448
+    },
+    {
+      "name": "encoder.layer1.2.conv3.weight",
+      "start": 208448,
+      "end": 224832
+    },
+    {
+      "name": "encoder.layer1.2.bn3.weight",
+      "start": 224832,
+      "end": 225088
+    },
+    {
+      "name": "encoder.layer1.2.bn3.bias",
+      "start": 225088,
+      "end": 225344
+    },
+    {
+      "name": "encoder.layer2.0.conv1.weight",
+      "start": 225344,
+      "end": 258112
+    },
+    {
+      "name": "encoder.layer2.0.bn1.weight",
+      "start": 258112,
+      "end": 258240
+    },
+    {
+      "name": "encoder.layer2.0.bn1.bias",
+      "start": 258240,
+      "end": 258368
+    },
+    {
+      "name": "encoder.layer2.0.conv2.weight",
+      "start": 258368,
+      "end": 405824
+    },
+    {
+      "name": "encoder.layer2.0.bn2.weight",
+      "start": 405824,
+      "end": 405952
+    },
+    {
+      "name": "encoder.layer2.0.bn2.bias",
+      "start": 405952,
+      "end": 406080
+    },
+    {
+      "name": "encoder.layer2.0.conv3.weight",
+      "start": 406080,
+      "end": 471616
+    },
+    {
+      "name": "encoder.layer2.0.bn3.weight",
+      "start": 471616,
+      "end": 472128
+    },
+    {
+      "name": "encoder.layer2.0.bn3.bias",
+      "start": 472128,
+      "end": 472640
+    },
+    {
+      "name": "encoder.layer2.0.downsample.0.weight",
+      "start": 472640,
+      "end": 603712
+    },
+    {
+      "name": "encoder.layer2.0.downsample.1.weight",
+      "start": 603712,
+      "end": 604224
+    },
+    {
+      "name": "encoder.layer2.0.downsample.1.bias",
+      "start": 604224,
+      "end": 604736
+    },
+    {
+      "name": "encoder.layer2.1.conv1.weight",
+      "start": 604736,
+      "end": 670272
+    },
+    {
+      "name": "encoder.layer2.1.bn1.weight",
+      "start": 670272,
+      "end": 670400
+    },
+    {
+      "name": "encoder.layer2.1.bn1.bias",
+      "start": 670400,
+      "end": 670528
+    },
+    {
+      "name": "encoder.layer2.1.conv2.weight",
+      "start": 670528,
+      "end": 817984
+    },
+    {
+      "name": "encoder.layer2.1.bn2.weight",
+      "start": 817984,
+      "end": 818112
+    },
+    {
+      "name": "encoder.layer2.1.bn2.bias",
+      "start": 818112,
+      "end": 818240
+    },
+    {
+      "name": "encoder.layer2.1.conv3.weight",
+      "start": 818240,
+      "end": 883776
+    },
+    {
+      "name": "encoder.layer2.1.bn3.weight",
+      "start": 883776,
+      "end": 884288
+    },
+    {
+      "name": "encoder.layer2.1.bn3.bias",
+      "start": 884288,
+      "end": 884800
+    },
+    {
+      "name": "encoder.layer2.2.conv1.weight",
+      "start": 884800,
+      "end": 950336
+    },
+    {
+      "name": "encoder.layer2.2.bn1.weight",
+      "start": 950336,
+      "end": 950464
+    },
+    {
+      "name": "encoder.layer2.2.bn1.bias",
+      "start": 950464,
+      "end": 950592
+    },
+    {
+      "name": "encoder.layer2.2.conv2.weight",
+      "start": 950592,
+      "end": 1098048
+    },
+    {
+      "name": "encoder.layer2.2.bn2.weight",
+      "start": 1098048,
+      "end": 1098176
+    },
+    {
+      "name": "encoder.layer2.2.bn2.bias",
+      "start": 1098176,
+      "end": 1098304
+    },
+    {
+      "name": "encoder.layer2.2.conv3.weight",
+      "start": 1098304,
+      "end": 1163840
+    },
+    {
+      "name": "encoder.layer2.2.bn3.weight",
+      "start": 1163840,
+      "end": 1164352
+    },
+    {
+      "name": "encoder.layer2.2.bn3.bias",
+      "start": 1164352,
+      "end": 1164864
+    },
+    {
+      "name": "encoder.layer2.3.conv1.weight",
+      "start": 1164864,
+      "end": 1230400
+    },
+    {
+      "name": "encoder.layer2.3.bn1.weight",
+      "start": 1230400,
+      "end": 1230528
+    },
+    {
+      "name": "encoder.layer2.3.bn1.bias",
+      "start": 1230528,
+      "end": 1230656
+    },
+    {
+      "name": "encoder.layer2.3.conv2.weight",
+      "start": 1230656,
+      "end": 1378112
+    },
+    {
+      "name": "encoder.layer2.3.bn2.weight",
+      "start": 1378112,
+      "end": 1378240
+    },
+    {
+      "name": "encoder.layer2.3.bn2.bias",
+      "start": 1378240,
+      "end": 1378368
+    },
+    {
+      "name": "encoder.layer2.3.conv3.weight",
+      "start": 1378368,
+      "end": 1443904
+    },
+    {
+      "name": "encoder.layer2.3.bn3.weight",
+      "start": 1443904,
+      "end": 1444416
+    },
+    {
+      "name": "encoder.layer2.3.bn3.bias",
+      "start": 1444416,
+      "end": 1444928
+    },
+    {
+      "name": "encoder.layer3.0.conv1.weight",
+      "start": 1444928,
+      "end": 1576000
+    },
+    {
+      "name": "encoder.layer3.0.bn1.weight",
+      "start": 1576000,
+      "end": 1576256
+    },
+    {
+      "name": "encoder.layer3.0.bn1.bias",
+      "start": 1576256,
+      "end": 1576512
+    },
+    {
+      "name": "encoder.layer3.0.conv2.weight",
+      "start": 1576512,
+      "end": 2166336
+    },
+    {
+      "name": "encoder.layer3.0.bn2.weight",
+      "start": 2166336,
+      "end": 2166592
+    },
+    {
+      "name": "encoder.layer3.0.bn2.bias",
+      "start": 2166592,
+      "end": 2166848
+    },
+    {
+      "name": "encoder.layer3.0.conv3.weight",
+      "start": 2166848,
+      "end": 2428992
+    },
+    {
+      "name": "encoder.layer3.0.bn3.weight",
+      "start": 2428992,
+      "end": 2430016
+    },
+    {
+      "name": "encoder.layer3.0.bn3.bias",
+      "start": 2430016,
+      "end": 2431040
+    },
+    {
+      "name": "encoder.layer3.0.downsample.0.weight",
+      "start": 2431040,
+      "end": 2955328
+    },
+    {
+      "name": "encoder.layer3.0.downsample.1.weight",
+      "start": 2955328,
+      "end": 2956352
+    },
+    {
+      "name": "encoder.layer3.0.downsample.1.bias",
+      "start": 2956352,
+      "end": 2957376
+    },
+    {
+      "name": "encoder.layer3.1.conv1.weight",
+      "start": 2957376,
+      "end": 3219520
+    },
+    {
+      "name": "encoder.layer3.1.bn1.weight",
+      "start": 3219520,
+      "end": 3219776
+    },
+    {
+      "name": "encoder.layer3.1.bn1.bias",
+      "start": 3219776,
+      "end": 3220032
+    },
+    {
+      "name": "encoder.layer3.1.conv2.weight",
+      "start": 3220032,
+      "end": 3809856
+    },
+    {
+      "name": "encoder.layer3.1.bn2.weight",
+      "start": 3809856,
+      "end": 3810112
+    },
+    {
+      "name": "encoder.layer3.1.bn2.bias",
+      "start": 3810112,
+      "end": 3810368
+    },
+    {
+      "name": "encoder.layer3.1.conv3.weight",
+      "start": 3810368,
+      "end": 4072512
+    },
+    {
+      "name": "encoder.layer3.1.bn3.weight",
+      "start": 4072512,
+      "end": 4073536
+    },
+    {
+      "name": "encoder.layer3.1.bn3.bias",
+      "start": 4073536,
+      "end": 4074560
+    },
+    {
+      "name": "encoder.layer3.2.conv1.weight",
+      "start": 4074560,
+      "end": 4336704
+    },
+    {
+      "name": "encoder.layer3.2.bn1.weight",
+      "start": 4336704,
+      "end": 4336960
+    },
+    {
+      "name": "encoder.layer3.2.bn1.bias",
+      "start": 4336960,
+      "end": 4337216
+    },
+    {
+      "name": "encoder.layer3.2.conv2.weight",
+      "start": 4337216,
+      "end": 4927040
+    },
+    {
+      "name": "encoder.layer3.2.bn2.weight",
+      "start": 4927040,
+      "end": 4927296
+    },
+    {
+      "name": "encoder.layer3.2.bn2.bias",
+      "start": 4927296,
+      "end": 4927552
+    },
+    {
+      "name": "encoder.layer3.2.conv3.weight",
+      "start": 4927552,
+      "end": 5189696
+    },
+    {
+      "name": "encoder.layer3.2.bn3.weight",
+      "start": 5189696,
+      "end": 5190720
+    },
+    {
+      "name": "encoder.layer3.2.bn3.bias",
+      "start": 5190720,
+      "end": 5191744
+    },
+    {
+      "name": "encoder.layer3.3.conv1.weight",
+      "start": 5191744,
+      "end": 5453888
+    },
+    {
+      "name": "encoder.layer3.3.bn1.weight",
+      "start": 5453888,
+      "end": 5454144
+    },
+    {
+      "name": "encoder.layer3.3.bn1.bias",
+      "start": 5454144,
+      "end": 5454400
+    },
+    {
+      "name": "encoder.layer3.3.conv2.weight",
+      "start": 5454400,
+      "end": 6044224
+    },
+    {
+      "name": "encoder.layer3.3.bn2.weight",
+      "start": 6044224,
+      "end": 6044480
+    },
+    {
+      "name": "encoder.layer3.3.bn2.bias",
+      "start": 6044480,
+      "end": 6044736
+    },
+    {
+      "name": "encoder.layer3.3.conv3.weight",
+      "start": 6044736,
+      "end": 6306880
+    },
+    {
+      "name": "encoder.layer3.3.bn3.weight",
+      "start": 6306880,
+      "end": 6307904
+    },
+    {
+      "name": "encoder.layer3.3.bn3.bias",
+      "start": 6307904,
+      "end": 6308928
+    },
+    {
+      "name": "encoder.layer3.4.conv1.weight",
+      "start": 6308928,
+      "end": 6571072
+    },
+    {
+      "name": "encoder.layer3.4.bn1.weight",
+      "start": 6571072,
+      "end": 6571328
+    },
+    {
+      "name": "encoder.layer3.4.bn1.bias",
+      "start": 6571328,
+      "end": 6571584
+    },
+    {
+      "name": "encoder.layer3.4.conv2.weight",
+      "start": 6571584,
+      "end": 7161408
+    },
+    {
+      "name": "encoder.layer3.4.bn2.weight",
+      "start": 7161408,
+      "end": 7161664
+    },
+    {
+      "name": "encoder.layer3.4.bn2.bias",
+      "start": 7161664,
+      "end": 7161920
+    },
+    {
+      "name": "encoder.layer3.4.conv3.weight",
+      "start": 7161920,
+      "end": 7424064
+    },
+    {
+      "name": "encoder.layer3.4.bn3.weight",
+      "start": 7424064,
+      "end": 7425088
+    },
+    {
+      "name": "encoder.layer3.4.bn3.bias",
+      "start": 7425088,
+      "end": 7426112
+    },
+    {
+      "name": "encoder.layer3.5.conv1.weight",
+      "start": 7426112,
+      "end": 7688256
+    },
+    {
+      "name": "encoder.layer3.5.bn1.weight",
+      "start": 7688256,
+      "end": 7688512
+    },
+    {
+      "name": "encoder.layer3.5.bn1.bias",
+      "start": 7688512,
+      "end": 7688768
+    },
+    {
+      "name": "encoder.layer3.5.conv2.weight",
+      "start": 7688768,
+      "end": 8278592
+    },
+    {
+      "name": "encoder.layer3.5.bn2.weight",
+      "start": 8278592,
+      "end": 8278848
+    },
+    {
+      "name": "encoder.layer3.5.bn2.bias",
+      "start": 8278848,
+      "end": 8279104
+    },
+    {
+      "name": "encoder.layer3.5.conv3.weight",
+      "start": 8279104,
+      "end": 8541248
+    },
+    {
+      "name": "encoder.layer3.5.bn3.weight",
+      "start": 8541248,
+      "end": 8542272
+    },
+    {
+      "name": "encoder.layer3.5.bn3.bias",
+      "start": 8542272,
+      "end": 8543296
+    },
+    {
+      "name": "encoder.layer4.0.conv1.weight",
+      "start": 8543296,
+      "end": 9067584
+    },
+    {
+      "name": "encoder.layer4.0.bn1.weight",
+      "start": 9067584,
+      "end": 9068096
+    },
+    {
+      "name": "encoder.layer4.0.bn1.bias",
+      "start": 9068096,
+      "end": 9068608
+    },
+    {
+      "name": "encoder.layer4.0.conv2.weight",
+      "start": 9068608,
+      "end": 11427904
+    },
+    {
+      "name": "encoder.layer4.0.bn2.weight",
+      "start": 11427904,
+      "end": 11428416
+    },
+    {
+      "name": "encoder.layer4.0.bn2.bias",
+      "start": 11428416,
+      "end": 11428928
+    },
+    {
+      "name": "encoder.layer4.0.conv3.weight",
+      "start": 11428928,
+      "end": 12477504
+    },
+    {
+      "name": "encoder.layer4.0.bn3.weight",
+      "start": 12477504,
+      "end": 12479552
+    },
+    {
+      "name": "encoder.layer4.0.bn3.bias",
+      "start": 12479552,
+      "end": 12481600
+    },
+    {
+      "name": "encoder.layer4.0.downsample.0.weight",
+      "start": 12481600,
+      "end": 14578752
+    },
+    {
+      "name": "encoder.layer4.0.downsample.1.weight",
+      "start": 14578752,
+      "end": 14580800
+    },
+    {
+      "name": "encoder.layer4.0.downsample.1.bias",
+      "start": 14580800,
+      "end": 14582848
+    },
+    {
+      "name": "encoder.layer4.1.conv1.weight",
+      "start": 14582848,
+      "end": 15631424
+    },
+    {
+      "name": "encoder.layer4.1.bn1.weight",
+      "start": 15631424,
+      "end": 15631936
+    },
+    {
+      "name": "encoder.layer4.1.bn1.bias",
+      "start": 15631936,
+      "end": 15632448
+    },
+    {
+      "name": "encoder.layer4.1.conv2.weight",
+      "start": 15632448,
+      "end": 17991744
+    },
+    {
+      "name": "encoder.layer4.1.bn2.weight",
+      "start": 17991744,
+      "end": 17992256
+    },
+    {
+      "name": "encoder.layer4.1.bn2.bias",
+      "start": 17992256,
+      "end": 17992768
+    },
+    {
+      "name": "encoder.layer4.1.conv3.weight",
+      "start": 17992768,
+      "end": 19041344
+    },
+    {
+      "name": "encoder.layer4.1.bn3.weight",
+      "start": 19041344,
+      "end": 19043392
+    },
+    {
+      "name": "encoder.layer4.1.bn3.bias",
+      "start": 19043392,
+      "end": 19045440
+    },
+    {
+      "name": "encoder.layer4.2.conv1.weight",
+      "start": 19045440,
+      "end": 20094016
+    },
+    {
+      "name": "encoder.layer4.2.bn1.weight",
+      "start": 20094016,
+      "end": 20094528
+    },
+    {
+      "name": "encoder.layer4.2.bn1.bias",
+      "start": 20094528,
+      "end": 20095040
+    },
+    {
+      "name": "encoder.layer4.2.conv2.weight",
+      "start": 20095040,
+      "end": 22454336
+    },
+    {
+      "name": "encoder.layer4.2.bn2.weight",
+      "start": 22454336,
+      "end": 22454848
+    },
+    {
+      "name": "encoder.layer4.2.bn2.bias",
+      "start": 22454848,
+      "end": 22455360
+    },
+    {
+      "name": "encoder.layer4.2.conv3.weight",
+      "start": 22455360,
+      "end": 23503936
+    },
+    {
+      "name": "encoder.layer4.2.bn3.weight",
+      "start": 23503936,
+      "end": 23505984
+    },
+    {
+      "name": "encoder.layer4.2.bn3.bias",
+      "start": 23505984,
+      "end": 23508032
+    },
+    {
+      "name": "projections.0.weight",
+      "start": 23508032,
+      "end": 23509056
+    },
+    {
+      "name": "projections.0.bias",
+      "start": 23509056,
+      "end": 23509072
+    },
+    {
+      "name": "projections.1.weight",
+      "start": 23509072,
+      "end": 23517264
+    },
+    {
+      "name": "projections.1.bias",
+      "start": 23517264,
+      "end": 23517296
+    },
+    {
+      "name": "projections.2.weight",
+      "start": 23517296,
+      "end": 23550064
+    },
+    {
+      "name": "projections.2.bias",
+      "start": 23550064,
+      "end": 23550128
+    },
+    {
+      "name": "projections.3.weight",
+      "start": 23550128,
+      "end": 23681200
+    },
+    {
+      "name": "projections.3.bias",
+      "start": 23681200,
+      "end": 23681328
+    },
+    {
+      "name": "projections.4.weight",
+      "start": 23681328,
+      "end": 23943472
+    },
+    {
+      "name": "projections.4.bias",
+      "start": 23943472,
+      "end": 23943600
+    },
+    {
+      "name": "up4.conv.block.0.weight",
+      "start": 23943600,
+      "end": 23945904
+    },
+    {
+      "name": "up4.conv.block.1.weight",
+      "start": 23945904,
+      "end": 23946160
+    },
+    {
+      "name": "up4.conv.block.1.bias",
+      "start": 23946160,
+      "end": 23946416
+    },
+    {
+      "name": "up4.conv.block.3.weight",
+      "start": 23946416,
+      "end": 23979184
+    },
+    {
+      "name": "up4.conv.block.4.weight",
+      "start": 23979184,
+      "end": 23979312
+    },
+    {
+      "name": "up4.conv.block.4.bias",
+      "start": 23979312,
+      "end": 23979440
+    },
+    {
+      "name": "up3.conv.block.0.weight",
+      "start": 23979440,
+      "end": 23981168
+    },
+    {
+      "name": "up3.conv.block.1.weight",
+      "start": 23981168,
+      "end": 23981360
+    },
+    {
+      "name": "up3.conv.block.1.bias",
+      "start": 23981360,
+      "end": 23981552
+    },
+    {
+      "name": "up3.conv.block.3.weight",
+      "start": 23981552,
+      "end": 23993840
+    },
+    {
+      "name": "up3.conv.block.4.weight",
+      "start": 23993840,
+      "end": 23993904
+    },
+    {
+      "name": "up3.conv.block.4.bias",
+      "start": 23993904,
+      "end": 23993968
+    },
+    {
+      "name": "up2.conv.block.0.weight",
+      "start": 23993968,
+      "end": 23994832
+    },
+    {
+      "name": "up2.conv.block.1.weight",
+      "start": 23994832,
+      "end": 23994928
+    },
+    {
+      "name": "up2.conv.block.1.bias",
+      "start": 23994928,
+      "end": 23995024
+    },
+    {
+      "name": "up2.conv.block.3.weight",
+      "start": 23995024,
+      "end": 23998096
+    },
+    {
+      "name": "up2.conv.block.4.weight",
+      "start": 23998096,
+      "end": 23998128
+    },
+    {
+      "name": "up2.conv.block.4.bias",
+      "start": 23998128,
+      "end": 23998160
+    },
+    {
+      "name": "up1.conv.block.0.weight",
+      "start": 23998160,
+      "end": 23998592
+    },
+    {
+      "name": "up1.conv.block.1.weight",
+      "start": 23998592,
+      "end": 23998640
+    },
+    {
+      "name": "up1.conv.block.1.bias",
+      "start": 23998640,
+      "end": 23998688
+    },
+    {
+      "name": "up1.conv.block.3.weight",
+      "start": 23998688,
+      "end": 23999456
+    },
+    {
+      "name": "up1.conv.block.4.weight",
+      "start": 23999456,
+      "end": 23999472
+    },
+    {
+      "name": "up1.conv.block.4.bias",
+      "start": 23999472,
+      "end": 23999488
+    },
+    {
+      "name": "head.weight",
+      "start": 23999488,
+      "end": 23999632
+    },
+    {
+      "name": "head.bias",
+      "start": 23999632,
+      "end": 23999633
+    }
+  ],
+  "source_sha256": {
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+  },
+  "model_state_before": "dbdc6b27563761a82a9d9a06679e565407ad4862423b810f682b9eb141883a1e",
+  "verified_input_file_hashes": 128,
+  "image_guard_installed_before_PIL": true,
+  "non_train_probes_blocked_before_io": 2,
+  "sampling_sha256": "19e63ba525534654abc1c88a3db165b4c012113edcf328abc21862e1e5c5ef32"
+}

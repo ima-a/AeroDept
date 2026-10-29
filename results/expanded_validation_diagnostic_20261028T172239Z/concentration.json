@@ -1,0 +1,494 @@
+{
+  "Kite_training/foggy/trajectory_2003": {
+    "frames": 2205,
+    "frames_with_near": 83,
+    "frames_without_near": 2122,
+    "teacher_near_sse": 39382328.584425636,
+    "teacher_minus_A_near_sse": 19668057.967755795,
+    "frames_teacher_near_sse_worse_than_A": 78,
+    "teacher_sse_share": {
+      "top_1_frames": 0.028545898987960998,
+      "top_5_frames": 0.1310959835749196,
+      "top_10_frames": 0.2498703753502726,
+      "top_25_frames": 0.5384322246542366,
+      "top_50_frames": 0.8417581199457167
+    },
+    "positive_excess_sse_share": {
+      "top_1_frames": 0.04361999964267017,
+      "top_5_frames": 0.18985556224687586,
+      "top_10_frames": 0.33949783952795415,
+      "top_25_frames": 0.6252757716552145,
+      "top_50_frames": 0.8917812175764016
+    },
+    "top_teacher_frames": [
+      {
+        "frame_index": 1577,
+        "near_pixels": 19280,
+        "teacher_sse": 1124203.9736817032,
+        "student_sse": 262169.28266200545,
+        "original_sse": 381968.5596096457,
+        "excess_sse": 862034.6910196978,
+        "teacher_near_absrel": 0.9110445190041295,
+        "teacher_bias": 7.511617721858361,
+        "student_bias": 3.618918838441619
+      },
+      {
+        "frame_index": 1532,
+        "near_pixels": 8312,
+        "teacher_sse": 1109712.0986137828,
+        "student_sse": 1005899.8805022677,
+        "original_sse": 696410.5375106843,
+        "excess_sse": 103812.21811151505,
+        "teacher_near_absrel": 1.2994818783691668,
+        "teacher_bias": 11.210887655027792,
+        "student_bias": 10.91269790529631
+      },
+      {
+        "frame_index": 1531,
+        "near_pixels": 8581,
+        "teacher_sse": 992134.5495844367,
+        "student_sse": 887604.1289792596,
+        "original_sse": 783256.2237100743,
+        "excess_sse": 104530.42060517706,
+        "teacher_near_absrel": 1.1882835070342654,
+        "teacher_bias": 10.53801703378046,
+        "student_bias": 10.1070084237869
+      },
+      {
+        "frame_index": 1580,
+        "near_pixels": 18758,
+        "teacher_sse": 980465.7080798433,
+        "student_sse": 302890.92249510606,
+        "original_sse": 417226.0649944777,
+        "excess_sse": 677574.7855847373,
+        "teacher_near_absrel": 0.8647369760062555,
+        "teacher_bias": 7.091356825632815,
+        "student_bias": 3.9520099154158257
+      },
+      {
+        "frame_index": 1576,
+        "near_pixels": 19285,
+        "teacher_sse": 956348.7712861842,
+        "student_sse": 215688.73256221338,
+        "original_sse": 439991.01967895764,
+        "excess_sse": 740660.0387239708,
+        "teacher_near_absrel": 0.8457509362261388,
+        "teacher_bias": 6.933628352281186,
+        "student_bias": 3.279997183196681
+      },
+      {
+        "frame_index": 1581,
+        "near_pixels": 18370,
+        "teacher_sse": 952446.5859845037,
+        "student_sse": 262409.24118925043,
+        "original_sse": 291091.9551452649,
+        "excess_sse": 690037.3447952534,
+        "teacher_near_absrel": 0.8569461942930175,
+        "teacher_bias": 7.009204686122805,
+        "student_bias": 3.6964862995324217
+      },
+      {
+        "frame_index": 1533,
+        "near_pixels": 7871,
+        "teacher_sse": 942306.3688475103,
+        "student_sse": 730143.6084217596,
+        "original_sse": 412260.3555833348,
+        "excess_sse": 212162.76042575075,
+        "teacher_near_absrel": 1.2465571027337643,
+        "teacher_bias": 10.502385648471279,
+        "student_bias": 9.507565193626997
+      },
+      {
+        "frame_index": 1578,
+        "near_pixels": 19216,
+        "teacher_sse": 934926.8940092444,
+        "student_sse": 218250.9492464948,
+        "original_sse": 305017.93199167063,
+        "excess_sse": 716675.9447627496,
+        "teacher_near_absrel": 0.8307195073883739,
+        "teacher_bias": 6.82166704587595,
+        "student_bias": 3.2522722360593495
+      },
+      {
+        "frame_index": 1575,
+        "near_pixels": 19189,
+        "teacher_sse": 927961.7347607093,
+        "student_sse": 270695.82429364143,
+        "original_sse": 536812.8466395254,
+        "excess_sse": 657265.910467068,
+        "teacher_near_absrel": 0.836349397341754,
+        "teacher_bias": 6.785968836876256,
+        "student_bias": 3.689715624290457
+      },
+      {
+        "frame_index": 1579,
+        "near_pixels": 19047,
+        "teacher_sse": 919970.5407102838,
+        "student_sse": 177382.17577177042,
+        "original_sse": 321508.64548133477,
+        "excess_sse": 742588.3649385134,
+        "teacher_near_absrel": 0.8307146303110425,
+        "teacher_bias": 6.822806853424904,
+        "student_bias": 2.982253964581802
+      }
+    ],
+    "top_regression_frames": [
+      {
+        "frame_index": 1577,
+        "near_pixels": 19280,
+        "teacher_sse": 1124203.9736817032,
+        "student_sse": 262169.28266200545,
+        "original_sse": 381968.5596096457,
+        "excess_sse": 862034.6910196978,
+        "teacher_near_absrel": 0.9110445190041295,
+        "teacher_bias": 7.511617721858361,
+        "student_bias": 3.618918838441619
+      },
+      {
+        "frame_index": 1579,
+        "near_pixels": 19047,
+        "teacher_sse": 919970.5407102838,
+        "student_sse": 177382.17577177042,
+        "original_sse": 321508.64548133477,
+        "excess_sse": 742588.3649385134,
+        "teacher_near_absrel": 0.8307146303110425,
+        "teacher_bias": 6.822806853424904,
+        "student_bias": 2.982253964581802
+      },
+      {
+        "frame_index": 1576,
+        "near_pixels": 19285,
+        "teacher_sse": 956348.7712861842,
+        "student_sse": 215688.73256221338,
+        "original_sse": 439991.01967895764,
+        "excess_sse": 740660.0387239708,
+        "teacher_near_absrel": 0.8457509362261388,
+        "teacher_bias": 6.933628352281186,
+        "student_bias": 3.279997183196681
+      },
+      {
+        "frame_index": 1578,
+        "near_pixels": 19216,
+        "teacher_sse": 934926.8940092444,
+        "student_sse": 218250.9492464948,
+        "original_sse": 305017.93199167063,
+        "excess_sse": 716675.9447627496,
+        "teacher_near_absrel": 0.8307195073883739,
+        "teacher_bias": 6.82166704587595,
+        "student_bias": 3.2522722360593495
+      },
+      {
+        "frame_index": 1581,
+        "near_pixels": 18370,
+        "teacher_sse": 952446.5859845037,
+        "student_sse": 262409.24118925043,
+        "original_sse": 291091.9551452649,
+        "excess_sse": 690037.3447952534,
+        "teacher_near_absrel": 0.8569461942930175,
+        "teacher_bias": 7.009204686122805,
+        "student_bias": 3.6964862995324217
+      },
+      {
+        "frame_index": 1580,
+        "near_pixels": 18758,
+        "teacher_sse": 980465.7080798433,
+        "student_sse": 302890.92249510606,
+        "original_sse": 417226.0649944777,
+        "excess_sse": 677574.7855847373,
+        "teacher_near_absrel": 0.8647369760062555,
+        "teacher_bias": 7.091356825632815,
+        "student_bias": 3.9520099154158257
+      },
+      {
+        "frame_index": 1575,
+        "near_pixels": 19189,
+        "teacher_sse": 927961.7347607093,
+        "student_sse": 270695.82429364143,
+        "original_sse": 536812.8466395254,
+        "excess_sse": 657265.910467068,
+        "teacher_near_absrel": 0.836349397341754,
+        "teacher_bias": 6.785968836876256,
+        "student_bias": 3.689715624290457
+      },
+      {
+        "frame_index": 1572,
+        "near_pixels": 17575,
+        "teacher_sse": 838210.8139780378,
+        "student_sse": 267347.959880741,
+        "original_sse": 380027.99017355323,
+        "excess_sse": 570862.8540972967,
+        "teacher_near_absrel": 0.8328905303902582,
+        "teacher_bias": 6.794479943949671,
+        "student_bias": 3.8429628833971528
+      },
+      {
+        "frame_index": 1566,
+        "near_pixels": 16363,
+        "teacher_sse": 788102.1070599331,
+        "student_sse": 234022.19560192976,
+        "original_sse": 474090.7711956144,
+        "excess_sse": 554079.9114580033,
+        "teacher_near_absrel": 0.8245653850325965,
+        "teacher_bias": 6.770741763211387,
+        "student_bias": 3.592907701182364
+      },
+      {
+        "frame_index": 1571,
+        "near_pixels": 17517,
+        "teacher_sse": 694221.3667035608,
+        "student_sse": 196718.36989239586,
+        "original_sse": 350468.5555893978,
+        "excess_sse": 497502.99681116495,
+        "teacher_near_absrel": 0.7518015003498045,
+        "teacher_bias": 6.126759416308313,
+        "student_bias": 3.2889424783151675
+      }
+    ]
+  },
+  "PLE_training/spring/trajectory_5000": {
+    "frames": 2205,
+    "frames_with_near": 2084,
+    "frames_without_near": 121,
+    "teacher_near_sse": 444580174.5828813,
+    "teacher_minus_A_near_sse": -28028881.446749937,
+    "frames_teacher_near_sse_worse_than_A": 976,
+    "teacher_sse_share": {
+      "top_1_frames": 0.062281093790603925,
+      "top_5_frames": 0.25349641076402707,
+      "top_10_frames": 0.37837733254810363,
+      "top_25_frames": 0.56282816093521,
+      "top_50_frames": 0.6972498530613928
+    },
+    "positive_excess_sse_share": {
+      "top_1_frames": 0.12829161058618319,
+      "top_5_frames": 0.40676409932138224,
+      "top_10_frames": 0.5379829337302782,
+      "top_25_frames": 0.726016681915986,
+      "top_50_frames": 0.8158322214489417
+    },
+    "top_teacher_frames": [
+      {
+        "frame_index": 1928,
+        "near_pixels": 30473,
+        "teacher_sse": 27688939.550639495,
+        "student_sse": 12827419.544230726,
+        "original_sse": 6178882.0632440895,
+        "excess_sse": 14861520.00640877,
+        "teacher_near_absrel": 0.42891706832219934,
+        "teacher_bias": 3.260565385109477,
+        "student_bias": 4.1354543262272285
+      },
+      {
+        "frame_index": 1927,
+        "near_pixels": 30378,
+        "teacher_sse": 23718225.162529357,
+        "student_sse": 11498481.954933403,
+        "original_sse": 8829719.609075703,
+        "excess_sse": 12219743.207595954,
+        "teacher_near_absrel": 0.3832226063023921,
+        "teacher_bias": 2.9211513703381544,
+        "student_bias": 4.309114499570786
+      },
+      {
+        "frame_index": 1107,
+        "near_pixels": 3300,
+        "teacher_sse": 21784684.469300736,
+        "student_sse": 23533710.02407649,
+        "original_sse": 11692678.527377285,
+        "excess_sse": -1749025.5547757559,
+        "teacher_near_absrel": 2.1897412313693745,
+        "teacher_bias": 15.71083571209149,
+        "student_bias": 14.795443718979756
+      },
+      {
+        "frame_index": 1106,
+        "near_pixels": 3331,
+        "teacher_sse": 20393563.169234443,
+        "student_sse": 27008225.453062836,
+        "original_sse": 21226206.300667964,
+        "excess_sse": -6614662.283828393,
+        "teacher_near_absrel": 2.1700182411932674,
+        "teacher_bias": 15.890640938104863,
+        "student_bias": 19.65963256164504
+      },
+      {
+        "frame_index": 1926,
+        "near_pixels": 29782,
+        "teacher_sse": 19114066.2019009,
+        "student_sse": 19599886.81200385,
+        "original_sse": 13438984.598888446,
+        "excess_sse": -485820.6101029515,
+        "teacher_near_absrel": 0.4075776924237602,
+        "teacher_bias": 3.1166600184880995,
+        "student_bias": 6.26846365116351
+      },
+      {
+        "frame_index": 1832,
+        "near_pixels": 27421,
+        "teacher_sse": 13073059.971652003,
+        "student_sse": 1620877.3860559259,
+        "original_sse": 868567.3773766154,
+        "excess_sse": 11452182.585596077,
+        "teacher_near_absrel": 0.5403812632765264,
+        "teacher_bias": 3.079242435127148,
+        "student_bias": 0.6835053348509958
+      },
+      {
+        "frame_index": 1925,
+        "near_pixels": 29206,
+        "teacher_sse": 11482986.849527383,
+        "student_sse": 22011635.790661,
+        "original_sse": 14076813.472468935,
+        "excess_sse": -10528648.941133616,
+        "teacher_near_absrel": 0.3011536961266646,
+        "teacher_bias": 2.31646045661801,
+        "student_bias": 5.489194720062578
+      },
+      {
+        "frame_index": 1108,
+        "near_pixels": 3531,
+        "teacher_sse": 11391064.267464237,
+        "student_sse": 10870433.17278375,
+        "original_sse": 7849762.098712998,
+        "excess_sse": 520631.0946804881,
+        "teacher_near_absrel": 1.3337957259119964,
+        "teacher_bias": 9.108371530839115,
+        "student_bias": 8.708684529909767
+      },
+      {
+        "frame_index": 1924,
+        "near_pixels": 28277,
+        "teacher_sse": 10492369.778780049,
+        "student_sse": 18407217.51483565,
+        "original_sse": 6377529.102818004,
+        "excess_sse": -7914847.7360555995,
+        "teacher_near_absrel": 0.2631015370230154,
+        "teacher_bias": 1.9603052954430074,
+        "student_bias": 4.807528255877877
+      },
+      {
+        "frame_index": 1923,
+        "near_pixels": 27606,
+        "teacher_sse": 9080101.14141223,
+        "student_sse": 13236810.465046426,
+        "original_sse": 5648769.065565037,
+        "excess_sse": -4156709.323634196,
+        "teacher_near_absrel": 0.18608013480777968,
+        "teacher_bias": 1.2957644099510663,
+        "student_bias": 3.7078284444199032
+      }
+    ],
+    "top_regression_frames": [
+      {
+        "frame_index": 1928,
+        "near_pixels": 30473,
+        "teacher_sse": 27688939.550639495,
+        "student_sse": 12827419.544230726,
+        "original_sse": 6178882.0632440895,
+        "excess_sse": 14861520.00640877,
+        "teacher_near_absrel": 0.42891706832219934,
+        "teacher_bias": 3.260565385109477,
+        "student_bias": 4.1354543262272285
+      },
+      {
+        "frame_index": 1927,
+        "near_pixels": 30378,
+        "teacher_sse": 23718225.162529357,
+        "student_sse": 11498481.954933403,
+        "original_sse": 8829719.609075703,
+        "excess_sse": 12219743.207595954,
+        "teacher_near_absrel": 0.3832226063023921,
+        "teacher_bias": 2.9211513703381544,
+        "student_bias": 4.309114499570786
+      },
+      {
+        "frame_index": 1832,
+        "near_pixels": 27421,
+        "teacher_sse": 13073059.971652003,
+        "student_sse": 1620877.3860559259,
+        "original_sse": 868567.3773766154,
+        "excess_sse": 11452182.585596077,
+        "teacher_near_absrel": 0.5403812632765264,
+        "teacher_bias": 3.079242435127148,
+        "student_bias": 0.6835053348509958
+      },
+      {
+        "frame_index": 1100,
+        "near_pixels": 4510,
+        "teacher_sse": 8926456.36220727,
+        "student_sse": 3988431.2923442014,
+        "original_sse": 1411324.2499408657,
+        "excess_sse": 4938025.069863068,
+        "teacher_near_absrel": 1.3803752286822852,
+        "teacher_bias": 11.448734235234905,
+        "student_bias": 9.743972415369656
+      },
+      {
+        "frame_index": 1933,
+        "near_pixels": 29574,
+        "teacher_sse": 4741648.133976528,
+        "student_sse": 1092868.7210371438,
+        "original_sse": 1106262.259904633,
+        "excess_sse": 3648779.4129393846,
+        "teacher_near_absrel": 0.39721038605404274,
+        "teacher_bias": 2.31045916024627,
+        "student_bias": 2.6153036222227644
+      },
+      {
+        "frame_index": 1105,
+        "near_pixels": 3415,
+        "teacher_sse": 8629639.939020542,
+        "student_sse": 5265239.867589719,
+        "original_sse": 5688464.318662196,
+        "excess_sse": 3364400.0714308238,
+        "teacher_near_absrel": 1.1854648233682523,
+        "teacher_bias": 8.443587547531937,
+        "student_bias": 7.8380201716374165
+      },
+      {
+        "frame_index": 1822,
+        "near_pixels": 29287,
+        "teacher_sse": 3709909.253280132,
+        "student_sse": 373462.37801573856,
+        "original_sse": 404836.93191249104,
+        "excess_sse": 3336446.8752643936,
+        "teacher_near_absrel": 0.1963567450140607,
+        "teacher_bias": 1.2055533764756103,
+        "student_bias": -0.41097731221005906
+      },
+      {
+        "frame_index": 1930,
+        "near_pixels": 29427,
+        "teacher_sse": 5162749.436696051,
+        "student_sse": 1898286.6386455195,
+        "original_sse": 1191436.73975855,
+        "excess_sse": 3264462.798050531,
+        "teacher_near_absrel": 0.2329383740500104,
+        "teacher_bias": 1.5447697398374094,
+        "student_bias": 2.136683803609611
+      },
+      {
+        "frame_index": 1103,
+        "near_pixels": 3892,
+        "teacher_sse": 5611862.16815519,
+        "student_sse": 2956196.3824146697,
+        "original_sse": 1143084.6653237587,
+        "excess_sse": 2655665.78574052,
+        "teacher_near_absrel": 0.947294030245419,
+        "teacher_bias": 6.832147078058335,
+        "student_bias": 6.763923839331898
+      },
+      {
+        "frame_index": 1579,
+        "near_pixels": 5323,
+        "teacher_sse": 3859144.0578164477,
+        "student_sse": 1279504.9582805166,
+        "original_sse": 1071370.2394141743,
+        "excess_sse": 2579639.099535931,
+        "teacher_near_absrel": 1.445484688347447,
+        "teacher_bias": 11.033200803072678,
+        "student_bias": 10.100187152036257
+      }
+    ]
+  }
+}

@@ -20,6 +20,8 @@ dependencies = [
 [project.optional-dependencies]
 midair = ["h5py>=3.10"]
 dev = ["pytest>=8", "pytest-cov>=5"]
+dashboard = ["streamlit>=1.66,<1.67"]
+dashboard-test = ["playwright>=1.50,<2"]
 
 [project.scripts]
 aerodepth = "aerodepth_lite.cli:main"

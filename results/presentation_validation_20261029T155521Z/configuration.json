@@ -1,0 +1,43 @@
+{
+  "version": "presentation_validation_v1",
+  "dataset_root": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir",
+  "manifest": "/home/Ima/work/Projects/DL-projects/AeroDept/results/expanded_preparation_20261026/manifest_train_val.json.gz",
+  "reservations": "/home/Ima/work/Projects/DL-projects/AeroDept/results/expanded_preparation_20261026/reservations.json",
+  "comparison": "/home/Ima/work/Projects/DL-projects/AeroDept/results/student_validation_comparison_20261029T152648Z",
+  "results": "/home/Ima/work/Projects/DL-projects/AeroDept/results/presentation_validation_20261029T155521Z",
+  "cache": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/presentation-artifacts/presentation_validation_20261029T155521Z",
+  "source_A": {
+    "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/baseline_A_selected_epoch9.pt",
+    "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8"
+  },
+  "export_directory": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z",
+  "models": {
+    "Original": {
+      "kind": "export",
+      "weights": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.state_dict.pt",
+      "metadata": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.json",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+      "metadata_sha256": "1f99776c4717f91abb035675560d9521ba0a11d7abe0212961e5facc63fb190f",
+      "selected_epoch": 4,
+      "label": "Original \u00b7 epoch 4 \u00b7 near-field reference"
+    },
+    "A": {
+      "kind": "export",
+      "weights": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+      "metadata": "/home/Ima/work/Projects/DL-projects/AeroDept/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json",
+      "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+      "metadata_sha256": "e9fed71377da6baa94b0a44ecdbf0ae6b1df44cc1ef1b4718a3d53a65e7faa12",
+      "selected_epoch": 9,
+      "label": "Supervised A \u00b7 epoch 9"
+    },
+    "KD": {
+      "kind": "checkpoint",
+      "weights": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/run/best.pt",
+      "sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+      "selected_epoch": 9,
+      "label": "Exploratory KD \u00b7 epoch 9 \u00b7 rejected teacher"
+    }
+  },
+  "default_model": "A",
+  "comparison_cache": "/home/Ima/work/Projects/DL-projects/AeroDept/artifacts/student_validation_comparison_20261029T152648Z"
+}

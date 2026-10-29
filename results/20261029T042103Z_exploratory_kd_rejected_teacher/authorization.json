@@ -1,0 +1,111 @@
+{
+  "experiment_id": "20261029T042103Z_exploratory_kd_rejected_teacher",
+  "arm": "exploratory_kd_rejected_teacher_v1",
+  "scope": "exploratory_full_rejected_teacher_v1",
+  "authorized_utc": "2026-10-29T04:21:13.945766+00:00",
+  "explicit_rejected_teacher_authorization": true,
+  "original_gate_passed": false,
+  "maximum_runs": 1,
+  "allow_teacher_repair": false,
+  "allow_test_access": false,
+  "deployment_promotion": false,
+  "authorization_record": "AUTHORIZATION.md",
+  "storage_authorization": "User explicitly selected the AERODEPTH rescue USB instead of the failed/unmounted HDD in this session.",
+  "dataset_root": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir",
+  "manifest_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "inputs": {
+    "teacher_best": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/teacher_B_selected_epoch3.pt",
+      "sha256": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660",
+      "original_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/runs/B_teacher/best.pt"
+    },
+    "baseline_best": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/baseline_A_selected_epoch9.pt",
+      "sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+      "original_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/runs/A_supervised/best.pt"
+    },
+    "initialization": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/original_student_epoch4.pt",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+      "original_path": "/home/Ima/work/Projects/DL-projects/AeroDept/models/mobilenet_v3_small_epoch4.state_dict.pt"
+    },
+    "failed_gate": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/original_failed_teacher_gate.json",
+      "sha256": "10e749c38271d360c2c0dc50cde6ec5416f410532b8f6817166f6ac6d3e36b1f",
+      "original_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/teacher_gate.json"
+    },
+    "baseline_completion": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/original_A_completion.json",
+      "sha256": "bd0b25c60d8d4330c455683c720d6ebf6dd10370470afe2e6fcdce51f29d7936",
+      "original_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/completion/A_supervised.json"
+    },
+    "teacher_completion": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/original_B_completion.json",
+      "sha256": "3979306b1387eb1319ba644670498539f30c34e0dd7995eb14e3a541fcca4747",
+      "original_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/completion/B_teacher.json"
+    },
+    "parent_protocol": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/original_protocol.json",
+      "sha256": "47d0955748d58ac8f4f752a550c2669d3e223293657420154e076bf14b10dd52",
+      "original_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/protocol.json"
+    },
+    "parent_freeze": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/inputs/original_freeze.json",
+      "sha256": "d49ab655ff5b1a94e7809e24bad60eac1cdba26bd7c9ce44853e924918e89d90",
+      "original_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/freeze.json"
+    },
+    "config": {
+      "path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher/frozen/configs/exploratory_kd.yaml",
+      "sha256": "9b638bc20bc2ada3addd7236e4a1da9f176e753a9ce8ae3dba9eaf59ef643e4c"
+    }
+  },
+  "official_teacher_best_sha256": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660",
+  "initial_student_state_sha256": "e8dcc30b6b4149f0c07b68a26b97db0baafa426a90901eb22ab9e6885ebb643f",
+  "parent_freeze_sha256": "d49ab655ff5b1a94e7809e24bad60eac1cdba26bd7c9ce44853e924918e89d90",
+  "parent_source_sha256": {
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+  },
+  "exploratory_source_sha256": {
+    "src/aerodepth_lite/exploratory_kd.py": "b8abafb3d7ba47bec555ac721bdf5ea4d41b5f7d0ac9c1ffb6f106bedb62f0da",
+    "scripts/exploratory_kd_training.py": "11e40ccbdbce048617b8f8537423e5e6d35b2055b4a540e716bb6088d742800a"
+  },
+  "config_sha256": "9b638bc20bc2ada3addd7236e4a1da9f176e753a9ce8ae3dba9eaf59ef643e4c",
+  "matched_train_config": {
+    "epochs": 10,
+    "batch_size": 2,
+    "effective_batch_size": 2,
+    "accumulation_steps": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "amp": true,
+    "amp_initial_scale": 1024.0,
+    "lr_schedule": {
+      "name": "cosine",
+      "t_max": 10,
+      "eta_min": 1e-06
+    }
+  },
+  "teacher_limitations": {
+    "selected_epoch": 3,
+    "gate_failed": true,
+    "reason": "Kite foggy near AbsRel and near RMSE regress versus A; pooled improvement did not satisfy original gate.",
+    "foggy_near_absrel_A": 0.5043361095320411,
+    "foggy_near_absrel_B": 0.7427567423215851,
+    "foggy_near_rmse_A": 4.6951762329605415,
+    "foggy_near_rmse_B": 6.636089534161115
+  },
+  "gradient_probe": {
+    "supported_teacher_repair": false,
+    "report_sha256": "c356a4c3b8aea4f9231bb002e941f7b1f94a371014cb66a996a9a085310151b0"
+  },
+  "training": "Exactly one independent 10-epoch exploratory KD student; parent recipe unchanged. No teacher repair, near/selective losses, search, automatic whole-run retry, test evaluation or deployment promotion.",
+  "checkpoint_policy": "Atomic epoch-boundary best/last/previous_best, own strict identity resume; incomplete epoch replays, no resume before first last.pt exists.",
+  "authorized_bundle": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/exploratory-experiments/20261029T042103Z_exploratory_kd_rejected_teacher"
+}

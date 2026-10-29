@@ -1,0 +1,90 @@
+{
+  "version": "A_validation_presentation_v1",
+  "frozen_utc": "2026-10-29T16:08:05.048198+00:00",
+  "model_export_sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+  "model_metadata_sha256": "e9fed71377da6baa94b0a44ecdbf0ae6b1df44cc1ef1b4718a3d53a65e7faa12",
+  "checkpoint_sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+  "manifest_uncompressed_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "validation_frames": 4410,
+  "selection": "Existing supervised A epoch9 fixed before this study. No tuning/selection of another model.",
+  "v2": {
+    "max_skip": 4,
+    "accel_change_scale": 2.0,
+    "gyro_scale": 0.5,
+    "visual_scale": 0.08,
+    "critical_risk": 0.9,
+    "extreme_motion": 0.9,
+    "extreme_visual": 0.9,
+    "decision_threshold": 0.65,
+    "motion_weight": 0.25,
+    "visual_weight": 0.3,
+    "risk_weight": 0.3,
+    "age_weight": 0.15,
+    "gps_speed_scale": 20.0
+  },
+  "v2_source_id": "v2_02",
+  "v2_source_sha256": "f167c49078bde5bc09eed2a552000d8f9fe5812df13d78a60eaf40085cfa1f8f",
+  "budget_fraction": {
+    "numerator": 2455,
+    "denominator": 4410
+  },
+  "budget_rule": "K=ceil(N*2455/4410); infer at ceil(k*N/K), k=0..K-1",
+  "policies": [
+    "every",
+    "fixed2",
+    "fixed5",
+    "budget_fixed",
+    "v2",
+    "v2_no_motion",
+    "v2_no_visual",
+    "v2_no_risk",
+    "v2_no_age"
+  ],
+  "ablations": "Remove weighted contribution AND associated forced trigger; surviving weights unchanged. First-frame/trajectory resets/hard max_skip4 always retained. No redundant age-only experiment (equals fixed5).",
+  "scoring": "Every current frame; pooled additive FP64 metric sums; reused prediction unwarped; same GT[.1,1000] mask/near<10; original event p10<8 entry or drop>=2, reset per trajectory. GT never enters decisions; zero-event/censored cases retained.",
+  "causal_inputs": "Current RGB vs last inferred RGB; held GPS velocity and contemporaneous manifest IMU only. No privileged velocity/GT masks/depth/future samples.",
+  "live_risk_cache": "Update risk+availability on explicit fresh prediction source token; retain on reuse; reset at trajectory boundaries; age independent. Full cached/uncached reference checks and synthetic threshold boundaries required.",
+  "timing": {
+    "policies": [
+      "every",
+      "budget_fixed",
+      "v2_cached",
+      "v2_uncached",
+      "fixed5"
+    ],
+    "repetitions": 3,
+    "warmup_calls_each_policy": 10,
+    "precision": "FP32 eval batch1, CPU2 threads, CUDA synchronized; alternate policy/device order",
+    "windows": {
+      "Kite_training/foggy/trajectory_2003": {
+        "start": 1500,
+        "frames": 128
+      },
+      "PLE_training/spring/trajectory_5000": {
+        "start": 400,
+        "frames": 128
+      }
+    },
+    "scope": "Bounded live timing, 256 frames/run, reset at window start; calls differ from full-trajectory quality. No extrapolated full-run latency claim. OS cache uncontrolled.",
+    "boundaries": "Separate raw RGB+GT byte I/O, decode/resize, H2D/D2H, synchronized model-only, scheduler including live risk-cache update, end-to-end; GT reads serve validation/display not scheduling. Exclude warmups, offline scoring and final file writes."
+  },
+  "source_sha256": {
+    "src/aerodepth_lite/presentation.py": "3f5c1a361ef32dcd6067321896ba9abbe89169db1aac043f0d1f0c02e0612cca",
+    "src/aerodepth_lite/presentation_scheduler.py": "81252097d33952b9bd92fb80978121087575857e55a36f71ea5d5cc8fb3a4d00",
+    "src/aerodepth_lite/scheduler_v2.py": "82389f5fb9bf1c80634fef602c754282924c3208c06e971ea0abd952bc52e154",
+    "src/aerodepth_lite/scheduler.py": "7287389c65969a7ee8c9256205685422095dfb6fd0f77d61ecc22c2d51ed9038",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/inference.py": "993995d53d9b6ca85ce6ad4f2304360c7c5372d36131703582ab15b8adbe1df7",
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/research.py": "4b88e8602e11cc1000d913039db086ea773894a935ae4e0c00b29e505b81f90c"
+  },
+  "source_historical_implementations_unchanged": true,
+  "known_limits": [
+    "A pooled AbsRel improves11.84%, nearRMSE worsens16.18% vsoriginal",
+    "Teacher gate rejected; KD exploratory negative result preserved",
+    "Two familiar validation paths; ablations change inference budgets",
+    "No energy/battery/flight-safety or independent test generalization claim"
+  ]
+}

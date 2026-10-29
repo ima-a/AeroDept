@@ -1,0 +1,141 @@
+{
+  "registered_utc": "2026-10-28T18:28:15.690726+00:00",
+  "scope": "Fixed TRAIN-only FP32 eval-mode gradient evidence; no optimizer, updates, validation/test evaluation, checkpoint selection or gate amendment",
+  "read_proposal": "results/expanded_validation_diagnostic_20261028T172239Z/NEXT_EXPERIMENT_PROPOSAL.md",
+  "proposal_sha256": "6841d0a342bfa774174cfc767fbba0d6c34d5e2955e6563fe6ef1473268e97ff",
+  "audit_report_sha256": "fac3e6ee8912b845d2281e44e4468a991e5cba36dfebc101a8e13b51750a8cbd",
+  "teacher_checkpoint": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/runs/B_teacher/best.pt",
+  "teacher_sha256": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660",
+  "baseline_A_sha256": "84b393a61f73ab95666a907931bff93fd21f65c2b5c1b2e170ce37b3c8f3f8b8",
+  "original_epoch4_sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+  "failed_gate_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/teacher_gate.json",
+  "failed_gate_sha256": "10e749c38271d360c2c0dc50cde6ec5416f410532b8f6817166f6ac6d3e36b1f",
+  "frozen_protocol_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/artifacts/hdd_recovery_20261028T140852Z/expanded-experiments/20261026T114024_recovery/protocol.json",
+  "frozen_protocol_sha256": "47d0955748d58ac8f4f752a550c2669d3e223293657420154e076bf14b10dd52",
+  "freeze_sha256": "d49ab655ff5b1a94e7809e24bad60eac1cdba26bd7c9ce44853e924918e89d90",
+  "manifest_sha256_uncompressed": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "reservations_sha256": "a525347120e77deadfefaeb96d72266ece05d16941c4356b421729f6c9e819a3",
+  "sampling_sha256": "19e63ba525534654abc1c88a3db165b4c012113edcf328abc21862e1e5c5ef32",
+  "sampling": "Unmodified fixed_training_subset(records.train,64): fractions .5,0,1,.25 over sorted realizations, deduplicate, first64; preserve function order, consecutive pairs, no shuffle/augmentation",
+  "sample_frames": 64,
+  "batches": 32,
+  "batch_size": 2,
+  "seed": 42,
+  "dataset_root": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir",
+  "mode": "model.eval(); all modules eval, parameters require gradients, FP32 forward/loss/gradients; autocast/TF32 disabled; no optimizer/scaler/clipping/steps",
+  "groups": {
+    "encoder": {
+      "parameters": 23508032,
+      "membership": "all model.encoder parameters"
+    },
+    "decoder": {
+      "parameters": 491601,
+      "membership": "all non-encoder parameters INCLUDING output head"
+    },
+    "output_head": {
+      "parameters": 145,
+      "membership": "model.head; SUBSET of decoder, not an independent disjoint block"
+    }
+  },
+  "loss_coefficients": {
+    "l1": 1.0,
+    "absolute_log": 0.2,
+    "spatial_gradient": 0.1,
+    "current_near": 0.0,
+    "candidate_near": 0.2
+  },
+  "loss_reductions": {
+    "mask": "Same finite inclusive GT[.1,1000]m, prediction globally finite and >=.1; near GT<10m",
+    "L1": "sum_V abs(P-G)/|V|",
+    "log": "sum_V abs(log(clamp(P,1e-6))-log(clamp(G,1e-6)))/|V|",
+    "gradient": "sum_valid_horizontal abs(deltaP-deltaG)/n_valid_horizontal + analogous vertical term, exactly existing loss",
+    "near_MAE": "sum_N abs(P-G)/|N|; differentiable zero when no N",
+    "current_near_partition": "L1 numerator restricted N but denominator |V|; log analog; gradient numerators restricted to valid edges with >=1 near-GT endpoint but denominators remain ALL valid edges of that direction. Boundary near/far edges belong to near-incident partition.",
+    "current_far_partition": "Complementary far-pixel L1/log and far-only valid gradient edges; original denominators. Sum with near partition reconstructs current objective.",
+    "candidate": "Existing current objective +0.2*separately normalized near_MAE; identical input tensors and single shared forward graph."
+  },
+  "gradient_objects": [
+    "L1",
+    "log",
+    "gradient",
+    "near_MAE",
+    "current_direct",
+    "current_near_partition",
+    "current_far_partition",
+    "near_L1_global_normalization",
+    "candidate_direct"
+  ],
+  "comparisons": [
+    "per-block raw L2 and per-parameter RMS for components and weighted components",
+    "cos(current,near_MAE), cos(candidate,near_MAE), cos(near_partition,far_partition), cos(component,near_MAE), cos(current,candidate)",
+    "near-partition/current norm ratio and weighted .2*near_MAE/current norm ratio; these ratios are not additive percentage shares",
+    "Euclidean first-order near-descent dot products for current/candidate; not AdamW-preconditioned updates"
+  ],
+  "validity_criteria": {
+    "all_32_batches_and_64_frozen_frames": true,
+    "finite_loss_predictions_gradients": true,
+    "input_prediction_parity": "One forward shared by all objectives; RGB/GT/mask/prediction hashes unchanged between reverse passes",
+    "model_and_batchnorm": "State digest identical initially, after every batch, and finally; no accumulated parameter .grad fields",
+    "RNG": "Python/NumPy/CPU/CUDA and loader-generator identity unchanged across each reverse pass and its common forward",
+    "gradient_reconstruction": {
+      "per_parameter_atol": 1e-06,
+      "per_parameter_rtol": 0.0001,
+      "checks": [
+        "g_current=g_L1+.2*g_log+.1*g_gradient",
+        "g_candidate=g_current+.2*g_near_MAE",
+        "g_current=g_current_near+g_current_far",
+        "g_near_L1_global=(|N|/|V|)*g_near_MAE"
+      ]
+    },
+    "source_checkpoint_gate_protocol_sampling_unchanged": true,
+    "no_invalid_value_omission": "Undefined cosine for zero vector is explicit null, not nonfinite data silently removed",
+    "on_failure": "Stop and report invalid/incomplete; no automatic change to sample, coefficient, mode, tolerance or device"
+  },
+  "repair_support_rule": {
+    "origin": "Numeric descriptive decision rules operationalized HERE before reading probe images/gradients; not claimed to be numerical thresholds from the older qualitative proposal. No statistical independence/significance claim.",
+    "primary_groups": [
+      "encoder",
+      "decoder"
+    ],
+    "head": "supplementary; cannot alone trigger support",
+    "informative": "near_count>0 and both current and near_MAE block norms>1e-12; all other batches retained and reported",
+    "minimum_informative_batches": 4,
+    "conflict_signal": "cos(current,near_MAE)<-0.05 in at least max(4,ceil(.25*n_informative)) batches; candidate cosine improves by >=.05 in >=75% of those conflicting batches",
+    "weak_signal": "norm(current_near_partition)/norm(current)<=.10 in at least max(4,ceil(.50*n_informative)) batches; weighted .2*near_MAE norm/current norm >=.10 in >=75% of those weak batches",
+    "breadth": "Triggering batches together cover >=4 underlying path groups and >=2 sampling fraction passes, and contain >=1 foggy TRAIN record. Mixed batches do not identify a trajectory-specific gradient cause.",
+    "support": "All validity criteria pass and either conflict or weak signal plus breadth holds for encoder or decoder. Supports REVIEW of exactly one pilot, not measured improvement, gate acceptance or KD.",
+    "otherwise": "No teacher-repair training justified by this probe; report negative/inconclusive evidence without new thresholds."
+  },
+  "conditional_pilot_if_supported": {
+    "status": "Proposal only; never launched in this task",
+    "single_intervention": "teacher near_weight 0 -> .2 using existing GT<10m separately normalized MAE, no other loss changes",
+    "budget_epochs": 5,
+    "updates_per_epoch": 22049,
+    "total_successful_updates": 110245,
+    "cosine_horizon_epochs": 20,
+    "lr_encoder": 1e-05,
+    "lr_decoder": 0.0001,
+    "batch": 2,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "amp_initial_scale": 1024,
+    "overflow_retries_max": 8,
+    "seed": 42,
+    "data": "full frozen TRAIN and unchanged VAL, no new data or resplit",
+    "initialization": "Fresh exact ImageNet1K_V2 encoder cache and decoder seed, not rejected teacher checkpoint fine-tuning; historical teacher first-five-epoch control if exact parity established, otherwise fresh matched near_weight0 control needed",
+    "BN": "original train-mode BN batch2 during training, unchanged eval-mode FP32 selection",
+    "selection": "minimum pooled FP32 validation AbsRel, no alternate checkpoint promotion",
+    "success": "Selected pilot checkpoint passes unchanged original numerical gate vs selected A: strictly lower pooled AbsRel, every path overall/near AbsRel/RMSE <=A, exact counts; finite training and all preregistered budget identities. Failure stops; no coefficient search. Pilot does not authorize full KD or silently become full scope.",
+    "historical_cost": "8.98h for original B first5, 40.48h full20; new USB/runtime unknown. Fresh matched control roughly doubles pilot cost.",
+    "implementation_constraint": "Current trainer rejects changed near weight and mixed source identities. Needs separately reviewed pilot/config/source lineage; no weakening existing guards or altering failed gate."
+  },
+  "source_sha256": {
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+  }
+}

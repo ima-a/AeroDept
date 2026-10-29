@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "synthetic_pixels": 8,
+  "checks": "Stats agrees with existing accumulator; band boundaries partition .1 through inclusive 1000; empty masks undefined."
+}

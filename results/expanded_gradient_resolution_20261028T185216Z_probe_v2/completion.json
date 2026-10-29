@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "batches": 32,
+  "frames": 64,
+  "model_mode": "eval",
+  "autocast": false,
+  "gradients_enabled": true,
+  "optimizer_instances": 0,
+  "optimizer_steps": 0,
+  "model_state_before": "dbdc6b27563761a82a9d9a06679e565407ad4862423b810f682b9eb141883a1e",
+  "model_state_after": "dbdc6b27563761a82a9d9a06679e565407ad4862423b810f682b9eb141883a1e",
+  "all_parameter_grad_fields_none": true,
+  "all_branch_rng_checks_passed": true,
+  "source_identity_preserved": true,
+  "checkpoint_gate_protocol_unchanged": true,
+  "train_unique_image_paths": 128,
+  "train_image_opens": 256,
+  "validation_test_image_reads": 0,
+  "peak_cuda_allocated_bytes": 510388736,
+  "seconds": 277.81835438899
+}

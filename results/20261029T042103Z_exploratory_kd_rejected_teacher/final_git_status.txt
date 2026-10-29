@@ -1,0 +1,9 @@
+?? docs/exploratory_kd.md
+?? results/20261029T042103Z_exploratory_kd_rejected_teacher/
+?? results/expanded_gradient_probe_20261028T182815Z/
+?? results/expanded_gradient_resolution_20261028T185216Z/
+?? results/expanded_gradient_resolution_20261028T185216Z_probe_v2/
+?? results/expanded_validation_diagnostic_20261028T172239Z/
+?? scripts/exploratory_kd_training.py
+?? src/aerodepth_lite/exploratory_kd.py
+?? tests/test_exploratory_kd.py

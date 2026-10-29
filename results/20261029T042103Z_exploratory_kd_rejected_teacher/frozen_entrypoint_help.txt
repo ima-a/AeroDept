@@ -1,0 +1,14 @@
+usage: exploratory_kd_training.py [-h] --bundle BUNDLE
+                                  --authorization-sha256 AUTHORIZATION_SHA256
+                                  [--resume]
+
+Explicitly authorized rejected-teacher exploration, separate from gated KD.
+The parent full KD constructor and gate are unchanged. This distinct scope
+uses its verified training step, FP32 evaluation and atomic checkpoint
+serialization.
+
+options:
+  -h, --help            show this help message and exit
+  --bundle BUNDLE
+  --authorization-sha256 AUTHORIZATION_SHA256
+  --resume

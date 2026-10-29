@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "mixed",
+      "comparison": "current",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "mixed",
+      "comparison": "partition",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "mixed",
+      "comparison": "candidate",
+      "passed": true,
+      "max_abs_difference": 1.4901161193847656e-08,
+      "max_fraction_of_allowed_tolerance": 0.0006251054001040757,
+      "parameters_checked": 1
+    },
+    {
+      "case": "mixed",
+      "comparison": "near_normalization",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "all_near",
+      "comparison": "current",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "all_near",
+      "comparison": "partition",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "all_near",
+      "comparison": "candidate",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "all_near",
+      "comparison": "near_normalization",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "no_near",
+      "comparison": "current",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "no_near",
+      "comparison": "partition",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "no_near",
+      "comparison": "candidate",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "no_near",
+      "comparison": "near_normalization",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "all_invalid",
+      "comparison": "current",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "all_invalid",
+      "comparison": "partition",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "all_invalid",
+      "comparison": "candidate",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    },
+    {
+      "case": "all_invalid",
+      "comparison": "near_normalization",
+      "passed": true,
+      "max_abs_difference": 0.0,
+      "max_fraction_of_allowed_tolerance": 0.0,
+      "parameters_checked": 1
+    }
+  ],
+  "dataset_images_used": 0
+}
