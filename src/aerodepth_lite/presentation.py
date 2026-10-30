@@ -27,6 +27,7 @@ def write(path, value):
     Path(path).parent.mkdir(parents=True,exist_ok=True)
     e.write_json(path,value)
 
+# Validation
 def validation_inputs(config):
     root = Path(config['dataset_root'])
     records, manifest = e.load_inputs(Path(config['manifest']),Path(config['reservations']),root)
@@ -55,6 +56,7 @@ def verify_file(path,sha):
         raise ValueError('Missing or changed pinned input: '+str(path))
 
 
+# Models
 def load_model(entry,device='cpu'):
     verify_file(entry['weights'],entry['sha256'])
     if entry['kind']=='export':
@@ -124,6 +126,7 @@ def read_sample(root,record,data):
     return x,y,v,io_s,prep
 
 
+# Sensors
 def causal_navigation(root,records):
     import h5py
     result=[];provenance={};grouped=defaultdict(list)
@@ -185,6 +188,7 @@ def cache_validation(config,protocol,result):
     write(cache/'completion.json',{'passed':True,'frames':n,'export_sha256':config['models']['A']['sha256'],'manifest_sha256':e.MANIFEST_SHA,'artifacts':{f.name:{'bytes':f.stat().st_size,'sha256':file_sha256(f)} for f in cache.iterdir() if f.is_file()}})
 
 
+# Replay
 def replay_quality(config,protocol,result):
     cache=Path(config['cache']);assert read(cache/'completion.json')['passed']
     p=np.load(cache/'predictions.npy',mmap_mode='r');g=np.load(cache/'targets.npy',mmap_mode='r');v=np.load(cache/'valid.npy',mmap_mode='r');gray=np.load(cache/'gray.npy',mmap_mode='r');features=read(cache/'features.json')
@@ -245,6 +249,7 @@ def synchronize(device):
     if str(device).startswith('cuda'):torch.cuda.synchronize(device)
 
 
+# Timing
 def actual_timing(config,protocol,result):
     root,allrecords,_=validation_inputs(config);windows=protocol['timing']['windows'];records=[]
     for tr,w in windows.items():

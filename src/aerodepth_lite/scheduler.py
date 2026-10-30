@@ -46,6 +46,7 @@ def motion_score(navigation: dict[str, float], scale: float = 5.0) -> tuple[floa
     return float(np.clip(raw / max(scale, 1e-6), 0.0, 1.0)), True
 
 
+# Risk
 def near_field_risk(depth: torch.Tensor | np.ndarray | None, threshold: float = 10.0) -> tuple[float, bool]:
     if depth is None:
         return 0.0, False

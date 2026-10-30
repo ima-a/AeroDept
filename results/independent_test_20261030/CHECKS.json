@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-30T02:48:47.157694+00:00",
+  "tests": "34 passed",
+  "command": "PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -B -m pytest -q -p no:cacheprovider tests/test_independent_test.py tests/test_presentation.py tests/test_scheduler_v2.py tests/test_model_loss_metrics.py",
+  "log_sha256": "e760bf85be249a68eba0400113e25c664e12a575c4424106c45f0219b86fa4ac",
+  "source_sha256": {
+    "src/aerodepth_lite/independent_test.py": "fced9a75bba6d9f6de9813a35d5918c66731cfb4b73600888c2179899d1ce963",
+    "src/aerodepth_lite/independent_data.py": "10ddfccfa883ee3844a234b287d215b5e572ec0fc81ba917dcbd0d05efdde664",
+    "src/aerodepth_lite/model.py": "39b857c86b37f5e71670f3a65f7f4567a9230e603212429876bda88097b1f119",
+    "src/aerodepth_lite/data.py": "99926086632d6b296ebeb142aa73be6d8ef900e6fd3000864868300f09ba902d",
+    "src/aerodepth_lite/metrics.py": "5bedd40a24691ab51db7fe8ad34fafba94638123e6c5d27f33476391474916ea",
+    "src/aerodepth_lite/losses.py": "4a68050ec22eed7dcf63d37be07778b19197bdea994f9671e64df6cefcc9cae5",
+    "src/aerodepth_lite/expanded.py": "c6c4bd0369a333ac8c57bfc56aad66bfad5bfc6356b76d32fc187d6c3ac892d8",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0",
+    "src/aerodepth_lite/inference.py": "b8eb7aef2c96da39cac2cf7f144648f032c7205b8d719443dcd78a349827c3ee",
+    "src/aerodepth_lite/presentation.py": "85838eb7839ca806f6f063b60638a08ce51fd1439b16af638dbe86fc716efc5f",
+    "src/aerodepth_lite/presentation_scheduler.py": "ff054a3eddbed0abf5c3de5ed3b7252c2a0d15f49c015c007407f38b59ce0f6c",
+    "src/aerodepth_lite/scheduler_v2.py": "eab4fea496804642dfcd5c958bffbb7c4c5a9abe0bca677a321b6db03e330e3a",
+    "src/aerodepth_lite/scheduler.py": "d1c900c6596e5e4315d18bd157f76586de3d52cfa2891c73b1a24a1aedff9549",
+    "src/aerodepth_lite/research.py": "4b88e8602e11cc1000d913039db086ea773894a935ae4e0c00b29e505b81f90c",
+    "scripts/independent_test.py": "52815d3bb850436c05eced31ce604cb545e0bf9647cdeddef6f5346b2f4bcf80",
+    "scripts/prepare_independent_test.py": "45c2b08d2f0aaa33c05b2edc1c4b016321ab31800b3cf03b138df2dfb8b662c5",
+    "tests/test_independent_test.py": "e7d45e953cfb4d352c16b4d8626d43038bc31d5bc1db433d46ce326fb05419e8",
+    "configs/presentation.json": "46002dcb03f66ffd89d7343dfdb6fe367af3f2fd008219bf1a19febaf5f1e5e4"
+  }
+}

@@ -12,6 +12,32 @@ def optional_json(path):
     except (FileNotFoundError,OSError,ValueError):return None
 
 
+def independent_study(repository):
+    """Read saved evidence only; never open test images or invoke evaluation."""
+    from .inference import file_sha256
+    folder=Path(repository)/'results/independent_test_20261030'
+    complete=optional_json(folder/'COMPLETION.json')
+    if not complete:
+        failed=optional_json(folder/'FAILED.json')
+        exposed=(folder/'EXPOSURE.json').exists()
+        return {'status':'INCOMPLETE' if (folder/'FAILED.json').exists() else 'IN PROGRESS' if exposed else 'NOT RUN',
+                'detail':failed or optional_json(folder/'run/progress.json') or {},'results':None}
+    try:
+        protocol_hash=file_sha256(folder/'PROTOCOL.json')
+        exposure=optional_json(folder/'EXPOSURE.json') or {}
+        if complete['status']!='COMPLETED' or complete['frames']!=8820 or not complete['equal_counts']:
+            raise ValueError('Invalid completion accounting')
+        if protocol_hash!=complete['protocol_sha256'] or exposure.get('protocol_sha256')!=protocol_hash:
+            raise ValueError('Protocol/exposure identity differs')
+        for name in complete['artifacts_sha256']:
+            if file_sha256(folder/name)!=complete['artifacts_sha256'][name]:
+                raise ValueError('Changed result artifact: '+name)
+        return {'status':'COMPLETED','detail':complete,'results':optional_json(folder/'results.json'),
+                'timing':optional_json(folder/'timing.json')}
+    except (OSError,ValueError,KeyError) as error:
+        return {'status':'UNAVAILABLE · integrity check failed','detail':str(error),'results':None}
+
+
 def load_dashboard_config(path, repository):
     """Resolve checkout-relative paths and explicit environment locations only.
 

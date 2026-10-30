@@ -1,0 +1,54 @@
+{
+  "scope": "Inference-only loading of the exact pinned immutable KD checkpoint; no resume, training or gate override.",
+  "reference_commit": "fb1b4aedd15280abdb1126293e022d78cdcbf4e5",
+  "checkpoint_sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+  "selected_epoch": 9,
+  "original_teacher_gate_passed": false,
+  "files": {
+    "src/aerodepth_lite/expanded.py": {
+      "historical_sha256": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+      "current_sha256": "c6c4bd0369a333ac8c57bfc56aad66bfad5bfc6356b76d32fc187d6c3ac892d8",
+      "ast_equal": true
+    },
+    "src/aerodepth_lite/model.py": {
+      "historical_sha256": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+      "current_sha256": "39b857c86b37f5e71670f3a65f7f4567a9230e603212429876bda88097b1f119",
+      "ast_equal": true
+    },
+    "src/aerodepth_lite/losses.py": {
+      "historical_sha256": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+      "current_sha256": "4a68050ec22eed7dcf63d37be07778b19197bdea994f9671e64df6cefcc9cae5",
+      "ast_equal": true
+    },
+    "src/aerodepth_lite/data.py": {
+      "historical_sha256": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+      "current_sha256": "99926086632d6b296ebeb142aa73be6d8ef900e6fd3000864868300f09ba902d",
+      "ast_equal": true
+    },
+    "src/aerodepth_lite/metrics.py": {
+      "historical_sha256": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+      "current_sha256": "5bedd40a24691ab51db7fe8ad34fafba94638123e6c5d27f33476391474916ea",
+      "ast_equal": true
+    },
+    "src/aerodepth_lite/repro.py": {
+      "historical_sha256": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+      "current_sha256": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+      "ast_equal": true
+    },
+    "src/aerodepth_lite/kaggle.py": {
+      "historical_sha256": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0",
+      "current_sha256": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0",
+      "ast_equal": true
+    },
+    "src/aerodepth_lite/exploratory_kd.py": {
+      "historical_sha256": "b8abafb3d7ba47bec555ac721bdf5ea4d41b5f7d0ac9c1ffb6f106bedb62f0da",
+      "current_sha256": "17fec20a98ee33d785f500c460d36da380a22ea8eebdaab624dc6417b2409a3b",
+      "ast_equal": true
+    },
+    "scripts/exploratory_kd_training.py": {
+      "historical_sha256": "11e40ccbdbce048617b8f8537423e5e6d35b2055b4a540e716bb6088d742800a",
+      "current_sha256": "11e40ccbdbce048617b8f8537423e5e6d35b2055b4a540e716bb6088d742800a",
+      "ast_equal": true
+    }
+  }
+}

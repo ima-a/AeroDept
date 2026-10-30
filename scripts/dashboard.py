@@ -6,7 +6,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import torch
-from aerodepth_lite.presentation_ui import optional_json,load_dashboard_config,validation_features,recorded_frame,inference_resource,actual_inference,colourize
+from aerodepth_lite.presentation_ui import optional_json,load_dashboard_config,validation_features,recorded_frame,inference_resource,actual_inference,colourize,independent_study
 
 st.set_page_config(page_title='AeroDepth-Lite · Research studio',page_icon='◈',layout='wide')
 st.markdown('''<style>
@@ -49,21 +49,24 @@ summary=optional_json(result/'model_summary.json')
 timing_active=(optional_json(result/'timing_activity.json') or {}).get('active',False)
 delivery=Path(cfg.get('delivery',ROOT/'.unavailable/delivery'))
 acquisition=optional_json(delivery/'acquisition_readiness.json')
-final_status='NOT RUN · acquisition blocked' if acquisition else 'Pending · no completed independent study'
+independent_folder=ROOT/'results/independent_test_20261030'
+independent=independent_study(ROOT);test_results=independent['results']
+final_status=independent['status']+' · 8,820 reserved frames'
+timing_active=timing_active or independent['status']=='IN PROGRESS'
+final_status_class='ready' if independent['status']=='COMPLETED' else 'pending'
 validation_status='VALIDATION · COMPLETED' if metrics and results else 'VALIDATION · RESULTS UNAVAILABLE'
-st.markdown('<div class="status-row"><span class="status-pill ready">'+validation_status+'</span><span class="status-pill">FP32 · METRES</span><span class="status-pill pending">INDEPENDENT TEST · NOT RUN</span></div>',unsafe_allow_html=True)
+st.markdown('<div class="status-row"><span class="status-pill ready">'+validation_status+'</span><span class="status-pill">FP32 · METRES</span><span class="status-pill '+final_status_class+'">INDEPENDENT TEST · '+independent['status']+'</span></div>',unsafe_allow_html=True)
 with st.sidebar:
     st.markdown('### The demonstration')
     st.caption('AeroDepth-Lite · local research')
     st.markdown('**1 · Compare**\n\nKeep pooled and near-field errors together.\n\n**2 · Explore**\n\nView a validation frame, then explicitly run inference.\n\n**3 · Schedule**\n\nSee when an old prediction is reused.')
     st.divider()
-    st.markdown('**Model roles**\n\n🟢 **A** · general-depth default\n\n🔵 **Original** · near-field reference\n\n🟠 **KD** · exploratory negative result')
+    st.markdown('**Model roles**\n\n🟢 **A** · general-depth default\n\n🔵 **Original** · near-field reference\n\n🟠 **KD** · negative validation result')
     st.divider()
     st.caption('Independent final study')
     st.markdown('**'+final_status+'**')
     st.caption('Synthetic MidAir data and simulated navigation sensors. This is not a flight-safety demonstration.')
-    written_report=delivery/'FINAL_REPORT.md'
-    if not written_report.is_file():written_report=ROOT/'docs/FINAL_REPORT.md'
+    written_report=ROOT/'docs/FINAL_REPORT.md'
     if written_report.is_file():
         st.download_button('Download final written report',written_report.read_bytes(),file_name='AeroDepth_Lite_Final_Report.md')
 
@@ -91,16 +94,18 @@ def show_depth(x,g,v,p,source):
 
 
 tabs=st.tabs(['Overview','Model comparison','Depth demonstration','Scheduler','Evidence'])
+# Overview
 with tabs[0]:
     st.subheader('One small model. Three different outcomes.')
-    st.write('The objective is to estimate metric range from drone RGB and examine when a model prediction can be reused, with measured quality/compute trade-offs. A ResNet-50 range teacher was trained to guide a MobileNetV3-Small student. The teacher failed its original acceptance gate; the later KD run is a separately authorized exploratory comparison with a negative result.')
+    st.caption('The headline cards below are validation results. Independent test results are shown separately.')
+    st.write('The objective is to estimate metric range from drone RGB and examine when a model prediction can be reused, with measured quality/compute trade-offs. A ResNet-50 range teacher was trained to guide a MobileNetV3-Small student. The teacher failed its original acceptance gate; the later KD run is a separately authorized exploratory comparison with a negative validation result.')
     if metrics:
         old=metrics['epoch4']['scopes']['pooled'];a=metrics['student_A']['scopes']['pooled'];kd=metrics['exploratory_KD']['scopes']['pooled']
         cols=st.columns(3)
         cols[0].metric('Default demonstration', 'Supervised A',f"{100*(a['absrel']/old['absrel']-1):.2f}% pooled AbsRel",delta_color='inverse')
         cols[1].metric('Near-field trade-off',f"{a['near_rmse']:.3f} m",f"{100*(a['near_rmse']/old['near_rmse']-1):+.2f}% near RMSE",delta_color='inverse')
         cols[2].metric('KD vs supervised A',f"{kd['absrel']:.6f}",f"{100*(kd['absrel']/a['absrel']-1):+.2f}% AbsRel",delta_color='inverse')
-        st.warning('A improves pooled overall accuracy while worsening near-field RMSE. Original epoch 4 remains the near-field reference. Fresh inference can still be wrong.')
+        st.warning('On validation, A lowers pooled AbsRel while worsening near-field RMSE. Original epoch 4 remains the near-field reference. Fresh inference can still be wrong.')
     else:unavailable('Verified model-comparison metrics unavailable.')
     st.markdown('**Architecture:** RGB → ImageNet-normalized MobileNetV3-Small encoder → skip decoder → positive Euclidean camera range in metres. Teacher: ResNet-50 encoder + metric-range decoder; teacher is not needed for student inference.')
     assignments=optional_json(result/'dataset_assignments.json')
@@ -119,16 +124,41 @@ with tabs[0]:
         {'Study':'Original teacher gate','Status':'Rejected · preserved'},
         {'Study':'Independent reserved final test','Status':final_status},
     ]),hide_index=True,width='stretch')
-    if acquisition:
-        with st.expander('Why final testing is blocked · exact acquisition checklist'):
+    if test_results:
+        st.markdown('**New independent test · all 8,820 frames**')
+        new_rows=[{'Model':key,**test_results[key+'_every']['overall']['metrics']} for key in ['A','Original','KD']]
+        st.dataframe(pd.DataFrame(new_rows)[['Model','absrel','rmse','near_absrel','near_rmse','delta1']],hide_index=True,width='stretch')
+        am=test_results['A_every']['overall']['metrics'];om=test_results['Original_every']['overall']['metrics'];km=test_results['KD_every']['overall']['metrics']
+        shifts={'A vs Original AbsRel':100*(am['absrel']/om['absrel']-1),'A vs Original near RMSE':100*(am['near_rmse']/om['near_rmse']-1),'KD vs A AbsRel':100*(km['absrel']/am['absrel']-1),'KD vs A near RMSE':100*(km['near_rmse']/am['near_rmse']-1)}
+        st.write('Independent test error changes: '+ '; '.join(f'{key} {value:+.2f}%' for key,value in shifts.items())+'. Negative means lower error.')
+        reversals=[key for key,value in shifts.items() if (value>0 if key=='A vs Original AbsRel' else value<0)]
+        if reversals:st.warning('Pooled ranking reversals relative to validation: '+', '.join(reversals)+'. The original validation findings and teacher rejection remain unchanged.')
+        st.info('A remains the preselected demonstration model. Test outcomes do not trigger model or policy selection. Inspect all four paths in Model comparison and all five A policies in Scheduler.')
+    elif independent['status']!='NOT RUN':
+        st.info('Independent study: '+independent['status']);st.json(independent['detail'],expanded=False)
+    elif acquisition:
+        with st.expander('Historical acquisition checklist · before the new downloads'):
             st.write(acquisition['human_action'])
             st.dataframe(pd.DataFrame([{'Environment / condition':' / '.join(x['realization'].split('/')[:2]),'Official page ID':x['official_page_ID'],'Internal ID':x['realization'].split('/')[-1],'Needed':'Left RGB + depth archives'} for x in acquisition['requested']]),hide_index=True,width='stretch')
-    st.caption('Only two familiar validation paths. Weather/scene samples are correlated. No measured energy, battery or flight-safety improvement is claimed.')
+    st.caption('Two familiar validation paths and four separately reserved test paths. Weather/scene samples are correlated. No measured energy, battery or flight-safety improvement is claimed.')
 
+# Comparison
 with tabs[1]:
     st.subheader('Keep overall and near-field results together.')
-    scope=st.selectbox('Comparison scope',scopes,format_func=lambda s:scope_labels[s])
-    rows=metric_rows(scope)
+    split=st.selectbox('Evaluation split',['Validation','New independent test','Historical exposed test'])
+    if split=='New independent test':
+        test_scopes=['pooled',*test_results['A_every']['per_trajectory']] if test_results else ['pooled']
+        scope=st.selectbox('Comparison scope',test_scopes)
+        rows=[{'Student':cfg['models'][key]['label'],**(test_results[key+'_every']['overall'] if scope=='pooled' else test_results[key+'_every']['per_trajectory'][scope])['metrics']} for key in ['A','Original','KD']] if test_results else []
+        st.caption('Independent reserved test · selected models unchanged · every-frame comparisons. All seven study traces score the same current-frame pixels.')
+    elif split=='Historical exposed test':
+        scope='pooled';rows=[]
+        st.warning('Historical 4,436-frame test of Original epoch 4. A and KD were not evaluated on this split; it is not an independent model-selection source.')
+        historical=optional_json(ROOT/'results/final_test/every.json')
+        if historical:st.json(historical,expanded=False)
+    else:
+        scope=st.selectbox('Comparison scope',scopes,format_func=lambda s:scope_labels[s])
+        rows=metric_rows(scope)
     if rows:
         columns=['Student','absrel','rmse','delta1','delta2','delta3','near_absrel','near_rmse','near_bias_m','valid_floor_rate','valid_pixels','near_valid_pixels']
         display_names={'absrel':'AbsRel ↓','rmse':'RMSE (m) ↓','delta1':'δ1 ↑','delta2':'δ2 ↑','delta3':'δ3 ↑','near_absrel':'Near AbsRel ↓','near_rmse':'Near RMSE (m) ↓','near_bias_m':'Near bias (m)','valid_floor_rate':'Floor rate','valid_pixels':'Valid pixels','near_valid_pixels':'Near pixels'}
@@ -137,21 +167,22 @@ with tabs[1]:
         st.caption('Lower error is better; delta accuracies higher is better. Near bias is signed P−GT in metres. Floor rate is a fraction on valid GT pixels, prediction ≤0.101 m. Undefined values stay null.')
         chart=pd.DataFrame([{'Student':r['Student'],'Overall AbsRel':r['absrel'],'Near AbsRel':r['near_absrel']} for r in rows]).set_index('Student')
         cols=st.columns(2)
-        with cols[0]:st.markdown('**Overall versus near AbsRel**');st.bar_chart(chart,color=['#51cfb7','#f1bd6a'],height=270)
+        with cols[0]:st.markdown('**Overall versus near AbsRel**');st.bar_chart(chart,color=['#51cfb7','#f1bd6a'],height=270,stack=False)
         with cols[1]:
             st.markdown('**Near-field RMSE · metres**')
             st.bar_chart(pd.DataFrame([{'Student':r['Student'],'Near RMSE (m)':r['near_rmse']} for r in rows]).set_index('Student'),color='#f1bd6a',height=270)
-    else:unavailable()
+    elif split!='Historical exposed test':unavailable('Independent study: '+independent['status'] if split=='New independent test' else 'Validation comparison unavailable.')
     history=optional_json(result/'training_curves.json')
     if history:
         with st.expander('Recorded training histories · different data/budgets, not a controlled architecture ranking'):
             h=pd.DataFrame(history['rows']);wide=h.pivot(index='epoch',columns='model',values='validation_absrel');st.line_chart(wide)
             st.caption(history['precision_note'])
     else:unavailable('Training-curve records unavailable.')
-    with st.expander('Depth bands and detailed comparison figures'):
+    with st.expander('Validation depth bands and detailed comparison figures'):
         for filename in ['figures/overall_near_tradeoffs.png','figures/depth_bands.png']:
             if (comparison/filename).is_file():st.image(str(comparison/filename),width='stretch')
 
+# Inference
 with tabs[2]:
     st.subheader('Recorded frames, or a real forward pass.')
     st.caption('MidAir imagery: Fonder & Van Droogenbroeck · CC BY-NC-SA 4.0 · validation inputs only.')
@@ -213,10 +244,37 @@ with tabs[2]:
             player()
         elif student!='A':st.caption('Continuous scheduler playback is prepared for A. Original/KD recorded predictions exist only for the six fixed comparison examples; other frames require the explicit inference button.')
 
+# Scheduler
 with tabs[3]:
     st.subheader('An update is a decision, not a detection.')
-    study=st.selectbox('Scheduler study',['New supervised A validation','Historical epoch-4 V1','Historical epoch-4 V2'])
-    if study.startswith('Historical'):
+    study=st.selectbox('Scheduler study',['New supervised A validation','New independent test · A','Historical exposed test · Original','Historical epoch-4 V1','Historical epoch-4 V2'])
+    if study=='New independent test · A':
+        if not test_results:unavailable('Independent study: '+independent['status'])
+        else:
+            policy=st.selectbox('Independent A policy',['A_every','A_fixed2','A_fixed5','A_budget_fixed','A_v2'])
+            test_scope=st.selectbox('Independent scheduler scope',['pooled',*test_results[policy]['per_trajectory']])
+            row=test_results[policy]['overall'] if test_scope=='pooled' else test_results[policy]['per_trajectory'][test_scope]
+            cols=st.columns(4)
+            cols[0].metric('Actual fresh calls',str(row['inference_calls']))
+            cols[1].metric('Frames reused',f"{100*row['skip_rate']:.1f}%")
+            cols[2].metric('Near RMSE',f"{row['metrics']['near_rmse']:.3f} m")
+            cols[3].metric('Maximum age',str(row['max_prediction_age']))
+            st.json(row,expanded=False)
+            st.caption('Actual model calls · one CPU timing pass, two threads. Inference + scheduler is compute time. Shared RGB/range I/O and decode are measured once; scoring and logging are excluded from per-policy compute. No energy or end-to-end FPS claim.')
+            frame_table=pd.read_csv(independent_folder/'comparison.csv')
+            st.dataframe(frame_table[(frame_table.scope==test_scope)&frame_table.comparison.str.startswith('A_')],hide_index=True,width='stretch')
+            trace=pd.read_csv(independent_folder/'run'/f'{policy}_frames.csv')
+            trajectory=st.selectbox('Independent timeline trajectory',list(test_results[policy]['per_trajectory']))
+            trace=trace[trace.trajectory==trajectory]
+            st.line_chart(trace.set_index('frame_index')[['prediction_age']],height=230,color='#51cfb7')
+            with st.expander('Saved decisions · source, age, reason and offline events'):
+                st.dataframe(trace[['frame_index','infer','source_index','prediction_age','reason','critical_event']],hide_index=True,width='stretch')
+            st.caption('Events use GT only for offline scoring. A fresh update is not a detected hazard; delayed terminal events are right-censored.')
+            if (independent_folder/'figures/quality_calls.png').is_file():st.image(str(independent_folder/'figures/quality_calls.png'),width='stretch')
+    elif study=='Historical exposed test · Original':
+        st.warning('Previously exposed historical test · Original epoch 4 only · 4,436 frames. Keep separate from the new 8,820-frame study.')
+        st.dataframe(pd.read_csv(ROOT/'results/final_test/comparison.csv'),hide_index=True,width='stretch')
+    elif study.startswith('Historical'):
         folder=ROOT/'results'/('scheduler_v1' if study.endswith('V1') else 'scheduler_v2')
         st.warning('Historical epoch-4 study. These results do not measure supervised A or exploratory KD.')
         if (folder/'comparison.csv').is_file():st.dataframe(pd.read_csv(folder/'comparison.csv'),hide_index=True,width='stretch')
@@ -245,10 +303,18 @@ with tabs[3]:
         else:unavailable('Actual repeated timing pending.')
     else:unavailable('New A scheduler evaluation pending.')
 
+# Evidence
 with tabs[4]:
     st.subheader('Trace every number back to a record.')
     with st.expander('Artifact and model identities · full SHA-256 and local locations'):
         st.json({'models':cfg['models'],'comparison':cfg['comparison'],'presentation_results':cfg['results'],'dataset_root':cfg['dataset_root']})
+    st.markdown('**New independent test · '+independent['status']+'**')
+    for name in ['REPORT.md','PROTOCOL.json','EXPOSURE.json','COMPLETION.json','comparison.csv','results.json','timing.json','VERIFICATION.json','figures/quality_calls.png']:
+        path=independent_folder/name
+        if path.is_file():st.download_button('Download independent test / '+name,path.read_bytes(),file_name='independent_'+path.name,key='independent_'+name)
+    st.markdown('**Historical exposed test · Original only**')
+    path=ROOT/'results/final_test/comparison.csv'
+    if path.is_file():st.download_button('Download historical exposed test table',path.read_bytes(),file_name='historical_test_comparison.csv')
     columns=st.columns(2)
     for col,(folder,names) in zip(columns,[(result,['PROTOCOL.json','scheduler_comparison.csv','timing_individual.csv','live_cache_equivalence.json','REPORT.md','FINAL_TEST_PROPOSAL.json','figures/A_scheduler_quality.png','figures/A_live_timing.png']),(comparison,['comparison.csv','depth_band_metrics.csv','changes.csv','REPORT.md','figures/student_contact_sheet.png'])]):
         with col:
@@ -260,6 +326,7 @@ with tabs[4]:
     with st.expander('Launch and validation reproduction commands'):
         st.code('python -m pip install -e ".[dashboard]"\npython -m streamlit run scripts/dashboard.py\n\n# Fresh frozen config/output only; completed evidence must not be overwritten.\npython scripts/presentation.py cache --config /path/to/fresh_config.json\npython scripts/presentation.py quality --config /path/to/fresh_config.json\npython scripts/presentation.py cache-check --config /path/to/fresh_config.json\npython scripts/presentation.py timing --config /path/to/fresh_config.json',language='bash')
     proposal=optional_json(result/'FINAL_TEST_PROPOSAL.json')
-    if proposal:st.json(proposal,expanded=False)
-    if (result/'FINAL_TEST_COMMAND.txt').is_file():st.code((result/'FINAL_TEST_COMMAND.txt').read_text(),language='bash')
+    if proposal:
+        with st.expander('Preserved historical blocked proposal · superseded by the separate ready protocol'):
+            st.json(proposal,expanded=False)
     st.caption('No UI action trains, tunes, benchmarks or evaluates test data. Final testing requires a separate frozen exposure protocol and an explicit opt-in CLI invocation. Missing results are shown as unavailable or pending.')

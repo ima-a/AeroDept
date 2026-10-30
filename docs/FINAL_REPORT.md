@@ -1,6 +1,6 @@
 # AeroDepth-Lite — consolidated final research report
 
-Status: completed training and validation; independent reserved final study **NOT RUN**. No slides, new training, tuning, test-pixel access or Git publication in this delivery. This report consolidates saved evidence; it does not repeat the completed experiments.
+Status: training and validation are complete. The separately authorized independent reserved study is **COMPLETED and verified**, with 8,820 frames and seven frozen comparisons. No new training, tuning, teacher repair, KD rerun or presentation generation is part of this delivery. Existing presentation/evidence and one-word code markers are preserved. See [storage records](archive_locations.md), [the code guide](../CODE_GUIDE.md) and [the viva guide](VIVA_GUIDE.md).
 
 ## Problem and objectives
 
@@ -28,7 +28,7 @@ Scheduler inputs are causal simulated IMU accelerometer/gyroscope and held simul
 |---|---:|---:|---:|---|
 | Expanded TRAIN |12|20|44,098|Training completed|
 | Unchanged VAL |2|2|4,410|Development and selection; familiar paths|
-| Reserved independent test |4|4|8,820 expected|NOT RUN; image acquisition missing|
+| Reserved independent test |4|4|8,820 verified|Completed once; independent frozen evaluation|
 | Legacy completed test |2|2|4,436|Previously exposed; historical and quarantined|
 
 Different climates of the same underlying flight count as one path. Training has Kite0000/0001/0002/0005/0006/0021 and PLE0001/0002/0004/0005/0006/0007; validation is Kite0003 and PLE0000; reserved groups are Kite0007/0008 and PLE0008/0009. Legacy test Kite0004/PLE0003 and every equivalent climate are excluded from training. Pilot-exposed Kite0003/0021 cannot be new test: Kite0003 stays validation and0021 training. HDF5 position-stream hashes establish weather equivalence. Different paths may still share scenery; this is not geographic isolation.
@@ -104,22 +104,97 @@ Actual timing: FP32/eval batch1, CPU2 threads and GTX1650 CUDA; ten excluded war
 
 Risk caching reduces median scheduler time13.43% CPU/15.81% CUDA. End-to-end median is3.07% worse CPU and0.37% better CUDA, with overlapping repetition ranges: no robust end-to-end speedup. Every-frame model-only medians are14.48ms CPU/9.66ms CUDA, not playback FPS or full-pipeline throughput. No energy or battery reduction was measured.
 
-## Independent final study — NOT RUN
+## Independent final study · 30 October 2026
 
-Current healthy rescue indices contain no reserved image records, and explicit extracted targets are absent. The only surviving official configuration contains24 completed training image links plus6 sensor links and zero reserved image links. No archives were found in the inspected healthy non-dataset storage locations. Historical acquisition metadata also records reserved archives absent. A later bounded local inventory mounted the kernel-write-protected HDD read-only and checked14 documented HDD/USB roots plus the original Kaggle ZIP central-directory filenames. None of the four reserved realizations was present. The HDD was safely unmounted; its recorded hardware failure was not repaired. The detailed inventory is linked below. No reserved RGB/depth/header or archive member was opened.
+**COMPLETED:** one authorized frozen study; 8,820 current frames in each of seven comparisons; 35 pooled/per-path comparison rows. All counts, saved identities, fixed schedules, source ages, events/censoring and pooled tables passed read-only verification. No training, tuning or automatic repeat occurred.
 
-All four corresponding climate HDF5 files are present. Request exactly8 archives (left RGB + depth each) on the [official form](https://midair.ulg.ac.be/download.html):
+Eight verified ZIPs supplied 17,640 images. Kite foggy 2007 has 2,204 pairs; Kite sunny 0008 has 2,205; PLE spring 5008 has 2,206; PLE winter 6009 has 2,205. Archives occupy 5,866,144,441 bytes; extracted images 6,668,899,690 bytes; four reused HDF5 copies 310,171,768 bytes. Exact filenames/counts/CRC/HDF correspondence and path/weather-equivalent leakage checks passed before freeze. All downloads are retained, with staging outside the repository on healthy local storage.
 
-| Environment | Condition | Official page ID | Internal realization | Expected HDF5 frames |
-|---|---|---|---|---:|
-|Kite_training|foggy|0007|trajectory_2007|2204|
-|Kite_training|sunny|0008|trajectory_0008|2205|
-|PLE_training|spring|4008|trajectory_5008|2206|
-|PLE_training|winter|4009|trajectory_6009|2205|
+Protocol SHA-256: `6a1bb71c98ba3a5b513ff46e7babb4c33dca168886f9561072e8095cff71473f`. Manifest SHA-256: `4220cb10bd3d7671a4e08498b2f9ce34860ccdc95debce6eb93cb25cfb7da9f2`. [Ready protocol](../results/independent_test_20261030/PROTOCOL.json), [exclusive exposure ledger](../results/independent_test_20261030/EXPOSURE.json), [completion](../results/independent_test_20261030/COMPLETION.json), [saved-evidence verification](../results/independent_test_20261030/VERIFICATION.json). The ledger preceded the first test decoder access; existing output/exposure prevents retry.
 
-Human action: select only these conditions/IDs and left RGB/depth; enter your own email and accept the terms to receive a fresh authorized configuration. Complete CAPTCHA if shown (not confirmed by text inspection). Do not view sample overviews or request all paths. Provide access privately, never paste signed URLs publicly. Do not redownload identical HDF5 records. Current USB free space is about9.4GiB; requested compressed/extracted sizes are UNKNOWN. Measure official lengths and member sizes before promising download+extraction capacity; use healthy external storage and preserve backups.
+Primary: five A policies, with full V2 versus validation-frozen budget-fixed as the predeclared contrast. Secondary: Original and exploratory KD every-frame versus A every-frame. The fixed comparator uses K=ceil(N×2455/4410), positions ceil(kN/K), independently of observed adaptive test calls. Numerical preprocessing, strict deltas, GT validity/near thresholds and pixel pooling are unchanged.
 
-The user has authorized ONE study without another confirmation, but actual prerequisites are not met. The old blocked proposal is preserved. This delivery adds a separate blocked V2 specification: A five frozen policies primary, plus original/KD every-frame predeclared secondary analyses. No ready protocol, exposure ledger or completion was fabricated. The existing opt-in runner supports the original A matrix; the newly requested supplementary/secondary/timing scope needs a separately versioned extension and focused guards before a genuine ready freeze. This is a remaining implementation prerequisite, not a completed final evaluation. Exact counts/root/archive/HDF5/manifest/source/model identities and measurement/aggregation definitions must be frozen before the first test decoder access. No split redraw or automatic retry after exposure.
+On the independent test, A versus Original changes pooled AbsRel by -1.82% and near RMSE by +1.41%. KD versus A changes pooled AbsRel by -0.13% and near RMSE by +1.80%. Negative changes mean lower error. These new outcomes do not erase the negative validation findings or the failed teacher gate; A remains the preselected demonstration model.
+
+The frozen primary V2-versus-budget-fixed comparison uses 3,718 versus 4,912 actual calls. AbsRel changes +0.43%, near RMSE -0.25%, and measured inference-plus-scheduler time -17.08%. Maximum observed event-update delay is 4 versus 1 frames; right-censored events are 0 versus 0. A fresh update is not a detection guarantee.
+
+### pooled
+
+| Model / policy | AbsRel ↓ | RMSE m ↓ | δ1 ↑ | δ2 ↑ | δ3 ↑ | Near AbsRel ↓ | Near RMSE m ↓ | Calls |
+|---|---|---|---|---|---|---|---|---|
+| A_every | 0.383690 | 81.813343 | 0.406799 | 0.661703 | 0.792140 | 0.439396 | 4.144905 | 8820 |
+| A_fixed2 | 0.387019 | 81.975304 | 0.405759 | 0.660284 | 0.790959 | 0.442566 | 4.369061 | 4411 |
+| A_fixed5 | 0.412312 | 83.462253 | 0.399407 | 0.653437 | 0.785177 | 0.464057 | 7.756830 | 1765 |
+| A_budget_fixed | 0.386539 | 81.962581 | 0.406137 | 0.660468 | 0.791392 | 0.442450 | 4.416516 | 4912 |
+| A_v2 | 0.388208 | 82.298352 | 0.406031 | 0.659257 | 0.790126 | 0.439805 | 4.405438 | 3718 |
+| Original_every | 0.390815 | 81.798271 | 0.381188 | 0.644062 | 0.791480 | 0.487086 | 4.087260 | 8820 |
+| KD_every | 0.383202 | 82.173502 | 0.411403 | 0.661888 | 0.787492 | 0.436249 | 4.219446 | 8820 |
+
+### Kite_training/foggy/trajectory_2007
+
+| Model / policy | AbsRel ↓ | RMSE m ↓ | δ1 ↑ | δ2 ↑ | δ3 ↑ | Near AbsRel ↓ | Near RMSE m ↓ | Calls |
+|---|---|---|---|---|---|---|---|---|
+| A_every | 0.233710 | 78.364065 | 0.608260 | 0.886045 | 0.960080 | 0.182073 | 3.102119 | 2204 |
+| A_fixed2 | 0.235758 | 78.566267 | 0.608514 | 0.884996 | 0.958970 | 0.183720 | 3.382324 | 1102 |
+| A_fixed5 | 0.249707 | 80.321071 | 0.604302 | 0.880481 | 0.954849 | 0.192619 | 5.271800 | 441 |
+| A_budget_fixed | 0.235239 | 78.531337 | 0.608936 | 0.885844 | 0.959255 | 0.184402 | 3.549451 | 1227 |
+| A_v2 | 0.241673 | 79.524608 | 0.608158 | 0.882499 | 0.957243 | 0.183913 | 4.016049 | 621 |
+| Original_every | 0.282769 | 77.610310 | 0.490006 | 0.778229 | 0.904023 | 0.272358 | 2.756589 | 2204 |
+| KD_every | 0.230382 | 79.045396 | 0.621987 | 0.895550 | 0.961209 | 0.186724 | 3.085750 | 2204 |
+
+### Kite_training/sunny/trajectory_0008
+
+| Model / policy | AbsRel ↓ | RMSE m ↓ | δ1 ↑ | δ2 ↑ | δ3 ↑ | Near AbsRel ↓ | Near RMSE m ↓ | Calls |
+|---|---|---|---|---|---|---|---|---|
+| A_every | 0.544881 | 126.223733 | 0.065705 | 0.199668 | 0.400885 | 0.404106 | 4.044662 | 2205 |
+| A_fixed2 | 0.544626 | 126.220357 | 0.065890 | 0.200499 | 0.401088 | 0.405437 | 4.408612 | 1103 |
+| A_fixed5 | 0.545245 | 126.408625 | 0.065506 | 0.198532 | 0.402090 | 0.409206 | 4.813383 | 441 |
+| A_budget_fixed | 0.544577 | 126.245126 | 0.065748 | 0.199383 | 0.402016 | 0.407058 | 4.346573 | 1228 |
+| A_v2 | 0.545369 | 126.372778 | 0.066001 | 0.198130 | 0.398508 | 0.409256 | 4.981709 | 695 |
+| Original_every | 0.491769 | 126.794208 | 0.117185 | 0.289704 | 0.491811 | 0.204875 | 2.255965 | 2205 |
+| KD_every | 0.551861 | 126.564154 | 0.062087 | 0.190963 | 0.381596 | 0.418402 | 4.164355 | 2205 |
+
+### PLE_training/spring/trajectory_5008
+
+| Model / policy | AbsRel ↓ | RMSE m ↓ | δ1 ↑ | δ2 ↑ | δ3 ↑ | Near AbsRel ↓ | Near RMSE m ↓ | Calls |
+|---|---|---|---|---|---|---|---|---|
+| A_every | 0.334740 | 49.392397 | 0.493041 | 0.776523 | 0.888847 | 0.379440 | 3.365328 | 2206 |
+| A_fixed2 | 0.336127 | 49.549236 | 0.491859 | 0.775349 | 0.888354 | 0.379725 | 3.366251 | 1103 |
+| A_fixed5 | 0.350586 | 51.117740 | 0.489056 | 0.770847 | 0.884622 | 0.380790 | 3.690481 | 442 |
+| A_budget_fixed | 0.335786 | 49.514489 | 0.492624 | 0.775737 | 0.888929 | 0.379598 | 3.360605 | 1229 |
+| A_v2 | 0.340827 | 50.083864 | 0.491641 | 0.773423 | 0.887035 | 0.378321 | 3.619280 | 738 |
+| Original_every | 0.348892 | 51.077478 | 0.483851 | 0.756080 | 0.875094 | 0.443289 | 4.031056 | 2206 |
+| KD_every | 0.339704 | 50.012651 | 0.483985 | 0.769286 | 0.884139 | 0.396170 | 3.506637 | 2206 |
+
+### PLE_training/winter/trajectory_6009
+
+| Model / policy | AbsRel ↓ | RMSE m ↓ | δ1 ↑ | δ2 ↑ | δ3 ↑ | Near AbsRel ↓ | Near RMSE m ↓ | Calls |
+|---|---|---|---|---|---|---|---|---|
+| A_every | 0.440121 | 55.320550 | 0.422947 | 0.735320 | 0.877592 | 0.606827 | 5.014265 | 2205 |
+| A_fixed2 | 0.449838 | 55.826714 | 0.419619 | 0.731271 | 0.874442 | 0.612906 | 5.337441 | 1103 |
+| A_fixed5 | 0.519251 | 59.925677 | 0.402322 | 0.715413 | 0.858910 | 0.655943 | 10.533072 | 441 |
+| A_budget_fixed | 0.448878 | 55.784023 | 0.420046 | 0.731742 | 0.874446 | 0.612386 | 5.376952 | 1228 |
+| A_v2 | 0.443212 | 55.511515 | 0.421146 | 0.733813 | 0.876556 | 0.607600 | 5.055119 | 1664 |
+| Original_every | 0.451437 | 53.665238 | 0.407627 | 0.716455 | 0.864294 | 0.627238 | 4.647456 | 2205 |
+| KD_every | 0.430639 | 55.166191 | 0.438641 | 0.741015 | 0.880190 | 0.584823 | 5.083697 | 2205 |
+
+Subgroup caution: A regresses on Kite sunny, with AbsRel +10.80% and near RMSE +79.29% versus Original. V2 near RMSE is worse than budget-fixed on Kite foggy, Kite sunny and PLE spring; its PLE winter improvement produces the small pooled near-RMSE benefit. The sunny trajectory has zero defined critical events, so event rates/delays there remain undefined rather than zero-error claims.
+
+### Counts and execution boundaries
+
+| Scope | Valid pixels / comparison | Near pixels / comparison |
+|---|---|---|
+| pooled | 377372106 | 105333081 |
+| Kite_training/foggy/trajectory_2007 | 99812690 | 22311420 |
+| Kite_training/sunny/trajectory_0008 | 87117266 | 945433 |
+| PLE_training/spring/trajectory_5008 | 93182086 | 35039499 |
+| PLE_training/winter/trajectory_6009 | 97260064 | 47036729 |
+
+All seven traces score every current frame, including reused predictions. Per-path/pooled signed bias, floor diagnostics, mean/max ages, reasons, event delays and censoring, actual inference/scheduler/transfer timing, and complete traces are in the [full independent study report](../results/independent_test_20261030/REPORT.md), [comparison CSV](../results/independent_test_20261030/comparison.csv) and [results JSON](../results/independent_test_20261030/results.json).
+
+Actual timing was one CPU FP32 pass, batch 1, two threads, rotated seven-policy order and 10 excluded synthetic warmups per model. Shared I/O was 33.710 s, shared decode/resize 402.683 s, and whole-matrix wall 1669.140 s. Inference includes transfer and forward; scheduler includes decision and fresh risk-cache update. Offline scoring/logging are excluded from per-policy compute. Matrix wall includes all seven comparisons, so it is not single-policy end-to-end throughput. CUDA was unavailable in this runtime; historical validation CUDA timings are separate. One pass and uncontrolled OS/cache/load do not establish reproducible speedups or energy savings.
+
+No samples were silently discarded and no nonfinite predictions were hidden. Per-path errors and ranking reversals remain visible; pixel totals do not represent independent samples. Four reserved simulated paths and possible shared scenery limit generalization. Use [the study guide](independent_final_test.md) for full-data requirements and the safe `python scripts/verify_independent_test.py` audit; do not remove the exposure ledger to rerun a completed study.
 
 ## Demonstration, reproduction and delivery
 
@@ -141,14 +216,18 @@ aerodepth infer \
   --image /path/to/your_RGB.jpg --output /path/to/new_prediction.npy --device cpu
 ```
 
-Classroom sequence: Overview trade-off cards and test status → Model comparison pooled then Kite foggy → Depth demonstration typical/poor presets, original/A/KD selectors and one explicit inference → A recorded V2 replay with age/source → Scheduler V2 versus budget quality and actual timing → Evidence downloads and blocked final-study checklist. Fresh is not necessarily correct; finish with limitations rather than a safety claim.
+Classroom sequence: Overview trade-off cards and test status → Model comparison pooled then Kite foggy → Depth demonstration typical/poor presets, original/A/KD selectors and one explicit inference → A recorded V2 replay with age/source → Scheduler V2 versus budget quality and actual timing → Evidence downloads for the independent protocol, exposure, completion and result table. Fresh is not necessarily correct; finish with limitations rather than a safety claim.
 
 ## Limitations and conclusion
 
-Only two familiar validation paths informed selection and analysis, including pilot exposure. Conditions and neighbouring frames are correlated; pooled pixels heavily favour PLE near field. Synthetic scenes/simulated sensors and shared scenery limit real-world transfer. Matched A/KD controls permit a narrow run comparison, not statistical proof across seeds; original training differs in data/budget. Teacher near regression mechanisms (loss weighting, BN, coverage, architecture) remain hypotheses. The gradient probe did not justify repair; rejected KD does not establish that distillation always fails. Timing windows, I/O/cache state and desktop activity limit extrapolation. There is no independent new-test result, measured energy/battery gain, flight safety or guaranteed obstacle detection.
+Only two familiar validation paths informed selection and analysis, including pilot exposure. Conditions and neighbouring frames are correlated; pooled pixels heavily favour PLE near field. Synthetic scenes/simulated sensors and shared scenery limit real-world transfer. Matched A/KD controls permit a narrow run comparison, not statistical proof across seeds; original training differs in data/budget. Teacher near regression mechanisms (loss weighting, BN, coverage, architecture) remain hypotheses. The gradient probe did not justify repair; rejected KD does not establish that distillation always fails. Timing windows, I/O/cache state and desktop activity limit extrapolation. The independent study adds four reserved simulation paths; it does not measure energy/battery gains, flight safety or guaranteed obstacle detection.
 
-Supported conclusion: expanded supervised A improves overall validation range prediction with a near-field regression; this rejected teacher does not yield a superior exploratory KD student. V2 offers a mixed quality/call trade-off, and caching reduces scheduler work without a robust measured end-to-end improvement. Preserve every negative result and complete the reserved independent study only after genuine acquisition/integrity/manifest/protocol prerequisites.
+Validation conclusion: expanded supervised A improves overall range prediction with a near-field regression; exploratory KD underperforms A on that recorded comparison. Live risk caching reduced scheduler work without a robust measured end-to-end improvement.
 
-Verification and exact changed-source identities are recorded separately in this delivery results directory; completed historical protocols/results remain unchanged. No Git publication or automatic deployment promotion is performed.
+On the independent test, A versus Original changes pooled AbsRel by -1.82% and near RMSE by +1.41%. KD versus A changes pooled AbsRel by -0.13% and near RMSE by +1.80%. Negative changes mean lower error. These new outcomes do not erase the negative validation findings or the failed teacher gate; A remains the preselected demonstration model.
 
-Current bounded HDD/USB evidence: [acquisition inventory](../results/acquisition_publication_20261029T180214Z/REPORT.md). The exact8 missing streams remain separate from already-present HDF5 records. No duplicate download or final evaluation was started.
+The frozen primary V2-versus-budget-fixed comparison uses 3,718 versus 4,912 actual calls. AbsRel changes +0.43%, near RMSE -0.25%, and measured inference-plus-scheduler time -17.08%. Maximum observed event-update delay is 4 versus 1 frames; right-censored events are 0 versus 0. A fresh update is not a detection guarantee.
+
+Verification and exact changed-source identities are recorded separately in this delivery results directory; completed historical protocols/results remain unchanged. The owner subsequently authorized a selective commit/push after final verification. No automatic deployment promotion or history rewrite is part of this delivery.
+
+The [29 October acquisition inventory](../results/acquisition_publication_20261029T180214Z/REPORT.md) is historical. The 30 October Downloads inventory and new ready protocol supersede its acquisition blocker; frozen historical records remain unchanged.

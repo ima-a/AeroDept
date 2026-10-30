@@ -1,0 +1,44 @@
+{
+  "status": "COMPLETED",
+  "completed_utc": "2026-10-30T03:17:24.313132+00:00",
+  "protocol_sha256": "6a1bb71c98ba3a5b513ff46e7babb4c33dca168886f9561072e8095cff71473f",
+  "manifest_sha256": "4220cb10bd3d7671a4e08498b2f9ce34860ccdc95debce6eb93cb25cfb7da9f2",
+  "frames": 8820,
+  "comparison_rows": 35,
+  "policies": [
+    "A_every",
+    "A_fixed2",
+    "A_fixed5",
+    "A_budget_fixed",
+    "A_v2",
+    "Original_every",
+    "KD_every"
+  ],
+  "equal_counts": true,
+  "model_state_before_and_after": {
+    "A": "24f042a26047ea97e79119a69e4e4954d452b45102be8564bbaa08a66f81e031",
+    "Original": "e8dcc30b6b4149f0c07b68a26b97db0baafa426a90901eb22ab9e6885ebb643f",
+    "KD": "1b4d5236d14ab7c20e180b5adf4adf64de25ee5a56d0c73a543b44d1053f33b3"
+  },
+  "warmup_calls_per_model": 10,
+  "artifacts_sha256": {
+    "comparison.csv": "a482a9d1d5959733df4789660eca9a49be379a50be4949cf924973a1224bffca",
+    "results.json": "09961962557b5d7db157dd464d78676f3b7e6bbb3fc350ce2f6359a9f83d01ba",
+    "timing.json": "2f39016977281c74cbb80ee49b885f1bcd70007feb2abfae9f79d576b9801a44",
+    "run/A_budget_fixed_frames.csv": "df3ec354b4c38fede210e014a09a9a8e590085f4b17cdfe2937b971f4be69c5a",
+    "run/A_every_frames.csv": "a49726dae274ca2c5c581fbeb5343f27e344760762cbabece38de6650ab6eb4d",
+    "run/A_fixed2_frames.csv": "3566f93e0ae7d5d1191c9baf31321f4afc2120b6c00b0d1d12cd94c38ccbe63b",
+    "run/A_fixed5_frames.csv": "4d8a8e98994c276d5fac08851f1a00aaffec5c2a651a0d1bcada40924e1b0d36",
+    "run/A_v2_frames.csv": "cc8b1021d838bbbb3dd5139da34c00774ce8f5f3bb23d7a1b4ecaf4b90a52fe7",
+    "run/KD_every_frames.csv": "ad5ba457d5bc3e5d97bee2e7009b3753ac5f9640141fc282f80759a84671ffa4",
+    "run/Original_every_frames.csv": "900eaff3bc2627e4a30574f85b5bd6100f909ea109e8b0eed490032c9aced010",
+    "run/A_budget_fixed.json": "f3aef6d4b79d1c8b58158dc5206ee5dc2f08e8700385b403bdbeee9fc6a34312",
+    "run/A_every.json": "010807929349fe8f38ca7653f001761275f555331dc5348a93497dec19381477",
+    "run/A_fixed2.json": "520446fc30adf4b8c081c6deab34ecc302d50843be39a4a3c1af6d23098b3a8f",
+    "run/A_fixed5.json": "25bcca9e2e3e9994a447379c6a2c520d878a2115b3f9f12f29d05d5dabd8cdaf",
+    "run/A_v2.json": "8fc90d53570f0692cd1c3d2e594ae8d4d64c6afe7584c157c366711d8cafc1b7",
+    "run/Original_every.json": "3c57b198b10ed91afa708dfeaa25289a479844b4e1042176f0ef8bd1c1aecacd",
+    "run/KD_every.json": "6a3c6913403ea1ac0f56223ad7c6767fdd802db0223b6287e0f083cc39d8f2c7"
+  },
+  "no_training_or_selection": true
+}

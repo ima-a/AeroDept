@@ -51,6 +51,7 @@ def read_authorization(path, expected_sha):
     return auth
 
 
+# Lineage
 def validate_lineage(auth, config):
     """Metadata only. Recompute rejection without rewriting historical paths."""
     e.check_config(config)
@@ -106,6 +107,7 @@ def validate_lineage(auth, config):
             'baseline_path_relocation_only': True, 'checks': gate['checks']}
 
 
+# Exploration
 class ExploratoryExperiment(e.Experiment):
     def __init__(self, config, records, root, manifest_info, reservations, authorization,
                  authorization_sha, resume=None, progress=None):
@@ -194,6 +196,7 @@ class ExploratoryExperiment(e.Experiment):
         return row
 
 
+# Training
 def train_exploratory(engine, out):
     """Same epoch orchestration as parent full_training, with distinct scope."""
     if engine.scope != SCOPE or engine.identity['arm'] != ARM or not engine.val_records:

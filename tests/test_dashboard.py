@@ -51,7 +51,8 @@ def test_portable_dashboard_without_usb_loads_saved_artifacts(monkeypatch):
     assert not app.exception
     assert len(app.tabs)==5
     assert any('cache unavailable' in str(x.value).lower() for x in app.info)
-    assert any('NOT RUN' in str(x.value) for x in app.markdown)
+    assert any('INDEPENDENT TEST' in str(x.value) for x in app.markdown)
+    assert presentation_ui.independent_study(ROOT)['status'] in ['COMPLETED','IN PROGRESS','INCOMPLETE','NOT RUN']
 
 
 def test_frame_presets_do_not_run_inference(monkeypatch):
@@ -61,3 +62,41 @@ def test_frame_presets_do_not_run_inference(monkeypatch):
     preset.click().run(timeout=60)
     assert not app.exception
     assert next(s for s in app.slider if s.label=='Validation frame').value==1534
+
+
+def test_independent_and_historical_selectors_are_artifact_only(monkeypatch):
+    monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(ROOT/'configs/presentation.json'))
+    monkeypatch.setattr(presentation_ui,'actual_inference',lambda *a,**k:pytest.fail('Automatic inference'))
+    app=AppTest.from_file(str(ROOT/'scripts/dashboard.py')).run(timeout=60)
+    for split in ['New independent test','Historical exposed test','Validation']:
+        next(s for s in app.selectbox if s.label=='Evaluation split').select(split).run(timeout=60)
+        assert not app.exception
+    for study in ['New independent test · A','Historical exposed test · Original']:
+        next(s for s in app.selectbox if s.label=='Scheduler study').select(study).run(timeout=60)
+        assert not app.exception
+    assert next(s for s in app.selectbox if s.label=='Student model').value=='A'
+
+
+def test_independent_loader_distinguishes_missing_exposed_and_failed(tmp_path):
+    folder=tmp_path/'results/independent_test_20261030';folder.mkdir(parents=True)
+    assert presentation_ui.independent_study(tmp_path)['status']=='NOT RUN'
+    (folder/'EXPOSURE.json').write_text('{}')
+    assert presentation_ui.independent_study(tmp_path)['status']=='IN PROGRESS'
+    (folder/'EXPOSURE.json').write_text('{"status":"exposure_started"}')
+    assert presentation_ui.independent_study(tmp_path)['status']=='IN PROGRESS'
+    (folder/'FAILED.json').write_text('{"status":"INCOMPLETE"}')
+    assert presentation_ui.independent_study(tmp_path)['status']=='INCOMPLETE'
+
+
+def test_independent_loader_rejects_artifact_tampering(tmp_path):
+    from aerodepth_lite.inference import file_sha256
+    folder=tmp_path/'results/independent_test_20261030';folder.mkdir(parents=True)
+    (folder/'PROTOCOL.json').write_text('{}');sha=file_sha256(folder/'PROTOCOL.json')
+    (folder/'EXPOSURE.json').write_text(json.dumps({'protocol_sha256':sha}))
+    for name in ['results.json','comparison.csv','timing.json']:(folder/name).write_text('{}')
+    complete={'status':'COMPLETED','frames':8820,'equal_counts':True,'protocol_sha256':sha,'artifacts_sha256':{name:file_sha256(folder/name) for name in ['results.json','comparison.csv','timing.json']}}
+    (folder/'COMPLETION.json').write_text(json.dumps(complete))
+    assert presentation_ui.independent_study(tmp_path)['status']=='COMPLETED'
+    (folder/'results.json').write_text('{"altered":true}')
+    result=presentation_ui.independent_study(tmp_path)
+    assert result['status']=='UNAVAILABLE · integrity check failed' and result['results'] is None

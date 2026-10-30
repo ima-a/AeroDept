@@ -1,0 +1,175 @@
+{
+  "status": "metadata_verified_not_exposed",
+  "archives": [
+    {
+      "path": "MidAir/Kite_training/foggy/color_left/trajectory_2007/frames.zip",
+      "trajectory": "Kite_training/foggy/trajectory_2007",
+      "stream": "color_left",
+      "frames": 2204,
+      "compressed_bytes": 290081034,
+      "uncompressed_bytes": 296101246,
+      "sha256": "f3cf7af51ae18b22a37b1662c9279e75de64780503eeabd2d9505fbb13a3e295"
+    },
+    {
+      "path": "MidAir/Kite_training/foggy/depth/trajectory_2007/frames.zip",
+      "trajectory": "Kite_training/foggy/trajectory_2007",
+      "stream": "depth",
+      "frames": 2204,
+      "compressed_bytes": 1350504688,
+      "uncompressed_bytes": 1524960382,
+      "sha256": "3d082f4075a82b5d82b114d6eaa644b39bbe7a30910261b0bc67f6d53651b2ae"
+    },
+    {
+      "path": "MidAir/Kite_training/sunny/color_left/trajectory_0008/frames.zip",
+      "trajectory": "Kite_training/sunny/trajectory_0008",
+      "stream": "color_left",
+      "frames": 2205,
+      "compressed_bytes": 461836440,
+      "uncompressed_bytes": 464196081,
+      "sha256": "9652930cf6a8cb6ee1d9942cadd6980f9da76f39072eb9b21053485617e92e50"
+    },
+    {
+      "path": "MidAir/Kite_training/sunny/depth/trajectory_0008/frames.zip",
+      "trajectory": "Kite_training/sunny/trajectory_0008",
+      "stream": "depth",
+      "frames": 2205,
+      "compressed_bytes": 986416627,
+      "uncompressed_bytes": 1128676472,
+      "sha256": "98e76e8db5d124ff7d42630c2cf3cefa60cf4a108ea38017e8cb1445cb3a73c4"
+    },
+    {
+      "path": "MidAir/PLE_training/spring/color_left/trajectory_5008/frames.zip",
+      "trajectory": "PLE_training/spring/trajectory_5008",
+      "stream": "color_left",
+      "frames": 2206,
+      "compressed_bytes": 342709723,
+      "uncompressed_bytes": 343142181,
+      "sha256": "5391c423c77d7c66f7ec09eb4df9d734c4ed3ff07fa63fe3e1e9af370abbca62"
+    },
+    {
+      "path": "MidAir/PLE_training/spring/depth/trajectory_5008/frames.zip",
+      "trajectory": "PLE_training/spring/trajectory_5008",
+      "stream": "depth",
+      "frames": 2206,
+      "compressed_bytes": 965868966,
+      "uncompressed_bytes": 1212806533,
+      "sha256": "edcb1344b5a00d0aba8311e39938b910a5dce927eb6cbbcb6e82fbc187ad0f4d"
+    },
+    {
+      "path": "MidAir/PLE_training/winter/color_left/trajectory_6009/frames.zip",
+      "trajectory": "PLE_training/winter/trajectory_6009",
+      "stream": "color_left",
+      "frames": 2205,
+      "compressed_bytes": 448495357,
+      "uncompressed_bytes": 448618998,
+      "sha256": "631f840ff82520a607bdc56cc753a2f841c51df55df95c9c37aebcad09a9156f"
+    },
+    {
+      "path": "MidAir/PLE_training/winter/depth/trajectory_6009/frames.zip",
+      "trajectory": "PLE_training/winter/trajectory_6009",
+      "stream": "depth",
+      "frames": 2205,
+      "compressed_bytes": 1020231606,
+      "uncompressed_bytes": 1250397797,
+      "sha256": "de494fdd419a1be6fac65dd71e34582d9986d5bd8833b413e235538db5580f4f"
+    }
+  ],
+  "download_config_sha256": "5707d9c3df98edfa9d2a1399939b9e5938d9b77c63282c247033ac7cc39ad4d3",
+  "sensor_sha256": {
+    "Kite_training/foggy/sensor_records.hdf5": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+    "Kite_training/sunny/sensor_records.hdf5": "0a8b514c94304a8861db209244aabdf1ee38652fd842ff38123db27cb0008202",
+    "PLE_training/spring/sensor_records.hdf5": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+    "PLE_training/winter/sensor_records.hdf5": "9e2f38450cf84efef2f46a0de2b05db422f7da296e1f419e7d8c35938f9620f7"
+  },
+  "sensor_correspondence": {
+    "Kite_training/foggy/trajectory_2007": {
+      "frames": 2204,
+      "camera_hz": 25,
+      "imu_hz": 100,
+      "gps_hz": 1,
+      "position_sha256": "ec01ee4268ff23a63c282197d2584ddcac079cc3086b33828dc62a15d4b068b2",
+      "alignment": "floor(camera_ordinal*sensor_hz/25); held sample; no interpolation or lookahead"
+    },
+    "Kite_training/sunny/trajectory_0008": {
+      "frames": 2205,
+      "camera_hz": 25,
+      "imu_hz": 100,
+      "gps_hz": 1,
+      "position_sha256": "bc3cf9129415645d9d78b27438df58cc5ab733380ae7f61704abd0f40c565ee0",
+      "alignment": "floor(camera_ordinal*sensor_hz/25); held sample; no interpolation or lookahead"
+    },
+    "PLE_training/spring/trajectory_5008": {
+      "frames": 2206,
+      "camera_hz": 25,
+      "imu_hz": 100,
+      "gps_hz": 1,
+      "position_sha256": "8d3dcba81bf497056afb4446deeecb971522101c1d4fd7a0739f91eb3c2af5f5",
+      "alignment": "floor(camera_ordinal*sensor_hz/25); held sample; no interpolation or lookahead"
+    },
+    "PLE_training/winter/trajectory_6009": {
+      "frames": 2205,
+      "camera_hz": 25,
+      "imu_hz": 100,
+      "gps_hz": 1,
+      "position_sha256": "35a5139b060d5a82c2ee197d80b9ab320c60674853dfcdbaa427d93da2979164",
+      "alignment": "floor(camera_ordinal*sensor_hz/25); held sample; no interpolation or lookahead"
+    }
+  },
+  "leakage": {
+    "passed": true,
+    "reserved_groups": [
+      "Kite/0007",
+      "Kite/0008",
+      "PLE/0008",
+      "PLE/0009"
+    ],
+    "exposed_groups": [
+      "Kite/0000",
+      "Kite/0001",
+      "Kite/0002",
+      "Kite/0003",
+      "Kite/0004",
+      "Kite/0005",
+      "Kite/0006",
+      "Kite/0021",
+      "PLE/0000",
+      "PLE/0001",
+      "PLE/0002",
+      "PLE/0003",
+      "PLE/0004",
+      "PLE/0005",
+      "PLE/0006",
+      "PLE/0007"
+    ],
+    "weather_equivalents_checked": 192,
+    "position_sha256": {
+      "Kite_training/foggy/trajectory_2007": "ec01ee4268ff23a63c282197d2584ddcac079cc3086b33828dc62a15d4b068b2",
+      "Kite_training/sunny/trajectory_0008": "bc3cf9129415645d9d78b27438df58cc5ab733380ae7f61704abd0f40c565ee0",
+      "PLE_training/spring/trajectory_5008": "8d3dcba81bf497056afb4446deeecb971522101c1d4fd7a0739f91eb3c2af5f5",
+      "PLE_training/winter/trajectory_6009": "35a5139b060d5a82c2ee197d80b9ab320c60674853dfcdbaa427d93da2979164"
+    },
+    "limitation": "Path isolation does not establish geographic/scenery isolation."
+  },
+  "expected_frames": 8820,
+  "reservations_sha256": "a525347120e77deadfefaeb96d72266ece05d16941c4356b421729f6c9e819a3",
+  "train_val_manifest_sha256": "f16f1de0d12eb196ef0b91aeaf46a62d75d969f6f5134bc1444dde1099d03713",
+  "storage": {
+    "compressed_bytes": 5866144441,
+    "extracted_image_bytes": 6668899690,
+    "sensor_copy_bytes": 310171768,
+    "free_before": 13317402624,
+    "output_allowance": 536870912,
+    "minimum_free_reserve": 2147483648,
+    "enough": true
+  },
+  "unrelated_or_redundant_archives": [
+    "OneDrive_1_10-30-2026.zip",
+    "MidAir/PLE_training/winter/sensor_records.zip",
+    "MidAir/PLE_training/spring/sensor_records.zip",
+    "MidAir/Kite_training/foggy/sensor_records.zip",
+    "MidAir/Kite_training/sunny/sensor_records.zip"
+  ],
+  "partial_files": [],
+  "identity_resolution": "Hierarchy and official download-config paths agree; no scene appearance used.",
+  "privacy": "Download URLs and credentials omitted; config digest only."
+}

@@ -226,6 +226,7 @@ def dataset_fingerprint(records: Iterable[FrameRecord]) -> str:
     return hashlib.sha256(canonical.encode()).hexdigest()
 
 
+# Splits
 def split_trajectories(records: list[FrameRecord], seed: int = 42) -> dict[str, list[str]]:
     trajectories = sorted({r.trajectory_id for r in records})
     rng = random.Random(seed)
@@ -245,6 +246,7 @@ def split_trajectories(records: list[FrameRecord], seed: int = 42) -> dict[str, 
     }
 
 
+# Leakage
 def assert_no_leakage(splits: dict[str, list[str]]) -> None:
     names = ("train", "val", "test")
     for i, left in enumerate(names):
@@ -275,6 +277,7 @@ def write_manifest(records: list[FrameRecord], output: str | Path, seed: int = 4
     return manifest
 
 
+# Manifest
 def load_manifest(path: str | Path, split: str) -> tuple[list[FrameRecord], dict[str, Any]]:
     manifest = json.loads(Path(path).read_text(encoding="utf-8"))
     assert_no_leakage(manifest["splits"])
@@ -283,6 +286,7 @@ def load_manifest(path: str | Path, split: str) -> tuple[list[FrameRecord], dict
     return records, manifest
 
 
+# Decoding
 def load_depth(path: Path, scale: float = 1.0, encoding: str = "midair_float16_bits") -> np.ndarray:
     if path.suffix.lower() == ".npy":
         return np.load(path).astype(np.float32)
@@ -298,6 +302,7 @@ def load_depth(path: Path, scale: float = 1.0, encoding: str = "midair_float16_b
     raise ValueError(f"Unsupported depth encoding: {encoding}")
 
 
+# Dataset
 class MidAirDataset(Dataset[dict[str, Any]]):
     def __init__(self, root: str | Path, records: list[FrameRecord], config: dict[str, Any], training: bool = False):
         self.root = Path(root)
@@ -322,16 +327,20 @@ class MidAirDataset(Dataset[dict[str, Any]]):
             raise ValueError(f"RGB/depth alignment mismatch at {record.rgb_path}: {rgb.shape[:2]} vs {depth.shape[:2]}")
         rgb_t = torch.from_numpy(rgb).permute(2, 0, 1)
         depth_t = torch.from_numpy(depth).unsqueeze(0)
+        # Mask
         valid = torch.isfinite(depth_t) & (depth_t >= self.min_depth) & (depth_t <= self.max_depth)
         depth_t = torch.where(valid, depth_t, torch.zeros_like(depth_t))
+        # Resizing
         rgb_t = F.interpolate(rgb_t.unsqueeze(0), self.size, mode="bilinear", align_corners=False).squeeze(0)
         depth_t = F.interpolate(depth_t.unsqueeze(0), self.size, mode="nearest").squeeze(0)
         valid = F.interpolate(valid.float().unsqueeze(0), self.size, mode="nearest").squeeze(0).bool()
+        # Augmentation
         if self.training and torch.rand(()) < 0.5:
             rgb_t, depth_t, valid = rgb_t.flip(-1), depth_t.flip(-1), valid.flip(-1)
         return {"rgb": rgb_t, "depth": depth_t, "valid": valid, "record": asdict(record)}
 
 
+# Batching
 def collate_samples(batch: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "rgb": torch.stack([x["rgb"] for x in batch]),

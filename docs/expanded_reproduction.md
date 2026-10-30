@@ -1,6 +1,8 @@
 # Reproduce the expanded teacher/student workflow
 
-This is a separate, ongoing experiment. At the [27 October snapshot](../results/expanded_status_20261027T150226Z/REPORT.md), supervised MobileNet finished 10 epochs, ResNet-50 was training, and the teacher gate and KD had not started. There is no completed distillation comparison or new test result. Snapshot files are dated observations, not live telemetry.
+Training is complete: supervised A ran 10 epochs, ResNet-50 teacher B ran 20, and the separately authorized exploratory KD arm ran 10. B failed the original teacher gate, so original gated KD never ran. A and exploratory KD selected epoch 9. The [final comparison](../results/student_validation_comparison_20261029T152648Z/REPORT.md) retains the negative KD result; the separate reserved independent study is described in [its own guide](independent_final_test.md). The [27 October snapshot](../results/expanded_status_20261027T150226Z/REPORT.md) is historical, not live status.
+
+The 30 October maintenance added one-word code markers without changing Python ASTs. Byte hashes therefore differ from historical launch seals. For old checkpoint resume or exact sealed reproduction, use the matching pre-annotation revision `fb1b4aedd15280abdb1126293e022d78cdcbf4e5` in a separate checkout. Fresh runs may use the current code and record new source identities. Never replace historical hashes to accept a changed source file. Local archived files are mapped in [archive locations](archive_locations.md).
 
 The historical final study is complete and remains quarantined. Its source-identical checkout and dataset-free saved-result verification are documented in [final study](final_study.md). The original validation/V1/V2 reproduction commands remain in [reproduction](reproduction.md).
 
@@ -10,7 +12,7 @@ Clone `main`, follow [installation](installation.md), and record `git rev-parse 
 
 Run expanded commands from the repository root with `PYTHONPATH="$PWD/src"`, as shown below. This runner locates the frozen manifest, reference metrics and source identities relative to its source checkout; a non-editable site-packages installation alone does not provide that layout. The explicit path also prevents accidentally importing another installed revision.
 
-The public package contains the original epoch-4 inference weights, source, tests, expanded manifest/reservations, approved configurations, protocols and compact verification evidence. Datasets, downloaded ImageNet initialization, environments, full training states, active logs and the laptop's user service stay private. The small failed-launch log and startup observation published with their receipts are historical evidence, not active logs. These commands reproduce new runs; they do not download or resume the laptop's private checkpoints.
+The public package contains the original epoch-4 and supervised-A epoch-9 inference exports, source, tests, expanded manifest/reservations, approved configurations, protocols and compact verification evidence. Datasets, downloaded ImageNet initialization, environments, full training states, active logs and the laptop's user service stay private. The small failed-launch log and startup observation published with their receipts are historical evidence, not active logs. These commands reproduce new runs; they do not download or resume the laptop's private checkpoints.
 
 Obtain left RGB and depth/range for the exact **20 training and two validation realizations** in [the verified trajectory table](../results/expanded_preparation_20261026/REPORT.md#verified-realizations-and-page-ids). That table maps official form IDs to internal climate-prefixed IDs and counts. The [original subset documentation](dataset.md) and [expansion checklist](expanded_experiment_20261025/PLAN.md) explain acquisition; their original-test/new-test selections are not needed for this TRAIN/VAL workflow. Corresponding climate HDF5 records support independent preparation checks; the training runner uses the frozen manifest's metadata and does not open sensor archives/HDF5. Respect [MidAir attribution and terms](../NOTICE.md).
 
@@ -38,7 +40,7 @@ All weather equivalents of validation and both test sets are excluded from train
 
 ## Frozen identities and approved settings
 
-The current [recovery protocol](../results/expanded_relaunch_20261026T114024/protocol.json) retains the original approved scientific settings. Its [freeze receipt](../results/expanded_relaunch_20261026T114024/freeze.json) records all seven core source hashes; this published workflow matches those hashes. Absolute HDD paths, UUIDs and service identities in receipts describe the original laptop and must not be treated as portable launch settings.
+The current [recovery protocol](../results/expanded_relaunch_20261026T114024/protocol.json) retains the original approved scientific settings. Its [freeze receipt](../results/expanded_relaunch_20261026T114024/freeze.json) records all seven core source hashes. The pre-annotation revision named above matches those hashes; current commented sources have different byte identities. Absolute HDD paths, UUIDs and service identities in receipts describe the original laptop and must not be treated as portable launch settings.
 
 Use the approved configuration copies in `results/expanded_launch_20261026T104420/configs/`. They are byte-identical to the recovery launch's active configurations. `configs/expanded_*.yaml` preserve the original proposals: their numerical settings are identical, but their `protocol_status` differs, which matters to strict checkpoint identity. Do not switch between those copies on resume.
 
@@ -97,7 +99,7 @@ These tests use synthetic inputs, published weights and manifest metadata, not M
 
 ## Launch a new independent run
 
-The following Bash block runs the supported commands sequentially on a separate prepared machine. It stops on any command error and explicitly stops if the saved teacher gate fails. Do not run it alongside the laptop's active experiment. Choose a fresh output parent on a reliable disk, outside the dataset; existing directories are refused. Check CUDA, free output space, AC power and dataset availability first.
+The following Bash block runs the supported commands sequentially on a separate prepared machine. It stops on any command error and explicitly stops if the saved teacher gate fails. Use it only for a new independent run, not to restart completed experiments. Choose a fresh output parent on a reliable disk, outside the dataset; existing directories are refused. Check CUDA, free output space, AC power and dataset availability first.
 
 `systemd-inhibit` below is a Linux sleep inhibitor while each command runs; this shell alone does not survive terminal disconnection. For unattended use, run it in a persistent session or user service with logging and an inhibitor covering the full sequence. The laptop's [recorded service and limitations](../results/expanded_relaunch_20261026T114024/HANDOFF.md) are evidence, not an installable service for another host. Lid behavior must be verified locally; the original machine's physical lid behavior was not tested and full logout may stop its user service.
 
@@ -163,6 +165,6 @@ systemd-inhibit --what=sleep --mode=block --why='Resume expanded supervised run'
   --output "$EXPANDED_OUT/A_supervised" --confirm-full-training
 ```
 
-Teacher resume uses its own approved config/output/last checkpoint. KD resume uses its own last checkpoint instead of `--initialize`, while retaining its original teacher/hash/gate arguments. Do not rerun `mkdir`, retrain completed arms, change budgets or replace a teacher to bypass resume identity. For the active laptop only, the frozen `stop.sh`/`resume.sh` in its recorded handoff control the entire sequence; do not substitute these portable example paths.
+Teacher resume uses its own approved config/output/last checkpoint. KD resume uses its own last checkpoint instead of `--initialize`, while retaining its original teacher/hash/gate arguments. Do not rerun `mkdir`, retrain completed arms, change budgets or replace a teacher to bypass resume identity. For a historical laptop run, the matching frozen `stop.sh`/`resume.sh` in its recorded handoff control the entire sequence; do not substitute these portable example paths.
 
 Historical reports, hashes and exposure ledgers remain unchanged. The prepublication protocol wording is retained at commit `21a73a2`; the initial failed launch and its numerical diagnosis have separate receipts. Public progress snapshots do not contain or substitute for private resumable checkpoints. Expanded final-test acquisition/evaluation requires a separate future protocol.

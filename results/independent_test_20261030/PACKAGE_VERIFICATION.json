@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "isolation": "Temporary source copy, sdist and noneditable wheel in a fresh venv. Existing recorded third-party dependencies exposed read-only by .pth; no fresh network dependency resolution. Working PyTorch installation unchanged.",
+  "sdist_sha256": "534b84960ad563fc40fde42bcc83c18215864c5b2ef02a3bb508bfef459e7ce1",
+  "wheel_sha256": "f03ea293ecd2a1e1bce2397eb1e8252bd64f1494cb79613136f4ecdeff359c7e",
+  "sdist_files": 692,
+  "exports": [
+    "models/mobilenet_v3_small_epoch4.state_dict.pt",
+    "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt"
+  ],
+  "strict_export_loads": 2,
+  "synthetic_cli_inference": true,
+  "dataset_free_dashboard_tabs": 5,
+  "independent_selectors": true,
+  "saved_artifact_verifier_in_sdist": true,
+  "private_inputs_packaged": false,
+  "package_scope": "Delivery at check time; later verification/cleanup/publication receipts are not part of these archive hashes."
+}

@@ -1,0 +1,302 @@
+{
+  "overall": {
+    "frames": 8820,
+    "inference_calls": 8820,
+    "skip_rate": 0.0,
+    "mean_prediction_age": 0.0,
+    "max_prediction_age": 0,
+    "inference_reasons": {
+      "first_frame": 4,
+      "fixed_interval": 8816
+    },
+    "all_reasons": {
+      "first_frame": 4,
+      "fixed_interval": 8816
+    },
+    "scheduler_seconds": 0.02309399243677035,
+    "inference_seconds": 158.85534743277822,
+    "critical_events": {
+      "count": 20,
+      "fresh_on_event": 20,
+      "missed_update_rate": 0.0,
+      "observed_delays_frames": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mean_observed_delay_frames": 0.0,
+      "max_observed_delay_frames": 0,
+      "right_censored_count": 0,
+      "offline_near_estimated_on_event": 3,
+      "offline_near_estimation_rate": 0.15
+    },
+    "metrics": {
+      "absrel": 0.3832024527164286,
+      "rmse": 82.1735017989044,
+      "delta1": 0.4114029244122246,
+      "delta2": 0.6618884889176202,
+      "delta3": 0.7874923511172286,
+      "near_absrel": 0.43624889259739935,
+      "near_rmse": 4.219445634995661,
+      "valid_pixels": 377372106,
+      "near_valid_pixels": 105333081,
+      "bias_m": -16.92422572583121,
+      "near_bias_m": 1.8822291191343536,
+      "valid_floor_count": 30823,
+      "valid_floor_rate": 8.167800298414213e-05,
+      "near_floor_rate": 2.7816522332618374e-05,
+      "near_prediction_ge_10m_rate": 0.23545543113848535
+    },
+    "model_seconds": 158.61016477580415,
+    "transfer_in_seconds": 0.0969701082794927,
+    "transfer_out_seconds": 0.14821254869457334,
+    "compute_seconds": 158.878441425215,
+    "model_call_median_ms": 17.191995022585616
+  },
+  "per_trajectory": {
+    "Kite_training/foggy/trajectory_2007": {
+      "frames": 2204,
+      "inference_calls": 2204,
+      "skip_rate": 0.0,
+      "mean_prediction_age": 0.0,
+      "max_prediction_age": 0,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2203
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2203
+      },
+      "scheduler_seconds": 0.00562610913766548,
+      "inference_seconds": 38.83147019444732,
+      "critical_events": {
+        "count": 5,
+        "fresh_on_event": 5,
+        "missed_update_rate": 0.0,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.0,
+        "max_observed_delay_frames": 0,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 2,
+        "offline_near_estimation_rate": 0.4
+      },
+      "metrics": {
+        "absrel": 0.23038219900636733,
+        "rmse": 79.04539641343993,
+        "delta1": 0.621986713312706,
+        "delta2": 0.8955498744698696,
+        "delta3": 0.9612090606915814,
+        "near_absrel": 0.18672380738046998,
+        "near_rmse": 3.0857497122514697,
+        "valid_pixels": 99812690,
+        "near_valid_pixels": 22311420,
+        "bias_m": -5.9057270595632385,
+        "near_bias_m": 0.21066642316336007,
+        "valid_floor_count": 25532,
+        "valid_floor_rate": 0.00025579913736419686,
+        "near_floor_rate": 3.3659892557264396e-05,
+        "near_prediction_ge_10m_rate": 0.11782647630675233
+      },
+      "model_seconds": 38.77161779045127,
+      "transfer_in_seconds": 0.02347523847129196,
+      "transfer_out_seconds": 0.03637716552475467,
+      "compute_seconds": 38.837096303584985,
+      "model_call_median_ms": 16.68630848871544
+    },
+    "Kite_training/sunny/trajectory_0008": {
+      "frames": 2205,
+      "inference_calls": 2205,
+      "skip_rate": 0.0,
+      "mean_prediction_age": 0.0,
+      "max_prediction_age": 0,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2204
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2204
+      },
+      "scheduler_seconds": 0.00530981580959633,
+      "inference_seconds": 37.55135071318364,
+      "critical_events": {
+        "count": 0,
+        "fresh_on_event": 0,
+        "missed_update_rate": null,
+        "observed_delays_frames": [],
+        "mean_observed_delay_frames": null,
+        "max_observed_delay_frames": null,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 0,
+        "offline_near_estimation_rate": null
+      },
+      "metrics": {
+        "absrel": 0.5518609035068616,
+        "rmse": 126.56415395804332,
+        "delta1": 0.06208718717136968,
+        "delta2": 0.19096291428613016,
+        "delta3": 0.38159556109118486,
+        "near_absrel": 0.41840166005253504,
+        "near_rmse": 4.1643546410905055,
+        "valid_pixels": 87117266,
+        "near_valid_pixels": 945433,
+        "bias_m": -50.79510237477093,
+        "near_bias_m": -3.817250403768033,
+        "valid_floor_count": 130,
+        "valid_floor_rate": 1.4922415035384605e-06,
+        "near_floor_rate": 0.0,
+        "near_prediction_ge_10m_rate": 0.0007837678608637523
+      },
+      "model_seconds": 37.492553803371266,
+      "transfer_in_seconds": 0.022549233748577535,
+      "transfer_out_seconds": 0.03624767606379464,
+      "compute_seconds": 37.556660528993234,
+      "model_call_median_ms": 16.541135031729937
+    },
+    "PLE_training/spring/trajectory_5008": {
+      "frames": 2206,
+      "inference_calls": 2206,
+      "skip_rate": 0.0,
+      "mean_prediction_age": 0.0,
+      "max_prediction_age": 0,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2205
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2205
+      },
+      "scheduler_seconds": 0.005838866694830358,
+      "inference_seconds": 40.85507715534186,
+      "critical_events": {
+        "count": 9,
+        "fresh_on_event": 9,
+        "missed_update_rate": 0.0,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.0,
+        "max_observed_delay_frames": 0,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 0,
+        "offline_near_estimation_rate": 0.0
+      },
+      "metrics": {
+        "absrel": 0.33970368571408704,
+        "rmse": 50.01265075415186,
+        "delta1": 0.48398450749428384,
+        "delta2": 0.7692862660318637,
+        "delta3": 0.8841387388558783,
+        "near_absrel": 0.3961704249059789,
+        "near_rmse": 3.506637254744508,
+        "valid_pixels": 93182086,
+        "near_valid_pixels": 35039499,
+        "bias_m": -9.353990574660642,
+        "near_bias_m": 1.967257953343752,
+        "valid_floor_count": 1627,
+        "valid_floor_rate": 1.746043762102514e-05,
+        "near_floor_rate": 1.7437463931775964e-05,
+        "near_prediction_ge_10m_rate": 0.24422792118117898
+      },
+      "model_seconds": 40.79234392527724,
+      "transfer_in_seconds": 0.025140119541902095,
+      "transfer_out_seconds": 0.03759311052272096,
+      "compute_seconds": 40.86091602203669,
+      "model_call_median_ms": 17.85988250048831
+    },
+    "PLE_training/winter/trajectory_6009": {
+      "frames": 2205,
+      "inference_calls": 2205,
+      "skip_rate": 0.0,
+      "mean_prediction_age": 0.0,
+      "max_prediction_age": 0,
+      "inference_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2204
+      },
+      "all_reasons": {
+        "first_frame": 1,
+        "fixed_interval": 2204
+      },
+      "scheduler_seconds": 0.006319200794678181,
+      "inference_seconds": 41.6174493698054,
+      "critical_events": {
+        "count": 6,
+        "fresh_on_event": 6,
+        "missed_update_rate": 0.0,
+        "observed_delays_frames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_observed_delay_frames": 0.0,
+        "max_observed_delay_frames": 0,
+        "right_censored_count": 0,
+        "censored": [],
+        "offline_near_estimated_on_event": 1,
+        "offline_near_estimation_rate": 0.16666666666666666
+      },
+      "metrics": {
+        "absrel": 0.4306386063296059,
+        "rmse": 55.166191493137234,
+        "delta1": 0.43864117753408016,
+        "delta2": 0.7410147807428956,
+        "delta3": 0.8801899513452921,
+        "near_absrel": 0.5848234622281342,
+        "near_rmse": 5.083696642727427,
+        "valid_pixels": 97260064,
+        "near_valid_pixels": 47036729,
+        "bias_m": -5.146093684496649,
+        "near_bias_m": 2.72633640471252,
+        "valid_floor_count": 3534,
+        "valid_floor_rate": 3.633557140163922e-05,
+        "near_floor_rate": 3.3335651380009866e-05,
+        "near_prediction_ge_10m_rate": 0.2894334978097648
+      },
+      "model_seconds": 41.553649256704375,
+      "transfer_in_seconds": 0.025805516517721117,
+      "transfer_out_seconds": 0.037994596583303064,
+      "compute_seconds": 41.62376857060008,
+      "model_call_median_ms": 17.55490299547091
+    }
+  }
+}

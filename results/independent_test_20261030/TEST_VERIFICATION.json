@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "passed_count": 127,
+  "skipped": 4,
+  "deselected": 1,
+  "seconds": 24.2,
+  "warnings": "51 external Streamlit/Pandas deprecations; one intentional duplicate-ZIP fixture warning",
+  "command": "env -u MIDAIR_ROOT -u AERODEPTH_EXPLORATORY_BUNDLE PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -B -m pytest -q -p no:cacheprovider -m 'not integration'",
+  "log_sha256": "10990fb8bf207be8daed0d297583bbe2be542b21cbc5265c6b548ba91c2ef152",
+  "scope": "Synthetic/metadata/unit/UI checks; real-data integration and optional lineage bundle excluded. No rerun of independent test.",
+  "final_presentation_followup": {
+    "passed": 10,
+    "seconds": 9.61,
+    "scope": "Dashboard tests rerun after side-by-side chart and validation-specific sidebar wording",
+    "log_sha256": "610e78d6379447f5b4eb0204d7358820ec5bbf0e36d34e2ef41f5a69058d1640"
+  }
+}

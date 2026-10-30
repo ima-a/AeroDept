@@ -1,0 +1,522 @@
+{
+  "passed": true,
+  "destination": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z",
+  "files": [
+    {
+      "original_relative_path": ".gitignore",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/.gitignore",
+      "bytes": 653,
+      "sha256": "3b2a04901e990e11189bdb6196eb2dbc3cfcaec5e8dc51bfdd1e0d080c482f0f"
+    },
+    {
+      "original_relative_path": "MANIFEST.in",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/MANIFEST.in",
+      "bytes": 814,
+      "sha256": "2c3569dce0014a00622ce70ac84b47ace3735f85442eee879b4b22785a5a2af8"
+    },
+    {
+      "original_relative_path": "README.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/README.md",
+      "bytes": 11690,
+      "sha256": "bc8c3c9d680087c6b29f9a6f8345f6f285e40386a2eacf85a5276ba2f26402c6"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/SHA256SUMS",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/SHA256SUMS",
+      "bytes": 4205,
+      "sha256": "ae628897de93ab70257778879e1ba18a574316f1ac5f84b8d8532c5803addb25"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/before/.gitignore",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/before/.gitignore",
+      "bytes": 456,
+      "sha256": "fec9588f9202f552ab010e59c4f414c1cfa34de72e67c0e37446cce59476237c"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/before/README.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/before/README.md",
+      "bytes": 11116,
+      "sha256": "a47f12bb3bc00b022ffb355edcb1c9211da4fbb059dd3efa68da0aacf6274c1f"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/before/configs/presentation_local.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/before/configs/presentation_local.json",
+      "bytes": 2762,
+      "sha256": "a2a65bd4808038ec2f9064458a23b7cb4c5d27efec59f9fa15e7ec559608647e"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/before/docs/presentation_dashboard.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/before/docs/presentation_dashboard.md",
+      "bytes": 8083,
+      "sha256": "6e7a81562d0a65853cd17a5896928aaa703d118fa4c3f03da792e1f8dc42aade"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/before/pyproject.toml",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/before/pyproject.toml",
+      "bytes": 778,
+      "sha256": "7664811e53646e1de69ae1c175fff10b025dad2f5e67e8ed46187cd5dcf58289"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/before/scripts/dashboard.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/before/scripts/dashboard.py",
+      "bytes": 16251,
+      "sha256": "c47577890fb6de4c060413ae701e1bed50d9a481553f621e14e7fd01228080d2"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/before/src/aerodepth_lite/presentation_ui.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/before/src/aerodepth_lite/presentation_ui.py",
+      "bytes": 4009,
+      "sha256": "50e6565f4159b870f6310dc657da08e1ae0cdf9167bf4da992f4164a300c8a4d"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/before/tests/test_dashboard.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/before/tests/test_dashboard.py",
+      "bytes": 1764,
+      "sha256": "5610b9f7d2f1fdb12fe4a82a048f9dd9619cce9b2b0e88e2fff2ce97f5f18a8a"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/browser_delivery.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/browser_delivery.py",
+      "bytes": 7012,
+      "sha256": "c101c03e015b06b20085aebaadeb0821062917d82e97771807a32af80525e393"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/browser_delivery_attempt1.log",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/browser_delivery_attempt1.log",
+      "bytes": 2043,
+      "sha256": "f4948476795c9c137a7484de98ab4c5cd8a5b06ac8f7f198e7df4d2e95ab2ba3"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/browser_finish.log",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/browser_finish.log",
+      "bytes": 31,
+      "sha256": "1a6ff9683e22ac0c051abeacd6c76bb75b4d4038356fc3ec7df968fda11b3ced"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/browser_finish.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/browser_finish.py",
+      "bytes": 3484,
+      "sha256": "18270d40f88b36ee7d3e22cf05b2ba7ca06be0ed7b833c4e77cc7eaf453e3cf3"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/build_final_report.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/build_final_report.py",
+      "bytes": 22621,
+      "sha256": "8452e39341841dff9dbe2d102bfead2cc14c36326ac8517da02c2154f8f51258"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/dist/aerodepth_lite-0.1.0-py3-none-any.whl",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/dist/aerodepth_lite-0.1.0-py3-none-any.whl",
+      "bytes": 93766,
+      "sha256": "ef017dd1d352be609913fe3ccb21cf9c182cefef36849dfe524f17d1d9d769c3"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/dist_final/aerodepth_lite-0.1.0.tar.gz",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/dist_final/aerodepth_lite-0.1.0.tar.gz",
+      "bytes": 43633602,
+      "sha256": "8f07d9f96c84fdf77b83b3f5ae7a32940e293acaa111cc859511de42f8ddaa7c"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/downloaded_A_live_timing.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/downloaded_A_live_timing.png",
+      "bytes": 135920,
+      "sha256": "b4d93439be9921fb17b7f78d11396ac604ca3a2c0d3b865ee1f894e42e2944e8"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/downloaded_final_report.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/downloaded_final_report.md",
+      "bytes": 19565,
+      "sha256": "277bdc3b6703384bd8e8caf1b677605c53892902699a7421eba4addf61b5b97c"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/downloaded_scheduler_comparison.csv",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/downloaded_scheduler_comparison.csv",
+      "bytes": 6662,
+      "sha256": "17d7f0d4f0d908da5132b91a571ddd2c146aae2fab706cb0036a1a1879b400b5"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/finalize_delivery.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/finalize_delivery.py",
+      "bytes": 3397,
+      "sha256": "e1bbf0fd6c784bb3f4eebf5807d0932daaafbd17dd69182b0d5e719a472fc07e"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/focused_tests.log",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/focused_tests.log",
+      "bytes": 710,
+      "sha256": "49a36a8407c21b8f69a08a3a3f4438d0c03a4c22b240145836ae026f6031ac9b"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/git_status_before.txt",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/git_status_before.txt",
+      "bytes": 1025,
+      "sha256": "1489f1650f437856cfeb6922e3bff20b2f92828aaa1e681aa439990bb7844fbf"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/git_status_final.txt",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/git_status_final.txt",
+      "bytes": 1147,
+      "sha256": "8408a762441c86bca5001d814f3e0ce24c4d6f6442f4fc9ee96a51a728501c4a"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/isolated_cli.log",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/isolated_cli.log",
+      "bytes": 476,
+      "sha256": "ef92d0e4dfe5014be46f827f72c1a1bb11b0d6dfd8425e28f4bcd4832c7c077b"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/isolated_install.log",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/isolated_install.log",
+      "bytes": 856,
+      "sha256": "c5e1026dc51a10efddb7139b2083e760717b75e785fd9a591204fa5c4d604c3d"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/isolated_verification.log",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/isolated_verification.log",
+      "bytes": 433,
+      "sha256": "a8af2f20c0de4b3485bf10de1fa3d908fafa36cf806b7f75518ae3d2e8041dc9"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/package_build.log",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/package_build.log",
+      "bytes": 68842,
+      "sha256": "72197d7f682a1abdc21a2a228221a19d813fb00088d405675175bdbb9ded2492"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/package_final_build.log",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/package_final_build.log",
+      "bytes": 70057,
+      "sha256": "357fbe2b39fcc07ec0d57814423b9418061780b57236db56abc96e5dcb7e7e32"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/protected_before.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/protected_before.json",
+      "bytes": 73033,
+      "sha256": "a3d1d02d6e68e2b6a963b1446147273694b724cee877dbae0fe140af403be9e5"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/.gitignore",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/.gitignore",
+      "bytes": 653,
+      "sha256": "3b2a04901e990e11189bdb6196eb2dbc3cfcaec5e8dc51bfdd1e0d080c482f0f"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/MANIFEST.in",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/MANIFEST.in",
+      "bytes": 814,
+      "sha256": "2c3569dce0014a00622ce70ac84b47ace3735f85442eee879b4b22785a5a2af8"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/README.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/README.md",
+      "bytes": 11690,
+      "sha256": "bc8c3c9d680087c6b29f9a6f8345f6f285e40386a2eacf85a5276ba2f26402c6"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/configs/presentation.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/configs/presentation.json",
+      "bytes": 2010,
+      "sha256": "d21149eb22295080598f3489d8c49c0cdf16023fcc39a882e10e9455ef3fa62b"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/configs/presentation_local.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/configs/presentation_local.json",
+      "bytes": 2864,
+      "sha256": "c3d8b16bc4a9fe6df2a1352c6a29ae5fdcf150db6788692e9d4102b14568de40"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/docs/FINAL_REPORT.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/docs/FINAL_REPORT.md",
+      "bytes": 19565,
+      "sha256": "277bdc3b6703384bd8e8caf1b677605c53892902699a7421eba4addf61b5b97c"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/docs/GIT_READY_CHECKLIST.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/docs/GIT_READY_CHECKLIST.md",
+      "bytes": 3197,
+      "sha256": "45dc387fbda4f8799f1fb337a7192e4aabb363d7244a821c62e92e5ecf7a0683"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/docs/presentation_dashboard.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/docs/presentation_dashboard.md",
+      "bytes": 12785,
+      "sha256": "da905c8e3a4ffcc859690182b655ee69a21cc8c4341ac2a5bfab466d66c88eb0"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/pyproject.toml",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/pyproject.toml",
+      "bytes": 778,
+      "sha256": "7664811e53646e1de69ae1c175fff10b025dad2f5e67e8ed46187cd5dcf58289"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/scripts/dashboard.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/scripts/dashboard.py",
+      "bytes": 23510,
+      "sha256": "2b4692818f26ec3e318bf86604e3346b7d3cdeb46985006a88ce531f6a5728a5"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/src/aerodepth_lite/presentation_ui.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/src/aerodepth_lite/presentation_ui.py",
+      "bytes": 5108,
+      "sha256": "a540929a878325d84e1e8116bda4723343c1335351558d589554101b224b8368"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/source_snapshot/tests/test_dashboard.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/source_snapshot/tests/test_dashboard.py",
+      "bytes": 3658,
+      "sha256": "ed6634368a8d6bbc4f94ebe712ff14e65488735fe0d782d0c322abe098162acb"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/synthetic_cli_prediction.npy",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/synthetic_cli_prediction.npy",
+      "bytes": 245888,
+      "sha256": "32ac09ea32918843a28b80544b7cfd4cc20ca2445a37672912200c60eead3be1"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/synthetic_package_input.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/synthetic_package_input.png",
+      "bytes": 289,
+      "sha256": "fbbf8531d993c7aa50ae7324801205087b86f845a36225295f5451b69b06c49d"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/synthetic_package_prediction.npy",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/synthetic_package_prediction.npy",
+      "bytes": 245888,
+      "sha256": "32ac09ea32918843a28b80544b7cfd4cc20ca2445a37672912200c60eead3be1"
+    },
+    {
+      "original_relative_path": "artifacts/final_delivery_20261029T173715Z/verify_isolated.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/artifacts/final_delivery_20261029T173715Z/verify_isolated.py",
+      "bytes": 3108,
+      "sha256": "ab2951474edd935d8524517f5ba8e35ba433a80358735e008c33d8028df1a861"
+    },
+    {
+      "original_relative_path": "configs/presentation.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/configs/presentation.json",
+      "bytes": 2010,
+      "sha256": "d21149eb22295080598f3489d8c49c0cdf16023fcc39a882e10e9455ef3fa62b"
+    },
+    {
+      "original_relative_path": "configs/presentation_local.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/configs/presentation_local.json",
+      "bytes": 2864,
+      "sha256": "c3d8b16bc4a9fe6df2a1352c6a29ae5fdcf150db6788692e9d4102b14568de40"
+    },
+    {
+      "original_relative_path": "docs/FINAL_REPORT.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/docs/FINAL_REPORT.md",
+      "bytes": 19565,
+      "sha256": "277bdc3b6703384bd8e8caf1b677605c53892902699a7421eba4addf61b5b97c"
+    },
+    {
+      "original_relative_path": "docs/GIT_READY_CHECKLIST.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/docs/GIT_READY_CHECKLIST.md",
+      "bytes": 3197,
+      "sha256": "45dc387fbda4f8799f1fb337a7192e4aabb363d7244a821c62e92e5ecf7a0683"
+    },
+    {
+      "original_relative_path": "docs/presentation_dashboard.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/docs/presentation_dashboard.md",
+      "bytes": 12785,
+      "sha256": "da905c8e3a4ffcc859690182b655ee69a21cc8c4341ac2a5bfab466d66c88eb0"
+    },
+    {
+      "original_relative_path": "models/presentation_A_epoch9_20261029T155521Z/README.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/models/presentation_A_epoch9_20261029T155521Z/README.md",
+      "bytes": 749,
+      "sha256": "4ca9572f0d90ea4f0acbf2a444752ab20dd18ed6d7d30b27ff425676baa21cef"
+    },
+    {
+      "original_relative_path": "models/presentation_A_epoch9_20261029T155521Z/SHA256SUMS",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/models/presentation_A_epoch9_20261029T155521Z/SHA256SUMS",
+      "bytes": 267,
+      "sha256": "367956cdf8bdac7d141935f87ab16165cc400ad8274fe1ff1fff5313c1ffd1fe"
+    },
+    {
+      "original_relative_path": "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json",
+      "bytes": 3550,
+      "sha256": "e9fed71377da6baa94b0a44ecdbf0ae6b1df44cc1ef1b4718a3d53a65e7faa12"
+    },
+    {
+      "original_relative_path": "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+      "bytes": 4265209,
+      "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20"
+    },
+    {
+      "original_relative_path": "pyproject.toml",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/pyproject.toml",
+      "bytes": 778,
+      "sha256": "7664811e53646e1de69ae1c175fff10b025dad2f5e67e8ed46187cd5dcf58289"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/FINAL_REPORT.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/FINAL_REPORT.md",
+      "bytes": 19558,
+      "sha256": "9ca085ac75bff125d01472ecfe60f377d1b9af54066bd9943e3fd85bc8200687"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/FINAL_STUDY_SPECIFICATION.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/FINAL_STUDY_SPECIFICATION.json",
+      "bytes": 6967,
+      "sha256": "6033c9bba330276004226f20f24c19922d598970a153bfc9585746e7da0cef57"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/FINAL_STUDY_SPECIFICATION.sha256",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/FINAL_STUDY_SPECIFICATION.sha256",
+      "bytes": 97,
+      "sha256": "3592089d76bcbb07709692ea33147d5715a934532a2efc531c734bc4f1ad647e"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/FINAL_TEST_COMMAND.txt",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/FINAL_TEST_COMMAND.txt",
+      "bytes": 575,
+      "sha256": "fb194c3689e769e0fa4758b567753cf321cb507a30e025ecc6fd46615986746e"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/REPORT.md",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/REPORT.md",
+      "bytes": 4773,
+      "sha256": "225e4bb154db3332a24e3c984ecb23d4b2d750a0c8d97278b23728a18f9ef3be"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/SHA256SUMS",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/SHA256SUMS",
+      "bytes": 2102,
+      "sha256": "fc470382311a98ad5a1757f39227de32e5229815a005ba34f51b006462a44d3f"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/acquisition_readiness.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/acquisition_readiness.json",
+      "bytes": 5777,
+      "sha256": "903ceb08f9c2b106b90ceef19c306a14543d9c6fcbc05b99f2b35f1e9d2aa5ee"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/browser_verification.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/browser_verification.json",
+      "bytes": 2420,
+      "sha256": "d157e45998fd574c9cbadfa52fe7f717b6113655a920d805b92760b997df516d"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/completion_status.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/completion_status.json",
+      "bytes": 1786,
+      "sha256": "4d2c97cb2bfa0fd71e37413cd790ba7495fbba667d2eb6a624ace94dcb59871a"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_actual_A.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_actual_A.png",
+      "bytes": 240748,
+      "sha256": "9e575d6e1cd4f9e25d85e9fcb1b2cb1bb10c36f2bc1849f1de80bf8d87ab7384"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_actual_KD.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_actual_KD.png",
+      "bytes": 241942,
+      "sha256": "b6e4265dc6b6ba4791b5c5b87baf4e542a5e9de5a47830bcbe710af59a57b0d7"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_actual_Original.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_actual_Original.png",
+      "bytes": 242496,
+      "sha256": "674808a07cbfcbba62ef9ca19dbca3158c98bfbb04f7ed5265808d8fceb91f0b"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_comparison.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_comparison.png",
+      "bytes": 162020,
+      "sha256": "9fce5d2ecab3ef6d88dd04c371dab69921a9bfbd45b58eedc28746aa75200576"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_depth_mobile.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_depth_mobile.png",
+      "bytes": 57541,
+      "sha256": "61920b72ffbeb465736cacc8348fb6514006e73018ba891e23bf45abaa4bd5b5"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_mobile.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_mobile.png",
+      "bytes": 73212,
+      "sha256": "778ee433ac31a53730d0e6384cd0dcebf94f575602fdad72ee4c930a1db95dab"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_overview.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_overview.png",
+      "bytes": 235204,
+      "sha256": "3188011152ba914b441a42a5b44f8604a95806fedebd6f08758064d2d3e3223e"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_playback.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_playback.png",
+      "bytes": 207638,
+      "sha256": "dfc0eff454b2416226c577a7a7618122546034cc1e032cefae5b5fc8a9b1ee6f"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/dashboard_scheduler.png",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/dashboard_scheduler.png",
+      "bytes": 201615,
+      "sha256": "008a5d6cc0087288a1a6ac1285eb106809b1b8c0362b21b0e83e2df65e8d16a4"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/execution_record.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/execution_record.json",
+      "bytes": 1462,
+      "sha256": "2e654071691e74d1835fcf6f56b026ec1eeeaeaff477c57cb00e285454f109ad"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/isolated_cli_verification.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/isolated_cli_verification.json",
+      "bytes": 217,
+      "sha256": "4146794c128262c56abbb12a719c77f130f3c4d8f510f77e83382b94a1dfe575"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/isolated_install_verification.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/isolated_install_verification.json",
+      "bytes": 2185,
+      "sha256": "15c3443bcfc0d09c5a75885a44178d3d682891cdfb0ffd1f84b51c0767e39cce"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/package_delivery_verification.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/package_delivery_verification.json",
+      "bytes": 1187,
+      "sha256": "370e9d195625da0e2facbdee3020f0386f75d3899a7b975ea6b87abb14a5f931"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/preservation_verification.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/preservation_verification.json",
+      "bytes": 1523,
+      "sha256": "274ca048c8088c6b1a76f6192b4ced404d8cf92ace16fa52a3549562093c2140"
+    },
+    {
+      "original_relative_path": "results/final_delivery_20261029T173715Z/source_identity.json",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/results/final_delivery_20261029T173715Z/source_identity.json",
+      "bytes": 1617,
+      "sha256": "c92bb1842f0088d11daa69532b8c37c3ecf456177028ed02fa3cdaddeb7e4274"
+    },
+    {
+      "original_relative_path": "scripts/dashboard.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/scripts/dashboard.py",
+      "bytes": 23510,
+      "sha256": "2b4692818f26ec3e318bf86604e3346b7d3cdeb46985006a88ce531f6a5728a5"
+    },
+    {
+      "original_relative_path": "src/aerodepth_lite/presentation_ui.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/src/aerodepth_lite/presentation_ui.py",
+      "bytes": 5108,
+      "sha256": "a540929a878325d84e1e8116bda4723343c1335351558d589554101b224b8368"
+    },
+    {
+      "original_relative_path": "tests/test_dashboard.py",
+      "archive_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/project/final_delivery_20261029T173715Z/tests/test_dashboard.py",
+      "bytes": 3658,
+      "sha256": "ed6634368a8d6bbc4f94ebe712ff14e65488735fe0d782d0c322abe098162acb"
+    }
+  ],
+  "verified_files": 85,
+  "verified_bytes": 50846980,
+  "UTC": "2026-10-29T17:55:29.661883+00:00",
+  "exclusions": "Disposable isolated venv/source extraction and obsolete first sdist excluded; final sdist and verified wheel included. Existing private3.29GB validation cache already onUSB, not duplicated.",
+  "source_removal": false,
+  "receipt_not_self_hashed": true
+}

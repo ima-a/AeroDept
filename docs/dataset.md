@@ -1,5 +1,9 @@
 # MidAir acquisition and split identity
 
+The current expanded experiment uses **44,098 train + 4,410 validation frames** in `results/expanded_preparation_20261026/manifest_train_val.json.gz`. A separate, verified test-only manifest now contains 8,820 pairs on the four reserved independent paths; see [the independent study](independent_final_test.md). The TRAIN/VAL manifest remains unchanged. See [expanded reproduction](expanded_reproduction.md) for the exact layout and weather-grouped assignments. The 26,481-pair counts and original manifest below describe the earlier model's subset, not the expanded training set.
+
+After the 30 October local cleanup, extracted pilot images and sensor files remain under `datasets/midair_pilot/`; four redundant ZIPs were removed only after verifying all members against the extracted files. This local pilot directory does not replace the complete external expanded dataset. [Storage details](archive_locations.md).
+
 Use the [official acquisition form](https://midair.ulg.ac.be/download.html) to select left RGB and depth/range, plus the corresponding HDF5 records, and accept the [MidAir terms](https://midair.ulg.ac.be/index.html). The site supplies a download-link file. From a new dataset directory:
 
 ```bash

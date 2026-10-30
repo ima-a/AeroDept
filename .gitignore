@@ -34,6 +34,7 @@ build/
 dist/
 .venv*/
 configs/presentation_local.json
+configs/independent_test_local.json
 .unavailable/
 # Explicitly publish only the compact inference export, never full checkpoints.
 !models/mobilenet_v3_small_epoch4.state_dict.pt

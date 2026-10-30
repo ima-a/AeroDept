@@ -1,0 +1,152 @@
+{
+  "status": "NOT RUN \u2014 new official download access required for all eight reserved RGB/depth archives",
+  "archive_and_directory_metadata_only": true,
+  "no_test_pixels_headers_or_archive_members_opened": true,
+  "authoritative_reservations": "results/expanded_preparation_20261026/reservations.json",
+  "reservations_sha256": "a525347120e77deadfefaeb96d72266ece05d16941c4356b421729f6c9e819a3",
+  "train_val_manifest_uncompressed_sha256": "67c6cad39767d847a2087a81d1ecc4de2ad8c9ecc0fa01e491f3950b25f8dd3a",
+  "groups": {
+    "train": [
+      "Kite/0000",
+      "Kite/0001",
+      "Kite/0002",
+      "Kite/0005",
+      "Kite/0006",
+      "Kite/0021",
+      "PLE/0001",
+      "PLE/0002",
+      "PLE/0004",
+      "PLE/0005",
+      "PLE/0006",
+      "PLE/0007"
+    ],
+    "val": [
+      "Kite/0003",
+      "PLE/0000"
+    ],
+    "new_test": [
+      "Kite/0007",
+      "Kite/0008",
+      "PLE/0008",
+      "PLE/0009"
+    ],
+    "legacy_test": [
+      "Kite/0004",
+      "PLE/0003"
+    ]
+  },
+  "leakage_checks": {
+    "train_val_disjoint": true,
+    "train_new_test_disjoint": true,
+    "all_weather_equivalents_reserved": true,
+    "original_test_quarantined": true,
+    "pilot_exclusions_retained": true,
+    "test_records_in_train_val": 0
+  },
+  "requested": [
+    {
+      "realization": "Kite_training/foggy/trajectory_2007",
+      "official_page_ID": "0007",
+      "group": "Kite/0007",
+      "expected_frames_from_existing_HDF5_metadata": 2204,
+      "archives_required": [
+        "Kite_training/foggy/color_left/trajectory_2007/frames.zip",
+        "Kite_training/foggy/depth/trajectory_2007/frames.zip"
+      ],
+      "config_contains_requested_archives": [],
+      "extracted_directories": {
+        "color_left": false,
+        "depth": false
+      },
+      "sensor_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/Kite_training/foggy/sensor_records.hdf5",
+      "sensor_present": true
+    },
+    {
+      "realization": "Kite_training/sunny/trajectory_0008",
+      "official_page_ID": "0008",
+      "group": "Kite/0008",
+      "expected_frames_from_existing_HDF5_metadata": 2205,
+      "archives_required": [
+        "Kite_training/sunny/color_left/trajectory_0008/frames.zip",
+        "Kite_training/sunny/depth/trajectory_0008/frames.zip"
+      ],
+      "config_contains_requested_archives": [],
+      "extracted_directories": {
+        "color_left": false,
+        "depth": false
+      },
+      "sensor_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/Kite_training/sunny/sensor_records.hdf5",
+      "sensor_present": true
+    },
+    {
+      "realization": "PLE_training/spring/trajectory_5008",
+      "official_page_ID": "4008",
+      "group": "PLE/0008",
+      "expected_frames_from_existing_HDF5_metadata": 2206,
+      "archives_required": [
+        "PLE_training/spring/color_left/trajectory_5008/frames.zip",
+        "PLE_training/spring/depth/trajectory_5008/frames.zip"
+      ],
+      "config_contains_requested_archives": [],
+      "extracted_directories": {
+        "color_left": false,
+        "depth": false
+      },
+      "sensor_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/PLE_training/spring/sensor_records.hdf5",
+      "sensor_present": true
+    },
+    {
+      "realization": "PLE_training/winter/trajectory_6009",
+      "official_page_ID": "4009",
+      "group": "PLE/0009",
+      "expected_frames_from_existing_HDF5_metadata": 2205,
+      "archives_required": [
+        "PLE_training/winter/color_left/trajectory_6009/frames.zip",
+        "PLE_training/winter/depth/trajectory_6009/frames.zip"
+      ],
+      "config_contains_requested_archives": [],
+      "extracted_directories": {
+        "color_left": false,
+        "depth": false
+      },
+      "sensor_path": "/run/media/Ima/AERODEPTH/AeroDepth-rescue/MidAir/PLE_training/winter/sensor_records.hdf5",
+      "sensor_present": true
+    }
+  ],
+  "existing_download_config": {
+    "path": "/home/Ima/Downloads/download_config(1).txt",
+    "sha256": "2330a5e127a6981ce61aa6d3d09da2ba07ff13dd327a711ccef884943ea88e4d",
+    "links": 30,
+    "training_images": 24,
+    "sensor_archives": 6,
+    "reserved_images": 0,
+    "credentials_redacted": true
+  },
+  "healthy_inventory_indices": {
+    "dataset_index.jsonl": {
+      "records": 97029,
+      "reserved_matches": []
+    },
+    "critical_index.jsonl": {
+      "records": 622,
+      "reserved_matches": []
+    }
+  },
+  "healthy_archive_candidates": [],
+  "failed_HDD": "Unmounted; recorded SMART FAILED. Not remounted or read. Historical Oct26 acquisition receipt found none of the reserved archive targets. Later contents cannot be established.",
+  "healthy_storage_free_bytes": 10084515840,
+  "compressed_and_extracted_sizes": "UNKNOWN for requested reserved archives. Do not extrapolate from training files or assume USB capacity sufficient.",
+  "human_action": "Use official download form. Select Left RGB + Depth only for Kite foggy0007, sunny0008; PLE spring4008, winter4009. Submit own email and accept terms to obtain fresh authorized config; complete CAPTCHA if presented. Provide that config privately without posting tokens. Existing four climate HDF5 files are present; do not redownload identical copies. Do not view trajectory sample overviews.",
+  "official_form": "https://midair.ulg.ac.be/download.html",
+  "form_observation": "Public form requires email and terms; CAPTCHA not confirmed by text inspection. No request submitted.",
+  "ready_protocol_created": false,
+  "exposure_ledger_created": false,
+  "completion_created": false,
+  "new_study_authorized": true,
+  "authorization_requires_no_further_confirmation": true,
+  "connected_mail_check": {
+    "query": "midair OR \"Mid-Air\"",
+    "returned_messages": 0,
+    "scope": "Read-only search only; no emails sent or forms submitted."
+  }
+}

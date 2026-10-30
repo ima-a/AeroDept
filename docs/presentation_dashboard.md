@@ -1,6 +1,6 @@
 # Local presentation dashboard and A validation workflow
 
-This is a separate, versioned validation workflow. The original published epoch-4 weights, CLI defaults, frozen V1/V2 implementations, final-test ledger and all historical results remain unchanged. Supervised A epoch9 is the dashboard's general-depth default; original epoch4 is the near-field reference; KD epoch9 is an exploratory comparison using the rejected teacher. The final student comparison records A's11.84% pooled AbsRel improvement and16.18% near-RMSE regression versus original. Displayed headline numbers are calculated from that verified artifact rather than embedded as new measurements.
+This is a separate, versioned validation workflow. The original published epoch-4 weights, CLI defaults, final-test ledger and historical results remain unchanged. On 30 October, current source files received one-word navigation comments; Python ASTs are unchanged, while byte-level source hashes differ. Old sealed protocols use their matching source revision, as described in [expanded reproduction](expanded_reproduction.md). Supervised A epoch9 is the dashboard's general-depth default; original epoch4 is the near-field reference; KD epoch9 is an exploratory comparison using the rejected teacher. The final student comparison records A's11.84% pooled AbsRel improvement and16.18% near-RMSE regression versus original. Displayed headline numbers are calculated from that verified artifact rather than embedded as new measurements.
 
 Install and launch locally (Python3.11+ for the optional dashboard; the normal CLI's Python requirement is unchanged):
 
@@ -44,22 +44,15 @@ The recorded prediction cache is for complete offline quality scoring and playba
 
 Timing uses three alternating repetitions on CPU and CUDA, batch1 FP32, ten identical excluded warmups, and fixed128-frame windows starting at Kite1500 and PLE400. These near-field/scene windows reset locally and have different call budgets from full-path quality. Individual measurements and median/min/max retain model-only time, scheduler including live cache updates, transfers, raw read-stage I/O, decode/resize and end-to-end processing. The end-to-end demonstration pipeline includes GT PNG loading for display/scoring context; GT never enters scheduler decisions. Model loading, manifest/sensor setup and dashboard rendering/WebSocket delivery are outside the timed per-frame boundary. File/OS cache and desktop conditions are not controlled. No energy, battery or flight-safety improvement is measured or inferred.
 
-## Independent final test remains blocked
+## Independent final test and current delivery
 
-The new results directory contains a metadata-only acquisition-readiness record, a separate `FINAL_TEST_PROPOSAL.json` and the explicit opt-in command template. The healthy rescue index currently has no image records for the reserved foggy Kite2007, sunny Kite0008, spring PLE5008 or winter PLE6009. The failing HDD remains unmounted, so existence of archives there is unknown. There is no new reserved test manifest, and expected8820 frames must be verified from acquisition metadata rather than forced.
+The new eight-archive acquisition has passed integrity, exact HDF5 pairing and grouped leakage checks. The separately versioned seven-comparison runner uses A for the five primary policies and Original/KD every-frame for secondary comparisons. [The independent study guide](independent_final_test.md) records exact input sizes, ready protocol, exposure controls, read-only verification and full-data requirements. The old blocked proposal and specification remain preserved as historical records.
 
-`scripts/presentation_final_test.py` refuses a proposed/blocked protocol, a missing opt-in flag, changed hashes, wrong realizations, unsafe/symlink paths, or an existing exposure/output. A future ready protocol must pin the actual independent manifest, sensor hashes, root, exact A export and unchanged policies before separately authorized exposure. The exclusive ledger precedes the first test decoder read; no automatic retry/resume or post-test selection exists. The original exposed final test remains historical, never an untouched selection source. No test images or headers are opened during this task.
+The five existing tabs now distinguish validation, the new independent test and the historical exposed test. Overview labels validation headline metrics and separately shows the independent models. Model comparison has an Evaluation split selector and per-path scope. Scheduler has a separate independent A policy view with actual calls, errors, ages, events, timing and saved timelines. Evidence downloads contain the new protocol, exposure, completion, full tables and timing as well as older evidence. Completion is displayed only when saved artifact hashes verify; missing, in-progress, failed and changed evidence have distinct statuses. There is no UI path to evaluate test images.
 
-[Streamlit testing reference](https://docs.streamlit.io/develop/api-reference/app-testing/st.testing.v1.apptest) and [Playwright browser reference](https://playwright.dev/python/docs/browsers) document the optional verification tools. UI tests check missing inputs and no automatic inference; a real local browser exercises selectors, explicit inference, playback and downloads, with screenshots retained in the new results directory.
+A stays the preselected demonstration model even if test rankings reverse. The validation-only depth viewer, explicit actual inference button and recorded replay are unchanged. During the final timing run, actual inference/playback are paused to avoid competing model work. Existing teacher rejection, negative KD validation, scheduler regressions and timing limitations stay visible.
 
-
-## Current delivery and portable source installation
-
-The existing five-tab UI now has a study-context sidebar, explicit completed/blocked statuses, separate overall and near-RMSE charts, preset buttons for the previously fixed comparison illustrations, common colour legends, fresh/reused playback indicators and grouped evidence downloads. These are presentation changes; the frozen numerical backend, scheduler parameters and completed results are unchanged. [Consolidated final report](FINAL_REPORT.md); no PPT is produced.
-
-The current independent test is **NOT RUN**. Metadata rechecks establish that the surviving official config has24 training image archives and6 sensor archives, with no reserved image links. Four climate HDF5 files are present, but all eight reserved RGB/depth targets are absent in healthy inventories. Request Kite foggy official0007/internal2007, Kite sunny0008/internal0008, PLE spring official4008/internal5008, PLE winter official4009/internal6009, only left RGB and depth. Use your email/terms on the official form for fresh access; CAPTCHA may be presented but was not confirmed. Do not preview trajectory samples or download duplicate HDF5. Sizes are unknown and current rescue free capacity is not a guarantee for download plus extraction. The failed HDD stays unmounted.
-
-The new blocked study specification predeclares original/KD every-frame secondary analyses in addition to A's five-policy matrix. The preserved primary-only runner does not yet implement that added secondary/supplementary/timing scope. Acquisition, explicit integrity/leakage-verified manifest and a versioned runner extension are prerequisites for the genuine ready freeze. The user has already authorized one study; another approval is not the blocker. No exposure ledger or test completion was created.
+Saved metrics/assets work without the dataset. Full validation image viewing/replay needs the existing private cache; actual KD inference needs the pinned private checkpoint. The separate final-test staging tree is never a dashboard input. The [final report](FINAL_REPORT.md) and [code guide](../CODE_GUIDE.md) link the relevant evidence and implementation.
 
 ### Portable configuration
 
@@ -85,13 +78,15 @@ Source deliveries include the scripts, configs, reports and the two explicitly a
 
 ### Classroom sequence
 
-1. Overview: explain A's overall improvement and near-field regression; show the NOT RUN independent-test status.
+1. Overview: explain A's overall improvement and near-field regression; show the independently verified final-study status.
 2. Model comparison: switch pooled→Kite foggy and compare original/A/KD near errors.
 3. Depth demonstration: use Typical/Poor presets; switch models; press **Run actual model inference** once. Read the colour legend and latency scope.
 4. A recorded V2 replay: point out fresh/reused status, source frame and age. Playback rate is not measured throughput.
 5. Scheduler: compare V2 and budget-fixed, then the visual ablation; show actual timing and its end-to-end regression/uncertainty.
-6. Evidence: download the report/table and finish with the exact acquisition blocker.
+6. Evidence: download the report/table and finish with the independent study, subgroup reversals and limitations.
 
-Existing service: `aerodepth-dashboard-20261029t155521z.service`, localhost8501. Refresh with `systemctl --user restart aerodepth-dashboard-20261029t155521z.service` only after UI changes; do not launch another server on the same port. Stop with the corresponding `systemctl --user stop` command. The mounted rescue USB is needed for live validation viewing and replay; full logout may stop the user service.
+Historically recorded service: `aerodepth-dashboard-20261029t155521z.service`, localhost8501. Check its current status before choosing the service or direct launch command; a saved service name does not establish that it is running. Refresh with `systemctl --user restart aerodepth-dashboard-20261029t155521z.service` only after UI changes; do not launch another server on the same port. Stop with the corresponding `systemctl --user stop` command. The mounted rescue USB is needed for live validation viewing and replay; full logout may stop the user service.
 
-The [bounded HDD/USB acquisition inventory](../results/acquisition_publication_20261029T180214Z/REPORT.md) now checks the formerly unmounted HDD read-only as well. All8 reserved RGB/depth streams are absent in the documented locations and original Kaggle package; the HDD hardware failure remains unresolved. No new-test evaluation was run.
+The [29 October HDD/USB inventory](../results/acquisition_publication_20261029T180214Z/REPORT.md) remains a historical acquisition record. The final study uses newly verified Downloads and healthy local staging; the failed HDD stays untouched.
+
+The 31 October restart check found the transient unit still referenced its original log directory. `artifacts/presentation_validation_20261029T155521Z/` was restored for new runtime logs; archived historical contents remain separate. The same unit and port are reused. While the unit exists, `systemctl --user start aerodepth-dashboard-20261029t155521z.service` starts it without creating a second server.

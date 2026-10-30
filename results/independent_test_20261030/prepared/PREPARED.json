@@ -1,0 +1,60 @@
+{
+  "status": "verified_not_exposed",
+  "frames": 8820,
+  "image_files": 17640,
+  "archives_crc_verified": [
+    "MidAir/Kite_training/foggy/color_left/trajectory_2007/frames.zip",
+    "MidAir/Kite_training/foggy/depth/trajectory_2007/frames.zip",
+    "MidAir/Kite_training/sunny/color_left/trajectory_0008/frames.zip",
+    "MidAir/Kite_training/sunny/depth/trajectory_0008/frames.zip",
+    "MidAir/PLE_training/spring/color_left/trajectory_5008/frames.zip",
+    "MidAir/PLE_training/spring/depth/trajectory_5008/frames.zip",
+    "MidAir/PLE_training/winter/color_left/trajectory_6009/frames.zip",
+    "MidAir/PLE_training/winter/depth/trajectory_6009/frames.zip"
+  ],
+  "manifest_sha256": "4220cb10bd3d7671a4e08498b2f9ce34860ccdc95debce6eb93cb25cfb7da9f2",
+  "inventory_sha256": "6d6988f32b1f8278abc6fc7dd941ba6b9c4828c250e764120158a2a3d0105642",
+  "sensor_sha256": {
+    "Kite_training/foggy/sensor_records.hdf5": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+    "Kite_training/sunny/sensor_records.hdf5": "0a8b514c94304a8861db209244aabdf1ee38652fd842ff38123db27cb0008202",
+    "PLE_training/spring/sensor_records.hdf5": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+    "PLE_training/winter/sensor_records.hdf5": "9e2f38450cf84efef2f46a0de2b05db422f7da296e1f419e7d8c35938f9620f7"
+  },
+  "leakage": {
+    "passed": true,
+    "reserved_groups": [
+      "Kite/0007",
+      "Kite/0008",
+      "PLE/0008",
+      "PLE/0009"
+    ],
+    "exposed_groups": [
+      "Kite/0000",
+      "Kite/0001",
+      "Kite/0002",
+      "Kite/0003",
+      "Kite/0004",
+      "Kite/0005",
+      "Kite/0006",
+      "Kite/0021",
+      "PLE/0000",
+      "PLE/0001",
+      "PLE/0002",
+      "PLE/0003",
+      "PLE/0004",
+      "PLE/0005",
+      "PLE/0006",
+      "PLE/0007"
+    ],
+    "weather_equivalents_checked": 192,
+    "position_sha256": {
+      "Kite_training/foggy/trajectory_2007": "ec01ee4268ff23a63c282197d2584ddcac079cc3086b33828dc62a15d4b068b2",
+      "Kite_training/sunny/trajectory_0008": "bc3cf9129415645d9d78b27438df58cc5ab733380ae7f61704abd0f40c565ee0",
+      "PLE_training/spring/trajectory_5008": "8d3dcba81bf497056afb4446deeecb971522101c1d4fd7a0739f91eb3c2af5f5",
+      "PLE_training/winter/trajectory_6009": "35a5139b060d5a82c2ee197d80b9ab320c60674853dfcdbaa427d93da2979164"
+    },
+    "limitation": "Path isolation does not establish geographic/scenery isolation."
+  },
+  "decoder_access": false,
+  "free_after": 6301487104
+}

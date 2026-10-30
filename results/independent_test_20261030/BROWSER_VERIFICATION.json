@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8501",
+  "browser": "Existing isolated Chrome via Playwright, ephemeral context; no personal browser data/history",
+  "checks": [
+    {
+      "flow": "five tabs and verified COMPLETED status",
+      "passed": true
+    },
+    {
+      "flow": "validation/new independent/historical model comparisons and all four test scopes",
+      "passed": true
+    },
+    {
+      "flow": "five independent A policies, subgroup, timeline, historical and validation ablation labels",
+      "passed": true
+    },
+    {
+      "flow": "explicit actual FP32 CPU validation inference A",
+      "passed": true,
+      "frame": 1534
+    },
+    {
+      "flow": "explicit actual FP32 CPU validation inference Original",
+      "passed": true,
+      "frame": 1534
+    },
+    {
+      "flow": "explicit actual FP32 CPU validation inference KD",
+      "passed": true,
+      "frame": 1534
+    },
+    {
+      "flow": "recorded A V2 replay advances with fresh/reused source-age display",
+      "passed": true,
+      "before": [
+        "Recorded RGB \u00b7 frame 1534"
+      ],
+      "after": [
+        "Recorded RGB \u00b7 frame 1540"
+      ]
+    },
+    {
+      "flow": "exact-byte download comparison.csv",
+      "passed": true
+    },
+    {
+      "flow": "exact-byte download PROTOCOL.json",
+      "passed": true
+    },
+    {
+      "flow": "exact-byte download COMPLETION.json",
+      "passed": true
+    },
+    {
+      "flow": "exact-byte download REPORT.md",
+      "passed": true
+    },
+    {
+      "flow": "current final-report download and mobile rendering",
+      "passed": true
+    }
+  ],
+  "javascript_errors": [],
+  "test_images_opened": false,
+  "validation_inference_calls": 3,
+  "new_server_started": false,
+  "attempt_note": "First browser attempt timed out locating a timeline option during rerender, before any actual inference. Added waits/retry for UI selectors; study was not repeated.",
+  "presentation_followup": {
+    "passed": true,
+    "change": "Side-by-side overall/near error bars; sidebar KD negative result explicitly labelled validation. No numerical or inference changes.",
+    "screenshots_refreshed": [
+      "dashboard_independent_comparison.png",
+      "dashboard_overview.png",
+      "dashboard_mobile.png"
+    ]
+  }
+}

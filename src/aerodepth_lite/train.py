@@ -34,6 +34,7 @@ def _write_history(path: Path, history: list[dict[str, Any]]) -> None:
     temporary.replace(path)
 
 
+# Loader
 def _loader(root: str | Path, manifest: str | Path, split: str, config: dict[str, Any], training: bool) -> DataLoader:
     records, _ = load_manifest(manifest, split)
     dataset = MidAirDataset(root, records, config["data"], training=training)
@@ -49,6 +50,7 @@ def _loader(root: str | Path, manifest: str | Path, split: str, config: dict[str
     )
 
 
+# Epoch
 def _epoch(model: torch.nn.Module, loader: DataLoader, device: torch.device, loss_config: dict[str, Any], optimizer: torch.optim.Optimizer | None, scaler: Any, max_batches: int | None, amp: bool, grad_clip: float = 1.0, progress=None, timing: dict | None = None) -> tuple[float, dict[str, float], dict[str, Any]]:
     training = optimizer is not None
     model.train(training)
@@ -94,6 +96,7 @@ def _epoch(model: torch.nn.Module, loader: DataLoader, device: torch.device, los
     return loss_total / batches, {k: v / batches for k, v in components_total.items()}, metrics.compute()
 
 
+# Training
 def train_model(config: dict[str, Any], dataset_root: str | Path, manifest: str | Path, output: str | Path, resume: str | Path | None = None) -> dict[str, Any]:
     seed_everything(int(config.get("seed", 42)))
     output = Path(output)
@@ -103,12 +106,15 @@ def train_model(config: dict[str, Any], dataset_root: str | Path, manifest: str 
     if resume:
         model_config["pretrained"] = False  # Resume never needs an ImageNet download.
     model = build_model(model_config).to(device)
+    # AdamW
     optimizer = torch.optim.AdamW(model.parameters(), lr=float(config["train"].get("learning_rate", 3e-4)), weight_decay=float(config["train"].get("weight_decay", 1e-4)))
     schedule = config["train"].get("lr_schedule", {})
     if schedule.get("name", "cosine") != "cosine":
         raise ValueError("Only the cosine learning-rate schedule is supported")
+    # Cosine
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=int(schedule.get("t_max", config["train"].get("epochs", 1))), eta_min=float(schedule.get("eta_min", 0.0)))
     amp = bool(config["train"].get("amp", True)) and device.type == "cuda"
+    # AMP
     scaler = torch.amp.GradScaler(device.type, enabled=amp)
     start_epoch = 0
     history: list[dict[str, Any]] = []
@@ -117,6 +123,7 @@ def train_model(config: dict[str, Any], dataset_root: str | Path, manifest: str 
     contract = model_contract(config)
     extra: dict[str, Any] = {}
     if resume:
+        # Resume
         checkpoint = load_checkpoint(resume, model, optimizer, device)
         start_epoch = int(checkpoint["epoch"]) + 1
         extra = checkpoint.get("extra", {})
@@ -200,11 +207,13 @@ def train_model(config: dict[str, Any], dataset_root: str | Path, manifest: str 
             return update
         train_timing, val_timing = {}, {}
         epoch_started = perf_counter()
+        # Training
         train_loss, train_components, _ = _epoch(model, train_loader, device, config["loss"], optimizer, scaler, max_train, amp, grad_clip, progress("train"), train_timing)
         if device.type == "cuda":
             torch.cuda.synchronize()
         train_seconds = perf_counter() - epoch_started
         validation_started = perf_counter()
+        # Validation
         val_loss, val_components, val_metrics = _epoch(model, val_loader, device, config["loss"], None, scaler, max_val, amp, progress=progress("val"), timing=val_timing)
         if device.type == "cuda":
             torch.cuda.synchronize()
@@ -225,6 +234,7 @@ def train_model(config: dict[str, Any], dataset_root: str | Path, manifest: str 
         }
         global_step += train_timing["batches"]
         history.append(row)
+        # Selection
         improved = float(val_metrics["absrel"]) < best_absrel
         if improved:
             best_absrel = float(val_metrics["absrel"])

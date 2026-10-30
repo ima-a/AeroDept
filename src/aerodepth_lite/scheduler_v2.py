@@ -5,11 +5,13 @@ import torch
 import torch.nn.functional as F
 from aerodepth_lite.scheduler import Decision,near_field_risk
 
+# Thumbnail
 def thumbnail(rgb):
  x=torch.as_tensor(rgb,dtype=torch.float32)
  if x.ndim==4:x=x[0]
  return F.interpolate(x.mean(0,keepdim=True).unsqueeze(0),size=(36,64),mode='bilinear',align_corners=False)[0,0].cpu().numpy()
 
+# Scheduler
 class SchedulerV2:
  def __init__(self,config):self.config=config;self.reset()
  def reset(self):
@@ -25,13 +27,17 @@ class SchedulerV2:
   acceleration=vector(('ax','ay','az'));gyro=vector(('wx','wy','wz'));gps=vector(('gps_vx','gps_vy','gps_vz'))
   accel_change=float(np.linalg.norm(acceleration-self.previous_acceleration)) if acceleration is not None and self.previous_acceleration is not None else 0.
   # Separate dimensionless scales; no privileged velocity or GT navigation enters this calculation.
+  # Motion
   motion=max(min(accel_change/c['accel_change_scale'],1.),min(float(np.linalg.norm(gyro))/c['gyro_scale'],1.) if gyro is not None else 0.)
   motion=max(motion,min(float(np.linalg.norm(gps))/c.get('gps_speed_scale',20.),1.) if gps is not None else 0.)
   motion_available=acceleration is not None or gyro is not None or gps is not None
+  # Visual
   visual_raw=float(np.abs(gray-self.last_inferred_gray).mean()) if self.last_inferred_gray is not None else 0.
   visual=min(visual_raw/c['visual_scale'],1.)
+  # Score
   age=self.age;score=c['motion_weight']*motion+c['visual_weight']*visual+c['risk_weight']*risk+c['age_weight']*min(age/max(c['max_skip'],1),1.)
   forced=False
+  # Decision
   if self.frames==0:infer,reason=True,'first_frame'
   elif age>=c['max_skip']:infer,reason,forced=True,'max_skip',True
   elif risk_available and risk>=c['critical_risk']:infer,reason=True,'critical_risk'

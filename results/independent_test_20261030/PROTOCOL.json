@@ -1,0 +1,182 @@
+{
+  "version": "independent_reserved_test_v3",
+  "status": "frozen_ready_for_explicit_test",
+  "frozen_utc": "2026-10-30T02:49:21.424539+00:00",
+  "study_path": "results/independent_test_20261030",
+  "authorization": "User attachment 45ce2504-1897-48d2-91b8-15d6eff476d1: ONE verified frozen final study; no training/search/automatic retry.",
+  "reference_specification": "results/final_delivery_20261029T173715Z/FINAL_STUDY_SPECIFICATION.json",
+  "manifest_path": "results/independent_test_20261030/prepared/manifest.json.gz",
+  "manifest_sha256": "4220cb10bd3d7671a4e08498b2f9ce34860ccdc95debce6eb93cb25cfb7da9f2",
+  "prepared_sha256": "fe0f67200094c1b589c660a44e83d38d6ac62415bf45331990a85cb1bb5b8017",
+  "inventory_sha256": "6d6988f32b1f8278abc6fc7dd941ba6b9c4828c250e764120158a2a3d0105642",
+  "test_realizations": {
+    "Kite_training/foggy/trajectory_2007": 2204,
+    "Kite_training/sunny/trajectory_0008": 2205,
+    "PLE_training/spring/trajectory_5008": 2206,
+    "PLE_training/winter/trajectory_6009": 2205
+  },
+  "sensor_sha256": {
+    "Kite_training/foggy/sensor_records.hdf5": "9d6797b7ecc9549026b203776ebe5891c31c4bbe7a37a6b5c90c80b0d006c4af",
+    "Kite_training/sunny/sensor_records.hdf5": "0a8b514c94304a8861db209244aabdf1ee38652fd842ff38123db27cb0008202",
+    "PLE_training/spring/sensor_records.hdf5": "f90bd266d2d03e8c0cdf79ed03f64a32de3dd7207877ad99a29ce576db73e393",
+    "PLE_training/winter/sensor_records.hdf5": "9e2f38450cf84efef2f46a0de2b05db422f7da296e1f419e7d8c35938f9620f7"
+  },
+  "location_config_sha256": "1607169fdee56b373585bb7dae9f33e41760f9685a6769e2e6c0b3a1c60a50a4",
+  "validation_protocol": "results/presentation_validation_20261029T155521Z/PROTOCOL.json",
+  "validation_protocol_sha256": "771bc3e9201238d11b170bfad3177bd437bbee74583cd41f2cb00d891822e813",
+  "v2": {
+    "max_skip": 4,
+    "accel_change_scale": 2.0,
+    "gyro_scale": 0.5,
+    "visual_scale": 0.08,
+    "critical_risk": 0.9,
+    "extreme_motion": 0.9,
+    "extreme_visual": 0.9,
+    "decision_threshold": 0.65,
+    "motion_weight": 0.25,
+    "visual_weight": 0.3,
+    "risk_weight": 0.3,
+    "age_weight": 0.15,
+    "gps_speed_scale": 20.0
+  },
+  "budget_fraction": {
+    "numerator": 2455,
+    "denominator": 4410
+  },
+  "budget_rule": "K=ceil(N*2455/4410); infer at ceil(k*N/K), k=0..K-1",
+  "matrix": [
+    [
+      "A_every",
+      "A",
+      "every"
+    ],
+    [
+      "A_fixed2",
+      "A",
+      "fixed2"
+    ],
+    [
+      "A_fixed5",
+      "A",
+      "fixed5"
+    ],
+    [
+      "A_budget_fixed",
+      "A",
+      "budget_fixed"
+    ],
+    [
+      "A_v2",
+      "A",
+      "v2"
+    ],
+    [
+      "Original_every",
+      "Original",
+      "every"
+    ],
+    [
+      "KD_every",
+      "KD",
+      "every"
+    ]
+  ],
+  "primary": "A_v2 versus A_budget_fixed",
+  "secondary": "A policies versus A_every; Original_every and KD_every versus A_every. No post-test selection.",
+  "models": {
+    "A": {
+      "kind": "export",
+      "sha256": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+      "metadata_sha256": "e9fed71377da6baa94b0a44ecdbf0ae6b1df44cc1ef1b4718a3d53a65e7faa12",
+      "selected_epoch": 9,
+      "label": "Supervised A \u00b7 epoch 9",
+      "weights": "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+      "metadata": "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json"
+    },
+    "Original": {
+      "kind": "export",
+      "sha256": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+      "metadata_sha256": "1f99776c4717f91abb035675560d9521ba0a11d7abe0212961e5facc63fb190f",
+      "selected_epoch": 4,
+      "label": "Original \u00b7 epoch 4 \u00b7 near-field reference",
+      "weights": "models/mobilenet_v3_small_epoch4.state_dict.pt",
+      "metadata": "models/mobilenet_v3_small_epoch4.json"
+    },
+    "KD": {
+      "kind": "checkpoint",
+      "sha256": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45",
+      "selected_epoch": 9,
+      "label": "Exploratory KD \u00b7 epoch 9 \u00b7 rejected teacher",
+      "weights": "external:kd_checkpoint"
+    }
+  },
+  "compatibility_sha256": "d5484d73ec976fb8eac52e556b75a72043c46b4b8bf16935c9e5b67134482cf2",
+  "data": {
+    "image_size": [
+      192,
+      320
+    ],
+    "min_depth": 0.1,
+    "max_depth": 1000.0,
+    "depth_encoding": "midair_float16_bits",
+    "depth_scale": 1.0
+  },
+  "device": "cpu",
+  "torch_threads": 2,
+  "precision": "FP32 eval, batch 1; no AMP/TF32; seed 42",
+  "metrics": {
+    "pooling": "Additive float64 valid-pixel sums, sqrt(pooled SSE/count); no frame-average RMSE",
+    "delta": "strict max(P/GT,GT/P) < 1.25**k for k=1,2,3",
+    "near": "valid GT <10 m",
+    "diagnostics": "signed P-GT bias, floor P<=0.101 on valid/near pixels, near P>=10 fraction",
+    "nonfinite_predictions": "fatal anywhere, never silently masked",
+    "undefined": "JSON null"
+  },
+  "events": {
+    "definition": "valid GT p10 <8 m and (previous p10 >=8 or drop >=2 m); reset per trajectory",
+    "delay": "frames until next fresh inference in same trajectory; retain right censoring; no events -> null rates",
+    "scoring_only": true
+  },
+  "causal_inputs": "Current RGB versus last inferred RGB; IMU at floor(i*100/25), held GPS floor(i/25); last prediction risk and age. No GT/masks/future inputs.",
+  "timing": {
+    "execution": "single chronological traversal; rotate seven-policy execution order by global frame index modulo 7",
+    "warmup": "10 synthetic zero-image forwards per model before exposure, excluded and counted separately",
+    "inference": "synchronized transfer-in + model forward + transfer-out, actual calls for every policy; no prediction lookup cache",
+    "scheduler": "reset/decision and fresh risk-cache update; compute = inference + scheduler",
+    "shared": "RGB/depth file I/O and decode/resize measured once per frame; shared among policies",
+    "excluded": "model/setup/warmups, offline metrics/events and CSV writes excluded from per-policy compute",
+    "wall": "whole traversal wall time includes shared preparation, all seven policies, scoring and logging; not a single-policy end-to-end benchmark",
+    "repetitions": 1,
+    "limitations": "CPU-only available in this runtime; OS cache/load uncontrolled; no energy/battery measurement"
+  },
+  "known_limits": [
+    "A pooled AbsRel improves11.84%, nearRMSE worsens16.18% vsoriginal",
+    "Teacher gate rejected; KD exploratory negative result preserved",
+    "Two familiar validation paths; ablations change inference budgets",
+    "No energy/battery/flight-safety or independent test generalization claim",
+    "Four reserved simulation paths; shared scenery possible; one seed and one timing pass; independent test may reverse validation rankings."
+  ],
+  "source_sha256": {
+    "src/aerodepth_lite/independent_test.py": "fced9a75bba6d9f6de9813a35d5918c66731cfb4b73600888c2179899d1ce963",
+    "src/aerodepth_lite/independent_data.py": "10ddfccfa883ee3844a234b287d215b5e572ec0fc81ba917dcbd0d05efdde664",
+    "src/aerodepth_lite/model.py": "39b857c86b37f5e71670f3a65f7f4567a9230e603212429876bda88097b1f119",
+    "src/aerodepth_lite/data.py": "99926086632d6b296ebeb142aa73be6d8ef900e6fd3000864868300f09ba902d",
+    "src/aerodepth_lite/metrics.py": "5bedd40a24691ab51db7fe8ad34fafba94638123e6c5d27f33476391474916ea",
+    "src/aerodepth_lite/losses.py": "4a68050ec22eed7dcf63d37be07778b19197bdea994f9671e64df6cefcc9cae5",
+    "src/aerodepth_lite/expanded.py": "c6c4bd0369a333ac8c57bfc56aad66bfad5bfc6356b76d32fc187d6c3ac892d8",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0",
+    "src/aerodepth_lite/inference.py": "b8eb7aef2c96da39cac2cf7f144648f032c7205b8d719443dcd78a349827c3ee",
+    "src/aerodepth_lite/presentation.py": "85838eb7839ca806f6f063b60638a08ce51fd1439b16af638dbe86fc716efc5f",
+    "src/aerodepth_lite/presentation_scheduler.py": "ff054a3eddbed0abf5c3de5ed3b7252c2a0d15f49c015c007407f38b59ce0f6c",
+    "src/aerodepth_lite/scheduler_v2.py": "eab4fea496804642dfcd5c958bffbb7c4c5a9abe0bca677a321b6db03e330e3a",
+    "src/aerodepth_lite/scheduler.py": "d1c900c6596e5e4315d18bd157f76586de3d52cfa2891c73b1a24a1aedff9549",
+    "src/aerodepth_lite/research.py": "4b88e8602e11cc1000d913039db086ea773894a935ae4e0c00b29e505b81f90c",
+    "scripts/independent_test.py": "52815d3bb850436c05eced31ce604cb545e0bf9647cdeddef6f5346b2f4bcf80",
+    "scripts/prepare_independent_test.py": "45c2b08d2f0aaa33c05b2edc1c4b016321ab31800b3cf03b138df2dfb8b662c5",
+    "tests/test_independent_test.py": "e7d45e953cfb4d352c16b4d8626d43038bc31d5bc1db433d46ce326fb05419e8",
+    "configs/presentation.json": "46002dcb03f66ffd89d7343dfdb6fe367af3f2fd008219bf1a19febaf5f1e5e4"
+  },
+  "checks_sha256": "6ab69278badadb3431a1718594ba39d0477be074a194c84f6ab409fffb585292",
+  "no_retry_or_resume": true
+}

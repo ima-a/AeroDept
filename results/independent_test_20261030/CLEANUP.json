@@ -1,0 +1,65 @@
+{
+  "client_date": "2026-10-31",
+  "study_evidence_saved": true,
+  "deleted": [
+    {
+      "path": "/tmp/aerodepth-final-package-m_rca2yn",
+      "bytes": 339797279,
+      "reason": "Disposable isolated source copy, build products, fresh verification venv and synthetic CLI files; successful package receipt retained"
+    },
+    {
+      "path": "artifacts/independent_final_20261030/download_COMPLETION.json",
+      "bytes": 2465,
+      "reason": "Exact duplicate browser download verified against canonical artifact"
+    },
+    {
+      "path": "artifacts/independent_final_20261030/download_PROTOCOL.json",
+      "bytes": 8928,
+      "reason": "Exact duplicate browser download verified against canonical artifact"
+    },
+    {
+      "path": "artifacts/independent_final_20261030/download_REPORT.md",
+      "bytes": 25748,
+      "reason": "Exact duplicate browser download verified against canonical artifact"
+    },
+    {
+      "path": "artifacts/independent_final_20261030/download_comparison.csv",
+      "bytes": 14779,
+      "reason": "Exact duplicate browser download verified against canonical artifact"
+    },
+    {
+      "path": "artifacts/independent_final_20261030/download_final_report.md",
+      "bytes": 27334,
+      "reason": "Exact duplicate browser download verified against canonical artifact"
+    },
+    {
+      "path": "/tmp/aerodepth-final-mpl",
+      "bytes": 1396541,
+      "reason": "Disposable Matplotlib font cache from report rendering"
+    },
+    {
+      "path": "/tmp/aerodepth-final-package-k3jlz5dx",
+      "bytes": 342490848,
+      "reason": "Disposable isolated source copy, build products, fresh verification venv and synthetic CLI files; successful package receipt retained"
+    }
+  ],
+  "deleted_bytes": 683763922,
+  "moved": [],
+  "retained": [
+    "All original Downloads archives and download configuration",
+    "External verified final-test staging, 8,820 RGB/range pairs and four HDF5s",
+    "Working .venv and selected exports/private checkpoints",
+    "All 484 protected historical result/model/evidence/presentation files",
+    "Canonical new protocol, exposure, completion, manifest, results, frame CSVs, figures and browser evidence",
+    "Compact verification logs/scripts under ignored artifacts/independent_final_20261030",
+    "Historical private archive: no newly verified independent healthy backup, so no sole-copy deletion",
+    "Existing dashboard runtime log directory artifacts/presentation_validation_20261029T155521Z/"
+  ],
+  "python_pytest_caches": "None in active project; .venv and historical archives not traversed for deletion",
+  "earlier_cleanup_receipt": "docs/maintenance/2026-10-30_cleanup.json",
+  "earlier_cleanup_note": "Earlier cleanup removed 12.66 GiB; that amount is not counted again here.",
+  "free_project_filesystem_bytes": 6222606336,
+  "downloads_modified": false,
+  "datasets_deleted": false,
+  "failed_HDD_used": false
+}

@@ -1,0 +1,198 @@
+{
+  "base_commit": "fb1b4aedd15280abdb1126293e022d78cdcbf4e5",
+  "files": {
+    "src/aerodepth_lite/model.py": {
+      "before_sha256": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+      "after_sha256": "39b857c86b37f5e71670f3a65f7f4567a9230e603212429876bda88097b1f119",
+      "markers": [
+        "Convolution",
+        "Depthwise",
+        "Upsampling",
+        "Tiny",
+        "MobileNet",
+        "ResNet",
+        "Encoder",
+        "Decoder",
+        "Normalization",
+        "Skips",
+        "Encoder",
+        "Projections",
+        "Decoder",
+        "Models",
+        "Factory",
+        "Parameters",
+        "Checkpoint",
+        "Loading"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/metrics.py": {
+      "before_sha256": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+      "after_sha256": "5bedd40a24691ab51db7fe8ad34fafba94638123e6c5d27f33476391474916ea",
+      "markers": [
+        "Metrics",
+        "Mask",
+        "AbsRel",
+        "RMSE",
+        "Delta",
+        "Near",
+        "Pooling"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/losses.py": {
+      "before_sha256": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+      "after_sha256": "4a68050ec22eed7dcf63d37be07778b19197bdea994f9671e64df6cefcc9cae5",
+      "markers": [
+        "Loss",
+        "L1",
+        "Log",
+        "Gradient",
+        "Near",
+        "Weights",
+        "Distillation"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/data.py": {
+      "before_sha256": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+      "after_sha256": "99926086632d6b296ebeb142aa73be6d8ef900e6fd3000864868300f09ba902d",
+      "markers": [
+        "Splits",
+        "Leakage",
+        "Manifest",
+        "Decoding",
+        "Dataset",
+        "Mask",
+        "Resizing",
+        "Augmentation",
+        "Batching"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/train.py": {
+      "before_sha256": "5b7d9a00924f6f14bc94903972e40a5160131d308acd551e6716de39f90faf35",
+      "after_sha256": "4f94b6271dbcf970f59670f59318247c8f2f24594563171e6ccbba9370300be6",
+      "markers": [
+        "Loader",
+        "Epoch",
+        "Training",
+        "AdamW",
+        "Cosine",
+        "AMP",
+        "Resume",
+        "Training",
+        "Validation",
+        "Selection"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/expanded.py": {
+      "before_sha256": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+      "after_sha256": "c6c4bd0369a333ac8c57bfc56aad66bfad5bfc6356b76d32fc187d6c3ac892d8",
+      "markers": [
+        "Splits",
+        "Leakage",
+        "Gate",
+        "Experiment",
+        "Model",
+        "ResNet",
+        "Distillation",
+        "AdamW",
+        "Cosine",
+        "Training",
+        "Supervision",
+        "KD",
+        "Backpropagation",
+        "Clipping",
+        "Epoch",
+        "Validation",
+        "Checkpoint",
+        "Training"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/exploratory_kd.py": {
+      "before_sha256": "b8abafb3d7ba47bec555ac721bdf5ea4d41b5f7d0ac9c1ffb6f106bedb62f0da",
+      "after_sha256": "17fec20a98ee33d785f500c460d36da380a22ea8eebdaab624dc6417b2409a3b",
+      "markers": [
+        "Lineage",
+        "Exploration",
+        "Training"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/scheduler.py": {
+      "before_sha256": "7287389c65969a7ee8c9256205685422095dfb6fd0f77d61ecc22c2d51ed9038",
+      "after_sha256": "d1c900c6596e5e4315d18bd157f76586de3d52cfa2891c73b1a24a1aedff9549",
+      "markers": [
+        "Risk"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/scheduler_v2.py": {
+      "before_sha256": "82389f5fb9bf1c80634fef602c754282924c3208c06e971ea0abd952bc52e154",
+      "after_sha256": "eab4fea496804642dfcd5c958bffbb7c4c5a9abe0bca677a321b6db03e330e3a",
+      "markers": [
+        "Thumbnail",
+        "Scheduler",
+        "Motion",
+        "Visual",
+        "Score",
+        "Decision"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/presentation_scheduler.py": {
+      "before_sha256": "81252097d33952b9bd92fb80978121087575857e55a36f71ea5d5cc8fb3a4d00",
+      "after_sha256": "ff054a3eddbed0abf5c3de5ed3b7252c2a0d15f49c015c007407f38b59ce0f6c",
+      "markers": [
+        "Signals",
+        "Scheduler",
+        "Cache",
+        "Motion",
+        "Visual",
+        "Ablation",
+        "Score",
+        "Decision",
+        "Baselines"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/inference.py": {
+      "before_sha256": "993995d53d9b6ca85ce6ad4f2304360c7c5372d36131703582ab15b8adbe1df7",
+      "after_sha256": "b8eb7aef2c96da39cac2cf7f144648f032c7205b8d719443dcd78a349827c3ee",
+      "markers": [
+        "Weights",
+        "Preprocessing",
+        "Inference"
+      ],
+      "ast_unchanged": true
+    },
+    "src/aerodepth_lite/presentation.py": {
+      "before_sha256": "3f5c1a361ef32dcd6067321896ba9abbe89169db1aac043f0d1f0c02e0612cca",
+      "after_sha256": "85838eb7839ca806f6f063b60638a08ce51fd1439b16af638dbe86fc716efc5f",
+      "markers": [
+        "Validation",
+        "Models",
+        "Sensors",
+        "Replay",
+        "Timing"
+      ],
+      "ast_unchanged": true
+    },
+    "scripts/dashboard.py": {
+      "before_sha256": "3ad16621e451d35e5c9026e0bf641a26e8ec9080277fe0e3d6c5760772ef50de",
+      "after_sha256": "14ebe8e40aaa495e5dee49b523e61d21ade31e0affb2fca1732c7c5e44cf08df",
+      "markers": [
+        "Overview",
+        "Comparison",
+        "Inference",
+        "Scheduler",
+        "Evidence"
+      ],
+      "ast_unchanged": true
+    }
+  },
+  "note": "Only one-word comments added; Python ASTs match pre-edit sources. Byte hashes change, so historical strict-source resume must use the frozen revision."
+}

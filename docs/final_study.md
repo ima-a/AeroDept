@@ -16,7 +16,7 @@ python3 scripts/verify_final_study.py --study-dir results/final_test \
   --output artifacts/saved_final_verification.json
 ```
 
-This verifier uses only the standard library and saved metrics/accounting/source/weight hashes. It does not reevaluate test inputs. The execution and exposure records remain unchanged. The training-completion statements below refer to the original study, not the ongoing expanded experiment. Use this historical checkout for any independently authorized reproduction of the historical runner as well.
+This verifier uses only the standard library and saved metrics/accounting/source/weight hashes. It does not reevaluate test inputs. The execution and exposure records remain unchanged. The training-completion statements below refer to the original study, not the later completed expanded training and separate [reserved test study](independent_final_test.md). Use this historical checkout for any independently authorized reproduction of the historical runner as well.
 
 ## Recorded protocol and independent reproduction
 
@@ -24,7 +24,7 @@ The machine-readable [protocol](../results/final_test/protocol.json) was saved b
 
 The independent fixed-budget primary comparator uses the pooled validation fraction **2455/4410 for both test trajectories**. For length N, choose K=ceil(N×2455/4410), with calls at ceil(kN/K) for k=0…K−1. This rule needs sequence length but no observed test V2 calls, predictions or event labels. Fixed-2, fixed-5 and every-frame are additional frozen comparisons. Retrospective exact test-call matching is omitted. The validation timing comparator retains the original validation budgets, 905 and 1550 calls, for an equal-call timing check.
 
-Timing uses the current Intel Core i5-10300H CPU because this runtime exposes no CUDA device nodes. All policies use FP32, batch1, two torch threads and identical excluded model warmups. Validation executes three measured repetitions of V2 and matched fixed, in the protocol's alternating order. Scheduler time includes feature/risk calculation and the decision; inference includes transfers and the actual forward call. Compute excludes disk I/O, preprocessing, offline scoring and logs; wall time is reported separately. Validation preprocessed RGB preparation is excluded and retained as an ignored cache. These measurements do not establish speed on the historical GTX1650.
+Timing uses the current Intel Core i5-10300H CPU because this runtime exposes no CUDA device nodes. All policies use FP32, batch1, two torch threads and identical excluded model warmups. Validation executes three measured repetitions of V2 and matched fixed, in the protocol's alternating order. Scheduler time includes feature/risk calculation and the decision; inference includes transfers and the actual forward call. Compute excludes disk I/O, preprocessing, offline scoring and logs; wall time is reported separately. Validation preprocessed RGB preparation is excluded from timing. Its regenerable local cache was removed on 30 October; recorded timing results remain unchanged. These measurements do not establish speed on the historical GTX1650.
 
 The leakage audit recomputes environment/path groups for every weather variant, checks the original pilot exclusions, and compares exact position-stream hashes across all locally available climates. It reads metadata and navigation, without reading test pixels. Shared geographic scenery can remain despite disjoint paths; this is a custom two-path simulation test, not the official MidAir benchmark.
 

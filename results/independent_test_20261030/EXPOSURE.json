@@ -1,0 +1,12 @@
+{
+  "status": "exposure_started",
+  "started_utc": "2026-10-30T02:49:35.032585+00:00",
+  "protocol_sha256": "6a1bb71c98ba3a5b513ff46e7babb4c33dca168886f9561072e8095cff71473f",
+  "manifest_sha256": "4220cb10bd3d7671a4e08498b2f9ce34860ccdc95debce6eb93cb25cfb7da9f2",
+  "models": {
+    "A": "6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20",
+    "Original": "b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6",
+    "KD": "f776390515dee417c72e47e6ea41aae3710b2b9251edeaeee7a5fd7fb6fc0d45"
+  },
+  "no_retry_or_resume": true
+}

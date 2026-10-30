@@ -14,6 +14,7 @@ def file_sha256(path):
   for block in iter(lambda:f.read(1024*1024),b''):h.update(block)
  return h.hexdigest()
 
+# Weights
 def load_inference_model(weights,metadata,device='cpu'):
  info=json.loads(Path(metadata).read_text())
  if file_sha256(weights)!=info['export_sha256']:raise ValueError('Exported-weight SHA-256 mismatch')
@@ -26,11 +27,13 @@ def load_inference_model(weights,metadata,device='cpu'):
  if not all(torch.isfinite(t).all() for t in state.values()):raise ValueError('Nonfinite inference tensor')
  return model.to(device).eval(),info
 
+# Preprocessing
 def image_tensor(path,image_size):
  with Image.open(path) as image:rgb=np.array(image.convert('RGB'),dtype=np.float32)/255.
  x=torch.from_numpy(rgb).permute(2,0,1).unsqueeze(0)
  return F.interpolate(x,size=tuple(image_size),mode='bilinear',align_corners=False)
 
+# Inference
 @torch.inference_mode()
 def infer_image(weights,metadata,image,output,device='cpu'):
  model,info=load_inference_model(weights,metadata,device)

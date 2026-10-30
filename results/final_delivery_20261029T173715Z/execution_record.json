@@ -1,0 +1,18 @@
+{
+  "working_directory": "/home/Ima/work/Projects/DL-projects/AeroDept",
+  "readiness": "metadata-only acquisition_readiness.json; no image/header/ZIP-member test access",
+  "verification": [
+    "OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -m pytest -q tests/test_dashboard.py tests/test_presentation.py",
+    "python -m pip wheel . --no-deps --no-build-isolation --wheel-dir artifacts/<delivery>/dist",
+    "setuptools.build_meta.build_sdist(...)",
+    "Fresh venv; pip --python <isolated>/bin/python install --no-deps --no-index <local-wheel>",
+    "Strict state_dict+BN loading and synthetic FP32 inference for both exports; installed aerodepth infer with explicit A weights/metadata/synthetic image",
+    "Source-distribution AppTest with portable config and no external variables",
+    "Browser delivery attempt1 through actual3-model CPU inference/presets/replay/selectors, then fixed locator followup for exports/mobile",
+    "git diff --check"
+  ],
+  "dashboard": "systemctl --user restart aerodepth-dashboard-20261029t155521z.service (existing unit; no second server)",
+  "scientific_code": "Frozen presentation/model/scheduler/metric/data sources untouched",
+  "mail_access_record": "Two read-only MidAir keyword searches returned no messages. No emails opened/changed/sent. User objected; no further mail access.",
+  "forbidden_actions": "No training, tuning, new test pixel exposure, cloud deploy, Git publication or historical deletion"
+}

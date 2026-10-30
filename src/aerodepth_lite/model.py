@@ -9,6 +9,7 @@ from torch import nn
 import torch.nn.functional as F
 
 
+# Convolution
 class ConvBNAct(nn.Sequential):
     def __init__(self, in_ch: int, out_ch: int, stride: int = 1):
         super().__init__(
@@ -18,6 +19,7 @@ class ConvBNAct(nn.Sequential):
         )
 
 
+# Depthwise
 class DSBlock(nn.Module):
     def __init__(self, in_ch: int, out_ch: int, stride: int = 1):
         super().__init__()
@@ -34,6 +36,7 @@ class DSBlock(nn.Module):
         return self.block(x)
 
 
+# Upsampling
 class UpBlock(nn.Module):
     def __init__(self, in_ch: int, skip_ch: int, out_ch: int):
         super().__init__()
@@ -44,6 +47,7 @@ class UpBlock(nn.Module):
         return self.conv(torch.cat((x, skip), dim=1))
 
 
+# Tiny
 class AeroDepthTiny(nn.Module):
     """Compact depth network using depthwise-separable encoder/decoder blocks."""
     def __init__(self, base_channels: int = 24, min_depth: float = 0.1):
@@ -73,6 +77,7 @@ class AeroDepthTiny(nn.Module):
         return F.softplus(self.head(x)) + self.min_depth
 
 
+# MobileNet
 class MobileNetV3SmallDepth(nn.Module):
     """ImageNet encoder, skip decoder, and positive camera range in metres.
 
@@ -84,11 +89,13 @@ class MobileNetV3SmallDepth(nn.Module):
         from torchvision.models import MobileNet_V3_Small_Weights, mobilenet_v3_small
 
         self.min_depth = min_depth
+        # Encoder
         self.encoder = mobilenet_v3_small(
             weights=MobileNet_V3_Small_Weights.IMAGENET1K_V1 if pretrained else None
         ).features  # Neither classifier nor global pooling retained.
         self.register_buffer("rgb_mean", torch.tensor([0.485, 0.456, 0.406]).view(1, 3, 1, 1))
         self.register_buffer("rgb_std", torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1))
+        # Decoder
         self.project = DSBlock(576, 128)
         self.up4 = UpBlock(128, 48, 64)
         self.up3 = UpBlock(64, 24, 32)
@@ -98,7 +105,9 @@ class MobileNetV3SmallDepth(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         output_size = x.shape[-2:]
+        # Normalization
         x = (x - self.rgb_mean) / self.rgb_std
+        # Skips
         skips = {}
         for index, layer in enumerate(self.encoder):
             x = layer(x)
@@ -113,6 +122,7 @@ class MobileNetV3SmallDepth(nn.Module):
         return F.softplus(self.head(x)) + self.min_depth
 
 
+# ResNet
 class ResNet50Depth(nn.Module):
     """ResNet-50 V1.5 encoder with projected skips and a compact range decoder.
 
@@ -124,14 +134,17 @@ class ResNet50Depth(nn.Module):
     def __init__(self, pretrained: bool = True, min_depth: float = .1):
         super().__init__()
         from torchvision.models import resnet50, ResNet50_Weights
+        # Encoder
         base = resnet50(weights=ResNet50_Weights.IMAGENET1K_V2 if pretrained else None)
         self.encoder = nn.ModuleDict({k: getattr(base, k) for k in
             ('conv1', 'bn1', 'relu', 'maxpool', 'layer1', 'layer2', 'layer3', 'layer4')})
         self.min_depth = min_depth
         self.register_buffer('rgb_mean', torch.tensor([.485, .456, .406]).view(1, 3, 1, 1))
         self.register_buffer('rgb_std', torch.tensor([.229, .224, .225]).view(1, 3, 1, 1))
+        # Projections
         self.projections = nn.ModuleList([nn.Conv2d(a, b, 1) for a, b in
             [(64, 16), (256, 32), (512, 64), (1024, 128), (2048, 128)]])
+        # Decoder
         self.up4 = UpBlock(128, 128, 128)
         self.up3 = UpBlock(128, 64, 64)
         self.up2 = UpBlock(64, 32, 32)
@@ -153,10 +166,12 @@ class ResNet50Depth(nn.Module):
         return F.softplus(self.head(x)) + self.min_depth
 
 
+# Models
 MODEL_REGISTRY = {"aerodepth_tiny": AeroDepthTiny, "mobilenet_v3_small_depth": MobileNetV3SmallDepth,
                   "resnet50_depth": ResNet50Depth}
 
 
+# Factory
 def build_model(config: dict[str, Any]) -> nn.Module:
     name = config.get("name", "aerodepth_tiny")
     if name not in MODEL_REGISTRY:
@@ -192,6 +207,7 @@ def model_contract(config: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+# Parameters
 def model_stats(model: nn.Module) -> dict[str, int | float]:
     parameters = sum(p.numel() for p in model.parameters())
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -202,6 +218,7 @@ def model_stats(model: nn.Module) -> dict[str, int | float]:
     return stats
 
 
+# Checkpoint
 def save_checkpoint(path: str | Path, model: nn.Module, optimizer: torch.optim.Optimizer | None, epoch: int, extra: dict[str, Any] | None = None) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -222,6 +239,7 @@ def save_checkpoint(path: str | Path, model: nn.Module, optimizer: torch.optim.O
         Path(temporary).unlink(missing_ok=True)
 
 
+# Loading
 def load_checkpoint(path: str | Path, model: nn.Module, optimizer: torch.optim.Optimizer | None = None, map_location: str | torch.device = "cpu") -> dict[str, Any]:
     checkpoint = torch.load(path, map_location=map_location, weights_only=False)
     model.load_state_dict(checkpoint["model"])

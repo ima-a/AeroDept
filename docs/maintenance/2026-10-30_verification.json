@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-30",
+  "base_commit": "fb1b4aedd15280abdb1126293e022d78cdcbf4e5",
+  "preservation": {
+    "checked_files": 484,
+    "changed_or_missing": [],
+    "scope": [
+      "results",
+      "models",
+      "evidence",
+      "presentations"
+    ]
+  },
+  "code": {
+    "files_with_one_word_markers": 13,
+    "markers_added": 101,
+    "all_python_asts_unchanged": true,
+    "old_source_seals_retained": true
+  },
+  "tests": {
+    "command": "env -u MIDAIR_ROOT -u AERODEPTH_EXPLORATORY_BUNDLE PYTHONPATH=$PWD/src PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -B -m pytest -q -p no:cacheprovider -m 'not integration'",
+    "passed": 109,
+    "skipped": 4,
+    "deselected": 1,
+    "seconds": 28.38,
+    "warnings": "30 external Streamlit/Pandas deprecation warnings",
+    "data_scope": "synthetic/dataset-free; optional lineage bundle and real-data integration not run"
+  },
+  "git_diff_check": "passed",
+  "package_check": {
+    "status": "passed",
+    "build": "setuptools.build_meta.build_sdist in isolated /tmp source copy",
+    "files": 578,
+    "required_deliverables_present": true,
+    "private_inputs_included": [],
+    "weight_exports": [
+      "models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt",
+      "models/mobilenet_v3_small_epoch4.state_dict.pt"
+    ],
+    "sha256": "a3d5f2b0492cfd9565296fb2e3ab8be2cdf42c6934c3973a1dd3781d68c5dff4",
+    "note": "Build tested before the final maintenance verification receipt was written; no package build products were left in the project.",
+    "extracted_package_tests": {
+      "passed": 2,
+      "seconds": 3.04,
+      "checks": [
+        "historical pilot exclusion metadata",
+        "portable dashboard saved evidence without USB"
+      ],
+      "warnings": "4 external Streamlit/Pandas deprecation warnings"
+    }
+  },
+  "documentation_links": "All relative Markdown file targets in README and top-level docs exist."
+}

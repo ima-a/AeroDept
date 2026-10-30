@@ -1,121 +1,112 @@
 # AeroDepth-Lite
 
-A reproducible research checkpoint for monocular drone-camera range prediction and causal inference scheduling. The repository includes the actual trained **epoch-4 MobileNetV3-Small depth weights**, a CPU inference path, frozen relative split manifest, validation results, original negative scheduler study, and bounded scheduler-v2 results. A [frozen final-test study](results/final_test/REPORT.md) now reports all five policies on 4,436 held-out frames, after repeated validation timing and split-isolation checks. This is simulation research, not a flight-safety system.
+Compact monocular drone-camera **range prediction** with causal inference scheduling. The current demonstration uses supervised **MobileNetV3-Small epoch 9 (A)**; the original epoch-4 model is retained as the near-field reference. Both inference exports are included. Python code, frozen manifests, saved results, tests and presentation files are organized below.
 
-The original final result is mixed: against the fixed validation-budget rule, V2 improves pooled near RMSE by 1.89%, but uses 14.86% more model calls and 26.53% more CPU compute; maximum event-update delay rises from 1 to 4 frames. PLE near RMSE regresses. Model depth errors remain substantial. [Protocol, guarded runner and reproduction](docs/final_study.md). Published training/validation/V1/V2/pilot evidence remains unchanged; that final study performed no retraining or additional policy search.
+A improves pooled validation AbsRel by **11.84%**, but near-field RMSE worsens **16.18%**. Exploratory distillation with the rejected ResNet-50 teacher underperforms A on validation. The eight reserved test archives are verified; the single frozen **8,820-frame independent study is completed and verified**. See [its protocol and reproduction guide](docs/independent_final_test.md). This is simulation research, with no measured flight-safety, energy or battery benefit.
 
-## Local presentation dashboard
+[Project report](docs/FINAL_REPORT.md) · [Documentation index](docs/README.md) · [Viva code guide](docs/VIVA_GUIDE.md) · [PowerPoint](presentations/aerodepth_lite/AeroDepth_Lite_Project_Presentation.pptx)
 
-The expanded supervised A and teacher B runs, plus the separately authorized exploratory KD run, are complete. Teacher B failed its original gate; that rejection is preserved. The validation presentation defaults to **supervised A epoch9**, offers **original epoch4** as the near-field reference and **exploratory KD epoch9** as a negative-result comparison. A improves pooled AbsRel11.84% but worsens pooled near RMSE16.18% versus original; it is not a near-field safety upgrade. Published original weights and normal CLI defaults remain unchanged.
+## Run the project
+
+On the prepared laptop, use the existing environment:
 
 ```bash
-python -m pip install -e '.[dashboard]'
+. .venv/bin/activate
 python -m streamlit run scripts/dashboard.py
 ```
 
-Localhost only, optional Python3.11+ UI; no cloud deployment or automatic training/tuning/test evaluation. [Dashboard, artifacts, guarded validation reproduction and limits](docs/presentation_dashboard.md). Earlier progress snapshots remain dated historical records; the presentation results give the completed status.
+The dashboard uses `configs/presentation_local.json` when present, otherwise the portable `configs/presentation.json`. Saved comparison tables and curves are available without a dataset. Real validation images, playback caches and the exploratory KD checkpoint require the explicitly configured external inputs. Missing inputs are shown as unavailable. [Dashboard instructions](docs/presentation_dashboard.md).
 
-The [consolidated final report](docs/FINAL_REPORT.md) brings together the model comparison, negative teacher/KD findings, scheduler ablations and actual timing. Independent reserved final testing is **NOT RUN** pending its eight RGB/depth archives and a verified manifest. The improved dashboard keeps this status explicit. A relocated checkout uses `configs/presentation.json`; local datasets/caches/private KD weights are opt-in environment locations. The two compact inference exports are included in source delivery; private training states remain excluded.
-
-## Expanded teacher/student experiment — completed training
-
-The expanded supervised A and teacher B runs and the separately authorized exploratory KD run are complete. Teacher B failed the original acceptance gate, which remains unchanged. Supervised A epoch9 is the general-depth presentation default; original epoch4 remains the near-field reference; exploratory KD epoch9 retains its negative validation result. [Final student comparison](results/student_validation_comparison_20261029T152648Z/REPORT.md) and [completed presentation validation](results/presentation_validation_20261029T155521Z/REPORT.md). The [27 October progress snapshot](results/expanded_status_20261027T150226Z/REPORT.md) records the earlier teacher-running observation and remains historical.
-
-Start with the [expanded reproduction guide](docs/expanded_reproduction.md): exact dataset layout, approved configurations, numerical-recovery policy, guarded commands, checkpoint/resume requirements and historical source versions. Code, manifests, protocols and compact evidence are included. MidAir inputs and private full-run checkpoints must be acquired or generated separately.
-
-## Install
-
-Run from a fresh clone with Python 3.13. CPU installation:
+For a fresh source checkout, use Python 3.13 and the recorded CPU dependency pair:
 
 ```bash
-git clone --branch main https://github.com/ima-a/AeroDept.git
-cd AeroDept
 python3.13 -m venv .venv
 . .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
-python -m pip install '.[dev,midair]' -c requirements-tested.txt
+python -m pip install -e '.[dev,midair,dashboard]' -c requirements-tested.txt
 ```
 
-For an existing compatible CUDA environment, skip the CPU-wheel command. For a fresh NVIDIA environment, install the matching torch/torchvision pair using the [official selector](https://pytorch.org/get-started/locally/), then install the project. The recorded laptop used torch2.14.1+cu130/torchvision0.29.1+cu130; CPU verification uses the corresponding +cpu builds. `make install` does not explicitly replace CUDA PyTorch with CPU wheels; `make install-cpu` is for a fresh CPU environment. [Installation details](docs/installation.md).
+Keep an existing compatible CUDA environment when you need GPU execution. See [installation](docs/installation.md) for the recorded CUDA versions and hardware caveats.
 
-## Dataset-free inference
+## Predict range from your own image
 
-No MidAir download or ImageNet cache is needed. Supply an RGB image:
+This command uses the A inference export, without MidAir, private checkpoints or an ImageNet download:
 
 ```bash
-OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 aerodepth infer \
-  --weights models/mobilenet_v3_small_epoch4.state_dict.pt \
-  --metadata models/mobilenet_v3_small_epoch4.json \
-  --image /path/to/image.jpg --output artifacts/prediction.npy --device cpu
+aerodepth infer \
+  --weights models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt \
+  --metadata models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json \
+  --image /path/to/image.jpg --output artifacts/prediction_A.npy --device cpu
 ```
 
-The FP32 `.npy` output is 192×320 **Euclidean camera range in metres**. RGB is resized over the full frame, without a crop; ImageNet normalization occurs inside the model exactly once. Predictions have a 0.1m floor and no upper clamp. Out-of-domain images can produce poor depth estimates. [Model metadata and notices](models/README.md).
+Output: a 192 × 320 FP32 `.npy` map of **Euclidean camera range in metres**. RGB is resized over the whole frame; ImageNet normalization occurs once inside the model. Predictions have a 0.1 m floor and no upper clamp. Generalization outside the simulated data has not been established. The CLI still defaults to the original epoch-4 export if weight arguments are omitted.
 
-A fast, dataset-free software verification creates clearly labelled **synthetic** images, trains a tiny synthetic model, checks replay/reporting, and runs the published MobileNet on one synthetic RGB:
-
-```bash
-OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python -m pytest -q
-OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python scripts/smoke.py --output artifacts/synthetic_smoke
-# Dataset-free example image created by the smoke workflow:
-aerodepth infer --image artifacts/synthetic_smoke/fixture/environment_0/trajectory_0000/rgb/frame_000000.JPEG \
-  --output artifacts/example_prediction.npy --device cpu
-```
-
-Synthetic outputs verify software, not research accuracy. Choose a new output directory when repeating a workflow; existing evidence is preserved.
-
-## Research reproduction
-
-Acquire **left RGB, depth/range and sensor HDF5** through the [official MidAir download form](https://midair.ulg.ac.be/download.html), accept its terms and extract in the original layout. [Exact subset, IDs and directory structure](docs/dataset.md). The full research manifest is compressed under `results/expanded_validation/manifest.json.gz`; decompression preserves its SHA-256 identity.
-
-```bash
-export MIDAIR_ROOT='/path/to/MidAir'
-OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python scripts/reproduce.py \
-  --dataset-root "$MIDAIR_ROOT" --study validation --device cpu --output artifacts/validation_repeat
-OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python scripts/reproduce.py \
-  --dataset-root "$MIDAIR_ROOT" --study scheduler-v1 --device cuda --output artifacts/scheduler_v1_repeat
-OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python scripts/reproduce.py \
-  --dataset-root "$MIDAIR_ROOT" --study scheduler-v2 --device cuda --output artifacts/scheduler_v2_repeat
-```
-
-These **public, versioned** runners use the supplied inference export, restrict image/depth reads to validation, preserve existing outputs, check agreement with the audited FP32 reference, and separate cached search from actual policy timing. They need the same dataset/manifest; reproducing research metrics is different from standalone inference. Plan roughly 3GB output space per run plus dependencies. GPU/CPU versions, precision and hardware affect exact numerical reproduction and timing. [Protocol, bounded plans and commands](docs/reproduction.md).
-
-## Recorded findings
-
-All 50 training epochs completed in **16h28m on GTX1650**. Best epoch4 was selected by recorded AMP validation AbsRel; the audited FP32 validation AbsRel is **0.301540**, RMSE **127.335m**, near-field RMSE **3.362m**. This model overfits after epoch4, misses far-depth geometry and has local floor saturation, particularly problematic alongside foggy-scene errors.
-
-Original scheduler: all 4,410 calls because its mixed-unit motion score saturates. Its tuned choice exactly equals fixed-2 on both trajectories and adds overhead. V2 removes privileged velocity, separately scales held simulated GPS and IMU proxies, and intentionally compares RGB with the last inferred frame. Its eight-point validation search selects 2,455 calls (44.33% skipped). Compared with exact call-matched fixed scheduling, near RMSE improves 2.25% on Kite and 8.77% on PLE, but Kite overall errors worsen slightly and PLE maximum event-update delay increases 1→2 frames. This is a **mixed, exploratory validation result**, not uniform adaptive superiority or independent generalization. No energy/battery improvement was measured.
-
-[Training/validation results](results/expanded_validation/REPORT.md) · [Original scheduler](results/scheduler_v1/REPORT.md) · [V2](results/scheduler_v2/REPORT.md) · [Historical custom-CNN pilot](evidence/real_midair_pilot/README.md). The pilot used different data/protocol and is not a fair expanded-data architecture comparison. Only the compatible expanded-data MobileNet weights are published.
-
-## Training and resume
-
-For a new run matching the recorded ImageNet-initialized training protocol:
-
-```bash
-python -c "import gzip,pathlib; p=pathlib.Path('artifacts/frozen_manifest.json'); p.parent.mkdir(exist_ok=True); p.write_bytes(gzip.decompress(pathlib.Path('results/expanded_validation/manifest.json.gz').read_bytes()))"
-aerodepth train --config models/training_config.yaml --dataset-root "$MIDAIR_ROOT" \
-  --manifest artifacts/frozen_manifest.json --output runs/new_mobilenet
-# Resume requires a trusted FULL training checkpoint, not the published state_dict:
-aerodepth train --config models/training_config.yaml --dataset-root "$MIDAIR_ROOT" \
-  --manifest artifacts/frozen_manifest.json --output runs/resumed_mobilenet --resume /path/to/private/last.pt
-```
-
-A fresh training run initializes the encoder from ImageNet and downloads those weights. For literal random initialization, create a new config with `model.pretrained: false`; this is a different, unmeasured experiment. Resume of the original run needs its private full `last.pt` and adjacent prior `best.pt`, including optimizer/scheduler/AMP/RNG state. Allow about 16.5 h on the recorded 4 GB GTX1650, plus setup/I/O; timings are hardware dependent. CPU is supported for inference/synthetic checks, not recommended for this 50-epoch workload. [Historical laptop workflow](docs/local_training.md) and [optional Kaggle notebook](notebooks/kaggle_train.ipynb) remain available.
+## Directory map
 
 ```text
-src/aerodepth_lite/  implementation, inference and public research runner
-configs/            portable candidate and synthetic configurations
-scripts/            export, reproduction and synthetic workflow entry points
-tests/              automated checks
-notebooks/          optional maintained Kaggle runner
-models/             trained inference weights, frozen config and metadata
-results/            historical studies, expanded manifests/protocols and dated evidence
-docs/               installation, dataset, methodology and publication record
-evidence/           distinct historical pilot
-# datasets/, runs/, artifacts/, environments and private tooling stay local/ignored
+src/aerodepth_lite/  current implementation; one-word code section markers
+scripts/            dashboard, inference/reproduction and training entry points
+configs/            portable settings; presentation_local.json stays private
+models/             two compact inference exports, metadata and hashes
+results/            canonical saved research evidence and frozen protocols
+  student_validation_comparison_20261029T152648Z/  original / A / KD comparison
+  presentation_validation_20261029T155521Z/        A scheduler, timing and curves
+  expanded_preparation_20261026/                  expanded split and reservations
+  final_test/                                    historical original-model test
+  ...                                            dated supporting evidence
+
+evidence/           historical diagnostic source snapshots and pilot evidence
+docs/               current guides, report, viva map and maintenance receipts
+presentations/      editable 13-slide PowerPoint and preview
+notebooks/          optional Kaggle workflow
+tests/              dataset-free software checks; optional data-dependent checks
+
+# Local only / ignored:
+datasets/           retained extracted pilot RGB/range and sensor files
+runs/local_mobilenet/main/  original full training checkpoints and history
+artifacts/
+  local/torch-cache/                           shared initialization weights
+  student_validation_comparison_20261029T152648Z/  dashboard example cache
+  archive/2026-10-30/                          retained historical local records
+.venv/              working Python environment
 ```
 
-See [NOTICE.md](NOTICE.md) for dataset attribution and upstream source/weight terms. Broader independent trajectories and actual deployment/energy investigation remain future work. The completed final study supports no measured energy, battery or flight-safety improvement.
+Result paths stay stable because code, protocols and figure references depend on them. A PNG in `results/` may be scientific evidence; file extension alone does not make it disposable. Raw data, private training states, environments and local archives are excluded from source delivery. [Storage and cleanup details](docs/archive_locations.md).
 
-The [bounded HDD/USB acquisition inventory](results/acquisition_publication_20261029T180214Z/REPORT.md) now checks the formerly unmounted HDD read-only as well. All8 reserved RGB/depth streams are absent in the documented locations and original Kaggle package; the HDD hardware failure remains unresolved. No new-test evaluation was run.
+## Dataset and recorded results
+
+The custom expanded MidAir subset has **44,098 training frames** across 12 independent paths / 20 climate realizations and **4,410 validation frames** across 2 paths. Weather variants of a path stay grouped. The new independent test contains 4 reserved paths / 8,820 verified frames, isolated by underlying path from training, validation, pilot and historical test exposure. The older completed 4,436-frame test belongs to the original model and remains quarantined.
+
+| Student | Validation AbsRel ↓ | RMSE (m) ↓ | Near RMSE (m) ↓ |
+|---|---:|---:|---:|
+| Original epoch 4 | 0.301540 | 127.335 | 3.362 |
+| Supervised A epoch 9 | 0.265831 | 119.944 | 3.906 |
+| Exploratory KD epoch 9 | 0.270049 | 121.207 | 3.961 |
+
+These are familiar validation paths used for development and checkpoint selection. The original model used a different training subset/budget. Matched A/KD comparisons cover one seed. Near pixels are heavily concentrated in PLE. [Full student comparison](results/student_validation_comparison_20261029T152648Z/REPORT.md).
+
+A's frozen V2 scheduler uses 2,456 calls on validation, the same pooled count as the fixed-budget rule. Pooled near RMSE improves 9.14%, while overall error slightly worsens and maximum event-update delay rises from 1 to 2 frames. Risk caching reduces scheduler work without a robust measured end-to-end speedup. [Scheduler and timing evidence](results/presentation_validation_20261029T155521Z/REPORT.md).
+
+## Reproduce or verify
+
+- **Software checks, no MidAir needed:**
+
+  ```bash
+  PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 \
+    python -B -m pytest -q -p no:cacheprovider -m 'not integration'
+  ```
+
+- **Dataset-free end-to-end synthetic check:** `python scripts/smoke.py --output artifacts/new_synthetic_smoke`. Generated fixtures test software, not scientific accuracy.
+- **Original validation and scheduler reproduction:** [reproduction guide](docs/reproduction.md); requires separately acquired validation data and a fresh output directory.
+- **Expanded training and historical resume:** [expanded reproduction](docs/expanded_reproduction.md). Source hashes are strict: use the frozen revision for old checkpoints.
+- **A validation replay and timing:** [dashboard reproduction](docs/presentation_dashboard.md); use a new config/protocol/output namespace.
+- **Historical final-study accounting:** [frozen study guide](docs/final_study.md), using its exact historical source checkout. Saved-result checking does not rerun test inputs.
+
+On 30 October 2026, one-word navigation comments were added to the current implementation. Python syntax trees were checked against the preceding sources; calculation logic is unchanged, but file hashes differ. Historical source seals and results are retained, not rewritten. [Marker receipt](docs/maintenance/2026-10-30_code_markers.json).
+
+Dataset acquisition, attribution and formats: [dataset guide](docs/dataset.md) and [NOTICE.md](NOTICE.md). The current [final report](docs/FINAL_REPORT.md) explains the negative findings, exposure controls and independent-test protocol and outcome.
+
+Read-only independent-study audit after completion: `python scripts/verify_independent_test.py`. Classroom code locations: [CODE_GUIDE.md](CODE_GUIDE.md).
+
+On the independent test, A versus Original changes pooled AbsRel by -1.82% and near RMSE by +1.41%. KD versus A changes pooled AbsRel by -0.13% and near RMSE by +1.80%. Negative changes mean lower error. These new outcomes do not erase the negative validation findings or the failed teacher gate; A remains the preselected demonstration model.

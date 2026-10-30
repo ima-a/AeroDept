@@ -1,0 +1,13 @@
+{
+  "client_date": "2026-10-31",
+  "unit": "aerodepth-dashboard-20261029t155521z.service",
+  "ActiveState": "active",
+  "SubState": "running",
+  "MainPID": 390332,
+  "active_since_local": "2026-10-31 00:23:00 Asia/Kolkata",
+  "url": "http://127.0.0.1:8501",
+  "same_existing_service": true,
+  "competing_server_started": false,
+  "repair": "Restored the existing unit runtime log directory after earlier cleanup archived its old contents; no archived historical log overwritten",
+  "browser_checks": "BROWSER_VERIFICATION.json"
+}

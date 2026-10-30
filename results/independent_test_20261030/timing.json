@@ -1,0 +1,25 @@
+{
+  "shared": {
+    "shared_io_seconds": 33.71034945192514,
+    "shared_decode_seconds": 402.68340711516794,
+    "matrix_wall_seconds": 1669.139590324019
+  },
+  "scope": {
+    "execution": "single chronological traversal; rotate seven-policy execution order by global frame index modulo 7",
+    "warmup": "10 synthetic zero-image forwards per model before exposure, excluded and counted separately",
+    "inference": "synchronized transfer-in + model forward + transfer-out, actual calls for every policy; no prediction lookup cache",
+    "scheduler": "reset/decision and fresh risk-cache update; compute = inference + scheduler",
+    "shared": "RGB/depth file I/O and decode/resize measured once per frame; shared among policies",
+    "excluded": "model/setup/warmups, offline metrics/events and CSV writes excluded from per-policy compute",
+    "wall": "whole traversal wall time includes shared preparation, all seven policies, scoring and logging; not a single-policy end-to-end benchmark",
+    "repetitions": 1,
+    "limitations": "CPU-only available in this runtime; OS cache/load uncontrolled; no energy/battery measurement"
+  },
+  "hardware": {
+    "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+    "python": "3.13.12",
+    "torch": "2.14.1+cu130",
+    "device": "cpu",
+    "torch_threads": 2
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "protocol_sha256": "6a1bb71c98ba3a5b513ff46e7babb4c33dca168886f9561072e8095cff71473f",
+  "completion_sha256": "a641728f92e8fa9cbdc6ae8db853b790c05618e1b00e4c62be8ff85022bdf9fc",
+  "verified_artifacts": 17,
+  "verified_frozen_sources": 19,
+  "comparison_rows": 35,
+  "accounting": {
+    "A_every": {
+      "frames": 8820,
+      "calls": 8820,
+      "valid_pixels": 377372106,
+      "near_valid_pixels": 105333081,
+      "events": 20,
+      "censored": 0
+    },
+    "A_fixed2": {
+      "frames": 8820,
+      "calls": 4411,
+      "valid_pixels": 377372106,
+      "near_valid_pixels": 105333081,
+      "events": 20,
+      "censored": 0
+    },
+    "A_fixed5": {
+      "frames": 8820,
+      "calls": 1765,
+      "valid_pixels": 377372106,
+      "near_valid_pixels": 105333081,
+      "events": 20,
+      "censored": 0
+    },
+    "A_budget_fixed": {
+      "frames": 8820,
+      "calls": 4912,
+      "valid_pixels": 377372106,
+      "near_valid_pixels": 105333081,
+      "events": 20,
+      "censored": 0
+    },
+    "A_v2": {
+      "frames": 8820,
+      "calls": 3718,
+      "valid_pixels": 377372106,
+      "near_valid_pixels": 105333081,
+      "events": 20,
+      "censored": 0
+    },
+    "Original_every": {
+      "frames": 8820,
+      "calls": 8820,
+      "valid_pixels": 377372106,
+      "near_valid_pixels": 105333081,
+      "events": 20,
+      "censored": 0
+    },
+    "KD_every": {
+      "frames": 8820,
+      "calls": 8820,
+      "valid_pixels": 377372106,
+      "near_valid_pixels": 105333081,
+      "events": 20,
+      "censored": 0
+    }
+  },
+  "test_images_opened": false,
+  "inference_calls_for_verification": 0
+}

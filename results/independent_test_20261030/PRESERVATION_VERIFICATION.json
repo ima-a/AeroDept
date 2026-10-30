@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "preserved_historical_files": 484,
+  "changed_or_missing_historical_files": [],
+  "earlier_marker_receipt": "docs/maintenance/2026-10-30_code_markers.json",
+  "unchanged_annotated_numerical_files": 12,
+  "dashboard_changes": "Earlier comment-only AST check preserved; subsequent functional UI integration is separately tested.",
+  "documentation_links": "All README/CODE_GUIDE/top-level docs relative file links exist",
+  "git_diff_check": "passed",
+  "python_syntax": "maintained src and scripts parse",
+  "frozen_numerical_sources": "Verified by scripts/verify_independent_test.py",
+  "scope": "No repeat of training, complete validation or independent evaluation"
+}

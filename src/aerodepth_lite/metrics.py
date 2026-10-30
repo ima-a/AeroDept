@@ -5,6 +5,7 @@ import math
 import torch
 
 
+# Metrics
 @dataclass
 class DepthMetricAccumulator:
     absrel_sum: float = 0.0
@@ -18,6 +19,7 @@ class DepthMetricAccumulator:
     near_count: int = 0
 
     def update(self, pred: torch.Tensor, target: torch.Tensor, valid: torch.Tensor, near_threshold: float = 10.0) -> None:
+        # Mask
         mask = valid.bool() & torch.isfinite(pred) & torch.isfinite(target) & (target > 0)
         if not torch.any(mask):
             return
@@ -25,12 +27,16 @@ class DepthMetricAccumulator:
         g = target[mask].double().clamp_min(1e-6)
         error = p - g
         ratio = torch.maximum(p / g, g / p)
+        # AbsRel
         self.absrel_sum += torch.sum(torch.abs(error) / g).item()
+        # RMSE
         self.squared_sum += torch.sum(error.square()).item()
+        # Delta
         self.delta1_count += torch.sum(ratio < 1.25).item()
         self.delta2_count += torch.sum(ratio < 1.25**2).item()
         self.delta3_count += torch.sum(ratio < 1.25**3).item()
         self.valid_count += p.numel()
+        # Near
         near = g < near_threshold
         if torch.any(near):
             near_error = p[near] - g[near]
@@ -38,6 +44,7 @@ class DepthMetricAccumulator:
             self.near_squared_sum += torch.sum(near_error.square()).item()
             self.near_count += int(torch.sum(near).item())
 
+    # Pooling
     def compute(self) -> dict[str, float | int]:
         if self.valid_count == 0:
             return {k: math.nan for k in ("absrel", "rmse", "delta1", "delta2", "delta3", "near_absrel", "near_rmse")} | {"valid_pixels": 0}

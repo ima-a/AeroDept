@@ -93,6 +93,7 @@ def check_record(record, split, root, check_files=True):
                 break
 
 
+# Splits
 def load_inputs(manifest, reservations, root):
     raw = raw_manifest(manifest)
     if hashlib.sha256(raw).hexdigest() != MANIFEST_SHA:
@@ -126,6 +127,7 @@ def load_inputs(manifest, reservations, root):
     return records, m
 
 
+# Leakage
 class ImageReadGuard:
     """Process-wide protection; dataset-level checks also cover spawn workers."""
     def __init__(self, root, records):
@@ -270,6 +272,7 @@ def ensure_prior_best(directory, expected_sha):
     copy_checkpoint_exact(previous, best, expected_sha)
 
 
+# Gate
 def teacher_gate(baseline_metrics, teacher_metrics):
     checks = {}
     keys = ('absrel', 'rmse', 'near_absrel', 'near_rmse')
@@ -310,6 +313,7 @@ def check_config(config):
         raise ValueError('Architecture/schedule mismatch')
 
 
+# Experiment
 class Experiment:
     def __init__(self, config, records, root, manifest_info, reservations, scope, initialize=None,
                  resume=None, teacher=None, teacher_sha=None, gate=None):
@@ -326,10 +330,12 @@ class Experiment:
         seed_everything(config['seed'])
         opts = config['model'] | {'pretrained': config['arm'] == 'teacher' and not resume,
                                   'min_depth': config['data']['min_depth']}
+        # Model
         self.model = build_model(opts).to(self.device)
         if config['arm'] == 'teacher':
             if initialize:
                 raise ValueError('Teacher uses ImageNet encoder initialization, not student export')
+            # ResNet
             from torchvision.models import ResNet50_Weights
             enum = ResNet50_Weights.IMAGENET1K_V2
             cached = Path(torch.hub.get_dir()) / 'checkpoints' / Path(enum.url).name
@@ -344,6 +350,7 @@ class Experiment:
             self.start_identity = {'kind': 'published_MobileNet_epoch4', 'sha256': INITIAL_SHA}
             if not resume:
                 initialize_student(self.model, initialize or PROJECT / 'models/mobilenet_v3_small_epoch4.state_dict.pt')
+        # Distillation
         self.teacher = None
         teacher_identity = None
         gate_identity = None
@@ -395,10 +402,12 @@ class Experiment:
                       {'params': [p for p in self.model.parameters() if id(p) not in enc_ids], 'lr': t['learning_rate']}]
         else:
             groups = self.model.parameters()
+        # AdamW
         self.optimizer = torch.optim.AdamW(groups, lr=t['learning_rate'], weight_decay=t['weight_decay'])
         if self.teacher is not None:
             assert not {id(p) for p in self.teacher.parameters()} & {
                 id(p) for g in self.optimizer.param_groups for p in g['params']}
+        # Cosine
         self.scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
             self.optimizer, T_max=t['lr_schedule']['t_max'], eta_min=t['lr_schedule']['eta_min'])
         self.amp = bool(t['amp']) and self.device.type == 'cuda'
@@ -449,6 +458,7 @@ class Experiment:
             torch.cuda.set_rng_state_all([x.cpu() for x in r['cuda']])
         self.train_loader.generator.set_state(r['loader'].cpu())
 
+    # Training
     def step(self, batch, trace=False):
         self.model.train()
         if self.teacher is not None:
@@ -488,11 +498,14 @@ class Experiment:
                 self.optimizer.zero_grad(set_to_none=True)
                 with torch.amp.autocast(self.device.type, enabled=self.amp):
                     pred = self.model(rgb)
+                # Supervision
                 supervised, _ = strict_supervised(pred, target, valid, self.config['loss'])
+                # KD
                 kd = masked_log_range_consistency(pred, teacher_prediction, valid) if teacher_prediction is not None else pred.float().sum() * 0.
                 loss = supervised + self.config['kd_weight'] * kd
                 if not torch.isfinite(loss):
                     raise FloatingPointError('Nonfinite training loss')
+                # Backpropagation
                 self.scaler.scale(loss).backward()
                 self.scaler.unscale_(self.optimizer)
                 bad = [name for name, p in self.model.named_parameters()
@@ -514,6 +527,7 @@ class Experiment:
             restore_trial()
             self.optimizer.zero_grad(set_to_none=True)
             raise
+        # Clipping
         torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.config['train']['grad_clip'], error_if_nonfinite=True)
         self.scaler.step(self.optimizer)
         self.scaler.update()
@@ -529,6 +543,7 @@ class Experiment:
                        frames=[(r['trajectory_id'], r['frame_index']) for r in batch['record']])
         return row
 
+    # Epoch
     def train_epoch(self, limit=None, trace=False):
         rows = []
         iterator = iter(self.train_loader)
@@ -551,6 +566,7 @@ class Experiment:
         self.epoch += 1
         return rows
 
+    # Validation
     @torch.no_grad()
     def evaluate(self, records, split, limit=None):
         self.model.eval()
@@ -582,6 +598,7 @@ class Experiment:
                     p.requires_grad or p.grad is not None for p in self.teacher.parameters()):
                 raise AssertionError('Teacher weights, gradients or BatchNorm state changed')
 
+    # Checkpoint
     def save(self, path, validation=None):
         self.assert_teacher_frozen()
         start = time.perf_counter()
@@ -706,6 +723,7 @@ def benchmark(engine, out, warmup=2, measured=8):
     return result
 
 
+# Training
 def full_training(engine, out):
     if engine.scope != 'full':
         raise ValueError('Only full scope can launch training')

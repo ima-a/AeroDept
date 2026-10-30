@@ -1,5 +1,7 @@
 # Historical local laptop training workflow
 
+Current navigation: [documentation index](README.md), [viva guide](VIVA_GUIDE.md), and [local archive mapping](archive_locations.md). This document retains dated workflow/history; it is not live training or service status. The 30 October cleanup archived local historical records and removed disposable outputs; current completed results are summarized in [the final report](FINAL_REPORT.md).
+
 The 50-epoch run is now complete. This file preserves the preparation/launch record; historical progress statements below describe the launch date. Use [the public reproduction guide](reproduction.md) and [completed results](../results/expanded_validation/REPORT.md) for the current checkpoint. `ARCHIVE_VERIFICATION_REPORT` refers to a locally retained prior archive-verification receipt; it is not required by the public reproduction runner.
 
 This workflow reads the selected MidAir extraction directly from the external
