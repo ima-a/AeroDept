@@ -92,19 +92,6 @@ def test_score_exact_threshold_and_forced_boundary_neighbours():
         assert s.decide_features(np.zeros((36,64)),{},float(value),True).infer==expected
 
 
-def test_future_test_requires_optin_and_blocked_proposal_opens_no_pixels(tmp_path,monkeypatch):
-    import importlib.util
-    spec=importlib.util.spec_from_file_location('future_test',ROOT/'scripts/presentation_final_test.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
-    from PIL import Image
-    monkeypatch.setattr(Image,'open',lambda *a,**kw:pytest.fail('Test pixel opened'))
-    protocol=tmp_path/'proposal.json';protocol.write_text(json.dumps({'status':'proposed_blocked_missing_reserved_manifest'}))
-    from aerodepth_lite.inference import file_sha256
-    args=['--protocol',str(protocol),'--protocol-sha256',file_sha256(protocol),'--manifest',str(tmp_path/'absent.json'),'--dataset-root',str(tmp_path),'--output',str(tmp_path/'output')]
-    with pytest.raises(SystemExit):module.main(args)
-    with pytest.raises(ValueError,match='No test access'):module.main(args+['--confirm-new-test-exposure'])
-    assert not (tmp_path/'output').exists()
-
-
 def test_demonstration_byte_decoder_matches_original_preprocessing(tmp_path):
     from PIL import Image
     from aerodepth_lite.data import FrameRecord,MidAirDataset

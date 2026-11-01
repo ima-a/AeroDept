@@ -2,7 +2,7 @@
 
 Training is complete: supervised A ran 10 epochs, ResNet-50 teacher B ran 20, and the separately authorized exploratory KD arm ran 10. B failed the original teacher gate, so original gated KD never ran. A and exploratory KD selected epoch 9. The [final comparison](../results/student_validation_comparison_20261029T152648Z/REPORT.md) retains the negative KD result; the separate reserved independent study is described in [its own guide](independent_final_test.md). The [27 October snapshot](../results/expanded_status_20261027T150226Z/REPORT.md) is historical, not live status.
 
-The 30 October maintenance added one-word code markers without changing Python ASTs. Byte hashes therefore differ from historical launch seals. For old checkpoint resume or exact sealed reproduction, use the matching pre-annotation revision `fb1b4aedd15280abdb1126293e022d78cdcbf4e5` in a separate checkout. Fresh runs may use the current code and record new source identities. Never replace historical hashes to accept a changed source file. Local archived files are mapped in [archive locations](archive_locations.md).
+The 30 October maintenance added one-word code markers without changing Python ASTs. Byte hashes therefore differ from historical launch seals. For old checkpoint resume or exact sealed reproduction, use the matching pre-annotation revision `fb1b4aedd15280abdb1126293e022d78cdcbf4e5` in a separate checkout. Fresh runs may use the current code and record new source identities. Never replace historical hashes to accept a changed source file.
 
 The historical final study is complete and remains quarantined. Its source-identical checkout and dataset-free saved-result verification are documented in [final study](final_study.md). The original validation/V1/V2 reproduction commands remain in [reproduction](reproduction.md).
 
@@ -14,7 +14,7 @@ Run expanded commands from the repository root with `PYTHONPATH="$PWD/src"`, as 
 
 The public package contains the original epoch-4 and supervised-A epoch-9 inference exports, source, tests, expanded manifest/reservations, approved configurations, protocols and compact verification evidence. Datasets, downloaded ImageNet initialization, environments, full training states, active logs and the laptop's user service stay private. The small failed-launch log and startup observation published with their receipts are historical evidence, not active logs. These commands reproduce new runs; they do not download or resume the laptop's private checkpoints.
 
-Obtain left RGB and depth/range for the exact **20 training and two validation realizations** in [the verified trajectory table](../results/expanded_preparation_20261026/REPORT.md#verified-realizations-and-page-ids). That table maps official form IDs to internal climate-prefixed IDs and counts. The [original subset documentation](dataset.md) and [expansion checklist](expanded_experiment_20261025/PLAN.md) explain acquisition; their original-test/new-test selections are not needed for this TRAIN/VAL workflow. Corresponding climate HDF5 records support independent preparation checks; the training runner uses the frozen manifest's metadata and does not open sensor archives/HDF5. Respect [MidAir attribution and terms](../NOTICE.md).
+Obtain left RGB and depth/range for the exact **20 training and two validation realizations** in [the verified trajectory table](../results/expanded_preparation_20261026/REPORT.md#verified-realizations-and-page-ids). That table maps official form IDs to internal climate-prefixed IDs and counts. The [dataset guide](dataset.md) explains acquisition; test inputs are not needed for this TRAIN/VAL workflow. Corresponding climate HDF5 records support independent preparation checks; the training runner uses the frozen manifest's metadata and does not open sensor archives/HDF5. Respect [MidAir attribution and terms](../NOTICE.md).
 
 Use a real directory, with no dataset symlinks. Set your own common root while retaining these relative locations:
 
@@ -33,7 +33,7 @@ The first two locations contain original TRAIN/VAL inputs; the nested staging lo
 |---|---:|---:|---:|
 | Training | 12 | 20 | 44,098 |
 | Unchanged validation | 2 | 2 | 4,410 |
-| New test, reserved and unacquired at snapshot | 4 | 4 reserved | 8,820 expected |
+| Independent test, completed separately | 4 | 4 | 8,820 verified |
 | Original completed test, quarantined | 2 | 2 historical | 4,436 historical |
 
 All weather equivalents of validation and both test sets are excluded from training. Pilot-exposed paths cannot become new test. There are no test image records in the expanded manifest; do not acquire/preview/evaluate test inputs for this workflow. Both models predict Euclidean camera range in metres with the same masks, preprocessing and metrics described in [the training contract](expanded_training.md).
@@ -148,7 +148,7 @@ systemd-inhibit --what=sleep --mode=block --why='Expanded KD run' -- \
 
 The gate requires strictly lower teacher pooled validation AbsRel and, on **each** unchanged validation path, finite overall/near AbsRel and RMSE no worse than the supervised baseline, with equal valid/near counts and no tolerance. A better pooled score alone does not pass. KD recomputes and validates the gate and its source/checkpoint identities. Failure means stop, not tune/retry until acceptance.
 
-`scripts/expanded_sequence.py` is the guarded supervisor used by the laptop's frozen bundle: it verifies source/input hashes, disk identity, full completion budgets, required checkpoints and the gate between stages. It requires a separately prepared bundle with `frozen/`, `freeze.json`, `freeze.sha256`, logs/completion directories and host-specific disk metadata; cloning this repository is not sufficient to invoke it. The portable per-arm sequence above uses the same verified training/gate implementation without pretending the private host bundle is portable.
+The original host-specific supervisor has been retired from the active scripts. Historical frozen bundles retain their own source copies. Use the portable per-arm commands above for a separate reproduction; they invoke the supported training and gate implementation.
 
 ## Stop and resume
 

@@ -50,6 +50,6 @@ Do not remove the ledger, edit the protocol or rerun this namespace to refresh a
 
 The inference-only compatibility record verifies AST equality to checkpoint source at `fb1b4aedd15280abdb1126293e022d78cdcbf4e5`; it does not bypass teacher acceptance or allow training resume. The portable public A/Original exports load without that private checkpoint. Full-data reproduction also needs the exact external staged images, HDF5s and private KD checkpoint recorded by the protocol.
 
-Use [the final report](FINAL_REPORT.md) for conclusions, [the code guide](../CODE_GUIDE.md) for viva locations, and [the dashboard guide](presentation_dashboard.md) for classroom launch and validation-only inference/replay.
+Use [the final report](FINAL_REPORT.md) for conclusions, [the viva guide](VIVA_GUIDE.md) for code locations, and [the dashboard guide](presentation_dashboard.md) for classroom launch and validation-only inference/replay.
 
 [Complete results and interpretation](../results/independent_test_20261030/REPORT.md) · [Saved-output verification](../results/independent_test_20261030/VERIFICATION.json).

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aerodepth-lite"
 version = "0.1.0"
-description = "Safety-constrained adaptive inference for UAV monocular depth"
+description = "Compact monocular UAV range prediction and causal inference scheduling"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

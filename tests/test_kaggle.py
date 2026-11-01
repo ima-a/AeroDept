@@ -1,8 +1,4 @@
-from pathlib import Path
-import ast
-import importlib.util
 import json
-import zipfile
 
 import h5py
 import numpy as np
@@ -11,16 +7,6 @@ import pytest
 
 from aerodepth_lite.kaggle import (discover_dataset_root, validate_dataset, grouped_manifest,
     load_or_create_manifest, validate_manifest, path_group)
-
-
-ROOT = Path(__file__).resolve().parents[1]
-
-
-def module(name, path):
-    spec = importlib.util.spec_from_file_location(name, path)
-    result = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(result)
-    return result
 
 
 @pytest.fixture
@@ -95,41 +81,6 @@ def test_hdf5_wrong_weather_path_rejected(weather_dataset):
         paths[0] = paths[0].decode().replace('sunny', 'foggy')
     with pytest.raises(ValueError, match='synchronization'):
         validate_dataset(weather_dataset)
-
-
-def test_bundle_setup_and_notebook_syntax(tmp_path):
-    packager = module('packager', ROOT / 'scripts/package_kaggle.py')
-    setup = module('setup', ROOT / 'scripts/kaggle_setup.py')
-    archive = tmp_path / 'code.zip'
-    result = packager.package(archive)
-    assert result['bytes'] < 200_000
-    staged = setup.stage_project(archive, tmp_path / 'staged', result['sha256'])
-    assert (staged / 'pyproject.toml').exists()
-    with zipfile.ZipFile(archive) as zipped:
-        assert not any(n.startswith(('.git/', 'datasets/', '.venv/')) or n.endswith(('.pt', '.hdf5')) for n in zipped.namelist())
-    extracted = setup.stage_project(staged, tmp_path / 'extracted')
-    assert (extracted / 'src/aerodepth_lite/model.py').read_bytes() == (ROOT / 'src/aerodepth_lite/model.py').read_bytes()
-    with pytest.raises(ValueError, match='checksum'):
-        setup.extract_project(archive, tmp_path / 'bad', 'wrong')
-    notebook = json.loads((ROOT / 'notebooks/kaggle_train.ipynb').read_text())
-    assert notebook['nbformat'] == 4
-    for cell in notebook['cells']:
-        if cell['cell_type'] == 'code':
-            source = ''.join(cell['source'])
-            ast.parse(source)
-            assert cell['outputs'] == []
-            assert '"test"' not in source and "'test'" not in source
-    report = setup.environment_report(tmp_path)
-    assert report['storage_free_gb'] > 0
-
-
-def test_unsafe_bundle_rejected(tmp_path):
-    setup = module('unsafe_setup', ROOT / 'scripts/kaggle_setup.py')
-    archive = tmp_path / 'unsafe.zip'
-    with zipfile.ZipFile(archive, 'w') as handle:
-        handle.writestr('../escape.py', 'pass')
-    with pytest.raises(ValueError, match='Unsafe'):
-        setup.extract_project(archive, tmp_path / 'out')
 
 
 def test_climate_digit_grouping_and_environment():

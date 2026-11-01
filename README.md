@@ -1,27 +1,14 @@
 # AeroDepth-Lite
 
-Compact monocular drone-camera **range prediction** with causal inference scheduling. The current demonstration uses supervised **MobileNetV3-Small epoch 9 (A)**; the original epoch-4 model is retained as the near-field reference. Both inference exports are included. Python code, frozen manifests, saved results, tests and presentation files are organized below.
+Compact monocular drone-camera **range prediction** with causal inference scheduling. A MobileNetV3-Small encoder and skip decoder predict a 192 × 320 map of Euclidean camera range in metres. The V2 scheduler decides when to compute a fresh map or reuse the previous one.
 
-A improves pooled validation AbsRel by **11.84%**, but near-field RMSE worsens **16.18%**. Exploratory distillation with the rejected ResNet-50 teacher underperforms A on validation. The eight reserved test archives are verified; the single frozen **8,820-frame independent study is completed and verified**. See [its protocol and reproduction guide](docs/independent_final_test.md). This is simulation research, with no measured flight-safety, energy or battery benefit.
+The project includes trained inference exports, a local research dashboard, automated software tests and saved experimental evidence. Training and the **8,820-frame independent test are complete and verified**. This is simulation research; real-flight safety, energy and battery benefits have not been measured.
 
-[Project report](docs/FINAL_REPORT.md) · [Documentation index](docs/README.md) · [Viva code guide](docs/VIVA_GUIDE.md) · [PowerPoint](presentations/aerodepth_lite/AeroDepth_Lite_Project_Presentation.pptx)
+[Project report](docs/FINAL_REPORT.md) · [Documentation](docs/README.md) · [Viva guide](docs/VIVA_GUIDE.md) · [Repository structure](docs/repository_structure.md)
 
-## Run the project
+## Install and run
 
-On the prepared laptop, use the existing environment:
-
-```bash
-. .venv/bin/activate
-python -m streamlit run scripts/dashboard.py
-```
-
-The research dashboard opens on the independent test with compact Results, Model comparison, Depth viewer, Scheduler and Artifacts pages. A remains the preselected model. The shared toolbar identifies each result’s study, model, policy, trajectory and measurement scope.
-
-![Research dashboard](docs/dashboard_redesign/results_desktop.png)
-
-The dashboard uses `configs/presentation_local.json` when present, otherwise the portable `configs/presentation.json`. Saved comparison tables and curves are available without a dataset. Real validation images, playback caches and the exploratory KD checkpoint require the explicitly configured external inputs. Missing inputs are shown as unavailable. [Dashboard instructions](docs/presentation_dashboard.md).
-
-For a fresh source checkout, use Python 3.13 and the recorded CPU dependency pair:
+For a fresh CPU environment, use Python 3.13 from the repository root:
 
 ```bash
 python3.13 -m venv .venv
@@ -29,13 +16,18 @@ python3.13 -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -e '.[dev,midair,dashboard]' -c requirements-tested.txt
+python -m streamlit run scripts/dashboard.py
 ```
 
-Keep an existing compatible CUDA environment when you need GPU execution. See [installation](docs/installation.md) for the recorded CUDA versions and hardware caveats.
+On the prepared laptop, activate the existing `.venv` and run the final command. Keep an existing compatible CUDA environment for GPU use; see [installation](docs/installation.md).
 
-## Predict range from your own image
+The dashboard has Results, Model comparison, Depth viewer, Scheduler and Artifacts pages. It opens on the independent study with supervised **A epoch 9** preselected. Saved tables and curves work without a dataset. Validation images, recorded playback and KD inference need separately configured external inputs; missing inputs appear as unavailable. See [dashboard instructions](docs/presentation_dashboard.md).
 
-This command uses the A inference export, without MidAir, private checkpoints or an ImageNet download:
+![Research dashboard](docs/assets/dashboard.png)
+
+## Predict range from an image
+
+The A export runs without MidAir, private checkpoints or an ImageNet download:
 
 ```bash
 aerodepth infer \
@@ -44,73 +36,58 @@ aerodepth infer \
   --image /path/to/image.jpg --output artifacts/prediction_A.npy --device cpu
 ```
 
-Output: a 192 × 320 FP32 `.npy` map of **Euclidean camera range in metres**. RGB is resized over the whole frame; ImageNet normalization occurs once inside the model. Predictions have a 0.1 m floor and no upper clamp. Generalization outside the simulated data has not been established. The CLI still defaults to the original epoch-4 export if weight arguments are omitted.
+The output is a 192 × 320 FP32 `.npy` range map in metres. RGB uses full-frame resizing and one in-model ImageNet normalization. Predictions have a 0.1 m floor and no upper clamp. The CLI defaults to the Original epoch-4 export if weight arguments are omitted. Generalization outside the simulated data is untested.
 
-## Directory map
+## Data and results
 
-```text
-src/aerodepth_lite/  current implementation; one-word code section markers
-scripts/            dashboard, inference/reproduction and training entry points
-configs/            portable settings; presentation_local.json stays private
-models/             two compact inference exports, metadata and hashes
-results/            canonical saved research evidence and frozen protocols
-  student_validation_comparison_20261029T152648Z/  original / A / KD comparison
-  presentation_validation_20261029T155521Z/        A scheduler, timing and curves
-  expanded_preparation_20261026/                  expanded split and reservations
-  final_test/                                    historical original-model test
-  ...                                            dated supporting evidence
+The custom MidAir subset contains **44,098 training frames** across 12 underlying paths, **4,410 validation frames** across two paths, and **8,820 independent-test frames** across four reserved paths. Weather variants stay grouped by underlying path. The older 4,436-frame Original-model test remains separate historical evidence. See [dataset details](docs/dataset.md).
 
-evidence/           historical diagnostic source snapshots and pilot evidence
-docs/               current guides, report, viva map and maintenance receipts
-presentations/      editable 13-slide PowerPoint and preview
-notebooks/          optional Kaggle workflow
-tests/              dataset-free software checks; optional data-dependent checks
+| Study | Every-frame model | AbsRel ↓ | RMSE (m) ↓ | Near RMSE (m) ↓ |
+|---|---|---:|---:|---:|
+| Validation | Original epoch 4 | 0.301540 | 127.335 | 3.362 |
+| Validation | Supervised A epoch 9 | 0.265831 | 119.944 | 3.906 |
+| Validation | Exploratory KD epoch 9 | 0.270049 | 121.207 | 3.961 |
+| Independent test | Original epoch 4 | 0.390815 | 81.798 | 4.087 |
+| Independent test | Supervised A epoch 9 | 0.383690 | 81.813 | 4.145 |
+| Independent test | Exploratory KD epoch 9 | 0.383202 | 82.174 | 4.219 |
 
-# Local only / ignored:
-datasets/           retained extracted pilot RGB/range and sensor files
-runs/local_mobilenet/main/  original full training checkpoints and history
-artifacts/
-  local/torch-cache/                           shared initialization weights
-  student_validation_comparison_20261029T152648Z/  dashboard example cache
-  archive/2026-10-30/                          retained historical local records
-.venv/              working Python environment
+Near field means valid ground-truth range below 10 m. A improves validation AbsRel by 11.84% versus Original, but near RMSE worsens 16.18%. On the independent test, those changes are −1.82% and +1.41%, respectively. KD slightly improves pooled test AbsRel versus A while worsening near RMSE; its validation result and rejected-teacher status remain negative. Original used a different training subset/budget; matched A/KD comparisons cover one seed. Pooled gains hide path-level regressions.
+
+On the independent test, **V2 uses 3,718 calls versus 4,912 for budget-fixed**, with 17.08% lower measured inference-plus-scheduler time. AbsRel worsens 0.43%, near RMSE improves 0.25%, and maximum event-update delay rises from 1 to 4 frames. This one CPU pass excludes shared I/O/decode and offline scoring; it is not an end-to-end speed or energy claim. [Complete results and limitations](docs/FINAL_REPORT.md).
+
+## Verify and reproduce
+
+Run software checks without MidAir:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 \
+  python -B -m pytest -q -p no:cacheprovider -m 'not integration'
 ```
 
-Result paths stay stable because code, protocols and figure references depend on them. A PNG in `results/` may be scientific evidence; file extension alone does not make it disposable. Raw data, private training states, environments and local archives are excluded from source delivery. [Storage and cleanup details](docs/archive_locations.md).
+Audit the completed independent study without reading test images or running inference:
 
-## Dataset and recorded results
+```bash
+python scripts/verify_independent_test.py
+```
 
-The custom expanded MidAir subset has **44,098 training frames** across 12 independent paths / 20 climate realizations and **4,410 validation frames** across 2 paths. Weather variants of a path stay grouped. The new independent test contains 4 reserved paths / 8,820 verified frames, isolated by underlying path from training, validation, pilot and historical test exposure. The older completed 4,436-frame test belongs to the original model and remains quarantined.
+For a dataset-free synthetic workflow, run `python scripts/smoke.py --output artifacts/new_synthetic_smoke`. Synthetic fixtures verify software, not research accuracy.
 
-| Student | Validation AbsRel ↓ | RMSE (m) ↓ | Near RMSE (m) ↓ |
-|---|---:|---:|---:|
-| Original epoch 4 | 0.301540 | 127.335 | 3.362 |
-| Supervised A epoch 9 | 0.265831 | 119.944 | 3.906 |
-| Exploratory KD epoch 9 | 0.270049 | 121.207 | 3.961 |
+Use the [original validation reproduction guide](docs/reproduction.md), [expanded training guide](docs/expanded_reproduction.md) and [independent-study guide](docs/independent_final_test.md) for their separate input requirements and source revisions. Historical checkpoint resume requires matching frozen source identities. Completed evidence and exposure ledgers are preserved; documentation changes do not require another study run.
 
-These are familiar validation paths used for development and checkpoint selection. The original model used a different training subset/budget. Matched A/KD comparisons cover one seed. Near pixels are heavily concentrated in PLE. [Full student comparison](results/student_validation_comparison_20261029T152648Z/REPORT.md).
+## Repository contents
 
-A's frozen V2 scheduler uses 2,456 calls on validation, the same pooled count as the fixed-budget rule. Pooled near RMSE improves 9.14%, while overall error slightly worsens and maximum event-update delay rises from 1 to 2 frames. Risk caching reduces scheduler work without a robust measured end-to-end speedup. [Scheduler and timing evidence](results/presentation_validation_20261029T155521Z/REPORT.md).
+| Path | Purpose |
+|---|---|
+| `src/aerodepth_lite/` | Python implementation: models, data, training, inference, scheduling and dashboard helpers |
+| `scripts/` | Supported dashboard, training, reproduction and verification entry points |
+| `tests/` | Automated checks using synthetic inputs and saved evidence; optional real-data integration checks |
+| `configs/` | Portable settings; private local configurations are ignored |
+| `models/` | Two compact inference exports with metadata and checksums |
+| `results/`, `evidence/` | Curated scientific results, manifests, protocols and provenance |
+| `docs/` | User guides, methodology, evaluation report and reproduction instructions |
 
-## Reproduce or verify
+`src/` is required to run the project. `tests/` stays in the repository to detect regressions. `pyproject.toml`, `MANIFEST.in`, `requirements-tested.txt` and `Makefile` support installation, packaging, reproducibility and manual CI. [Folder and root-file details](docs/repository_structure.md).
 
-- **Software checks, no MidAir needed:**
+Evaluation slides and `CODE_GUIDE.md` are local-only. The notebook folder and obsolete launch/packaging helpers have been removed. Datasets, full training states, environments, credentials and caches are excluded from Git. Local archives retain retired operational records; published scientific evidence stays in its original location.
 
-  ```bash
-  PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 \
-    python -B -m pytest -q -p no:cacheprovider -m 'not integration'
-  ```
-
-- **Dataset-free end-to-end synthetic check:** `python scripts/smoke.py --output artifacts/new_synthetic_smoke`. Generated fixtures test software, not scientific accuracy.
-- **Original validation and scheduler reproduction:** [reproduction guide](docs/reproduction.md); requires separately acquired validation data and a fresh output directory.
-- **Expanded training and historical resume:** [expanded reproduction](docs/expanded_reproduction.md). Source hashes are strict: use the frozen revision for old checkpoints.
-- **A validation replay and timing:** [dashboard reproduction](docs/presentation_dashboard.md); use a new config/protocol/output namespace.
-- **Historical final-study accounting:** [frozen study guide](docs/final_study.md), using its exact historical source checkout. Saved-result checking does not rerun test inputs.
-
-On 30 October 2026, one-word navigation comments were added to the current implementation. Python syntax trees were checked against the preceding sources; calculation logic is unchanged, but file hashes differ. Historical source seals and results are retained, not rewritten. [Marker receipt](docs/maintenance/2026-10-30_code_markers.json).
-
-Dataset acquisition, attribution and formats: [dataset guide](docs/dataset.md) and [NOTICE.md](NOTICE.md). The current [final report](docs/FINAL_REPORT.md) explains the negative findings, exposure controls and independent-test protocol and outcome.
-
-Read-only independent-study audit after completion: `python scripts/verify_independent_test.py`. Classroom code locations: [CODE_GUIDE.md](CODE_GUIDE.md).
-
-On the independent test, A versus Original changes pooled AbsRel by -1.82% and near RMSE by +1.41%. KD versus A changes pooled AbsRel by -0.13% and near RMSE by +1.80%. Negative changes mean lower error. These new outcomes do not erase the negative validation findings or the failed teacher gate; A remains the preselected demonstration model.
+Dataset attribution and upstream terms: [NOTICE.md](NOTICE.md).

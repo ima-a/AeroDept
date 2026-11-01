@@ -1,14 +1,13 @@
-include README.md CODE_GUIDE.md NOTICE.md requirements-tested.txt
+include README.md NOTICE.md requirements-tested.txt
+exclude CODE_GUIDE.md
 include .streamlit/config.toml
 recursive-include configs *.yaml *.json
 exclude configs/presentation_local.json
 exclude configs/independent_test_local.json
-recursive-include docs *.md *.json *.csv
-recursive-include presentations *.md *.pptx *.pdf *.py *.json *.jpg *.png
+recursive-include docs *.md *.png
 recursive-include scripts *.py
 recursive-include evidence/reproduction_sources *.py *.json *.md
 recursive-include evidence/real_midair_pilot *.json *.md
-recursive-include notebooks *.ipynb
 recursive-include tests *.py
 include models/README.md models/SHA256SUMS models/training_config.yaml
 include models/mobilenet_v3_small_epoch4.json models/mobilenet_v3_small_epoch4.state_dict.pt
@@ -22,3 +21,5 @@ prune datasets
 prune data
 prune .venv
 prune .git
+prune presentations
+prune notebooks

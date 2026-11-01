@@ -106,7 +106,7 @@ def test_independent_loader_rejects_artifact_tampering(tmp_path):
 
 
 def test_missing_private_kd_disables_forward_preserves_recorded_view(tmp_path,monkeypatch):
-    cfg=json.loads((ROOT/'configs/presentation_local.json').read_text())
+    cfg=json.loads((ROOT/'configs/presentation.json').read_text())
     cfg['models']['KD']['weights']=str(tmp_path/'missing_KD.pt')
     path=tmp_path/'config.json';path.write_text(json.dumps(cfg))
     monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(path))

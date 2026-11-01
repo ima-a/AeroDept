@@ -17,6 +17,11 @@ artifacts/
 .idea/
 .vscode/
 
+# Local evaluation deliverables and classroom code notes.
+/presentations/
+/notebooks/
+/CODE_GUIDE.md
+
 # Private tooling, credentials and disposable build products
 .ai
 .ai/

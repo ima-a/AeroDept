@@ -1,6 +1,6 @@
 # AeroDepth-Lite — consolidated final research report
 
-Status: training and validation are complete. The separately authorized independent reserved study is **COMPLETED and verified**, with 8,820 frames and seven frozen comparisons. No new training, tuning, teacher repair, KD rerun or presentation generation is part of this delivery. Existing presentation/evidence and one-word code markers are preserved. See [storage records](archive_locations.md), [the code guide](../CODE_GUIDE.md) and [the viva guide](VIVA_GUIDE.md).
+Status: training and validation are complete. The independent study is **COMPLETED and verified**, with 8,820 frames and seven frozen comparisons. The local 16-slide evaluation deck summarizes these saved results. The repository contains the implementation, software tests, user guides and curated scientific evidence; slides and the classroom code notes are shared separately. See [repository structure](repository_structure.md) and [the viva guide](VIVA_GUIDE.md).
 
 ## Problem and objectives
 
@@ -228,6 +228,6 @@ On the independent test, A versus Original changes pooled AbsRel by -1.82% and n
 
 The frozen primary V2-versus-budget-fixed comparison uses 3,718 versus 4,912 actual calls. AbsRel changes +0.43%, near RMSE -0.25%, and measured inference-plus-scheduler time -17.08%. Maximum observed event-update delay is 4 versus 1 frames; right-censored events are 0 versus 0. A fresh update is not a detection guarantee.
 
-Verification and exact changed-source identities are recorded separately in this delivery results directory; completed historical protocols/results remain unchanged. The owner subsequently authorized a selective commit/push after final verification. No automatic deployment promotion or history rewrite is part of this delivery.
+Verification and exact source identities are recorded with each study. Completed historical protocols, exposure ledgers and results retain their original identities.
 
 The [29 October acquisition inventory](../results/acquisition_publication_20261029T180214Z/REPORT.md) is historical. The 30 October Downloads inventory and new ready protocol supersede its acquisition blocker; frozen historical records remain unchanged.

@@ -2,26 +2,19 @@
 
 The Streamlit app has five pages: **Results**, **Model comparison**, **Depth viewer**, **Scheduler**, and **Artifacts**. It opens on the completed independent test, supervised A, every-frame policy and pooled trajectories. A remains the preselected general-depth model; Original is the near-field reference; Exploratory KD keeps its exploratory designation. All numbers come from existing saved evidence. The UI does not train, tune, evaluate test images or rerun studies.
 
-![Results at classroom laptop width](dashboard_redesign/results_desktop.png)
+![Research dashboard](assets/dashboard.png)
 
-## Start the existing application
+## Start the application
 
-On the prepared machine, open **http://127.0.0.1:8501**. While the existing transient service is present, start it with:
-
-```bash
-systemctl --user start aerodepth-dashboard-20261029t155521z.service
-```
-
-Restart that same service after UI changes. It logs to the retained `artifacts/presentation_validation_20261029T155521Z/dashboard.log` directory. A full logout/reboot may remove the transient unit. Do not run another server on port 8501 while it is active.
-
-For a checkout with no running service:
+From the repository root:
 
 ```bash
+. .venv/bin/activate
 python -m pip install -e '.[dashboard]'
 python -m streamlit run scripts/dashboard.py
 ```
 
-The existing `.venv` and optional dashboard dependencies are reused. The application binds to localhost, disables usage statistics, and works offline after installation. The normal CLI does not import Streamlit or the UI modules.
+Open **http://127.0.0.1:8501**. Use one running instance on that port. The application binds to localhost, disables usage statistics, and works offline after installation. The normal inference CLI does not import Streamlit or UI modules.
 
 ## Context and data
 
@@ -44,6 +37,8 @@ Small artifact reads and parsed CSVs are cached by file modification identity. I
 **Model comparison** shows all supported models for the selected split and trajectory, paired overall/near plots and signed relative differences against a named reference. Training histories are inside an expander labelled validation evidence, including the original precision/budget caveats. KD's slightly lower independent pooled AbsRel does not erase its worse near RMSE or its negative validation comparison.
 
 **Depth viewer** keeps a large 2×2 RGB/GT/prediction/signed-near-error layout on a dark canvas. Controls select validation trajectory, model, device, preset/frame and recorded policy. Input aspect ratios and common log-range/error scales are preserved. Images are attributed to MidAir (Fonder & Van Droogenbroeck, CC BY-NC-SA 4.0); see [NOTICE](../NOTICE.md).
+
+![Range viewer with validation input and prediction](assets/range_viewer.png)
 
 Actual FP32/eval inference occurs only after **Run actual inference**. Existing weight hashes, validation allowlists, read guards and parameter/BatchNorm-state checks remain unchanged. The observation table describes one call, not a benchmark. Changing model/frame/device cannot reuse an old call as a fresh result. The selected frame survives leaving and returning to the viewer; playback returns paused. Recorded policy replay shows current frame, source frame, reason and prediction age; playback frames/s is a display setting. The image download saves the displayed colourized validation prediction, not raw scientific range data.
 
@@ -75,11 +70,9 @@ export AERODEPTH_KD_CHECKPOINT=/your/private/verified/KD-best.pt
 
 Unset inputs resolve to an unavailable location. Saved result pages work without datasets or private KD weights. The UI never scans for arbitrary datasets. The failed HDD is not an input source. [Independent-study requirements](independent_final_test.md) and [expanded reproduction](expanded_reproduction.md) describe full-data research reproduction; these are separate from using the UI. Do not rerun completed scientific workflows to refresh screenshots.
 
-## Verification and design references
+## Software verification
 
-[Redesign verification and screenshots](dashboard_redesign/README.md) records exact local checks, browser widths, missing-input behavior and immutable evidence preservation. Scientific source, models, protocols, exposure ledgers and saved metrics stay unchanged. CI is a separate manual workflow and must not be inferred from local test success.
-
-The interface takes compact table/comparison patterns from [MLflow Tracking](https://mlflow.org/docs/latest/tracking/), image/timeline organization from [Foxglove Image](https://docs.foxglove.dev/docs/visualization/panels/image), [Plot](https://docs.foxglove.dev/docs/visualization/panels/plot) and [Playback](https://docs.foxglove.dev/docs/visualization/playback), and restrained navigation/spacing from [shadcn dashboard](https://ui.shadcn.com/examples/dashboard). These are references only; their services/dependencies are not installed.
+The `tests/` directory checks saved-data adapters, context selection, viewer state and inference guards. Run the dataset-free checks in the project README. Study/source identities and saved metrics remain unchanged by UI or documentation maintenance; a displayed playback rate is not measured inference throughput.
 
 ## Classroom sequence
 
@@ -87,4 +80,4 @@ The interface takes compact table/comparison patterns from [MLflow Tracking](htt
 2. Model comparison: compare Original/A/KD, choose a reference, then inspect Kite sunny and validation separately.
 3. Depth viewer: use the Poor/Typical validation presets, explicitly run one model, then play recorded A V2 and inspect source/age.
 4. Scheduler: compare independent V2 with budget-fixed, then view the zero-event sunny trajectory and separately labelled validation timing windows.
-5. Artifacts: download the table/report and open the protocol/identity inspector if needed. Use [CODE_GUIDE.md](../CODE_GUIDE.md) to locate the underlying model, loss, metrics and guards.
+5. Artifacts: download the table/report and open the protocol/identity inspector if needed. Use the [viva guide](VIVA_GUIDE.md) to locate the underlying model, loss, metrics and guards.
