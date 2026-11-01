@@ -15,6 +15,10 @@ On the prepared laptop, use the existing environment:
 python -m streamlit run scripts/dashboard.py
 ```
 
+The research dashboard opens on the independent test with compact Results, Model comparison, Depth viewer, Scheduler and Artifacts pages. A remains the preselected model. The shared toolbar identifies each result’s study, model, policy, trajectory and measurement scope.
+
+![Research dashboard](docs/dashboard_redesign/results_desktop.png)
+
 The dashboard uses `configs/presentation_local.json` when present, otherwise the portable `configs/presentation.json`. Saved comparison tables and curves are available without a dataset. Real validation images, playback caches and the exploratory KD checkpoint require the explicitly configured external inputs. Missing inputs are shown as unavailable. [Dashboard instructions](docs/presentation_dashboard.md).
 
 For a fresh source checkout, use Python 3.13 and the recorded CPU dependency pair:

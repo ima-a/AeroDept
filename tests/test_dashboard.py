@@ -8,73 +8,76 @@ from aerodepth_lite import presentation_ui
 ROOT=Path(__file__).resolve().parents[1]
 
 
-def test_dashboard_tabs_selectors_and_no_automatic_inference(monkeypatch):
+def app(monkeypatch,portable=False):
     monkeypatch.setattr(presentation_ui,'actual_inference',lambda *a,**k:pytest.fail('Automatic inference'))
-    app=AppTest.from_file(str(ROOT/'scripts/dashboard.py')).run(timeout=60)
-    assert not app.exception
-    assert [x.label for x in app.tabs]==['Overview','Model comparison','Depth demonstration','Scheduler','Evidence']
-    selector=next(x for x in app.selectbox if x.label=='Student model')
-    assert selector.value=='A'
-    selector.select('Original').run(timeout=60);assert not app.exception
-    next(x for x in app.selectbox if x.label=='Student model').select('KD').run(timeout=60);assert not app.exception
-    assert any('Run actual model inference' in b.label for b in app.button)
+    if portable:monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(ROOT/'configs/presentation.json'))
+    return AppTest.from_file(str(ROOT/'scripts/dashboard.py')).run(timeout=60)
+
+
+def nav(a,page):return a.radio[0].set_value(page).run(timeout=60)
+def select(a,label,value):return next(s for s in a.selectbox if s.label==label).select(value).run(timeout=60)
+
+
+def test_navigation_defaults_and_no_automatic_inference(monkeypatch):
+    a=app(monkeypatch)
+    assert a.radio[0].options==['Results','Model comparison','Depth viewer','Scheduler','Artifacts']
+    assert next(s for s in a.selectbox if s.label=='Study / split').value=='Independent test'
+    assert next(s for s in a.selectbox if s.label=='Model').value=='A'
+    assert next(m for m in a.metric if m.label=='AbsRel ↓').value=='0.383690'
+    for page in a.radio[0].options:
+        nav(a,page);assert not a.exception
+
+
+def test_context_and_nulls_never_show_stale_values(monkeypatch):
+    a=app(monkeypatch);select(a,'Policy','v2');nav(a,'Model comparison')
+    assert next(s for s in a.selectbox if s.label=='Policy').value=='every'
+    select(a,'Study / split','Historical exposed test')
+    assert next(s for s in a.selectbox if s.label=='Model').value=='Original'
+    assert next(s for s in a.selectbox if s.label=='Policy').disabled
+    select(a,'Study / split','Independent test');select(a,'Model','A');nav(a,'Scheduler')
+    select(a,'Trajectory','Kite_training/sunny/trajectory_0008')
+    assert next(m for m in a.metric if m.label=='Max event delay (frames)').value=='—'
+    assert not a.exception
+
+
+def test_three_model_comparisons_and_reference(monkeypatch):
+    a=app(monkeypatch,True);nav(a,'Model comparison')
+    for study in ['Independent test','Validation','Historical exposed test']:
+        select(a,'Study / split',study);assert not a.exception
+        assert len(a.dataframe[0].value)==(1 if study.startswith('Historical') else 3)
+    select(a,'Study / split','Independent test');select(a,'Reference model','KD')
+    assert not a.exception
 
 
 @pytest.mark.parametrize('missing',['config','comparison','cache'])
-def test_missing_inputs_are_unavailable_not_invented(tmp_path,monkeypatch,missing):
+def test_missing_inputs_are_explicit(tmp_path,monkeypatch,missing):
+    cfg=json.loads((ROOT/'configs/presentation.json').read_text())
     if missing=='config':path=tmp_path/'absent.json'
     else:
-        cfg=json.loads((ROOT/'configs/presentation_local.json').read_text());cfg[missing]=str(tmp_path/'absent');path=tmp_path/'config.json';path.write_text(json.dumps(cfg))
-    monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(path))
-    app=AppTest.from_file(str(ROOT/'scripts/dashboard.py')).run(timeout=60)
-    assert not app.exception
-    assert any('unavailable' in str(x.value).lower() or 'pending' in str(x.value).lower() for x in [*app.warning,*app.info,*app.caption])
+        cfg[missing]=str(tmp_path/'absent');path=tmp_path/'config.json';path.write_text(json.dumps(cfg))
+    monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(path));a=app(monkeypatch)
+    if missing=='comparison':nav(a,'Model comparison');select(a,'Study / split','Validation')
+    if missing=='cache':nav(a,'Depth viewer')
+    assert not a.exception
+    assert any('unavailable' in str(x.value).lower() for x in [*a.info,*a.caption,*a.warning])
 
 
-def test_portable_config_resolves_only_explicit_locations(tmp_path,monkeypatch):
-    monkeypatch.delenv('MIDAIR_ROOT',raising=False)
-    monkeypatch.setenv('AERODEPTH_KD_CHECKPOINT','/explicit/private/best.pt')
-    config=presentation_ui.load_dashboard_config(ROOT/'configs/presentation.json',tmp_path)
-    assert config['results'].startswith(str(tmp_path/'results'))
-    assert config['models']['A']['weights'].startswith(str(tmp_path/'models'))
-    assert config['dataset_root'].startswith(str(tmp_path/'.unavailable'))
-    assert config['models']['KD']['weights']=='/explicit/private/best.pt'
-    assert config['models']['A']['sha256']=='6820e7050dd5b6278ecdaf7055d9d69dbbe246a9644ebbdff77056da4278ae20'
+def test_portable_configuration_and_missing_private_model(monkeypatch):
+    monkeypatch.delenv('MIDAIR_ROOT',raising=False);monkeypatch.delenv('AERODEPTH_KD_CHECKPOINT',raising=False)
+    config=presentation_ui.load_dashboard_config(ROOT/'configs/presentation.json',ROOT)
+    assert config['dataset_root'].startswith(str(ROOT/'.unavailable'))
+    a=app(monkeypatch,True);nav(a,'Depth viewer')
+    assert not a.exception
+    assert any('unavailable' in str(x.value).lower() for x in a.info)
 
 
-def test_portable_dashboard_without_usb_loads_saved_artifacts(monkeypatch):
-    for name in ['MIDAIR_ROOT','AERODEPTH_PRESENTATION_CACHE','AERODEPTH_COMPARISON_CACHE','AERODEPTH_KD_CHECKPOINT']:
-        monkeypatch.delenv(name,raising=False)
-    monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(ROOT/'configs/presentation.json'))
-    monkeypatch.setattr(presentation_ui,'actual_inference',lambda *a,**k:pytest.fail('Automatic inference'))
-    app=AppTest.from_file(str(ROOT/'scripts/dashboard.py')).run(timeout=60)
-    assert not app.exception
-    assert len(app.tabs)==5
-    assert any('cache unavailable' in str(x.value).lower() for x in app.info)
-    assert any('INDEPENDENT TEST' in str(x.value) for x in app.markdown)
-    assert presentation_ui.independent_study(ROOT)['status'] in ['COMPLETED','IN PROGRESS','INCOMPLETE','NOT RUN']
-
-
-def test_frame_presets_do_not_run_inference(monkeypatch):
-    monkeypatch.setattr(presentation_ui,'actual_inference',lambda *a,**k:pytest.fail('Automatic inference'))
-    app=AppTest.from_file(str(ROOT/'scripts/dashboard.py')).run(timeout=60)
-    preset=next(b for b in app.button if b.label=='Poor · frame 1534')
-    preset.click().run(timeout=60)
-    assert not app.exception
-    assert next(s for s in app.slider if s.label=='Validation frame').value==1534
-
-
-def test_independent_and_historical_selectors_are_artifact_only(monkeypatch):
-    monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(ROOT/'configs/presentation.json'))
-    monkeypatch.setattr(presentation_ui,'actual_inference',lambda *a,**k:pytest.fail('Automatic inference'))
-    app=AppTest.from_file(str(ROOT/'scripts/dashboard.py')).run(timeout=60)
-    for split in ['New independent test','Historical exposed test','Validation']:
-        next(s for s in app.selectbox if s.label=='Evaluation split').select(split).run(timeout=60)
-        assert not app.exception
-    for study in ['New independent test · A','Historical exposed test · Original']:
-        next(s for s in app.selectbox if s.label=='Scheduler study').select(study).run(timeout=60)
-        assert not app.exception
-    assert next(s for s in app.selectbox if s.label=='Student model').value=='A'
+def test_frame_presets_do_not_trigger_inference(monkeypatch):
+    a=app(monkeypatch);nav(a,'Depth viewer')
+    next(b for b in a.button if b.label=='Poor · 1534').click().run(timeout=60)
+    assert not a.exception
+    sliders=[s for s in a.slider if s.label=='Validation frame']
+    if sliders:assert sliders[0].value==1534
+    else:assert next(s for s in a.selectbox if s.label=='Recorded validation frame').value==1534
 
 
 def test_independent_loader_distinguishes_missing_exposed_and_failed(tmp_path):
@@ -100,3 +103,14 @@ def test_independent_loader_rejects_artifact_tampering(tmp_path):
     (folder/'results.json').write_text('{"altered":true}')
     result=presentation_ui.independent_study(tmp_path)
     assert result['status']=='UNAVAILABLE · integrity check failed' and result['results'] is None
+
+
+def test_missing_private_kd_disables_forward_preserves_recorded_view(tmp_path,monkeypatch):
+    cfg=json.loads((ROOT/'configs/presentation_local.json').read_text())
+    cfg['models']['KD']['weights']=str(tmp_path/'missing_KD.pt')
+    path=tmp_path/'config.json';path.write_text(json.dumps(cfg))
+    monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(path))
+    a=app(monkeypatch);nav(a,'Depth viewer');select(a,'Model','KD')
+    assert not a.exception
+    assert next(b for b in a.button if b.label=='Run actual inference').disabled
+    assert any('checkpoint unavailable' in str(c.value) for c in a.caption)

@@ -16,7 +16,7 @@ Search the one-word labels at the actual operation. Architecture definitions are
 | Freeze / exposure | [independent_test.py](src/aerodepth_lite/independent_test.py), `freeze`, `run` | `# Compatibility`, `# Exposure`; exclusive ledger before decoding, no automatic retry |
 | Final scoring / timing | [independent_test.py](src/aerodepth_lite/independent_test.py), `Scores`, `forward`, `evaluate_stream` | `# Metrics`, `# Inference`, `# Evaluation`; every current frame scored, including reused predictions |
 | Verify saved results | [verify_independent_test.py](scripts/verify_independent_test.py), `verify` | `# Verification`; hashes, calls, source ages, events and pooling, with no image reads or model calls |
-| UI / actual inference | [dashboard.py](scripts/dashboard.py), [presentation_ui.py](src/aerodepth_lite/presentation_ui.py), `actual_inference` | Five tabs; validation-only viewer, explicit forward-pass button, clearly labelled recorded replay |
+| UI / actual inference | [dashboard_views.py](src/aerodepth_lite/dashboard_views.py), [presentation_ui.py](src/aerodepth_lite/presentation_ui.py), `actual_inference` | Five research pages; validation-only viewer, explicit forward-pass button, clearly labelled recorded replay |
 
 Keep [the final report](docs/FINAL_REPORT.md), [validation comparison](results/student_validation_comparison_20261029T152648Z/comparison.csv), and the new study's `results/independent_test_20261030/comparison.csv` open. The original exposed 4,436-frame study stays under `results/final_test/` and is historical.
 

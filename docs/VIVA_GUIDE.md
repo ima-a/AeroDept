@@ -55,7 +55,7 @@ Accuracy/precision/recall/F1 and confusion matrices from classification are not 
 | GPS alignment | [presentation.py](../src/aerodepth_lite/presentation.py) | `# Sensors` | Causal held simulated GPS aligned to camera frames. |
 | Replay versus timing | [presentation.py](../src/aerodepth_lite/presentation.py) | `# Replay`, `# Timing` | Cached replay scores quality; actual timing executes model calls. |
 | Standalone inference | [inference.py](../src/aerodepth_lite/inference.py) | `# Weights`, `# Preprocessing`, `# Inference` | Verify weights, resize RGB, run eval-mode prediction and save metres. |
-| Dashboard tabs | [dashboard.py](../scripts/dashboard.py) | `# Overview`, `# Comparison`, `# Inference`, `# Scheduler`, `# Evidence` | Five UI sections backed by saved evidence. |
+| Dashboard pages | [dashboard_views.py](../src/aerodepth_lite/dashboard_views.py) | `# Results`, `# Comparison`, `# Viewer`, `# Scheduler`, `# Artifacts` | Five research pages backed by saved evidence; entry point is `scripts/dashboard.py`. |
 
 ## Hyperparameters and evidence to keep open
 
