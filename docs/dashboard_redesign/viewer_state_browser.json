@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "desktop": [
+    1366,
+    768
+  ],
+  "return_from_pages": [
+    "Results",
+    "Model comparison",
+    "Scheduler",
+    "Artifacts"
+  ],
+  "preset_frame_retained": 1567,
+  "slider_frame_retained": 1568,
+  "paused_replay_frame_retained": 1571,
+  "inference_calls": 0,
+  "study_reruns": 0,
+  "javascript_errors": []
+}

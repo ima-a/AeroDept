@@ -209,15 +209,22 @@ def viewer_page(root,cfg):
     with controls[2]:device=choice('Device',['cpu']+(['cuda'] if torch.cuda.is_available() else []),'device')
     available=[r for r in features if r['trajectory']==tr];fixed=[r for r in examples if r['trajectory']==tr]
     context_key=(tr,model)
+    default_frame=fixed[0]['frame_index'] if fixed else 0
     if st.session_state.get('viewer_context')!=context_key:
-        st.session_state['viewer_context']=context_key;st.session_state['viewer_frame']=fixed[0]['frame_index'] if fixed else 0
-        st.session_state['play_cursor']=st.session_state['viewer_frame'];st.session_state['play']=False
+        st.session_state['viewer_context']=context_key
+        st.session_state['viewer_position']=default_frame;st.session_state['viewer_frame']=default_frame
+        st.session_state['play_cursor']=default_frame;st.session_state['play']=False
+    if 'viewer_frame' not in st.session_state:
+        st.session_state['viewer_frame']=st.session_state.get('viewer_position',st.session_state.get('play_cursor',default_frame))
+    valid_frames=range(len(available)) if available else [r['frame_index'] for r in fixed]
+    if st.session_state['viewer_frame'] not in valid_frames:st.session_state['viewer_frame']=default_frame
+    st.session_state.setdefault('play',False)
     if not available:st.info('Continuous validation cache unavailable. Showing saved comparison examples; continuous replay is disabled.')
     presets=st.columns(max(1,len(fixed))+1)
     selections=data.json_file(Path(cfg['comparison'])/'frame_selection.json') or {}
     reasons={(r['trajectory'],r['frame_index']):r['reason'].capitalize() for r in selections.get('examples',[])}
     def seek(value):
-        st.session_state['viewer_frame']=value;st.session_state['play_cursor']=value;st.session_state['play']=False
+        st.session_state['viewer_frame']=value;st.session_state['viewer_position']=value;st.session_state['play_cursor']=value;st.session_state['play']=False
     for col,row in zip(presets,fixed):col.button(reasons.get((tr,row['frame_index']),'Example')+' · '+str(row['frame_index']),on_click=seek,args=(row['frame_index'],),key='preset_'+str(row['frame_index']))
     # All forwards remain explicit; fragments below only read saved validation arrays.
     selected_frame=st.session_state['viewer_frame']
@@ -249,7 +256,8 @@ def viewer_page(root,cfg):
     with playback[1]:rate=st.select_slider('Playback rate (frames/s)',[1,2,3,4,6,8],value=3,disabled=not trace)
     with playback[2]:play=st.checkbox('Play recorded replay',key='play',disabled=not trace or timing)
     if model!='A':st.caption('Continuous policy replay is available for A. Original/KD have six fixed recorded examples and optional explicit inference.')
-    def on_seek():st.session_state['play_cursor']=st.session_state['viewer_frame']
+    def on_seek():
+        st.session_state['viewer_position']=st.session_state['viewer_frame'];st.session_state['play_cursor']=st.session_state['viewer_frame']
     @st.fragment(run_every=1/rate if play and trace else None)
     def frame_workspace():
         if play and trace:st.session_state['viewer_frame']=st.session_state.get('play_cursor',0)
@@ -257,7 +265,8 @@ def viewer_page(root,cfg):
             frame=st.slider('Validation frame',0,len(available)-1,key='viewer_frame',on_change=on_seek)
             idx=available[frame]['index']
         else:
-            options=[r['frame_index'] for r in fixed];frame=choice('Recorded validation frame',options,'viewer_frame');idx=index
+            options=[r['frame_index'] for r in fixed];frame=choice('Recorded validation frame',options,'viewer_frame');idx=record_index.get((tr,frame))
+        st.session_state['viewer_position']=frame
         actual=st.session_state.get('actual');source_frame=frame;age=0;reason='recorded example'
         try:
             fresh=actual and actual['key']==[model,idx,device] and not play

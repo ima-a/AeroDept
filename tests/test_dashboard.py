@@ -114,3 +114,20 @@ def test_missing_private_kd_disables_forward_preserves_recorded_view(tmp_path,mo
     assert not a.exception
     assert next(b for b in a.button if b.label=='Run actual inference').disabled
     assert any('checkpoint unavailable' in str(c.value) for c in a.caption)
+
+
+@pytest.mark.parametrize('cache_mode',['continuous','examples'])
+def test_viewer_frame_survives_navigation_and_widget_cleanup(monkeypatch,cache_mode):
+    if cache_mode=='examples':
+        from aerodepth_lite import dashboard_data
+        monkeypatch.setattr(dashboard_data,'viewer_features',lambda cfg:[])
+    a=app(monkeypatch);nav(a,'Depth viewer')
+    next(b for b in a.button if b.label=='Typical · 1567').click().run(timeout=60)
+    assert not a.exception
+    for page in ['Results','Model comparison','Scheduler','Artifacts']:
+        nav(a,page)
+        nav(a,'Depth viewer')
+        assert not a.exception
+        frames=[s for s in a.slider if s.label=='Validation frame']
+        frame=frames[0].value if frames else next(s for s in a.selectbox if s.label=='Recorded validation frame').value
+        assert frame==1567
