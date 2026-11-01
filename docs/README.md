@@ -20,6 +20,8 @@ Start with the guide for the task you want to perform. Training and the independ
 
 A and exploratory KD selected epoch 9. Teacher B failed its acceptance gate, so original gated KD did not run. The separate exploratory KD arm retained that rejection. The independent study evaluated seven frozen comparisons on four reserved paths and passed saved-evidence verification.
 
+All three evaluated students have [published inference weights](../models/README.md). KD inference needs no teacher or private checkpoint; training resume and historical study execution have separate requirements. The current dashboard uses `configs/dashboard.json`.
+
 The main evidence directories are `results/student_validation_comparison_20261029T152648Z/`, `results/presentation_validation_20261029T155521Z/` and `results/independent_test_20261030/`.
 
 Evaluation slides and `CODE_GUIDE.md` are local-only. Internal agent handoffs, publication checklists, local maintenance receipts and design-debug captures have been removed from this documentation tree. The notebook workflow and its launch/packaging helpers have been retired.

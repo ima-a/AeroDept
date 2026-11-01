@@ -2,7 +2,7 @@
 
 Compact monocular drone-camera **range prediction** with causal inference scheduling. A MobileNetV3-Small encoder and skip decoder predict a 192 × 320 map of Euclidean camera range in metres. The V2 scheduler decides when to compute a fresh map or reuse the previous one.
 
-The project includes trained inference exports, a local research dashboard, automated software tests and saved experimental evidence. Training and the **8,820-frame independent test are complete and verified**. This is simulation research; real-flight safety, energy and battery benefits have not been measured.
+The project includes inference weights for **Original, supervised A and exploratory KD**, a local research dashboard, automated software tests and saved experimental evidence. Training and the **8,820-frame independent test are complete and verified**. This is simulation research; real-flight safety, energy and battery benefits have not been measured.
 
 [Project report](docs/FINAL_REPORT.md) · [Documentation](docs/README.md) · [Viva guide](docs/VIVA_GUIDE.md) · [Repository structure](docs/repository_structure.md)
 
@@ -21,7 +21,7 @@ python -m streamlit run scripts/dashboard.py
 
 On the prepared laptop, activate the existing `.venv` and run the final command. Keep an existing compatible CUDA environment for GPU use; see [installation](docs/installation.md).
 
-The dashboard has Results, Model comparison, Depth viewer, Scheduler and Artifacts pages. It opens on the independent study with supervised **A epoch 9** preselected. Saved tables and curves work without a dataset. Validation images, recorded playback and KD inference need separately configured external inputs; missing inputs appear as unavailable. See [dashboard instructions](docs/presentation_dashboard.md).
+The dashboard has Results, Model comparison, Depth viewer, Scheduler and Artifacts pages. It opens on the independent study with supervised **A epoch 9** preselected. Saved tables and curves work without a dataset. All three inference models are included. Validation images and recorded playback need separately configured data/cache inputs; missing inputs appear as unavailable. See [dashboard instructions](docs/presentation_dashboard.md).
 
 ![Research dashboard](docs/assets/dashboard.png)
 
@@ -35,6 +35,17 @@ aerodepth infer \
   --metadata models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json \
   --image /path/to/image.jpg --output artifacts/prediction_A.npy --device cpu
 ```
+
+For the exact evaluated KD student, use its published export:
+
+```bash
+aerodepth infer \
+  --weights models/exploratory_kd_epoch9/exploratory_KD_epoch9.state_dict.pt \
+  --metadata models/exploratory_kd_epoch9/exploratory_KD_epoch9.json \
+  --image /path/to/image.jpg --output artifacts/prediction_KD.npy --device cpu
+```
+
+KD inference requires neither a teacher nor the original full checkpoint. Its export was verified tensor-for-tensor and by CPU FP32 output parity against the evaluated epoch-9 checkpoint. It remains exploratory with a rejected teacher. [All model exports and checksums](models/README.md).
 
 The output is a 192 × 320 FP32 `.npy` range map in metres. RGB uses full-frame resizing and one in-model ImageNet normalization. Predictions have a 0.1 m floor and no upper clamp. The CLI defaults to the Original epoch-4 export if weight arguments are omitted. Generalization outside the simulated data is untested.
 
@@ -82,7 +93,7 @@ Use the [original validation reproduction guide](docs/reproduction.md), [expande
 | `scripts/` | Supported dashboard, training, reproduction and verification entry points |
 | `tests/` | Automated checks using synthetic inputs and saved evidence; optional real-data integration checks |
 | `configs/` | Portable settings; private local configurations are ignored |
-| `models/` | Two compact inference exports with metadata and checksums |
+| `models/` | Original, A and exploratory KD inference exports with metadata and checksums |
 | `results/`, `evidence/` | Curated scientific results, manifests, protocols and provenance |
 | `docs/` | User guides, methodology, evaluation report and reproduction instructions |
 

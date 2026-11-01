@@ -205,7 +205,7 @@ python -m pip install -e '.[dashboard]'
 python -m streamlit run scripts/dashboard.py
 ```
 
-Relocated source checkouts use portable `configs/presentation.json` with explicit `MIDAIR_ROOT`, `AERODEPTH_PRESENTATION_CACHE`, `AERODEPTH_COMPARISON_CACHE` and private `AERODEPTH_KD_CHECKPOINT` environment locations. Unset locations resolve to unavailable, never broad discovery/current directory. The laptop keeps its ignored local config. Both small inference exports are explicitly included; private full checkpoints, datasets/caches/environments/credentials remain excluded. [Dashboard guide](presentation_dashboard.md) includes validation reproduction into fresh frozen outputs. Do not rerun the completed local study to make slides or refresh UI.
+Relocated dashboard checkouts use `configs/dashboard.json` with published inference exports for Original, A and exploratory KD. External validation data/cache locations use `MIDAIR_ROOT`, `AERODEPTH_PRESENTATION_CACHE` and `AERODEPTH_COMPARISON_CACHE`; unset locations resolve to unavailable. The laptop keeps its inputs in ignored `configs/dashboard_local.json`. The frozen `configs/presentation.json` remains unchanged for historical study verification. Private full training checkpoints, datasets/caches/environments/credentials remain excluded. The KD tensor-only export was checked against the evaluated checkpoint with no research-image access or study rerun. [Dashboard guide](presentation_dashboard.md) includes validation reproduction into fresh frozen outputs. Do not rerun the completed local study to make slides or refresh UI.
 
 Dataset-free A inference from the source delivery:
 

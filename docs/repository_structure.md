@@ -7,9 +7,9 @@ The repository contains the runnable project, software checks, user documentatio
 | `src/aerodepth_lite/` | Actual Python package: models, losses, metrics, data, training, inference, scheduling and dashboard helpers |
 | `scripts/` | Supported command-line entry points listed below |
 | `tests/` | Checks for model loading, calculations, preprocessing, scheduling, checkpoint behaviour and dashboard views |
-| `configs/` | Portable settings and experiment configurations; private local JSON files are ignored |
+| `configs/` | `dashboard.json` for current inference exports, frozen experiment configurations and ignored private local inputs |
 | `docs/` | User guides, scientific methods, results and reproduction instructions |
-| `models/` | Two allowlisted inference exports, metadata and checksums; full training states stay private |
+| `models/` | Three allowlisted inference exports (Original, A and exploratory KD), metadata and checksums; full training states stay private |
 | `results/`, `evidence/` | Frozen protocols, relative manifests, recorded metrics, scientific figures and provenance |
 
 `src` means source code. `pyproject.toml` installs the package from this directory and exposes the `aerodepth` command. The dashboard and scripts import it, so it is required. Modules named `presentation.py` support dashboard/replay functionality; they are not PowerPoint files. The internal `kaggle.py` module remains because training uses its grouped-path utilities; the optional Kaggle notebook and upload helpers have been removed.

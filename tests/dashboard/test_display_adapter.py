@@ -7,7 +7,7 @@ from aerodepth_lite.presentation_ui import load_dashboard_config
 ROOT=Path(__file__).resolve().parents[2]
 
 
-def cfg():return load_dashboard_config(ROOT/'configs/presentation.json',ROOT)
+def cfg():return load_dashboard_config(ROOT/'configs/dashboard.json',ROOT)
 
 
 def test_independent_projection_matches_every_saved_metric_and_call():

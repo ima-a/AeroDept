@@ -39,9 +39,11 @@ build/
 dist/
 .venv*/
 configs/presentation_local.json
+configs/dashboard_local.json
 configs/independent_test_local.json
 .unavailable/
-# Explicitly publish only the compact inference export, never full checkpoints.
+# Publish only the three compact inference exports, never full checkpoints.
 !models/mobilenet_v3_small_epoch4.state_dict.pt
 # Separate approved inference-only A export; no full training states.
 !models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt
+!models/exploratory_kd_epoch9/exploratory_KD_epoch9.state_dict.pt

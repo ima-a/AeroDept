@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def app(monkeypatch,portable=False):
     monkeypatch.setattr(presentation_ui,'actual_inference',lambda *a,**k:pytest.fail('Automatic inference'))
-    if portable:monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(ROOT/'configs/presentation.json'))
+    if portable:monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(ROOT/'configs/dashboard.json'))
     return AppTest.from_file(str(ROOT/'scripts/dashboard.py')).run(timeout=60)
 
 
@@ -51,7 +51,7 @@ def test_three_model_comparisons_and_reference(monkeypatch):
 
 @pytest.mark.parametrize('missing',['config','comparison','cache'])
 def test_missing_inputs_are_explicit(tmp_path,monkeypatch,missing):
-    cfg=json.loads((ROOT/'configs/presentation.json').read_text())
+    cfg=json.loads((ROOT/'configs/dashboard.json').read_text())
     if missing=='config':path=tmp_path/'absent.json'
     else:
         cfg[missing]=str(tmp_path/'absent');path=tmp_path/'config.json';path.write_text(json.dumps(cfg))
@@ -62,10 +62,13 @@ def test_missing_inputs_are_explicit(tmp_path,monkeypatch,missing):
     assert any('unavailable' in str(x.value).lower() for x in [*a.info,*a.caption,*a.warning])
 
 
-def test_portable_configuration_and_missing_private_model(monkeypatch):
+def test_portable_configuration_and_published_models(monkeypatch):
     monkeypatch.delenv('MIDAIR_ROOT',raising=False);monkeypatch.delenv('AERODEPTH_KD_CHECKPOINT',raising=False)
-    config=presentation_ui.load_dashboard_config(ROOT/'configs/presentation.json',ROOT)
+    config=presentation_ui.load_dashboard_config(ROOT/'configs/dashboard.json',ROOT)
     assert config['dataset_root'].startswith(str(ROOT/'.unavailable'))
+    for name in ['Original','A','KD']:
+        entry=config['models'][name]
+        assert entry['kind']=='export' and Path(entry['weights']).is_file() and Path(entry['metadata']).is_file()
     a=app(monkeypatch,True);nav(a,'Depth viewer')
     assert not a.exception
     assert any('unavailable' in str(x.value).lower() for x in a.info)
@@ -106,7 +109,7 @@ def test_independent_loader_rejects_artifact_tampering(tmp_path):
 
 
 def test_missing_private_kd_disables_forward_preserves_recorded_view(tmp_path,monkeypatch):
-    cfg=json.loads((ROOT/'configs/presentation.json').read_text())
+    cfg=json.loads((ROOT/'configs/dashboard.json').read_text())
     cfg['models']['KD']['weights']=str(tmp_path/'missing_KD.pt')
     path=tmp_path/'config.json';path.write_text(json.dumps(cfg))
     monkeypatch.setenv('AERODEPTH_PRESENTATION_CONFIG',str(path))

@@ -1,17 +1,25 @@
 # Published inference weights
 
-`mobilenet_v3_small_epoch4.state_dict.pt` is the exact epoch-4 MobileNet depth model exported from the completed expanded-data run: **1,027,489 parameters**,4267069bytes, SHA-256 `b40c37db3507cd22d39fcfeba6e23067fb619aee4e3ca61735a7698515006aa6`.
+All three evaluated student models are included as compact, inference-only exports. Each contains the model parameters and all BatchNorm/RGB-normalization buffers. Full optimizer, scheduler, AMP scaler, RNG and training states remain private.
 
-It is a plain tensor state_dict, including BatchNorm and RGB-normalization buffers. Load with `torch.load(weights_only=True)` and strict loading through `aerodepth_lite.inference.load_inference_model`. The architecture is constructed with pretrained=False, so ImageNet cache/downloads are unnecessary. Optimizer, AMP scaler, RNG and training history are excluded. Original full checkpoints remain private/local.
+| Model | Weights | Metadata |
+|---|---|---|
+| Original epoch 4 | [state dict](mobilenet_v3_small_epoch4.state_dict.pt) | [contract and provenance](mobilenet_v3_small_epoch4.json) |
+| Supervised A epoch 9 | [state dict](presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt) | [contract and provenance](presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json) |
+| Exploratory KD epoch 9 | [state dict](exploratory_kd_epoch9/exploratory_KD_epoch9.state_dict.pt) | [contract and parity checks](exploratory_kd_epoch9/exploratory_KD_epoch9.json) |
 
-Original checkpoint SHA-256: `c1d4279cdaf594d1c15bce1f4f1b6ae322c7ec3ef28349df1dd47d975818ebd8`. `mobilenet_v3_small_epoch4.json` contains original/export hashes, full frozen training config, manifest identity, contract, provenance, validation metrics and limitations. CPU FP32 equivalence on seed42 random, black, white and first validation RGB was bitwise identical (max absolute differences 0), against declared atol/rtol 1e-6.
+Each student has **1,027,489 parameters**. Use the strict checksum-verified loader in `aerodepth_lite.inference`; it loads with `torch.load(weights_only=True)`, constructs the architecture with `pretrained=False` and needs no ImageNet download. KD inference does not require the teacher or its full training checkpoint.
 
-Input: RGB[0,1] bilinearly resized to192×320; normalize inside the model once with mean[.485,.456,.406]/std[.229,.224,.225]. Output: positive Euclidean camera range in metres with floor.1m and no upper clamp. Evaluation alone uses finite GT[.1,1000]m and near GT<10m. No centre crop or prediction scale fitting.
-
-The encoder began from TorchVision `MobileNet_V3_Small_Weights.IMAGENET1K_V1` and was finetuned on MidAir. See [NOTICE](../NOTICE.md) and linked upstream/data terms; this checkpoint does not introduce a blanket license grant. No custom-CNN weights are represented as an expanded-data baseline. The older custom-CNN pilot used a different dataset/protocol.
-
-Verify:
+From the repository root, verify all three exports and metadata files:
 
 ```bash
 (cd models && sha256sum -c SHA256SUMS)
 ```
+
+Input is RGB in [0,1], resized over the full frame to 192 × 320 using bilinear interpolation. ImageNet normalization happens once inside the model. Output is a 192 × 320 FP32 map of Euclidean camera range in metres, with a 0.1 m floor and no upper clamp. There is no centre crop or fitted prediction scale. Evaluation uses finite ground truth in [0.1,1000] m and near ground truth below 10 m.
+
+The Original checkpoint/export identities and parity checks remain in its metadata. A has its [own export guide](presentation_A_epoch9_20261029T155521Z/README.md). The [KD export guide](exploratory_kd_epoch9/README.md) records its lineage to the exact checkpoint used in the independent test and bitwise CPU FP32 parity checks. No research images or new scientific evaluation were needed to export KD.
+
+A remains the default demonstration model. KD remains exploratory with a rejected teacher; publishing its weights does not change the gate or recorded negative findings. Inference exports support running the selected models, not resuming their original training. Datasets and playback caches must be acquired/prepared separately; see [the dashboard guide](../docs/presentation_dashboard.md) and [reproduction guide](../docs/expanded_reproduction.md).
+
+The encoders originated from TorchVision MobileNetV3-Small ImageNet initialization and were finetuned on MidAir. See [NOTICE](../NOTICE.md) for dataset/framework attribution and upstream terms. The custom-CNN pilot used a different dataset/protocol and is not represented as a matched expanded-data baseline.

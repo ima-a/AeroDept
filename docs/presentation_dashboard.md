@@ -52,7 +52,7 @@ The timing inspector keeps full-trajectory quality separate from 256-frame valid
 
 ## Portable configuration and external inputs
 
-The laptop retains ignored `configs/presentation_local.json`; relocated checkouts use `configs/presentation.json`. Override explicitly:
+The dashboard uses `configs/dashboard.json`, which points to all three published inference exports. The prepared laptop uses ignored `configs/dashboard_local.json` for its external data/cache locations with the same KD export. Override explicitly:
 
 ```bash
 AERODEPTH_PRESENTATION_CONFIG=/absolute/path/to/prepared_config.json \
@@ -65,10 +65,9 @@ Public artifact/export paths are relative to the checkout. Optional external loc
 export MIDAIR_ROOT=/your/healthy/verified/MidAir
 export AERODEPTH_PRESENTATION_CACHE=/your/private/validation-cache
 export AERODEPTH_COMPARISON_CACHE=/your/private/fixed-example-arrays
-export AERODEPTH_KD_CHECKPOINT=/your/private/verified/KD-best.pt
 ```
 
-Unset inputs resolve to an unavailable location. Saved result pages work without datasets or private KD weights. The UI never scans for arbitrary datasets. The failed HDD is not an input source. [Independent-study requirements](independent_final_test.md) and [expanded reproduction](expanded_reproduction.md) describe full-data research reproduction; these are separate from using the UI. Do not rerun completed scientific workflows to refresh screenshots.
+Unset inputs resolve to an unavailable location. Saved result pages work without datasets, and all three models load from bundled inference weights. Actual viewer inference still needs the selected raw validation RGB/range inputs; inference on an arbitrary image is available through the CLI examples in the project README. KD requires no teacher or private checkpoint for either inference path. The UI never scans for arbitrary datasets. [Independent-study requirements](independent_final_test.md) and [expanded reproduction](expanded_reproduction.md) describe full-data research reproduction; these are separate from using the UI. Do not rerun completed scientific workflows to refresh screenshots.
 
 ## Software verification
 
@@ -81,3 +80,9 @@ The `tests/` directory checks saved-data adapters, context selection, viewer sta
 3. Depth viewer: use the Poor/Typical validation presets, explicitly run one model, then play recorded A V2 and inspect source/age.
 4. Scheduler: compare independent V2 with budget-fixed, then view the zero-event sunny trajectory and separately labelled validation timing windows.
 5. Artifacts: download the table/report and open the protocol/identity inspector if needed. Use the [viva guide](VIVA_GUIDE.md) to locate the underlying model, loss, metrics and guards.
+
+## Published weights and historical study configuration
+
+`configs/presentation.json` and the older private `configs/presentation_local.json` retain their historical research roles. The public file is bound by the completed independent study's source checksum and is unchanged. The new dashboard configuration provides the KD export without rewriting that study's protocol, exposure ledger or saved results.
+
+The Models tab includes KD metadata alongside Original and A. Its tensor-only export matches the exact evaluated checkpoint; the original full checkpoint remains private for historical training/study identity checks. No raw data or playback arrays are bundled by publishing the weights.

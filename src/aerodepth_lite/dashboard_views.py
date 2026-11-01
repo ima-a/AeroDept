@@ -310,6 +310,8 @@ def artifacts_page(root,cfg):
         [('Frozen protocol',folder/('protocol.json' if study=='Historical exposed test' else 'PROTOCOL.json')),('Exposure ledger',folder/'EXPOSURE.json'),('Completion receipt',folder/('completed.json' if study=='Historical exposed test' else 'COMPLETION.json'))],
         [('Original metadata',Path(cfg['models']['Original']['metadata'])),('Supervised A metadata',Path(cfg['models']['A']['metadata']))]]
     if study=='Validation':groups[1].append(('Student model comparison',Path(cfg['comparison'])/'comparison.csv'))
+    if cfg['models'].get('KD',{}).get('metadata'):
+        groups[4].append(('Exploratory KD metadata',Path(cfg['models']['KD']['metadata'])))
     for tab,items in zip(tabs,groups):
         with tab:
             for label,path in items:
@@ -329,4 +331,4 @@ def artifacts_page(root,cfg):
                 if path.is_file():st.download_button('Download '+name+' '+filename,path.read_bytes(),file_name=name+'_'+filename,key='archive_'+str(path))
     with st.expander('Launch and data availability'):
         st.code('python -m streamlit run scripts/dashboard.py',language='bash')
-        st.caption('Saved results work offline. Validation viewing/replay needs the explicitly configured healthy cache; actual inference also needs raw validation files and the selected pinned checkpoint. KD weights are private. No dashboard action trains, tunes or evaluates test inputs.')
+        st.caption('Original, A and exploratory KD inference weights are included. Validation viewing/replay needs the configured data/cache. No dashboard action trains, tunes or evaluates test inputs.')

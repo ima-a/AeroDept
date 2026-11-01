@@ -11,9 +11,9 @@ from aerodepth_lite.presentation_ui import optional_json,load_dashboard_config
 
 st.set_page_config(page_title='AeroDepth-Lite · Evaluation',layout='wide',initial_sidebar_state='auto')
 st.markdown(CSS,unsafe_allow_html=True)
-local=ROOT/'configs/presentation_local.json';local_data=optional_json(local)
+local=ROOT/'configs/dashboard_local.json';local_data=optional_json(local)
 local_matches=local_data and Path(local_data.get('results','/')).is_relative_to(ROOT)
-default=local if local_matches else ROOT/'configs/presentation.json'
+default=local if local_matches else ROOT/'configs/dashboard.json'
 cfg=load_dashboard_config(Path(os.environ.get('AERODEPTH_PRESENTATION_CONFIG',default)),ROOT)
 with st.sidebar:
     st.markdown('**AeroDepth-Lite**')
