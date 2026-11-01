@@ -20,7 +20,7 @@ Start with the guide for the task you want to perform. Training and the independ
 
 A and exploratory KD selected epoch 9. Teacher B failed its acceptance gate, so original gated KD did not run. The separate exploratory KD arm retained that rejection. The independent study evaluated seven frozen comparisons on four reserved paths and passed saved-evidence verification.
 
-All three evaluated students have [published inference weights](../models/README.md). KD inference needs no teacher or private checkpoint; training resume and historical study execution have separate requirements. The current dashboard uses `configs/dashboard.json`.
+All three evaluated students and the ResNet-50 teacher have [published inference weights](../models/README.md). Select **Model comparison → Validation** in the dashboard to see teacher metrics and its failed-gate explanation; the teacher has no independent-test result. KD inference needs no teacher or private checkpoint; training resume and historical study execution have separate requirements. The current dashboard uses `configs/dashboard.json`.
 
 The main evidence directories are `results/student_validation_comparison_20261029T152648Z/`, `results/presentation_validation_20261029T155521Z/` and `results/independent_test_20261030/`.
 

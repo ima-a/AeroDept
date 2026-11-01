@@ -13,6 +13,7 @@ META=ROOT/'models/mobilenet_v3_small_epoch4.json'
  (WEIGHTS,META),
  (ROOT/'models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.state_dict.pt',ROOT/'models/presentation_A_epoch9_20261029T155521Z/supervised_A_epoch9.json'),
  (ROOT/'models/exploratory_kd_epoch9/exploratory_KD_epoch9.state_dict.pt',ROOT/'models/exploratory_kd_epoch9/exploratory_KD_epoch9.json'),
+ (ROOT/'models/resnet50_teacher_epoch3/resnet50_teacher_epoch3.state_dict.pt',ROOT/'models/resnet50_teacher_epoch3/resnet50_teacher_epoch3.json'),
 ])
 def test_published_weights_strict_offline_loading_buffers_and_inference(tmp_path,monkeypatch,weights,metadata):
  def no_download(*a,**kw):raise AssertionError('Inference attempted a network download')
@@ -21,7 +22,7 @@ def test_published_weights_strict_offline_loading_buffers_and_inference(tmp_path
  state=torch.load(weights,weights_only=True)
  assert all(torch.is_tensor(v) for v in state.values())
  assert 'rgb_mean' in state and any(k.endswith('running_var') for k in state)
- assert info['parameters']==1_027_489 and not model.training
+ assert info['parameters']=={'mobilenet_v3_small_depth':1_027_489,'resnet50_depth':23_999_633}[info['architecture']] and not model.training
  image=tmp_path/'rgb.png';Image.fromarray(np.full((37,53,3),128,np.uint8)).save(image)
  out=tmp_path/'pred.npy';res=infer_image(weights,metadata,image,out)
  assert np.load(out).shape==(192,320) and np.isfinite(np.load(out)).all()
@@ -51,6 +52,20 @@ def test_frozen_manifest_identity_and_relative_paths():
  assert hashlib.sha256(raw).hexdigest()==info['manifest_sha256']
  m=json.loads(raw);assert m['frame_counts']['val']==4410
  assert all(not Path(x['rgb_path']).is_absolute() and not Path(x['depth_path']).is_absolute() for x in m['records'])
+
+def test_teacher_export_matches_saved_audit_state_and_rejected_gate():
+ from aerodepth_lite.presentation_ui import load_dashboard_config
+ from aerodepth_lite.presentation import load_model
+ from aerodepth_lite.expanded import state_digest
+ cfg=load_dashboard_config(ROOT/'configs/dashboard.json',ROOT)
+ entry=cfg['models']['Teacher'];model,_=load_model(entry)
+ info=json.loads(Path(entry['metadata']).read_text())
+ audit=json.loads((ROOT/info['evidence']['validation_metrics']).read_text())['teacher_context_reused_no_inference']
+ gate=json.loads((ROOT/info['evidence']['gate_verification']).read_text())
+ assert info['original_checkpoint_sha256']==audit['selected_checkpoint']['sha256']
+ assert entry['selected_epoch']==info['epoch_human']==3
+ assert entry['evaluation_scope']=='validation_only' and not gate['teacher_gate_passed']
+ assert state_digest(model)==audit['selected_checkpoint']['state_digest_before']==info['strict_export_parity']['state_digest']
 
 def test_public_event_semantics_and_no_boundary_crossing():
  rows=[{'trajectory':'A','position':0,'critical_event':True,'infer':False,'prediction_age':1,'reason':'stable'},{'trajectory':'B','position':0,'critical_event':False,'infer':True,'prediction_age':0,'reason':'first_frame'}]

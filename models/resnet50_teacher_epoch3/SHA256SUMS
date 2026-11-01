@@ -1,0 +1,2 @@
+1c9e143551d191ed4a1bba426d7e21ee9b067e8222f55cc190e8282c828c50e0  resnet50_teacher_epoch3.state_dict.pt
+3b25e3ae80e8094f2359f7acb10fc20bf6dbb8a1120dc377acc712ef7047a4d7  resnet50_teacher_epoch3.json

@@ -40,11 +40,11 @@ def test_context_and_nulls_never_show_stale_values(monkeypatch):
     assert not a.exception
 
 
-def test_three_model_comparisons_and_reference(monkeypatch):
+def test_study_specific_model_comparisons_and_reference(monkeypatch):
     a=app(monkeypatch,True);nav(a,'Model comparison')
     for study in ['Independent test','Validation','Historical exposed test']:
         select(a,'Study / split',study);assert not a.exception
-        assert len(a.dataframe[0].value)==(1 if study.startswith('Historical') else 3)
+        assert len(a.dataframe[0].value)=={'Independent test':3,'Validation':4,'Historical exposed test':1}[study]
     select(a,'Study / split','Independent test');select(a,'Reference model','KD')
     assert not a.exception
 
@@ -66,12 +66,28 @@ def test_portable_configuration_and_published_models(monkeypatch):
     monkeypatch.delenv('MIDAIR_ROOT',raising=False);monkeypatch.delenv('AERODEPTH_KD_CHECKPOINT',raising=False)
     config=presentation_ui.load_dashboard_config(ROOT/'configs/dashboard.json',ROOT)
     assert config['dataset_root'].startswith(str(ROOT/'.unavailable'))
-    for name in ['Original','A','KD']:
+    for name in ['Original','A','KD','Teacher']:
         entry=config['models'][name]
         assert entry['kind']=='export' and Path(entry['weights']).is_file() and Path(entry['metadata']).is_file()
     a=app(monkeypatch,True);nav(a,'Depth viewer')
     assert not a.exception
     assert any('unavailable' in str(x.value).lower() for x in a.info)
+
+
+def test_teacher_validation_gate_and_context_switch(monkeypatch):
+    a=app(monkeypatch,True);nav(a,'Model comparison');select(a,'Study / split','Validation')
+    assert 'ResNet-50 teacher' in a.dataframe[0].value['Model'].tolist()
+    assert any('failed its acceptance gate' in str(w.value) for w in a.warning)
+    select(a,'Model','Teacher');select(a,'Trajectory','Kite_training/foggy/trajectory_2003')
+    teacher=a.dataframe[0].value.query('Model == "ResNet-50 teacher"').iloc[0]
+    assert teacher['near_rmse']==pytest.approx(6.636089534161115)
+    select(a,'Reference model','Teacher')
+    assert not a.exception
+    select(a,'Study / split','Independent test')
+    assert 'ResNet-50 teacher' not in next(s for s in a.selectbox if s.label=='Model').options
+    assert 'ResNet-50 teacher' not in a.dataframe[0].value['Model'].tolist()
+    assert not any('failed its acceptance gate' in str(w.value) for w in a.warning)
+    assert not a.exception
 
 
 def test_frame_presets_do_not_trigger_inference(monkeypatch):

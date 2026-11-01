@@ -14,6 +14,7 @@ include models/README.md models/SHA256SUMS models/training_config.yaml
 include models/mobilenet_v3_small_epoch4.json models/mobilenet_v3_small_epoch4.state_dict.pt
 recursive-include models/presentation_A_epoch9_20261029T155521Z *.md *.json *.pt SHA256SUMS
 recursive-include models/exploratory_kd_epoch9 *.md *.json *.pt SHA256SUMS
+recursive-include models/resnet50_teacher_epoch3 *.md *.json *.pt SHA256SUMS
 recursive-include results *.md *.json *.csv *.png *.svg *.gz *.txt *.sha256 SHA256SUMS
 # Raw datasets, private checkpoints, caches, environments and download access are excluded.
 global-exclude *.py[cod] *.log *.jsonl

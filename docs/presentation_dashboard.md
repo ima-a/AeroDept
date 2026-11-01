@@ -34,9 +34,11 @@ Small artifact reads and parsed CSVs are cached by file modification identity. I
 
 **Results** gives the selected numeric summary, policy comparison table, and separate overall AbsRel/near-RMSE plots. Status and limitations are in a collapsed contextual panel. Original uses slate, A blue and KD amber consistently. Tables retain sortable native columns and explicit metric units/directions.
 
-**Model comparison** shows all supported models for the selected split and trajectory, paired overall/near plots and signed relative differences against a named reference. Training histories are inside an expander labelled validation evidence, including the original precision/budget caveats. KD's slightly lower independent pooled AbsRel does not erase its worse near RMSE or its negative validation comparison.
+**Model comparison** shows all supported models for the selected split and trajectory, paired overall/near plots and signed relative differences against a named reference. Select **Validation** to include **ResNet-50 teacher** alongside Original, A and KD. The teacher can also be selected on the Results page under Validation. Its saved pooled and per-trajectory errors come from the existing FP32 audit; no teacher evaluation is repeated.
 
-**Depth viewer** keeps a large 2×2 RGB/GT/prediction/signed-near-error layout on a dark canvas. Controls select validation trajectory, model, device, preset/frame and recorded policy. Input aspect ratios and common log-range/error scales are preserved. Images are attributed to MidAir (Fonder & Van Droogenbroeck, CC BY-NC-SA 4.0); see [NOTICE](../NOTICE.md).
+The validation comparison displays the failed teacher gate and its rule. Under **Teacher gate details**, Kite near AbsRel and near RMSE show the recorded regressions against A. The teacher trained for 20 epochs and selected epoch 3; A trained for 10 epochs and selected epoch 9. The independent test still contains only the three students, and the historical test only Original. Training histories are inside an expander labelled validation evidence, including the original precision/budget caveats. KD's slightly lower independent pooled AbsRel does not erase its worse near RMSE or its negative validation comparison.
+
+**Depth viewer** supports Original, A and KD; teacher predictions on arbitrary images are available through its [CLI export guide](../models/resnet50_teacher_epoch3/README.md). It keeps a large 2×2 RGB/GT/prediction/signed-near-error layout on a dark canvas. Controls select validation trajectory, model, device, preset/frame and recorded policy. Input aspect ratios and common log-range/error scales are preserved. Images are attributed to MidAir (Fonder & Van Droogenbroeck, CC BY-NC-SA 4.0); see [NOTICE](../NOTICE.md).
 
 ![Range viewer with validation input and prediction](assets/range_viewer.png)
 
@@ -52,7 +54,7 @@ The timing inspector keeps full-trajectory quality separate from 256-frame valid
 
 ## Portable configuration and external inputs
 
-The dashboard uses `configs/dashboard.json`, which points to all three published inference exports. The prepared laptop uses ignored `configs/dashboard_local.json` for its external data/cache locations with the same KD export. Override explicitly:
+The dashboard uses `configs/dashboard.json`, which points to the three student exports and the teacher export. The prepared laptop uses ignored `configs/dashboard_local.json` for its external data/cache locations with the same published model exports. Override explicitly:
 
 ```bash
 AERODEPTH_PRESENTATION_CONFIG=/absolute/path/to/prepared_config.json \
@@ -67,7 +69,7 @@ export AERODEPTH_PRESENTATION_CACHE=/your/private/validation-cache
 export AERODEPTH_COMPARISON_CACHE=/your/private/fixed-example-arrays
 ```
 
-Unset inputs resolve to an unavailable location. Saved result pages work without datasets, and all three models load from bundled inference weights. Actual viewer inference still needs the selected raw validation RGB/range inputs; inference on an arbitrary image is available through the CLI examples in the project README. KD requires no teacher or private checkpoint for either inference path. The UI never scans for arbitrary datasets. [Independent-study requirements](independent_final_test.md) and [expanded reproduction](expanded_reproduction.md) describe full-data research reproduction; these are separate from using the UI. Do not rerun completed scientific workflows to refresh screenshots.
+Unset inputs resolve to an unavailable location. Saved result pages work without datasets, and all four models load from bundled inference weights. Actual viewer inference still needs the selected raw validation RGB/range inputs; inference on an arbitrary image is available through the CLI examples in the project README. KD requires no teacher or private checkpoint for either inference path. The UI never scans for arbitrary datasets. [Independent-study requirements](independent_final_test.md) and [expanded reproduction](expanded_reproduction.md) describe full-data research reproduction; these are separate from using the UI. Do not rerun completed scientific workflows to refresh screenshots.
 
 ## Software verification
 
@@ -85,4 +87,4 @@ The `tests/` directory checks saved-data adapters, context selection, viewer sta
 
 `configs/presentation.json` and the older private `configs/presentation_local.json` retain their historical research roles. The public file is bound by the completed independent study's source checksum and is unchanged. The new dashboard configuration provides the KD export without rewriting that study's protocol, exposure ledger or saved results.
 
-The Models tab includes KD metadata alongside Original and A. Its tensor-only export matches the exact evaluated checkpoint; the original full checkpoint remains private for historical training/study identity checks. No raw data or playback arrays are bundled by publishing the weights.
+The Models tab includes KD metadata alongside Original and A; under Validation it also includes ResNet-50 metadata and the teacher-gate verification record. Its tensor-only export matches the exact evaluated checkpoint; the original full checkpoint remains private for historical training/study identity checks. No raw data or playback arrays are bundled by publishing the weights.

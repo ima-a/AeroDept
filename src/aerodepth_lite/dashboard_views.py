@@ -80,11 +80,36 @@ def download_table(rows,name):
     st.download_button('Export selected table',pd.DataFrame(rows).drop(columns=['model','policy'],errors='ignore').to_csv(index=False).encode(),file_name=name,mime='text/csv',key='selected_export')
 
 
+def teacher_gate_panel(bundle):
+    if bundle['study']!='Validation' or 'Teacher' not in data.models(bundle):return
+    gate=bundle.get('teacher_gate') or {}
+    if gate.get('teacher_gate_passed') is False:
+        st.warning('ResNet-50 teacher failed its acceptance gate. Better pooled error did not preserve near-field quality on every validation path.')
+    else:
+        st.info('Teacher acceptance-gate record unavailable.' if not gate else 'Teacher gate: '+str(gate.get('teacher_gate_passed')))
+    with st.expander('Teacher gate details · both validation trajectories'):
+        saved=gate.get('recomputed_from_saved_metrics',{})
+        st.write(saved.get('rule','No saved gate rule available.'))
+        failures=[]
+        for tr in data.trajectories(bundle):
+            if tr=='pooled':continue
+            teacher=data.part(bundle,'Teacher','every',tr).get('metrics',{})
+            baseline=data.part(bundle,'A','every',tr).get('metrics',{})
+            for key in ['absrel','rmse','near_absrel','near_rmse']:
+                a,b=teacher.get(key),baseline.get(key)
+                if a is not None and b is not None and a>b:
+                    failures.append({'Trajectory':data.scope_label(tr),'Failed metric':METRICS[key],
+                                     'ResNet-50 teacher':a,'Supervised A':b})
+        if failures:st.dataframe(pd.DataFrame(failures),hide_index=True,width='stretch')
+        st.caption('Saved FP32 validation audit; no new inference. Teacher trained for 20 epochs and selected epoch 3; A trained for 10 and selected epoch 9. These are not matched training budgets. KD remains exploratory with the rejected teacher. ResNet-50 has no independent-test result.')
+
+
 # Results
 def results_page(root,cfg):
     bundle,model,policy,trajectory=context(root,cfg,'Results')
     if not model:return
     selected=data.part(bundle,model,policy,trajectory);summary(selected)
+    if model=='Teacher':teacher_gate_panel(bundle)
     st.subheader('Policy results')
     st.caption(data.MODELS[model]+' · same trajectory scope · lower errors are better')
     rows=data.metric_rows(bundle,trajectory,model);paired_charts(rows,'Policy');metric_table(rows);download_table(rows,'selected_policy_results.csv')
@@ -101,9 +126,11 @@ def comparison_page(root,cfg):
     rows=data.metric_rows(bundle,trajectory)
     if bundle['study']=='Historical exposed test':st.info('Historical study: only Original was evaluated. A and KD are unavailable on this split.')
     else:
-        missing=[data.MODELS[m] for m in data.MODELS if m not in {r['model'] for r in rows}]
+        expected=['Original','A','KD']+(['Teacher'] if bundle['study']=='Validation' else [])
+        missing=[data.MODELS[m] for m in expected if m not in {r['model'] for r in rows}]
         if missing:st.info('Model comparison unavailable for '+', '.join(missing)+': saved comparison artifact is missing.')
     metric_table(rows,True);paired_charts(rows)
+    teacher_gate_panel(bundle)
     reference=choice('Reference model',[r['model'] for r in rows],'reference_model',format_func=data.MODELS.get)
     ref=next(r for r in rows if r['model']==reference)
     changes=[{'Model':r['Model'],'Δ AbsRel (%)':data.relative_change(r.get('absrel'),ref.get('absrel')),'Δ RMSE (%)':data.relative_change(r.get('rmse'),ref.get('rmse')),'Δ Near RMSE (%)':data.relative_change(r.get('near_rmse'),ref.get('near_rmse'))} for r in rows]
@@ -198,6 +225,7 @@ def depth_panels(x,g,v,p):
 # Viewer
 def viewer_page(root,cfg):
     st.caption('Validation inputs only · MidAir, Fonder & Van Droogenbroeck · CC BY-NC-SA 4.0')
+    st.caption('Student predictions: Original, A and KD. For ResNet-50 teacher metrics and the gate explanation, choose Model comparison → Validation.')
     features=data.viewer_features(cfg);examples=data.fixed_examples(cfg)
     trajectories=list(dict.fromkeys(r['trajectory'] for r in features or examples))
     if not trajectories:
@@ -312,6 +340,9 @@ def artifacts_page(root,cfg):
     if study=='Validation':groups[1].append(('Student model comparison',Path(cfg['comparison'])/'comparison.csv'))
     if cfg['models'].get('KD',{}).get('metadata'):
         groups[4].append(('Exploratory KD metadata',Path(cfg['models']['KD']['metadata'])))
+    if study=='Validation' and cfg['models'].get('Teacher',{}).get('metadata'):
+        groups[4].append(('ResNet-50 teacher metadata',Path(cfg['models']['Teacher']['metadata'])))
+        groups[3].append(('Teacher gate verification',Path(root)/'results/expanded_validation_diagnostic_20261028T172239Z/gate_verification.json'))
     for tab,items in zip(tabs,groups):
         with tab:
             for label,path in items:
@@ -331,4 +362,4 @@ def artifacts_page(root,cfg):
                 if path.is_file():st.download_button('Download '+name+' '+filename,path.read_bytes(),file_name=name+'_'+filename,key='archive_'+str(path))
     with st.expander('Launch and data availability'):
         st.code('python -m streamlit run scripts/dashboard.py',language='bash')
-        st.caption('Original, A and exploratory KD inference weights are included. Validation viewing/replay needs the configured data/cache. No dashboard action trains, tunes or evaluates test inputs.')
+        st.caption('Student and ResNet-50 teacher inference weights are included. Teacher metrics are validation-only; the depth viewer supports the three students. Validation viewing/replay needs the configured data/cache. No dashboard action trains, tunes or evaluates test inputs.')

@@ -34,6 +34,16 @@
       "metadata_sha256": "418b268ebe86a3b30a6d0b11ab6b0c555200425e2a42bc3047d36e99547d3d6f",
       "selected_epoch": 9,
       "label": "Exploratory KD · epoch 9 · rejected teacher"
+    },
+    "Teacher": {
+      "kind": "export",
+      "weights": "models/resnet50_teacher_epoch3/resnet50_teacher_epoch3.state_dict.pt",
+      "metadata": "models/resnet50_teacher_epoch3/resnet50_teacher_epoch3.json",
+      "sha256": "1c9e143551d191ed4a1bba426d7e21ee9b067e8222f55cc190e8282c828c50e0",
+      "metadata_sha256": "3b25e3ae80e8094f2359f7acb10fc20bf6dbb8a1120dc377acc712ef7047a4d7",
+      "selected_epoch": 3,
+      "label": "ResNet-50 teacher · epoch 3 · rejected gate",
+      "evaluation_scope": "validation_only"
     }
   },
   "default_model": "A",

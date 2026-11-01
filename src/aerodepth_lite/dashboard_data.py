@@ -8,8 +8,8 @@ import math
 from . import presentation_ui as backend
 
 STUDIES=['Independent test','Validation','Historical exposed test']
-MODELS={'Original':'Original','A':'Supervised A','KD':'Exploratory KD'}
-COLORS={'Original':'#64748b','A':'#2563eb','KD':'#d59a22'}
+MODELS={'Original':'Original','A':'Supervised A','KD':'Exploratory KD','Teacher':'ResNet-50 teacher'}
+COLORS={'Original':'#64748b','A':'#2563eb','KD':'#d59a22','Teacher':'#8b5cf6'}
 POLICIES={'every':'Every frame','fixed2':'Fixed 2','fixed5':'Fixed 5','budget_fixed':'Budget fixed','v2':'V2',
           'v2_no_motion':'V2 · no motion','v2_no_visual':'V2 · no visual','v2_no_risk':'V2 · no risk','v2_no_age':'V2 · no age'}
 INDEPENDENT='results/independent_test_20261030'
@@ -53,7 +53,7 @@ def verified_independent(root):
 
 def study_bundle(root,config,study):
     """Normalize only recorded fields; missing timing/accounting stay absent."""
-    root=Path(root);entries={};status='COMPLETED';timing=None
+    root=Path(root);entries={};status='COMPLETED';timing=None;teacher_gate=None
     if study=='Independent test':
         saved=verified_independent(root);status=saved['status'];folder=root/INDEPENDENT
         for key,value in (saved['results'] or {}).items():
@@ -62,7 +62,8 @@ def study_bundle(root,config,study):
     elif study=='Validation':
         folder=Path(config['results']);scheduler=json_file(folder/'scheduler_results.json') or {}
         entries={('A',policy):value for policy,value in scheduler.items()}
-        students=(json_file(Path(config['comparison'])/'metrics.json') or {}).get('students',{})
+        comparison=json_file(Path(config['comparison'])/'metrics.json') or {}
+        students=comparison.get('students',{})
         for source,model in [('epoch4','Original'),('student_A','A'),('exploratory_KD','KD')]:
             recorded=students.get(source,{}).get('scopes',{})
             if not recorded:continue
@@ -71,6 +72,11 @@ def study_bundle(root,config,study):
                 part=base['overall'] if tr=='pooled' else base['per_trajectory'].setdefault(tr,{})
                 part['metrics']=metrics
             entries[(model,'every')]=base
+        teacher=comparison.get('teacher_context_reused_no_inference',{}).get('scopes',{})
+        if teacher:
+            entries[('Teacher','every')]={'overall':{'metrics':copy.deepcopy(teacher.get('pooled',{}))},
+                'per_trajectory':{tr:{'metrics':copy.deepcopy(metrics)} for tr,metrics in teacher.items() if tr!='pooled'}}
+            teacher_gate=json_file(root/'results/expanded_validation_diagnostic_20261028T172239Z/gate_verification.json')
         timing=json_file(folder/'timing_summary.json');scope='Full-split quality · recorded causal replay; timing uses separate 256-frame windows'
         if not entries:status='UNAVAILABLE'
     else:
@@ -81,10 +87,10 @@ def study_bundle(root,config,study):
         scope='Historical exposed test · Original only · original CPU execution'
         if not entries:status='UNAVAILABLE'
     return {'study':study,'split':'validation' if study=='Validation' else 'test','entries':entries,'folder':folder,
-            'status':status,'measurement':scope,'timing':timing}
+            'status':status,'measurement':scope,'timing':timing,'teacher_gate':teacher_gate}
 
 
-def models(bundle):return [m for m in ['A','Original','KD'] if any(k[0]==m for k in bundle['entries'])]
+def models(bundle):return [m for m in ['A','Original','KD','Teacher'] if any(k[0]==m for k in bundle['entries'])]
 def policies(bundle,model):return [p for m,p in bundle['entries'] if m==model]
 def trajectories(bundle):
     return ['pooled',*sorted({tr for part in bundle['entries'].values() for tr in part.get('per_trajectory',{})})]

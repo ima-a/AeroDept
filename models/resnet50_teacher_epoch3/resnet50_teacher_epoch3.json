@@ -1,0 +1,188 @@
+{
+  "format": "plain tensor state_dict with all BatchNorm and RGB-normalization buffers; strict loading",
+  "architecture": "resnet50_depth",
+  "parameters": 23999633,
+  "state_tensors": 380,
+  "original_checkpoint_sha256": "6f9b1d27703ef0feba2f24441948a458650b239746632f9fc32d59ff0630b660",
+  "export_sha256": "1c9e143551d191ed4a1bba426d7e21ee9b067e8222f55cc190e8282c828c50e0",
+  "export_bytes": 96344125,
+  "epoch_human": 3,
+  "selection": "minimum pooled FP32 validation AbsRel after 20 teacher epochs",
+  "designation": "Rejected ResNet-50 teacher; validation-only evidence; no independent-test evaluation",
+  "teacher_gate_status": "failed; unchanged",
+  "checkpoint_arm": "teacher",
+  "training_config": {
+    "protocol_status": "frozen_authorized_20261026",
+    "seed": 42,
+    "arm": "teacher",
+    "data": {
+      "image_size": [
+        192,
+        320
+      ],
+      "min_depth": 0.1,
+      "max_depth": 1000.0,
+      "depth_encoding": "midair_float16_bits",
+      "depth_scale": 1.0,
+      "workers": 2
+    },
+    "model": {
+      "name": "resnet50_depth",
+      "pretrained": true
+    },
+    "train": {
+      "epochs": 20,
+      "batch_size": 2,
+      "effective_batch_size": 2,
+      "accumulation_steps": 1,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "grad_clip": 1.0,
+      "amp": true,
+      "amp_initial_scale": 1024.0,
+      "lr_schedule": {
+        "name": "cosine",
+        "t_max": 20,
+        "eta_min": 1e-06
+      },
+      "encoder_learning_rate": 1e-05
+    },
+    "loss": {
+      "l1_weight": 1.0,
+      "log_weight": 0.2,
+      "gradient_weight": 0.1,
+      "near_weight": 0.0,
+      "near_threshold": 10.0
+    },
+    "kd_weight": 0.0,
+    "device": "cuda"
+  },
+  "contract": {
+    "architecture": "resnet50_depth",
+    "model_options": {
+      "name": "resnet50_depth"
+    },
+    "preprocessing": {
+      "input": "RGB float32 [0,1]",
+      "image_size": [
+        192,
+        320
+      ],
+      "rgb_resize": "bilinear align_corners=False",
+      "depth_resize": "nearest",
+      "crop": null,
+      "paired_training_horizontal_flip": true,
+      "normalization_location": "model",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "depth_encoding": "midair_float16_bits",
+      "depth_scale": 1.0,
+      "valid_depth_metres": [
+        0.1,
+        1000.0
+      ],
+      "invalid_depth": "nonfinite or outside valid range; masked before nearest resize"
+    },
+    "output": "single-channel positive Euclidean camera range in metres; input spatial dimensions"
+  },
+  "parent_source_sha256": {
+    "src/aerodepth_lite/expanded.py": "c842e783fe828b9322ecd014792027e37c67f79d6f9088f260a0168e9d3ec6cd",
+    "src/aerodepth_lite/model.py": "81d25dc409767fb265fca11ec7620fbac7313fc67bd33bcebfe406bb2c362ea8",
+    "src/aerodepth_lite/losses.py": "4b775c6cae3e80d44367b75fba48cb0025a5825dfa07dd379533be81302f59dc",
+    "src/aerodepth_lite/data.py": "7ab69966869c19748bbc0d8cf9b5e962f280c04091757bb171a8462e257f0836",
+    "src/aerodepth_lite/metrics.py": "a36e206146a6bec5d3eb9406ea9ce6937532fffdfaec1c53ef2f3082beb09e65",
+    "src/aerodepth_lite/repro.py": "f6c2d0cf8fbd778f886925f21e21746ef3a09c16e40fd6e8691ca3e230842a64",
+    "src/aerodepth_lite/kaggle.py": "9645a1cbaef6e7c703379934e941eb053b166c5d594e16f9e641b82fcf8957f0"
+  },
+  "evidence": {
+    "validation_metrics": "results/student_validation_comparison_20261029T152648Z/metrics.json",
+    "validation_metrics_sha256": "b1a81bfd3a85344ee09d743d3e702fc756ebd9402cbeb56b3077dc710523a1ff",
+    "teacher_context_key": "teacher_context_reused_no_inference",
+    "gate_verification": "results/expanded_validation_diagnostic_20261028T172239Z/gate_verification.json",
+    "gate_verification_sha256": "696a6871a59d899cdeb55bf3a0c709c1a54bd913c648ef8626c5376dbaad0463"
+  },
+  "inference_downloads": false,
+  "full_training_checkpoint_distributed": false,
+  "excluded_state": [
+    "optimizer",
+    "scheduler",
+    "AMP scaler",
+    "RNG",
+    "training history",
+    "private input paths"
+  ],
+  "notices": "See NOTICE.md for MidAir and TorchVision/ImageNet attribution and upstream terms.",
+  "strict_export_parity": {
+    "passed": true,
+    "precision": "CPU FP32 eval",
+    "state_digest": "dbdc6b27563761a82a9d9a06679e565407ad4862423b810f682b9eb141883a1e",
+    "all_checkpoint_tensors_equal": true,
+    "checks": [
+      {
+        "input": "black",
+        "shape": [
+          1,
+          3,
+          192,
+          320
+        ],
+        "max_abs_error": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "input": "white",
+        "shape": [
+          1,
+          3,
+          192,
+          320
+        ],
+        "max_abs_error": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "input": "seed42_random",
+        "shape": [
+          1,
+          3,
+          192,
+          320
+        ],
+        "max_abs_error": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "input": "odd_size_seed42_random",
+        "shape": [
+          1,
+          3,
+          37,
+          53
+        ],
+        "max_abs_error": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "input": "synthetic PNG through public preprocessing and inference",
+        "shape": [
+          1,
+          3,
+          192,
+          320
+        ],
+        "max_abs_error": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "research_images_opened": false,
+    "training_or_study_rerun": false
+  }
+}

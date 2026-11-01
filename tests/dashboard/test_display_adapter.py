@@ -69,3 +69,18 @@ def test_trace_projection_keeps_types_and_available_signals_only():
 
 def test_fixed_example_cannot_load_non_validation_path():
     with pytest.raises(ValueError,match='Validation'):d.fixed_frame(cfg(),'Kite_training/sunny/trajectory_0008',0,'A')
+
+
+def test_teacher_reuses_exact_saved_validation_and_no_test_or_call_data():
+    config=cfg();bundle=d.study_bundle(ROOT,config,'Validation')
+    raw=json.loads((Path(config['comparison'])/'metrics.json').read_text())['teacher_context_reused_no_inference']
+    for scope,metrics in raw['scopes'].items():
+        assert d.part(bundle,'Teacher','every',scope)['metrics']==metrics
+        row=next(r for r in d.metric_rows(bundle,scope) if r['model']=='Teacher')
+        assert row['Calls'] is None and row['Skip rate'] is None
+    assert bundle['teacher_gate']['teacher_gate_passed'] is False
+    assert d.policies(bundle,'Teacher')==['every'] and d.trace_rows(bundle,'Teacher','every')==[]
+    for study in ['Independent test','Historical exposed test']:
+        other=d.study_bundle(ROOT,config,study)
+        assert 'Teacher' not in d.models(other) and not d.part(other,'Teacher','every','pooled')
+        assert other['teacher_gate'] is None
