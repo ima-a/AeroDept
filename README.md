@@ -86,7 +86,7 @@ python scripts/verify_independent_test.py
 
 For a dataset-free synthetic workflow, run `python scripts/smoke.py --output artifacts/new_synthetic_smoke`. Synthetic fixtures verify software, not research accuracy.
 
-Use the [original validation reproduction guide](docs/reproduction.md), [expanded training guide](docs/expanded_reproduction.md) and [independent-study guide](docs/independent_final_test.md) for their separate input requirements and source revisions. Historical checkpoint resume requires matching frozen source identities. Completed evidence and exposure ledgers are preserved; documentation changes do not require another study run.
+Use the [original validation reproduction guide](docs/reproduction.md), [expanded training guide](docs/expanded_reproduction.md) and [independent-study guide](docs/independent_final_test.md) for their separate input requirements and source revisions. Historical checkpoint resume requires matching frozen source identities.
 
 ## Repository contents
 
@@ -95,13 +95,9 @@ Use the [original validation reproduction guide](docs/reproduction.md), [expande
 | `src/aerodepth_lite/` | Python implementation: models, data, training, inference, scheduling and dashboard helpers |
 | `scripts/` | Supported dashboard, training, reproduction and verification entry points |
 | `tests/` | Automated checks using synthetic inputs and saved evidence; optional real-data integration checks |
-| `configs/` | Portable settings; private local configurations are ignored |
+| `configs/` | Portable dashboard and experiment settings |
 | `models/` | Three student exports plus the ResNet-50 teacher export, with metadata and checksums |
 | `results/`, `evidence/` | Curated scientific results, manifests, protocols and provenance |
 | `docs/` | User guides, methodology, evaluation report and reproduction instructions |
-
-`src/` is required to run the project. `tests/` stays in the repository to detect regressions. `pyproject.toml`, `MANIFEST.in`, `requirements-tested.txt` and `Makefile` support installation, packaging, reproducibility and manual CI. [Folder and root-file details](docs/repository_structure.md).
-
-Evaluation slides, `CODE_GUIDE.md` and `docs/VIVA_GUIDE.md` are local-only. The notebook folder and obsolete launch/packaging helpers have been removed. Datasets, full training states, environments, credentials and caches are excluded from Git. Local archives retain retired operational records; published scientific evidence stays in its original location.
 
 Dataset attribution and upstream terms: [NOTICE.md](NOTICE.md).
