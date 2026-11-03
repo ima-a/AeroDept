@@ -352,7 +352,7 @@ def artifacts_page(root,cfg):
                 else:st.caption(label+': unavailable')
     with tabs[4]:st.caption('Inference export identities; these do not add evaluated models to the selected study.')
     with st.expander('Technical inspector · identities and protocol'):
-        st.json({'study':study,'models':{data.MODELS[k]:{field:value for field,value in item.items() if field in ['sha256','metadata_sha256','selected_epoch','kind']} for k,item in cfg['models'].items()}},expanded=False)
+        st.json({'study':study,'models':{data.MODELS.get(k,item.get('label') or k):{field:value for field,value in item.items() if field in ['sha256','metadata_sha256','selected_epoch','kind']} for k,item in cfg['models'].items()}},expanded=False)
         protocol=data.json_file(folder/('protocol.json' if study=='Historical exposed test' else 'PROTOCOL.json'))
         if protocol:st.json(protocol,expanded=False)
     with st.expander('Historical scheduler archives · Original only'):

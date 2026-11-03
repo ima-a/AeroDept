@@ -90,6 +90,16 @@ def test_teacher_validation_gate_and_context_switch(monkeypatch):
     assert not a.exception
 
 
+def test_artifacts_accepts_configured_model_without_display_label(monkeypatch):
+    from aerodepth_lite import dashboard_data
+    monkeypatch.delitem(dashboard_data.MODELS,'Teacher')
+    a=app(monkeypatch,True);nav(a,'Artifacts')
+    assert not a.exception
+    config=json.loads((ROOT/'configs/dashboard.json').read_text())
+    inspector=json.loads(a.json[0].value)
+    assert config['models']['Teacher']['label'] in inspector['models']
+
+
 def test_frame_presets_do_not_trigger_inference(monkeypatch):
     a=app(monkeypatch);nav(a,'Depth viewer')
     next(b for b in a.button if b.label=='Poor · 1534').click().run(timeout=60)
