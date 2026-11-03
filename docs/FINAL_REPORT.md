@@ -1,6 +1,6 @@
 # AeroDepth-Lite — consolidated final research report
 
-Status: training and validation are complete. The independent study is **COMPLETED and verified**, with 8,820 frames and seven frozen comparisons. The local 16-slide evaluation deck summarizes these saved results. The repository contains the implementation, software tests, user guides and curated scientific evidence; slides and the classroom code notes are shared separately. See [repository structure](repository_structure.md) and [the viva guide](VIVA_GUIDE.md).
+Status: training and validation are complete. The independent study is **COMPLETED and verified**, with 8,820 frames and seven frozen comparisons. The local 16-slide evaluation deck summarizes these saved results. The repository contains the implementation, software tests, user guides and curated scientific evidence; slides and the classroom code notes are shared separately. See [repository structure](repository_structure.md) and [the training method](expanded_training.md).
 
 ## Problem and objectives
 

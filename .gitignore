@@ -21,6 +21,7 @@ artifacts/
 /presentations/
 /notebooks/
 /CODE_GUIDE.md
+/docs/VIVA_GUIDE.md
 
 # Private tooling, credentials and disposable build products
 .ai

@@ -6,6 +6,7 @@ exclude configs/presentation_local.json
 exclude configs/dashboard_local.json
 exclude configs/independent_test_local.json
 recursive-include docs *.md *.png
+exclude docs/VIVA_GUIDE.md
 recursive-include scripts *.py
 recursive-include evidence/reproduction_sources *.py *.json *.md
 recursive-include evidence/real_midair_pilot *.json *.md

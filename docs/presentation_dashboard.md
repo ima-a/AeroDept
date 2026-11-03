@@ -81,7 +81,7 @@ The `tests/` directory checks saved-data adapters, context selection, viewer sta
 2. Model comparison: compare Original/A/KD, choose a reference, then inspect Kite sunny and validation separately.
 3. Depth viewer: use the Poor/Typical validation presets, explicitly run one model, then play recorded A V2 and inspect source/age.
 4. Scheduler: compare independent V2 with budget-fixed, then view the zero-event sunny trajectory and separately labelled validation timing windows.
-5. Artifacts: download the table/report and open the protocol/identity inspector if needed. Use the [viva guide](VIVA_GUIDE.md) to locate the underlying model, loss, metrics and guards.
+5. Artifacts: download the table/report and open the protocol/identity inspector if needed. The implementations are in `src/aerodepth_lite/model.py`, `losses.py`, `metrics.py` and `presentation_ui.py`.
 
 ## Published weights and historical study configuration
 

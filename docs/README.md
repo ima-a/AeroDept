@@ -7,7 +7,6 @@ Start with the guide for the task you want to perform. Training and the independ
 | Install and run the project | [Project README](../README.md) and [installation](installation.md) |
 | Use the dashboard and external inputs | [Dashboard guide](presentation_dashboard.md) |
 | Understand results and limitations | [Final report](FINAL_REPORT.md) |
-| Explain the code during evaluation | [Viva guide](VIVA_GUIDE.md) |
 | Understand folders, scripts and root files | [Repository structure](repository_structure.md) |
 | Obtain data and understand its formats | [Dataset guide](dataset.md) |
 | Verify the completed independent study | [Independent test](independent_final_test.md) |
@@ -24,4 +23,4 @@ All three evaluated students and the ResNet-50 teacher have [published inference
 
 The main evidence directories are `results/student_validation_comparison_20261029T152648Z/`, `results/presentation_validation_20261029T155521Z/` and `results/independent_test_20261030/`.
 
-Evaluation slides and `CODE_GUIDE.md` are local-only. Internal agent handoffs, publication checklists, local maintenance receipts and design-debug captures have been removed from this documentation tree. The notebook workflow and its launch/packaging helpers have been retired.
+Evaluation slides, `CODE_GUIDE.md` and `docs/VIVA_GUIDE.md` are local-only. Internal agent handoffs, publication checklists, local maintenance receipts and design-debug captures have been removed from this documentation tree. The notebook workflow and its launch/packaging helpers have been retired.

@@ -47,6 +47,6 @@ The former host-specific supervisor, laptop launcher, Kaggle bootstrap/packager,
 
 ## Local-only files
 
-`CODE_GUIDE.md` remains on the prepared machine, ignored by Git and excluded from source distributions. The current slides are `presentations/project_evaluation/AeroDepth_Lite_Project_Evaluation.pptx` with a companion shared-layout PDF. These local paths are not included in a GitHub clone; public readers can use the [viva guide](VIVA_GUIDE.md) and [final report](FINAL_REPORT.md).
+`CODE_GUIDE.md` and `docs/VIVA_GUIDE.md` remain on the prepared machine, ignored by Git and excluded from source distributions. The current slides are `presentations/project_evaluation/AeroDepth_Lite_Project_Evaluation.pptx` with a companion shared-layout PDF. These local paths are not included in a GitHub clone; public readers can use the [final report](FINAL_REPORT.md), [training method](expanded_training.md) and the implementation in `src/aerodepth_lite/`.
 
 The `notebooks/` folder has been deleted. Datasets, full checkpoints, caches and environments remain ignored. Retired internal documents and helper scripts are retained under the ignored `artifacts/archive/repository_cleanup_20261101/` for local historical reference. Published results and their recorded identities remain in place.

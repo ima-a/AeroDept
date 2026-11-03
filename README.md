@@ -4,7 +4,7 @@ Compact monocular drone-camera **range prediction** with causal inference schedu
 
 The project includes inference weights for **Original, supervised A, exploratory KD and the ResNet-50 teacher**, a local research dashboard, automated software tests and saved experimental evidence. Training and the **8,820-frame independent test are complete and verified**. This is simulation research; real-flight safety, energy and battery benefits have not been measured.
 
-[Project report](docs/FINAL_REPORT.md) · [Documentation](docs/README.md) · [Viva guide](docs/VIVA_GUIDE.md) · [Repository structure](docs/repository_structure.md)
+[Project report](docs/FINAL_REPORT.md) · [Documentation](docs/README.md) · [Repository structure](docs/repository_structure.md)
 
 ## Install and run
 
@@ -102,6 +102,6 @@ Use the [original validation reproduction guide](docs/reproduction.md), [expande
 
 `src/` is required to run the project. `tests/` stays in the repository to detect regressions. `pyproject.toml`, `MANIFEST.in`, `requirements-tested.txt` and `Makefile` support installation, packaging, reproducibility and manual CI. [Folder and root-file details](docs/repository_structure.md).
 
-Evaluation slides and `CODE_GUIDE.md` are local-only. The notebook folder and obsolete launch/packaging helpers have been removed. Datasets, full training states, environments, credentials and caches are excluded from Git. Local archives retain retired operational records; published scientific evidence stays in its original location.
+Evaluation slides, `CODE_GUIDE.md` and `docs/VIVA_GUIDE.md` are local-only. The notebook folder and obsolete launch/packaging helpers have been removed. Datasets, full training states, environments, credentials and caches are excluded from Git. Local archives retain retired operational records; published scientific evidence stays in its original location.
 
 Dataset attribution and upstream terms: [NOTICE.md](NOTICE.md).
